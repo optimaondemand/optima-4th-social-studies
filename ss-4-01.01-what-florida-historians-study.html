@@ -1228,6 +1228,142 @@ body {
 .chrono-prompt:last-child { margin-bottom: 0; }
 .chrono-prompt-icon { color: #55C8E8; font-weight: 800; flex-shrink: 0; }
 
+/* ═══════════ CHRONO-LENS LOCKED/REVEAL SYSTEM (Grade 4) ═══════════ */
+.chrono-locked-screen {
+  background:
+    radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(85, 200, 232, 0.03) 0px, rgba(85, 200, 232, 0.03) 1px, transparent 1px, transparent 4px),
+    #0A1530;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
+}
+.chrono-locked-screen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #55C8E8, transparent);
+  animation: chronoScan 4s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@keyframes chronoScan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+.chrono-locked-screen::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(85, 200, 232, 0.35);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.chrono-locked-status {
+  color: #55C8E8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  animation: chronoLockedPulse 2s ease-in-out infinite;
+  z-index: 1;
+  text-align: center;
+}
+@keyframes chronoLockedPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.chrono-engage-btn {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0A1530;
+  border: 2px solid #7FD8F0;
+  padding: 13px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4);
+  transition: all 0.2s ease;
+  animation: chronoEngageBtnGlow 2.4s ease-in-out infinite;
+  z-index: 1;
+  font-family: inherit;
+}
+@keyframes chronoEngageBtnGlow {
+  0%, 100% { box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4); }
+  50% { box-shadow: 0 4px 36px rgba(85, 200, 232, 0.75), 0 0 0 4px rgba(85, 200, 232, 0.15); }
+}
+.chrono-engage-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 32px rgba(85, 200, 232, 0.7);
+}
+.chrono-engage-btn:active { transform: translateY(0); }
+.chrono-engage-btn:disabled {
+  animation: none;
+  cursor: wait;
+  opacity: 0.85;
+}
+.chrono-engage-btn-icon {
+  font-size: 18px;
+  display: inline-block;
+  animation: chronoIconSpin 4s linear infinite;
+}
+@keyframes chronoIconSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.chrono-locked-hint {
+  font-size: 12px;
+  color: rgba(85, 200, 232, 0.7);
+  z-index: 1;
+  font-style: italic;
+}
+.chrono-locked-screen.chrono-scanning {
+  animation: chronoFlash 1s ease forwards;
+}
+.chrono-locked-screen.chrono-scanning::before {
+  animation: chronoFastScan 0.6s ease-in-out 2;
+}
+@keyframes chronoFlash {
+  0% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
+  40% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.6), transparent 80%), #1A4060; }
+  100% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
+}
+@keyframes chronoFastScan {
+  0% { top: 0%; opacity: 1; }
+  100% { top: 100%; opacity: 1; }
+}
+.chrono-hidden { display: none !important; }
+.chrono-revealed-image { animation: chronoZoomIn 0.9s cubic-bezier(0.34, 1.4, 0.6, 1) forwards; transform-origin: center; }
+@keyframes chronoZoomIn {
+  0% { opacity: 0; transform: scale(0.4); filter: blur(8px) brightness(2); }
+  60% { filter: blur(0) brightness(1.2); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0) brightness(1); }
+}
+.chrono-revealed-prompts .chrono-prompt {
+  opacity: 0;
+  animation: chronoPromptIn 0.6s ease forwards;
+}
+.chrono-revealed-prompts .chrono-prompt:nth-child(1) { animation-delay: 0.3s; }
+.chrono-revealed-prompts .chrono-prompt:nth-child(2) { animation-delay: 0.55s; }
+.chrono-revealed-prompts .chrono-prompt:nth-child(3) { animation-delay: 0.8s; }
+@keyframes chronoPromptIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 /* ═══════════ DISTORTER ALERT (Grade 4 — Tab 2 antagonist beat) ═══════════ */
 .distorter-alert {
   background: linear-gradient(135deg, #2A1A1A, #3A2222);
@@ -2037,13 +2173,27 @@ body {
         <div class="chrono-fragment-title">Unknown Glow on the Lab Desk</div>
       </div>
     </div>
-    <div class="chrono-fragment-image" data-image="puzzle-4-01-01-fragment">
+
+    <!-- Locked screen (visible initially; replaced by image on click) -->
+    <div class="chrono-locked-screen">
+      <div class="chrono-locked-status">⚠️ Time Echo locked · Awaiting authorization</div>
+      <button class="chrono-engage-btn" type="button" onclick="engageChronoLens(this)">
+        <span class="chrono-engage-btn-icon">🔭</span>
+        Engage Chrono-Lens
+      </button>
+      <div class="chrono-locked-hint">Click to scan the fragment</div>
+    </div>
+
+    <!-- Image (loads in background; revealed by JS) -->
+    <div class="chrono-fragment-image chrono-hidden" data-image="puzzle-4-01-01-fragment">
       <div class="chrono-fragment-placeholder">
         🖼️ Zoomed-in image: a soft glowing outline of Florida on a research desk, surrounded by half-visible source cards, a magnifying lens, timeline strips, and evidence tags. The colors are warm and mysterious — students cannot yet tell what they're looking at.<br><br>
         <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-01-01-fragment.jpg</code>
       </div>
     </div>
-    <div class="chrono-fragment-body">
+
+    <!-- Observation prompts (hidden initially; cascaded in after reveal) -->
+    <div class="chrono-fragment-body chrono-hidden">
       <div class="chrono-prompt"><span class="chrono-prompt-icon">👁️</span><span><strong style="color:#fff;">What do you notice?</strong> Look carefully at the fragment. What shapes, tools, or details can you see?</span></div>
       <div class="chrono-prompt"><span class="chrono-prompt-icon">💭</span><span><strong style="color:#fff;">What could this be?</strong> Make a prediction. Why might the Chrono-Lens show us this image first?</span></div>
       <div class="chrono-prompt"><span class="chrono-prompt-icon">🔍</span><span><strong style="color:#fff;">What evidence would help?</strong> What else would you need to know to be sure?</span></div>
@@ -2629,12 +2779,43 @@ function gatherAnswers() {
     output += (val || '(no answer)') + '\n\n';
   });
 
-  // Mini-game status
-  output += 'MINI-GAME RESULTS\n';
-  output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
+  // Mini-game status — only include if mini-games exist in this lesson
+  var hasRootMatch = document.querySelector('.root-match-game') !== null;
+  if (hasRootMatch) {
+    output += 'MINI-GAME RESULTS\n';
+    output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
+  }
 
   var gathered = document.getElementById('gatheredOutput');
   if (gathered) gathered.value = output.trim();
+}
+
+/* ═══════════ CHRONO-LENS ENGAGE (Grade 4) ═══════════
+   Replaces the locked screen with a scanning animation, then reveals
+   the fragment image (with zoom-in) and the observation prompts (cascade). */
+function engageChronoLens(btn) {
+  var fragment = btn.closest('.chrono-fragment');
+  if (!fragment) return;
+  var locked = fragment.querySelector('.chrono-locked-screen');
+  var image = fragment.querySelector('.chrono-fragment-image');
+  var prompts = fragment.querySelector('.chrono-fragment-body');
+  if (!locked || !image || !prompts) return;
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="chrono-engage-btn-icon">🛰️</span>SCANNING…';
+  locked.classList.add('chrono-scanning');
+
+  setTimeout(function() {
+    locked.style.transition = 'opacity 0.4s ease';
+    locked.style.opacity = '0';
+    setTimeout(function() {
+      locked.style.display = 'none';
+      image.classList.remove('chrono-hidden');
+      image.classList.add('chrono-revealed-image');
+      prompts.classList.remove('chrono-hidden');
+      prompts.classList.add('chrono-revealed-prompts');
+    }, 400);
+  }, 1000);
 }
 
 /* ═══════════ COPY TO CLIPBOARD ═══════════ */
