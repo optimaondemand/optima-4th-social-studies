@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — 4.01.01: What Florida Historians Study</title>
+<title>Optima Academy Online — Lesson 4.01.02: Primary and Secondary Sources in Florida History</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -193,7 +193,8 @@ body {
 
 /* ═══════════ INTRO COLLAPSIBLE ═══════════ */
 .intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
-.intro-section.collapsed > *:not(.intro-collapsed-bar) { display: none; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
 .intro-collapsed-bar {
   display: none;
   align-items: center;
@@ -1153,6 +1154,8 @@ body {
   z-index: 10000;
 }
 
+
+
 /* ═══════════ SELF-CHECK QUIZ ═══════════ */
 .quiz-card {
   background: #fff;
@@ -1453,6 +1456,10 @@ body {
 }
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+
+
+
+
 
 /* ═══════════════════════════════════════════════════════════════
    GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
@@ -1769,6 +1776,7 @@ body {
 .canvas-sticky.quiet::before { display: none; }
 .canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
 .canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
+
 </style>
 </head>
 <body>
@@ -1792,106 +1800,300 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title"><em>What Florida Historians Study</em></div>
+  <div class="header-title">Primary &amp; Secondary <em>Sources</em></div>
   <div class="header-badge">
-    <!-- ✏️ GRADE TOKEN -->
     <span class="header-badge-icon">🐊</span>
-    <span class="header-badge-text">Lesson 4.01.01</span>
+    <span class="header-badge-text">Lesson 4.01.02</span>
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER ═══ -->
-<!-- ✏️ Build a hand-coded SVG scene for this lesson's topic.
-     Rules: viewBox 920×260. No <text> elements. No human faces or figures.
-     Bright and cheerful — saturated, warm colors even for serious topics.
-     Show the WORLD: landscapes, objects, tools, ships, maps, buildings, landmarks.
-     2–3 CSS animations (floating, drifting, pulsing). -->
+<!-- ═══ SVG HERO BANNER: Primary and Secondary Sources — Primary vs. Secondary ═══ -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
   <defs>
+    <!-- Lab background gradient (deep navy with a warm/cool split hint) -->
     <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2E7D5B"/>
-      <stop offset="100%" stop-color="#E8843A"/>
+      <stop offset="0%" stop-color="#0E1530"/>
+      <stop offset="50%" stop-color="#1A2645"/>
+      <stop offset="100%" stop-color="#243760"/>
     </linearGradient>
-    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF8E0"/>
-      <stop offset="100%" stop-color="#F2E5B8"/>
-    </linearGradient>
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE08A"/>
-      <stop offset="100%" stop-color="#FFB344" stop-opacity="0"/>
+    <!-- Warm gold halo (primary side) -->
+    <radialGradient id="goldHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD580" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#E8A040" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E8A040" stop-opacity="0"/>
     </radialGradient>
+    <!-- Cool blue halo (secondary side) -->
+    <radialGradient id="blueHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A8E0F8" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#4A98D0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4A98D0" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Parchment gradient -->
+    <linearGradient id="parchGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF4D6"/>
+      <stop offset="100%" stop-color="#E8CE8E"/>
+    </linearGradient>
+    <!-- Wax seal -->
+    <radialGradient id="sealGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#E85050"/>
+      <stop offset="100%" stop-color="#9A1F20"/>
+    </radialGradient>
+    <!-- Book page (secondary) -->
+    <linearGradient id="pageGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5FBFF"/>
+      <stop offset="100%" stop-color="#D8E8F4"/>
+    </linearGradient>
+    <linearGradient id="bookCover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A98D0"/>
+      <stop offset="100%" stop-color="#2A6FA8"/>
+    </linearGradient>
+    <!-- Lab desk -->
+    <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A2A1A"/>
+      <stop offset="100%" stop-color="#1F1610"/>
+    </linearGradient>
+    <!-- Florida glow -->
+    <radialGradient id="flGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .pulse-gold  { animation: pgold 3.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes pgold { 0%,100% { opacity: 0.75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+      .pulse-blue  { animation: pblue 3.2s ease-in-out infinite 1.6s; transform-origin: center; transform-box: fill-box; }
+      @keyframes pblue { 0%,100% { opacity: 0.75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+      .float-left  { animation: fl 5s ease-in-out infinite; }
+      @keyframes fl { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      .float-right { animation: fr 5s ease-in-out infinite 2.5s; }
+      @keyframes fr { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      .twinkle     { animation: tw 2.5s ease-in-out infinite; }
+      @keyframes tw { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+      .lens-hover  { animation: lh 4.5s ease-in-out infinite; }
+      @keyframes lh { 0%,100% { transform: translateX(-12px); } 50% { transform: translateX(12px); } }
+      .wave-gold   { animation: wg 6s linear infinite; }
+      @keyframes wg { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -60; } }
+      .wave-blue   { animation: wb 6s linear infinite reverse; }
+      @keyframes wb { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -60; } }
+    </style>
   </defs>
-  <!-- Sky/sea background -->
+
+  <!-- Background -->
   <rect width="920" height="260" fill="url(#bannerGrad)"/>
-  <!-- Soft sun glow -->
-  <circle cx="730" cy="80" r="110" fill="url(#sunGrad)"/>
-  <circle cx="730" cy="80" r="38" fill="#FFE08A" opacity="0.95">
-    <animate attributeName="r" values="38;42;38" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Palm silhouettes (right side, decorative) -->
-  <g transform="translate(820,180)" opacity="0.55">
-    <rect x="-3" y="-50" width="6" height="60" fill="#2A5A45" rx="2"/>
-    <path d="M0,-50 Q-25,-65 -45,-58 Q-30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q25,-65 45,-58 Q30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q-20,-78 -38,-78 Q-22,-65 0,-50" fill="#2D6A45"/>
-    <path d="M0,-50 Q20,-78 38,-78 Q22,-65 0,-50" fill="#2D6A45"/>
+
+  <!-- Twinkle stars -->
+  <g fill="#FFE5A0">
+    <circle class="twinkle" cx="60"  cy="40"  r="1.4" style="animation-delay:0s;"/>
+    <circle class="twinkle" cx="160" cy="25"  r="1.2" style="animation-delay:0.6s;"/>
+    <circle class="twinkle" cx="280" cy="60"  r="1"   style="animation-delay:1.2s;"/>
+    <circle class="twinkle" cx="380" cy="22"  r="1.3" style="animation-delay:0.4s;"/>
+    <circle class="twinkle" cx="540" cy="35"  r="1"   style="animation-delay:1.8s;"/>
+    <circle class="twinkle" cx="650" cy="55"  r="1.2" style="animation-delay:1s;"/>
+    <circle class="twinkle" cx="760" cy="28"  r="1.4" style="animation-delay:0.3s;"/>
+    <circle class="twinkle" cx="860" cy="50"  r="1.2" style="animation-delay:1.5s;"/>
   </g>
-  <!-- Open notebook (left/center, the historian's tool) -->
-  <g transform="translate(220,140)">
-    <!-- shadow -->
-    <ellipse cx="0" cy="60" rx="180" ry="14" fill="#000" opacity="0.18"/>
-    <!-- left page -->
-    <path d="M-160,-60 L0,-65 L0,55 L-160,50 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- right page -->
-    <path d="M0,-65 L160,-60 L160,50 L0,55 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- spine -->
-    <line x1="0" y1="-65" x2="0" y2="55" stroke="#8B6E2A" stroke-width="2.5"/>
-    <!-- lines on left page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="-145" y1="-35" x2="-15" y2="-37"/>
-      <line x1="-145" y1="-18" x2="-15" y2="-20"/>
-      <line x1="-145" y1="-1" x2="-15" y2="-3"/>
-      <line x1="-145" y1="16" x2="-15" y2="14"/>
-      <line x1="-145" y1="33" x2="-50" y2="32"/>
+
+  <!-- Subtle horizontal scan grid -->
+  <g stroke="#6FB8E0" stroke-width="0.4" opacity="0.15">
+    <line x1="0" y1="180" x2="920" y2="180"/>
+    <line x1="0" y1="200" x2="920" y2="200"/>
+    <line x1="0" y1="220" x2="920" y2="220"/>
+    <line x1="0" y1="240" x2="920" y2="240"/>
+  </g>
+
+  <!-- Two-toned signal waves across the top (gold left, blue right) -->
+  <g fill="none" stroke-width="2" stroke-linecap="round" opacity="0.75">
+    <path class="wave-gold" d="M 0 90 Q 60 75 120 90 T 240 90 T 360 90 T 460 90"
+          stroke="#FFD580" stroke-dasharray="6,4"/>
+    <path class="wave-blue" d="M 460 90 Q 520 75 580 90 T 700 90 T 820 90 T 920 90"
+          stroke="#7FC8F0" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- Vertical signal-meeting line at center -->
+  <line x1="460" y1="55" x2="460" y2="180" stroke="#FFFFFF" stroke-width="0.6" opacity="0.18" stroke-dasharray="2,4"/>
+
+  <!-- ════ LEFT SIDE: PRIMARY SOURCE (warm gold) ════ -->
+  <!-- Halo behind the parchment (centered at 215,145) -->
+  <g transform="translate(215 145)">
+    <ellipse cx="0" cy="0" rx="150" ry="105" fill="url(#goldHalo)" class="pulse-gold"/>
+  </g>
+
+  <!-- Display pedestal (left) -->
+  <g>
+    <ellipse cx="215" cy="210" rx="115" ry="9" fill="#1A1208" opacity="0.7"/>
+    <rect x="115" y="198" width="200" height="14" rx="3" fill="#5A4020"/>
+    <rect x="115" y="198" width="200" height="4"  rx="2" fill="#7A5A30"/>
+  </g>
+
+  <!-- Aged parchment letter (primary), tilted -->
+  <g transform="translate(215 150)">
+    <g class="float-left">
+    <g transform="rotate(-6)">
+      <!-- letter body -->
+      <rect x="-72" y="-58" width="144" height="116" rx="3" fill="url(#parchGrad)" stroke="#8A6A40" stroke-width="1.6"/>
+      <!-- torn-edge feel: deckle on bottom -->
+      <path d="M -72 56 Q -60 60 -48 56 T -24 56 T 0 56 T 24 56 T 48 56 T 72 56 L 72 58 L -72 58 Z" fill="#D8B870"/>
+      <!-- script lines -->
+      <line x1="-58" y1="-42" x2="50"  y2="-42" stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="-30" x2="58"  y2="-30" stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="-18" x2="44"  y2="-18" stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="-6"  x2="54"  y2="-6"  stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="6"   x2="38"  y2="6"   stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="18"  x2="48"  y2="18"  stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <line x1="-58" y1="30"  x2="30"  y2="30"  stroke="#8A6A40" stroke-width="1.4" opacity="0.6"/>
+      <!-- wax seal (bottom-right of letter) -->
+      <g transform="translate(46 40)">
+        <circle cx="0" cy="0" r="13" fill="url(#sealGrad)" stroke="#5A1010" stroke-width="1"/>
+        <!-- seal star imprint -->
+        <path d="M 0 -7 L 2 -2 L 7 -2 L 3 1 L 5 6 L 0 3 L -5 6 L -3 1 L -7 -2 L -2 -2 Z"
+              fill="#7A1818" opacity="0.7"/>
+      </g>
+      <!-- ribbon/tag indicator (top-left corner) — "primary" visual marker, no text -->
+      <g transform="translate(-72 -58)">
+        <path d="M 0 0 L 22 0 L 22 16 L 11 12 L 0 16 Z" fill="#D4663A" stroke="#8A3A18" stroke-width="0.8"/>
+        <circle cx="11" cy="6" r="2" fill="#FFE5A0"/>
+      </g>
     </g>
-    <!-- lines on right page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="15" y1="-37" x2="145" y2="-35"/>
-      <line x1="15" y1="-20" x2="145" y2="-18"/>
-      <line x1="15" y1="-3" x2="145" y2="-1"/>
-      <line x1="15" y1="14" x2="145" y2="16"/>
+    <!-- Quill pen leaning against letter -->
+    <g transform="translate(60 30) rotate(-30)">
+      <line x1="0" y1="0" x2="0" y2="-58" stroke="#3A2818" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- feather plume -->
+      <path d="M 0 -58 Q -10 -70 -4 -82 Q 6 -78 8 -68 Q 16 -72 18 -62 Q 12 -56 6 -56 Q 8 -50 0 -58 Z"
+            fill="#FFE5A0" stroke="#C09A60" stroke-width="0.8"/>
+      <path d="M -1 -50 Q -4 -45 0 -42 M 2 -42 Q 6 -38 2 -36" stroke="#C09A60" stroke-width="0.6" fill="none"/>
+      <!-- nib -->
+      <path d="M -2 0 L 2 0 L 0 5 Z" fill="#3A2818"/>
     </g>
-    <!-- A pencil resting -->
-    <g transform="rotate(18 30 -30)">
-      <rect x="20" y="-40" width="120" height="6" fill="#F5C547" rx="1"/>
-      <polygon points="140,-40 152,-37 140,-34" fill="#3A2A14"/>
-      <polygon points="140,-39 144,-37 140,-35" fill="#444"/>
-      <rect x="20" y="-40" width="14" height="6" fill="#E58A85"/>
-      <rect x="34" y="-40" width="2" height="6" fill="#888"/>
+    </g><!-- end .float-left -->
+  </g><!-- end parchment position wrapper -->
+
+  <!-- ════ RIGHT SIDE: SECONDARY SOURCE (cool blue) ════ -->
+  <!-- Halo behind the book (centered at 705,145) -->
+  <g transform="translate(705 145)">
+    <ellipse cx="0" cy="0" rx="150" ry="105" fill="url(#blueHalo)" class="pulse-blue"/>
+  </g>
+
+  <!-- Display pedestal (right) -->
+  <g>
+    <ellipse cx="705" cy="210" rx="115" ry="9" fill="#0A1525" opacity="0.7"/>
+    <rect x="605" y="198" width="200" height="14" rx="3" fill="#1A3A60"/>
+    <rect x="605" y="198" width="200" height="4"  rx="2" fill="#2A5A88"/>
+  </g>
+
+  <!-- Open textbook / printed source (secondary), tilted opposite direction -->
+  <g transform="translate(705 152)">
+    <g class="float-right">
+    <g transform="rotate(4)">
+      <!-- Back cover shadow -->
+      <path d="M -80 -52 L 80 -52 L 80 58 L -80 58 Z" fill="#1A3A60" opacity="0.5" transform="translate(2 4)"/>
+      <!-- Book cover (visible behind pages) -->
+      <path d="M -80 -52 L 80 -52 L 80 58 L 0 64 L -80 58 Z" fill="url(#bookCover)" stroke="#1A3A60" stroke-width="1.4"/>
+      <!-- Left page -->
+      <path d="M -76 -48 L 0 -42 L 0 52 L -76 54 Z" fill="url(#pageGrad)" stroke="#8AA8C0" stroke-width="0.8"/>
+      <!-- Right page -->
+      <path d="M 0 -42 L 76 -48 L 76 54 L 0 52 Z" fill="url(#pageGrad)" stroke="#8AA8C0" stroke-width="0.8"/>
+      <!-- Spine crease -->
+      <line x1="0" y1="-42" x2="0" y2="52" stroke="#5A7898" stroke-width="0.8" opacity="0.5"/>
+      <!-- Left-page text lines -->
+      <line x1="-70" y1="-32" x2="-8" y2="-30" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-70" y1="-22" x2="-12" y2="-20" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-70" y1="-12" x2="-8" y2="-10" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-70" y1="-2"  x2="-14" y2="0"   stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-70" y1="8"   x2="-8" y2="10"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="-70" y1="18"  x2="-18" y2="20"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <!-- Small photo inset on left page -->
+      <rect x="-58" y="28" width="38" height="22" rx="1" fill="#6FA8D0" stroke="#3A6088" stroke-width="0.8"/>
+      <circle cx="-50" cy="36" r="2.5" fill="#FFE5A0"/>
+      <path d="M -58 50 L -48 40 L -38 46 L -28 36 L -20 50 Z" fill="#3A6088"/>
+      <!-- Right-page text lines -->
+      <line x1="8"  y1="-32" x2="70" y2="-30" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="-22" x2="66" y2="-20" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="-12" x2="70" y2="-10" stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="-2"  x2="60" y2="0"   stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="8"   x2="70" y2="10"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="18"  x2="50" y2="20"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="28"  x2="66" y2="30"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <line x1="8"  y1="38"  x2="56" y2="40"  stroke="#3A6088" stroke-width="1.2" opacity="0.7"/>
+      <!-- Bookmark ribbon -->
+      <path d="M 56 -52 L 64 -52 L 64 8 L 60 4 L 56 8 Z" fill="#D4663A" stroke="#8A3A18" stroke-width="0.8"/>
+    </g>
+    </g><!-- end .float-right -->
+  </g><!-- end book position wrapper -->
+
+  <!-- ════ CENTER: Small Florida silhouette + source study hovering ════ -->
+  <!-- Subtle Florida glow -->
+  <ellipse cx="460" cy="155" rx="50" ry="40" fill="url(#flGlow)"/>
+  <!-- Small Florida outline -->
+  <g opacity="0.92">
+    <path d="M 430 130
+             L 470 131
+             L 490 135
+             L 498 142
+             L 494 148
+             L 486 152
+             L 484 162
+             L 482 172
+             L 476 180
+             L 470 184
+             L 464 182
+             L 460 174
+             L 458 164
+             L 454 152
+             L 448 146
+             L 438 143
+             L 432 138 Z"
+          fill="#FFE5A0" stroke="#FFB060" stroke-width="1.5"/>
+    <circle cx="470" cy="186" r="1.4" fill="#FFE5A0"/>
+    <circle cx="465" cy="190" r="1.2" fill="#FFE5A0"/>
+    <circle cx="460" cy="193" r="1"   fill="#FFE5A0"/>
+  </g>
+
+  <!-- Magnifying lens sweeping across Florida -->
+  <g transform="translate(460 150)">
+    <g class="lens-hover">
+      <!-- lens body -->
+      <circle cx="0" cy="0" r="22" fill="#7FC8F0" fill-opacity="0.18" stroke="#C09A60" stroke-width="3"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#FFE5A0" stroke-width="1" opacity="0.8"/>
+      <!-- highlight -->
+      <ellipse cx="-7" cy="-7" rx="7" ry="4" fill="#FFFFFF" opacity="0.45"/>
+      <!-- handle -->
+      <line x1="16" y1="16" x2="32" y2="32" stroke="#5A4020" stroke-width="5" stroke-linecap="round"/>
+      <line x1="16" y1="16" x2="32" y2="32" stroke="#C09A60" stroke-width="2.4" stroke-linecap="round"/>
     </g>
   </g>
-  <!-- Magnifying glass (floating, slight drift) -->
-  <g transform="translate(540,90)">
-    <g style="animation: heroFloat 5s ease-in-out infinite;">
-      <circle cx="0" cy="0" r="42" fill="#A8DDF0" opacity="0.55" stroke="#2A6A8C" stroke-width="6"/>
-      <circle cx="-10" cy="-10" r="14" fill="#FFF" opacity="0.65"/>
-      <line x1="32" y1="32" x2="68" y2="68" stroke="#5C3A14" stroke-width="9" stroke-linecap="round"/>
-      <rect x="62" y="62" width="14" height="14" fill="#5C3A14" rx="3" transform="rotate(45 69 69)"/>
+
+  <!-- ════ Connecting evidence arcs (gold + blue meeting at Florida) ════ -->
+  <g fill="none" stroke-width="1.4" opacity="0.55">
+    <path d="M 280 165 Q 380 110 460 150" stroke="#FFD580" stroke-dasharray="4,3"/>
+    <path d="M 460 150 Q 540 110 640 165" stroke="#7FC8F0" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- ════ FOREGROUND: Lab desk ════ -->
+  <rect x="0" y="218" width="920" height="42" fill="url(#deskGrad)"/>
+  <line x1="0" y1="218" x2="920" y2="218" stroke="#6A4E2A" stroke-width="1.5"/>
+
+  <!-- Florida palmettos at edges (different shape from prior banner) -->
+  <g opacity="0.7">
+    <!-- Left palmetto: taller, lacier -->
+    <g transform="translate(35 240)">
+      <rect x="-1.5" y="-22" width="3" height="22" fill="#2A1810"/>
+      <path d="M 0 -22 Q -14 -32 -22 -28 Q -16 -22 -8 -22 Q -18 -16 -24 -8 Q -14 -14 -6 -16 Q -16 -4 -20 6 Q -10 -6 -2 -10 Q -4 4 -2 14 Q 0 0 2 -10 Q 10 -6 20 6 Q 16 -4 6 -16 Q 14 -14 24 -8 Q 18 -16 8 -22 Q 16 -22 22 -28 Q 14 -32 0 -22 Z"
+            fill="#1A4A2A"/>
+    </g>
+    <!-- Right palmetto: mirrored -->
+    <g transform="translate(885 240)">
+      <rect x="-1.5" y="-22" width="3" height="22" fill="#2A1810"/>
+      <path d="M 0 -22 Q 14 -32 22 -28 Q 16 -22 8 -22 Q 18 -16 24 -8 Q 14 -14 6 -16 Q 16 -4 20 6 Q 10 -6 2 -10 Q 4 4 2 14 Q 0 0 -2 -10 Q -10 -6 -20 6 Q -16 -4 -6 -16 Q -14 -14 -24 -8 Q -18 -16 -8 -22 Q -16 -22 -22 -28 Q -14 -32 0 -22 Z"
+            fill="#1A4A2A"/>
     </g>
   </g>
-  <!-- Florida outline (small, on horizon — recognizable shape) -->
-  <g transform="translate(620,200)" opacity="0.85">
-    <path d="M0,0 Q-5,-22 -16,-30 Q-30,-28 -42,-22 Q-58,-12 -68,8 Q-72,18 -68,30 Q-58,32 -45,30 Q-35,38 -22,38 Q-10,42 0,40 Q12,46 22,48 Q34,46 38,38 Q36,28 28,22 Q30,12 26,2 Q14,-4 0,0 Z"
-          fill="#FFF" opacity="0.92" stroke="#2A6A8C" stroke-width="2"/>
-    <!-- Small star marker -->
-    <circle cx="-32" cy="14" r="3" fill="#E8843A"/>
+
+  <!-- HUD corner brackets -->
+  <g opacity="0.45" stroke="#7FC8F0" stroke-width="1.2" fill="none">
+    <path d="M 14 14 L 14 30 M 14 14 L 30 14"/>
+    <path d="M 906 14 L 906 30 M 906 14 L 890 14"/>
+    <path d="M 14 246 L 14 230 M 14 246 L 30 246"/>
+    <path d="M 906 246 L 906 230 M 906 246 L 890 246"/>
   </g>
-  <style>
-    @keyframes heroFloat {
-      0%, 100% { transform: translateY(0) rotate(-3deg); }
-      50% { transform: translateY(-8px) rotate(-1deg); }
-    }
-  </style>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -1900,7 +2102,7 @@ body {
     <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
     <div>
       <div class="info-label">Unit</div>
-      <div class="info-value">Unit 1: Thinking Like a Florida Historian</div>
+      <div class="info-value">Thinking Like a Florida Historian</div>
     </div>
   </div>
   <div class="info-cell">
@@ -1914,7 +2116,7 @@ body {
     <div class="info-icon" style="background:#E3F8ED;">📜</div>
     <div>
       <div class="info-label">Focus</div>
-      <div class="info-value">Historical Thinking</div>
+      <div class="info-value">Florida History &amp; Historical Thinking</div>
     </div>
   </div>
   <div class="info-cell">
@@ -1926,46 +2128,39 @@ body {
   </div>
 </div>
 
-<!-- ═══ INTRO SECTION: Scene-setting content that auto-collapses on non-scene tabs ═══
-     Contains a small "Message from Inside Canvas" sticky (light story hook), the Florida Historian's Question, Objectives, and Need Strip.
-     All collapse together when student moves to Tab 2/3/4; expand on Tab 1 or via toggle. -->
+
+<!-- ═══ MESSAGE FROM INSIDE CANVAS ═══ -->
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
+  </div>
+  <div class="canvas-sticky-body">
+    <p>Canvas has two source cards ready for you, but both labels are missing — something scrambled them when the module locked. I can see one card is from someone who was right there when it happened, and the other explains it from a later point of view. I need you to look carefully at each one and decide which is which. Can you label them before I can send the next file?</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, still inside Module 1</div>
+</div>
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
     <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's File · Florida Historian's Question</div>
+    <div class="intro-collapsed-text">Today's Question &amp; Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
 
-  <!-- ═══ 📩 MESSAGE FROM INSIDE CANVAS (Grade 4 — light story hook, 30 sec) ═══
-       This is the OPENING story beat. The text inside is also the script the
-       teacher will read when recording the welcome video. Keep it 2-4 sentences.
-       Pull the exact wording from the "Opening: Message from Inside Canvas"
-       column of the Planning Table for this lesson code.
-       For sensitive-history lessons (U3, U7, parts of U11), add class="quiet"
-       to remove the playful rotation and use a calmer tone. -->
-  <div class="canvas-sticky">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📩</span>
-      <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
-    </div>
-    <div class="canvas-sticky-body">
-      <p>The first file is labeled <em>"What Florida Historians Study,"</em> but Canvas won't open it until you explain what historians actually do. Take a look — help me get to the next file!</p>
-    </div>
-    <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 1</div>
-  </div>
-
   <div class="intro-2col">
-    <!-- Florida Historian's Question -->
+    <!-- Mission Question -->
     <div class="intro-card theme-question">
       <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
+        <div class="intro-card-head-icon">📍</div>
         <div>
-          <div class="intro-card-head-label">Florida Historian's Question</div>
-          <div class="intro-card-head-title">Today's Big Question</div>
+          <div class="intro-card-head-label">Guiding Question</div>
+          <div class="intro-card-head-title">Today's Question</div>
         </div>
       </div>
       <div class="intro-card-body">
-        <p>What do Florida historians actually study, and how do they know what really happened?</p>
+        <p>Why does it matter whether a piece of Florida history evidence came from someone who was there — or someone who learned about it later?</p>
       </div>
     </div>
 
@@ -1979,9 +2174,9 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🌴</span> Name the four things historians study: people, places, events, and evidence.</div>
-        <div class="obj-line"><span class="obj-icon">🔍</span> Tell the difference between a historian's claim and a guess.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Write a Historian's Notebook entry using one piece of evidence.</div>
+        <div class="obj-line"><span class="obj-icon">📜</span><span>Define <em>primary source</em> and <em>secondary source</em> in your own words.</span></div>
+        <div class="obj-line"><span class="obj-icon">🔍</span><span>Sort Florida sources into primary and secondary, using evidence from each one.</span></div>
+        <div class="obj-line"><span class="obj-icon">📝</span><span>Write a short Source Study explaining what two Florida sources together help us understand.</span></div>
       </div>
     </div>
   </div>
@@ -1989,7 +2184,7 @@ body {
   <!-- You'll Need strip -->
   <div class="need-strip">
     <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">🔬 Florida historian's Notebook</span>
     <span class="need-chip">✏️ Pencil</span>
     <span class="need-chip">🗺️ Lesson Page</span>
   </div>
@@ -2010,7 +2205,7 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">📍</div>
     <div>
       <div class="tab-section-title">Learn</div>
     </div>
@@ -2025,14 +2220,13 @@ body {
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Meet the four things historians study</span>
+      <span class="todays-path-step">📍 Learn about primary and secondary sources</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Look at a Florida photograph like a historian</span>
+      <span class="todays-path-step">🔍 Explore a paired Florida source card</span>
       <span class="todays-path-arrow">→</span>
-      <!-- STEP 3: Self-check (always the same) -->
       <span class="todays-path-step">🧠 Check your understanding</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write your first Historian's Notebook entry</span>
+      <span class="todays-path-step">📝 Complete the Source Study &amp; submit</span>
     </div>
   </div>
 
@@ -2041,98 +2235,118 @@ body {
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
-        <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
-        <div class="video-wrap-title">Welcome to Florida History</div>
+        <div class="video-wrap-type">📍 WELCOME · LEARN</div>
+        <div class="video-wrap-title">Primary and Secondary Sources — Two Voices from Florida's Past</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "stuck inside Canvas" story beat — light, warm, slightly conspiratorial, never panicked. Suggested ~30-sec script start: <em>"Hey Florida historians — quick heads-up: I'm stuck inside Canvas. Long story. The first file on my desk says 'What Florida Historians Study' and it won't open until I show I actually know what historians do. Lucky for me, that's exactly what you're about to learn."</em> Then drop the frame and teach: read the Florida Historian's Question aloud, preview today's path (the Florida topic, what you'll explore, what the assignment is), and mention the virtue (self-governance).
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with the story beat (~30 sec): <em>"Canvas has two source cards ready for your students, but the labels are missing. I need them to look carefully at each one and decide which came from inside a Florida moment and which explains it later — can they label the cards?"</em> Then welcome the team. Read the Guiding Question aloud: "Why does it matter whether a piece of Florida history evidence came from someone who was there — or someone who learned about it later?" Introduce the two voices: <em>primary</em> (from inside the moment) and <em>secondary</em> (created later). Mention today's virtue, <em>honesty</em> — historians have to be honest about where their evidence came from. Keep it warm and clear. Under 2 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-welcome --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-01-02-welcome --></div>
       </div>
     </div>
   </div>
 
   <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🌴 Virtue Spotlight — Self-Governance</div>
-    <div class="virtue-text">Good Florida historians govern themselves — they slow down, check the evidence, and don't jump to conclusions. Today, when you feel the urge to guess, choose to look at the evidence instead.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Honesty</div>
+    <div class="virtue-text">Honesty is the historian's first rule. When a Florida historian says "I know what happened," that claim has to come from real evidence — and the historian has to be honest about <em>where</em> the evidence came from. A diary written by a Seminole leader in 1830 and a textbook chapter written in 2010 both tell us something. Pretending they're the same kind of source would be dishonest. Today, you'll practice naming sources for what they really are.</div>
   </div>
 
-  <!-- Your Role Today (Grade 4 — constant across the year: Florida History Team) -->
+  <!-- Florida historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
   <div class="callout callout-info">
-    <div class="callout-icon">🐊</div>
-    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Florida historians ask questions, study sources, follow timelines, and use careful evidence. Today, your team will learn what Florida historians actually study — and prove you can think like one.</p>
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Florida historian</strong> on the student research team. Today's assignment: study the paired source card, sort Florida sources into primary and secondary using evidence from each one, and complete your Source Study.</p>
   </div>
 
-  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD (Grade 4 — visual novelty hook) ═══
-       Replace the SVG placeholder below with a small hand-coded illustration
-       that matches the "Show or Make" column from the G4 Canvas Escape Arc tab.
-       Examples: locked file card with magnifying glass + Florida outline +
-       notebook (4.01.01); paired source card with primary + secondary (4.01.02);
-       mixed-up timeline strip (4.01.04); unlabeled Florida map (4.02.01).
-       The card itself is the manila folder; the SVG inside is the visual artifact.
-       This card sits ONCE on Tab 1 and never recurs on other tabs. -->
-  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.01">
+
+
+  <!-- ═══ SHOW OR MAKE: FLORIDA FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.02">
     <div class="canvas-file-card-head">
       <span class="canvas-file-card-head-icon">🗂️</span>
-      <span class="canvas-file-card-head-text">Show or Make: Today's Florida File</span>
+      <span class="canvas-file-card-head-text">Show or Make: A paired source card — one primary source and one secondary source about Florida history</span>
     </div>
     <div class="canvas-file-card-body">
-      <p>A locked file card sits at the Canvas entrance. Inside: a magnifying glass over Florida's outline and a small Historian's Notebook waiting for its first entry.</p>
+      <p>Your Florida File for this lesson is a paired source card. One side shows a source from someone who was <em>right there</em> when a Florida moment happened. The other side shows a source created <em>later</em> by someone who studied that moment. Your job: label each side as primary or secondary and explain your evidence.</p>
       <div class="canvas-file-card-visual">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;">
-          <defs>
-            <linearGradient id="folderGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#FFF8E0"/>
-              <stop offset="100%" stop-color="#F2E5B8"/>
-            </linearGradient>
-          </defs>
-          <!-- File card -->
-          <rect x="30" y="30" width="340" height="170" rx="6" fill="url(#folderGrad)" stroke="#8B6E2A" stroke-width="2.5"/>
-          <!-- File label tab -->
-          <rect x="50" y="20" width="120" height="22" rx="3" fill="#E8D4A8" stroke="#8B6E2A" stroke-width="2"/>
-          <line x1="58" y1="32" x2="160" y2="32" stroke="#8B6E2A" stroke-width="1" opacity="0.5"/>
-          <!-- LOCKED stamp (rotated, red) -->
-          <g transform="translate(290,55) rotate(-15)">
-            <rect x="-32" y="-12" width="64" height="22" fill="none" stroke="#B91C1C" stroke-width="2.5" rx="3"/>
-            <line x1="-28" y1="0" x2="28" y2="0" stroke="#B91C1C" stroke-width="1" opacity="0.4"/>
-          </g>
-          <!-- Padlock icon on file -->
-          <g transform="translate(75,75)">
-            <rect x="-12" y="0" width="24" height="20" rx="2" fill="#5C3A14"/>
-            <path d="M-8,0 L-8,-8 Q-8,-16 0,-16 Q8,-16 8,-8 L8,0" fill="none" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="0" cy="10" r="2.5" fill="#FFD06E"/>
-          </g>
-          <!-- Florida outline (large, center) -->
-          <g transform="translate(190,130)">
-            <path d="M-50,-30 Q-55,-50 -42,-58 Q-25,-60 -10,-55 Q5,-50 15,-45 Q28,-38 35,-30 Q42,-18 38,-8 Q34,5 26,12 Q22,22 14,28 Q4,30 -8,28 Q-18,32 -28,28 Q-38,22 -42,12 Q-48,2 -50,-12 Q-54,-22 -50,-30 Z"
-                  fill="#A8DDF0" stroke="#2A6A8C" stroke-width="2.5"/>
-            <!-- Small evidence marks on FL -->
-            <circle cx="-25" cy="-20" r="2.5" fill="#E8843A"/>
-            <circle cx="0" cy="-5" r="2.5" fill="#E8843A"/>
-            <circle cx="15" cy="10" r="2.5" fill="#E8843A"/>
-          </g>
-          <!-- Magnifying glass (over FL, animated drift) -->
-          <g transform="translate(245,115)" style="animation: showFloat 4s ease-in-out infinite;">
-            <circle cx="0" cy="0" r="22" fill="#FFF" opacity="0.55" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="-6" cy="-6" r="6" fill="#FFF" opacity="0.7"/>
-            <line x1="16" y1="16" x2="32" y2="32" stroke="#5C3A14" stroke-width="5" stroke-linecap="round"/>
-          </g>
-          <!-- Small notebook (corner) -->
-          <g transform="translate(80,165)">
-            <rect x="-15" y="-12" width="30" height="22" fill="#E58A85" rx="2" stroke="#B05A55" stroke-width="1.5"/>
-            <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="-1" x2="10" y2="-1" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="4" x2="6" y2="4" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-          </g>
+        <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
+          <!-- Left card: Primary Source (warm gold) -->
+          <rect x="20" y="30" width="170" height="140" rx="6" fill="#FFF8E8" stroke="#B89860" stroke-width="1.5"/>
+          <rect x="20" y="30" width="170" height="28" rx="6" fill="#E8C86A" stroke="#B89860" stroke-width="1.5"/>
+          <text x="105" y="49" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#5C3A00">PRIMARY SOURCE</text>
+          <!-- Simulated handwriting lines -->
+          <line x1="38" y1="80" x2="172" y2="80" stroke="#C8A84A" stroke-width="1" stroke-dasharray="4,2"/>
+          <line x1="38" y1="96" x2="160" y2="96" stroke="#C8A84A" stroke-width="1" stroke-dasharray="4,2"/>
+          <line x1="38" y1="112" x2="165" y2="112" stroke="#C8A84A" stroke-width="1" stroke-dasharray="4,2"/>
+          <line x1="38" y1="128" x2="150" y2="128" stroke="#C8A84A" stroke-width="1" stroke-dasharray="4,2"/>
+          <!-- Wax seal dot -->
+          <circle cx="155" cy="155" r="12" fill="#D94040" opacity="0.8"/>
+          <text x="155" y="159" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="white" font-weight="700">1565</text>
+          <!-- Right card: Secondary Source (cool blue) -->
+          <rect x="230" y="30" width="170" height="140" rx="6" fill="#F0F8FF" stroke="#6A9AC8" stroke-width="1.5"/>
+          <rect x="230" y="30" width="170" height="28" rx="6" fill="#4A8AC0" stroke="#6A9AC8" stroke-width="1.5"/>
+          <text x="315" y="49" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">SECONDARY SOURCE</text>
+          <!-- Simulated printed text lines -->
+          <line x1="248" y1="76" x2="382" y2="76" stroke="#6A9AC8" stroke-width="1"/>
+          <line x1="248" y1="90" x2="382" y2="90" stroke="#6A9AC8" stroke-width="1"/>
+          <line x1="248" y1="104" x2="370" y2="104" stroke="#6A9AC8" stroke-width="1"/>
+          <line x1="248" y1="118" x2="382" y2="118" stroke="#6A9AC8" stroke-width="1"/>
+          <line x1="248" y1="132" x2="365" y2="132" stroke="#6A9AC8" stroke-width="1"/>
+          <!-- Book icon -->
+          <rect x="270" y="148" width="28" height="16" rx="2" fill="#4A8AC0"/>
+          <line x1="284" y1="148" x2="284" y2="164" stroke="white" stroke-width="1"/>
+          <text x="345" y="159" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#4A8AC0" font-weight="700">© 2010</text>
+          <!-- Center label -->
+          <text x="210" y="115" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#B89860">⟷</text>
         </svg>
-        <p style="margin-top:8px;font-size:12px;">A locked Florida File with a magnifying glass, the Florida outline, and a fresh Historian's Notebook.</p>
-        <style>@keyframes showFloat { 0%,100%{transform:translate(245px,115px) rotate(-8deg);} 50%{transform:translate(248px,112px) rotate(-3deg);} }</style>
+        <p class="file-card-caption" style="font-size:13px;color:#6E5215;font-style:italic;margin-top:8px;text-align:center;">Label each side: which came from inside the moment, and which came later?</p>
       </div>
+    </div>
+  </div>
+
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- WORD ROOTS — cross-curricular Latin/Greek root mini-lesson + match game -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">🔤</div>
+      <div>
+        <div class="activity-title">Word Roots</div>
+        <div class="activity-sub">Latin root: <em>prim-</em> — "first"</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The Latin root <strong>prim-</strong> means "first." It's hiding inside one of today's most important words — <em>primary</em>.</p>
+      <div class="callout callout-vocab">
+        <div class="callout-icon">📖</div>
+        <p><strong>primary</strong> — first, or coming first · <strong>primitive</strong> — from the earliest time · <strong>prime</strong> — first in importance · <strong>primer</strong> — a first book used to learn something</p>
+      </div>
+
+      <!-- Root Match Game -->
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">primary</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">from the earliest time</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">primitive</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">first, or coming first</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">prime</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">a first book used to learn something</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">primer</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">first in importance</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! You know your roots.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+          When historians say "primary source," they literally mean evidence that comes <em>first</em> — straight from the moment it happened. That's the same <em>prim-</em> hiding inside "prime time" and "prime minister."
+        </div>
+      </div>
+
+      <p style="margin-top:14px;font-size:14px;color:#3A4A6B;"><strong>Think about it:</strong> If "primary" means <em>first</em>, what makes a primary source the <em>first</em> kind of evidence about something that happened in Florida?</p>
     </div>
   </div>
 
@@ -2140,7 +2354,7 @@ body {
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that you've stepped into the scene, let's examine the evidence up close.</p>
+    <p class="tab-transition-voice">You've met the two kinds of sources. Now let's look at real Florida evidence up close.</p>
     <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
   </div>
 </div>
@@ -2164,17 +2378,17 @@ body {
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
-        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Looking at a Source Like a Historian</div>
+        <div class="video-wrap-type">🔍 EXPLORE</div>
+        <div class="video-wrap-title">Primary and Secondary Sources in Florida History</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~3 min):</strong> No story frame in this clip — Canvas can wait. Walk through what historians study (people, places, events, evidence). Show a Florida photograph or simple source and think aloud how a historian would look at it. Model the "I notice... I wonder... I think this means..." pattern. End with: "Now you try."
+          <strong>Teacher recording notes:</strong> Welcome the team back. Today the Florida historian runs the briefing. Teach <em>primary</em> and <em>secondary</em> with strong Florida examples. <strong>Primary</strong> = evidence from someone who was there at the time: a 1565 letter from Pedro Menéndez de Avilés, a photograph of Henry Flagler's railroad workers, an oral history recorded from a Seminole elder, a citrus farmer's diary from the 1880s. <strong>Secondary</strong> = an account made later by someone who studied the primary sources: a textbook chapter about St. Augustine, a documentary film about the Trail of Tears, a museum panel about Florida statehood. Make the bridge: both kinds matter, but a historian has to be honest about which is which. Emphasize the key honesty point: historians have to name each source for what it really is — a modern blog post is not an eyewitness account, and a textbook summary is not proof straight from 1565. Aim for 4–5 minutes. Calm, clear energy.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-explore-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-01-02-explore-explainer --></div>
       </div>
     </div>
   </div>
@@ -2187,21 +2401,34 @@ body {
     <div class="activity-head">
       <div class="activity-num" style="background:#1A8A7D;">📖</div>
       <div>
-        <div class="activity-title">What Do Historians Actually Study?</div>
-        <div class="activity-sub">Four things: people, places, events, and evidence</div>
+        <div class="activity-title">Primary &amp; Secondary Sources</div>
+        <div class="activity-sub">Two voices, two jobs in a historian's evidence box</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>When someone says "historian," you might picture a person in a dusty room reading old books. That happens sometimes — but most of a historian's job is asking questions and looking for answers in <strong>evidence</strong>.</p>
-      <p>Florida historians study four big things: <strong>people</strong> (who lived here and how they lived), <strong>places</strong> (the land, water, climate, and how people used them), <strong>events</strong> (what happened, when, and why), and <strong>evidence</strong> (the proof — letters, photos, maps, objects, stories — that tells us what really happened).</p>
-      <p>The most important habit a historian builds is the difference between <em>knowing</em> and <em>guessing</em>. A guess sounds like "I think pirates lived here." A historian's claim sounds like "An old map from 1696 shows a Spanish fort here, so we know Spanish soldiers were in Florida by then." See the difference? The historian points to something real.</p>
+      <p>Yesterday we learned that Florida historians study <strong>people, places, events, and evidence.</strong> Today we zoom in on that last one — evidence — because not all evidence is the same. Florida historians sort evidence into two big groups: <strong>primary sources</strong> and <strong>secondary sources</strong>.</p>
+      <p><strong>Primary sources</strong> are evidence from someone who was <em>there at the time</em>. Think of a primary source as a voice from <em>inside</em> the moment. Examples from Florida history:</p>
+      <ul style="margin:0 0 12px 22px;padding:0;color:#0E1C42;line-height:1.7;">
+        <li>A 1565 letter Pedro Menéndez de Avilés sent to the King of Spain about founding St. Augustine</li>
+        <li>A photograph of workers building Henry Flagler's railroad across Florida in the 1890s</li>
+        <li>An oral history recorded from a Seminole elder remembering their grandparents' stories</li>
+        <li>A diary kept by a Florida citrus farmer in the 1880s</li>
+      </ul>
+      <p><strong>Secondary sources</strong> are accounts made <em>later</em> by people who studied the primary sources. Think of a secondary source as a voice from <em>outside</em> the moment, looking back. Examples:</p>
+      <ul style="margin:0 0 12px 22px;padding:0;color:#0E1C42;line-height:1.7;">
+        <li>A textbook chapter about St. Augustine, written in 2010</li>
+        <li>A documentary film about the Trail of Tears, made in this century</li>
+        <li>A museum panel that explains how Florida became a state in 1845</li>
+        <li>This lesson! It's a secondary source telling you about Florida history.</li>
+      </ul>
+      <p>Both kinds matter. A primary source brings you close to the moment but only shows one person's view. A secondary source pulls together many primary sources but adds a step between you and the past. A good Florida historian uses both — and is <em>honest</em> about which is which.</p>
     </div>
   </div>
 
   <!-- Pause & Think -->
   <div class="callout callout-think">
     <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Pick one of the four things historians study (people, places, events, or evidence). Which would help you most if you wanted to know how kids in Florida lived 100 years ago?</p>
+    <p><strong>Pause &amp; Think:</strong> A letter written by a Seminole leader in 1830 and a textbook chapter about the Seminole written today both tell us something. What can each one do that the other one <em>can't</em>?</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
@@ -2210,36 +2437,38 @@ body {
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
   <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
   <!-- OPTION: Source Study Card -->
   <div class="source-card">
     <div class="source-card-header">
       <div class="source-card-header-icon">📜</div>
       <div>
-        <div class="source-card-header-label">Source Study · Try It Yourself</div>
-        <div class="source-card-header-title">A Florida Photograph from Long Ago</div>
+        <div class="source-card-header-label">Source Study</div>
+        <div class="source-card-header-title">A Paired Florida Source — One Moment, Two Voices</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-01-01-florida-historic-photo">
+    <div class="source-image-placeholder" data-image="source-4-01-02-florida-paired-sources">
       <div class="source-image-placeholder-text">
-        🖼️ Black-and-white photograph of a Florida family or community scene from the late 1800s or early 1900s. Suggested options: families at a Florida fish camp, citrus pickers, a one-room schoolhouse, Tampa or St. Augustine street scene. Search the Florida Memory project (floridamemory.com).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-01-01-florida-historic-photo.jpg</code>
+        🖼️ A paired-source image: on one side, a Florida <strong>primary source</strong> — for example, a historical photograph from State Archives of Florida (a Henry Flagler-era worker photo, a Seminole family portrait, or an early St. Augustine street scene) — clearly labeled with its original date. On the other side, a modern <strong>secondary source</strong> about the same moment — a textbook page, a museum panel, or an article excerpt that <em>describes</em> the scene from today's perspective. Both labeled with their date and source. Suggested repositories: Florida Memory (floridamemory.com), Library of Congress (loc.gov), Smithsonian Open Access (si.edu/openaccess).<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-01-02-florida-paired-sources.jpg</code>
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Primary Source</span> · A photograph from Florida's past (~100+ years old)
+        <span class="src-type">Paired Source</span> · One Florida moment, shown by a primary source and a secondary source side by side
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look at the photograph carefully. Name three details — clothing, objects, buildings, plants, anything that stands out. Don't guess yet; just describe.</p>
+        <p><strong>What do I see?</strong> Look at both sides. Which one was made <em>at the time</em> of the moment? Which one was made <em>later</em>? Name one piece of evidence from each side that helped you decide.</p>
       </div>
       <div class="callout callout-think">
         <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> What do those details tell you about the <em>people</em>, <em>places</em>, or <em>events</em> in the photograph? Use what you see, not what you imagine.</p>
+        <p><strong>What does it mean?</strong> Why might a Florida historian want <em>both</em> of these sources, not just one? What does the primary source give you that the secondary source can't — and the other way around?</p>
       </div>
       <div class="callout callout-tip">
         <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> If we did not have this photograph, what would be harder to know about Florida's past? That is exactly why historians study evidence.</p>
+        <p><strong>Why does it matter?</strong> If a historian only used the secondary source and ignored the primary one, what could go wrong? How does being honest about which source is which protect the truth?</p>
       </div>
     </div>
   </div>
@@ -2249,26 +2478,25 @@ body {
   <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Key Concept (Grade 4) -->
+  <!-- Key Concept -->
   <div class="key-concept">
-    <div class="key-concept-label">🔑 Key Concept</div>
-    <p>Florida historians study people, places, events, and evidence — and they always show where their ideas come from.</p>
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>A <strong>primary source</strong> comes from someone who was there at the time. A <strong>secondary source</strong> comes from someone who studied the primary sources later. Both can help us understand Florida history — but only if we are honest about <em>which is which</em>.</p>
   </div>
 
-  <!-- Opti the Owl — appears once per lesson with a Florida-aware observation.
-       Florida-aware, connected to today's content -->
+  <!-- Opti the Owl — lab-themed observation for Grade 4. -->
   <div class="owl-buddy">
     <div class="owl-buddy-avatar">🦉</div>
     <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Psst — historians don't guess. When you spot a detail in a photograph or document, that detail is evidence. Even one small thing — a coat, a flag, a date — can change what we know.
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      Quick observation from the archive: notice that this lesson page is itself a <em>secondary</em> source about Florida history. I didn't live in 1565 (don't let the feathers fool you), and neither did your textbook. That's why we keep pointing back to the <em>primary</em> sources — the letters, photos, diaries, and oral histories — that came straight from the moment.
     </div>
   </div>
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">You've explored the sources and built your understanding. Let's see how much you remember.</p>
-    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Signal Check →</button>
   </div>
 </div>
 
@@ -2295,39 +2523,39 @@ body {
     <div style="padding:18px 22px;">
 
       <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">1. Which list shows what historians study?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. In 1565, Pedro Menéndez de Avilés wrote a letter to the King of Spain about founding St. Augustine. What kind of source is that letter today?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Math, science, and reading</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Only old books in libraries</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>People, places, events, and evidence</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>A secondary source, because it's really old</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>A primary source, because it came from someone who was there at the time</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Neither — letters don't count as sources</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Historians study people, places, events, and evidence — and they always use evidence to back up what they say.</div>
-        <div class="quiz-feedback fb-wrong">Almost. Look back at the section "What Do Historians Actually Study?" There are four things, and they go together.</div>
+        <div class="quiz-feedback fb-correct">Right. The letter came from someone who was <em>there at the time</em>, so it's a <strong>primary source</strong>. Age alone doesn't decide it — what matters is whether the source is from inside the moment.</div>
+        <div class="quiz-feedback fb-wrong">Re-read the definition of primary source. The question isn't how old the source is — it's whether the person who made it was there at the time.</div>
       </div>
 
       <!-- QUESTION 2 -->
       <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. Which sentence sounds like a historian, not a guess?</div>
+        <div class="quiz-q-text">2. Which of these is a <em>secondary</em> source about the Seminole people?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>"I think pirates probably lived in Florida."</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>"A map from 1696 shows a Spanish fort, so Spanish soldiers were here by then."</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>"Florida is always sunny because everyone says so."</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>A diary entry written by a Seminole leader in 1830</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>A textbook chapter about the Seminole written in 2010</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>A photograph taken inside a Seminole village in 1900</div>
         </div>
-        <div class="quiz-feedback fb-correct">Right! A historian's claim points to evidence — in this case, the map. Anyone can check that map and see for themselves.</div>
-        <div class="quiz-feedback fb-wrong">Look again. Which sentence names a piece of evidence (like a map, a letter, or a photograph)? That's the historian's sentence.</div>
+        <div class="quiz-feedback fb-correct">Yes! The textbook was written <em>later</em>, by an author who studied other sources. That's a <strong>secondary source</strong>. The diary and the photograph both came from inside the moment, so they're primary.</div>
+        <div class="quiz-feedback fb-wrong">Look for the source that was made <em>later</em>, by someone studying the past — not by someone who lived it.</div>
       </div>
 
       <!-- QUESTION 3 -->
-      <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">3. Why do historians use evidence instead of just guessing?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">3. Why does it matter to tell primary and secondary sources apart?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>So other people can check their work and know it's true.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because evidence is required by law in every state.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because old documents are easier to read than new ones.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Primary sources are always right and secondary sources are always wrong</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>We have to be honest about where evidence came from so we can judge what it really shows</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Secondary sources don't count for history</div>
         </div>
-        <div class="quiz-feedback fb-correct">Exactly. Evidence lets anyone check the work. That's how historians earn trust and tell the difference between knowing and guessing.</div>
-        <div class="quiz-feedback fb-wrong">Think about why a historian needs to "show their work" the same way a math student does. What makes a claim believable?</div>
+        <div class="quiz-feedback fb-correct">Exactly. Both kinds of sources help us — but only if we're <strong>honest</strong> about which is which. That honesty is what protects the truth.</div>
+        <div class="quiz-feedback fb-wrong">Think back to today's virtue spotlight. Both kinds of sources matter — what does a historian have to be honest about?</div>
       </div>
 
       <!-- Score Box -->
@@ -2351,8 +2579,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 30 sec):</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. One light story nudge — something like: "That's exactly what Canvas needed to see." High energy.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-perfect --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score and name what they did — they sorted primary from secondary with evidence. Affirm honesty about sources. Under 30 seconds. High energy.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-01-02-quiz-perfect --></div>
             </div>
           </div>
         </div>
@@ -2371,8 +2599,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 1 min):</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Story stays out of this clip.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-review --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Calmly re-teach primary vs. secondary using one clear contrast: a 1565 Menéndez letter (primary — from inside the moment) vs. a 2010 textbook chapter (secondary — written later). Remind students of the honesty rule: name each source for what it really is. Encourage — "You're still learning, and that's the whole point." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-01-02-quiz-review --></div>
             </div>
           </div>
         </div>
@@ -2384,7 +2612,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
-    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
   </div>
 </div>
 
@@ -2411,17 +2639,17 @@ body {
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
-        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">Your First Historian's Notebook Entry</div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE &amp; ASSIGNMENT</div>
+        <div class="video-wrap-title">Complete Your Source Study</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~2–3 min):</strong> Read each evidence question (Part A) aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Then walk through Part B and emphasize that finishing Part B is what triggers the 🔓 Unlock Challenge — once it's turned in, the file unlocks. One-sentence story nudge optional. Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas.
+          <strong>Teacher recording notes:</strong> Welcome the team to the assignment. Read each evidence question aloud. Think aloud through one: "If I had to give a Florida primary source, I might pick a photograph of Henry Flagler's railroad workers — it's primary because it was taken at the time, and you can see the actual people there." Then walk through the Source Study assignment: students label each side of the paired image as primary or secondary using <em>one sentence of evidence from the source itself</em>, then write 2–3 sentences explaining what the two sources together help us understand. Remind them of the honesty rule. Walk through the turn-in steps: review gathered answers, copy or download, submit to Canvas. Aim for 2–3 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-assignment-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-01-02-assignment-explainer --></div>
       </div>
     </div>
   </div>
@@ -2438,80 +2666,75 @@ body {
     <div class="activity-body">
 
       <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two of the four things historians study, and give one example of each from Florida.</div></div>
-      <div class="textbox-prompt">Use words from the lesson. Try the sentence starter below if it helps.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two things historians study"
-        placeholder="Florida historians study ____, like ____. They also study ____, like ____."
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Give one example of a Florida <strong>primary source</strong> and explain why it counts as primary.</div></div>
+      <div class="textbox-prompt">Name the source, then say what makes it a voice from inside the moment.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Florida primary source"
+        placeholder="One Florida primary source is..."
         oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
       <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Look back at the photograph in Tab 2. What is ONE detail you saw, and what does that detail tell you about people or places in Florida?</div></div>
-      <div class="textbox-prompt">Name a real detail first, then explain what it tells you. Don't guess — point to what you actually see.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: A detail from the photo"
-        placeholder="I noticed ______. This tells me ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Give one example of a Florida <strong>secondary source</strong> and explain why it counts as secondary.</div></div>
+      <div class="textbox-prompt">Name the source, then say who made it and when — and how that makes it a voice from <em>outside</em> the moment.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Florida secondary source"
+        placeholder="One Florida secondary source is..."
         oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
-      <!-- Q3 (optional — include for Lesson B or deeper lessons) -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why is it important for historians to use evidence instead of just guessing?</div></div>
-      <div class="textbox-prompt">Think about how someone else would check your work.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why evidence matters"
-        placeholder="Historians use evidence because ______."
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why is being <strong>honest</strong> about a source important for a Florida historian?</div></div>
+      <div class="textbox-prompt">Use the words <em>primary</em> and <em>secondary</em> in your answer.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Honesty about sources"
+        placeholder="Being honest about a source matters because..."
         oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
 
     </div>
   </div>
 
-  <!-- Part B: Today's Florida Task — frames the academic assignment as an "Unlock Challenge" -->
+  <!-- Part B: Routine Assignment -->
   <div class="activity bl-gold">
     <div class="activity-head">
-      <div class="activity-num" style="background:#E8843A;">B</div>
+      <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
-        <span class="canvas-unlock-stamp">Unlock Challenge</span>
-        <div class="activity-title">Your First Historian's Notebook Entry</div>
-        <div class="activity-sub">Write 3–5 sentences explaining what Florida historians study, using one specific piece of evidence from this lesson.</div>
+          <span class="canvas-unlock-stamp">Unlock Challenge</span>
+                  <div class="activity-title">Source Study: A Paired Florida Source</div>
+        <div class="activity-sub">Label each side, then explain what the pair shows together.</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>This is your first official entry as a member of the Florida History Team. Don't worry about being perfect — just sound like a historian, not a guesser. Name what historians study, then point to a real detail (from the photograph, or from what you read) that proves your point.</p>
-
-      <div class="textbox-prompt">Strong entry checklist: (1) Name at least two of the four things historians study. (2) Use one detail from this lesson. (3) Sound like a careful historian — no guesses.</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Historian's Notebook Entry"
-        placeholder="Florida historians study people, places, events, and evidence. For example, when I looked at the photograph, I saw..."
+      <p>Go back to the <strong>paired source image</strong> in Tab 2. For <em>each</em> side, write <strong>primary</strong> or <strong>secondary</strong> and one sentence of evidence from the source itself that proves your choice (the date, who made it, what kind of object it is, etc.). Then write 2–3 sentences explaining what the two sources <em>together</em> help us understand about this moment in Florida history.</p>
+      <div class="textbox-prompt">Structure your response like this: <em>Side 1: primary/secondary because… Side 2: primary/secondary because… Together, these two sources help us understand…</em></div>
+      <textarea class="journal-box" id="journal-assign" data-label="Source Study: Paired Florida Source"
+        placeholder="Side 1: primary because... Side 2: secondary because... Together, these two sources show me that..."
         oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Historian's Sentence (Grade 4 — neutral one-sentence reflection) -->
+  <!-- Lab Log Entry (Grade 4 — replaces Chronicle Sentence) -->
   <div class="activity bl-navy">
     <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div class="activity-num" style="background:#0E1C42;">📡</div>
       <div>
         <div class="activity-title">Historian's Sentence</div>
-        <div class="activity-sub">One sentence to capture today's evidence work.</div>
+        <div class="activity-sub">One sentence to capture what you learned today.</div>
       </div>
     </div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
-      <div class="textbox-prompt">Today I learned that ______ because the evidence shows ______.</div>
+      <div class="textbox-prompt">As a Florida historian, I learned that ______ because ______.</div>
       <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
-        placeholder="Today I learned that..."
+        placeholder="As a Florida historian, I learned that..."
         oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- ═══ 📂 FILE UNLOCKED (Grade 4 — closing story beat sticky, 30 sec) ═══
-       This is the CLOSING story beat. The text is also the script the teacher
-       will read when recording the closing video. Keep it 1-3 sentences.
-       Pull the exact wording from the "Closing: File Unlocked" column of the
-       Planning Table for this lesson code. For sensitive-history lessons,
-       add class="quiet" to remove the playful rotation. -->
+
+  <!-- ═══ FILE UNLOCKED STICKY ═══ -->
   <div class="canvas-sticky unlocked" style="margin-top:18px;">
     <div class="canvas-sticky-head">
       <span class="canvas-sticky-head-icon">📂</span>
       <span class="canvas-sticky-head-label">File Unlocked</span>
     </div>
     <div class="canvas-sticky-body">
-      <p>Florida historians study people, places, events, and evidence. The course entrance is one step clearer.</p>
+      <p>Primary and secondary sources help historians learn different kinds of information about Florida's past. You figured out which source came from inside the moment and which explained it later — and that's exactly the skill Florida historians use every time they open an evidence box. The course path is one step clearer.</p>
     </div>
     <div class="canvas-sticky-byline">— Course Path Updated · Episode 1 of 13</div>
   </div>
@@ -2540,9 +2763,9 @@ body {
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <!-- Florida History Team is the constant role. Lesson-specific Unlock Challenge framing pulled from planning table.
-             Look up the lesson code in the planning table for context. -->
-        <strong>Nice work, Florida historian!</strong> You've started your first Historian's Notebook and proved you can think with evidence instead of guessing.
+        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Florida historian!"
+             Second sentence references the specific mission accomplished. -->
+        <strong>Nice work, Florida historian!</strong> You sorted Florida sources into primary and secondary using real evidence — and completed your Source Study.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
@@ -2581,11 +2804,11 @@ body {
       <div class="turn-in-checklist">
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+          <div class="turn-in-item-text">✅ I studied the paired Florida source card and answered the evidence questions.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Unlock Challenge (Historian's Notebook entry).</div>
+          <div class="turn-in-item-text">✅ I completed today's Source Study, labeling both sides as primary or secondary.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2599,17 +2822,12 @@ body {
     </div>
   </div>
 
-  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP (Grade 4 — tiny progress marker) ═══
-       Shows the student where they are in the 13-episode arc.
-       Set the .now class on the current episode dot and .done on completed dots.
-       Episodes: 1=U1, 2=U2, 3=U3, 4=U4, 5=U5 (Checkpoint), 6=U6, 7=U7, 8=U8,
-       9=U9 (Checkpoint), 10=U10, 11=U11, 12=U12, 13=U13 (Finale). -->
+
+  <!-- ═══ COURSE PATH CHIP ═══ -->
   <div style="text-align:center;">
     <div class="canvas-path-chip">
-      <span class="canvas-path-chip-icon">🛤️</span>
-      <span>Course Path Updated · Episode 1 of 13</span>
-      <span class="canvas-path-chip-dots">
-        <!-- ✏️ Mark the current episode dot with .now; mark all earlier dots with .done -->
+      🛤️ Course Path Updated
+      <div class="canvas-path-chip-dots">
         <span class="canvas-path-chip-dot now"></span>
         <span class="canvas-path-chip-dot"></span>
         <span class="canvas-path-chip-dot"></span>
@@ -2623,26 +2841,26 @@ body {
         <span class="canvas-path-chip-dot"></span>
         <span class="canvas-path-chip-dot"></span>
         <span class="canvas-path-chip-dot"></span>
-      </span>
+      </div>
     </div>
   </div>
 
-<!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
   <div class="video-wrap" style="margin-top:18px;">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
-        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">First File Unlocked</div>
+        <div class="video-wrap-type">🎉 CLOSING</div>
+        <div class="video-wrap-title">File Unlocked: Sources Identified</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "File Unlocked" story beat — warm, proud, never over-the-top. Suggested ~30-sec script start: <em>"You did it — the first file is unlocked. Florida historians study people, places, events, and evidence, and that's exactly what you just proved you can do. Next file: figuring out the difference between primary and secondary sources. I'll meet you there."</em> Then close like a normal lesson: name the specific evidence work students did, restate the Key Concept in your own words, and remind students to keep their Historian's Notebook updated. Under 2 minutes total.
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with the File Unlocked beat (~30 sec): <em>"Primary and secondary sources help historians learn different kinds of information about Florida's past — and your students just proved they can tell the difference. The file is unlocked."</em> Then restate the rule in one sentence: a primary source comes from someone who was there at the time; a secondary source comes from someone who studied it later. Affirm today's virtue: <em>honesty</em> about which is which is how historians protect the truth. Tease lesson 4.01.03 — coming up next is a different kind of source: <em>print and electronic media</em>. Remind students to bring their Historian's Notebook. Under 1 minute. Warm and encouraging.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-closing --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-01-02-closing --></div>
       </div>
     </div>
   </div>
@@ -2652,7 +2870,7 @@ body {
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 4 · 4.01.01</div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.01.02</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
@@ -2765,7 +2983,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>4.01.01 — My Work</title>';
+  html += '<title>4.01.02 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2775,8 +2993,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — 4.01.01</h1>';
-  html += '<h2>What Florida Historians Study</h2>';
+  html += '<h1>📓 My Work — Lesson 4.01.02</h1>';
+  html += '<h2>Primary and Secondary Sources in Florida History</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {
@@ -3015,12 +3233,8 @@ function scrollToTop() {
 /* ═══════════ INIT ═══════════ */
 updateProgress();
 
-/* ═══════════ SOURCE IMAGE AUTO-LOADER ═══════════
-   Scans .source-image-placeholder divs for data-image attributes,
-   then tries to load the image from GitHub. Tries multiple extensions.
-   If found, replaces the placeholder with the image. If not, placeholder stays.
-   Update the B variable if your GitHub repo URL changes. */
-(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4 — source image placeholders) ═══════════ */
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
 </body>
 </html>

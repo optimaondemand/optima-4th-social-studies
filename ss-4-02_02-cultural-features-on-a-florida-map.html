@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — 4.01.01: What Florida Historians Study</title>
+<title>Optima Academy Online — Lesson 4.02.02: Cultural Features on a Florida Map</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -193,7 +193,8 @@ body {
 
 /* ═══════════ INTRO COLLAPSIBLE ═══════════ */
 .intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
-.intro-section.collapsed > *:not(.intro-collapsed-bar) { display: none; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
 .intro-collapsed-bar {
   display: none;
   align-items: center;
@@ -1454,11 +1455,9 @@ body {
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
+
 /* ═══════════════════════════════════════════════════════════════
    GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
-   Lightweight story layer. Sticky notes for messages, manila file
-   cards for "Show or Make," kraft postcards for unit closers.
-   Florida content is the main story; these are visual novelty only.
    ═══════════════════════════════════════════════════════════════ */
 
 /* --- 📩 Message from Inside Canvas: yellow sticky note --- */
@@ -1476,7 +1475,6 @@ body {
   color: #3D2E10;
 }
 .canvas-sticky::before {
-  /* tape strip */
   content: "";
   position: absolute;
   top: -10px;
@@ -1515,8 +1513,6 @@ body {
   color: #6B5418;
   font-style: italic;
 }
-
-/* Variant: File Unlocked sticky (soft green instead of yellow) */
 .canvas-sticky.unlocked {
   background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
   border-color: #6FAA5C;
@@ -1544,7 +1540,6 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
 }
 .canvas-file-card::before {
-  /* manila folder tab */
   content: attr(data-tab);
   position: absolute;
   top: -22px;
@@ -1593,31 +1588,7 @@ body {
   font-style: italic;
 }
 .canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
-
-/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
-.canvas-glitch-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #F3E8FF;
-  border: 1px dashed #9B6BC4;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 8px 0;
-  font-size: 12px;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  color: #5B2D8C;
-}
-.canvas-glitch-note-icon {
-  display: inline-block;
-  animation: glitchFlicker 3.5s ease-in-out infinite;
-}
-@keyframes glitchFlicker {
-  0%, 92%, 100% { opacity: 1; }
-  94% { opacity: 0.3; transform: translateX(-1px); }
-  96% { opacity: 1; transform: translateX(1px); }
-  98% { opacity: 0.5; }
-}
+.canvas-file-card-caption { margin-top: 8px; font-size: 12px; color: #6E5215; font-style: italic; }
 
 /* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
 .canvas-unlock-stamp {
@@ -1673,102 +1644,6 @@ body {
   50%      { box-shadow: 0 0 0 4px #10B98120; }
 }
 
-/* --- 📮 Postcard from the Teacher (unit closers only) --- */
-.canvas-postcard {
-  position: relative;
-  background: linear-gradient(135deg, #F5E6C8 0%, #E8D4A0 100%);
-  border: 1px solid #A78448;
-  border-radius: 6px;
-  padding: 0;
-  margin: 22px auto 18px;
-  max-width: 720px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.14), inset 0 0 0 2px rgba(255,255,255,0.3);
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 220px;
-}
-.canvas-postcard-left {
-  padding: 20px 22px;
-  border-right: 2px dashed #A78448;
-  font-family: "Caveat", "Patrick Hand", cursive, system-ui;
-  font-size: 17px;
-  line-height: 1.45;
-  color: #3D2E10;
-}
-.canvas-postcard-right {
-  padding: 16px 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.canvas-postcard-stamp {
-  align-self: flex-end;
-  width: 64px; height: 78px;
-  background: #FFF5E0;
-  border: 2px solid #A78448;
-  border-radius: 4px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  position: relative;
-}
-.canvas-postcard-stamp::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border: 1.5px dashed #A78448;
-  border-radius: 6px;
-}
-.canvas-postcard-address {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 12px;
-  color: #6E5215;
-  line-height: 1.55;
-}
-.canvas-postcard-cancel {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 10px;
-  color: #8B6E2A;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border-top: 1px solid #A78448;
-  padding-top: 6px;
-  margin-top: 8px;
-}
-.canvas-postcard-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-.canvas-postcard-head-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #7A5A18;
-}
-@media (max-width: 620px) {
-  .canvas-postcard { grid-template-columns: 1fr; }
-  .canvas-postcard-left { border-right: none; border-bottom: 2px dashed #A78448; }
-}
-
-/* --- Sensitive-history tone override (quieter visual) --- */
-.canvas-sticky.quiet,
-.canvas-file-card.quiet,
-.canvas-postcard.quiet {
-  background: #F6F2EA;
-  border-color: #A89880;
-  transform: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-.canvas-sticky.quiet::before { display: none; }
-.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
-.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -1792,11 +1667,11 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title"><em>What Florida Historians Study</em></div>
+  <div class="header-title"><em>Cultural Features on a Florida Map</em></div>
   <div class="header-badge">
     <!-- ✏️ GRADE TOKEN -->
     <span class="header-badge-icon">🐊</span>
-    <span class="header-badge-text">Lesson 4.01.01</span>
+    <span class="header-badge-text">Lesson 4.02.02</span>
   </div>
 </div>
 
@@ -1808,90 +1683,156 @@ body {
      2–3 CSS animations (floating, drifting, pulsing). -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
   <defs>
-    <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2E7D5B"/>
-      <stop offset="100%" stop-color="#E8843A"/>
+    <linearGradient id="bg_b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE4B0"/>
+      <stop offset="55%" stop-color="#F4B870"/>
+      <stop offset="100%" stop-color="#2A5A8A"/>
     </linearGradient>
-    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF8E0"/>
-      <stop offset="100%" stop-color="#F2E5B8"/>
+    <linearGradient id="parch_b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF0D0"/>
+      <stop offset="100%" stop-color="#E4C890"/>
     </linearGradient>
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE08A"/>
-      <stop offset="100%" stop-color="#FFB344" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="water_b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5AB0D8"/>
+      <stop offset="100%" stop-color="#2A6A9A"/>
+    </linearGradient>
   </defs>
-  <!-- Sky/sea background -->
-  <rect width="920" height="260" fill="url(#bannerGrad)"/>
-  <!-- Soft sun glow -->
-  <circle cx="730" cy="80" r="110" fill="url(#sunGrad)"/>
-  <circle cx="730" cy="80" r="38" fill="#FFE08A" opacity="0.95">
-    <animate attributeName="r" values="38;42;38" dur="6s" repeatCount="indefinite"/>
+
+  <!-- Background sky -->
+  <rect width="920" height="260" fill="url(#bg_b)"/>
+
+  <!-- Sun glow upper-right -->
+  <circle cx="780" cy="60" r="46" fill="#FFE090" opacity="0.85">
+    <animate attributeName="opacity" values="0.85;1;0.85" dur="5s" repeatCount="indefinite"/>
   </circle>
-  <!-- Palm silhouettes (right side, decorative) -->
-  <g transform="translate(820,180)" opacity="0.55">
-    <rect x="-3" y="-50" width="6" height="60" fill="#2A5A45" rx="2"/>
-    <path d="M0,-50 Q-25,-65 -45,-58 Q-30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q25,-65 45,-58 Q30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q-20,-78 -38,-78 Q-22,-65 0,-50" fill="#2D6A45"/>
-    <path d="M0,-50 Q20,-78 38,-78 Q22,-65 0,-50" fill="#2D6A45"/>
+  <circle cx="780" cy="60" r="30" fill="#FFF4C8"/>
+
+  <!-- Distant ocean horizon -->
+  <rect x="0" y="170" width="920" height="40" fill="url(#water_b)" opacity="0.65"/>
+  <g stroke="#FFFFFF" stroke-width="1.2" fill="none" opacity="0.5">
+    <path d="M0,184 Q60,181 120,184 T240,184 T360,184 T480,184 T600,184 T720,184 T840,184 T920,184"/>
+    <path d="M0,198 Q60,201 120,198 T240,198 T360,198 T480,198 T600,198 T720,198 T840,198 T920,198"/>
   </g>
-  <!-- Open notebook (left/center, the historian's tool) -->
-  <g transform="translate(220,140)">
-    <!-- shadow -->
-    <ellipse cx="0" cy="60" rx="180" ry="14" fill="#000" opacity="0.18"/>
-    <!-- left page -->
-    <path d="M-160,-60 L0,-65 L0,55 L-160,50 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- right page -->
-    <path d="M0,-65 L160,-60 L160,50 L0,55 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- spine -->
-    <line x1="0" y1="-65" x2="0" y2="55" stroke="#8B6E2A" stroke-width="2.5"/>
-    <!-- lines on left page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="-145" y1="-35" x2="-15" y2="-37"/>
-      <line x1="-145" y1="-18" x2="-15" y2="-20"/>
-      <line x1="-145" y1="-1" x2="-15" y2="-3"/>
-      <line x1="-145" y1="16" x2="-15" y2="14"/>
-      <line x1="-145" y1="33" x2="-50" y2="32"/>
+
+  <!-- Wooden table foreground -->
+  <rect x="0" y="210" width="920" height="50" fill="#7A5230"/>
+  <g stroke="#5A3A20" stroke-width="1.4" opacity="0.45">
+    <line x1="0" y1="225" x2="920" y2="225"/>
+    <line x1="0" y1="240" x2="920" y2="240"/>
+    <line x1="0" y1="255" x2="920" y2="255"/>
+  </g>
+
+  <!-- Map paper rolled out on the table — tilted slightly -->
+  <g transform="translate(460, 170) rotate(-2)">
+    <!-- Paper drop-shadow -->
+    <rect x="-330" y="-75" width="660" height="155" rx="4" fill="rgba(0,0,0,0.18)" transform="translate(4, 6)"/>
+    <!-- Parchment -->
+    <rect x="-330" y="-75" width="660" height="155" rx="4" fill="url(#parch_b)" stroke="#A07840" stroke-width="2"/>
+
+    <!-- Rolled left edge -->
+    <path d="M-330,-75 Q-345,-50 -340,0 Q-345,50 -330,80 L-330,-75 Z" fill="#D4B070" stroke="#A07840" stroke-width="1.5"/>
+    <ellipse cx="-336" cy="2" rx="4" ry="78" fill="#C09858" stroke="#8A6230" stroke-width="1"/>
+    <!-- Rolled right edge -->
+    <path d="M330,-75 Q345,-50 340,0 Q345,50 330,80 L330,-75 Z" fill="#D4B070" stroke="#A07840" stroke-width="1.5"/>
+    <ellipse cx="336" cy="2" rx="4" ry="78" fill="#C09858" stroke="#8A6230" stroke-width="1"/>
+
+    <!-- Grid lines on map -->
+    <g stroke="#B89868" stroke-width="0.6" opacity="0.5">
+      <line x1="-310" y1="-50" x2="310" y2="-50"/>
+      <line x1="-310" y1="-15" x2="310" y2="-15"/>
+      <line x1="-310" y1="20" x2="310" y2="20"/>
+      <line x1="-310" y1="55" x2="310" y2="55"/>
+      <line x1="-240" y1="-72" x2="-240" y2="76"/>
+      <line x1="-140" y1="-72" x2="-140" y2="76"/>
+      <line x1="-40" y1="-72" x2="-40" y2="76"/>
+      <line x1="60" y1="-72" x2="60" y2="76"/>
+      <line x1="160" y1="-72" x2="160" y2="76"/>
+      <line x1="260" y1="-72" x2="260" y2="76"/>
     </g>
-    <!-- lines on right page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="15" y1="-37" x2="145" y2="-35"/>
-      <line x1="15" y1="-20" x2="145" y2="-18"/>
-      <line x1="15" y1="-3" x2="145" y2="-1"/>
-      <line x1="15" y1="14" x2="145" y2="16"/>
+
+    <!-- Abstract coastline drawn on the map (curvy ink line, not Florida specifically) -->
+    <path d="M-280,-30 Q-220,-40 -160,-30 Q-100,-15 -40,-20 Q20,-30 80,-15 Q140,5 200,0 Q260,-10 300,15"
+          stroke="#2A6A9A" stroke-width="2.5" fill="none" opacity="0.75"/>
+    <path d="M-280,40 Q-200,45 -120,38 Q-40,30 40,45 Q120,55 200,48 Q260,42 300,55"
+          stroke="#2A6A9A" stroke-width="1.5" fill="none" opacity="0.45"/>
+
+    <!-- Map pins (push-pins) marking cities -->
+    <g>
+      <g transform="translate(-240, -20)">
+        <circle r="7" fill="#D4302A" stroke="#7A1818" stroke-width="1.2"/>
+        <circle cx="-2" cy="-2" r="2" fill="#FF8070"/>
+      </g>
+      <g transform="translate(-110, 5)">
+        <circle r="7" fill="#D4302A" stroke="#7A1818" stroke-width="1.2"/>
+        <circle cx="-2" cy="-2" r="2" fill="#FF8070"/>
+      </g>
+      <g transform="translate(50, -10)">
+        <!-- Capital star pin -->
+        <polygon points="0,-9 2,-3 8,-3 3,1 5,7 0,3 -5,7 -3,1 -8,-3 -2,-3" fill="#FFD068" stroke="#A07020" stroke-width="1.2"/>
+      </g>
+      <g transform="translate(170, 20)">
+        <circle r="7" fill="#D4302A" stroke="#7A1818" stroke-width="1.2"/>
+        <circle cx="-2" cy="-2" r="2" fill="#FF8070">
+          <animate attributeName="r" values="2;3;2" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <g transform="translate(250, 35)">
+        <circle r="7" fill="#D4302A" stroke="#7A1818" stroke-width="1.2"/>
+        <circle cx="-2" cy="-2" r="2" fill="#FF8070"/>
+      </g>
     </g>
-    <!-- A pencil resting -->
-    <g transform="rotate(18 30 -30)">
-      <rect x="20" y="-40" width="120" height="6" fill="#F5C547" rx="1"/>
-      <polygon points="140,-40 152,-37 140,-34" fill="#3A2A14"/>
-      <polygon points="140,-39 144,-37 140,-35" fill="#444"/>
-      <rect x="20" y="-40" width="14" height="6" fill="#E58A85"/>
-      <rect x="34" y="-40" width="2" height="6" fill="#888"/>
+
+    <!-- Dashed road connecting pins -->
+    <g stroke="#0E1C42" stroke-width="1.6" fill="none" opacity="0.6" stroke-dasharray="5 4">
+      <path d="M-240,-20 Q-180,0 -110,5 Q-30,-5 50,-10 Q110,5 170,20 Q210,28 250,35"/>
+    </g>
+
+    <!-- Compass rose on the map -->
+    <g transform="translate(260, -45)">
+      <circle r="22" fill="#FFFFFF" opacity="0.95" stroke="#0E1C42" stroke-width="1.5"/>
+      <polygon points="0,-17 4,0 0,17 -4,0" fill="#D4663A"/>
+      <polygon points="-17,0 0,-4 17,0 0,4" fill="#0E1C42" opacity="0.5"/>
+      <circle r="2.5" fill="#0E1C42"/>
+    </g>
+
+    <!-- Scale bar -->
+    <g transform="translate(-260, 60)">
+      <rect x="0" y="0" width="80" height="6" fill="#FFFFFF" stroke="#0E1C42" stroke-width="1"/>
+      <rect x="0" y="0" width="20" height="6" fill="#0E1C42"/>
+      <rect x="40" y="0" width="20" height="6" fill="#0E1C42"/>
     </g>
   </g>
-  <!-- Magnifying glass (floating, slight drift) -->
-  <g transform="translate(540,90)">
-    <g style="animation: heroFloat 5s ease-in-out infinite;">
-      <circle cx="0" cy="0" r="42" fill="#A8DDF0" opacity="0.55" stroke="#2A6A8C" stroke-width="6"/>
-      <circle cx="-10" cy="-10" r="14" fill="#FFF" opacity="0.65"/>
-      <line x1="32" y1="32" x2="68" y2="68" stroke="#5C3A14" stroke-width="9" stroke-linecap="round"/>
-      <rect x="62" y="62" width="14" height="14" fill="#5C3A14" rx="3" transform="rotate(45 69 69)"/>
-    </g>
+
+  <!-- Cartographer's dividers (compass tool) leaning on the table -->
+  <g transform="translate(120, 215)">
+    <line x1="0" y1="0" x2="-18" y2="-50" stroke="#5A4A2A" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="14" y2="-52" stroke="#5A4A2A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="-2" cy="-50" r="4" fill="#D4A040" stroke="#7A5020" stroke-width="1"/>
+    <circle cx="-18" cy="0" r="2.5" fill="#0E1C42"/>
+    <circle cx="14" cy="0" r="2.5" fill="#0E1C42"/>
   </g>
-  <!-- Florida outline (small, on horizon — recognizable shape) -->
-  <g transform="translate(620,200)" opacity="0.85">
-    <path d="M0,0 Q-5,-22 -16,-30 Q-30,-28 -42,-22 Q-58,-12 -68,8 Q-72,18 -68,30 Q-58,32 -45,30 Q-35,38 -22,38 Q-10,42 0,40 Q12,46 22,48 Q34,46 38,38 Q36,28 28,22 Q30,12 26,2 Q14,-4 0,0 Z"
-          fill="#FFF" opacity="0.92" stroke="#2A6A8C" stroke-width="2"/>
-    <!-- Small star marker -->
-    <circle cx="-32" cy="14" r="3" fill="#E8843A"/>
+
+  <!-- Citrus pile on the table (right side) -->
+  <g transform="translate(820, 230)">
+    <ellipse cx="0" cy="14" rx="38" ry="6" fill="rgba(0,0,0,0.25)"/>
+    <circle cx="-14" cy="0" r="12" fill="#F4B040" stroke="#A05020" stroke-width="1.5"/>
+    <path d="M-14,-12 Q-12,-16 -8,-13" stroke="#3A7A2A" stroke-width="2" fill="none"/>
+    <circle cx="10" cy="2" r="13" fill="#F09030" stroke="#A04020" stroke-width="1.5"/>
+    <path d="M10,-11 Q12,-15 16,-12" stroke="#3A7A2A" stroke-width="2" fill="none"/>
+    <circle cx="-2" cy="-8" r="10" fill="#FFB050" stroke="#A06020" stroke-width="1.3"/>
+    <ellipse cx="-2" cy="-13" rx="5" ry="2" fill="#5AA040"/>
   </g>
-  <style>
-    @keyframes heroFloat {
-      0%, 100% { transform: translateY(0) rotate(-3deg); }
-      50% { transform: translateY(-8px) rotate(-1deg); }
-    }
-  </style>
+
+  <!-- Tiny lighthouse silhouette on the horizon (left) -->
+  <g transform="translate(70, 170)" opacity="0.75">
+    <rect x="-6" y="-32" width="12" height="32" fill="#FFFFFF" stroke="#0E1C42" stroke-width="1"/>
+    <rect x="-6" y="-22" width="12" height="3" fill="#D4663A"/>
+    <rect x="-6" y="-12" width="12" height="3" fill="#D4663A"/>
+    <polygon points="-8,-32 8,-32 0,-40" fill="#0E1C42"/>
+    <circle cx="0" cy="-36" r="2" fill="#FFE090">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -1900,72 +1841,64 @@ body {
     <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
     <div>
       <div class="info-label">Unit</div>
-      <div class="info-value">Unit 1: Thinking Like a Florida Historian</div>
+      <div class="info-value">Florida Geography</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#FFF3DC;">📅</div>
     <div>
       <div class="info-label">Week</div>
-      <div class="info-value">Week 1 · Q1</div>
+      <div class="info-value">Week 4 · Q1</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#E3F8ED;">📜</div>
     <div>
       <div class="info-label">Focus</div>
-      <div class="info-value">Historical Thinking</div>
+      <div class="info-value">Geography & Maps</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#F0E8FF;">📋</div>
     <div>
       <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.4.A.1.1 · SS.4.A.1.2 · SS.4.A.9.1</div>
+      <div class="info-value" style="font-size:12px;">SS.4.G.1.2 · SS.4.G.1.3 · SS.4.G.1.4</div>
     </div>
   </div>
 </div>
 
-<!-- ═══ INTRO SECTION: Scene-setting content that auto-collapses on non-scene tabs ═══
-     Contains a small "Message from Inside Canvas" sticky (light story hook), the Florida Historian's Question, Objectives, and Need Strip.
-     All collapse together when student moves to Tab 2/3/4; expand on Tab 1 or via toggle. -->
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's File · Florida Historian's Question</div>
+    <div class="intro-collapsed-icon">🛰️</div>
+    <div class="intro-collapsed-text">Today's Mission & Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
 
-  <!-- ═══ 📩 MESSAGE FROM INSIDE CANVAS (Grade 4 — light story hook, 30 sec) ═══
-       This is the OPENING story beat. The text inside is also the script the
-       teacher will read when recording the welcome video. Keep it 2-4 sentences.
-       Pull the exact wording from the "Opening: Message from Inside Canvas"
-       column of the Planning Table for this lesson code.
-       For sensitive-history lessons (U3, U7, parts of U11), add class="quiet"
-       to remove the playful rotation and use a calmer tone. -->
-  <div class="canvas-sticky">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📩</span>
-      <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
-    </div>
-    <div class="canvas-sticky-body">
-      <p>The first file is labeled <em>"What Florida Historians Study,"</em> but Canvas won't open it until you explain what historians actually do. Take a look — help me get to the next file!</p>
-    </div>
-    <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 1</div>
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
   </div>
+  <div class="canvas-sticky-body">
+    <p>Canvas has hidden the human-made features on today's Florida map — I can see the land layer, but the cultural layer is completely locked. Cities, roads, bridges, buildings, ports, airports, parks, and landmarks are all missing. Help me restore the cultural layer so we can read the full map together.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, still inside Module 2</div>
+</div>
 
   <div class="intro-2col">
-    <!-- Florida Historian's Question -->
+    <!-- Mission Question -->
     <div class="intro-card theme-question">
       <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
+        <div class="intro-card-head-icon">🛰️</div>
         <div>
           <div class="intro-card-head-label">Florida Historian's Question</div>
           <div class="intro-card-head-title">Today's Big Question</div>
         </div>
       </div>
       <div class="intro-card-body">
-        <p>What do Florida historians actually study, and how do they know what really happened?</p>
+        <p>How do cities, roads, farms, and borders show the choices people have made on Florida's land?</p>
       </div>
     </div>
 
@@ -1979,9 +1912,9 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🌴</span> Name the four things historians study: people, places, events, and evidence.</div>
-        <div class="obj-line"><span class="obj-icon">🔍</span> Tell the difference between a historian's claim and a guess.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Write a Historian's Notebook entry using one piece of evidence.</div>
+        <div class="obj-line"><span class="obj-icon">🏛️</span> Identify cultural features on a Florida map (cities, highways, capital, farm regions, borders).</div>
+        <div class="obj-line"><span class="obj-icon">🗺️</span> Explain how physical features influence where people build and settle.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Write a 3–4 sentence response using cause-and-effect evidence from the map.</div>
       </div>
     </div>
   </div>
@@ -1989,7 +1922,7 @@ body {
   <!-- You'll Need strip -->
   <div class="need-strip">
     <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">🔬 Florida historian's Notebook</span>
     <span class="need-chip">✏️ Pencil</span>
     <span class="need-chip">🗺️ Lesson Page</span>
   </div>
@@ -2025,14 +1958,17 @@ body {
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Meet the four things historians study</span>
+
+      <span class="todays-path-step">🛰️ Step back into Florida & learn the root <em>urb</em></span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Look at a Florida photograph like a historian</span>
+      <!-- ✏️ STEP 2: Name the routine + what they'll examine -->
+      <span class="todays-path-step">🔍 Read a cultural map of Florida cities & roads</span>
       <span class="todays-path-arrow">→</span>
       <!-- STEP 3: Self-check (always the same) -->
-      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-step">🧠 Run the Signal Check</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write your first Historian's Notebook entry</span>
+      <!-- ✏️ STEP 4: Lock the piece into the Timeline Core -->
+      <span class="todays-path-step">📡 Lock the Florida-people-map piece into the Timeline Core</span>
     </div>
   </div>
 
@@ -2042,101 +1978,138 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
-        <div class="video-wrap-title">Welcome to Florida History</div>
+        <div class="video-wrap-title">Welcome — The People's Map of Florida</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "stuck inside Canvas" story beat — light, warm, slightly conspiratorial, never panicked. Suggested ~30-sec script start: <em>"Hey Florida historians — quick heads-up: I'm stuck inside Canvas. Long story. The first file on my desk says 'What Florida Historians Study' and it won't open until I show I actually know what historians do. Lucky for me, that's exactly what you're about to learn."</em> Then drop the frame and teach: read the Florida Historian's Question aloud, preview today's path (the Florida topic, what you'll explore, what the assignment is), and mention the virtue (self-governance).
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with the story beat (~30 sec): <em>"Canvas has hidden the human-made features on today's map — cities, roads, and landmarks are all locked behind a glitch. Help me restore the cultural layer."</em> Then drop the frame and teach: read the Florida Historian's Question aloud, preview today's path, mention the virtue (self-governance).
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-welcome --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-02-welcome --></div>
       </div>
     </div>
   </div>
 
   <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🌴 Virtue Spotlight — Self-Governance</div>
-    <div class="virtue-text">Good Florida historians govern themselves — they slow down, check the evidence, and don't jump to conclusions. Today, when you feel the urge to guess, choose to look at the evidence instead.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Self-Governance</div>
+    <div class="virtue-text">Every city on Florida's map sits where people <em>chose</em> to build it. Highways follow paths people decided to lay down. Borders mark where one community's rules end and another's begin. Self-governance means making careful choices about where and how to live together. Today, when you see a city on the map, ask: why <em>here</em>?</div>
   </div>
 
-  <!-- Your Role Today (Grade 4 — constant across the year: Florida History Team) -->
+  <!-- Florida historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
   <div class="callout callout-info">
-    <div class="callout-icon">🐊</div>
-    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Florida historians ask questions, study sources, follow timelines, and use careful evidence. Today, your team will learn what Florida historians actually study — and prove you can think like one.</p>
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Today your team will examine Florida's cultural map, explain one cause-and-effect link between land and choice, and complete your Map Quest Response.</p>
   </div>
 
-  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD (Grade 4 — visual novelty hook) ═══
-       Replace the SVG placeholder below with a small hand-coded illustration
-       that matches the "Show or Make" column from the G4 Canvas Escape Arc tab.
-       Examples: locked file card with magnifying glass + Florida outline +
-       notebook (4.01.01); paired source card with primary + secondary (4.01.02);
-       mixed-up timeline strip (4.01.04); unlabeled Florida map (4.02.01).
-       The card itself is the manila folder; the SVG inside is the visual artifact.
-       This card sits ONCE on Tab 1 and never recurs on other tabs. -->
-  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.01">
+
+  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.02.02">
     <div class="canvas-file-card-head">
       <span class="canvas-file-card-head-icon">🗂️</span>
-      <span class="canvas-file-card-head-text">Show or Make: Today's Florida File</span>
+      <span class="canvas-file-card-head-text">Show or Make: Florida Map Overlay — Cultural Features</span>
     </div>
     <div class="canvas-file-card-body">
-      <p>A locked file card sits at the Canvas entrance. Inside: a magnifying glass over Florida's outline and a small Historian's Notebook waiting for its first entry.</p>
+      <p>The land layer is visible, but the cultural layer has been locked by a Canvas glitch. Your job: restore it — roads, cities, bridges, buildings, ports, airports, parks, and landmarks — and show how each feature reveals a human choice made on top of Florida's natural landscape.</p>
       <div class="canvas-file-card-visual">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;">
+        <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
           <defs>
-            <linearGradient id="folderGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#FFF8E0"/>
-              <stop offset="100%" stop-color="#F2E5B8"/>
+            <linearGradient id="mapbg402" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#A8CCE8"/>
+              <stop offset="100%" stop-color="#7AAAC8"/>
             </linearGradient>
           </defs>
-          <!-- File card -->
-          <rect x="30" y="30" width="340" height="170" rx="6" fill="url(#folderGrad)" stroke="#8B6E2A" stroke-width="2.5"/>
-          <!-- File label tab -->
-          <rect x="50" y="20" width="120" height="22" rx="3" fill="#E8D4A8" stroke="#8B6E2A" stroke-width="2"/>
-          <line x1="58" y1="32" x2="160" y2="32" stroke="#8B6E2A" stroke-width="1" opacity="0.5"/>
-          <!-- LOCKED stamp (rotated, red) -->
-          <g transform="translate(290,55) rotate(-15)">
-            <rect x="-32" y="-12" width="64" height="22" fill="none" stroke="#B91C1C" stroke-width="2.5" rx="3"/>
-            <line x1="-28" y1="0" x2="28" y2="0" stroke="#B91C1C" stroke-width="1" opacity="0.4"/>
-          </g>
-          <!-- Padlock icon on file -->
-          <g transform="translate(75,75)">
-            <rect x="-12" y="0" width="24" height="20" rx="2" fill="#5C3A14"/>
-            <path d="M-8,0 L-8,-8 Q-8,-16 0,-16 Q8,-16 8,-8 L8,0" fill="none" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="0" cy="10" r="2.5" fill="#FFD06E"/>
-          </g>
-          <!-- Florida outline (large, center) -->
-          <g transform="translate(190,130)">
-            <path d="M-50,-30 Q-55,-50 -42,-58 Q-25,-60 -10,-55 Q5,-50 15,-45 Q28,-38 35,-30 Q42,-18 38,-8 Q34,5 26,12 Q22,22 14,28 Q4,30 -8,28 Q-18,32 -28,28 Q-38,22 -42,12 Q-48,2 -50,-12 Q-54,-22 -50,-30 Z"
-                  fill="#A8DDF0" stroke="#2A6A8C" stroke-width="2.5"/>
-            <!-- Small evidence marks on FL -->
-            <circle cx="-25" cy="-20" r="2.5" fill="#E8843A"/>
-            <circle cx="0" cy="-5" r="2.5" fill="#E8843A"/>
-            <circle cx="15" cy="10" r="2.5" fill="#E8843A"/>
-          </g>
-          <!-- Magnifying glass (over FL, animated drift) -->
-          <g transform="translate(245,115)" style="animation: showFloat 4s ease-in-out infinite;">
-            <circle cx="0" cy="0" r="22" fill="#FFF" opacity="0.55" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="-6" cy="-6" r="6" fill="#FFF" opacity="0.7"/>
-            <line x1="16" y1="16" x2="32" y2="32" stroke="#5C3A14" stroke-width="5" stroke-linecap="round"/>
-          </g>
-          <!-- Small notebook (corner) -->
-          <g transform="translate(80,165)">
-            <rect x="-15" y="-12" width="30" height="22" fill="#E58A85" rx="2" stroke="#B05A55" stroke-width="1.5"/>
-            <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="-1" x2="10" y2="-1" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="4" x2="6" y2="4" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-          </g>
+          <!-- Ocean background -->
+          <rect width="420" height="200" fill="url(#mapbg402)" rx="4"/>
+          <!-- Florida land silhouette -->
+          <path d="M140,20 L200,18 L240,30 L260,60 L270,100 L265,140 L255,165 L245,175 L235,170 L230,155 L220,140 L210,130 L200,125 L185,130 L175,145 L165,155 L155,150 L148,138 L145,120 L140,100 L135,70 L132,40 Z"
+                fill="#C8E0B0" stroke="#6A8A50" stroke-width="1.5"/>
+          <!-- Roads (dashed lines) -->
+          <line x1="150" y1="50" x2="250" y2="45" stroke="#5A5A5A" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.85"/>
+          <line x1="200" y1="20" x2="250" y2="162" stroke="#5A5A5A" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.85"/>
+          <line x1="148" y1="80" x2="232" y2="100" stroke="#5A5A5A" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+          <!-- City dots -->
+          <circle cx="195" cy="30" r="5" fill="#E84040" stroke="#901010" stroke-width="1.2"/>
+          <circle cx="162" cy="65" r="4" fill="#E84040" stroke="#901010" stroke-width="1"/>
+          <circle cx="248" cy="48" r="4" fill="#E84040" stroke="#901010" stroke-width="1"/>
+          <circle cx="238" cy="150" r="5" fill="#E84040" stroke="#901010" stroke-width="1.2"/>
+          <circle cx="218" cy="115" r="4" fill="#E84040" stroke="#901010" stroke-width="1"/>
+          <!-- Capital star (Tallahassee) -->
+          <polygon points="162,52 164,58 170,58 165,62 167,68 162,64 157,68 159,62 154,58 160,58" fill="#FFD040" stroke="#A08010" stroke-width="1"/>
+          <!-- Airport symbol -->
+          <rect x="226" y="35" width="9" height="9" fill="none" stroke="#3050A0" stroke-width="1.5" rx="1"/>
+          <line x1="230.5" y1="35" x2="230.5" y2="44" stroke="#3050A0" stroke-width="1"/>
+          <line x1="226" y1="39.5" x2="235" y2="39.5" stroke="#3050A0" stroke-width="1"/>
+          <!-- Port anchor -->
+          <circle cx="252" cy="122" r="5" fill="none" stroke="#205080" stroke-width="1.5"/>
+          <line x1="252" y1="117" x2="252" y2="127" stroke="#205080" stroke-width="1.5"/>
+          <line x1="248" y1="125" x2="256" y2="125" stroke="#205080" stroke-width="1.5"/>
+          <!-- Park tree -->
+          <circle cx="175" cy="112" r="6" fill="#3A8A3A" opacity="0.8"/>
+          <rect x="173" y="118" width="4" height="5" fill="#5A4A2A"/>
+          <!-- Bridge (two short parallel lines) -->
+          <line x1="205" y1="100" x2="220" y2="100" stroke="#6A4A2A" stroke-width="3"/>
+          <line x1="205" y1="104" x2="220" y2="104" stroke="#6A4A2A" stroke-width="1"/>
+          <!-- Lock overlay (glitch indicator) -->
+          <rect x="310" y="60" width="80" height="80" rx="6" fill="#F3E8FF" stroke="#9B6BC4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.85"/>
+          <rect x="329" y="89" width="42" height="30" rx="3" fill="#9B6BC4" opacity="0.45"/>
+          <path d="M333,89 Q333,76 350,76 Q367,76 367,89" fill="none" stroke="#9B6BC4" stroke-width="2.5"/>
+          <circle cx="350" cy="103" r="3.5" fill="#FFF"/>
+          <line x1="350" y1="106" x2="350" y2="112" stroke="#FFF" stroke-width="2"/>
         </svg>
-        <p style="margin-top:8px;font-size:12px;">A locked Florida File with a magnifying glass, the Florida outline, and a fresh Historian's Notebook.</p>
-        <style>@keyframes showFloat { 0%,100%{transform:translate(245px,115px) rotate(-8deg);} 50%{transform:translate(248px,112px) rotate(-3deg);} }</style>
+        <p class="canvas-file-card-caption">Florida's cultural layer: cities, capital, roads, airport, port, park, and bridge — locked behind a Canvas glitch. Restore them.</p>
       </div>
     </div>
   </div>
 
+
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- ✏️ WORD ROOTS (include when cross-curricular connection = Latin/Greek roots) -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">🔤</div>
+      <div>
+        <div class="activity-title">Word Roots</div>
+        <div class="activity-sub">Latin Root: urb — "city"</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The Latin root <strong>urb</strong> means "city." When people gather to live, work, and govern together, they build an <em>urb</em>. You'll find this root in many words about how people live.</p>
+      <div class="callout callout-vocab">
+        <div class="callout-icon">📖</div>
+        <p><strong>urban</strong> — having to do with a city · <strong>suburb</strong> — a community near a city · <strong>suburban</strong> — relating to the suburbs · <strong>metropolis</strong> — a large city (Greek <em>metro-</em> + <em>polis</em>, "mother city")</p>
+      </div>
+
+      <!-- Root Match Game -->
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">urban</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">a community near a city</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">suburb</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">having to do with a city</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">suburban</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">a large city</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">metropolis</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">relating to the suburbs</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! You know your roots.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+          The word "suburb" comes from <em>sub-</em> (under, near) + <em>urb</em> (city) — it literally means a community <em>near</em> a city. Florida has huge suburbs around Miami, Orlando, and Tampa.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✏️ COPYWORK (include when cross-curricular connection = short copywork) -->
+  <div class="copywork-box">
+    <div class="copywork-label">✍️ Copywork</div>
+    <div class="copywork-text">"A city is built where the land allows it and the people choose it."</div>
+    <div class="copywork-instruction">Copy this sentence carefully into your Florida historian's Notebook. Notice the two parts of the sentence — what the <em>land</em> does and what the <em>people</em> do. A Florida historian notices both.</div>
+  </div>
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
@@ -2165,16 +2138,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Looking at a Source Like a Historian</div>
+        <div class="video-wrap-title">Exploring Florida's Cultural Features</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~3 min):</strong> No story frame in this clip — Canvas can wait. Walk through what historians study (people, places, events, evidence). Show a Florida photograph or simple source and think aloud how a historian would look at it. Model the "I notice... I wonder... I think this means..." pattern. End with: "Now you try."
+          <strong>Teacher recording notes (~3–5 min):</strong> Walk through Florida's cultural features — tell the story, explain the key ideas, and point out details to notice in the map. Show how to work through the source. 3–5 minutes. Teach, don't just read.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-explore-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-02-explore-explainer --></div>
       </div>
     </div>
   </div>
@@ -2187,21 +2160,20 @@ body {
     <div class="activity-head">
       <div class="activity-num" style="background:#1A8A7D;">📖</div>
       <div>
-        <div class="activity-title">What Do Historians Actually Study?</div>
-        <div class="activity-sub">Four things: people, places, events, and evidence</div>
+        <div class="activity-title">What People Built on Florida's Map</div>
+        <div class="activity-sub">Cities, capital, highways, farms, and borders</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>When someone says "historian," you might picture a person in a dusty room reading old books. That happens sometimes — but most of a historian's job is asking questions and looking for answers in <strong>evidence</strong>.</p>
-      <p>Florida historians study four big things: <strong>people</strong> (who lived here and how they lived), <strong>places</strong> (the land, water, climate, and how people used them), <strong>events</strong> (what happened, when, and why), and <strong>evidence</strong> (the proof — letters, photos, maps, objects, stories — that tells us what really happened).</p>
-      <p>The most important habit a historian builds is the difference between <em>knowing</em> and <em>guessing</em>. A guess sounds like "I think pirates lived here." A historian's claim sounds like "An old map from 1696 shows a Spanish fort here, so we know Spanish soldiers were in Florida by then." See the difference? The historian points to something real.</p>
+      <p>Look at a Florida map today and you'll see the land from yesterday — peninsula, panhandle, Everglades — but with new marks on top. Small dots show <strong>cities</strong> where many people live. A small star marks <strong>Tallahassee</strong>, the state capital, where Florida's government meets. Long lines show <strong>highways</strong> connecting one city to another. Green patches mark <strong>farms</strong> where citrus, cattle, and vegetables grow. All of these are <strong>cultural features</strong> — things that exist because people made choices about how to use the land.</p>
+      <p>Cultural features and physical features are connected. Big cities like Miami, Tampa, and Jacksonville grew up next to <strong>water</strong> — harbors made trade easier. Citrus farms cluster in central Florida where the soil is sandy and the winters are warm enough to protect the trees. Highways follow the long shape of the peninsula because that's where most people travel. When you see a city, road, or farm on a Florida map, you're reading a record of choices people made because of what the land offered.</p>
     </div>
   </div>
 
   <!-- Pause & Think -->
   <div class="callout callout-think">
     <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Pick one of the four things historians study (people, places, events, or evidence). Which would help you most if you wanted to know how kids in Florida lived 100 years ago?</p>
+    <p><strong>Pause & Think:</strong> Yesterday you saw water on three sides of Florida. Today you see cities clustered on the coasts. What's the connection? Why might people choose to build big cities near the water?</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
@@ -2210,58 +2182,106 @@ body {
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
   <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
   <!-- OPTION: Source Study Card -->
   <div class="source-card">
     <div class="source-card-header">
       <div class="source-card-header-icon">📜</div>
       <div>
-        <div class="source-card-header-label">Source Study · Try It Yourself</div>
-        <div class="source-card-header-title">A Florida Photograph from Long Ago</div>
+        <div class="source-card-header-label">Map Quest</div>
+        <div class="source-card-header-title">Read Florida's Cultural Map</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-01-01-florida-historic-photo">
+    <div class="source-image-placeholder" data-image="source-4-02-02-florida-cultural-map">
       <div class="source-image-placeholder-text">
-        🖼️ Black-and-white photograph of a Florida family or community scene from the late 1800s or early 1900s. Suggested options: families at a Florida fish camp, citrus pickers, a one-room schoolhouse, Tampa or St. Augustine street scene. Search the Florida Memory project (floridamemory.com).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-01-01-florida-historic-photo.jpg</code>
+        🖼️ A political/cultural map of Florida labeled with: major cities (Tallahassee with a capital-star, plus Miami, Orlando, Tampa, Jacksonville, Pensacola), major highways (I-95, I-75, Florida's Turnpike), state borders with Alabama and Georgia, and a legend. Try the Florida Department of Transportation map collection, the USGS National Map, or Wikimedia Commons (search "Florida political map" or "Florida highway map").<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-02-02-florida-cultural-map.jpg</code>
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Primary Source</span> · A photograph from Florida's past (~100+ years old)
+        <span class="src-type">Map (Secondary Source)</span> · Cultural / political map of Florida showing cities, the capital, highways, and state borders.
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look at the photograph carefully. Name three details — clothing, objects, buildings, plants, anything that stands out. Don't guess yet; just describe.</p>
+        <p><strong>What do I see?</strong> Find Tallahassee, Miami, Jacksonville, and Tampa. Are most of Florida's biggest cities near the coast or in the middle of the state? Why might that be?</p>
       </div>
       <div class="callout callout-think">
         <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> What do those details tell you about the <em>people</em>, <em>places</em>, or <em>events</em> in the photograph? Use what you see, not what you imagine.</p>
+        <p><strong>What does it mean?</strong> Trace one major highway with your finger. Where does it begin and end? What does the highway's path tell you about where people travel most in Florida?</p>
       </div>
       <div class="callout callout-tip">
         <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> If we did not have this photograph, what would be harder to know about Florida's past? That is exactly why historians study evidence.</p>
+        <p><strong>Why does it matter?</strong> Compare today's cultural map to yesterday's physical map. Pick <em>one</em> cultural feature (a city, a road, or a farm region) and find the physical feature it sits near. What's the connection?</p>
       </div>
     </div>
   </div>
+
+  <!-- OPTION: Timeline Card -->
+  <!--
+  <div class="timeline-card">
+    <div class="timeline-header">
+      <div class="timeline-header-icon">📅</div>
+      <div class="timeline-header-title">✏️ Timeline Thread</div>
+    </div>
+    <div class="timeline-events">
+      <div class="timeline-event">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-event-content">
+          <div class="timeline-event-date">✏️ Date</div>
+          <div class="timeline-event-text">✏️ Event description</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- OPTION: Council Chamber -->
+  <!--
+  <div class="council-card">
+    <div class="council-header">
+      <div class="council-header-icon">🏛️</div>
+      <div class="council-header-title">Council Chamber</div>
+    </div>
+    <div class="council-question">✏️ The civic/historical question</div>
+    <div class="council-perspectives">
+      <div class="council-perspective">
+        <div class="council-perspective-label side-a">✏️ Perspective A</div>
+        <p>✏️ Summary of one side.</p>
+      </div>
+      <div class="council-perspective">
+        <div class="council-perspective-label side-b">✏️ Perspective B</div>
+        <p>✏️ Summary of the other side.</p>
+      </div>
+    </div>
+    <div class="council-body">
+      <p>Now it's your turn. Read both perspectives. Then write your recommendation below.</p>
+    </div>
+  </div>
+  -->
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
 
   <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Key Concept (Grade 4) -->
+
+
+  <!-- Key Concept -->
   <div class="key-concept">
     <div class="key-concept-label">🔑 Key Concept</div>
-    <p>Florida historians study people, places, events, and evidence — and they always show where their ideas come from.</p>
+    <p>Cultural features — cities, capitals, highways, farms, and borders — show where people chose to live and what they decided to build. Those choices follow the physical features of the land, which is why the two maps belong together.</p>
   </div>
 
-  <!-- Opti the Owl — appears once per lesson with a Florida-aware observation.
-       Florida-aware, connected to today's content -->
+  <!-- Opti the Owl — lab-themed observation for Grade 4.
+       ✏️ GRADE 4 ACCESSORY: 🦉🌴 Opti with a palmetto frond
+       ✏️ Speech bubble: 1–3 sentences, curious & precise, connected to the lab's work. -->
   <div class="owl-buddy">
     <div class="owl-buddy-avatar">🦉</div>
     <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Psst — historians don't guess. When you spot a detail in a photograph or document, that detail is evidence. Even one small thing — a coat, a flag, a date — can change what we know.
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      Quick observation from the archive: every coast city you see today started as a port — a place where boats could safely land. The land made the decision possible; the people made the decision. When you read any cultural map, ask both questions: what did the land allow, and what did the people choose?
     </div>
   </div>
 
@@ -2295,39 +2315,39 @@ body {
     <div style="padding:18px 22px;">
 
       <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">1. Which list shows what historians study?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. What is Tallahassee?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Math, science, and reading</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Only old books in libraries</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>People, places, events, and evidence</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>The largest city in Florida</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Florida's state capital</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>A river in the panhandle</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Historians study people, places, events, and evidence — and they always use evidence to back up what they say.</div>
-        <div class="quiz-feedback fb-wrong">Almost. Look back at the section "What Do Historians Actually Study?" There are four things, and they go together.</div>
+        <div class="quiz-feedback fb-correct">Correct! Tallahassee is Florida's state capital — the city where the state government meets. It's marked on maps with a small star.</div>
+        <div class="quiz-feedback fb-wrong">Look back at the explore section. Florida's capital is in the panhandle. A capital is where the government meets — which Florida city does that?</div>
       </div>
 
       <!-- QUESTION 2 -->
-      <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. Which sentence sounds like a historian, not a guess?</div>
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">2. Which is a <em>cultural</em> feature on a Florida map?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>"I think pirates probably lived in Florida."</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>"A map from 1696 shows a Spanish fort, so Spanish soldiers were here by then."</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>"Florida is always sunny because everyone says so."</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Lake Okeechobee</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>The Everglades wetland</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Interstate 95 highway</div>
         </div>
-        <div class="quiz-feedback fb-correct">Right! A historian's claim points to evidence — in this case, the map. Anyone can check that map and see for themselves.</div>
-        <div class="quiz-feedback fb-wrong">Look again. Which sentence names a piece of evidence (like a map, a letter, or a photograph)? That's the historian's sentence.</div>
+        <div class="quiz-feedback fb-correct">Correct! A highway is built by people — that makes it a cultural feature. Lakes and wetlands are made by nature, so they're physical features.</div>
+        <div class="quiz-feedback fb-wrong">Remember: cultural features are things people <em>made</em>. Lakes and wetlands form naturally. Which option was built by people?</div>
       </div>
 
       <!-- QUESTION 3 -->
-      <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">3. Why do historians use evidence instead of just guessing?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">3. Why are most of Florida's biggest cities near the coast?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>So other people can check their work and know it's true.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because evidence is required by law in every state.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because old documents are easier to read than new ones.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because the land in the middle is too cold</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because harbors and beaches made trade and settlement easier</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because there are no roads in central Florida</div>
         </div>
-        <div class="quiz-feedback fb-correct">Exactly. Evidence lets anyone check the work. That's how historians earn trust and tell the difference between knowing and guessing.</div>
-        <div class="quiz-feedback fb-wrong">Think about why a historian needs to "show their work" the same way a math student does. What makes a claim believable?</div>
+        <div class="quiz-feedback fb-correct">Correct! Florida's coast offered harbors for boats and a way to trade, which is why big cities like Miami, Tampa, and Jacksonville grew up next to water.</div>
+        <div class="quiz-feedback fb-wrong">Think about yesterday's physical map. Florida is surrounded by water on three sides. What does water near a city make easier — fishing? trading? travel?</div>
       </div>
 
       <!-- Score Box -->
@@ -2351,8 +2371,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 30 sec):</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. One light story nudge — something like: "That's exactly what Canvas needed to see." High energy.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-perfect --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "3 for 3 — you read both maps like a Florida geographer." Affirm confidence for the Map Quest Response. Under 30 seconds.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-02-02-quiz-perfect --></div>
             </div>
           </div>
         </div>
@@ -2371,8 +2391,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 1 min):</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Story stays out of this clip.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-review --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Re-walk each question. Re-explain cultural vs. physical features and why coastal cities grew. Encourage: "This is the careful work of a Florida historian — go back and look again." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-02-02-quiz-review --></div>
             </div>
           </div>
         </div>
@@ -2412,16 +2432,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">Your First Historian's Notebook Entry</div>
+        <div class="video-wrap-title">Map Quest — Write Your Cause-and-Effect Response</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~2–3 min):</strong> Read each evidence question (Part A) aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Then walk through Part B and emphasize that finishing Part B is what triggers the 🔓 Unlock Challenge — once it's turned in, the file unlocks. One-sentence story nudge optional. Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas.
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Clarify what the routine assignment is asking ("Today you're writing a museum label…" or "Your job is to sequence these events and explain one cause-and-effect connection…"). Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas. Aim for 2–3 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-assignment-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-02-assignment-explainer --></div>
       </div>
     </div>
   </div>
@@ -2438,82 +2458,80 @@ body {
     <div class="activity-body">
 
       <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two of the four things historians study, and give one example of each from Florida.</div></div>
-      <div class="textbox-prompt">Use words from the lesson. Try the sentence starter below if it helps.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two things historians study"
-        placeholder="Florida historians study ____, like ____. They also study ____, like ____."
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two cultural features you saw on the map today. How is each one different from a physical feature?</div></div>
+      <div class="textbox-prompt">Use the map and the explore section to support your answer.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two cultural features"
+        placeholder="Two cultural features I saw were ___ and ___. They are different from physical features because..."
         oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
       <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Look back at the photograph in Tab 2. What is ONE detail you saw, and what does that detail tell you about people or places in Florida?</div></div>
-      <div class="textbox-prompt">Name a real detail first, then explain what it tells you. Don't guess — point to what you actually see.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: A detail from the photo"
-        placeholder="I noticed ______. This tells me ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Pick one Florida city. What physical feature near it helped people decide to build there?</div></div>
+      <div class="textbox-prompt">Connect the city you pick to a coast, river, lake, or other physical feature.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: City + land link"
+        placeholder="I chose ___. People built there because of ___, which is a physical feature that..."
         oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
       <!-- Q3 (optional — include for Lesson B or deeper lessons) -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why is it important for historians to use evidence instead of just guessing?</div></div>
-      <div class="textbox-prompt">Think about how someone else would check your work.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why evidence matters"
-        placeholder="Historians use evidence because ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>How does today's cultural map work together with yesterday's physical map?</div></div>
+      <div class="textbox-prompt">Explain why a historian would want to read both maps.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Maps together"
+        placeholder="The two maps work together because..."
         oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
 
     </div>
   </div>
 
-  <!-- Part B: Today's Florida Task — frames the academic assignment as an "Unlock Challenge" -->
+  <!-- Part B: Routine Assignment -->
   <div class="activity bl-gold">
     <div class="activity-head">
-      <div class="activity-num" style="background:#E8843A;">B</div>
+      <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
         <span class="canvas-unlock-stamp">Unlock Challenge</span>
-        <div class="activity-title">Your First Historian's Notebook Entry</div>
-        <div class="activity-sub">Write 3–5 sentences explaining what Florida historians study, using one specific piece of evidence from this lesson.</div>
+        <div class="activity-title">Map Quest Response: Land Shapes Choice</div>
+        <div class="activity-sub">Cause-and-effect explanation using map evidence</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>This is your first official entry as a member of the Florida History Team. Don't worry about being perfect — just sound like a historian, not a guesser. Name what historians study, then point to a real detail (from the photograph, or from what you read) that proves your point.</p>
+      <p>Pick <strong>one</strong> Florida city or one farm region from the cultural map. Write 3–4 sentences explaining the <em>cause-and-effect link</em> between a physical feature of the land and the choice people made to build there.</p>
 
-      <div class="textbox-prompt">Strong entry checklist: (1) Name at least two of the four things historians study. (2) Use one detail from this lesson. (3) Sound like a careful historian — no guesses.</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Historian's Notebook Entry"
-        placeholder="Florida historians study people, places, events, and evidence. For example, when I looked at the photograph, I saw..."
+      <div class="textbox-prompt">Name the place. Name the physical feature near it. Explain the cause-and-effect: how the land shaped the choice.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Assignment: Map Quest Response"
+        placeholder="I chose ___. The physical feature near it is ___. People chose to build here because ___. This shows that..."
         oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Historian's Sentence (Grade 4 — neutral one-sentence reflection) -->
+  <!-- Historian's Sentence (Grade 4 — replaces Chronicle Sentence) -->
   <div class="activity bl-navy">
     <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div class="activity-num" style="background:#0E1C42;">📡</div>
       <div>
         <div class="activity-title">Historian's Sentence</div>
-        <div class="activity-sub">One sentence to capture today's evidence work.</div>
+        <div class="activity-sub">One sentence to log today's mission findings.</div>
       </div>
     </div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
-      <div class="textbox-prompt">Today I learned that ______ because the evidence shows ______.</div>
+      <div class="textbox-prompt">Today I learned that ______ because ______.</div>
       <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
         placeholder="Today I learned that..."
         oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- ═══ 📂 FILE UNLOCKED (Grade 4 — closing story beat sticky, 30 sec) ═══
-       This is the CLOSING story beat. The text is also the script the teacher
-       will read when recording the closing video. Keep it 1-3 sentences.
-       Pull the exact wording from the "Closing: File Unlocked" column of the
-       Planning Table for this lesson code. For sensitive-history lessons,
-       add class="quiet" to remove the playful rotation. -->
+
+
+
+  <!-- ═══ 📂 FILE UNLOCKED sticky ═══ -->
   <div class="canvas-sticky unlocked" style="margin-top:18px;">
     <div class="canvas-sticky-head">
       <span class="canvas-sticky-head-icon">📂</span>
       <span class="canvas-sticky-head-label">File Unlocked</span>
     </div>
     <div class="canvas-sticky-body">
-      <p>Florida historians study people, places, events, and evidence. The course entrance is one step clearer.</p>
+      <p>Cultural features show how people shape places through communities, transportation, buildings, and landmarks. The course path is one step clearer.</p>
     </div>
-    <div class="canvas-sticky-byline">— Course Path Updated · Episode 1 of 13</div>
+    <div class="canvas-sticky-byline">— Course Path Updated · Episode 2 of 13</div>
   </div>
 
   <!-- Gathered Answers -->
@@ -2540,9 +2558,9 @@ body {
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <!-- Florida History Team is the constant role. Lesson-specific Unlock Challenge framing pulled from planning table.
-             Look up the lesson code in the planning table for context. -->
-        <strong>Nice work, Florida historian!</strong> You've started your first Historian's Notebook and proved you can think with evidence instead of guessing.
+        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Florida historian!"
+             Second sentence references the specific mission accomplished. -->
+        <strong>Nice work, Florida historian!</strong> You read Florida's cultural map and explained one cause-and-effect link between land and choice.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
@@ -2581,11 +2599,11 @@ body {
       <div class="turn-in-checklist">
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+          <div class="turn-in-item-text">✅ I studied the Florida cultural map and answered the evidence questions.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Unlock Challenge (Historian's Notebook entry).</div>
+          <div class="turn-in-item-text">✅ I wrote my Map Quest Response explaining a cause-and-effect link.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2599,50 +2617,46 @@ body {
     </div>
   </div>
 
-  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP (Grade 4 — tiny progress marker) ═══
-       Shows the student where they are in the 13-episode arc.
-       Set the .now class on the current episode dot and .done on completed dots.
-       Episodes: 1=U1, 2=U2, 3=U3, 4=U4, 5=U5 (Checkpoint), 6=U6, 7=U7, 8=U8,
-       9=U9 (Checkpoint), 10=U10, 11=U11, 12=U12, 13=U13 (Finale). -->
+
+  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP ═══ -->
   <div style="text-align:center;">
     <div class="canvas-path-chip">
       <span class="canvas-path-chip-icon">🛤️</span>
-      <span>Course Path Updated · Episode 1 of 13</span>
+      <span>Course Path Updated · Episode 2 of 13</span>
       <span class="canvas-path-chip-dots">
-        <!-- ✏️ Mark the current episode dot with .now; mark all earlier dots with .done -->
-        <span class="canvas-path-chip-dot now"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-      </span>
+      <span class="canvas-path-chip-dot done"></span>
+      <span class="canvas-path-chip-dot now"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+    </span>
     </div>
   </div>
 
-<!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
   <div class="video-wrap" style="margin-top:18px;">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">First File Unlocked</div>
+        <div class="video-wrap-title">The People's Map is Locked In</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "File Unlocked" story beat — warm, proud, never over-the-top. Suggested ~30-sec script start: <em>"You did it — the first file is unlocked. Florida historians study people, places, events, and evidence, and that's exactly what you just proved you can do. Next file: figuring out the difference between primary and secondary sources. I'll meet you there."</em> Then close like a normal lesson: name the specific evidence work students did, restate the Key Concept in your own words, and remind students to keep their Historian's Notebook updated. Under 2 minutes total.
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with the File Unlocked beat (~30 sec): <em>"Cultural features show how people shape places through communities, transportation, buildings, and landmarks. Episode 2 is unlocked."</em> Then close: restate the key concept, name the specific work students did, remind them to keep their Historian's Notebook updated.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-closing --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-02-closing --></div>
       </div>
     </div>
   </div>
@@ -2652,7 +2666,7 @@ body {
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 4 · 4.01.01</div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.02.02</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
@@ -2739,6 +2753,8 @@ function gatherAnswers() {
   if (gathered) gathered.value = output.trim();
 }
 
+
+
 /* ═══════════ COPY TO CLIPBOARD ═══════════ */
 function copyGathered() {
   gatherAnswers();
@@ -2765,7 +2781,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>4.01.01 — My Work</title>';
+  html += '<title>4.02.02 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2775,8 +2791,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — 4.01.01</h1>';
-  html += '<h2>What Florida Historians Study</h2>';
+  html += '<h1>📓 My Work — 4.02.02</h1>';
+  html += '<h2>Cultural Features on a Florida Map</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {
@@ -3015,12 +3031,14 @@ function scrollToTop() {
 /* ═══════════ INIT ═══════════ */
 updateProgress();
 
-/* ═══════════ SOURCE IMAGE AUTO-LOADER ═══════════
-   Scans .source-image-placeholder divs for data-image attributes,
-   then tries to load the image from GitHub. Tries multiple extensions.
-   If found, replaces the placeholder with the image. If not, placeholder stays.
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════
+   Scans .source-image-placeholder divs
+   for data-image attributes, then tries to load the image from GitHub.
+   Tries multiple extensions. Skips placeholders with ✏️ marker (template defaults).
    Update the B variable if your GitHub repo URL changes. */
-(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
+
+
 </body>
 </html>

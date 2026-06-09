@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — 4.01.01: What Florida Historians Study</title>
+<title>Optima Academy Online — 4.03.02: Compare Native American Tribes in Florida (Grade 4 Time Lab)</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -193,7 +193,8 @@ body {
 
 /* ═══════════ INTRO COLLAPSIBLE ═══════════ */
 .intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
-.intro-section.collapsed > *:not(.intro-collapsed-bar) { display: none; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
 .intro-collapsed-bar {
   display: none;
   align-items: center;
@@ -1153,6 +1154,332 @@ body {
   z-index: 10000;
 }
 
+/* ═══════════ CHRONO-LENS FRAGMENT (Grade 4 — Tab 1 opener) ═══════════ */
+.chrono-fragment {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border: 2px solid #55C8E8;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.15);
+}
+.chrono-fragment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1.5px solid rgba(85, 200, 232, 0.3);
+}
+.chrono-fragment-icon { font-size: 22px; color: #55C8E8; }
+.chrono-fragment-label {
+  font-size: 11px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+.chrono-fragment-title { font-size: 17px; color: #fff; font-weight: 800; line-height: 1.2; }
+.chrono-fragment-image {
+  width: 100%;
+  min-height: 220px;
+  background:
+    linear-gradient(135deg, rgba(85, 200, 232, 0.08), transparent),
+    repeating-linear-gradient(45deg, rgba(85, 200, 232, 0.04) 0px, rgba(85, 200, 232, 0.04) 2px, transparent 2px, transparent 8px),
+    #0A1530;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
+}
+.chrono-fragment-image::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(85, 200, 232, 0.4);
+  border-radius: 10px;
+  pointer-events: none;
+}
+.chrono-fragment-placeholder {
+  color: rgba(85, 200, 232, 0.7);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 30px;
+  z-index: 1;
+  font-weight: 600;
+}
+.chrono-fragment-placeholder code {
+  background: rgba(85, 200, 232, 0.15);
+  color: #7FD8F0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.chrono-fragment-body { padding: 16px 20px; }
+.chrono-prompt {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.55;
+}
+.chrono-prompt:last-child { margin-bottom: 0; }
+.chrono-prompt-icon { color: #55C8E8; font-weight: 800; flex-shrink: 0; }
+
+/* ═══════════ CHRONO-LENS LOCKED/REVEAL SYSTEM (Grade 4) ═══════════ */
+.chrono-locked-screen {
+  background:
+    radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(85, 200, 232, 0.03) 0px, rgba(85, 200, 232, 0.03) 1px, transparent 1px, transparent 4px),
+    #0A1530;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
+}
+.chrono-locked-screen::before {
+  /* Slow vertical scan line */
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #55C8E8, transparent);
+  animation: chronoScan 4s ease-in-out infinite;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@keyframes chronoScan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+.chrono-locked-screen::after {
+  /* Corner brackets */
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(85, 200, 232, 0.35);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.chrono-locked-status {
+  color: #55C8E8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  animation: chronoLockedPulse 2s ease-in-out infinite;
+  z-index: 1;
+  text-align: center;
+}
+@keyframes chronoLockedPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.chrono-engage-btn {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0A1530;
+  border: 2px solid #7FD8F0;
+  padding: 13px 26px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4);
+  transition: all 0.2s ease;
+  animation: chronoEngageBtnGlow 2.4s ease-in-out infinite;
+  z-index: 1;
+  font-family: inherit;
+}
+@keyframes chronoEngageBtnGlow {
+  0%, 100% { box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4); }
+  50% { box-shadow: 0 4px 36px rgba(85, 200, 232, 0.75), 0 0 0 4px rgba(85, 200, 232, 0.15); }
+}
+.chrono-engage-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 32px rgba(85, 200, 232, 0.7);
+}
+.chrono-engage-btn:active { transform: translateY(0); }
+.chrono-engage-btn:disabled {
+  animation: none;
+  cursor: wait;
+  opacity: 0.85;
+}
+.chrono-engage-btn-icon {
+  font-size: 18px;
+  display: inline-block;
+  animation: chronoIconSpin 4s linear infinite;
+}
+@keyframes chronoIconSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.chrono-locked-hint {
+  font-size: 12px;
+  color: rgba(85, 200, 232, 0.7);
+  z-index: 1;
+  font-style: italic;
+}
+
+/* Scanning state - triggered when button is clicked */
+.chrono-locked-screen.chrono-scanning {
+  animation: chronoFlash 1s ease forwards;
+}
+.chrono-locked-screen.chrono-scanning::before {
+  animation: chronoFastScan 0.6s ease-in-out 2;
+}
+@keyframes chronoFlash {
+  0% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
+  40% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.6), transparent 80%), #1A4060; }
+  100% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
+}
+@keyframes chronoFastScan {
+  0% { top: 0%; opacity: 1; }
+  100% { top: 100%; opacity: 1; }
+}
+
+/* Hidden by default; revealed by JS */
+.chrono-hidden { display: none !important; }
+.chrono-revealed-image { animation: chronoZoomIn 0.9s cubic-bezier(0.34, 1.4, 0.6, 1) forwards; transform-origin: center; }
+@keyframes chronoZoomIn {
+  0% { opacity: 0; transform: scale(0.4); filter: blur(8px) brightness(2); }
+  60% { filter: blur(0) brightness(1.2); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0) brightness(1); }
+}
+.chrono-revealed-prompts .chrono-prompt {
+  opacity: 0;
+  animation: chronoPromptIn 0.6s ease forwards;
+}
+.chrono-revealed-prompts .chrono-prompt:nth-child(1) { animation-delay: 0.3s; }
+.chrono-revealed-prompts .chrono-prompt:nth-child(2) { animation-delay: 0.55s; }
+.chrono-revealed-prompts .chrono-prompt:nth-child(3) { animation-delay: 0.8s; }
+@keyframes chronoPromptIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ DISTORTER ALERT (Grade 4 — Tab 2 antagonist beat) ═══════════ */
+.distorter-alert {
+  background: linear-gradient(135deg, #2A1A1A, #3A2222);
+  border: 2px solid #E8636B;
+  border-left: 6px solid #E8636B;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.distorter-label {
+  font-size: 11px;
+  color: #FF8E94;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.distorter-text { font-size: 14px; color: rgba(255, 255, 255, 0.9); line-height: 1.6; }
+.distorter-text strong { color: #FFB8BC; }
+.distorter-counter {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(232, 99, 107, 0.3);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.distorter-counter strong { color: #B8E8CF; }
+
+/* ═══════════ TIMELINE SYNC PUZZLE IMAGES (Grade 4 — Tab 4 reveal) ═══════════ */
+.timeline-sync-card {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border: 2px solid #55C8E8;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.15);
+}
+.timeline-sync-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1.5px solid rgba(85, 200, 232, 0.3);
+}
+.timeline-sync-icon { font-size: 24px; color: #55C8E8; }
+.timeline-sync-label {
+  font-size: 11px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+.timeline-sync-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-sync-image {
+  width: 100%;
+  min-height: 280px;
+  background:
+    radial-gradient(ellipse at center, rgba(85, 200, 232, 0.15), transparent 70%),
+    repeating-linear-gradient(45deg, rgba(85, 200, 232, 0.03) 0px, rgba(85, 200, 232, 0.03) 2px, transparent 2px, transparent 12px),
+    #0A1530;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
+  position: relative;
+}
+.timeline-sync-image::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(85, 200, 232, 0.4);
+  border-radius: 10px;
+  pointer-events: none;
+}
+.timeline-sync-placeholder {
+  color: rgba(85, 200, 232, 0.7);
+  font-size: 14px;
+  text-align: center;
+  padding: 30px;
+  z-index: 1;
+  font-weight: 600;
+}
+.timeline-sync-placeholder code {
+  background: rgba(85, 200, 232, 0.15);
+  color: #7FD8F0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.timeline-sync-caption {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+.timeline-sync-caption strong { color: #7FD8F0; }
+
+/* When an image is loaded into a placeholder, hide the dashed ::before frame */
+.chrono-fragment-image.image-loaded::before,
+.timeline-sync-image.image-loaded::before { display: none; }
+.chrono-fragment-image.image-loaded,
+.timeline-sync-image.image-loaded { min-height: 0; padding: 0; border: none; background: none; border-radius: 12px; overflow: hidden; }
+.chrono-fragment-image.image-loaded::after,
+.timeline-sync-image.image-loaded::after { display: none; }
+
 /* ═══════════ SELF-CHECK QUIZ ═══════════ */
 .quiz-card {
   background: #fff;
@@ -1454,321 +1781,116 @@ body {
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
-/* ═══════════════════════════════════════════════════════════════
-   GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
-   Lightweight story layer. Sticky notes for messages, manila file
-   cards for "Show or Make," kraft postcards for unit closers.
-   Florida content is the main story; these are visual novelty only.
-   ═══════════════════════════════════════════════════════════════ */
-
-/* --- 📩 Message from Inside Canvas: yellow sticky note --- */
-.canvas-sticky {
-  position: relative;
-  background: linear-gradient(180deg, #FFF8B8 0%, #FFEC8A 100%);
-  border: 1px solid #E6D04A;
-  border-radius: 4px;
-  padding: 18px 20px 16px;
-  margin: 14px auto 18px;
-  max-width: 680px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
-  transform: rotate(-1.2deg);
-  font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive, system-ui;
-  color: #3D2E10;
+/* ═══════════ STORY-ARC COLLAPSIBLE BLOCKS (HQ Status + Previously On) ═══════════ */
+.story-block {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border: 1px solid rgba(127,216,240,0.3);
+  border-radius: 10px;
+  margin: 14px 0 12px;
+  box-shadow: 0 2px 8px rgba(14,28,66,0.15);
+  overflow: hidden;
 }
-.canvas-sticky::before {
-  /* tape strip */
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%) rotate(2deg);
-  width: 84px;
-  height: 18px;
-  background: rgba(180, 200, 220, 0.55);
-  border: 1px solid rgba(120, 140, 160, 0.35);
-  border-radius: 2px;
-}
-.canvas-sticky-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-family: system-ui, -apple-system, sans-serif;
-}
-.canvas-sticky-head-icon { font-size: 20px; }
-.canvas-sticky-head-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #7A5A18;
-}
-.canvas-sticky-body {
-  font-size: 17px;
-  line-height: 1.5;
-  color: #3D2E10;
-}
-.canvas-sticky-body p { margin: 0 0 6px; }
-.canvas-sticky-byline {
-  margin-top: 8px;
-  font-size: 13px;
-  color: #6B5418;
-  font-style: italic;
-}
-
-/* Variant: File Unlocked sticky (soft green instead of yellow) */
-.canvas-sticky.unlocked {
-  background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
-  border-color: #6FAA5C;
-  color: #1F4515;
-  transform: rotate(1deg);
-}
-.canvas-sticky.unlocked::before {
-  background: rgba(110, 150, 110, 0.45);
-  border-color: rgba(80, 110, 80, 0.4);
-}
-.canvas-sticky.unlocked .canvas-sticky-head-label { color: #2D5A1F; }
-.canvas-sticky.unlocked .canvas-sticky-body { color: #1F4515; }
-.canvas-sticky.unlocked .canvas-sticky-byline { color: #3D6A28; }
-
-/* --- 🗂️ Show or Make: manila folder/file card --- */
-.canvas-file-card {
-  position: relative;
-  background: #E8D4A8;
-  border: 1.5px solid #B89860;
-  border-top: 0;
-  border-radius: 0 0 8px 8px;
-  padding: 22px 22px 20px;
-  margin: 22px auto 18px;
-  max-width: 720px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
-}
-.canvas-file-card::before {
-  /* manila folder tab */
-  content: attr(data-tab);
-  position: absolute;
-  top: -22px;
-  left: 24px;
-  background: #E8D4A8;
-  border: 1.5px solid #B89860;
-  border-bottom: none;
-  border-radius: 8px 8px 0 0;
-  padding: 5px 16px 4px;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #6E5215;
-}
-.canvas-file-card-head {
+.story-block.prev-on  { border-left: 3px solid #7FD8F0; }
+.story-block.hq-status { border-left: 3px solid #FFD580; }
+.story-block-bar {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed #B89860;
+  cursor: pointer;
+  color: #E8F1FA;
+  font-family: inherit;
+  text-align: left;
 }
-.canvas-file-card-head-icon { font-size: 22px; }
-.canvas-file-card-head-text {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #4A3811;
-}
-.canvas-file-card-body {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #2F2308;
-}
-.canvas-file-card-visual {
-  background: #FFFCF2;
-  border: 1px dashed #B89860;
-  border-radius: 6px;
-  padding: 18px;
-  margin: 12px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #6E5215;
-  font-style: italic;
-}
-.canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
-
-/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
-.canvas-glitch-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #F3E8FF;
-  border: 1px dashed #9B6BC4;
-  border-radius: 4px;
-  padding: 5px 10px;
-  margin: 8px 0;
-  font-size: 12px;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  color: #5B2D8C;
-}
-.canvas-glitch-note-icon {
-  display: inline-block;
-  animation: glitchFlicker 3.5s ease-in-out infinite;
-}
-@keyframes glitchFlicker {
-  0%, 92%, 100% { opacity: 1; }
-  94% { opacity: 0.3; transform: translateX(-1px); }
-  96% { opacity: 1; transform: translateX(1px); }
-  98% { opacity: 0.5; }
-}
-
-/* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
-.canvas-unlock-stamp {
-  display: inline-block;
-  background: #FEF2F2;
-  color: #B91C1C;
-  border: 2px solid #B91C1C;
-  border-radius: 4px;
-  padding: 4px 10px 3px;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transform: rotate(-3deg);
-  margin: 0 0 12px;
-}
-.canvas-unlock-stamp::before { content: "🔓 "; }
-
-/* --- 🛤️ Course Path Updated: small progress chip --- */
-.canvas-path-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #ECFDF5;
-  color: #065F46;
-  border: 1px solid #6EE7B7;
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 12px;
-  font-weight: 600;
-  margin: 14px 0;
-}
-.canvas-path-chip-icon { font-size: 13px; }
-.canvas-path-chip-dots {
-  display: inline-flex;
-  gap: 3px;
-  margin-left: 4px;
-}
-.canvas-path-chip-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #D1FAE5;
-}
-.canvas-path-chip-dot.done { background: #10B981; }
-.canvas-path-chip-dot.now {
-  background: #10B981;
-  box-shadow: 0 0 0 2px #10B98140;
-  animation: pulseDot 2s ease-in-out infinite;
-}
-@keyframes pulseDot {
-  0%, 100% { box-shadow: 0 0 0 2px #10B98140; }
-  50%      { box-shadow: 0 0 0 4px #10B98120; }
-}
-
-/* --- 📮 Postcard from the Teacher (unit closers only) --- */
-.canvas-postcard {
-  position: relative;
-  background: linear-gradient(135deg, #F5E6C8 0%, #E8D4A0 100%);
-  border: 1px solid #A78448;
-  border-radius: 6px;
-  padding: 0;
-  margin: 22px auto 18px;
-  max-width: 720px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.14), inset 0 0 0 2px rgba(255,255,255,0.3);
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 220px;
-}
-.canvas-postcard-left {
-  padding: 20px 22px;
-  border-right: 2px dashed #A78448;
-  font-family: "Caveat", "Patrick Hand", cursive, system-ui;
-  font-size: 17px;
-  line-height: 1.45;
-  color: #3D2E10;
-}
-.canvas-postcard-right {
-  padding: 16px 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.canvas-postcard-stamp {
-  align-self: flex-end;
-  width: 64px; height: 78px;
-  background: #FFF5E0;
-  border: 2px solid #A78448;
-  border-radius: 4px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  position: relative;
-}
-.canvas-postcard-stamp::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  border: 1.5px dashed #A78448;
-  border-radius: 6px;
-}
-.canvas-postcard-address {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 12px;
-  color: #6E5215;
-  line-height: 1.55;
-}
-.canvas-postcard-cancel {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+.story-block-bar:hover { background: rgba(127,216,240,0.06); }
+.story-block-icon { font-size: 16px; line-height: 1; }
+.story-block-label {
   font-size: 10px;
-  color: #8B6E2A;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  border-top: 1px solid #A78448;
-  padding-top: 6px;
-  margin-top: 8px;
+  letter-spacing: 1.4px;
+  font-weight: 800;
+  color: #7FD8F0;
+  white-space: nowrap;
 }
-.canvas-postcard-head {
+.story-block.hq-status .story-block-label { color: #FFD580; }
+.story-block-summary {
+  flex: 1;
+  font-size: 13px;
+  color: rgba(232,241,250,0.78);
+  font-style: italic;
+  line-height: 1.4;
+}
+.story-block-toggle {
+  font-size: 11px;
+  color: rgba(232,241,250,0.6);
+  transition: transform 0.25s ease;
+  font-weight: 700;
+}
+.story-block:not(.collapsed) .story-block-toggle { transform: rotate(180deg); }
+.story-block:not(.collapsed) .story-block-summary { display: none; }
+.story-block-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #E8F1FA;
+  line-height: 1.6;
+}
+.story-block:not(.collapsed) .story-block-body {
+  max-height: 500px;
+  padding: 4px 16px 14px;
+}
+.hq-row {
   display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(127,216,240,0.12);
+}
+.hq-row:first-child { border-top: 0; padding-top: 4px; }
+.hq-row-label {
+  flex: 0 0 120px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: rgba(232,241,250,0.62);
+  padding-top: 3px;
+}
+.hq-row-value {
+  flex: 1;
+  font-size: 13px;
+  color: #E8F1FA;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
-  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
 }
-.canvas-postcard-head-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #7A5A18;
+.rank-dots, .threat-dots {
+  display: inline-flex;
+  gap: 4px;
+  vertical-align: middle;
 }
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot-gold { background: transparent; border: 1.5px solid rgba(255,213,128,0.55); }
+.dot-gold.filled { background: #FFD580; box-shadow: 0 0 6px rgba(255,213,128,0.5); border-color: #FFD580; }
+.dot-red { background: transparent; border: 1.5px solid rgba(217,64,64,0.5); }
+.dot-red.filled { background: #D94040; box-shadow: 0 0 6px rgba(217,64,64,0.6); border-color: #D94040; }
+.dot-meta { font-size: 11px; color: rgba(232,241,250,0.55); font-weight: 700; }
 @media (max-width: 620px) {
-  .canvas-postcard { grid-template-columns: 1fr; }
-  .canvas-postcard-left { border-right: none; border-bottom: 2px dashed #A78448; }
+  .hq-row-label { flex: 0 0 90px; font-size: 10px; }
+  .story-block-summary { font-size: 12px; }
 }
 
-/* --- Sensitive-history tone override (quieter visual) --- */
-.canvas-sticky.quiet,
-.canvas-file-card.quiet,
-.canvas-postcard.quiet {
-  background: #F6F2EA;
-  border-color: #A89880;
-  transform: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-.canvas-sticky.quiet::before { display: none; }
-.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
-.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -1792,11 +1914,11 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title"><em>What Florida Historians Study</em></div>
+  <div class="header-title"><em>Compare Native American Tribes in Florida</em></div>
   <div class="header-badge">
     <!-- ✏️ GRADE TOKEN -->
-    <span class="header-badge-icon">🐊</span>
-    <span class="header-badge-text">Lesson 4.01.01</span>
+    <span class="header-badge-icon">🏛️</span>
+    <span class="header-badge-text">Lesson 4.03.02</span>
   </div>
 </div>
 
@@ -1808,90 +1930,135 @@ body {
      2–3 CSS animations (floating, drifting, pulsing). -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
   <defs>
-    <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2E7D5B"/>
-      <stop offset="100%" stop-color="#E8843A"/>
+    <linearGradient id="bannerGrad" x1="0" y1="0" x2="0" y2="260">
+      <stop offset="0%" stop-color="#F2C879"/>
+      <stop offset="100%" stop-color="#1A8A7D"/>
     </linearGradient>
-    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF8E0"/>
-      <stop offset="100%" stop-color="#F2E5B8"/>
+    <linearGradient id="leftSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE6A8"/>
+      <stop offset="100%" stop-color="#A8D9A0"/>
     </linearGradient>
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE08A"/>
-      <stop offset="100%" stop-color="#FFB344" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="rightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFCC85"/>
+      <stop offset="100%" stop-color="#5BBED3"/>
+    </linearGradient>
+    <style>
+      .smoke{animation:rise 4s ease-in-out infinite}
+      .ripple{animation:rip 3.4s ease-in-out infinite}
+      .glow{animation:gl 2.8s ease-in-out infinite}
+      @keyframes rise{0%,100%{transform:translateY(0);opacity:.7}50%{transform:translateY(-8px);opacity:.95}}
+      @keyframes rip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(1.06)}}
+      @keyframes gl{0%,100%{opacity:.7}50%{opacity:1}}
+    </style>
   </defs>
-  <!-- Sky/sea background -->
   <rect width="920" height="260" fill="url(#bannerGrad)"/>
-  <!-- Soft sun glow -->
-  <circle cx="730" cy="80" r="110" fill="url(#sunGrad)"/>
-  <circle cx="730" cy="80" r="38" fill="#FFE08A" opacity="0.95">
-    <animate attributeName="r" values="38;42;38" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Palm silhouettes (right side, decorative) -->
-  <g transform="translate(820,180)" opacity="0.55">
-    <rect x="-3" y="-50" width="6" height="60" fill="#2A5A45" rx="2"/>
-    <path d="M0,-50 Q-25,-65 -45,-58 Q-30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q25,-65 45,-58 Q30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q-20,-78 -38,-78 Q-22,-65 0,-50" fill="#2D6A45"/>
-    <path d="M0,-50 Q20,-78 38,-78 Q22,-65 0,-50" fill="#2D6A45"/>
+  <!-- LEFT HALF — Timucua interior village -->
+  <rect x="0" y="0" width="460" height="200" fill="url(#leftSky)"/>
+  <!-- pine forest backdrop -->
+  <g fill="#2A7A55">
+    <polygon points="20,170 38,120 56,170"/>
+    <polygon points="60,175 78,118 96,175"/>
+    <polygon points="100,170 122,110 144,170"/>
+    <polygon points="148,178 168,122 188,178"/>
+    <polygon points="200,170 220,115 240,170"/>
+    <polygon points="252,178 272,124 292,178"/>
+    <polygon points="305,172 326,118 348,172"/>
+    <polygon points="360,176 380,122 400,176"/>
+    <polygon points="408,172 428,118 448,172"/>
   </g>
-  <!-- Open notebook (left/center, the historian's tool) -->
-  <g transform="translate(220,140)">
-    <!-- shadow -->
-    <ellipse cx="0" cy="60" rx="180" ry="14" fill="#000" opacity="0.18"/>
-    <!-- left page -->
-    <path d="M-160,-60 L0,-65 L0,55 L-160,50 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- right page -->
-    <path d="M0,-65 L160,-60 L160,50 L0,55 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- spine -->
-    <line x1="0" y1="-65" x2="0" y2="55" stroke="#8B6E2A" stroke-width="2.5"/>
-    <!-- lines on left page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="-145" y1="-35" x2="-15" y2="-37"/>
-      <line x1="-145" y1="-18" x2="-15" y2="-20"/>
-      <line x1="-145" y1="-1" x2="-15" y2="-3"/>
-      <line x1="-145" y1="16" x2="-15" y2="14"/>
-      <line x1="-145" y1="33" x2="-50" y2="32"/>
-    </g>
-    <!-- lines on right page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="15" y1="-37" x2="145" y2="-35"/>
-      <line x1="15" y1="-20" x2="145" y2="-18"/>
-      <line x1="15" y1="-3" x2="145" y2="-1"/>
-      <line x1="15" y1="14" x2="145" y2="16"/>
-    </g>
-    <!-- A pencil resting -->
-    <g transform="rotate(18 30 -30)">
-      <rect x="20" y="-40" width="120" height="6" fill="#F5C547" rx="1"/>
-      <polygon points="140,-40 152,-37 140,-34" fill="#3A2A14"/>
-      <polygon points="140,-39 144,-37 140,-35" fill="#444"/>
-      <rect x="20" y="-40" width="14" height="6" fill="#E58A85"/>
-      <rect x="34" y="-40" width="2" height="6" fill="#888"/>
+  <!-- ground -->
+  <rect x="0" y="170" width="460" height="90" fill="#9CB46E"/>
+  <!-- palisade (wooden circular fence around village) -->
+  <g stroke="#6A4527" stroke-width="2.5">
+    <line x1="120" y1="200" x2="120" y2="175"/>
+    <line x1="135" y1="200" x2="135" y2="172"/>
+    <line x1="150" y1="200" x2="150" y2="170"/>
+    <line x1="165" y1="200" x2="165" y2="172"/>
+    <line x1="180" y1="200" x2="180" y2="175"/>
+    <line x1="280" y1="200" x2="280" y2="175"/>
+    <line x1="295" y1="200" x2="295" y2="172"/>
+    <line x1="310" y1="200" x2="310" y2="170"/>
+    <line x1="325" y1="200" x2="325" y2="172"/>
+    <line x1="340" y1="200" x2="340" y2="175"/>
+  </g>
+  <!-- 3 thatched round houses (Timucua-style) -->
+  <g transform="translate(160,182)">
+    <ellipse cx="0" cy="20" rx="32" ry="10" fill="#7C5A35"/>
+    <path d="M-32,20 Q-32,-12 0,-18 Q32,-12 32,20 Z" fill="#C4A06A" stroke="#7C5A35" stroke-width="1.2"/>
+    <line x1="-32" y1="20" x2="0" y2="-18" stroke="#7C5A35" stroke-width="0.8"/>
+    <line x1="32" y1="20" x2="0" y2="-18" stroke="#7C5A35" stroke-width="0.8"/>
+    <rect x="-4" y="10" width="8" height="14" fill="#3A2410"/>
+  </g>
+  <g transform="translate(232,188)">
+    <ellipse cx="0" cy="16" rx="26" ry="8" fill="#7C5A35"/>
+    <path d="M-26,16 Q-26,-10 0,-16 Q26,-10 26,16 Z" fill="#B8965E" stroke="#7C5A35" stroke-width="1.2"/>
+    <rect x="-3" y="8" width="6" height="12" fill="#3A2410"/>
+  </g>
+  <g transform="translate(310,184)">
+    <ellipse cx="0" cy="18" rx="28" ry="9" fill="#7C5A35"/>
+    <path d="M-28,18 Q-28,-12 0,-17 Q28,-12 28,18 Z" fill="#C4A06A" stroke="#7C5A35" stroke-width="1.2"/>
+    <rect x="-4" y="10" width="8" height="12" fill="#3A2410"/>
+  </g>
+  <!-- central plaza fire + smoke -->
+  <ellipse cx="232" cy="218" rx="14" ry="4" fill="#5A3A1E"/>
+  <g transform="translate(232,216)" class="glow"><polygon points="-6,-6 0,-14 6,-6 4,0 -4,0" fill="#FF8534"/><polygon points="-4,-3 0,-10 4,-3 2,0 -2,0" fill="#FFD580"/></g>
+  <g transform="translate(232,200)" class="smoke"><circle r="6" fill="#FFFFFF" opacity="0.55"/><circle cx="-4" cy="-8" r="5" fill="#FFFFFF" opacity="0.4"/><circle cx="3" cy="-14" r="4" fill="#FFFFFF" opacity="0.35"/></g>
+
+  <!-- center divider gap (timeline-core scan line) -->
+  <g transform="translate(460,0)" opacity="0.5">
+    <line x1="0" y1="20" x2="0" y2="240" stroke="#55C8E8" stroke-width="2" stroke-dasharray="4 6"/>
+    <circle cx="0" cy="130" r="6" fill="#7FD8F0"/>
+  </g>
+
+  <!-- RIGHT HALF — Calusa coastal shell-island world -->
+  <rect x="460" y="0" width="460" height="200" fill="url(#rightSky)"/>
+  <!-- sun -->
+  <g transform="translate(820,60)" class="glow"><circle r="22" fill="#FFE08A"/></g>
+  <!-- distant mangrove keys -->
+  <ellipse cx="540" cy="150" rx="60" ry="9" fill="#2E6E68" opacity="0.6"/>
+  <ellipse cx="700" cy="148" rx="70" ry="9" fill="#2E6E68" opacity="0.5"/>
+  <ellipse cx="860" cy="152" rx="55" ry="8" fill="#2E6E68" opacity="0.7"/>
+  <!-- water -->
+  <rect x="460" y="155" width="460" height="50" fill="#3D9CB8"/>
+  <!-- ripples -->
+  <g class="ripple"><path d="M480,170 Q500,167 520,170 T560,170 T600,170 T640,170 T680,170 T720,170 T760,170 T800,170 T840,170 T880,170 T920,170" stroke="#A0DCEA" stroke-width="1.8" fill="none"/></g>
+  <g class="ripple" style="animation-delay:-1.6s"><path d="M460,184 Q480,187 500,184 T540,184 T580,184 T620,184 T660,184 T700,184 T740,184 T780,184 T820,184 T860,184 T900,184" stroke="#C4E8F2" stroke-width="1.6" fill="none"/></g>
+  <!-- sand bar -->
+  <path d="M460,205 Q700,195 920,205 L920,260 L460,260 Z" fill="#F0D58F"/>
+  <!-- big shell mound (Calusa hallmark) -->
+  <g transform="translate(680,160)">
+    <path d="M0,46 Q35,-40 80,-30 Q120,-35 160,46 Z" fill="#C4A570" stroke="#8C6B3F" stroke-width="1.5"/>
+    <circle cx="25" cy="22" r="2.5" fill="#FFF8E0"/>
+    <circle cx="42" cy="6" r="2" fill="#FFF8E0"/>
+    <circle cx="60" cy="-8" r="2.5" fill="#F8EFD0"/>
+    <circle cx="82" cy="-22" r="2" fill="#FFF8E0"/>
+    <circle cx="105" cy="-12" r="2.5" fill="#F8EFD0"/>
+    <circle cx="125" cy="6" r="2" fill="#FFF8E0"/>
+    <circle cx="138" cy="24" r="2.5" fill="#FFF8E0"/>
+    <circle cx="60" cy="28" r="2" fill="#F8EFD0"/>
+    <circle cx="100" cy="30" r="2" fill="#FFF8E0"/>
+  </g>
+  <!-- fish weir stakes in water -->
+  <g stroke="#5C3A20" stroke-width="2">
+    <line x1="520" y1="195" x2="520" y2="175"/>
+    <line x1="535" y1="198" x2="535" y2="178"/>
+    <line x1="550" y1="195" x2="550" y2="175"/>
+    <line x1="565" y1="198" x2="565" y2="178"/>
+    <line x1="580" y1="195" x2="580" y2="175"/>
+  </g>
+  <!-- canoe on water -->
+  <g transform="translate(780,196)">
+    <path d="M0,4 Q22,-1 60,0 Q92,2 110,8 Q92,12 60,11 Q22,10 0,7 Z" fill="#6E4426" stroke="#4A2D18" stroke-width="1.2"/>
+  </g>
+  <!-- palm right edge -->
+  <g transform="translate(870,168)">
+    <rect x="0" y="0" width="4" height="40" fill="#7A5230"/>
+    <g transform="translate(2,0)">
+      <path d="M0,0 Q-18,-6 -26,-2 Q-20,4 -2,2 Z" fill="#2A8F5F"/>
+      <path d="M0,0 Q18,-6 26,-2 Q20,4 2,2 Z" fill="#2A8F5F"/>
+      <path d="M0,0 Q-8,-18 -14,-22 Q-8,-16 -2,-4 Z" fill="#36A86E"/>
     </g>
   </g>
-  <!-- Magnifying glass (floating, slight drift) -->
-  <g transform="translate(540,90)">
-    <g style="animation: heroFloat 5s ease-in-out infinite;">
-      <circle cx="0" cy="0" r="42" fill="#A8DDF0" opacity="0.55" stroke="#2A6A8C" stroke-width="6"/>
-      <circle cx="-10" cy="-10" r="14" fill="#FFF" opacity="0.65"/>
-      <line x1="32" y1="32" x2="68" y2="68" stroke="#5C3A14" stroke-width="9" stroke-linecap="round"/>
-      <rect x="62" y="62" width="14" height="14" fill="#5C3A14" rx="3" transform="rotate(45 69 69)"/>
-    </g>
-  </g>
-  <!-- Florida outline (small, on horizon — recognizable shape) -->
-  <g transform="translate(620,200)" opacity="0.85">
-    <path d="M0,0 Q-5,-22 -16,-30 Q-30,-28 -42,-22 Q-58,-12 -68,8 Q-72,18 -68,30 Q-58,32 -45,30 Q-35,38 -22,38 Q-10,42 0,40 Q12,46 22,48 Q34,46 38,38 Q36,28 28,22 Q30,12 26,2 Q14,-4 0,0 Z"
-          fill="#FFF" opacity="0.92" stroke="#2A6A8C" stroke-width="2"/>
-    <!-- Small star marker -->
-    <circle cx="-32" cy="14" r="3" fill="#E8843A"/>
-  </g>
-  <style>
-    @keyframes heroFloat {
-      0%, 100% { transform: translateY(0) rotate(-3deg); }
-      50% { transform: translateY(-8px) rotate(-1deg); }
-    }
-  </style>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -1900,72 +2067,124 @@ body {
     <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
     <div>
       <div class="info-label">Unit</div>
-      <div class="info-value">Unit 1: Thinking Like a Florida Historian</div>
+      <div class="info-value">First Floridians</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#FFF3DC;">📅</div>
     <div>
       <div class="info-label">Week</div>
-      <div class="info-value">Week 1 · Q1</div>
+      <div class="info-value">Week 7 · Q1</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#E3F8ED;">📜</div>
     <div>
       <div class="info-label">Focus</div>
-      <div class="info-value">Historical Thinking</div>
+      <div class="info-value">First Peoples of Florida</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#F0E8FF;">📋</div>
     <div>
       <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.4.A.1.1 · SS.4.A.1.2 · SS.4.A.9.1</div>
+      <div class="info-value" style="font-size:12px;">SS.4.A.2.1 · SS.4.A.1.1 · SS.4.G.1.1</div>
     </div>
   </div>
 </div>
 
-<!-- ═══ INTRO SECTION: Scene-setting content that auto-collapses on non-scene tabs ═══
-     Contains a small "Message from Inside Canvas" sticky (light story hook), the Florida Historian's Question, Objectives, and Need Strip.
-     All collapse together when student moves to Tab 2/3/4; expand on Tab 1 or via toggle. -->
+<!-- ═══ HQ STATUS PANEL (collapsible — episode / rank / threat) ═══ -->
+<div class="story-block hq-status collapsed" id="hqStatusBlock">
+  <button class="story-block-bar" type="button" onclick="toggleStoryBlock('hqStatusBlock')">
+    <span class="story-block-icon">🛰️</span>
+    <span class="story-block-label">Time Lab HQ Status</span>
+    <span class="story-block-summary">Ep 1 · Junior Chrono-Historian · Threat: Static (1/4)</span>
+    <span class="story-block-toggle">▼</span>
+  </button>
+  <div class="story-block-body">
+    <div class="hq-row">
+      <div class="hq-row-label">Episode</div>
+      <div class="hq-row-value">
+        Episode <strong>1 of 4</strong> — <em>Booting Up the Florida Timeline Core</em> &nbsp;<span class="dot-meta">(Units 1–5)</span>
+      </div>
+    </div>
+    <div class="hq-row">
+      <div class="hq-row-label">Your Rank</div>
+      <div class="hq-row-value">
+        <strong>Junior Chrono-Historian</strong>
+        <span class="rank-dots" aria-label="Rank 1 of 5">
+          <span class="dot dot-gold filled"></span>
+          <span class="dot dot-gold"></span>
+          <span class="dot dot-gold"></span>
+          <span class="dot dot-gold"></span>
+          <span class="dot dot-gold"></span>
+        </span>
+        <span class="dot-meta">1 / 5</span>
+      </div>
+    </div>
+    <div class="hq-row">
+      <div class="hq-row-label">Distorter Threat</div>
+      <div class="hq-row-value">
+        <strong>Static</strong> &nbsp;<span class="dot-meta">simple flattening; easily defeated by basic evidence</span>
+        <span class="threat-dots" aria-label="Threat 1 of 4">
+          <span class="dot dot-red filled"></span>
+          <span class="dot dot-red"></span>
+          <span class="dot dot-red"></span>
+          <span class="dot dot-red"></span>
+        </span>
+        <span class="dot-meta">1 / 4</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PREVIOUSLY ON THE TIME LAB (collapsible) ═══ -->
+<div class="story-block prev-on collapsed" id="prevOnBlock">
+  <button class="story-block-bar" type="button" onclick="toggleStoryBlock('prevOnBlock')">
+    <span class="story-block-icon">⏪</span>
+    <span class="story-block-label">Previously on the Time Lab</span>
+    <span class="story-block-summary">Last mission: locked in the <em>First Peoples Map</em> piece. Tap to recap.</span>
+    <span class="story-block-toggle">▼</span>
+  </button>
+  <div class="story-block-body">
+    Last mission, the team identified four of Florida's first peoples and locked in the <em>First Peoples Map</em>. Today, the Chrono-Lens zooms in on two of those peoples — the Timucua in the north and the Calusa in the southwest — and the team's job is to compare them carefully, using real sources.
+  </div>
+</div>
+
+
+
+<!-- ═══ MISSION BRIEF (Grade 4 — replaces quote strip) ═══ -->
+<div class="quote-strip">
+  <div style="font-size:10px;color:#D4663A;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;margin-bottom:6px;">🛰️ Mission Brief · Time Echo Detected</div>
+  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+    <!-- ✏️ MISSION BRIEF: 3–5 sentences. Look up the lesson code in the
+         G4 Time Lab Story Arc and use the Claude Lesson Story Prompt + Chrono-Lens Start Piece.
+         Set the scene in the Time Lab. Don't reveal what the fragment is yet —
+         the Chrono-Lens Fragment block below will show it. -->
+    The Chrono-Lens has pulled up a <strong>split-screen Time Echo</strong> — two evidence pieces side by side. On the left, a 1500s European engraving of a Timucua village. On the right, an archaeologist's photograph of a Calusa shell-mound artifact. The Lead Chrono-Historian wants the team to do the patient work of <strong>comparison</strong>: look at both, see what each tells us, notice what each leaves out, and write a careful side-by-side report. Same Florida — very different lives.
+  </div>
+</div>
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's File · Florida Historian's Question</div>
+    <div class="intro-collapsed-icon">🛰️</div>
+    <div class="intro-collapsed-text">Today's Mission Today's Wonder & Objectives Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
 
-  <!-- ═══ 📩 MESSAGE FROM INSIDE CANVAS (Grade 4 — light story hook, 30 sec) ═══
-       This is the OPENING story beat. The text inside is also the script the
-       teacher will read when recording the welcome video. Keep it 2-4 sentences.
-       Pull the exact wording from the "Opening: Message from Inside Canvas"
-       column of the Planning Table for this lesson code.
-       For sensitive-history lessons (U3, U7, parts of U11), add class="quiet"
-       to remove the playful rotation and use a calmer tone. -->
-  <div class="canvas-sticky">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📩</span>
-      <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
-    </div>
-    <div class="canvas-sticky-body">
-      <p>The first file is labeled <em>"What Florida Historians Study,"</em> but Canvas won't open it until you explain what historians actually do. Take a look — help me get to the next file!</p>
-    </div>
-    <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 1</div>
-  </div>
-
   <div class="intro-2col">
-    <!-- Florida Historian's Question -->
+    <!-- Mission Question -->
     <div class="intro-card theme-question">
       <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
+        <div class="intro-card-head-icon">🛰️</div>
         <div>
-          <div class="intro-card-head-label">Florida Historian's Question</div>
-          <div class="intro-card-head-title">Today's Big Question</div>
+          <div class="intro-card-head-label">Mission Question</div>
+          <div class="intro-card-head-title">Today's Mission</div>
         </div>
       </div>
       <div class="intro-card-body">
-        <p>What do Florida historians actually study, and how do they know what really happened?</p>
+        <p>How were the Timucua and the Calusa alike — and how were they different — and how do we know?</p>
       </div>
     </div>
 
@@ -1979,9 +2198,9 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🌴</span> Name the four things historians study: people, places, events, and evidence.</div>
-        <div class="obj-line"><span class="obj-icon">🔍</span> Tell the difference between a historian's claim and a guess.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Write a Historian's Notebook entry using one piece of evidence.</div>
+        <div class="obj-line"><span class="obj-icon">🏛️</span> Compare the Timucua and the Calusa across food, shelter, and community.</div>
+        <div class="obj-line"><span class="obj-icon">🗺️</span> Use details from a primary source to explain how a tribe lived.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Notice what a source <em>doesn't</em> show — and why that matters.</div>
       </div>
     </div>
   </div>
@@ -1989,7 +2208,7 @@ body {
   <!-- You'll Need strip -->
   <div class="need-strip">
     <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">🔬 Chrono-Historian's Notebook</span>
     <span class="need-chip">✏️ Pencil</span>
     <span class="need-chip">🗺️ Lesson Page</span>
   </div>
@@ -1997,10 +2216,10 @@ body {
 
 <!-- ═══ TAB BAR (3 tabs) ═══ -->
 <div class="tab-bar" id="tabBar">
-  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">🛰️ Mission Brief <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Chrono-Lens Analysis <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Signal Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📡 Timeline Sync <span class="tab-check">✓</span></button>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -2010,9 +2229,9 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">🛰️</div>
     <div>
-      <div class="tab-section-title">Learn</div>
+      <div class="tab-section-title">Mission Brief</div>
     </div>
   </div>
 
@@ -2025,14 +2244,17 @@ body {
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Meet the four things historians study</span>
+      <!-- STEP 1 -->
+      <span class="todays-path-step">🛰️ Open the brief & meet a split-screen Time Echo</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Look at a Florida photograph like a historian</span>
+      <!-- STEP 2 -->
+      <span class="todays-path-step">🔍 Run a Source Study on the Timucua village engraving</span>
       <span class="todays-path-arrow">→</span>
       <!-- STEP 3: Self-check (always the same) -->
-      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-step">🧠 Run the Signal Check</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write your first Historian's Notebook entry</span>
+      <!-- STEP 4 -->
+      <span class="todays-path-step">📡 Lock the Timucua vs. Calusa comparison piece in</span>
     </div>
   </div>
 
@@ -2042,97 +2264,65 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
-        <div class="video-wrap-title">Welcome to Florida History</div>
+        <div class="video-wrap-title">Welcome — Two Tribes, One Comparison</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "stuck inside Canvas" story beat — light, warm, slightly conspiratorial, never panicked. Suggested ~30-sec script start: <em>"Hey Florida historians — quick heads-up: I'm stuck inside Canvas. Long story. The first file on my desk says 'What Florida Historians Study' and it won't open until I show I actually know what historians do. Lucky for me, that's exactly what you're about to learn."</em> Then drop the frame and teach: read the Florida Historian's Question aloud, preview today's path (the Florida topic, what you'll explore, what the assignment is), and mention the virtue (self-governance).
+          <strong>Teacher recording notes:</strong> Greet students warmly. Read the Mission Brief and Mission Question aloud. Set the Time Lab scene: "Today the Chrono-Lens has detected a fragment from [topic]." Preview today's path. Mention the virtue and the Junior Chrono-Historian role. Keep it under 2 minutes. Energetic and inviting.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-welcome --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-03-02-welcome --></div>
       </div>
     </div>
   </div>
 
   <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🌴 Virtue Spotlight — Self-Governance</div>
-    <div class="virtue-text">Good Florida historians govern themselves — they slow down, check the evidence, and don't jump to conclusions. Today, when you feel the urge to guess, choose to look at the evidence instead.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Courtesy</div>
+    <div class="virtue-text">Studying another community's way of life calls for courtesy. That means using each people's real name, taking their choices seriously, and not lumping every Native group together. Courtesy isn't just politeness — for a historian, it's a habit of careful, respectful attention.</div>
   </div>
 
-  <!-- Your Role Today (Grade 4 — constant across the year: Florida History Team) -->
+  <!-- Junior Chrono-Historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
   <div class="callout callout-info">
-    <div class="callout-icon">🐊</div>
-    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Florida historians ask questions, study sources, follow timelines, and use careful evidence. Today, your team will learn what Florida historians actually study — and prove you can think like one.</p>
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Junior Chrono-Historian</strong> on the student research team. Today's lab assignment: run a Source Study on a Timucua village engraving, compare what you find to what we know about the Calusa, and lock the "Timucua vs. Calusa" comparison piece into the Timeline Core.</p>
   </div>
 
-  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD (Grade 4 — visual novelty hook) ═══
-       Replace the SVG placeholder below with a small hand-coded illustration
-       that matches the "Show or Make" column from the G4 Canvas Escape Arc tab.
-       Examples: locked file card with magnifying glass + Florida outline +
-       notebook (4.01.01); paired source card with primary + secondary (4.01.02);
-       mixed-up timeline strip (4.01.04); unlabeled Florida map (4.02.01).
-       The card itself is the manila folder; the SVG inside is the visual artifact.
-       This card sits ONCE on Tab 1 and never recurs on other tabs. -->
-  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.01">
-    <div class="canvas-file-card-head">
-      <span class="canvas-file-card-head-icon">🗂️</span>
-      <span class="canvas-file-card-head-text">Show or Make: Today's Florida File</span>
-    </div>
-    <div class="canvas-file-card-body">
-      <p>A locked file card sits at the Canvas entrance. Inside: a magnifying glass over Florida's outline and a small Historian's Notebook waiting for its first entry.</p>
-      <div class="canvas-file-card-visual">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;">
-          <defs>
-            <linearGradient id="folderGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#FFF8E0"/>
-              <stop offset="100%" stop-color="#F2E5B8"/>
-            </linearGradient>
-          </defs>
-          <!-- File card -->
-          <rect x="30" y="30" width="340" height="170" rx="6" fill="url(#folderGrad)" stroke="#8B6E2A" stroke-width="2.5"/>
-          <!-- File label tab -->
-          <rect x="50" y="20" width="120" height="22" rx="3" fill="#E8D4A8" stroke="#8B6E2A" stroke-width="2"/>
-          <line x1="58" y1="32" x2="160" y2="32" stroke="#8B6E2A" stroke-width="1" opacity="0.5"/>
-          <!-- LOCKED stamp (rotated, red) -->
-          <g transform="translate(290,55) rotate(-15)">
-            <rect x="-32" y="-12" width="64" height="22" fill="none" stroke="#B91C1C" stroke-width="2.5" rx="3"/>
-            <line x1="-28" y1="0" x2="28" y2="0" stroke="#B91C1C" stroke-width="1" opacity="0.4"/>
-          </g>
-          <!-- Padlock icon on file -->
-          <g transform="translate(75,75)">
-            <rect x="-12" y="0" width="24" height="20" rx="2" fill="#5C3A14"/>
-            <path d="M-8,0 L-8,-8 Q-8,-16 0,-16 Q8,-16 8,-8 L8,0" fill="none" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="0" cy="10" r="2.5" fill="#FFD06E"/>
-          </g>
-          <!-- Florida outline (large, center) -->
-          <g transform="translate(190,130)">
-            <path d="M-50,-30 Q-55,-50 -42,-58 Q-25,-60 -10,-55 Q5,-50 15,-45 Q28,-38 35,-30 Q42,-18 38,-8 Q34,5 26,12 Q22,22 14,28 Q4,30 -8,28 Q-18,32 -28,28 Q-38,22 -42,12 Q-48,2 -50,-12 Q-54,-22 -50,-30 Z"
-                  fill="#A8DDF0" stroke="#2A6A8C" stroke-width="2.5"/>
-            <!-- Small evidence marks on FL -->
-            <circle cx="-25" cy="-20" r="2.5" fill="#E8843A"/>
-            <circle cx="0" cy="-5" r="2.5" fill="#E8843A"/>
-            <circle cx="15" cy="10" r="2.5" fill="#E8843A"/>
-          </g>
-          <!-- Magnifying glass (over FL, animated drift) -->
-          <g transform="translate(245,115)" style="animation: showFloat 4s ease-in-out infinite;">
-            <circle cx="0" cy="0" r="22" fill="#FFF" opacity="0.55" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="-6" cy="-6" r="6" fill="#FFF" opacity="0.7"/>
-            <line x1="16" y1="16" x2="32" y2="32" stroke="#5C3A14" stroke-width="5" stroke-linecap="round"/>
-          </g>
-          <!-- Small notebook (corner) -->
-          <g transform="translate(80,165)">
-            <rect x="-15" y="-12" width="30" height="22" fill="#E58A85" rx="2" stroke="#B05A55" stroke-width="1.5"/>
-            <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="-1" x2="10" y2="-1" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="4" x2="6" y2="4" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-          </g>
-        </svg>
-        <p style="margin-top:8px;font-size:12px;">A locked Florida File with a magnifying glass, the Florida outline, and a fresh Historian's Notebook.</p>
-        <style>@keyframes showFloat { 0%,100%{transform:translate(245px,115px) rotate(-8deg);} 50%{transform:translate(248px,112px) rotate(-3deg);} }</style>
+  <!-- ═══ CHRONO-LENS FRAGMENT — show the lesson's puzzle piece zoomed in ═══ -->
+  <div class="chrono-fragment">
+    <div class="chrono-fragment-header">
+      <div class="chrono-fragment-icon">🔭</div>
+      <div>
+        <div class="chrono-fragment-label">🛰️ Chrono-Lens · Time Echo Fragment</div>
+        <div class="chrono-fragment-title">Fragment #4-03-02 · Source unidentified</div>
       </div>
+    </div>
+
+    <!-- Locked screen (visible initially; replaced by image on click) -->
+    <div class="chrono-locked-screen">
+      <div class="chrono-locked-status">⚠️ Time Echo locked · Awaiting authorization</div>
+      <button class="chrono-engage-btn" type="button" onclick="engageChronoLens(this)">
+        <span class="chrono-engage-btn-icon">🔭</span>
+        Engage Chrono-Lens
+      </button>
+      <div class="chrono-locked-hint">Click to scan the fragment</div>
+    </div>
+
+    <!-- Image (loads in background; revealed by JS) -->
+    <div class="chrono-fragment-image chrono-hidden" data-image="puzzle-4-03-02-fragment">
+      <div class="chrono-fragment-placeholder">
+        🖼️ Zoomed-in split-screen image: on the left, a small portion of a 1591 Theodor de Bry engraving showing the inside of a fortified Timucua village (round thatched houses inside a wooden palisade, a central fire). On the right, a close-up photograph of a Calusa carved shell tool or fish-net float. Two evidence pieces, one frame.<br><br>
+        <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-03-02-fragment.jpg</code>
+      </div>
+    </div>
+
+    <!-- Observation prompts (hidden initially; cascaded in after reveal) -->
+    <div class="chrono-fragment-body chrono-hidden">
+      <div class="chrono-prompt"><span class="chrono-prompt-icon">👁️</span><span><strong style="color:#fff;">What do you notice?</strong> Look carefully at the fragment. Describe what you see.</span></div>
+      <div class="chrono-prompt"><span class="chrono-prompt-icon">💭</span><span><strong style="color:#fff;">What could this be?</strong> Make a prediction based on the evidence.</span></div>
+      <div class="chrono-prompt"><span class="chrono-prompt-icon">🔍</span><span><strong style="color:#fff;">What evidence would help?</strong> What else would you need to know to be sure?</span></div>
     </div>
   </div>
 
@@ -2141,7 +2331,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've stepped into the scene, let's examine the evidence up close.</p>
-    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Chrono-Lens Analysis →</button>
   </div>
 </div>
 
@@ -2155,7 +2345,7 @@ body {
     <!-- ✏️ GRADE ACCENT -->
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
     <div>
-      <div class="tab-section-title">Explore</div>
+      <div class="tab-section-title">Chrono-Lens Analysis</div>
     </div>
   </div>
 
@@ -2165,16 +2355,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Looking at a Source Like a Historian</div>
+        <div class="video-wrap-title">Comparing the Timucua and the Calusa</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~3 min):</strong> No story frame in this clip — Canvas can wait. Walk through what historians study (people, places, events, evidence). Show a Florida photograph or simple source and think aloud how a historian would look at it. Model the "I notice... I wonder... I think this means..." pattern. End with: "Now you try."
+          <strong>Teacher recording notes:</strong> Walk through the Chrono-Lens analysis — tell the story, explain the key ideas, and point out details to notice in the fragment. Show how to work through the source, map, or evidence. Address the Distorter beat: name what the signal is trying to do and how evidence sets it right. 3–5 minutes. Teach, don't just read.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-explore-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-03-02-explore-explainer --></div>
       </div>
     </div>
   </div>
@@ -2187,21 +2377,23 @@ body {
     <div class="activity-head">
       <div class="activity-num" style="background:#1A8A7D;">📖</div>
       <div>
-        <div class="activity-title">What Do Historians Actually Study?</div>
-        <div class="activity-sub">Four things: people, places, events, and evidence</div>
+        <div class="activity-title">Two Peoples, Side by Side</div>
+        <div class="activity-sub">A careful comparison: Timucua and Calusa</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>When someone says "historian," you might picture a person in a dusty room reading old books. That happens sometimes — but most of a historian's job is asking questions and looking for answers in <strong>evidence</strong>.</p>
-      <p>Florida historians study four big things: <strong>people</strong> (who lived here and how they lived), <strong>places</strong> (the land, water, climate, and how people used them), <strong>events</strong> (what happened, when, and why), and <strong>evidence</strong> (the proof — letters, photos, maps, objects, stories — that tells us what really happened).</p>
-      <p>The most important habit a historian builds is the difference between <em>knowing</em> and <em>guessing</em>. A guess sounds like "I think pirates lived here." A historian's claim sounds like "An old map from 1696 shows a Spanish fort here, so we know Spanish soldiers were in Florida by then." See the difference? The historian points to something real.</p>
+      <p>Yesterday we met four of Florida's first peoples on a map. Today we slow down and really look at two of them — the <strong>Timucua</strong> and the <strong>Calusa</strong>. Both lived in Florida. Both lived here for thousands of years. But almost everything about their daily lives was different — because their land was different.</p>
+      <p><strong>Food.</strong> The Timucua hunted deer in the inland forests, fished the freshwater rivers, gathered wild plants, and grew gardens of corn, beans, and squash. The Calusa, surrounded by saltwater and mangroves, ate mostly fish, oysters, clams, and conch. They didn't farm much at all — the sea gave them more than enough.</p>
+      <p><strong>Shelter.</strong> Timucua villages had round houses built from poles, palm thatch, and bark, often arranged inside a tall wooden fence called a palisade. Calusa villages sat on islands the people themselves had slowly built, layer by layer, from shells. Houses there were built on raised shell platforms above the water.</p>
+      <p><strong>Community.</strong> Both peoples had leaders, ceremonies, and ways of teaching their young. Timucua leaders were called caciques. Calusa society was unusually powerful — their leaders controlled a wide network of towns and traded across long distances by canoe. Even European visitors in the 1500s wrote about the Calusa as one of the strongest groups they encountered.</p>
+      <p>So: <strong>same Florida, two very different worlds.</strong> One built around rivers, fields, and forests. The other built around the open sea.</p>
     </div>
   </div>
 
   <!-- Pause & Think -->
   <div class="callout callout-think">
     <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Pick one of the four things historians study (people, places, events, or evidence). Which would help you most if you wanted to know how kids in Florida lived 100 years ago?</p>
+    <p><strong>Pause & Think:</strong> If you were a Calusa child, what would you probably be learning to do well? If you were a Timucua child, what would you probably be learning to do well? Why are your answers different?</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
@@ -2210,65 +2402,125 @@ body {
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
   <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
   <!-- OPTION: Source Study Card -->
   <div class="source-card">
     <div class="source-card-header">
       <div class="source-card-header-icon">📜</div>
       <div>
-        <div class="source-card-header-label">Source Study · Try It Yourself</div>
-        <div class="source-card-header-title">A Florida Photograph from Long Ago</div>
+        <div class="source-card-header-label">Source Study</div>
+        <div class="source-card-header-title">Timucua Fortified Village (de Bry engraving, 1591)</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-01-01-florida-historic-photo">
+    <div class="source-image-placeholder" data-image="source-4-03-02-timucua-village">
       <div class="source-image-placeholder-text">
-        🖼️ Black-and-white photograph of a Florida family or community scene from the late 1800s or early 1900s. Suggested options: families at a Florida fish camp, citrus pickers, a one-room schoolhouse, Tampa or St. Augustine street scene. Search the Florida Memory project (floridamemory.com).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-01-01-florida-historic-photo.jpg</code>
+        🖼️ A Theodor de Bry engraving (published 1591) based on a drawing by the French artist Jacques Le Moyne de Morgues, showing the inside of a fortified Timucua village in northeast Florida: a circular wooden palisade with a narrow entrance, round thatched houses arranged inside, a central plaza. Public domain. Available from the Library of Congress, the Florida Memory project (State Archives of Florida), or the New York Public Library Digital Collections.<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-03-02-timucua-village.jpg</code>
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Primary Source</span> · A photograph from Florida's past (~100+ years old)
+        <span class="src-type">Primary Source — Engraving</span> · Theodor de Bry after Jacques Le Moyne, "A Fortified Village," published 1591, based on observations in Florida in the 1560s
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look at the photograph carefully. Name three details — clothing, objects, buildings, plants, anything that stands out. Don't guess yet; just describe.</p>
+        <p><strong>What do I see?</strong> Look carefully. How many houses can you count inside the palisade? What shape are they? Is the entrance to the village wide or narrow — and what does that suggest about safety?</p>
       </div>
       <div class="callout callout-think">
         <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> What do those details tell you about the <em>people</em>, <em>places</em>, or <em>events</em> in the photograph? Use what you see, not what you imagine.</p>
+        <p><strong>What does it mean?</strong> The houses are clustered together inside a wall, with one narrow way in and out. What does this tell us about how the Timucua lived together — and what they wanted to protect?</p>
       </div>
       <div class="callout callout-tip">
         <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> If we did not have this photograph, what would be harder to know about Florida's past? That is exactly why historians study evidence.</p>
+        <p><strong>Why does it matter?</strong> This engraving is one of the very few images we have from the 1500s of a Timucua village. <strong>But</strong> — the European artist had never been to Florida. He worked from someone else's drawing, and he changed things. So we treat this source carefully: it shows us something real, but not everything, and not perfectly.</p>
       </div>
     </div>
   </div>
+
+  <!-- OPTION: Timeline Card -->
+  <!--
+  <div class="timeline-card">
+    <div class="timeline-header">
+      <div class="timeline-header-icon">📅</div>
+      <div class="timeline-header-title">✏️ Timeline Thread</div>
+    </div>
+    <div class="timeline-events">
+      <div class="timeline-event">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-event-content">
+          <div class="timeline-event-date">✏️ Date</div>
+          <div class="timeline-event-text">✏️ Event description</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- OPTION: Council Chamber -->
+  <!--
+  <div class="council-card">
+    <div class="council-header">
+      <div class="council-header-icon">🏛️</div>
+      <div class="council-header-title">Council Chamber</div>
+    </div>
+    <div class="council-question">✏️ The civic/historical question</div>
+    <div class="council-perspectives">
+      <div class="council-perspective">
+        <div class="council-perspective-label side-a">✏️ Perspective A</div>
+        <p>✏️ Summary of one side.</p>
+      </div>
+      <div class="council-perspective">
+        <div class="council-perspective-label side-b">✏️ Perspective B</div>
+        <p>✏️ Summary of the other side.</p>
+      </div>
+    </div>
+    <div class="council-body">
+      <p>Now it's your turn. Read both perspectives. Then write your recommendation below.</p>
+    </div>
+  </div>
+  -->
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
 
   <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Key Concept (Grade 4) -->
-  <div class="key-concept">
-    <div class="key-concept-label">🔑 Key Concept</div>
-    <p>Florida historians study people, places, events, and evidence — and they always show where their ideas come from.</p>
+  <!-- ═══ DISTORTER ALERT (Grade 4 — antagonist beat) ═══ -->
+  <div class="distorter-alert">
+    <div class="distorter-label">⚠️ Distorter Signal Detected</div>
+    <div class="distorter-text">
+      The Distorter is muttering: <em>"Timucua, Calusa, all the same — just call them 'Indians' and move on."</em> That signal flattens two very different peoples into one blur. <strong>Name one specific way the Timucua and the Calusa were different. That difference proves the signal is wrong.</strong>
+    </div>
+    <div style="margin-top:8px;font-size:11px;color:#A0B0C8;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;">
+      Distorter Threat Level &nbsp; <span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:#D94040;box-shadow:0 0 6px rgba(217,64,64,0.6);margin-right:5px;vertical-align:middle;"></span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:transparent;border:1.5px solid rgba(217,64,64,0.5);margin-right:5px;vertical-align:middle;"></span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:transparent;border:1.5px solid rgba(217,64,64,0.5);margin-right:5px;vertical-align:middle;"></span><span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:transparent;border:1.5px solid rgba(217,64,64,0.5);margin-right:5px;vertical-align:middle;"></span> &nbsp; <span style="color:#D08080;">Ep 1 · Static</span>
+    </div>
+    <div class="distorter-counter">
+      <strong>🛡️ Junior Chrono-Historian protocol:</strong> Use evidence, careful language, and the full picture. Don't let the signal scramble the truth.
+    </div>
   </div>
 
-  <!-- Opti the Owl — appears once per lesson with a Florida-aware observation.
-       Florida-aware, connected to today's content -->
+  <!-- Key Concept -->
+  <div class="key-concept">
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>The Timucua and the Calusa shared a homeland but built very different lives — and we can show those differences using primary sources like a 1591 engraving. Careful comparison, using real evidence, is how a historian-citizen pushes past easy labels.</p>
+  </div>
+
+  <!-- Opti the Owl — lab-themed observation for Grade 4.
+       ✏️ GRADE 4 ACCESSORY: 🦉🌴 Opti with a palmetto frond
+       ✏️ Speech bubble: 1–3 sentences, curious & precise, connected to the lab's work. -->
   <div class="owl-buddy">
     <div class="owl-buddy-avatar">🦉</div>
     <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Psst — historians don't guess. When you spot a detail in a photograph or document, that detail is evidence. Even one small thing — a coat, a flag, a date — can change what we know.
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+Sharp Source Study tip: every primary source is partly true and partly limited. Ask yourself two questions about this engraving — what does it show that's probably accurate, and what might the artist have gotten wrong?
     </div>
   </div>
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">You've explored the sources and built your understanding. Let's see how much you remember.</p>
-    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Signal Check →</button>
   </div>
 </div>
 
@@ -2281,7 +2533,7 @@ body {
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
     <div>
-      <div class="tab-section-title">Quick Self-Check</div>
+      <div class="tab-section-title">Signal Check</div>
     </div>
   </div>
 
@@ -2295,39 +2547,39 @@ body {
     <div style="padding:18px 22px;">
 
       <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">1. Which list shows what historians study?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. Which sentence best compares Timucua and Calusa food?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Math, science, and reading</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Only old books in libraries</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>People, places, events, and evidence</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Both peoples relied mostly on farming corn and beans.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>The Timucua hunted, fished, and farmed; the Calusa relied mostly on the sea.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>The Timucua ate only seafood; the Calusa grew large crops of corn.</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Historians study people, places, events, and evidence — and they always use evidence to back up what they say.</div>
-        <div class="quiz-feedback fb-wrong">Almost. Look back at the section "What Do Historians Actually Study?" There are four things, and they go together.</div>
+        <div class="quiz-feedback fb-correct">Right — that's a careful comparison. Both lived in Florida, but their land gave them different options.</div>
+        <div class="quiz-feedback fb-wrong">Think about where each people lived. Could the people in the southwest mangroves grow big cornfields? Could the people in the northern forests fish only saltwater?</div>
       </div>
 
       <!-- QUESTION 2 -->
-      <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. Which sentence sounds like a historian, not a guess?</div>
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">2. The de Bry engraving from 1591 is a useful source, but historians treat it carefully. Why?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>"I think pirates probably lived in Florida."</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>"A map from 1696 shows a Spanish fort, so Spanish soldiers were here by then."</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>"Florida is always sunny because everyone says so."</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because it is in black and white instead of color.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because no Timucua people ever saw it.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because the European engraver had never been to Florida and may have changed details.</div>
         </div>
-        <div class="quiz-feedback fb-correct">Right! A historian's claim points to evidence — in this case, the map. Anyone can check that map and see for themselves.</div>
-        <div class="quiz-feedback fb-wrong">Look again. Which sentence names a piece of evidence (like a map, a letter, or a photograph)? That's the historian's sentence.</div>
+        <div class="quiz-feedback fb-correct">Exactly — the picture shows us something real, but it was made far from Florida by someone who only saw another artist's sketch. Useful, but not perfect.</div>
+        <div class="quiz-feedback fb-wrong">Think about who made the engraving and where they were when they made it. That tells you a lot about how much to trust it.</div>
       </div>
 
       <!-- QUESTION 3 -->
       <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">3. Why do historians use evidence instead of just guessing?</div>
+        <div class="quiz-q-text">3. What does it look like to study another community with <em>courtesy</em>?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>So other people can check their work and know it's true.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because evidence is required by law in every state.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because old documents are easier to read than new ones.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Use each people's real name, take their choices seriously, and don't lump groups together.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Only study peoples who left written records.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Decide which way of life was "best" and rank the others below it.</div>
         </div>
-        <div class="quiz-feedback fb-correct">Exactly. Evidence lets anyone check the work. That's how historians earn trust and tell the difference between knowing and guessing.</div>
-        <div class="quiz-feedback fb-wrong">Think about why a historian needs to "show their work" the same way a math student does. What makes a claim believable?</div>
+        <div class="quiz-feedback fb-correct">Yes — courtesy in history is careful, respectful attention to each people on their own terms.</div>
+        <div class="quiz-feedback fb-wrong">Courtesy isn't just being polite — it's how a historian-citizen pays attention. Which choice respects each people on their own terms?</div>
       </div>
 
       <!-- Score Box -->
@@ -2351,8 +2603,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 30 sec):</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. One light story nudge — something like: "That's exactly what Canvas needed to see." High energy.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-perfect --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. Under 30 seconds. High energy.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-03-02-quiz-perfect --></div>
             </div>
           </div>
         </div>
@@ -2371,8 +2623,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 1 min):</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Story stays out of this clip.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-review --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-03-02-quiz-review --></div>
             </div>
           </div>
         </div>
@@ -2384,7 +2636,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
-    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📡 Timeline Sync →</button>
   </div>
 </div>
 
@@ -2395,9 +2647,9 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📡</div>
     <div>
-      <div class="tab-section-title">Evidence &amp; Assignment</div>
+      <div class="tab-section-title">Timeline Sync</div>
     </div>
   </div>
 
@@ -2412,16 +2664,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">Your First Historian's Notebook Entry</div>
+        <div class="video-wrap-title">Your Source Study Report</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~2–3 min):</strong> Read each evidence question (Part A) aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Then walk through Part B and emphasize that finishing Part B is what triggers the 🔓 Unlock Challenge — once it's turned in, the file unlocks. One-sentence story nudge optional. Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas.
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Clarify what the routine assignment is asking ("Today you're writing a museum label…" or "Your job is to sequence these events and explain one cause-and-effect connection…"). Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas. Aim for 2–3 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-assignment-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-03-02-assignment-explainer --></div>
       </div>
     </div>
   </div>
@@ -2438,82 +2690,86 @@ body {
     <div class="activity-body">
 
       <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two of the four things historians study, and give one example of each from Florida.</div></div>
-      <div class="textbox-prompt">Use words from the lesson. Try the sentence starter below if it helps.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two things historians study"
-        placeholder="Florida historians study ____, like ____. They also study ____, like ____."
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Use the de Bry engraving as evidence. What is one thing it tells you about how the Timucua lived?</div></div>
+      <div class="textbox-prompt">Point to a specific detail in the picture (palisade, round houses, central plaza, etc.).</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Timucua source evidence"
+        placeholder="In the engraving I can see ____ , which tells me the Timucua ____ ."
         oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
       <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Look back at the photograph in Tab 2. What is ONE detail you saw, and what does that detail tell you about people or places in Florida?</div></div>
-      <div class="textbox-prompt">Name a real detail first, then explain what it tells you. Don't guess — point to what you actually see.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: A detail from the photo"
-        placeholder="I noticed ______. This tells me ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Name one big <strong>similarity</strong> and one big <strong>difference</strong> between the Timucua and the Calusa.</div></div>
+      <div class="textbox-prompt">Compare them on food, shelter, OR community — pick whichever feels strongest.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Compare and contrast"
+        placeholder="Both peoples ____ . But the Timucua ____ , while the Calusa ____ ."
         oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
       <!-- Q3 (optional — include for Lesson B or deeper lessons) -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why is it important for historians to use evidence instead of just guessing?</div></div>
-      <div class="textbox-prompt">Think about how someone else would check your work.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why evidence matters"
-        placeholder="Historians use evidence because ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>What is one thing the de Bry engraving does <em>not</em> show — but would help us understand the Timucua better?</div></div>
+      <div class="textbox-prompt">A good historian notices what is missing, not just what is there.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: What's missing from the source"
+        placeholder="The engraving doesn't show ____ . If I could see that, I would understand more about ____ ."
         oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
 
     </div>
   </div>
 
-  <!-- Part B: Today's Florida Task — frames the academic assignment as an "Unlock Challenge" -->
+  <!-- Part B: Routine Assignment -->
   <div class="activity bl-gold">
     <div class="activity-head">
-      <div class="activity-num" style="background:#E8843A;">B</div>
+      <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
-        <span class="canvas-unlock-stamp">Unlock Challenge</span>
-        <div class="activity-title">Your First Historian's Notebook Entry</div>
-        <div class="activity-sub">Write 3–5 sentences explaining what Florida historians study, using one specific piece of evidence from this lesson.</div>
+        <div class="activity-title">Source Study Report</div>
+        <div class="activity-sub">A short comparison report for the Timeline archive.</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>This is your first official entry as a member of the Florida History Team. Don't worry about being perfect — just sound like a historian, not a guesser. Name what historians study, then point to a real detail (from the photograph, or from what you read) that proves your point.</p>
+      <p>The Lead Chrono-Historian needs a short Source Study report to file with today's comparison piece. Write 4–5 sentences that compare the Timucua and the Calusa using <strong>evidence from today's sources and lesson</strong>.</p>
 
-      <div class="textbox-prompt">Strong entry checklist: (1) Name at least two of the four things historians study. (2) Use one detail from this lesson. (3) Sound like a careful historian — no guesses.</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Historian's Notebook Entry"
-        placeholder="Florida historians study people, places, events, and evidence. For example, when I looked at the photograph, I saw..."
+      <div class="textbox-prompt">Include: (1) one similarity, (2) one clear difference, (3) one specific detail from the de Bry engraving as evidence, and (4) one careful note — something we still <em>don't</em> know about either people from these sources alone.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Source Study Report: Timucua vs. Calusa"
+        placeholder="Source Study Report. Both the Timucua and the Calusa ____ . However, ____ . In the de Bry engraving I can see ____ . One thing these sources don't tell us is ____ ."
         oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Historian's Sentence (Grade 4 — neutral one-sentence reflection) -->
+  <!-- Lab Log Entry (Grade 4 — replaces Chronicle Sentence) -->
   <div class="activity bl-navy">
     <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div class="activity-num" style="background:#0E1C42;">📡</div>
       <div>
-        <div class="activity-title">Historian's Sentence</div>
-        <div class="activity-sub">One sentence to capture today's evidence work.</div>
+        <div class="activity-title">Lab Log Entry</div>
+        <div class="activity-sub">One sentence to log today's mission findings.</div>
       </div>
     </div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
-      <div class="textbox-prompt">Today I learned that ______ because the evidence shows ______.</div>
-      <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
-        placeholder="Today I learned that..."
+      <div class="textbox-prompt">In this mission, I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Lab Log Entry"
+        placeholder="In this mission, I learned that..."
         oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- ═══ 📂 FILE UNLOCKED (Grade 4 — closing story beat sticky, 30 sec) ═══
-       This is the CLOSING story beat. The text is also the script the teacher
-       will read when recording the closing video. Keep it 1-3 sentences.
-       Pull the exact wording from the "Closing: File Unlocked" column of the
-       Planning Table for this lesson code. For sensitive-history lessons,
-       add class="quiet" to remove the playful rotation. -->
-  <div class="canvas-sticky unlocked" style="margin-top:18px;">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📂</span>
-      <span class="canvas-sticky-head-label">File Unlocked</span>
+  <!-- ═══ TIMELINE SYNC: Placed Piece (shown every lesson) ═══ -->
+  <div class="timeline-sync-card">
+    <div class="timeline-sync-header">
+      <div class="timeline-sync-icon">📡</div>
+      <div>
+        <div class="timeline-sync-label">📡 Timeline Sync · Piece Locked In</div>
+        <div class="timeline-sync-title">Timucua vs. Calusa Comparison — Piece Locked In</div>
+      </div>
     </div>
-    <div class="canvas-sticky-body">
-      <p>Florida historians study people, places, events, and evidence. The course entrance is one step clearer.</p>
+    <div class="timeline-sync-image" data-image="puzzle-4-03-02-placed">
+      <div class="timeline-sync-placeholder">
+        🖼️ The "Timucua vs. Calusa Comparison Chart" piece — a simple two-column chart icon (Timucua on one side, Calusa on the other, rows for food / shelter / community) — snaps into place alongside the already-locked First Peoples Map piece. The other four pieces of the unit show as empty silhouettes.<br><br>
+        <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-03-02-placed.jpg</code>
+      </div>
     </div>
-    <div class="canvas-sticky-byline">— Course Path Updated · Episode 1 of 13</div>
+    <div class="timeline-sync-caption">
+      <!-- ✏️ TIMELINE SYNC CAPTION: See "End-of-Lesson Reveal / Timeline Sync" column in the G4 Story Arc.
+           1-2 sentences explaining what the piece shows and why it matters. -->
+<strong>Today's piece reveals:</strong> a side-by-side chart showing how the Timucua and the Calusa ate, sheltered, and organized their communities. The Timeline Core now holds both the regions <em>and</em> the first careful comparison.
+    </div>
   </div>
 
   <!-- Gathered Answers -->
@@ -2540,9 +2796,9 @@ body {
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <!-- Florida History Team is the constant role. Lesson-specific Unlock Challenge framing pulled from planning table.
-             Look up the lesson code in the planning table for context. -->
-        <strong>Nice work, Florida historian!</strong> You've started your first Historian's Notebook and proved you can think with evidence instead of guessing.
+        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Junior Chrono-Historian!"
+             Second sentence references the specific mission accomplished. -->
+<strong>Nice work, Junior Chrono-Historian!</strong> You read a real 1591 primary source, compared two of Florida's first peoples without flattening them, and locked the Timucua vs. Calusa comparison piece into the Timeline Core.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
@@ -2581,15 +2837,15 @@ body {
       <div class="turn-in-checklist">
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+          <div class="turn-in-item-text">✅ I analyzed the Chrono-Lens fragment and answered the evidence questions.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Unlock Challenge (Historian's Notebook entry).</div>
+          <div class="turn-in-item-text">✅ I completed my Source Study Report comparing the Timucua and Calusa.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I wrote my Historian's Sentence.</div>
+          <div class="turn-in-item-text">✅ I logged my Lab Log Entry.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2599,50 +2855,41 @@ body {
     </div>
   </div>
 
-  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP (Grade 4 — tiny progress marker) ═══
-       Shows the student where they are in the 13-episode arc.
-       Set the .now class on the current episode dot and .done on completed dots.
-       Episodes: 1=U1, 2=U2, 3=U3, 4=U4, 5=U5 (Checkpoint), 6=U6, 7=U7, 8=U8,
-       9=U9 (Checkpoint), 10=U10, 11=U11, 12=U12, 13=U13 (Finale). -->
-  <div style="text-align:center;">
-    <div class="canvas-path-chip">
-      <span class="canvas-path-chip-icon">🛤️</span>
-      <span>Course Path Updated · Episode 1 of 13</span>
-      <span class="canvas-path-chip-dots">
-        <!-- ✏️ Mark the current episode dot with .now; mark all earlier dots with .done -->
-        <span class="canvas-path-chip-dot now"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-      </span>
-    </div>
+<!-- ═══ CASE FILE UPDATE: The Echoes Beneath (G4 — only on beat lessons) ═══ -->
+<div style="background:#0E1C42; border:1px solid rgba(216,168,255,0.4); border-radius:12px; padding:16px 20px; margin:18px 0; box-shadow:0 2px 10px rgba(14,28,66,0.2);">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+    <span style="font-size:18px;">🗂️</span>
+    <div style="font-size:10px; color:#D8A8FF; text-transform:uppercase; letter-spacing:1.5px; font-weight:800;">Case File · The Echoes Beneath</div>
   </div>
+  <div style="font-style:italic; font-size:14px; color:#E8E0F8; line-height:1.6; margin-bottom:10px;">I noticed something while archiving today's engraving. The European artist drew the chief, the warriors, and the houses — but in the corner of the original sketch there's a small figure of a Timucua child carrying a basket, and her name is nowhere in the records. The Calusa shell mound is named after a Spanish explorer who saw it 200 years later, not after the Calusa women who likely carried most of those shells. These voices weren't written down, but they're here. I'm logging them. The pattern is growing.</div>
+  <div style="font-size:12px; color:#D8A8FF; font-weight:700;">— Lab Archivist</div>
+  <div style="margin-top:10px; padding-top:10px; border-top:1px solid rgba(216,168,255,0.2); font-size:12px; color:rgba(255,255,255,0.7);">
+    📂 <strong style="color:#FFD580;">Echoes recovered: 2 of an unknown total</strong>
+  </div>
+</div>
 
-<!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+<!-- ═══ COMING UP NEXT (required on every lesson assignment tab) ═══ -->
+<div style="background:linear-gradient(135deg, rgba(85,200,232,0.12), rgba(127,216,240,0.06)); border-left:4px solid #55C8E8; border-radius:10px; padding:14px 18px; margin:18px 0;">
+  <div style="font-size:11px; color:#1A8A7D; text-transform:uppercase; letter-spacing:1.4px; font-weight:800; margin-bottom:4px;">🔮 Coming Up Next</div>
+  <div style="font-size:14px; color:#0E1C42; line-height:1.55;"><strong>Next mission:</strong> the Chrono-Lens widens out beyond the Timucua and Calusa to study <em>food, shelter, tools, and the resources</em> Florida's first peoples used every day. The team will look more closely at the everyday objects that made survival possible.</div>
+</div>
+
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
   <div class="video-wrap" style="margin-top:18px;">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">First File Unlocked</div>
+        <div class="video-wrap-title">Great Work, Junior Chrono-Historian</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "File Unlocked" story beat — warm, proud, never over-the-top. Suggested ~30-sec script start: <em>"You did it — the first file is unlocked. Florida historians study people, places, events, and evidence, and that's exactly what you just proved you can do. Next file: figuring out the difference between primary and secondary sources. I'll meet you there."</em> Then close like a normal lesson: name the specific evidence work students did, restate the Key Concept in your own words, and remind students to keep their Historian's Notebook updated. Under 2 minutes total.
+          <strong>Teacher recording notes:</strong> Celebrate the Timeline Sync — name the specific piece just added to the Timeline Core ("Today you locked in [piece] — that's how Florida historians do it"). For the last lesson of a unit, celebrate the completed unit puzzle and tease the next unit's mission. Remind students to keep their Chrono-Historian's Notebook updated. Under 1 minute. Warm and encouraging.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-closing --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-03-02-closing --></div>
       </div>
     </div>
   </div>
@@ -2652,7 +2899,7 @@ body {
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 4 · 4.01.01</div>
+  <div class="footer-sub">Social Studies · Grade 4 · 4.03.02 — Compare Native American Tribes in Florida</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
@@ -2739,6 +2986,38 @@ function gatherAnswers() {
   if (gathered) gathered.value = output.trim();
 }
 
+/* ═══════════ CHRONO-LENS ENGAGE (Grade 4) ═══════════
+   Replaces the locked screen with a scanning animation, then reveals
+   the fragment image (with zoom-in) and the observation prompts (cascade). */
+function engageChronoLens(btn) {
+  var fragment = btn.closest('.chrono-fragment');
+  if (!fragment) return;
+  var locked = fragment.querySelector('.chrono-locked-screen');
+  var image = fragment.querySelector('.chrono-fragment-image');
+  var prompts = fragment.querySelector('.chrono-fragment-body');
+  if (!locked || !image || !prompts) return;
+
+  // Disable button, show scanning state
+  btn.disabled = true;
+  btn.innerHTML = '<span class="chrono-engage-btn-icon">🛰️</span>SCANNING…';
+
+  // Trigger scanning flash animation
+  locked.classList.add('chrono-scanning');
+
+  // After flash completes, fade out locked screen and reveal image + prompts
+  setTimeout(function() {
+    locked.style.transition = 'opacity 0.4s ease';
+    locked.style.opacity = '0';
+    setTimeout(function() {
+      locked.style.display = 'none';
+      image.classList.remove('chrono-hidden');
+      image.classList.add('chrono-revealed-image');
+      prompts.classList.remove('chrono-hidden');
+      prompts.classList.add('chrono-revealed-prompts');
+    }, 400);
+  }, 1000);
+}
+
 /* ═══════════ COPY TO CLIPBOARD ═══════════ */
 function copyGathered() {
   gatherAnswers();
@@ -2765,7 +3044,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>4.01.01 — My Work</title>';
+  html += '<title>4.03.02 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2775,8 +3054,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — 4.01.01</h1>';
-  html += '<h2>What Florida Historians Study</h2>';
+  html += '<h1>📓 My Work — 4.03.02</h1>';
+  html += '<h2>Compare Native American Tribes in Florida</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {
@@ -3015,12 +3294,19 @@ function scrollToTop() {
 /* ═══════════ INIT ═══════════ */
 updateProgress();
 
-/* ═══════════ SOURCE IMAGE AUTO-LOADER ═══════════
-   Scans .source-image-placeholder divs for data-image attributes,
-   then tries to load the image from GitHub. Tries multiple extensions.
-   If found, replaces the placeholder with the image. If not, placeholder stays.
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4 — covers source, chrono-fragment, and timeline-sync) ═══════════
+   Scans .source-image-placeholder, .chrono-fragment-image, and .timeline-sync-image divs
+   for data-image attributes, then tries to load the image from GitHub.
+   Tries multiple extensions. Skips placeholders with ✏️ marker (template defaults).
    Update the B variable if your GitHub repo URL changes. */
-(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image], .chrono-fragment-image[data-image], .timeline-sync-image[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+// Toggle collapsible story-arc blocks (HQ Status, Previously On)
+function toggleStoryBlock(id){
+  var el = document.getElementById(id);
+  if (el) el.classList.toggle('collapsed');
+}
+
 </script>
 </body>
 </html>

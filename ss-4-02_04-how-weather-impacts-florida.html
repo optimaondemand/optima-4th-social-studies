@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — 4.01.01: What Florida Historians Study</title>
+<title>Optima Academy Online — Lesson 4.02.04: How Weather Impacts Florida</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 *,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -193,7 +193,8 @@ body {
 
 /* ═══════════ INTRO COLLAPSIBLE ═══════════ */
 .intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
-.intro-section.collapsed > *:not(.intro-collapsed-bar) { display: none; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
 .intro-collapsed-bar {
   display: none;
   align-items: center;
@@ -1153,307 +1154,6 @@ body {
   z-index: 10000;
 }
 
-/* ═══════════ SELF-CHECK QUIZ ═══════════ */
-.quiz-card {
-  background: #fff;
-  border: 2px solid #E2E8F4;
-  border-radius: 18px;
-  margin-bottom: 18px;
-  overflow: hidden;
-}
-.quiz-q {
-  background: #FAFBFF;
-  border: 1.5px solid #E2E8F4;
-  border-radius: 14px;
-  padding: 16px 18px;
-  margin-bottom: 14px;
-}
-.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
-.quiz-options { display: flex; flex-direction: column; gap: 8px; }
-.quiz-opt {
-  display: flex; align-items: center; gap: 12px;
-  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
-  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
-  cursor: pointer; transition: all 0.15s;
-}
-.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
-.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
-.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
-.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
-.opt-letter {
-  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
-  font-size: 13px; font-weight: 800; display: flex; align-items: center;
-  justify-content: center; flex-shrink: 0; color: #3A4A6B;
-}
-.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
-.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
-.quiz-feedback {
-  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
-  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
-}
-.quiz-feedback.show { display: block; }
-.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
-.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
-.quiz-score-box {
-  /* ✏️ GRADE ACCENT */
-  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
-  color: #fff; border-radius: 16px; padding: 20px 22px;
-  margin-top: 16px; text-align: center; display: none;
-}
-.quiz-score-box.show { display: block; }
-.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
-.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
-.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
-.quiz-video-wrap { margin-top: 16px; display: none; }
-.quiz-video-wrap.show { display: block; }
-
-/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
-.discovery-fact {
-  display: none;
-  margin-top: 8px;
-  padding: 12px 16px;
-  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
-  border: 2px solid #F5E6C8;
-  border-left: 5px solid #D4943A;
-  border-radius: 10px;
-  font-size: 14px;
-  color: #5A4A3A;
-  line-height: 1.6;
-  animation: factReveal 0.5s ease;
-}
-.discovery-fact.show { display: block; }
-.discovery-fact-label {
-  font-size: 11px;
-  color: #D4943A;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-}
-@keyframes factReveal {
-  0% { opacity: 0; transform: translateY(8px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
-.historian-seal {
-  display: none;
-  margin-top: 20px;
-  animation: cardSlideUp 0.4s ease;
-}
-.historian-seal.show { display: block; }
-@keyframes cardSlideUp {
-  0% { opacity: 0; transform: translateY(12px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.seal-certificate {
-  position: relative;
-  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
-  border: 2px solid #E8D8C0;
-  border-radius: 14px;
-  padding: 22px 100px 22px 24px;
-  min-height: 90px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
-}
-.seal-cert-message {
-  font-family: 'Lora', Georgia, serif;
-  font-size: 16px;
-  color: #5A4A3A;
-  line-height: 1.55;
-  font-style: italic;
-}
-.seal-cert-message strong {
-  font-style: normal;
-  color: #3A2A1A;
-}
-.seal-stamp-wrap {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-8deg);
-  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
-}
-@keyframes stampBounce {
-  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
-  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
-  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
-}
-
-/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
-.owl-buddy {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px 20px;
-  background: #FFFFFF;
-  border: 2px solid #E2E8F4;
-  border-radius: 18px;
-  margin: 18px 0;
-  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
-  position: relative;
-}
-.owl-buddy-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
-  border: 2.5px solid #F5E6C8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  flex-shrink: 0;
-  animation: owlBob 3s ease-in-out infinite;
-}
-@keyframes owlBob {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-3px) rotate(2deg); }
-}
-.owl-buddy-bubble {
-  flex: 1;
-  background: #FAFBFF;
-  border: 1.5px solid #E2E8F4;
-  border-radius: 14px;
-  padding: 12px 16px;
-  position: relative;
-  font-size: 15px;
-  color: #3A4A6B;
-  line-height: 1.6;
-}
-.owl-buddy-bubble::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 18px;
-  width: 14px;
-  height: 14px;
-  background: #FAFBFF;
-  border-left: 1.5px solid #E2E8F4;
-  border-bottom: 1.5px solid #E2E8F4;
-  transform: rotate(45deg);
-}
-.owl-buddy-name {
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  /* ✏️ GRADE ACCENT */
-  color: #1A8A7D;
-  margin-bottom: 4px;
-}
-
-/* ═══════════ TAB SECTION HEADERS ═══════════ */
-.tab-section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0 18px;
-  margin-bottom: 6px;
-  border-bottom: 2px solid #E2E8F4;
-}
-.tab-section-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  flex-shrink: 0;
-  color: #fff;
-}
-.tab-section-label {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-weight: 800;
-  color: #7A88A8;
-  margin-bottom: 1px;
-}
-.tab-section-title {
-  font-family: 'Lora', Georgia, serif;
-  font-size: 20px;
-  color: #0E1C42;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* ═══════════ SECTION DIVIDERS ═══════════ */
-.section-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 10px 0;
-  margin: 8px 0;
-}
-.section-divider::before,
-.section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
-}
-.section-divider-dot {
-  font-size: 8px;
-  color: #D4D8E4;
-  letter-spacing: 6px;
-}
-
-/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
-.step-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px 4px 4px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 12px;
-  /* ✏️ GRADE ACCENT */
-  background: rgba(26, 138, 125, 0.08);
-  color: #1A8A7D;
-}
-.step-badge-num {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 800;
-  color: #fff;
-  /* ✏️ GRADE ACCENT */
-  background: #1A8A7D;
-}
-
-/* ═══════════ FOOTER ═══════════ */
-.footer {
-  background: #0E1C42;
-  border-top: 4px solid #55C8E8;
-  padding: 18px 28px;
-  text-align: center;
-}
-.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
-.footer-main span { color: #55C8E8; font-weight: 700; }
-.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
-
-/* ═══════════ RESPONSIVE ═══════════ */
-@media (max-width: 620px) {
-  .intro-2col { grid-template-columns: 1fr; }
-  .council-perspectives { grid-template-columns: 1fr; }
-  .vocab-grid { grid-template-columns: 1fr; }
-  .root-match-grid { grid-template-columns: 1fr; }
-}
-
-@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
-
 /* ═══════════════════════════════════════════════════════════════
    GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
    Lightweight story layer. Sticky notes for messages, manila file
@@ -1792,11 +1492,11 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title"><em>What Florida Historians Study</em></div>
+  <div class="header-title"><em>How Weather Impacts Florida</em></div>
   <div class="header-badge">
     <!-- ✏️ GRADE TOKEN -->
     <span class="header-badge-icon">🐊</span>
-    <span class="header-badge-text">Lesson 4.01.01</span>
+    <span class="header-badge-text">Lesson 4.02.04</span>
   </div>
 </div>
 
@@ -1808,90 +1508,127 @@ body {
      2–3 CSS animations (floating, drifting, pulsing). -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
   <defs>
-    <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2E7D5B"/>
-      <stop offset="100%" stop-color="#E8843A"/>
+    <linearGradient id="sky_04" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB870"/>
+      <stop offset="40%" stop-color="#F4D090"/>
+      <stop offset="100%" stop-color="#9ED0E8"/>
     </linearGradient>
-    <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF8E0"/>
-      <stop offset="100%" stop-color="#F2E5B8"/>
+    <linearGradient id="ground_04" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A668"/>
+      <stop offset="100%" stop-color="#8A6038"/>
     </linearGradient>
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE08A"/>
-      <stop offset="100%" stop-color="#FFB344" stop-opacity="0"/>
-    </radialGradient>
   </defs>
-  <!-- Sky/sea background -->
-  <rect width="920" height="260" fill="url(#bannerGrad)"/>
-  <!-- Soft sun glow -->
-  <circle cx="730" cy="80" r="110" fill="url(#sunGrad)"/>
-  <circle cx="730" cy="80" r="38" fill="#FFE08A" opacity="0.95">
-    <animate attributeName="r" values="38;42;38" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <!-- Palm silhouettes (right side, decorative) -->
-  <g transform="translate(820,180)" opacity="0.55">
-    <rect x="-3" y="-50" width="6" height="60" fill="#2A5A45" rx="2"/>
-    <path d="M0,-50 Q-25,-65 -45,-58 Q-30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q25,-65 45,-58 Q30,-52 0,-50" fill="#3D7A55"/>
-    <path d="M0,-50 Q-20,-78 -38,-78 Q-22,-65 0,-50" fill="#2D6A45"/>
-    <path d="M0,-50 Q20,-78 38,-78 Q22,-65 0,-50" fill="#2D6A45"/>
+
+  <!-- Background sky (post-storm clearing) -->
+  <rect width="920" height="260" fill="url(#sky_04)"/>
+
+  <!-- Sun -->
+  <circle cx="140" cy="60" r="32" fill="#FFE090" opacity="0.9"/>
+  <circle cx="140" cy="60" r="22" fill="#FFF4C8"/>
+
+  <!-- Soft clouds left over from storm -->
+  <g fill="#FFFFFF" opacity="0.7">
+    <ellipse cx="320" cy="55" rx="48" ry="14"/>
+    <ellipse cx="354" cy="48" rx="32" ry="12"/>
   </g>
-  <!-- Open notebook (left/center, the historian's tool) -->
-  <g transform="translate(220,140)">
-    <!-- shadow -->
-    <ellipse cx="0" cy="60" rx="180" ry="14" fill="#000" opacity="0.18"/>
-    <!-- left page -->
-    <path d="M-160,-60 L0,-65 L0,55 L-160,50 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- right page -->
-    <path d="M0,-65 L160,-60 L160,50 L0,55 Z" fill="url(#paperGrad)" stroke="#B89860" stroke-width="2"/>
-    <!-- spine -->
-    <line x1="0" y1="-65" x2="0" y2="55" stroke="#8B6E2A" stroke-width="2.5"/>
-    <!-- lines on left page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="-145" y1="-35" x2="-15" y2="-37"/>
-      <line x1="-145" y1="-18" x2="-15" y2="-20"/>
-      <line x1="-145" y1="-1" x2="-15" y2="-3"/>
-      <line x1="-145" y1="16" x2="-15" y2="14"/>
-      <line x1="-145" y1="33" x2="-50" y2="32"/>
+
+  <!-- Faint rainbow arc -->
+  <g fill="none" opacity="0.5">
+    <path d="M40,200 Q460,0 880,200" stroke="#D4663A" stroke-width="6"/>
+    <path d="M40,206 Q460,10 880,206" stroke="#F4B040" stroke-width="6"/>
+    <path d="M40,212 Q460,20 880,212" stroke="#A8C870" stroke-width="6"/>
+    <path d="M40,218 Q460,30 880,218" stroke="#5AB0D8" stroke-width="6"/>
+    <path d="M40,224 Q460,40 880,224" stroke="#7A6AA8" stroke-width="6"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="195" width="920" height="65" fill="url(#ground_04)"/>
+
+  <!-- Citrus grove (rows of trees) — center -->
+  <g transform="translate(0, 195)">
+    <!-- Row 1 -->
+    <g transform="translate(260, 0)">
+      <circle cx="0" cy="-22" r="22" fill="#4A8E3E"/>
+      <circle cx="-8" cy="-28" r="14" fill="#5AAE4E"/>
+      <circle cx="8" cy="-30" r="13" fill="#5AAE4E"/>
+      <rect x="-3" y="-10" width="6" height="14" fill="#6A4A2A"/>
+      <!-- oranges -->
+      <circle cx="-5" cy="-20" r="3" fill="#F09030"/>
+      <circle cx="8" cy="-25" r="3" fill="#F09030"/>
+      <circle cx="0" cy="-15" r="3" fill="#F4B040"/>
     </g>
-    <!-- lines on right page -->
-    <g stroke="#C8A968" stroke-width="1.5" opacity="0.7">
-      <line x1="15" y1="-37" x2="145" y2="-35"/>
-      <line x1="15" y1="-20" x2="145" y2="-18"/>
-      <line x1="15" y1="-3" x2="145" y2="-1"/>
-      <line x1="15" y1="14" x2="145" y2="16"/>
+    <g transform="translate(330, 0)">
+      <circle cx="0" cy="-22" r="22" fill="#4A8E3E"/>
+      <circle cx="-8" cy="-28" r="14" fill="#5AAE4E"/>
+      <circle cx="8" cy="-30" r="13" fill="#5AAE4E"/>
+      <rect x="-3" y="-10" width="6" height="14" fill="#6A4A2A"/>
+      <circle cx="-3" cy="-22" r="3" fill="#F09030"/>
+      <circle cx="6" cy="-28" r="3" fill="#F4B040"/>
     </g>
-    <!-- A pencil resting -->
-    <g transform="rotate(18 30 -30)">
-      <rect x="20" y="-40" width="120" height="6" fill="#F5C547" rx="1"/>
-      <polygon points="140,-40 152,-37 140,-34" fill="#3A2A14"/>
-      <polygon points="140,-39 144,-37 140,-35" fill="#444"/>
-      <rect x="20" y="-40" width="14" height="6" fill="#E58A85"/>
-      <rect x="34" y="-40" width="2" height="6" fill="#888"/>
+    <g transform="translate(400, 0)">
+      <circle cx="0" cy="-22" r="22" fill="#4A8E3E"/>
+      <circle cx="-8" cy="-28" r="14" fill="#5AAE4E"/>
+      <circle cx="8" cy="-30" r="13" fill="#5AAE4E"/>
+      <rect x="-3" y="-10" width="6" height="14" fill="#6A4A2A"/>
+      <circle cx="0" cy="-18" r="3" fill="#F09030"/>
+      <circle cx="-7" cy="-26" r="3" fill="#F4B040"/>
+    </g>
+    <!-- Sprinkler system between trees -->
+    <line x1="240" y1="-2" x2="420" y2="-2" stroke="#7A7A7A" stroke-width="2"/>
+    <g stroke="#5AB0D8" stroke-width="1.4" fill="none" opacity="0.7">
+      <path d="M290,-2 Q295,-12 300,-8">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M360,-2 Q365,-12 370,-8">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+      </path>
     </g>
   </g>
-  <!-- Magnifying glass (floating, slight drift) -->
-  <g transform="translate(540,90)">
-    <g style="animation: heroFloat 5s ease-in-out infinite;">
-      <circle cx="0" cy="0" r="42" fill="#A8DDF0" opacity="0.55" stroke="#2A6A8C" stroke-width="6"/>
-      <circle cx="-10" cy="-10" r="14" fill="#FFF" opacity="0.65"/>
-      <line x1="32" y1="32" x2="68" y2="68" stroke="#5C3A14" stroke-width="9" stroke-linecap="round"/>
-      <rect x="62" y="62" width="14" height="14" fill="#5C3A14" rx="3" transform="rotate(45 69 69)"/>
+
+  <!-- House with hurricane shutters (left) -->
+  <g transform="translate(110, 195)">
+    <rect x="-40" y="-50" width="80" height="50" fill="#F4E0BC" stroke="#8A6038" stroke-width="1.5"/>
+    <polygon points="-44,-50 44,-50 0,-78" fill="#A04030" stroke="#5A2020" stroke-width="1.5"/>
+    <!-- Shuttered windows -->
+    <rect x="-30" y="-38" width="18" height="20" fill="#5A4030" stroke="#2A1810" stroke-width="1"/>
+    <g stroke="#3A2818" stroke-width="0.8">
+      <line x1="-30" y1="-32" x2="-12" y2="-32"/>
+      <line x1="-30" y1="-26" x2="-12" y2="-26"/>
+    </g>
+    <rect x="12" y="-38" width="18" height="20" fill="#5A4030" stroke="#2A1810" stroke-width="1"/>
+    <g stroke="#3A2818" stroke-width="0.8">
+      <line x1="12" y1="-32" x2="30" y2="-32"/>
+      <line x1="12" y1="-26" x2="30" y2="-26"/>
+    </g>
+    <!-- Door -->
+    <rect x="-7" y="-22" width="14" height="22" fill="#5A2A18" stroke="#2A1008" stroke-width="1"/>
+    <circle cx="4" cy="-12" r="1.2" fill="#FFD068"/>
+  </g>
+
+  <!-- Beach umbrella + chair (right — tourism economy) -->
+  <g transform="translate(740, 195)">
+    <!-- Umbrella -->
+    <line x1="0" y1="0" x2="0" y2="-45" stroke="#6A4A2A" stroke-width="2"/>
+    <path d="M-32,-40 Q-16,-58 0,-58 Q16,-58 32,-40 Z" fill="#D4302A" stroke="#7A1818" stroke-width="1.5"/>
+    <path d="M-32,-40 Q0,-48 32,-40" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- Beach chair -->
+    <g transform="translate(40, 0)">
+      <rect x="-12" y="-12" width="24" height="3" fill="#5AB0D8"/>
+      <rect x="-12" y="-18" width="24" height="3" fill="#FFFFFF"/>
+      <line x1="-12" y1="-12" x2="-16" y2="0" stroke="#6A4A2A" stroke-width="1.5"/>
+      <line x1="12" y1="-12" x2="16" y2="0" stroke="#6A4A2A" stroke-width="1.5"/>
     </g>
   </g>
-  <!-- Florida outline (small, on horizon — recognizable shape) -->
-  <g transform="translate(620,200)" opacity="0.85">
-    <path d="M0,0 Q-5,-22 -16,-30 Q-30,-28 -42,-22 Q-58,-12 -68,8 Q-72,18 -68,30 Q-58,32 -45,30 Q-35,38 -22,38 Q-10,42 0,40 Q12,46 22,48 Q34,46 38,38 Q36,28 28,22 Q30,12 26,2 Q14,-4 0,0 Z"
-          fill="#FFF" opacity="0.92" stroke="#2A6A8C" stroke-width="2"/>
-    <!-- Small star marker -->
-    <circle cx="-32" cy="14" r="3" fill="#E8843A"/>
+
+  <!-- Cause-and-effect arrow connecting elements -->
+  <g opacity="0.7">
+    <path d="M180,150 Q220,140 250,160" stroke="#0E1C42" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+    <polygon points="248,156 256,160 248,164" fill="#0E1C42"/>
   </g>
-  <style>
-    @keyframes heroFloat {
-      0%, 100% { transform: translateY(0) rotate(-3deg); }
-      50% { transform: translateY(-8px) rotate(-1deg); }
-    }
-  </style>
+  <g opacity="0.7">
+    <path d="M440,150 Q540,135 660,150" stroke="#0E1C42" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+    <polygon points="658,146 666,150 658,154" fill="#0E1C42"/>
+  </g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -1900,72 +1637,62 @@ body {
     <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
     <div>
       <div class="info-label">Unit</div>
-      <div class="info-value">Unit 1: Thinking Like a Florida Historian</div>
+      <div class="info-value">Florida Geography</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#FFF3DC;">📅</div>
     <div>
       <div class="info-label">Week</div>
-      <div class="info-value">Week 1 · Q1</div>
+      <div class="info-value">Week 5 · Q1</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#E3F8ED;">📜</div>
     <div>
       <div class="info-label">Focus</div>
-      <div class="info-value">Historical Thinking</div>
+      <div class="info-value">Geography & Cause-and-Effect</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#F0E8FF;">📋</div>
     <div>
       <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.4.A.1.1 · SS.4.A.1.2 · SS.4.A.9.1</div>
+      <div class="info-value" style="font-size:12px;">SS.4.G.1.1 · SS.4.G.1.2 · SS.4.G.1.3 · SS.4.G.1.4</div>
     </div>
   </div>
 </div>
 
-<!-- ═══ INTRO SECTION: Scene-setting content that auto-collapses on non-scene tabs ═══
-     Contains a small "Message from Inside Canvas" sticky (light story hook), the Florida Historian's Question, Objectives, and Need Strip.
-     All collapse together when student moves to Tab 2/3/4; expand on Tab 1 or via toggle. -->
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's File · Florida Historian's Question</div>
+    <div class="intro-collapsed-icon">🛰️</div>
+    <div class="intro-collapsed-text">Today's Mission & Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
 
-  <!-- ═══ 📩 MESSAGE FROM INSIDE CANVAS (Grade 4 — light story hook, 30 sec) ═══
-       This is the OPENING story beat. The text inside is also the script the
-       teacher will read when recording the welcome video. Keep it 2-4 sentences.
-       Pull the exact wording from the "Opening: Message from Inside Canvas"
-       column of the Planning Table for this lesson code.
-       For sensitive-history lessons (U3, U7, parts of U11), add class="quiet"
-       to remove the playful rotation and use a calmer tone. -->
   <div class="canvas-sticky">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📩</span>
-      <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
-    </div>
-    <div class="canvas-sticky-body">
-      <p>The first file is labeled <em>"What Florida Historians Study,"</em> but Canvas won't open it until you explain what historians actually do. Take a look — help me get to the next file!</p>
-    </div>
-    <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 1</div>
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
   </div>
-
-  <div class="intro-2col">
-    <!-- Florida Historian's Question -->
+  <div class="canvas-sticky-body">
+    <p>Canvas has locked the weather-impact layer — I can see Florida on the map, but everything that shows how weather shapes human choices is hidden. The hurricane routes, the citrus grove irrigation lines, the flood zones — they're all missing. Help me restore the impact layer so we can read how Florida's climate drives the decisions people make every day.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, still inside Module 2</div>
+</div>
+<div class="intro-2col">
+    <!-- Mission Question -->
     <div class="intro-card theme-question">
       <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
+        <div class="intro-card-head-icon">🛰️</div>
         <div>
-          <div class="intro-card-head-label">Florida Historian's Question</div>
-          <div class="intro-card-head-title">Today's Big Question</div>
+          <div class="intro-card-head-label">Mission Question</div>
+          <div class="intro-card-head-title">Today's Mission</div>
         </div>
       </div>
       <div class="intro-card-body">
-        <p>What do Florida historians actually study, and how do they know what really happened?</p>
+        <p>How does Florida's climate actually change what people build, grow, and do every day?</p>
       </div>
     </div>
 
@@ -1979,9 +1706,9 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🌴</span> Name the four things historians study: people, places, events, and evidence.</div>
-        <div class="obj-line"><span class="obj-icon">🔍</span> Tell the difference between a historian's claim and a guess.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Write a Historian's Notebook entry using one piece of evidence.</div>
+        <div class="obj-line"><span class="obj-icon">🏛️</span> Explain how weather and climate shape Florida agriculture, building, and daily life.</div>
+        <div class="obj-line"><span class="obj-icon">🗺️</span> Identify cause-and-effect links between a climate pattern and a human choice.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Write a 3–4 sentence cause-and-effect explanation using map and content evidence.</div>
       </div>
     </div>
   </div>
@@ -1989,7 +1716,7 @@ body {
   <!-- You'll Need strip -->
   <div class="need-strip">
     <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">🔬 Florida historian's Notebook</span>
     <span class="need-chip">✏️ Pencil</span>
     <span class="need-chip">🗺️ Lesson Page</span>
   </div>
@@ -1997,7 +1724,7 @@ body {
 
 <!-- ═══ TAB BAR (3 tabs) ═══ -->
 <div class="tab-bar" id="tabBar">
-  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">🛰️ Message from Inside Canvas <span class="tab-check">✓</span></button>
   <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
   <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
   <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
@@ -2010,7 +1737,7 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">🛰️</div>
     <div>
       <div class="tab-section-title">Learn</div>
     </div>
@@ -2025,14 +1752,17 @@ body {
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Meet the four things historians study</span>
+      <!-- ✏️ STEP 1: Set the history lab scene + topic -->
+      <span class="todays-path-step">🛰️ Step back into Florida & learn the Greek root <em>hydro</em></span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Look at a Florida photograph like a historian</span>
+      <!-- ✏️ STEP 2: Name the routine + what they'll examine -->
+      <span class="todays-path-step">🔍 Study a Florida weather-impact map</span>
       <span class="todays-path-arrow">→</span>
       <!-- STEP 3: Self-check (always the same) -->
-      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-step">🧠 Answer the Quick Self-Check</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write your first Historian's Notebook entry</span>
+      <!-- ✏️ STEP 4: Lock the piece into the course file -->
+      <span class="todays-path-step">📝 Write your Map Quest Response and evidence answers</span>
     </div>
   </div>
 
@@ -2042,101 +1772,124 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
-        <div class="video-wrap-title">Welcome to Florida History</div>
+        <div class="video-wrap-title">Welcome — The Impact Echoes</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "stuck inside Canvas" story beat — light, warm, slightly conspiratorial, never panicked. Suggested ~30-sec script start: <em>"Hey Florida historians — quick heads-up: I'm stuck inside Canvas. Long story. The first file on my desk says 'What Florida Historians Study' and it won't open until I show I actually know what historians do. Lucky for me, that's exactly what you're about to learn."</em> Then drop the frame and teach: read the Florida Historian's Question aloud, preview today's path (the Florida topic, what you'll explore, what the assignment is), and mention the virtue (self-governance).
+        <div class="video-placeholder-text"><strong>Teacher recording notes (~1–2 min):</strong> Open with the story beat (~30 sec): <em>"Canvas has hidden the weather-impact layer — all the human choices shaped by Florida's climate are locked. Your job today: unlock that layer by studying how Florida's weather shapes what people build, grow, and plan."</em> Then 
+          <strong>Teacher recording notes:</strong> Greet students. Read the Message from Inside Canvas aloud, then the Mission Question: <em>"How does Florida's climate actually change what people build, grow, and do every day?"</em> Connect to yesterday: "Yesterday we mapped Florida's climate. Today we ask: so what? What does that climate actually <em>do</em>?" Mention honesty and the Cadet rank. Under 2 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-welcome --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-04-welcome --></div>
       </div>
     </div>
   </div>
 
   <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🌴 Virtue Spotlight — Self-Governance</div>
-    <div class="virtue-text">Good Florida historians govern themselves — they slow down, check the evidence, and don't jump to conclusions. Today, when you feel the urge to guess, choose to look at the evidence instead.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Honesty</div>
+    <div class="virtue-text">Honesty in Florida means telling the truth about the weather — not pretending hurricanes won't come, not promising a sunny day to a worried neighbor. Maps, forecasts, and warnings only work when the people making them are honest about the risks. Today, as you trace how weather shapes Florida life, notice how every good decision starts with honest information.</div>
   </div>
 
-  <!-- Your Role Today (Grade 4 — constant across the year: Florida History Team) -->
+  <!-- Florida historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
   <div class="callout callout-info">
-    <div class="callout-icon">🐊</div>
-    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Florida historians ask questions, study sources, follow timelines, and use careful evidence. Today, your team will learn what Florida historians actually study — and prove you can think like one.</p>
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Florida historian</strong> on the student research team. Today's lab assignment: examine how weather impacts Florida life, name one clear cause-and-effect link, and add the Florida-weather-impact piece to the course file.</p>
   </div>
 
-  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD (Grade 4 — visual novelty hook) ═══
-       Replace the SVG placeholder below with a small hand-coded illustration
-       that matches the "Show or Make" column from the G4 Canvas Escape Arc tab.
-       Examples: locked file card with magnifying glass + Florida outline +
-       notebook (4.01.01); paired source card with primary + secondary (4.01.02);
-       mixed-up timeline strip (4.01.04); unlabeled Florida map (4.02.01).
-       The card itself is the manila folder; the SVG inside is the visual artifact.
-       This card sits ONCE on Tab 1 and never recurs on other tabs. -->
-  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.01">
-    <div class="canvas-file-card-head">
-      <span class="canvas-file-card-head-icon">🗂️</span>
-      <span class="canvas-file-card-head-text">Show or Make: Today's Florida File</span>
+  
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+<div class="canvas-file-card" data-tab="FLORIDA FILE · 4.02.04">
+  <div class="canvas-file-card-head">
+    <span class="canvas-file-card-head-icon">🗂️</span>
+    <span class="canvas-file-card-head-text">Show or Make: Florida Weather-Impact Map</span>
+  </div>
+  <div class="canvas-file-card-body">
+    <p>Restore the impact layer: hurricane shutters on coastal homes, sprinkler lines in citrus groves, flood-zone markers on city streets, and evacuation routes — all the human choices shaped by Florida's weather.</p>
+    <div class="canvas-file-card-visual">
+      <svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
+        <!-- Sky/ocean background -->
+        <rect width="420" height="220" fill="#C8E4F5" rx="6"/>
+        <!-- Florida silhouette -->
+        <path d="M155,15 L265,15 L275,25 L295,25 L305,33 L310,40 L305,55 L295,80 L285,105 L270,130 L255,150 L240,162 L228,170 L218,173 L208,170 L198,160 L190,148 L185,132 L180,115 L174,95 L168,72 L162,50 L156,28 Z"
+              fill="#8DC87A" stroke="#5A8A5A" stroke-width="1.5"/>
+        <!-- Panhandle -->
+        <path d="M155,15 L95,15 L75,23 L62,30 L58,38 L64,42 L78,38 L100,30 L130,22 L155,18 Z"
+              fill="#8DC87A" stroke="#5A8A5A" stroke-width="1.5"/>
+        <!-- Hurricane icon (spiral) on east coast -->
+        <circle cx="310" cy="80" r="18" fill="none" stroke="#6B4CB8" stroke-width="2" stroke-dasharray="4,2"/>
+        <circle cx="310" cy="80" r="10" fill="none" stroke="#6B4CB8" stroke-width="1.5"/>
+        <circle cx="310" cy="80" r="3" fill="#6B4CB8"/>
+        <text x="310" y="110" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#6B4CB8">🌀 Hurricane</text>
+        <!-- Citrus grove icon -->
+        <rect x="185" y="90" width="30" height="20" fill="#7AB848" rx="3" opacity="0.8"/>
+        <text x="200" y="103" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#FFFFFF">🍊 Grove</text>
+        <!-- Flood zone marker -->
+        <rect x="160" y="140" width="35" height="14" fill="#3A8AC4" rx="3" opacity="0.7"/>
+        <text x="177" y="150" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#FFFFFF">Flood Zone</text>
+        <!-- Evacuation route arrow -->
+        <line x1="230" y1="155" x2="310" y2="135" stroke="#D4663A" stroke-width="2" marker-end="url(#arr)"/>
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L6,3 Z" fill="#D4663A"/>
+          </marker>
+        </defs>
+        <text x="270" y="132" font-family="ui-monospace,monospace" font-size="7" fill="#D4663A">Evacuation →</text>
+        <!-- Lock overlay -->
+        <rect x="148" y="50" width="120" height="90" fill="none" stroke="#9B6BC4" stroke-width="2" stroke-dasharray="6,3" rx="8" opacity="0.8"/>
+        <text x="208" y="93" text-anchor="middle" font-family="ui-monospace,monospace" font-size="22" fill="#9B6BC4" opacity="0.7">🔒</text>
+        <text x="208" y="110" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#9B6BC4">Impact Layer Locked</text>
+      </svg>
+      <p class="canvas-file-card-caption">Florida's weather-impact layer: hurricane zones, citrus groves, flood markers, and evacuation routes — locked behind a Canvas glitch. Restore them.</p>
     </div>
-    <div class="canvas-file-card-body">
-      <p>A locked file card sits at the Canvas entrance. Inside: a magnifying glass over Florida's outline and a small Historian's Notebook waiting for its first entry.</p>
-      <div class="canvas-file-card-visual">
-        <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:380px;">
-          <defs>
-            <linearGradient id="folderGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#FFF8E0"/>
-              <stop offset="100%" stop-color="#F2E5B8"/>
-            </linearGradient>
-          </defs>
-          <!-- File card -->
-          <rect x="30" y="30" width="340" height="170" rx="6" fill="url(#folderGrad)" stroke="#8B6E2A" stroke-width="2.5"/>
-          <!-- File label tab -->
-          <rect x="50" y="20" width="120" height="22" rx="3" fill="#E8D4A8" stroke="#8B6E2A" stroke-width="2"/>
-          <line x1="58" y1="32" x2="160" y2="32" stroke="#8B6E2A" stroke-width="1" opacity="0.5"/>
-          <!-- LOCKED stamp (rotated, red) -->
-          <g transform="translate(290,55) rotate(-15)">
-            <rect x="-32" y="-12" width="64" height="22" fill="none" stroke="#B91C1C" stroke-width="2.5" rx="3"/>
-            <line x1="-28" y1="0" x2="28" y2="0" stroke="#B91C1C" stroke-width="1" opacity="0.4"/>
-          </g>
-          <!-- Padlock icon on file -->
-          <g transform="translate(75,75)">
-            <rect x="-12" y="0" width="24" height="20" rx="2" fill="#5C3A14"/>
-            <path d="M-8,0 L-8,-8 Q-8,-16 0,-16 Q8,-16 8,-8 L8,0" fill="none" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="0" cy="10" r="2.5" fill="#FFD06E"/>
-          </g>
-          <!-- Florida outline (large, center) -->
-          <g transform="translate(190,130)">
-            <path d="M-50,-30 Q-55,-50 -42,-58 Q-25,-60 -10,-55 Q5,-50 15,-45 Q28,-38 35,-30 Q42,-18 38,-8 Q34,5 26,12 Q22,22 14,28 Q4,30 -8,28 Q-18,32 -28,28 Q-38,22 -42,12 Q-48,2 -50,-12 Q-54,-22 -50,-30 Z"
-                  fill="#A8DDF0" stroke="#2A6A8C" stroke-width="2.5"/>
-            <!-- Small evidence marks on FL -->
-            <circle cx="-25" cy="-20" r="2.5" fill="#E8843A"/>
-            <circle cx="0" cy="-5" r="2.5" fill="#E8843A"/>
-            <circle cx="15" cy="10" r="2.5" fill="#E8843A"/>
-          </g>
-          <!-- Magnifying glass (over FL, animated drift) -->
-          <g transform="translate(245,115)" style="animation: showFloat 4s ease-in-out infinite;">
-            <circle cx="0" cy="0" r="22" fill="#FFF" opacity="0.55" stroke="#5C3A14" stroke-width="3"/>
-            <circle cx="-6" cy="-6" r="6" fill="#FFF" opacity="0.7"/>
-            <line x1="16" y1="16" x2="32" y2="32" stroke="#5C3A14" stroke-width="5" stroke-linecap="round"/>
-          </g>
-          <!-- Small notebook (corner) -->
-          <g transform="translate(80,165)">
-            <rect x="-15" y="-12" width="30" height="22" fill="#E58A85" rx="2" stroke="#B05A55" stroke-width="1.5"/>
-            <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="-1" x2="10" y2="-1" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-            <line x1="-10" y1="4" x2="6" y2="4" stroke="#FFF" stroke-width="1" opacity="0.7"/>
-          </g>
-        </svg>
-        <p style="margin-top:8px;font-size:12px;">A locked Florida File with a magnifying glass, the Florida outline, and a fresh Historian's Notebook.</p>
-        <style>@keyframes showFloat { 0%,100%{transform:translate(245px,115px) rotate(-8deg);} 50%{transform:translate(248px,112px) rotate(-3deg);} }</style>
+  </div>
+</div>
+
+
+  <!-- ✏️ WORD ROOTS (include when cross-curricular connection = Latin/Greek roots) -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">🔤</div>
+      <div>
+        <div class="activity-title">Word Roots</div>
+        <div class="activity-sub">Greek Root: hydro — "water"</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The Greek root <strong>hydro</strong> means "water." In Florida, with its rain, rivers, springs, and wetlands, this root shows up everywhere — and it shows up especially when we talk about how weather shapes life.</p>
+      <div class="callout callout-vocab">
+        <div class="callout-icon">📖</div>
+        <p><strong>hydrate</strong> — to add water · <strong>dehydrate</strong> — to remove water · <strong>hydrant</strong> — a water outlet for firefighters · <strong>hydroelectric</strong> — electricity made from moving water</p>
+      </div>
+
+      <!-- Root Match Game -->
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">hydrate</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">to remove water</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">dehydrate</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">to add water</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">hydrant</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">electricity from moving water</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">hydroelectric</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">a water outlet for firefighters</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! You know your roots.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+          The word "hydrate" comes from <em>hydro</em> (water) — to add water to something. Florida farmers "hydrate" their orange trees during dry weeks so the fruit doesn't shrivel.
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+  <!-- ✏️ COPYWORK (include when cross-curricular connection = short copywork) -->
+  <div class="copywork-box">
+    <div class="copywork-label">✍️ Copywork</div>
+    <div class="copywork-text">"People build their lives around the weather they cannot control."</div>
+    <div class="copywork-instruction">Copy this sentence carefully into your Florida historian's Notebook. Notice the phrase <em>cannot control</em>. Why does the writer choose <em>cannot</em> instead of <em>do not</em>? A historian notices small word choices like that.</div>
+  </div>
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
@@ -2165,16 +1918,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Looking at a Source Like a Historian</div>
+        <div class="video-wrap-title">How Florida's Climate Shapes Life</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~3 min):</strong> No story frame in this clip — Canvas can wait. Walk through what historians study (people, places, events, evidence). Show a Florida photograph or simple source and think aloud how a historian would look at it. Model the "I notice... I wonder... I think this means..." pattern. End with: "Now you try."
+          <strong>Teacher recording notes:</strong> Walk through the source map analysis — tell the story, explain the key ideas, and point out details to notice in the fragment. Show how to work through the source, map, or evidence. 3–5 minutes. Teach, don't just read.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-explore-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-04-explore-explainer --></div>
       </div>
     </div>
   </div>
@@ -2187,21 +1940,20 @@ body {
     <div class="activity-head">
       <div class="activity-num" style="background:#1A8A7D;">📖</div>
       <div>
-        <div class="activity-title">What Do Historians Actually Study?</div>
-        <div class="activity-sub">Four things: people, places, events, and evidence</div>
+        <div class="activity-title">What Florida's Climate Does to Florida Life</div>
+        <div class="activity-sub">Agriculture, building, preparation, and tourism</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>When someone says "historian," you might picture a person in a dusty room reading old books. That happens sometimes — but most of a historian's job is asking questions and looking for answers in <strong>evidence</strong>.</p>
-      <p>Florida historians study four big things: <strong>people</strong> (who lived here and how they lived), <strong>places</strong> (the land, water, climate, and how people used them), <strong>events</strong> (what happened, when, and why), and <strong>evidence</strong> (the proof — letters, photos, maps, objects, stories — that tells us what really happened).</p>
-      <p>The most important habit a historian builds is the difference between <em>knowing</em> and <em>guessing</em>. A guess sounds like "I think pirates lived here." A historian's claim sounds like "An old map from 1696 shows a Spanish fort here, so we know Spanish soldiers were in Florida by then." See the difference? The historian points to something real.</p>
+      <p>Florida's climate isn't just a backdrop — it shapes nearly every choice people make. Citrus farmers plant in central Florida because the soil drains well and frost is rare. Cattle ranchers spread out across the dry interior. <strong>Sprinkler systems</strong> and irrigation keep crops alive during the driest weeks. When summer downpours flood low ground, drainage canals carry water out of cities and farmland.</p>
+      <p>Florida homes are often built with <strong>hurricane shutters</strong>, sturdy roofs, and tie-downs that hold structures in place during high winds. Coastal towns plan <strong>evacuation routes</strong> in advance so people can leave safely if a storm is coming. The state's biggest industry — <strong>tourism</strong> — also runs on climate: warm winters bring visitors from cold states, and beach resorts depend on the weather being mostly cooperative.</p>
     </div>
   </div>
 
   <!-- Pause & Think -->
   <div class="callout callout-think">
     <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Pick one of the four things historians study (people, places, events, or evidence). Which would help you most if you wanted to know how kids in Florida lived 100 years ago?</p>
+    <p><strong>Pause & Think:</strong> Pick one thing in your bedroom or home. If you had to redesign it for a state with hurricane season, what would you change? That's the kind of thinking Florida builders do every day.</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
@@ -2210,65 +1962,112 @@ body {
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
   <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
   <!-- OPTION: Source Study Card -->
   <div class="source-card">
     <div class="source-card-header">
       <div class="source-card-header-icon">📜</div>
       <div>
-        <div class="source-card-header-label">Source Study · Try It Yourself</div>
-        <div class="source-card-header-title">A Florida Photograph from Long Ago</div>
+        <div class="source-card-header-label">Map Quest</div>
+        <div class="source-card-header-title">Read a Florida Climate-Impact Map</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-01-01-florida-historic-photo">
+    <div class="source-image-placeholder" data-image="source-4-02-04-florida-impact-map">
       <div class="source-image-placeholder-text">
-        🖼️ Black-and-white photograph of a Florida family or community scene from the late 1800s or early 1900s. Suggested options: families at a Florida fish camp, citrus pickers, a one-room schoolhouse, Tampa or St. Augustine street scene. Search the Florida Memory project (floridamemory.com).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-01-01-florida-historic-photo.jpg</code>
+        🖼️ A Florida map showing one type of climate impact: hurricane evacuation zones, citrus growing regions, or flood-risk zones. Legend, key, and clear color coding. Try the Florida Division of Emergency Management evacuation-zone maps, the USDA citrus map, or FEMA flood-risk maps for Florida.<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-02-04-florida-impact-map.jpg</code>
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Primary Source</span> · A photograph from Florida's past (~100+ years old)
+        <span class="src-type">Map (Secondary Source)</span> · Map showing how Florida's climate affects where people live, farm, or evacuate.
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look at the photograph carefully. Name three details — clothing, objects, buildings, plants, anything that stands out. Don't guess yet; just describe.</p>
+        <p><strong>What do I see?</strong> What does this map show — evacuation zones, farming regions, or flood risk? Read the legend and describe one zone in your own words.</p>
       </div>
       <div class="callout callout-think">
         <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> What do those details tell you about the <em>people</em>, <em>places</em>, or <em>events</em> in the photograph? Use what you see, not what you imagine.</p>
+        <p><strong>What does it mean?</strong> Find one spot on the map and trace a cause-and-effect chain: <em>climate → choice</em>. What weather pattern made this zone necessary, and what choice are people making because of it?</p>
       </div>
       <div class="callout callout-tip">
         <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> If we did not have this photograph, what would be harder to know about Florida's past? That is exactly why historians study evidence.</p>
+        <p><strong>Why does it matter?</strong> Why is honesty important when a state government draws a map like this? What could go wrong if the map were inaccurate or hid information?</p>
       </div>
     </div>
   </div>
+
+  <!-- OPTION: Timeline Card -->
+  <!--
+  <div class="timeline-card">
+    <div class="timeline-header">
+      <div class="timeline-header-icon">📅</div>
+      <div class="timeline-header-title">✏️ Timeline Thread</div>
+    </div>
+    <div class="timeline-events">
+      <div class="timeline-event">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-event-content">
+          <div class="timeline-event-date">✏️ Date</div>
+          <div class="timeline-event-text">✏️ Event description</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+
+  <!-- OPTION: Council Chamber -->
+  <!--
+  <div class="council-card">
+    <div class="council-header">
+      <div class="council-header-icon">🏛️</div>
+      <div class="council-header-title">Council Chamber</div>
+    </div>
+    <div class="council-question">✏️ The civic/historical question</div>
+    <div class="council-perspectives">
+      <div class="council-perspective">
+        <div class="council-perspective-label side-a">✏️ Perspective A</div>
+        <p>✏️ Summary of one side.</p>
+      </div>
+      <div class="council-perspective">
+        <div class="council-perspective-label side-b">✏️ Perspective B</div>
+        <p>✏️ Summary of the other side.</p>
+      </div>
+    </div>
+    <div class="council-body">
+      <p>Now it's your turn. Read both perspectives. Then write your recommendation below.</p>
+    </div>
+  </div>
+  -->
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
 
   <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Key Concept (Grade 4) -->
+  
+  <!-- Key Concept -->
   <div class="key-concept">
-    <div class="key-concept-label">🔑 Key Concept</div>
-    <p>Florida historians study people, places, events, and evidence — and they always show where their ideas come from.</p>
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>Florida's climate shapes the state's choices — what's grown, how homes are built, where people evacuate, and even why tourists visit. Every honest map of Florida tells a cause-and-effect story between weather and the lives built around it.</p>
   </div>
 
-  <!-- Opti the Owl — appears once per lesson with a Florida-aware observation.
-       Florida-aware, connected to today's content -->
+  <!-- Opti the Owl — lab-themed observation for Grade 4.
+       ✏️ GRADE 4 ACCESSORY: 🦉🌴 Opti with a palmetto frond
+       ✏️ Speech bubble: 1–3 sentences, curious & precise, connected to the lab's work. -->
   <div class="owl-buddy">
     <div class="owl-buddy-avatar">🦉</div>
     <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Psst — historians don't guess. When you spot a detail in a photograph or document, that detail is evidence. Even one small thing — a coat, a flag, a date — can change what we know.
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      Quick observation from the archive: every map in this lesson connects two things — a weather pattern and a human response. Geographers call this cause-and-effect, but really it's a kind of conversation between a place and the people who live there. Florida talks. Floridians listen and build.
     </div>
   </div>
 
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">You've explored the sources and built your understanding. Let's see how much you remember.</p>
-    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Check →</button>
   </div>
 </div>
 
@@ -2295,39 +2094,39 @@ body {
     <div style="padding:18px 22px;">
 
       <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">1. Which list shows what historians study?</div>
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. Why are hurricane shutters common on Florida homes?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Math, science, and reading</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Only old books in libraries</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>People, places, events, and evidence</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because they keep the house cool in winter</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because they protect windows from high winds and flying debris during storms</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because they let in more sunlight</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Historians study people, places, events, and evidence — and they always use evidence to back up what they say.</div>
-        <div class="quiz-feedback fb-wrong">Almost. Look back at the section "What Do Historians Actually Study?" There are four things, and they go together.</div>
+        <div class="quiz-feedback fb-correct">Correct! Hurricane shutters cover windows during a storm so wind and flying debris can't break the glass. They're a direct response to Florida's hurricane season.</div>
+        <div class="quiz-feedback fb-wrong">Think about what shutters cover and why a storm would be dangerous to a window. What's the weather causing this design choice?</div>
       </div>
 
       <!-- QUESTION 2 -->
-      <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. Which sentence sounds like a historian, not a guess?</div>
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">2. Why is central Florida a major citrus-growing region?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>"I think pirates probably lived in Florida."</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>"A map from 1696 shows a Spanish fort, so Spanish soldiers were here by then."</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>"Florida is always sunny because everyone says so."</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because frost is rare and the soil drains well</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because the coast is too crowded</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because hurricanes never reach the middle of the state</div>
         </div>
-        <div class="quiz-feedback fb-correct">Right! A historian's claim points to evidence — in this case, the map. Anyone can check that map and see for themselves.</div>
-        <div class="quiz-feedback fb-wrong">Look again. Which sentence names a piece of evidence (like a map, a letter, or a photograph)? That's the historian's sentence.</div>
+        <div class="quiz-feedback fb-correct">Correct! Citrus trees can't survive hard frost, and central Florida's mild winters and well-drained sandy soil are nearly perfect for them.</div>
+        <div class="quiz-feedback fb-wrong">What does citrus need to grow well — and what does Florida's central region offer that other parts of the country don't?</div>
       </div>
 
       <!-- QUESTION 3 -->
       <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">3. Why do historians use evidence instead of just guessing?</div>
+        <div class="quiz-q-text">3. What is a cause-and-effect link between climate and a Florida choice?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>So other people can check their work and know it's true.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because evidence is required by law in every state.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because old documents are easier to read than new ones.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Hurricane season → evacuation routes are planned in advance</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>The state seal → Florida's name</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>The capital is Tallahassee → there are highways</div>
         </div>
-        <div class="quiz-feedback fb-correct">Exactly. Evidence lets anyone check the work. That's how historians earn trust and tell the difference between knowing and guessing.</div>
-        <div class="quiz-feedback fb-wrong">Think about why a historian needs to "show their work" the same way a math student does. What makes a claim believable?</div>
+        <div class="quiz-feedback fb-correct">Correct! Hurricane season is the cause; planning evacuation routes is the effect. A climate pattern is shaping a human choice.</div>
+        <div class="quiz-feedback fb-wrong">Look for a pair where the weather is the <em>cause</em> and a human decision is the <em>effect</em>. Which choice has weather doing the causing?</div>
       </div>
 
       <!-- Score Box -->
@@ -2351,8 +2150,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 30 sec):</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. One light story nudge — something like: "That's exactly what Canvas needed to see." High energy.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-perfect --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "3 for 3 — you tracked cause and effect like a real Florida geographer." Affirm confidence for the Map Quest Response. Under 30 seconds.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-02-04-quiz-perfect --></div>
             </div>
           </div>
         </div>
@@ -2371,8 +2170,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes (under 1 min):</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Story stays out of this clip.</div>
-              <div class="video-placeholder-id"><!-- slot: 4-01-01-quiz-review --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk gently through each question. Re-explain hurricane shutters, citrus regions, and the cause-effect pattern. Encourage: "Go back, look again, and trust what the evidence shows." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-02-04-quiz-review --></div>
             </div>
           </div>
         </div>
@@ -2384,7 +2183,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
-    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
   </div>
 </div>
 
@@ -2395,9 +2194,9 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📡</div>
     <div>
-      <div class="tab-section-title">Evidence &amp; Assignment</div>
+      <div class="tab-section-title">Evidence & Assignment</div>
     </div>
   </div>
 
@@ -2412,16 +2211,16 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">Your First Historian's Notebook Entry</div>
+        <div class="video-wrap-title">Map Quest — Write Your Cause-and-Effect Response</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~2–3 min):</strong> Read each evidence question (Part A) aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Then walk through Part B and emphasize that finishing Part B is what triggers the 🔓 Unlock Challenge — once it's turned in, the file unlocks. One-sentence story nudge optional. Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas.
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. For one question, think aloud through a strong answer — show how to pull a detail from the lesson and explain it. Clarify what the routine assignment is asking ("Today you're writing a museum label…" or "Your job is to sequence these events and explain one cause-and-effect connection…"). Walk through the turn-in process: review gathered answers, copy or download, submit to Canvas. Aim for 2–3 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-assignment-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-04-assignment-explainer --></div>
       </div>
     </div>
   </div>
@@ -2438,83 +2237,86 @@ body {
     <div class="activity-body">
 
       <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two of the four things historians study, and give one example of each from Florida.</div></div>
-      <div class="textbox-prompt">Use words from the lesson. Try the sentence starter below if it helps.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two things historians study"
-        placeholder="Florida historians study ____, like ____. They also study ____, like ____."
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name one cause-and-effect link between Florida's climate and a human choice.</div></div>
+      <div class="textbox-prompt">Use the map or the explore section. Make the cause and the effect clear.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Cause → effect"
+        placeholder="Because of ___ (a climate pattern), people in Florida ___ (a choice)."
         oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
       <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Look back at the photograph in Tab 2. What is ONE detail you saw, and what does that detail tell you about people or places in Florida?</div></div>
-      <div class="textbox-prompt">Name a real detail first, then explain what it tells you. Don't guess — point to what you actually see.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: A detail from the photo"
-        placeholder="I noticed ______. This tells me ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Pick one Florida industry — farming, tourism, or building. How does climate shape it?</div></div>
+      <div class="textbox-prompt">Use specific examples (sprinklers, shutters, evacuation routes, beach season, etc.).</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Industry + climate"
+        placeholder="I chose ___. Florida's climate shapes this industry because..."
         oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
       <!-- Q3 (optional — include for Lesson B or deeper lessons) -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why is it important for historians to use evidence instead of just guessing?</div></div>
-      <div class="textbox-prompt">Think about how someone else would check your work.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why evidence matters"
-        placeholder="Historians use evidence because ______."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why does honest information about Florida's weather save lives?</div></div>
+      <div class="textbox-prompt">Connect honesty to forecasts, evacuation maps, or warnings.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Honesty & weather"
+        placeholder="Honest weather information saves lives because..."
         oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
 
     </div>
   </div>
 
-  <!-- Part B: Today's Florida Task — frames the academic assignment as an "Unlock Challenge" -->
+  <!-- Part B: Routine Assignment -->
   <div class="activity bl-gold">
     <div class="activity-head">
-      <div class="activity-num" style="background:#E8843A;">B</div>
+      <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
         <span class="canvas-unlock-stamp">Unlock Challenge</span>
-        <div class="activity-title">Your First Historian's Notebook Entry</div>
-        <div class="activity-sub">Write 3–5 sentences explaining what Florida historians study, using one specific piece of evidence from this lesson.</div>
+        <div class="activity-title">Map Quest Response: Climate Causes a Choice</div>
+        <div class="activity-sub">Cause-and-effect explanation using map evidence</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>This is your first official entry as a member of the Florida History Team. Don't worry about being perfect — just sound like a historian, not a guesser. Name what historians study, then point to a real detail (from the photograph, or from what you read) that proves your point.</p>
+      <p>Pick <strong>one</strong> zone, region, or feature on the climate-impact map. Write 3–4 sentences explaining the cause-and-effect link: name the climate pattern (cause), name the human choice (effect), and explain how the two connect.</p>
 
-      <div class="textbox-prompt">Strong entry checklist: (1) Name at least two of the four things historians study. (2) Use one detail from this lesson. (3) Sound like a careful historian — no guesses.</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Historian's Notebook Entry"
-        placeholder="Florida historians study people, places, events, and evidence. For example, when I looked at the photograph, I saw..."
+      <div class="textbox-prompt">Cause → effect. Use real evidence from the map or the explore section.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Assignment: Map Quest Response"
+        placeholder="I chose ___. The climate pattern is ___ (the cause). The human choice is ___ (the effect). They connect because..."
         oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Historian's Sentence (Grade 4 — neutral one-sentence reflection) -->
+  <!-- Historian's Sentence (Grade 4 — replaces Chronicle Sentence) -->
   <div class="activity bl-navy">
     <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div class="activity-num" style="background:#0E1C42;">📡</div>
       <div>
         <div class="activity-title">Historian's Sentence</div>
-        <div class="activity-sub">One sentence to capture today's evidence work.</div>
+        <div class="activity-sub">One sentence to log today's lesson findings.</div>
       </div>
     </div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
-      <div class="textbox-prompt">Today I learned that ______ because the evidence shows ______.</div>
+      <div class="textbox-prompt">In this lesson, I learned that ______ because ______.</div>
       <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
-        placeholder="Today I learned that..."
+        placeholder="In this lesson, I learned that..."
         oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- ═══ 📂 FILE UNLOCKED (Grade 4 — closing story beat sticky, 30 sec) ═══
-       This is the CLOSING story beat. The text is also the script the teacher
-       will read when recording the closing video. Keep it 1-3 sentences.
-       Pull the exact wording from the "Closing: File Unlocked" column of the
-       Planning Table for this lesson code. For sensitive-history lessons,
-       add class="quiet" to remove the playful rotation. -->
+  <!-- ═══ TIMELINE SYNC: Placed Piece (shown every lesson) ═══ -->
+  
+<div style="background:#FAF0D0;border:2px solid #B89868;border-radius:12px;padding:18px 22px;margin:18px 0;position:relative;box-shadow:0 4px 14px rgba(140,100,40,0.18);">
+  
+  <div style="font-size:14px;font-weight:800;color:#5A3A20;margin-top:6px;margin-bottom:8px;">Cause and effect locked in. Map-reading skills next.</div>
+  <div style="font-size:13.5px;line-height:1.6;color:#3A2A1A;">With the Florida-weather-impact piece in place, the course file can now read Florida the way a geographer does — land plus people plus climate plus consequences. Next session, the lab steps back and sharpens the team's <em>map-reading</em> itself, looking at how political and physical maps fit together. Then the unit closes with the full Map Quest.</div>
+  <div style="margin-top:10px;font-size:11px;color:#7A5230;font-style:italic;">— Logged by the course archivist</div>
+</div>
+
   <div class="canvas-sticky unlocked" style="margin-top:18px;">
-    <div class="canvas-sticky-head">
-      <span class="canvas-sticky-head-icon">📂</span>
-      <span class="canvas-sticky-head-label">File Unlocked</span>
-    </div>
-    <div class="canvas-sticky-body">
-      <p>Florida historians study people, places, events, and evidence. The course entrance is one step clearer.</p>
-    </div>
-    <div class="canvas-sticky-byline">— Course Path Updated · Episode 1 of 13</div>
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📂</span>
+    <span class="canvas-sticky-head-label">File Unlocked</span>
   </div>
+  <div class="canvas-sticky-body">
+    <p>Florida's weather shapes the choices people make every day — where to build, what to grow, how to prepare. The course path is one step clearer.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Course Path Updated · Episode 2 of 13</div>
+</div>
 
   <!-- Gathered Answers -->
   <div class="gathered-card">
@@ -2540,9 +2342,9 @@ body {
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <!-- Florida History Team is the constant role. Lesson-specific Unlock Challenge framing pulled from planning table.
-             Look up the lesson code in the planning table for context. -->
-        <strong>Nice work, Florida historian!</strong> You've started your first Historian's Notebook and proved you can think with evidence instead of guessing.
+        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Florida historian!"
+             Second sentence references the specific mission accomplished. -->
+        <strong>Nice work, Florida historian!</strong> You traced cause and effect on Florida's climate-impact map and locked the Florida-weather-impact piece into the course file.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
@@ -2581,15 +2383,15 @@ body {
       <div class="turn-in-checklist">
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+          <div class="turn-in-item-text">✅ I analyzed the source map fragment and answered the evidence questions.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Unlock Challenge (Historian's Notebook entry).</div>
+          <div class="turn-in-item-text">✅ I wrote my Map Quest Response with a clear cause-and-effect link.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I wrote my Historian's Sentence.</div>
+          <div class="turn-in-item-text">✅ I logged my Historian's Sentence.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2599,50 +2401,44 @@ body {
     </div>
   </div>
 
-  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP (Grade 4 — tiny progress marker) ═══
-       Shows the student where they are in the 13-episode arc.
-       Set the .now class on the current episode dot and .done on completed dots.
-       Episodes: 1=U1, 2=U2, 3=U3, 4=U4, 5=U5 (Checkpoint), 6=U6, 7=U7, 8=U8,
-       9=U9 (Checkpoint), 10=U10, 11=U11, 12=U12, 13=U13 (Finale). -->
   <div style="text-align:center;">
-    <div class="canvas-path-chip">
-      <span class="canvas-path-chip-icon">🛤️</span>
-      <span>Course Path Updated · Episode 1 of 13</span>
-      <span class="canvas-path-chip-dots">
-        <!-- ✏️ Mark the current episode dot with .now; mark all earlier dots with .done -->
-        <span class="canvas-path-chip-dot now"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-        <span class="canvas-path-chip-dot"></span>
-      </span>
+  <div class="canvas-path-chip">
+    <span class="canvas-path-chip-icon">🛤️</span>
+    <span>Course Path Updated · Episode 2 of 13</span>
+    <span class="canvas-path-chip-dots">
+      <span class="canvas-path-chip-dot done"></span>
+      <span class="canvas-path-chip-dot now"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+      <span class="canvas-path-chip-dot"></span>
+    </span>
     </div>
-  </div>
+</div>
 
-<!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
   <div class="video-wrap" style="margin-top:18px;">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">First File Unlocked</div>
+        <div class="video-wrap-title">The Weather-Impact Piece is Locked In</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes (~1–2 min):</strong> Open with the "File Unlocked" story beat — warm, proud, never over-the-top. Suggested ~30-sec script start: <em>"You did it — the first file is unlocked. Florida historians study people, places, events, and evidence, and that's exactly what you just proved you can do. Next file: figuring out the difference between primary and secondary sources. I'll meet you there."</em> Then close like a normal lesson: name the specific evidence work students did, restate the Key Concept in your own words, and remind students to keep their Historian's Notebook updated. Under 2 minutes total.
+        <div class="video-placeholder-text"><strong>Teacher recording notes (~1–2 min):</strong> Open with the File Unlocked beat (~30 sec): <em>"Florida's weather shapes the choices people make every day — where to build, what to grow, how to prepare. You just unlocked that impact layer."</em> Then 
+          <strong>Teacher recording notes:</strong> Celebrate: "Today you traced cause and effect between Florida's climate and the choices people make, and you locked the Florida-weather-impact piece into the course file." Restate the key concept. Tease the next lesson: "Next session, the source map zooms in on Florida's political and physical maps together — and we'll see how to read both at the same time." Under 1 minute.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 4-01-01-closing --></div>
+        <div class="video-placeholder-id"><!-- slot: 4-02-04-closing --></div>
       </div>
     </div>
   </div>
@@ -2652,7 +2448,7 @@ body {
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 4 · 4.01.01</div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.02.04</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
@@ -2738,7 +2534,6 @@ function gatherAnswers() {
   var gathered = document.getElementById('gatheredOutput');
   if (gathered) gathered.value = output.trim();
 }
-
 /* ═══════════ COPY TO CLIPBOARD ═══════════ */
 function copyGathered() {
   gatherAnswers();
@@ -2765,7 +2560,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>4.01.01 — My Work</title>';
+  html += '<title>4.02.04 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2775,8 +2570,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — 4.01.01</h1>';
-  html += '<h2>What Florida Historians Study</h2>';
+  html += '<h1>📓 My Work — 4.02.04</h1>';
+  html += '<h2>How Weather Impacts Florida</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {
@@ -3015,12 +2810,17 @@ function scrollToTop() {
 /* ═══════════ INIT ═══════════ */
 updateProgress();
 
-/* ═══════════ SOURCE IMAGE AUTO-LOADER ═══════════
-   Scans .source-image-placeholder divs for data-image attributes,
-   then tries to load the image from GitHub. Tries multiple extensions.
-   If found, replaces the placeholder with the image. If not, placeholder stays.
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════
+   Scans .source-image-placeholder divs
+   for data-image attributes, then tries to load the image from GitHub.
+   Tries multiple extensions. Skips placeholders with ✏️ marker (template defaults).
    Update the B variable if your GitHub repo URL changes. */
-(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
+
+
+<script>
+</script>
+
 </body>
 </html>
