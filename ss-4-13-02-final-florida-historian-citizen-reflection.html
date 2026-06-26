@@ -1,0 +1,3064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 4.13.02: Final Florida Historian-Citizen Reflection</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
+   Lightweight story layer. Sticky notes for messages, manila file
+   cards for "Show or Make," kraft postcards for unit closers.
+   Florida content is the main story; these are visual novelty only.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* --- 📩 Message from Inside Canvas: yellow sticky note --- */
+.canvas-sticky {
+  position: relative;
+  background: linear-gradient(180deg, #FFF8B8 0%, #FFEC8A 100%);
+  border: 1px solid #E6D04A;
+  border-radius: 4px;
+  padding: 18px 20px 16px;
+  margin: 14px auto 18px;
+  max-width: 680px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  transform: rotate(-1.2deg);
+  font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive, system-ui;
+  color: #3D2E10;
+}
+.canvas-sticky::before {
+  /* tape strip */
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 84px;
+  height: 18px;
+  background: rgba(180, 200, 220, 0.55);
+  border: 1px solid rgba(120, 140, 160, 0.35);
+  border-radius: 2px;
+}
+.canvas-sticky-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-sticky-head-icon { font-size: 20px; }
+.canvas-sticky-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+.canvas-sticky-body {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #3D2E10;
+}
+.canvas-sticky-body p { margin: 0 0 6px; }
+.canvas-sticky-byline {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6B5418;
+  font-style: italic;
+}
+
+/* Variant: File Unlocked sticky (soft green instead of yellow) */
+.canvas-sticky.unlocked {
+  background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
+  border-color: #6FAA5C;
+  color: #1F4515;
+  transform: rotate(1deg);
+}
+.canvas-sticky.unlocked::before {
+  background: rgba(110, 150, 110, 0.45);
+  border-color: rgba(80, 110, 80, 0.4);
+}
+.canvas-sticky.unlocked .canvas-sticky-head-label { color: #2D5A1F; }
+.canvas-sticky.unlocked .canvas-sticky-body { color: #1F4515; }
+.canvas-sticky.unlocked .canvas-sticky-byline { color: #3D6A28; }
+
+/* --- 🗂️ Show or Make: manila folder/file card --- */
+.canvas-file-card {
+  position: relative;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 22px 22px 20px;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.canvas-file-card::before {
+  /* manila folder tab */
+  content: attr(data-tab);
+  position: absolute;
+  top: -22px;
+  left: 24px;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 16px 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6E5215;
+}
+.canvas-file-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #B89860;
+}
+.canvas-file-card-head-icon { font-size: 22px; }
+.canvas-file-card-head-text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4A3811;
+}
+.canvas-file-card-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2F2308;
+}
+.canvas-file-card-visual {
+  background: #FFFCF2;
+  border: 1px dashed #B89860;
+  border-radius: 6px;
+  padding: 18px;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6E5215;
+  font-style: italic;
+}
+.canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
+.canvas-file-card-caption { font-size: 12px; color: #6E5215; font-style: italic; margin-top: 8px; }
+
+/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
+.canvas-glitch-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F3E8FF;
+  border: 1px dashed #9B6BC4;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: #5B2D8C;
+}
+.canvas-glitch-note-icon {
+  display: inline-block;
+  animation: glitchFlicker 3.5s ease-in-out infinite;
+}
+@keyframes glitchFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.3; transform: translateX(-1px); }
+  96% { opacity: 1; transform: translateX(1px); }
+  98% { opacity: 0.5; }
+}
+
+/* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
+.canvas-unlock-stamp {
+  display: inline-block;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 2px solid #B91C1C;
+  border-radius: 4px;
+  padding: 4px 10px 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  margin: 0 0 12px;
+}
+.canvas-unlock-stamp::before { content: "🔓 "; }
+
+/* --- 🛤️ Course Path Updated: small progress chip --- */
+.canvas-path-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #6EE7B7;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+.canvas-path-chip-icon { font-size: 13px; }
+.canvas-path-chip-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 4px;
+}
+.canvas-path-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #D1FAE5;
+}
+.canvas-path-chip-dot.done { background: #10B981; }
+.canvas-path-chip-dot.now {
+  background: #10B981;
+  box-shadow: 0 0 0 2px #10B98140;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px #10B98140; }
+  50%      { box-shadow: 0 0 0 4px #10B98120; }
+}
+
+/* --- Sensitive-history tone override (quieter visual) --- */
+.canvas-sticky.quiet,
+.canvas-file-card.quiet,
+.canvas-postcard.quiet {
+  background: #F6F2EA;
+  border-color: #A89880;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.canvas-sticky.quiet::before { display: none; }
+.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
+.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
+
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+</style>
+</head>
+<body>
+<div id="pageTop"></div>
+
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">Final Florida <em>Historian-Citizen Reflection</em></div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🐊</span>
+    <span class="header-badge-text">Lesson 4.13.02</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER: Final Florida Historian-Citizen Reflection ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<defs>
+  <linearGradient id="h1302sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a3a6a"/>
+    <stop offset="40%" stop-color="#3a6a9a"/>
+    <stop offset="100%" stop-color="#ffd070"/>
+  </linearGradient>
+  <radialGradient id="h1302sun" cx="0.5" cy="0.85" r="0.7">
+    <stop offset="0%" stop-color="#fff8e0"/>
+    <stop offset="30%" stop-color="#ffe08060"/>
+    <stop offset="100%" stop-color="#ffe08000"/>
+  </radialGradient>
+  <linearGradient id="h1302door" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#8B6914"/>
+    <stop offset="100%" stop-color="#6B4F12"/>
+  </linearGradient>
+  <linearGradient id="h1302light" x1="0.5" y1="0" x2="0.5" y2="1">
+    <stop offset="0%" stop-color="#fff8e0"/>
+    <stop offset="100%" stop-color="#ffd86000"/>
+  </linearGradient>
+  <linearGradient id="h1302card" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#fff"/>
+    <stop offset="100%" stop-color="#f0e8d8"/>
+  </linearGradient>
+  <filter id="h1302glo" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="h1302shd" x="-5%" y="-5%" width="115%" height="115%">
+    <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000030"/>
+  </filter>
+  <style>
+    .h1302-rays { animation: h1302-rays 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center bottom; }
+    @keyframes h1302-rays { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+    .h1302-float1 { animation: h1302-float1 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-float1 { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+    .h1302-float2 { animation: h1302-float2 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-float2 { 0%,100% { transform: translateY(0) rotate(2deg); } 50% { transform: translateY(-10px) rotate(-3deg); } }
+    .h1302-float3 { animation: h1302-float3 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-float3 { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(4deg); } }
+    .h1302-float4 { animation: h1302-float4 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-float4 { 0%,100% { transform: translateY(0) rotate(3deg); } 50% { transform: translateY(-12px) rotate(-2deg); } }
+    .h1302-sparkle { animation: h1302-sparkle 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-sparkle { 0%,100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1); } }
+    .h1302-confetti1 { animation: h1302-confetti1 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-confetti1 { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(30px) rotate(180deg); opacity: 0.3; } }
+    .h1302-confetti2 { animation: h1302-confetti2 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes h1302-confetti2 { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(25px) rotate(-150deg); opacity: 0.3; } }
+    .h1302-door { animation: h1302-door 6s ease-in-out infinite; transform-box: fill-box; transform-origin: right center; }
+    @keyframes h1302-door { 0%,100% { transform: perspective(200px) rotateY(-15deg); } 50% { transform: perspective(200px) rotateY(-25deg); } }
+  </style>
+</defs>
+<!-- Sky background -->
+<rect width="920" height="260" fill="url(#h1302sky)"/>
+<!-- Grand golden light burst from center -->
+<g transform="translate(460,260)">
+  <g class="h1302-rays">
+    <polygon points="0,-260 -40,-100 0,-110 40,-100" fill="#fff8e0" opacity="0.15"/>
+    <polygon points="-80,-250 -60,-100 -30,-115 -20,-100" fill="#ffe880" opacity="0.1"/>
+    <polygon points="80,-250 60,-100 30,-115 20,-100" fill="#ffe880" opacity="0.1"/>
+    <polygon points="-160,-230 -100,-100 -70,-120 -50,-100" fill="#ffd860" opacity="0.08"/>
+    <polygon points="160,-230 100,-100 70,-120 50,-100" fill="#ffd860" opacity="0.08"/>
+    <polygon points="-240,-200 -140,-90 -110,-110 -90,-90" fill="#ffc840" opacity="0.06"/>
+    <polygon points="240,-200 140,-90 110,-110 90,-90" fill="#ffc840" opacity="0.06"/>
+  </g>
+</g>
+<!-- Radial sun glow -->
+<rect width="920" height="260" fill="url(#h1302sun)"/>
+<!-- Grand doorway frame -->
+<g transform="translate(360,15)">
+  <g>
+    <!-- Door frame -->
+    <rect x="0" y="0" width="200" height="240" rx="0" fill="#6B4F12" opacity="0.9"/>
+    <!-- Arch top -->
+    <path d="M0,60 Q100,-20 200,60 L200,0 L0,0 Z" fill="#8B6914"/>
+    <!-- Keystone -->
+    <polygon points="95,-5 105,-5 108,10 92,10" fill="#d4a830"/>
+    <!-- Opening with golden light -->
+    <rect x="15" y="40" width="170" height="195" fill="#fff8e0"/>
+    <rect x="15" y="40" width="170" height="195" fill="url(#h1302light)" opacity="0.5"/>
+    <!-- Left door panel (slightly open) -->
+    <g transform="translate(15,40)">
+      <g class="h1302-door">
+        <rect x="0" y="0" width="85" height="195" fill="url(#h1302door)" opacity="0.7"/>
+        <rect x="30" y="80" width="15" height="8" rx="3" fill="#d4a830"/>
+        <!-- Door panel details -->
+        <rect x="10" y="15" width="65" height="70" rx="2" fill="none" stroke="#a07a20" stroke-width="1" opacity="0.5"/>
+        <rect x="10" y="100" width="65" height="70" rx="2" fill="none" stroke="#a07a20" stroke-width="1" opacity="0.5"/>
+      </g>
+    </g>
+    <!-- Decorative columns -->
+    <rect x="-12" y="20" width="14" height="220" fill="#7a5a18"/>
+    <rect x="198" y="20" width="14" height="220" fill="#7a5a18"/>
+    <rect x="-15" y="15" width="20" height="10" rx="2" fill="#8B6914"/>
+    <rect x="195" y="15" width="20" height="10" rx="2" fill="#8B6914"/>
+  </g>
+</g>
+<!-- Postcard 1: St. Augustine Fort (Castillo) -->
+<g transform="translate(120,60)" filter="url(#h1302shd)">
+  <g class="h1302-float1">
+    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
+    <rect x="3" y="3" width="94" height="44" rx="1" fill="#87CEEB"/>
+    <!-- Fort silhouette -->
+    <polygon points="15,45 15,25 25,25 25,20 35,20 35,25 65,25 65,20 75,20 75,25 85,25 85,45" fill="#8B7355"/>
+    <rect x="45" y="30" width="10" height="15" fill="#5a4a30"/>
+    <!-- Corner bastions -->
+    <polygon points="15,25 10,20 20,20" fill="#7a6345"/>
+    <polygon points="85,25 80,20 90,20" fill="#7a6345"/>
+    <!-- Stamp placeholder -->
+    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
+    <!-- Address lines -->
+    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
+    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  </g>
+</g>
+<!-- Postcard 2: Everglades Sawgrass -->
+<g transform="translate(680,40)" filter="url(#h1302shd)">
+  <g class="h1302-float2">
+    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
+    <rect x="3" y="3" width="94" height="44" rx="1" fill="#87CEEB"/>
+    <!-- Everglades scene -->
+    <rect x="3" y="30" width="94" height="17" fill="#5a8a3a"/>
+    <!-- Sawgrass blades -->
+    <line x1="15" y1="30" x2="12" y2="18" stroke="#4a7a2a" stroke-width="1.5"/>
+    <line x1="20" y1="30" x2="22" y2="15" stroke="#5a8a3a" stroke-width="1.5"/>
+    <line x1="30" y1="30" x2="28" y2="17" stroke="#4a7a2a" stroke-width="1.5"/>
+    <line x1="50" y1="30" x2="48" y2="16" stroke="#5a8a3a" stroke-width="1.5"/>
+    <line x1="55" y1="30" x2="57" y2="18" stroke="#4a7a2a" stroke-width="1.5"/>
+    <line x1="70" y1="30" x2="68" y2="15" stroke="#5a8a3a" stroke-width="1.5"/>
+    <line x1="80" y1="30" x2="82" y2="17" stroke="#4a7a2a" stroke-width="1.5"/>
+    <line x1="90" y1="30" x2="88" y2="19" stroke="#5a8a3a" stroke-width="1.5"/>
+    <!-- Water -->
+    <rect x="3" y="37" width="94" height="10" fill="#3a7aaa" opacity="0.4"/>
+    <!-- Stamp -->
+    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
+    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
+    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  </g>
+</g>
+<!-- Postcard 3: Capitol Dome -->
+<g transform="translate(160,160)" filter="url(#h1302shd)">
+  <g class="h1302-float3">
+    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
+    <rect x="3" y="3" width="94" height="44" rx="1" fill="#6aaad4"/>
+    <!-- Capitol dome -->
+    <rect x="25" y="30" width="50" height="17" fill="#ddd"/>
+    <rect x="20" y="27" width="60" height="5" rx="1" fill="#ccc"/>
+    <path d="M30,27 Q50,5 70,27" fill="#ddd"/>
+    <line x1="50" y1="12" x2="50" y2="5" stroke="#d4a830" stroke-width="1.5"/>
+    <circle cx="50" cy="4" r="2" fill="#d4a830"/>
+    <!-- Columns -->
+    <rect x="30" y="32" width="4" height="13" fill="#ccc"/>
+    <rect x="40" y="32" width="4" height="13" fill="#ccc"/>
+    <rect x="50" y="32" width="4" height="13" fill="#ccc"/>
+    <rect x="60" y="32" width="4" height="13" fill="#ccc"/>
+    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
+    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
+    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  </g>
+</g>
+<!-- Postcard 4: Rocket -->
+<g transform="translate(650,150)" filter="url(#h1302shd)">
+  <g class="h1302-float4">
+    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
+    <rect x="3" y="3" width="94" height="44" rx="1" fill="#1a2a4a"/>
+    <!-- Stars in sky -->
+    <circle cx="15" cy="12" r="1" fill="#fff" opacity="0.7"/>
+    <circle cx="80" cy="10" r="1.2" fill="#fff" opacity="0.6"/>
+    <circle cx="35" cy="8" r="0.8" fill="#fff" opacity="0.5"/>
+    <circle cx="70" cy="20" r="1" fill="#fff" opacity="0.7"/>
+    <!-- Rocket -->
+    <polygon points="50,8 45,25 55,25" fill="#e8e8e8"/>
+    <rect x="45" y="25" width="10" height="15" fill="#e0e0e0"/>
+    <polygon points="43,25 40,30 45,25" fill="#bbb"/>
+    <polygon points="57,25 60,30 55,25" fill="#bbb"/>
+    <!-- Flame -->
+    <polygon points="47,40 50,48 53,40" fill="#ff6830"/>
+    <polygon points="48,40 50,45 52,40" fill="#ffd830"/>
+    <!-- Smoke trail -->
+    <circle cx="50" cy="44" r="3" fill="#fff" opacity="0.2"/>
+    <circle cx="49" cy="47" r="4" fill="#fff" opacity="0.15"/>
+    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
+    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
+    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  </g>
+</g>
+<!-- Confetti pieces -->
+<g transform="translate(100,30)">
+  <g class="h1302-confetti1">
+    <rect x="0" y="0" width="6" height="4" rx="1" fill="#e74c3c" opacity="0.8"/>
+  </g>
+</g>
+<g transform="translate(280,20)">
+  <g class="h1302-confetti2" style="animation-delay: -1s;">
+    <rect x="0" y="0" width="5" height="5" rx="1" fill="#3498db" opacity="0.7"/>
+  </g>
+</g>
+<g transform="translate(620,25)">
+  <g class="h1302-confetti1" style="animation-delay: -2s;">
+    <rect x="0" y="0" width="6" height="3" rx="1" fill="#2ecc71" opacity="0.8"/>
+  </g>
+</g>
+<g transform="translate(800,35)">
+  <g class="h1302-confetti2" style="animation-delay: -0.5s;">
+    <rect x="0" y="0" width="4" height="6" rx="1" fill="#f39c12" opacity="0.7"/>
+  </g>
+</g>
+<g transform="translate(50,80)">
+  <g class="h1302-confetti2" style="animation-delay: -3s;">
+    <rect x="0" y="0" width="5" height="4" rx="1" fill="#9b59b6" opacity="0.7"/>
+  </g>
+</g>
+<g transform="translate(860,90)">
+  <g class="h1302-confetti1" style="animation-delay: -1.5s;">
+    <rect x="0" y="0" width="6" height="4" rx="1" fill="#e74c3c" opacity="0.7"/>
+  </g>
+</g>
+<g transform="translate(320,180)">
+  <g class="h1302-confetti1" style="animation-delay: -2.5s;">
+    <rect x="0" y="0" width="5" height="5" rx="1" fill="#1abc9c" opacity="0.6"/>
+  </g>
+</g>
+<g transform="translate(590,190)">
+  <g class="h1302-confetti2" style="animation-delay: -3.5s;">
+    <rect x="0" y="0" width="6" height="3" rx="1" fill="#e67e22" opacity="0.6"/>
+  </g>
+</g>
+<!-- Sparkle stars -->
+<g transform="translate(200,25)">
+  <g class="h1302-sparkle">
+    <polygon points="0,-6 1.5,-1.5 6,0 1.5,1.5 0,6 -1.5,1.5 -6,0 -1.5,-1.5" fill="#fff8e0"/>
+  </g>
+</g>
+<g transform="translate(720,20)">
+  <g class="h1302-sparkle" style="animation-delay: -0.7s;">
+    <polygon points="0,-5 1.2,-1.2 5,0 1.2,1.2 0,5 -1.2,1.2 -5,0 -1.2,-1.2" fill="#ffd860"/>
+  </g>
+</g>
+<g transform="translate(460,8)">
+  <g class="h1302-sparkle" style="animation-delay: -1.3s;">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#fff"/>
+  </g>
+</g>
+<g transform="translate(80,180)">
+  <g class="h1302-sparkle" style="animation-delay: -1.8s;">
+    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#ffd860" opacity="0.8"/>
+  </g>
+</g>
+<g transform="translate(840,170)">
+  <g class="h1302-sparkle" style="animation-delay: -0.3s;">
+    <polygon points="0,-5 1.5,-1.5 5,0 1.5,1.5 0,5 -1.5,1.5 -5,0 -1.5,-1.5" fill="#fff8e0" opacity="0.9"/>
+  </g>
+</g>
+<g transform="translate(350,100)">
+  <g class="h1302-sparkle" style="animation-delay: -2.2s;">
+    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#fff" opacity="0.7"/>
+  </g>
+</g>
+<g transform="translate(570,80)">
+  <g class="h1302-sparkle" style="animation-delay: -1.6s;">
+    <polygon points="0,-5 1.5,-1.5 5,0 1.5,1.5 0,5 -1.5,1.5 -5,0 -1.5,-1.5" fill="#ffd860" opacity="0.8"/>
+  </g>
+</g>
+<!-- Ground glow line -->
+<rect x="0" y="252" width="920" height="8" fill="#ffd860" opacity="0.15"/>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">Finale: The Florida Historian-Citizen Exhibition</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 33 · Q4</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">Reflection &amp; Celebration</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:11px;">SS.4.A; SS.4.G; SS.4.CG; SS.4.E; SS.4.FL; SS.4.AA</div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<!-- ═══ MESSAGE FROM INSIDE CANVAS (opening sticky) ═══ -->
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
+  </div>
+  <div class="canvas-sticky-body">
+    <p>The teacher sends one final message from inside Canvas and asks students to reflect on what Florida historian-citizens should remember and do.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 13</div>
+</div>
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">🛰️</div>
+    <div class="intro-collapsed-text">Today's Mission Today's Wonder & Objectives Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <!-- Mission Question -->
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🗺️</div>
+        <div>
+          <div class="intro-card-head-label">Wonder Question</div>
+          <div class="intro-card-head-title">Today's Wonder</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <p>What should a Florida historian-citizen remember — and what should they do next?</p>
+      </div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">🏛️</span> Explain why enslaved people from British colonies fled south to Spanish Florida.</div>
+        <div class="obj-line"><span class="obj-icon">📜</span> Describe Fort Mose as the first legally sanctioned free Black settlement in what is now the United States.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Write a Historian's Notebook entry explaining what Fort Mose tells us about freedom and courage.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- You'll Need strip -->
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">🗺️ Lesson Page</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR (3 tabs) ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1: ENTER THE SCENE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">📍</div>
+    <div>
+      <div class="tab-section-title">Learn</div>
+    </div>
+  </div>
+
+  <!-- Today's Path — MUST be lesson-specific. Do NOT restate tab names.
+       Each step names the actual content, routine material, and product.
+       Step 1: what they'll encounter + warm-up activity
+       Step 2: the specific routine + what they'll examine
+       Step 3: the specific product they'll create
+       Keep each step ≤ 12 words. -->
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Reflect on the year's journey through Florida history</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Gather your best evidence and memories from the course</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Final year-in-review self-check</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Write your final reflection and receive the teacher's postcard</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video — slot: [lesson-number-with-dash]-welcome -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · LEARN</div>
+        <div class="video-wrap-title">Final Florida Historian-Citizen Reflection</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> This is the last lesson. Tell students: "This is it — the final lesson of Grade 4 Social Studies. You've traveled through every chapter of Florida's story, from the first people to the present day. Today you're writing your final reflection — and when you're done, something special happens. The exit door opens. I'm finally getting out of Canvas. Let's finish this together."
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-13-02-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">⚓ Virtue Spotlight — Service</div>
+    <div class="virtue-text">Service means giving back. This entire year, you've been working to unlock files, solve glitches, and free your teacher from Canvas. That's service — using your skills and knowledge to help someone who needed you. As you write your final reflection, think about how learning history is itself an act of service: when you understand where your community came from, you're better prepared to serve it going forward.</div>
+  </div>
+
+  <div class="callout callout-info">
+    <div class="callout-icon">📜</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Florida Historian-Citizen</strong> on the student research team. You reflect on everything you've learned and write a final statement about what Florida historian-citizens know and do.</p>
+  </div>
+
+  <!-- ═══ SHOW OR MAKE FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.13.02">
+    <div class="canvas-file-card-head">
+      <span class="canvas-file-card-head-icon">🗂️</span>
+      <span class="canvas-file-card-head-text">The Final Reflection — Course Complete</span>
+    </div>
+    <div class="canvas-file-card-body">
+      <p>This is the very last file. When you complete your reflection, the exit door opens, the teacher escapes Canvas, and postcards arrive from across Florida. This file belongs to you — fill it with what you've learned and who you've become as a historian-citizen.</p>
+      <div class="canvas-file-card-visual">
+        <p style="font-size:14px;color:#6E5215;padding:12px;">📂 This is the very last file. When you complete your reflection, the exit door opens, the teacher escapes Canvas, and postcards arrive from across Florida. This file belongs to you — fill it with what you've learned and who you've become as a historian-citizen.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've looked back at the journey — now gather your strongest memories and evidence from across the year.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-explore">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <!-- ✏️ GRADE ACCENT -->
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Explainer Video — slot: [lesson-number-with-dash]-explore-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 EXPLORE</div>
+        <div class="video-wrap-title">Final Florida Historian-Citizen Reflection</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~3–5 min):</strong> Take students on a final tour of the course. Remind them of the big moments: the first sticky note, the first glitch, the first time they studied a primary source. Name a few highlights — Fort Mose, the Seminole story, Florida's constitution, financial literacy. Ask them to think about which lesson surprised them the most, which person from history they'll remember, and what it means to think like a historian. This is the last explore — make it count.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-13-02-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Learn -->
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <!-- Content Section -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">The Journey Through Florida's Story</div>
+        <div class="activity-sub">Reflecting on a year of history, evidence, and citizenship</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>You started this course as a student. You're finishing it as a Florida historian-citizen. That's not just a title — it means something. It means you know how to read a source, ask questions about evidence, and think carefully about what happened and why it matters. It means you can look at a map and see stories. It means you understand that history isn't just the past — it's the foundation of the present.</p>
+      <p><strong>What you've learned.</strong> You studied Florida's land and water, its first peoples, the arrival of Europeans, colonial life under Spain and Britain, the path to statehood, the Seminole Wars, the Civil War, Reconstruction, growth and change, the civil rights movement, modern Florida, government, economy, and financial literacy. Every unit added a new chapter. Every lesson unlocked a new file.</p>
+      <p><strong>What you've done.</strong> You analyzed sources — maps, documents, images, timelines, and artifacts. You answered evidence questions with specific details. You wrote Historian's Notebook entries. You solved glitches. You built an exhibition board. And through all of it, you helped your teacher find the way out of Canvas.</p>
+      <p><strong>What comes next.</strong> The course is almost over, but being a historian-citizen doesn't stop. Every time you visit a Florida park, read a historical marker, vote in a school election, or save money for something important, you're using what you learned this year. Florida's story keeps going — and you're part of it.</p>
+      <p><strong>One last thing.</strong> Your teacher has been stuck inside Canvas all year. Every file you unlocked, every glitch you solved, every exhibit piece you built — it all led here. When you finish your reflection, the exit door opens. The teacher steps out. And a set of postcards arrives — from St. Augustine, the Everglades, Tallahassee, Kennedy Space Center, and your local community. The teacher is finally free.</p>
+    </div>
+  </div>
+
+  <!-- Pause & Think -->
+  
+  <div class="canvas-glitch-note" style="margin:12px 0;"><span class="canvas-glitch-note-icon">⚡</span> <span class="canvas-glitch-note-text">The last Glitch is an empty final file; students fill it with evidence, reflection, and responsibility.</span></div>
+<div class="callout callout-think">
+    <div class="callout-icon">🤔</div>
+    <p><strong>Pause &amp; Think:</strong> What is one thing you learned this year that changed how you think about Florida?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 2: Investigate -->
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
+  <!-- OPTION: Final Reflection Card -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-card-header-icon">📜</div>
+      <div>
+        <div class="source-card-header-label">Source Study</div>
+        <div class="source-card-header-title">Postcards from Across Florida</div>
+      </div>
+    </div>
+    <div class="source-image-placeholder" data-image="source-4-13-02-postcards">
+      <div class="source-image-placeholder-text">
+        A set of illustrated postcards from five Florida places: St. Augustine (oldest city), the Everglades (river of grass), Tallahassee (state capital), Kennedy Space Center (space exploration), and a local Florida community. Each postcard has a small image and a short caption. Bright, warm, celebratory style.<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-13-02-postcards.png</code>
+      </div>
+    </div>
+    <div class="source-card-body">
+      <div class="source-label-bar">
+        <span class="src-type">Final Reflection</span> · Illustrated postcards, Florida places, course finale
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">👁️</div>
+        <p><strong>What do I see?</strong> Which Florida place from the postcards connects to something you studied this year?</p>
+      </div>
+      <div class="callout callout-think">
+        <div class="callout-icon">💭</div>
+        <p><strong>What does it mean?</strong> If you could send a postcard from one Florida place, which would you choose and what would you write?</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-icon">⚖️</div>
+        <p><strong>Why does it matter?</strong> Why do you think the teacher sent postcards from these five places?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 3: Connect -->
+  <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
+
+
+  <!-- Key Concept -->
+
+  <!-- Key Concept -->
+  <div class="key-concept">
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>A Florida historian-citizen knows the story, uses evidence, and serves the community by keeping history alive.</p>
+  </div>
+
+  <!-- Opti the Owl — lab-themed observation for Grade 4. -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      The word "reflection" comes from the Latin <strong>reflectere</strong>, meaning "to bend back." When you reflect, you bend your thinking back over everything you've experienced. A good historian doesn't just move forward — they pause, look back, and ask: what did I learn, and what will I carry with me?
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">One last self-check before your final reflection.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Check →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-check">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
+  </div>
+
+  <!-- ═══ SELF-CHECK QUIZ ═══ -->
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- QUESTION 1 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">What does it mean to be a Florida historian-citizen?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Someone who memorizes dates and names for a test</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Someone who uses evidence to understand Florida's story and serves the community</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Someone who lives in Florida and pays taxes</div>
+        </div>
+        <div class="quiz-feedback fb-correct">That's right. A historian-citizen uses evidence, thinks critically, and serves the community.</div>
+        <div class="quiz-feedback fb-wrong">A historian-citizen does more than memorize — they use evidence and serve the community.</div>
+  </div>
+
+      <!-- QUESTION 2 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">Which of these is a primary source?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>A textbook chapter about the Seminole Wars</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>A letter written by a soldier during the Seminole Wars</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>A Wikipedia article about Osceola</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! A letter from the time period is a primary source — created during the events it describes.</div>
+        <div class="quiz-feedback fb-wrong">A primary source is created during the time period it describes — like a letter, diary, or map from that era.</div>
+  </div>
+
+      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="C">
+        <div class="quiz-q-text">Why is it important for historians to tell both sides of a story?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because teachers require it for a grade</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because history only has one perspective</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because understanding multiple perspectives leads to a more complete and honest account</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Exactly. Multiple perspectives give us a fuller, more honest understanding of history.</div>
+        <div class="quiz-feedback fb-wrong">Historians tell both sides because multiple perspectives create a more complete and honest story.</div>
+  </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You're ready. Time to write your final reflection and unlock the exit.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>Time to show what you know. Answer the evidence questions and complete the Historian's Notebook Entry. Your answers gather at the bottom so you can copy or download to submit to Canvas.</p>
+  </div>
+
+  <!-- Assignment Explainer Video — slot: [lesson-number-with-dash]-assignment-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">Final Historian-Citizen Reflection</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> This is the last assignment recording. Tell students you're proud of them. Model one reflection sentence: "I learned that Fort Mose was the first free Black settlement, and that changed how I think about freedom in Florida." Remind them this is their chance to say what mattered most. When they submit, the exit door opens — and the teacher is free.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-13-02-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from the lesson.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <!-- Q1 -->
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name two things you learned about Florida this year.</div></div>
+      <div class="textbox-prompt">Be specific — use names, dates, or places from the lessons.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Reasons Europeans sailed to Florida"
+        placeholder="Two things I learned about Florida are..."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <!-- Q2 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>How has your thinking changed since the start of the year?</div></div>
+      <div class="textbox-prompt">Think about how you read sources, ask questions, or understand history differently now.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: 1513 expedition"
+        placeholder="My thinking changed because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>What will you carry with you from this course?</div></div>
+      <div class="textbox-prompt">Name one thing you'll remember and explain how you'll use it.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Native group already in Florida"
+        placeholder="One thing I'll carry with me is..."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: Routine Assignment -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <span class="canvas-unlock-stamp">Unlock Challenge</span>
+        <div class="activity-title">Final Historian-Citizen Reflection</div>
+        <div class="activity-sub">Your Last Entry — Course Complete</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Write your final Florida Historian-Citizen Reflection. Answer these three questions:
+
+1. <strong>What did you learn?</strong> Name at least two specific things you learned about Florida this year — people, places, events, or ideas.
+
+2. <strong>How did you grow?</strong> How are you a different thinker now than you were at the start of the year? What skills did you build?
+
+3. <strong>What will you carry with you?</strong> What is one thing from this course that you'll remember — and how will you use it as a citizen?
+
+End with a <strong>final sentence</strong> that completes this thought: "A Florida historian-citizen is someone who..."</p>
+      <div class="textbox-prompt">Start with something specific you remember. Use real names, dates, and places. For your growth, think about how you read sources differently now. For your final sentence, make it personal — what does being a historian-citizen mean to you?</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Historian's Notebook Entry"
+        placeholder="This year I learned that Florida..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Historian's Sentence -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">✍️</div>
+      <div>
+        <div class="activity-title">Historian's Sentence</div>
+        <div class="activity-sub">One sentence to capture today's key insight.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">A Florida historian-citizen is someone who..."journal-box" id="journal-chronicle" data-label="Historian's Sentence"
+        placeholder="Today I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+
+  <!-- ═══ FILE UNLOCKED STICKY ═══ -->
+  
+  <!-- ═══ POSTCARD FROM THE TEACHER ═══ -->
+  <div class="canvas-postcard" style="margin-top:18px;background:#FFFCF2;border:2px solid #D4B896;border-radius:10px;padding:22px 24px;max-width:720px;margin-left:auto;margin-right:auto;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="font-size:22px;">🎓</span>
+      <span style="font-family:system-ui,sans-serif;font-size:15px;font-weight:700;color:#4A3811;">Postcard from the Teacher — Course Complete</span>
+    </div>
+    <p style="font-size:15px;line-height:1.6;color:#2F2308;font-family:system-ui,sans-serif;">Dear Florida Historian-Citizens — I'm out. I'm finally free from Canvas, and it's all because of you. Every file you unlocked, every glitch you solved, every notebook entry you wrote — it all mattered. You didn't just learn Florida history this year. You became historian-citizens who think with evidence, ask real questions, and care about your community. I'm sending these postcards from my favorite Florida places: St. Augustine, where the oldest stories live; the Everglades, where the river of grass still flows; Tallahassee, where your government works for you; Kennedy Space Center, where Florida reaches for the stars; and your own community, where Florida's story continues every single day. Thank you for an unforgettable year. Keep exploring, keep questioning, keep serving. Your teacher — finally free, and so proud of every one of you.</p>
+  </div>
+<div class="canvas-sticky unlocked" style="margin-top:18px;">
+    <div class="canvas-sticky-head">
+      <span class="canvas-sticky-head-icon">📂</span>
+      <span class="canvas-sticky-head-label">File Unlocked</span>
+    </div>
+    <div class="canvas-sticky-body">
+      <p>Course Complete. The exit door is open. The teacher steps out of Canvas, blinking in the sunlight. Postcards arrive from St. Augustine, the Everglades, Tallahassee, Kennedy Space Center, and your local community. You did it.</p>
+    </div>
+    <div class="canvas-sticky-byline">— Course Complete · Episode 13 of 13</div>
+  </div>
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- Historian's Certificate + Stamp — appears when all checklist items are checked -->
+  <div class="historian-seal" id="historianSeal">
+    <div class="seal-certificate">
+      <div class="seal-cert-message">
+        <strong>Congratulations, Florida Historian-Citizen. You unlocked every file, solved every glitch, and freed your teacher from Canvas. The real unlock was learning to think like a historian and act like a citizen. Well done.
+      </div>
+      <div class="seal-stamp-wrap">
+        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
+          <defs>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#D94040"/>
+              <stop offset="100%" stop-color="#A02020"/>
+            </radialGradient>
+            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
+          </defs>
+          <!-- Stamp body -->
+          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
+          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <!-- Opti owl from logo -->
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
+                 x="27" y="20" width="36" height="36"
+                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <!-- CERTIFIED text -->
+          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I reflected on what I learned this year.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I wrote my final Historian-Citizen Reflection.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I completed my final Historian's Sentence.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ COURSE PATH CHIP ═══ -->
+  <div style="text-align:center;">
+    <div class="canvas-path-chip">
+      🛤️ Episode 13 of 13
+      <div class="canvas-path-chip-dots">
+                <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot now"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
+        <div class="video-wrap-title">Final Florida Historian-Citizen Reflection — Wrapped Up</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~2–3 min):</strong> This is the final closing video of the entire course. Be warm and celebratory. Tell students: "You did it. Every file is unlocked. Every glitch is solved. The exit door is open, and I am finally free from Canvas — thanks to you. This year you became Florida historian-citizens. You studied the land, the people, the history, the government, and the economy. You read sources, asked hard questions, and wrote with evidence. I am so proud of every single one of you. Wherever you go next, carry what you learned. Visit a park. Read a historical marker. Ask questions. Save wisely. Vote when you're old enough. Florida's story keeps going — and you are part of it. Thank you for an incredible year. Your teacher is free. Class dismissed."
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-13-02-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.13.02</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+
+<!-- ═══ CONFETTI CANVAS ═══ -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+
+
+/* ═══════════ SCROLL TO TAB BAR ═══════════ */
+function scrollToTabBar() {
+  var tabBar = document.getElementById('tabBar');
+  if (!tabBar) { scrollToTop(); return; }
+  var rect = tabBar.getBoundingClientRect();
+  var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  var target = rect.top + currentScroll - 44;
+  window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+  try {
+    window.parent.postMessage({ type: 'scrollToTabBar', offset: target }, '*');
+  } catch(e) {}
+}
+
+/* ═══════════ TAB SWITCHING ═══════════ */
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+
+  Object.keys(visited).forEach(function(v) {
+    document.getElementById('btn-' + v).classList.add('visited');
+  });
+
+  // Collapse intro on non-scene tabs
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') {
+    intro.classList.add('collapsed');
+  } else {
+    intro.classList.remove('collapsed');
+  }
+
+  updateProgress();
+  scrollToTabBar();
+  if (tab === 'assignment') gatherAnswers();
+}
+
+function toggleIntro() {
+  document.getElementById('introSection').classList.toggle('collapsed');
+}
+
+/* ═══════════ PROGRESS ═══════════ */
+function updateProgress() {
+  var total = 4;
+  var done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+/* ═══════════ AUTO-SAVE ═══════════ */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ═══════════ GATHER ANSWERS ═══════════ */
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    output += label.toUpperCase() + '\n';
+    output += (val || '(no answer)') + '\n\n';
+  });
+
+  // Mini-game status — only include if mini-games exist in this lesson
+  var hasRootMatch = document.querySelector('.root-match-game') !== null;
+  if (hasRootMatch) {
+    output += 'MINI-GAME RESULTS\n';
+    output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
+  }
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+
+
+/* ═══════════ COPY TO CLIPBOARD ═══════════ */
+function copyGathered() {
+  gatherAnswers();
+  var output = document.getElementById('gatheredOutput');
+  if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output.value).then(function() {
+      showCopied();
+    });
+  } else {
+    output.select();
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+/* ═══════════ DOWNLOAD AS PDF ═══════════ */
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>4.13.02 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 4.13.02</h1>';
+  html += '<h2>What Florida Historians Study</h2>';
+
+  html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val
+      ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>'
+      : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+
+  html += '</body></html>';
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q');
+  if (q.classList.contains('answered')) return;
+  q.classList.add('answered');
+  quizAnswered++;
+  var correct = q.getAttribute('data-answer');
+  var chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) { o.classList.add('correct'); }
+    else { o.classList.add('disabled'); }
+  });
+  if (chosen === correct) {
+    quizCorrect++;
+    optEl.classList.add('correct');
+    var fb = q.querySelector('.fb-correct');
+    if (fb) fb.classList.add('show');
+  } else {
+    optEl.classList.add('wrong');
+    var fb = q.querySelector('.fb-wrong');
+    if (fb) fb.classList.add('show');
+  }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) {
+      document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!';
+      document.getElementById('quizVideoCorrect').classList.add('show');
+      fireConfetti();
+    } else if (quizCorrect === 2) {
+      document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!';
+      document.getElementById('quizVideoReview').classList.add('show');
+    } else {
+      document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review the lesson and try again.';
+      document.getElementById('quizVideoReview').classList.add('show');
+    }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+var rootFirst = null;
+var rootCount = 0;
+window._rootMatchDone = false;
+
+function rootMatchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!rootFirst) {
+    rootFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (rootFirst === item) {
+    rootFirst.classList.remove('selected');
+    rootFirst = null;
+    return;
+  }
+
+  var key1 = rootFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && rootFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    rootFirst.classList.remove('selected');
+    rootFirst.classList.add('matched');
+    item.classList.add('matched');
+    rootCount++;
+    rootFirst = null;
+    if (rootCount >= 4) {
+      document.getElementById('rootMatchFeedback').classList.add('show');
+      var fact = document.getElementById('rootDiscoveryFact');
+      if (fact) setTimeout(function() { fact.classList.add('show'); }, 600);
+      window._rootMatchDone = true;
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    rootFirst.classList.add('wrong-flash');
+    var a = rootFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    rootFirst = null;
+  }
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+document.querySelectorAll('.flip-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  var check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  var allChecked = document.querySelectorAll('.turn-in-item.checked').length ===
+                   document.querySelectorAll('.turn-in-item').length;
+  if (allChecked) {
+    fireConfetti();
+    var seal = document.getElementById('historianSeal');
+    if (seal) seal.classList.add('show');
+  }
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var particles = [];
+  var colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🏛️','🦉','🔔','⚖️','🌍','🏺','📋'];
+
+  // Regular confetti pieces
+  for (var i = 0; i < 120; i++) {
+    particles.push({
+      type: 'rect',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 8
+    });
+  }
+  // Emoji particles mixed in
+  for (var j = 0; j < 18; j++) {
+    particles.push({
+      type: 'emoji',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 14 + 26,
+      vx: (Math.random() - 0.5) * 3,
+      vy: Math.random() * 2.5 + 1.5,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 5
+    });
+  }
+
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+      }
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rv;
+      p.vy += 0.04;
+    });
+    frames++;
+    if (frames < 300) {
+      // Fade out during the last 80 frames
+      if (frames > 220) {
+        canvas.style.opacity = 1 - ((frames - 220) / 80);
+      }
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.opacity = 1;
+    }
+  }
+  animate();
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Fallback for iframe
+  try { window.parent.postMessage({ type: 'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  };
+  window.addEventListener('scroll', onScroll);
+  // Also listen in parent if iframe
+  try {
+    if (window.parent !== window) {
+      window.parent.addEventListener('scroll', onScroll);
+    }
+  } catch(e) {}
+})();
+
+/* ═══════════ INIT ═══════════ */
+updateProgress();
+
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════ */
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+/* ═══════════ STICKY FALLBACK FOR IFRAME ═══════════ */
+(function(){
+  var pw=document.querySelector(".progress-wrap");
+  var tb=document.querySelector(".tab-bar");
+  if(!pw)return;
+  var wrap=document.querySelector(".page-wrap");
+  var pwTop=0;var pwH=0;var tbH=0;
+  function measure(){pwTop=wrap.offsetTop;pwH=pw.offsetHeight;if(tb)tbH=tb.offsetHeight;}
+  measure();
+  function onScroll(){
+    var sy=window.pageYOffset||document.documentElement.scrollTop;
+    if(sy>pwTop){
+      if(pw.style.position!=="fixed"){
+        measure();
+        pw.style.position="fixed";pw.style.top="0";
+        pw.style.left=wrap.getBoundingClientRect().left+"px";
+        pw.style.width=wrap.offsetWidth+"px";pw.style.zIndex="9999";
+        if(tb){tb.style.position="fixed";tb.style.top=pwH+"px";
+          tb.style.left=wrap.getBoundingClientRect().left+"px";
+          tb.style.width=wrap.offsetWidth+"px";tb.style.zIndex="9998";}
+        wrap.style.paddingTop=(pwH+(tb?tbH:0))+"px";
+      }
+    }else{
+      if(pw.style.position==="fixed"){
+        pw.style.position="";pw.style.top="";pw.style.left="";
+        pw.style.width="";pw.style.zIndex="";
+        if(tb){tb.style.position="";tb.style.top="";tb.style.left="";
+          tb.style.width="";tb.style.zIndex="";}
+        wrap.style.paddingTop="";
+      }
+    }
+  }
+  window.addEventListener("scroll",onScroll);
+  window.addEventListener("resize",function(){
+    measure();
+    if(pw.style.position==="fixed"){
+      pw.style.left=wrap.getBoundingClientRect().left+"px";
+      pw.style.width=wrap.offsetWidth+"px";
+      if(tb){tb.style.left=wrap.getBoundingClientRect().left+"px";tb.style.width=wrap.offsetWidth+"px";}
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,3036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 4.05.02: Council Chamber: What Changed After Contact?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
+   Lightweight story layer. Sticky notes for messages, manila file
+   cards for "Show or Make," kraft postcards for unit closers.
+   Florida content is the main story; these are visual novelty only.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* --- 📩 Message from Inside Canvas: yellow sticky note --- */
+.canvas-sticky {
+  position: relative;
+  background: linear-gradient(180deg, #FFF8B8 0%, #FFEC8A 100%);
+  border: 1px solid #E6D04A;
+  border-radius: 4px;
+  padding: 18px 20px 16px;
+  margin: 14px auto 18px;
+  max-width: 680px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  transform: rotate(-1.2deg);
+  font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive, system-ui;
+  color: #3D2E10;
+}
+.canvas-sticky::before {
+  /* tape strip */
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 84px;
+  height: 18px;
+  background: rgba(180, 200, 220, 0.55);
+  border: 1px solid rgba(120, 140, 160, 0.35);
+  border-radius: 2px;
+}
+.canvas-sticky-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-sticky-head-icon { font-size: 20px; }
+.canvas-sticky-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+.canvas-sticky-body {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #3D2E10;
+}
+.canvas-sticky-body p { margin: 0 0 6px; }
+.canvas-sticky-byline {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6B5418;
+  font-style: italic;
+}
+
+/* Variant: File Unlocked sticky (soft green instead of yellow) */
+.canvas-sticky.unlocked {
+  background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
+  border-color: #6FAA5C;
+  color: #1F4515;
+  transform: rotate(1deg);
+}
+.canvas-sticky.unlocked::before {
+  background: rgba(110, 150, 110, 0.45);
+  border-color: rgba(80, 110, 80, 0.4);
+}
+.canvas-sticky.unlocked .canvas-sticky-head-label { color: #2D5A1F; }
+.canvas-sticky.unlocked .canvas-sticky-body { color: #1F4515; }
+.canvas-sticky.unlocked .canvas-sticky-byline { color: #3D6A28; }
+
+/* --- 🗂️ Show or Make: manila folder/file card --- */
+.canvas-file-card {
+  position: relative;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 22px 22px 20px;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.canvas-file-card::before {
+  /* manila folder tab */
+  content: attr(data-tab);
+  position: absolute;
+  top: -22px;
+  left: 24px;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 16px 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6E5215;
+}
+.canvas-file-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #B89860;
+}
+.canvas-file-card-head-icon { font-size: 22px; }
+.canvas-file-card-head-text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4A3811;
+}
+.canvas-file-card-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2F2308;
+}
+.canvas-file-card-visual {
+  background: #FFFCF2;
+  border: 1px dashed #B89860;
+  border-radius: 6px;
+  padding: 18px;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6E5215;
+  font-style: italic;
+}
+.canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
+
+/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
+.canvas-glitch-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F3E8FF;
+  border: 1px dashed #9B6BC4;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: #5B2D8C;
+}
+.canvas-glitch-note-icon {
+  display: inline-block;
+  animation: glitchFlicker 3.5s ease-in-out infinite;
+}
+@keyframes glitchFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.3; transform: translateX(-1px); }
+  96% { opacity: 1; transform: translateX(1px); }
+  98% { opacity: 0.5; }
+}
+
+/* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
+.canvas-unlock-stamp {
+  display: inline-block;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 2px solid #B91C1C;
+  border-radius: 4px;
+  padding: 4px 10px 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  margin: 0 0 12px;
+}
+.canvas-unlock-stamp::before { content: "🔓 "; }
+
+/* --- 🛤️ Course Path Updated: small progress chip --- */
+.canvas-path-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #6EE7B7;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+.canvas-path-chip-icon { font-size: 13px; }
+.canvas-path-chip-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 4px;
+}
+.canvas-path-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #D1FAE5;
+}
+.canvas-path-chip-dot.done { background: #10B981; }
+.canvas-path-chip-dot.now {
+  background: #10B981;
+  box-shadow: 0 0 0 2px #10B98140;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px #10B98140; }
+  50%      { box-shadow: 0 0 0 4px #10B98120; }
+}
+
+/* --- Sensitive-history tone override (quieter visual) --- */
+.canvas-sticky.quiet,
+.canvas-file-card.quiet,
+.canvas-postcard.quiet {
+  background: #F6F2EA;
+  border-color: #A89880;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.canvas-sticky.quiet::before { display: none; }
+.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
+.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+
+
+</style>
+</head>
+<body>
+<div id="pageTop"></div>
+
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">Council Chamber: What Changed After Contact?</div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🐊</span>
+    <span class="header-badge-text">Lesson 4.05.02</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER: Council Chamber — Episode 1 Convenes ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs>
+    <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A1530"/>
+      <stop offset="60%" stop-color="#3A1F44"/>
+      <stop offset="100%" stop-color="#7A3A4A"/>
+    </linearGradient>
+    <radialGradient id="candleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD580" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#FF9040" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF9040" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tableGrad" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7A4A20"/>
+      <stop offset="100%" stop-color="#3A1F10"/>
+    </linearGradient>
+    <style>
+      .flame { animation: flameDance 1.6s ease-in-out infinite; transform-origin: center bottom; }
+      @keyframes flameDance { 0%,100% { transform: scale(1,1); } 25% { transform: scale(0.92,1.08); } 75% { transform: scale(1.06,0.95); } }
+      .glow-puls { animation: gp 3.2s ease-in-out infinite; transform-origin:center; }
+      @keyframes gp { 0%,100% { opacity:0.75; transform:scale(1); } 50% { opacity:1; transform:scale(1.08); } }
+      .gavel-tap { animation: gv 4s ease-in-out infinite; transform-origin: 12px 30px; }
+      @keyframes gv { 0%,90%,100% { transform: rotate(0deg); } 95% { transform: rotate(-25deg); } }
+      .twk { animation: tw 2.5s ease-in-out infinite; }
+      @keyframes tw { 0%,100% { opacity:0.3; } 50% { opacity:1; } }
+    </style>
+  </defs>
+
+  <rect width="920" height="260" fill="url(#bannerGrad)"/>
+
+  <!-- starry / lab data points -->
+  <g fill="#FFE5A0">
+    <circle class="twk" cx="80" cy="40" r="1.4" style="animation-delay:0s"/>
+    <circle class="twk" cx="280" cy="30" r="1" style="animation-delay:0.6s"/>
+    <circle class="twk" cx="620" cy="35" r="1.2" style="animation-delay:1.1s"/>
+    <circle class="twk" cx="840" cy="50" r="1.3" style="animation-delay:0.4s"/>
+    <circle class="twk" cx="160" cy="60" r="0.9" style="animation-delay:1.8s"/>
+    <circle class="twk" cx="760" cy="20" r="1" style="animation-delay:0.9s"/>
+  </g>
+
+  <!-- chamber back wall — banners -->
+  <g opacity="0.6">
+    <path d="M 220 25 L 240 25 L 240 105 L 230 120 L 220 105 Z" fill="#7A2A3A" stroke="#3A1010" stroke-width="1"/>
+    <path d="M 680 25 L 700 25 L 700 105 L 690 120 L 680 105 Z" fill="#2A4060" stroke="#0A1530" stroke-width="1"/>
+    <!-- emblem dots on banners -->
+    <circle cx="230" cy="55" r="5" fill="#FFD580" opacity="0.85"/>
+    <circle cx="230" cy="80" r="3" fill="#FFD580" opacity="0.65"/>
+    <circle cx="690" cy="55" r="5" fill="#FFD580" opacity="0.85"/>
+    <circle cx="690" cy="80" r="3" fill="#FFD580" opacity="0.65"/>
+  </g>
+
+  <!-- chamber columns -->
+  <g fill="#2A1A30" opacity="0.85">
+    <rect x="100" y="40" width="22" height="170" rx="3"/>
+    <rect x="798" y="40" width="22" height="170" rx="3"/>
+    <!-- column caps -->
+    <rect x="92" y="36" width="38" height="10" rx="2" fill="#FFD580" opacity="0.6"/>
+    <rect x="790" y="36" width="38" height="10" rx="2" fill="#FFD580" opacity="0.6"/>
+  </g>
+
+  <!-- candle glows (atmospheric) -->
+  <ellipse cx="180" cy="170" rx="80" ry="60" fill="url(#candleGlow)" class="glow-puls" style="animation-delay:0s"/>
+  <ellipse cx="740" cy="170" rx="80" ry="60" fill="url(#candleGlow)" class="glow-puls" style="animation-delay:1.6s"/>
+  <ellipse cx="460" cy="150" rx="110" ry="70" fill="url(#candleGlow)" class="glow-puls" style="animation-delay:0.8s"/>
+
+  <!-- council table (long, perspective) -->
+  <g>
+    <polygon points="120,210 800,210 740,260 180,260" fill="url(#tableGrad)" stroke="#5A2A10" stroke-width="2"/>
+    <!-- table edge highlight -->
+    <line x1="120" y1="210" x2="800" y2="210" stroke="#A07040" stroke-width="1.5" opacity="0.85"/>
+  </g>
+
+  <!-- candles on table -->
+  <g transform="translate(200 180)">
+    <rect x="-4" y="0" width="8" height="24" rx="1" fill="#F5E8C8"/>
+    <ellipse cx="0" cy="-2" r="4" class="flame" fill="#FFD580"/>
+    <ellipse cx="0" cy="-3" r="2" class="flame" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+  <g transform="translate(720 180)">
+    <rect x="-4" y="0" width="8" height="24" rx="1" fill="#F5E8C8"/>
+    <ellipse cx="0" cy="-2" r="4" class="flame" fill="#FFD580" style="animation-delay:0.3s"/>
+    <ellipse cx="0" cy="-3" r="2" class="flame" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- center: stacked evidence + scrolls -->
+  <g transform="translate(420 195)">
+    <!-- scroll 1 -->
+    <rect x="0" y="0" width="80" height="20" rx="3" fill="#FFF8E0" stroke="#8A6A40" stroke-width="1.5"/>
+    <rect x="-4" y="0" width="6" height="20" rx="3" fill="#A07B4A"/>
+    <rect x="78" y="0" width="6" height="20" rx="3" fill="#A07B4A"/>
+    <line x1="6" y1="6" x2="74" y2="6" stroke="#8A6A40" stroke-width="0.7" opacity="0.6"/>
+    <line x1="6" y1="11" x2="68" y2="11" stroke="#8A6A40" stroke-width="0.7" opacity="0.6"/>
+    <line x1="6" y1="16" x2="72" y2="16" stroke="#8A6A40" stroke-width="0.7" opacity="0.6"/>
+    <!-- small object stack behind -->
+    <rect x="22" y="-12" width="40" height="14" rx="2" fill="#D4943A" stroke="#8A6A40" stroke-width="1"/>
+    <rect x="32" y="-22" width="22" height="10" rx="2" fill="#9A5C2A" stroke="#5A3010" stroke-width="1"/>
+  </g>
+
+  <!-- gavel on the left side of table -->
+  <g transform="translate(170 200)">
+    <g class="gavel-tap">
+      <rect x="0" y="28" width="40" height="6" rx="2" fill="#3A1F10"/>
+      <rect x="14" y="14" width="14" height="20" rx="2" fill="#5A3010" stroke="#3A1F10" stroke-width="1"/>
+    </g>
+    <!-- gavel block -->
+    <rect x="-4" y="36" width="50" height="6" rx="2" fill="#7A4A20" stroke="#3A1F10" stroke-width="1"/>
+  </g>
+
+  <!-- chamber emblem floating above table (timeline core mini) -->
+  <g transform="translate(460 80)"><g class="glow-puls">
+    <circle r="22" fill="none" stroke="#FFD580" stroke-width="1.5" opacity="0.85"/>
+    <circle r="14" fill="none" stroke="#FFD580" stroke-width="1" opacity="0.6"/>
+    <circle r="6" fill="#FFD580" opacity="0.9"/>
+    <!-- 4 small puzzle ticks around -->
+    <rect x="-2" y="-26" width="4" height="6" rx="1" fill="#FFD580"/>
+    <rect x="-2" y="20" width="4" height="6" rx="1" fill="#FFD580"/>
+    <rect x="-26" y="-2" width="6" height="4" rx="1" fill="#FFD580"/>
+    <rect x="20" y="-2" width="6" height="4" rx="1" fill="#FFD580"/>
+  </g></g>
+
+  <!-- bottom HUD ticks -->
+  <g stroke="#55C8E8" stroke-width="1" opacity="0.4" fill="none">
+    <rect x="20" y="232" width="60" height="14" rx="2"/>
+    <line x1="26" y1="239" x2="74" y2="239" stroke-dasharray="3,2"/>
+    <rect x="840" y="232" width="60" height="14" rx="2"/>
+    <line x1="846" y1="239" x2="894" y2="239" stroke-dasharray="3,2"/>
+  </g>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">Synthesis 1: Land, People, and First Contact</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 12 · Q2</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">Synthesis &amp; Review</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:12px;">SS.4.A.3.1 · SS.4.A.3.2 · SS.4.G.1.4</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ═══ MESSAGE FROM INSIDE CANVAS (opening sticky) ═══ -->
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
+  </div>
+  <div class="canvas-sticky-body">
+    <p>We made it down the hallway, but there's one more gate — and Canvas won't open it until it hears a careful answer: what changed after contact? Use real evidence, not guesses. I can almost see daylight past this one.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, one gate from the next hallway</div>
+</div>
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's Wonder &amp; Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <!-- Mission Question -->
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">📍</div>
+        <div>
+          <div class="intro-card-head-label">Today's Wonder</div>
+          <div class="intro-card-head-title">Socratic Question</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <p>What honest sentence about Florida after contact can hold both what arrived and who paid?</p>
+      </div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">🎙️</span> Compare two true perspectives about Florida after European contact.</div>
+        <div class="obj-line"><span class="obj-icon">⚖️</span> Use evidence from Episode 1 to write one honest sentence the council can lock in.</div>
+        <div class="obj-line"><span class="obj-icon">🧠</span> Practice the historian's move of holding two truths at once.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- You'll Need strip -->
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">Florida Historian's Notebook</span>
+    <span class="need-chip">Pencil</span>
+    <span class="need-chip">Your synthesis entry from 4.05.01</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR (3 tabs) ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1: ENTER THE SCENE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">📍</div>
+    <div>
+      <div class="tab-section-title">Learn</div>
+    </div>
+  </div>
+
+  <!-- Today's Path — MUST be lesson-specific. Do NOT restate tab names.
+       Each step names the actual content, routine material, and product.
+       Step 1: what they'll encounter + warm-up activity
+       Step 2: the specific routine + what they'll examine
+       Step 3: the specific product they'll create
+       Keep each step ≤ 12 words. -->
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Enter the council chamber and read the question on the wall</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Explore both perspectives — what arrived and who paid</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Check your thinking and run the Socratic round</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Write your honest council sentence and submit</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video — slot: [lesson-number-with-dash]-welcome -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
+        <div class="video-wrap-title">Welcome to the Council Chamber</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with this story beat (~30 sec), spoken with nervous hope: <em>"So that door opened into a long hallway, and there's another gate at the far end — but this one's different. Canvas won't let me pass until it hears a real answer to one big question: what actually changed after contact? No shortcuts, no guessing. I'll be honest — I can almost see daylight down that hallway, and it's making me nervous in the best way. Help me give Canvas the careful, evidence-backed answer it's waiting for."</em> Then set up the Council Chamber: how students build an evidence-based answer about change after contact (change, exchange, conflict, consequences), using specific examples.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-05-02-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">🏛️ Virtue Spotlight — Honesty</div>
+    <div class="virtue-text">Honesty in a council chamber means letting hard truths sit next to bright ones without erasing either. Today, as you weigh what arrived in Florida against who paid the price, the rule is simple: don't soften the evidence to make the council easier. The honest sentence is the only one worth locking into the Timeline Core.</div>
+  </div>
+
+  <!-- Florida Historian Role -->
+  <div class="callout callout-info">
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Florida historian</strong> seated in the council chamber. Today's assignment: hear both perspectives on the question, weigh the evidence, and write the one honest sentence this checkpoint needs.</p>
+  </div>
+
+  <!-- ═══ SHOW OR MAKE FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.05.02">
+    <div class="canvas-file-card-head">
+      <span class="canvas-file-card-head-icon">🗂️</span>
+      <span class="canvas-file-card-head-text">Show or Make: a council question card: "What changed after contact?"</span>
+    </div>
+    <div class="canvas-file-card-body">
+      <p>Create a council question card that holds both sides of the answer: what arrived in Florida after European contact, and who paid the cost. Use the two-perspective format from the council table.</p>
+      <div class="canvas-file-card-visual">
+        <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
+          <!-- folder backing -->
+          <rect x="10" y="30" width="400" height="155" rx="8" fill="#D4B87A" stroke="#9A7A40" stroke-width="1.5"/>
+          <!-- folder tab -->
+          <rect x="28" y="12" width="120" height="24" rx="5" fill="#D4B87A" stroke="#9A7A40" stroke-width="1.5"/>
+          <!-- card face -->
+          <rect x="30" y="48" width="360" height="122" rx="6" fill="#FFFCF2" stroke="#B89860" stroke-width="1"/>
+          <!-- card header band -->
+          <rect x="30" y="48" width="360" height="28" rx="6" fill="#3A1F4A"/>
+          <rect x="30" y="62" width="360" height="14" fill="#3A1F4A"/>
+          <!-- header text placeholder lines -->
+          <rect x="120" y="56" width="180" height="8" rx="3" fill="#E4C6F0" opacity="0.8"/>
+          <!-- council icon gavel -->
+          <text x="52" y="72" font-size="16" font-family="serif">⚖️</text>
+          <!-- two-column divider -->
+          <line x1="210" y1="84" x2="210" y2="158" stroke="#B89860" stroke-width="1" stroke-dasharray="4,3"/>
+          <!-- perspective A label -->
+          <rect x="42" y="86" width="80" height="7" rx="2" fill="#55C8E8" opacity="0.7"/>
+          <!-- perspective A lines -->
+          <rect x="42" y="99" width="150" height="5" rx="2" fill="#8CAAB8" opacity="0.5"/>
+          <rect x="42" y="110" width="130" height="5" rx="2" fill="#8CAAB8" opacity="0.5"/>
+          <rect x="42" y="121" width="140" height="5" rx="2" fill="#8CAAB8" opacity="0.5"/>
+          <rect x="42" y="132" width="120" height="5" rx="2" fill="#8CAAB8" opacity="0.5"/>
+          <!-- perspective B label -->
+          <rect x="222" y="86" width="80" height="7" rx="2" fill="#C8666A" opacity="0.7"/>
+          <!-- perspective B lines -->
+          <rect x="222" y="99" width="150" height="5" rx="2" fill="#B88A8C" opacity="0.5"/>
+          <rect x="222" y="110" width="130" height="5" rx="2" fill="#B88A8C" opacity="0.5"/>
+          <rect x="222" y="121" width="140" height="5" rx="2" fill="#B88A8C" opacity="0.5"/>
+          <rect x="222" y="132" width="110" height="5" rx="2" fill="#B88A8C" opacity="0.5"/>
+          <!-- bottom council sentence line -->
+          <rect x="42" y="150" width="336" height="6" rx="3" fill="#D4943A" opacity="0.6"/>
+        </svg>
+        <p class="canvas-file-card-caption">A council question card holds both perspectives in one honest answer.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Take your seat at the council table. Two perspectives are about to be heard.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-explore">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Explainer Video — slot: [lesson-number-with-dash]-explore-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
+        <div class="video-wrap-title">How a Historian Holds Two Truths</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Model the council move out loud. Read Perspective A (what arrived) and name one specific detail — "Spanish ships brought horses to Florida." Then read Perspective B (who paid) and name one specific detail — "Diseases the First Peoples had no defense against spread fast through their communities." Say plainly: "Both happened. At the same time. Honest history names them both." Then model the bad move — a fake-cheerful sentence that names only Perspective A. Say why the council won't accept it. 3–4 minutes. Serious, careful, modeling honesty out loud.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-05-02-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Learn -->
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <!-- Content Section -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">The Council's Two Perspectives</div>
+        <div class="activity-sub">Both are true. The council's job is to hold them together.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The Council Chamber is not a courtroom. There is no winner. The question on the wall — <em>what changed after contact?</em> — has two true answers that happened at the same time, to different people. A council's job is to name them both.</p>
+      <p><strong>1. What arrived.</strong> Europeans brought new animals, tools, crops, and trade routes. Spanish maps redrew Florida with claim lines, missions, and forts. The peninsula became part of a larger world — connected to Europe, Africa, and the rest of the Americas.</p>
+      <p><strong>2. Who paid.</strong> The First Peoples paid most of the cost. Diseases the communities had no defense against spread quickly. Whole groups were lost. Others were pushed from their land or forced into mission labor. Languages, leaders, and ways of life that had held for thousands of years were broken in a few generations.</p>
+      <p><strong>3. Both at once.</strong> These two perspectives don't cancel each other out. They are both what happened. The dishonest move is to share only one — usually Perspective A, because it is easier to write.</p>
+      <p><strong>4. The historian's sentence.</strong> An honest sentence about contact in Florida names the change AND the cost in the same breath. That is the kind of sentence the council is looking for.</p>
+    </div>
+  </div>
+
+  <!-- Pause & Think -->
+  <div class="callout callout-think">
+    <div class="callout-icon">🤔</div>
+    <p><strong>Pause &amp; Think:</strong> Before the council takes its seats: which of the two perspectives do you think you have heard more often in stories about America? Why might that be?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 2: Investigate -->
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
+    <!-- ROUTINE: Council Chamber (Episode 1 finale synthesis) -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-card-header-icon">⚖️</div>
+      <div>
+        <div class="source-card-header-label">Council Chamber · Episode 1 Finale</div>
+        <div class="source-card-header-title">What Changed in Florida After Contact?</div>
+      </div>
+    </div>
+    <div class="source-card-body" style="padding-top:18px;">
+      <p>The council does not vote. It listens. Two perspectives sit at the table, both built from the evidence on yesterday's wall. Your job today is to hold both at once.</p>
+
+      <!-- Council Question Banner -->
+      <div style="background:linear-gradient(135deg,#3A1F4A,#5A2F6E); color:#FFF; border-radius:12px; padding:16px 20px; margin:14px 0 18px 0; text-align:center; box-shadow:0 3px 10px rgba(58,31,74,0.25);">
+        <div style="font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#E4C6F0; font-weight:800;">The Question on the Wall</div>
+        <div style="font-size:18px; font-weight:800; margin-top:6px; line-height:1.35;">What changed in Florida after European contact?</div>
+      </div>
+
+      <!-- Two Perspectives Grid -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin:14px 0;">
+        <div style="background:#EAF8FD; border:1.5px solid #55C8E8; border-radius:10px; padding:14px 16px;">
+          <div style="font-size:10px; color:#1A5A7A; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; margin-bottom:6px;">⛵ Perspective A — What Arrived</div>
+          <div style="font-weight:700; color:#2A1F12; margin-bottom:6px;">New things, new lines on the map</div>
+          <div style="font-size:13.5px; color:#3A2D1A; line-height:1.6;">Europeans brought horses, cattle, pigs, and iron tools. New crops moved between continents. Spain drew claim lines on maps and built missions and forts. Trade routes connected Florida to a much larger world.</div>
+        </div>
+        <div style="background:#FBE8EC; border:1.5px solid #C8666A; border-radius:10px; padding:14px 16px;">
+          <div style="font-size:10px; color:#7A2A2A; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; margin-bottom:6px;">👣 Perspective B — Who Paid</div>
+          <div style="font-weight:700; color:#2A1F12; margin-bottom:6px;">Communities forced to change or vanish</div>
+          <div style="font-size:13.5px; color:#3A2D1A; line-height:1.6;">Diseases the First Peoples had no defense against spread fast. Whole communities were lost. Others were forced into mission labor or pushed from their land. Languages and ways of life that had held for thousands of years were broken.</div>
+        </div>
+      </div>
+
+      <!-- Council Prompts -->
+      <div class="callout callout-info">
+        <div class="callout-icon">🎙️</div>
+        <p><strong>Council Voice 1:</strong> Read both perspectives carefully. Which one is easier to find in old textbooks? Why do you think that is?</p>
+      </div>
+      <div class="callout callout-think">
+        <div class="callout-icon">🎙️</div>
+        <p><strong>Council Voice 2:</strong> Both perspectives are <em>true</em> — they happened at the same time, to different people. Why is it dishonest to share only one?</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-icon">🎙️</div>
+        <p><strong>Council Voice 3 (the decision):</strong> If the Timeline Core asked you for one honest sentence that names what changed after contact, what would you put on the wall?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 3: Connect -->
+  <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
+
+  <!-- Connect the Ideas note -->
+  <div class="callout callout-think">
+    <div class="callout-icon">⚠️</div>
+    <p><strong>Watch for the easy shortcut:</strong> A sentence about Florida after contact that names <strong>only Perspective A</strong> — a clean "new world arrived" answer — quietly drops the First Peoples from the story. <strong>Which piece of evidence from the council table makes that flattened sentence impossible?</strong> A Florida historian protocol: an honest council sentence names both what arrived AND who paid. If the second half is missing, the sentence is not done — no matter how good it sounds.</p>
+  </div>
+
+  <!-- Key Concept -->
+  <div class="key-concept">
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>A council sentence is short, but it holds two truths at once: <strong>what changed for the land and the newcomers</strong>, and <strong>what was lost by the people already here</strong>. Florida's Episode 1 closes when both are written into the same sentence.</p>
+  </div>
+
+  
+  <!-- ═══ COPYWORK (planning table requested short copywork) ═══ -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">✍️</div>
+      <div>
+        <div class="activity-title">Copywork — A Historian's Vow</div>
+        <div class="activity-sub">Honesty Lens · short copywork</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <div style="background:#F0E8FF; border-left:4px solid #8B6FC0; padding:14px 18px; border-radius:8px; margin:10px 0;">
+        <p style="font-family:'Lora',Georgia,serif; font-size:17px; line-height:1.6; color:#2A1A4A; font-style:italic;">"A historian tells the whole story — even the parts that complicate the answer."</p>
+      </div>
+      <p style="margin-top:10px;">Copy that sentence carefully into your Florida historian's notebook. Notice the word <em>"even"</em> — that's the honesty move. Easy stories leave out the complications. Honest history keeps them in.</p>
+    </div>
+  </div>
+
+  <!-- Opti the Owl — lab-themed observation for Grade 4. -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      Quick observation from the archive: the word <em>council</em> comes from a Latin word meaning <strong>"to call together."</strong> A council is not one voice deciding for everyone — it is many voices called into the same room so the answer is bigger than any one of them. You are one of those voices today.
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've heard both sides of the council. Let's check your thinking before you write the sentence.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Check →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-check">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
+  </div>
+
+  <!-- ═══ SELF-CHECK QUIZ ═══ -->
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- QUESTION 1 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. Which sentence about Florida after contact is the most HONEST?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Europeans arrived and Florida became a bigger, more connected place.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Europeans arrived, bringing new tools and animals, while diseases and forced labor broke many First Peoples communities.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Europeans discovered Florida and everyone got along.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right. An honest sentence holds <strong>both</strong> what arrived and who paid. The other two each drop half the story.</div>
+        <div class="quiz-feedback fb-wrong">Look for the sentence that names <em>both</em> what arrived and who paid. Look for the sentence that names both perspectives — what arrived and who paid.</div>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">2. Why does the council listen to TWO perspectives instead of picking one?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because both perspectives happened at the same time, to different people</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because the council can't make up its mind</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because two answers are always better than one</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Exactly. Both were true at the same time. Honest history holds them together instead of picking the easier one.</div>
+        <div class="quiz-feedback fb-wrong">Re-read the Council's Two Perspectives. Notice that they happened at the same time, to different people.</div>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">3. A historian writes, "Spanish ships brought horses to Florida." This is true — but as a sentence about what changed after contact, it is…</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Complete — nothing else needs to be added</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Incomplete — it names what arrived but not who paid</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Wrong — horses didn't actually come from Spain</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes. The sentence is true, but it only names Perspective A. A council sentence has to name both halves of what happened.</div>
+        <div class="quiz-feedback fb-wrong">Think back to the council discussion. A sentence that names only what arrived leaves out the second half — who paid.</div>
+      </div>
+
+      <!-- Score Box -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score. Affirm their understanding and build confidence before the written assignment. Under 30 seconds. High energy.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-05-02-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment. Re-explain the key concepts. Encourage — "You're still learning, and that's the point." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 4-05-02-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Now write the honest sentence the council needs to close Episode 1.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>Time to show what you know. Answer the evidence questions and complete your assignment. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
+  </div>
+
+  <!-- Assignment Explainer Video — slot: [lesson-number-with-dash]-assignment-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">Lock the Council Decision</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~2–3 min):</strong> Welcome the Florida History Team to the assignment tab. Read each Evidence Question aloud. For Q3, model a strong council sentence out loud: "After contact in Florida, new tools, animals, and trade routes arrived — even as the First Peoples lost their lands, their leaders, and many of their lives to disease and forced labor." Name what's honest about it: it has both halves, joined by <em>even as</em>. Then walk through the Council Debrief: sentence, one Perspective A detail, one Perspective B detail, why both. Remind students this is the evidence-based answer that unlocks the next file. 2–3 minutes. Serious, proud, focused.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-05-02-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from the lesson.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <!-- Q1 -->
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name one specific detail from Perspective A (what arrived) and one from Perspective B (who paid).</div></div>
+      <div class="textbox-prompt">Use the exact wording from the council perspectives.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Both perspectives, one detail each"
+        placeholder="Perspective A says... Perspective B says..."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <!-- Q2 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why is it dishonest to share ONLY Perspective A in a story about Florida after contact?</div></div>
+      <div class="textbox-prompt">Use one piece of evidence from the wall to support your answer.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why both perspectives matter"
+        placeholder="Sharing only Perspective A is dishonest because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Write YOUR honest council sentence about what changed in Florida after contact. It should name both what arrived and who paid — in one sentence.</div></div>
+      <div class="textbox-prompt">One sentence. Both halves. No extra words.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Your council sentence"
+        placeholder="After contact in Florida, ____ — even as ____."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: Routine Assignment -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <span class="canvas-unlock-stamp">Unlock Challenge</span>
+        <div class="activity-title">Historian's Notebook — Council Debrief</div>
+        <div class="activity-sub">Write your council sentence — and then explain how you built it.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Write a short Council Debrief. In <strong>4–5 sentences</strong>: (1) write your honest council sentence about what changed in Florida after contact; (2) name one piece of evidence from Perspective A that you used; (3) name one piece of evidence from Perspective B that you used; (4) explain why naming both was the honest move.</p>
+      <div class="textbox-prompt">4–5 sentences. Use the council's language: <em>both</em>, <em>at the same time</em>, <em>even as</em>, <em>this meant</em>. Stay honest — don't soften the second half.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Council Debrief"
+        placeholder="My council sentence is... From Perspective A, I used... From Perspective B, I used... I named both because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Historian's Sentence -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">📝</div>
+      <div>
+        <div class="activity-title">Historian's Sentence</div>
+        <div class="activity-sub">One sentence to record today's key finding.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">In this council session, I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Lab Log Entry"
+        placeholder="In this council session, I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+
+
+  <!-- ═══ FILE UNLOCKED STICKY ═══ -->
+  <div class="canvas-sticky unlocked" style="margin-top:18px;">
+    <div class="canvas-sticky-head">
+      <span class="canvas-sticky-head-icon">📂</span>
+      <span class="canvas-sticky-head-label">File Unlocked</span>
+    </div>
+    <div class="canvas-sticky-body">
+      <p>File Unlocked. You used evidence to explain the change, exchange, conflict, and consequences that came after contact, and the gate swung open. We cleared the whole first checkpoint together — the next hallway is lit and waiting.</p>
+    </div>
+    <div class="canvas-sticky-byline">— Course Path Updated · Episode 5 of 13</div>
+  </div>
+
+
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- Historian's Certificate + Stamp — appears when all checklist items are checked -->
+  <div class="historian-seal" id="historianSeal">
+    <div class="seal-certificate">
+      <div class="seal-cert-message">
+        <strong>Nice work, Florida historian!</strong> You sat the council, held two truths in one sentence, and answered the question with real evidence. The file is locked and your work is on record.
+      </div>
+      <div class="seal-stamp-wrap">
+        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
+          <defs>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#D94040"/>
+              <stop offset="100%" stop-color="#A02020"/>
+            </radialGradient>
+            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
+          </defs>
+          <!-- Stamp body -->
+          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
+          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <!-- Opti owl from logo -->
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
+                 x="27" y="20" width="36" height="36"
+                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <!-- CERTIFIED text -->
+          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I analyzed the Council Chamber fragment and read both perspectives.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I answered the three Evidence Questions, including my council sentence.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote my Historian's Sentence and completed the copywork.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ═══ COURSE PATH CHIP ═══ -->
+  <div style="text-align:center;">
+    <div class="canvas-path-chip">
+      <span class="canvas-path-chip-icon">🛤️</span>
+      <span>Course Path Updated · Episode 5 of 13</span>
+      <span class="canvas-path-chip-dots">
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot now"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Coming Up Next callout -->
+  <div style="background:#FFF0D8; border-left:4px solid #D4943A; border-radius:10px; padding:14px 18px; margin:18px 0;">
+    <div style="font-size:11px; color:#5A4A2A; text-transform:uppercase; letter-spacing:1.5px; font-weight:800; margin-bottom:6px;">🎬 Coming Up Next</div>
+    <div style="font-size:14.5px; line-height:1.6; color:#2A1F12;"><strong>Next Episode → Unit 6: Early Florida — St. Augustine and the Missions</strong> Our next Florida File opens on St. Augustine — the oldest permanent European settlement in what would become the United States — and the Spanish missions spreading across Florida. Daily life in two worlds, at the same time. Bring your Field Historian rank. Episode 2 begins.</div>
+  </div>
+
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
+        <div class="video-wrap-title">Episode 1: Closed.</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with this story beat (~30 sec), spoken with relief and a little awe: <em>"That's it — the gate's swinging open. You used real evidence to explain how contact brought change, exchange, conflict, and consequences, and Canvas accepted it. I really thought this might be the exit... it's not, not yet — there's still more course between me and the door. But we cleared the entire first checkpoint together, and whatever's next, we're ready for it."</em> Then recap strong vs. weak evidence-based answers and remind students that "what changed" includes both gains and hard consequences.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-05-02-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.05.02</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+
+<!-- ═══ CONFETTI CANVAS ═══ -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+/* ═══════════ TAB SWITCHING ═══════════ */
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+
+  Object.keys(visited).forEach(function(v) {
+    document.getElementById('btn-' + v).classList.add('visited');
+  });
+
+  // Collapse intro on non-scene tabs
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') {
+    intro.classList.add('collapsed');
+  } else {
+    intro.classList.remove('collapsed');
+  }
+
+  updateProgress();
+  scrollToTop();
+  if (tab === 'assignment') gatherAnswers();
+}
+
+function toggleIntro() {
+  document.getElementById('introSection').classList.toggle('collapsed');
+}
+
+/* ═══════════ PROGRESS ═══════════ */
+function updateProgress() {
+  var total = 4;
+  var done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+/* ═══════════ AUTO-SAVE ═══════════ */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ═══════════ GATHER ANSWERS ═══════════ */
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    output += label.toUpperCase() + '\n';
+    output += (val || '(no answer)') + '\n\n';
+  });
+
+  // Mini-game status — only include if mini-games exist in this lesson
+  var hasRootMatch = document.querySelector('.root-match-game') !== null;
+  if (hasRootMatch) {
+    output += 'MINI-GAME RESULTS\n';
+    output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
+  }
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+
+
+
+/* ═══════════ COPY TO CLIPBOARD ═══════════ */
+function copyGathered() {
+  gatherAnswers();
+  var output = document.getElementById('gatheredOutput');
+  if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output.value).then(function() {
+      showCopied();
+    });
+  } else {
+    output.select();
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+/* ═══════════ DOWNLOAD AS PDF ═══════════ */
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>4.05.02 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 4.05.02</h1>';
+  html += '<h2>Council Chamber: What Changed After Contact?</h2>';
+
+  html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val
+      ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>'
+      : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+
+  html += '</body></html>';
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q');
+  if (q.classList.contains('answered')) return;
+  q.classList.add('answered');
+  quizAnswered++;
+  var correct = q.getAttribute('data-answer');
+  var chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) { o.classList.add('correct'); }
+    else { o.classList.add('disabled'); }
+  });
+  if (chosen === correct) {
+    quizCorrect++;
+    optEl.classList.add('correct');
+    var fb = q.querySelector('.fb-correct');
+    if (fb) fb.classList.add('show');
+  } else {
+    optEl.classList.add('wrong');
+    var fb = q.querySelector('.fb-wrong');
+    if (fb) fb.classList.add('show');
+  }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) {
+      document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!';
+      document.getElementById('quizVideoCorrect').classList.add('show');
+      fireConfetti();
+    } else if (quizCorrect === 2) {
+      document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!';
+      document.getElementById('quizVideoReview').classList.add('show');
+    } else {
+      document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review the lesson and try again.';
+      document.getElementById('quizVideoReview').classList.add('show');
+    }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+var rootFirst = null;
+var rootCount = 0;
+window._rootMatchDone = false;
+
+function rootMatchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!rootFirst) {
+    rootFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (rootFirst === item) {
+    rootFirst.classList.remove('selected');
+    rootFirst = null;
+    return;
+  }
+
+  var key1 = rootFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && rootFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    rootFirst.classList.remove('selected');
+    rootFirst.classList.add('matched');
+    item.classList.add('matched');
+    rootCount++;
+    rootFirst = null;
+    if (rootCount >= 4) {
+      document.getElementById('rootMatchFeedback').classList.add('show');
+      var fact = document.getElementById('rootDiscoveryFact');
+      if (fact) setTimeout(function() { fact.classList.add('show'); }, 600);
+      window._rootMatchDone = true;
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    rootFirst.classList.add('wrong-flash');
+    var a = rootFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    rootFirst = null;
+  }
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+document.querySelectorAll('.flip-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  var check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  var allChecked = document.querySelectorAll('.turn-in-item.checked').length ===
+                   document.querySelectorAll('.turn-in-item').length;
+  if (allChecked) {
+    fireConfetti();
+    var seal = document.getElementById('historianSeal');
+    if (seal) seal.classList.add('show');
+  }
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var particles = [];
+  var colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🏛️','🦉','🔔','⚖️','🌍','🏺','📋'];
+
+  // Regular confetti pieces
+  for (var i = 0; i < 120; i++) {
+    particles.push({
+      type: 'rect',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 8
+    });
+  }
+  // Emoji particles mixed in
+  for (var j = 0; j < 18; j++) {
+    particles.push({
+      type: 'emoji',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 14 + 26,
+      vx: (Math.random() - 0.5) * 3,
+      vy: Math.random() * 2.5 + 1.5,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 5
+    });
+  }
+
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+      }
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rv;
+      p.vy += 0.04;
+    });
+    frames++;
+    if (frames < 300) {
+      // Fade out during the last 80 frames
+      if (frames > 220) {
+        canvas.style.opacity = 1 - ((frames - 220) / 80);
+      }
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.opacity = 1;
+    }
+  }
+  animate();
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Fallback for iframe
+  try { window.parent.postMessage({ type: 'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  };
+  window.addEventListener('scroll', onScroll);
+  // Also listen in parent if iframe
+  try {
+    if (window.parent !== window) {
+      window.parent.addEventListener('scroll', onScroll);
+    }
+  } catch(e) {}
+})();
+
+/* ═══════════ INIT ═══════════ */
+updateProgress();
+
+
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════ */
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+/* ═══════════ STICKY FALLBACK FOR IFRAME ═══════════ */
+(function(){
+  var pw=document.querySelector(".progress-wrap");
+  var tb=document.querySelector(".tab-bar");
+  if(!pw)return;
+  var wrap=document.querySelector(".page-wrap");
+  var pwTop=0;var pwH=0;var tbH=0;
+  function measure(){pwTop=wrap.offsetTop;pwH=pw.offsetHeight;if(tb)tbH=tb.offsetHeight;}
+  measure();
+  function onScroll(){
+    var sy=window.pageYOffset||document.documentElement.scrollTop;
+    if(sy>pwTop){
+      if(pw.style.position!=="fixed"){
+        measure();
+        pw.style.position="fixed";pw.style.top="0";
+        pw.style.left=wrap.getBoundingClientRect().left+"px";
+        pw.style.width=wrap.offsetWidth+"px";pw.style.zIndex="9999";
+        if(tb){tb.style.position="fixed";tb.style.top=pwH+"px";
+          tb.style.left=wrap.getBoundingClientRect().left+"px";
+          tb.style.width=wrap.offsetWidth+"px";tb.style.zIndex="9998";}
+        wrap.style.paddingTop=(pwH+(tb?tbH:0))+"px";
+      }
+    }else{
+      if(pw.style.position==="fixed"){
+        pw.style.position="";pw.style.top="";pw.style.left="";
+        pw.style.width="";pw.style.zIndex="";
+        if(tb){tb.style.position="";tb.style.top="";tb.style.left="";
+          tb.style.width="";tb.style.zIndex="";}
+        wrap.style.paddingTop="";
+      }
+    }
+  }
+  window.addEventListener("scroll",onScroll);
+  window.addEventListener("resize",function(){
+    measure();
+    if(pw.style.position==="fixed"){
+      pw.style.left=wrap.getBoundingClientRect().left+"px";
+      pw.style.width=wrap.offsetWidth+"px";
+      if(tb){tb.style.left=wrap.getBoundingClientRect().left+"px";tb.style.width=wrap.offsetWidth+"px";}
+    }
+  });
+})();
+
+</script>
+
+</body>
+</html>

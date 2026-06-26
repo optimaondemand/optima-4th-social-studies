@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Territorial Florida Assessment — Grade 4 Social Studies</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap');
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', 'Century Gothic', Verdana, sans-serif; background: #F0F2F8; color: #0E1C42; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.page-wrap { max-width: 920px; margin: 0 auto; background: #FFFFFF; box-shadow: 0 0 40px rgba(14, 28, 66, 0.08); }
+.progress-wrap { position: sticky; top: 0; z-index: 200; background: #0E1C42; padding: 8px 20px 10px; display: flex; align-items: center; gap: 14px; }
+.progress-label { font-size: 12px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; white-space: nowrap; }
+.progress-track { flex: 1; height: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #2E7D5B, #55C8E8, #E8843A); border-radius: 10px; transition: width 0.4s ease; }
+.progress-pct { font-size: 13px; color: #2E7D5B; font-weight: 800; min-width: 36px; text-align: right; }
+.header { background: #0E1C42; border-bottom: 6px solid #55C8E8; padding: 20px 28px 18px; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 6px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8); }
+.header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.header-logo { width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+.header-title em { color: #A0E8DA; font-style: italic; }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(85,200,232,0.15); border: 1.5px solid rgba(85,200,232,0.35); border-radius: 28px; padding: 6px 16px; }
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+.info-strip { display: flex; flex-wrap: wrap; background: #FFFFFF; border-bottom: 2px solid #E2E8F4; }
+.info-cell { flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #E2E8F4; display: flex; align-items: center; gap: 10px; }
+.info-cell:last-child { border-right: none; }
+.info-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.info-label { font-size: 10px; color: #7A88A8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.instructions { padding: 20px 28px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-bottom: 2px solid #F5E6C8; }
+.instructions h2 { font-size: 20px; color: #0E1C42; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.instructions p { font-size: 16px; color: #3A4A6B; line-height: 1.7; margin-bottom: 8px; }
+.instructions ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.instructions li { font-size: 15px; color: #3A4A6B; line-height: 1.6; padding: 4px 0 4px 24px; position: relative; }
+.instructions li::before { content: '✓'; position: absolute; left: 0; color: #2E7D5B; font-weight: 800; }
+.section { margin: 20px 28px; }
+.section-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 18px 18px 0 0; border-bottom: 2px solid rgba(255,255,255,0.15); }
+.section-header.navy { background: linear-gradient(135deg, #0E1C42, #1A2D5A); }
+.section-header.green { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.section-header.orange { background: linear-gradient(135deg, #E8843A, #F09A5A); }
+.section-header.purple { background: linear-gradient(135deg, #6B4FA0, #8B6FC0); }
+.section-num { width: 38px; height: 38px; border-radius: 14px; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.section-label { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.section-title { font-size: 19px; color: #fff; font-weight: 800; }
+.section-time { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.15); margin-left: auto; white-space: nowrap; }
+.section-body { background: #FFFFFF; border: 2px solid #E2E8F4; border-top: none; border-radius: 0 0 18px 18px; padding: 20px 22px; }
+.q-block { background: #FAFBFF; border: 2px solid #E2E8F4; border-radius: 14px; padding: 14px 18px; margin-bottom: 12px; }
+.q-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #55C8E8; color: #fff; font-weight: 800; font-size: 14px; margin-right: 8px; vertical-align: middle; }
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 8px; }
+.q-choices { list-style: none; padding: 0; margin: 8px 0 0; }
+.q-choices li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; margin-bottom: 6px; background: #FFFFFF; border: 1.5px solid #E2E8F4; border-radius: 10px; cursor: pointer; transition: all 0.2s; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.q-choices li:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.q-choices li.selected { background: #E3F8ED; border-color: #2E7D5B; }
+.q-radio { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #B8E0F0; background: #fff; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.q-choices li.selected .q-radio { border-color: #2E7D5B; background: #2E7D5B; }
+.q-choices li.selected .q-radio::after { content: '✓'; color: #fff; font-size: 13px; font-weight: 800; }
+.source-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin-bottom: 18px; }
+.source-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.source-card-header-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-card-body { padding: 18px 22px; }
+.source-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.7; margin-bottom: 10px; }
+.source-excerpt { font-family: 'Lora', Georgia, serif; font-size: 16px; color: #0E1C42; font-style: italic; line-height: 1.7; padding: 16px 20px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-left: 4px solid #D4943A; border-radius: 0 12px 12px 0; margin: 12px 0; }
+.journal-box { width: 100%; min-height: 100px; padding: 12px 14px; border: 2px solid #E2E8F4; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 15px; color: #0E1C42; line-height: 1.6; resize: vertical; background: #FAFBFF; transition: border-color 0.2s; margin-top: 8px; }
+.journal-box:focus { outline: none; border-color: #55C8E8; box-shadow: 0 0 0 3px rgba(85,200,232,0.15); background: #fff; }
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.textbox-prompt { font-size: 14px; color: #0E1C42; font-weight: 700; line-height: 1.5; padding: 8px 12px; background: #EAF8FD; border: 1.5px solid #D6F2FB; border-bottom: none; border-radius: 10px 10px 0 0; margin-top: 10px; }
+.textbox-prompt + .journal-box { border-radius: 0 0 12px 12px; margin-top: 0; }
+.callout { border-radius: 14px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.callout-icon { font-size: 28px; flex-shrink: 0; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-source { background: #F0F4FF; border: 2px solid #D0DAEF; }
+.virtue-card { background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border: 2px solid #F5E6C8; border-left: 6px solid #D4943A; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+.virtue-label { font-size: 12px; color: #D4943A; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+.gathered-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; box-shadow: 0 2px 10px rgba(14,28,66,0.04); margin: 22px 28px; }
+.gathered-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #0E1C42, #1A2D5A); padding: 16px 22px; }
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label { font-size: 11px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.gathered-header-title { font-family: 'Lora', Georgia, serif; font-size: 20px; color: #fff; font-weight: 700; }
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output { width: 100%; min-height: 250px; padding: 16px 18px; border: 2px solid #E2E8F4; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #0E1C42; line-height: 1.65; background: #FAFBFF; resize: vertical; white-space: pre-wrap; }
+.gathered-actions { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+.gathered-btn { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border: none; border-radius: 14px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; transition: transform 0.2s; }
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy { background: linear-gradient(135deg, #55C8E8, #7FD8F0); color: #0E1C42; box-shadow: 0 4px 14px rgba(85,200,232,0.25); }
+.gathered-btn-pdf { background: linear-gradient(135deg, #0E1C42, #1A2D5A); color: #fff; border: 2px solid #55C8E8; box-shadow: 0 4px 14px rgba(14,28,66,0.25); }
+.gathered-copied { text-align: center; font-size: 14px; font-weight: 700; color: #34B76F; margin-top: 8px; display: none; }
+.gathered-copied.show { display: block; }
+.turn-in-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px; }
+.turn-in-header { display: flex; align-items: center; gap: 14px; background: #EAF8FD; padding: 18px 22px; border-bottom: 2px solid #D6F2FB; }
+.turn-in-header-icon { font-size: 36px; line-height: 1; }
+.turn-in-header-label { font-size: 11px; color: #1A6B8E; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+.turn-in-header-title { font-family: 'Lora', Georgia, serif; font-size: 22px; color: #0E1C42; font-weight: 700; }
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #FAFBFF; border: 1.5px solid #E2E8F4; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-check { width: 26px; height: 26px; border-radius: 8px; border: 2px solid #B8E0F0; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; transition: all 0.2s; }
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+.rubric-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px 28px; }
+.rubric-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); padding: 16px 22px; }
+.rubric-header-icon { font-size: 26px; }
+.rubric-header-title { font-size: 19px; color: #fff; font-weight: 800; }
+.rubric-body { padding: 0; }
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table th { background: #F0F4FF; padding: 10px 14px; font-size: 12px; color: #0E1C42; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F4; text-align: left; }
+.rubric-table td { padding: 10px 14px; font-size: 13px; color: #3A4A6B; line-height: 1.5; border-bottom: 1px solid #E2E8F4; vertical-align: top; }
+.rubric-table tr:last-child td { border-bottom: none; }
+.rubric-cat { font-weight: 800; color: #0E1C42; font-size: 14px; }
+.rubric-level-3 { background: #E3F8ED; }
+.rubric-level-2 { background: #FFF8F0; }
+.rubric-level-1 { background: #FDE8E8; }
+.confetti-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+.confetti-piece { position: absolute; width: 10px; height: 14px; top: -20px; opacity: 0; }
+@media (max-width: 600px) { .header-title { font-size: 22px; } .info-strip { flex-direction: column; } .info-cell { border-right: none; border-bottom: 1px solid #E2E8F4; } .section { margin: 16px 16px; } .gathered-card, .turn-in-card, .rubric-card { margin: 16px; } }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Progress Bar -->
+  <div class="progress-wrap">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 38'%3E%3Crect rx='6' width='48' height='38' fill='%230E1C42'/%3E%3Ctext x='24' y='26' text-anchor='middle' font-family='Georgia' font-size='22' font-weight='700' fill='%2355C8E8'%3EO%3C/text%3E%3C/svg%3E" alt="Optima Logo">
+      </div>
+      <div>
+        <div class="header-org">Optima Academy Online</div>
+        <div class="header-sub">Social Studies — Grade 4</div>
+      </div>
+    </div>
+    <div class="header-title"><em>Territorial Florida Assessment</em></div>
+    <div class="header-badge">
+      <span class="header-badge-icon">🏛️</span>
+      <span class="header-badge-text">Unit 7</span>
+    </div>
+  </div>
+
+  <!-- Info Strip -->
+  <div class="info-strip">
+    <div class="info-cell">
+      <div class="info-icon" style="background:#EAF8FD;">📋</div>
+      <div>
+        <div class="info-label">Type</div>
+        <div class="info-value">Unit Assessment</div>
+      </div>
+    </div>
+    <div class="info-cell">
+      <div class="info-icon" style="background:#FFF3DC;">⏱️</div>
+      <div>
+        <div class="info-label">Time</div>
+        <div class="info-value">~45 Min</div>
+      </div>
+    </div>
+    <div class="info-cell">
+      <div class="info-icon" style="background:#E3F8ED;">📚</div>
+      <div>
+        <div class="info-label">Covers</div>
+        <div class="info-value">Lessons 4.07.01–4.07.04</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <h2>📝 Welcome, Explorer!</h2>
+    <p>You have traveled deep into Florida's territorial era — from the legacy of Fort Mose and the people who built it, to the treaties and pioneers that shaped Florida's path toward statehood. This assessment is your chance to show everything you have learned!</p>
+    <p>Take your time, read each question carefully, and do your best thinking. There are no tricks here — just you and everything you know. You've got this!</p>
+    <ul>
+      <li>Read each question fully before answering.</li>
+      <li>For multiple-choice questions, click the best answer.</li>
+      <li>For written responses, type in the box provided — complete sentences are encouraged!</li>
+      <li>When you reach the bottom, use the Gathered Answers card to copy or download your work.</li>
+      <li>Check off every item on the Turn-In Checklist before submitting.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION A: Knowledge Check -->
+  <div class="section">
+    <div class="section-header navy">
+      <div class="section-num">A</div>
+      <div>
+        <div class="section-label">Section A</div>
+        <div class="section-title">Knowledge Check</div>
+      </div>
+      <div class="section-time">⏱️ ~10 Min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="callout callout-info" style="margin-bottom:18px;">
+        <span class="callout-icon">💡</span>
+        <p>Choose the <strong>best answer</strong> for each question. Click on the answer you think is correct — it will highlight green when selected.</p>
+      </div>
+
+      <!-- Q1 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">1</span> What was Fort Mose, and why was it historically significant?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) A Spanish mission for converting Native peoples</li>
+          <li><span class="q-radio"></span> B) The first legally sanctioned free Black settlement in what is now the United States, established in 1738</li>
+          <li><span class="q-radio"></span> C) A British trading post in South Florida</li>
+          <li><span class="q-radio"></span> D) A French fort on the Gulf Coast</li>
+        </ul>
+      </div>
+
+      <!-- Q2 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">2</span> How many times did Florida change hands between European powers before becoming a U.S. territory?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) Once</li>
+          <li><span class="q-radio"></span> B) Twice</li>
+          <li><span class="q-radio"></span> C) Three times — Spain to Britain to Spain to the U.S.</li>
+          <li><span class="q-radio"></span> D) It was always controlled by Spain</li>
+        </ul>
+      </div>
+
+      <!-- Q3 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">3</span> What was the Adams-Onis Treaty of 1819?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) A peace treaty ending the Civil War</li>
+          <li><span class="q-radio"></span> B) An agreement where Spain gave Florida to the United States</li>
+          <li><span class="q-radio"></span> C) A trade deal between France and Britain</li>
+          <li><span class="q-radio"></span> D) A law that created the state of Florida</li>
+        </ul>
+      </div>
+
+      <!-- Q4 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">4</span> Why did enslaved people from British colonies escape to Spanish Florida?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) Spain had better weather</li>
+          <li><span class="q-radio"></span> B) Spain offered freedom to enslaved people who converted to Catholicism and pledged loyalty</li>
+          <li><span class="q-radio"></span> C) There were no laws in Florida</li>
+          <li><span class="q-radio"></span> D) Britain told them to leave</li>
+        </ul>
+      </div>
+
+      <!-- Q5 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">5</span> What was life like for pioneers in territorial Florida?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) Easy and comfortable with modern conveniences</li>
+          <li><span class="q-radio"></span> B) Challenging — families built homesteads, farmed, and lived far from towns</li>
+          <li><span class="q-radio"></span> C) Exactly like life in big cities</li>
+          <li><span class="q-radio"></span> D) Pioneers did not come to Florida</li>
+        </ul>
+      </div>
+
+      <!-- Q6 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">6</span> What does the word "territory" mean in U.S. history?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) A state with full voting rights</li>
+          <li><span class="q-radio"></span> B) Land controlled by the U.S. government that has not yet become a state</li>
+          <li><span class="q-radio"></span> C) A country that belongs to another country</li>
+          <li><span class="q-radio"></span> D) A city with its own laws</li>
+        </ul>
+      </div>
+
+      <!-- Q7 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">7</span> What can historians learn from studying the archaeology of Fort Mose?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) Nothing — the site was destroyed</li>
+          <li><span class="q-radio"></span> B) Evidence of how free Black settlers built homes, farmed, and defended their community</li>
+          <li><span class="q-radio"></span> C) Only information about Spanish soldiers</li>
+          <li><span class="q-radio"></span> D) How to build modern houses</li>
+        </ul>
+      </div>
+
+      <!-- Q8 -->
+      <div class="q-block">
+        <div class="q-text"><span class="q-num">8</span> Why was Florida's location important to the United States in the early 1800s?</div>
+        <ul class="q-choices">
+          <li><span class="q-radio"></span> A) The U.S. wanted Florida's gold mines</li>
+          <li><span class="q-radio"></span> B) Florida's coastline and borders were important for security, trade, and expansion</li>
+          <li><span class="q-radio"></span> C) Florida had the largest population</li>
+          <li><span class="q-radio"></span> D) The U.S. needed more desert land</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION B: Source Task -->
+  <div class="section">
+    <div class="section-header green">
+      <div class="section-num">B</div>
+      <div>
+        <div class="section-label">Section B</div>
+        <div class="section-title">Source Study: Fort Mose</div>
+      </div>
+      <div class="section-time">⏱️ ~12 Min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="callout callout-source" style="margin-bottom:18px;">
+        <span class="callout-icon">🔍</span>
+        <p><strong>Source Study: Fort Mose</strong><br>Read the source excerpt below and study the map. Then answer the two evidence questions using details from the source.</p>
+      </div>
+
+      <!-- Source -->
+      <div class="source-card">
+        <div class="source-card-header">
+          <div class="source-card-header-icon">📜</div>
+          <div class="source-card-header-title">Historical Account — Fort Mose</div>
+        </div>
+        <div class="source-card-body">
+          <p><strong>Type:</strong> Historical Summary &nbsp;|&nbsp; <strong>Topic:</strong> Fort Mose &nbsp;|&nbsp; <strong>Date:</strong> 1738</p>
+          <div class="source-excerpt">
+            "In 1738, the governor of Spanish Florida established Gracia Real de Santa Teresa de Mose — known as Fort Mose — about two miles north of St. Augustine. It became a community of formerly enslaved people who had escaped from British colonies. The residents built homes, grew crops, and formed a militia to help defend St. Augustine. Fort Mose is recognized as the first legally sanctioned free Black settlement in what is now the United States."
+          </div>
+          <p style="text-align:center; color:#7A88A8; font-style:italic; margin-top:14px;">[Map: Location of Fort Mose north of St. Augustine]</p>
+        </div>
+      </div>
+
+      <!-- Evidence Q1 -->
+      <div class="callout callout-think" style="margin-top:8px; margin-bottom:4px;">
+        <span class="callout-icon">✍️</span>
+        <p>Now use what you read to answer the two questions below. Try to include specific details from the source in your responses.</p>
+      </div>
+
+      <div class="textbox-prompt">Evidence Question 1: Based on the source, what did the people of Fort Mose do to build their community? Name at least two things.</div>
+      <textarea class="journal-box" data-label="Evidence Question 1: Based on the source, what did the people of Fort Mose do to build their community? Name at least two things." placeholder="Type your answer here. Try to use specific details from the source…" rows="5"></textarea>
+
+      <div class="textbox-prompt" style="margin-top:18px;">Evidence Question 2: Why is Fort Mose an important historical site? Use evidence from the source to explain.</div>
+      <textarea class="journal-box" data-label="Evidence Question 2: Why is Fort Mose an important historical site? Use evidence from the source to explain." placeholder="Think about what makes Fort Mose historically significant. Use details from the source to support your answer…" rows="6"></textarea>
+
+    </div>
+  </div>
+
+  <!-- SECTION C: Socratic Response -->
+  <div class="section">
+    <div class="section-header orange">
+      <div class="section-num">C</div>
+      <div>
+        <div class="section-label">Section C</div>
+        <div class="section-title">Socratic Response</div>
+      </div>
+      <div class="section-time">⏱️ ~15 Min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="callout callout-think">
+        <span class="callout-icon">🧠</span>
+        <p>Think about everything you have learned about Territorial Florida — the changes in colonial control, the people who lived through those changes, and the communities they built. This is your chance to <strong>think deeply and explain your reasoning</strong>!</p>
+      </div>
+
+      <div class="callout callout-tip" style="margin-bottom:18px;">
+        <span class="callout-icon">⭐</span>
+        <p><strong>Strong responses include:</strong> A specific group you chose, at least one piece of evidence from what you learned, and an explanation of how a change in control affected their lives.</p>
+      </div>
+
+      <div class="textbox-prompt">Socratic Response: Florida changed hands multiple times — from Spain to Britain to Spain to the United States. Think about how these changes affected the people living in Florida, including Native peoples, free Black communities like Fort Mose, and settlers. Choose one group and explain how a change in control might have affected their lives. Use evidence from what you learned.</div>
+      <textarea class="journal-box" data-label="Socratic Response: Choose one group and explain how a change in colonial control affected their lives." placeholder="Start by choosing a group: Native peoples, free Black communities like Fort Mose, or settlers. Then explain how a change in control — from Spain to Britain, or from Spain to the U.S. — affected their lives. Use evidence from what you studied!" rows="10" style="min-height:160px;"></textarea>
+
+    </div>
+  </div>
+
+  <!-- SECTION D: Virtue Lens Reflection -->
+  <div class="section">
+    <div class="section-header purple">
+      <div class="section-num">D</div>
+      <div>
+        <div class="section-label">Section D</div>
+        <div class="section-title">Virtue Lens Reflection</div>
+      </div>
+      <div class="section-time">⏱️ ~5 Min</div>
+    </div>
+    <div class="section-body">
+
+      <div class="virtue-card">
+        <div class="virtue-label">🦁 Virtue Lens — Courage</div>
+        <div class="virtue-text">
+          The people who escaped slavery and built Fort Mose faced enormous dangers and made brave choices. The Virtue Lens helps us think about the character behind historical actions. Reflect on the virtue of <strong>courage</strong> and how it connects to the story of Fort Mose.
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-bottom:10px;">
+        <span class="callout-icon">💭</span>
+        <p>Think about what risks the people of Fort Mose took. What did they leave behind? What did they face? Why was their decision brave?</p>
+      </div>
+
+      <div class="textbox-prompt">Virtue Lens Reflection: Think about the virtue of courage. How did the people who escaped slavery and built Fort Mose show courage? What risks did they take, and why was their decision brave?</div>
+      <textarea class="journal-box" data-label="Virtue Lens Reflection: How did the people who escaped slavery and built Fort Mose show courage?" placeholder="The people of Fort Mose showed courage by… They risked… Their decision was brave because…" rows="8" style="min-height:130px;"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Gathered Answers Card -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <span class="gathered-header-icon">📦</span>
+      <div>
+        <div class="gathered-header-label">Step 5</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <p class="gathered-intro">When you are finished, click <strong>Gather My Answers</strong> to collect all of your responses in one place. Then copy or download your answers to submit to your teacher.</p>
+      <div style="margin-bottom:12px;">
+        <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers()" style="margin-bottom:10px; width:100%;">📋 Gather My Answers</button>
+      </div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your gathered answers will appear here after you click 'Gather My Answers' above…"></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyAnswers()">📋 Copy All Answers</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF()">⬇️ Download as Text</button>
+      </div>
+      <div class="gathered-copied" id="copiedMsg">✅ Answers copied to clipboard!</div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Final Step</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <p class="turn-in-intro">Before you submit, check off each item below to make sure you haven't missed anything. When all five are checked — celebrate! You've completed your Territorial Florida Assessment!</p>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I answered all eight Knowledge Check questions in Section A.</div>
+        </div>
+        <div class="turn-in-item">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I completed both evidence questions in the Source Study (Section B).</div>
+        </div>
+        <div class="turn-in-item">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I wrote my Socratic Response choosing a group and explaining how a change in control affected their lives (Section C).</div>
+        </div>
+        <div class="turn-in-item">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I wrote my Virtue Lens Reflection about courage and Fort Mose (Section D).</div>
+        </div>
+        <div class="turn-in-item">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">I gathered, copied, or downloaded my answers and am ready to submit.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rubric -->
+  <div class="rubric-card">
+    <div class="rubric-header">
+      <span class="rubric-header-icon">📊</span>
+      <div class="rubric-header-title">Scoring Rubric</div>
+    </div>
+    <div class="rubric-body">
+      <table class="rubric-table">
+        <thead>
+          <tr>
+            <th style="width:22%;">Category</th>
+            <th style="width:26%;">⭐⭐⭐ Level 3</th>
+            <th style="width:26%;">⭐⭐ Level 2</th>
+            <th style="width:26%;">⭐ Level 1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rubric-cat">Knowledge &amp; Recall</td>
+            <td class="rubric-level-3">Answers 7–8 multiple-choice questions correctly.</td>
+            <td class="rubric-level-2">Answers 4–6 multiple-choice questions correctly.</td>
+            <td class="rubric-level-1">Answers 0–3 multiple-choice questions correctly.</td>
+          </tr>
+          <tr>
+            <td class="rubric-cat">Source Analysis</td>
+            <td class="rubric-level-3">Uses specific details from the source; explains significance clearly and fully.</td>
+            <td class="rubric-level-2">References the source but lacks specific detail or full explanation.</td>
+            <td class="rubric-level-1">Does not reference the source or uses only vague, unsupported statements.</td>
+          </tr>
+          <tr>
+            <td class="rubric-cat">Socratic Response</td>
+            <td class="rubric-level-3">Chooses a group, provides evidence, and clearly explains how a change in control affected their lives.</td>
+            <td class="rubric-level-2">Chooses a group but provides only vague evidence or limited explanation.</td>
+            <td class="rubric-level-1">Does not choose a group or provides no evidence to support a position.</td>
+          </tr>
+          <tr>
+            <td class="rubric-cat">Virtue Reflection</td>
+            <td class="rubric-level-3">Names courage and connects it clearly to specific actions and risks taken by the people of Fort Mose.</td>
+            <td class="rubric-level-2">Mentions courage but the connection to Fort Mose is vague or underdeveloped.</td>
+            <td class="rubric-level-1">Does not connect courage to any unit content or leaves section blank.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<script>
+function gatherAnswers() {
+  let output = [];
+  document.querySelectorAll('.q-block').forEach((block, i) => {
+    const qText = block.querySelector('.q-text')?.textContent?.trim() || '';
+    const selected = block.querySelector('.q-choices li.selected');
+    const answer = selected ? selected.textContent.trim() : '[No answer selected]';
+    output.push(`Q${i+1}: ${qText}\nAnswer: ${answer}`);
+  });
+  document.querySelectorAll('.journal-box').forEach(ta => {
+    const prompt = ta.previousElementSibling;
+    const label = (prompt && prompt.classList.contains('textbox-prompt')) ? prompt.textContent.trim() : (ta.getAttribute('data-label') || 'Response');
+    const val = ta.value.trim() || '[No response written]';
+    output.push(`${label}\nResponse: ${val}`);
+  });
+  document.getElementById('gatheredOutput').value = output.join('\n\n---\n\n');
+}
+function copyAnswers() {
+  const el = document.getElementById('gatheredOutput');
+  el.select(); document.execCommand('copy');
+  const msg = document.getElementById('copiedMsg');
+  msg.classList.add('show'); setTimeout(() => msg.classList.remove('show'), 2500);
+}
+function downloadPDF() {
+  const text = document.getElementById('gatheredOutput').value;
+  const blob = new Blob([text], {type: 'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = document.title.replace(/[^a-zA-Z0-9]/g, '_') + '_answers.txt';
+  a.click();
+}
+document.querySelectorAll('.q-choices li').forEach(li => {
+  li.addEventListener('click', () => {
+    li.closest('.q-choices').querySelectorAll('li').forEach(x => x.classList.remove('selected'));
+    li.classList.add('selected'); updateProgress();
+  });
+});
+document.querySelectorAll('.turn-in-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('checked');
+    const check = item.querySelector('.turn-in-check');
+    check.innerHTML = item.classList.contains('checked') ? '✓' : '';
+    const all = document.querySelectorAll('.turn-in-item');
+    const checked = document.querySelectorAll('.turn-in-item.checked');
+    if (checked.length === all.length) launchConfetti();
+  });
+});
+function updateProgress() {
+  const mcTotal = document.querySelectorAll('.q-choices').length;
+  const mcDone = document.querySelectorAll('.q-choices li.selected').length;
+  const taTotal = document.querySelectorAll('.journal-box').length;
+  let taDone = 0;
+  document.querySelectorAll('.journal-box').forEach(ta => { if (ta.value.trim()) taDone++; });
+  const total = mcTotal + taTotal; const done = mcDone + taDone;
+  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  const fill = document.getElementById('progressFill');
+  const pctEl = document.getElementById('progressPct');
+  if (fill) fill.style.width = pct + '%';
+  if (pctEl) pctEl.textContent = pct + '%';
+}
+document.querySelectorAll('.journal-box').forEach(ta => { ta.addEventListener('input', updateProgress); });
+function launchConfetti() {
+  const container = document.createElement('div');
+  container.className = 'confetti-container';
+  document.body.appendChild(container);
+  const colors = ['#55C8E8', '#2E7D5B', '#E8843A', '#D4943A', '#8B6FC0', '#34B76F', '#FF6B6B'];
+  for (let i = 0; i < 60; i++) {
+    const piece = document.createElement('div');
+    piece.className = 'confetti-piece';
+    piece.style.left = Math.random() * 100 + '%';
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    piece.style.width = (6 + Math.random() * 8) + 'px';
+    piece.style.height = (8 + Math.random() * 12) + 'px';
+    container.appendChild(piece);
+    const delay = Math.random() * 500;
+    const duration = 1500 + Math.random() * 1500;
+    piece.animate([
+      { top: '-20px', opacity: 1, transform: 'rotate(0deg) translateX(0)' },
+      { top: '100vh', opacity: 0, transform: 'rotate(' + (360 + Math.random()*720) + 'deg) translateX(' + (Math.random()*200-100) + 'px)' }
+    ], { duration, delay, easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)', fill: 'forwards' });
+  }
+  setTimeout(() => container.remove(), 3500);
+}
+let gathered = false;
+window.addEventListener('scroll', () => {
+  if (!gathered && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+    gathered = true; gatherAnswers();
+  }
+});
+</script>
+</body>
+</html>

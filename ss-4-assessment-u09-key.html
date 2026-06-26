@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episode 2 Synthesis Assessment — Unit 9 — Answer Key</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* PROGRESS BAR */
+.progress-wrap {
+  position: sticky; top: 0; z-index: 200;
+  background: #0E1C42; padding: 8px 20px 10px;
+  display: flex; align-items: center; gap: 14px;
+}
+.progress-label { font-size: 12px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; white-space: nowrap; }
+.progress-track { flex: 1; height: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #2E7D5B, #55C8E8, #E8843A); border-radius: 10px; transition: width 0.4s ease; }
+.progress-pct { font-size: 13px; color: #2E7D5B; font-weight: 800; min-width: 36px; text-align: right; }
+
+/* HEADER */
+.header {
+  background: #0E1C42; border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px; position: relative; overflow: hidden;
+}
+.header::after { content: ''; position: absolute; bottom: 6px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8); }
+.header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.header-logo { width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+.header-title em { color: #A0E8DA; font-style: italic; }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(85,200,232,0.15); border: 1.5px solid rgba(85,200,232,0.35); border-radius: 28px; padding: 6px 16px; }
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* INFO STRIP */
+.info-strip { display: flex; flex-wrap: wrap; background: #FFFFFF; border-bottom: 2px solid #E2E8F4; }
+.info-cell { flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #E2E8F4; display: flex; align-items: center; gap: 10px; }
+.info-cell:last-child { border-right: none; }
+.info-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.info-label { font-size: 10px; color: #7A88A8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+
+/* INSTRUCTIONS */
+.instructions { padding: 20px 28px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-bottom: 2px solid #F5E6C8; }
+.instructions h2 { font-size: 20px; color: #0E1C42; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.instructions p { font-size: 16px; color: #3A4A6B; line-height: 1.7; margin-bottom: 8px; }
+.instructions ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.instructions li { font-size: 15px; color: #3A4A6B; line-height: 1.6; padding: 4px 0 4px 24px; position: relative; }
+.instructions li::before { content: '\2713'; position: absolute; left: 0; color: #2E7D5B; font-weight: 800; }
+
+/* SECTION CARDS */
+.section { margin: 20px 28px; }
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px; border-radius: 18px 18px 0 0;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.section-header.navy { background: linear-gradient(135deg, #0E1C42, #1A2D5A); }
+.section-header.green { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.section-header.orange { background: linear-gradient(135deg, #E8843A, #F09A5A); }
+.section-header.purple { background: linear-gradient(135deg, #6B4FA0, #8B6FC0); }
+.section-num { width: 38px; height: 38px; border-radius: 14px; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.section-label { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.section-title { font-size: 19px; color: #fff; font-weight: 800; }
+.section-time { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.15); margin-left: auto; white-space: nowrap; }
+.section-body {
+  background: #FFFFFF; border: 2px solid #E2E8F4; border-top: none;
+  border-radius: 0 0 18px 18px; padding: 20px 22px;
+}
+
+/* QUESTION BLOCKS */
+.q-block {
+  background: #FAFBFF; border: 2px solid #E2E8F4; border-radius: 14px;
+  padding: 14px 18px; margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%; background: #55C8E8;
+  color: #fff; font-weight: 800; font-size: 14px; margin-right: 8px; vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 8px; }
+.q-choices { list-style: none; padding: 0; margin: 8px 0 0; }
+.q-choices li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 14px; margin-bottom: 6px;
+  background: #FFFFFF; border: 1.5px solid #E2E8F4; border-radius: 10px;
+  font-size: 15px; color: #0E1C42; line-height: 1.5;
+}
+.q-choices li.selected { background: #E3F8ED; border-color: #2E7D5B; }
+.q-radio {
+  width: 22px; height: 22px; border-radius: 50%; border: 2px solid #B8E0F0;
+  background: #fff; flex-shrink: 0; margin-top: 1px; display: flex;
+  align-items: center; justify-content: center;
+}
+.q-choices li.selected .q-radio { border-color: #2E7D5B; background: #2E7D5B; }
+.q-choices li.selected .q-radio::after { content: '\2713'; color: #fff; font-size: 13px; font-weight: 800; }
+
+/* TEXTAREAS */
+.journal-box {
+  width: 100%; min-height: 100px; padding: 12px 14px;
+  border: 2px solid #E2E8F4; border-radius: 12px;
+  font-family: 'Nunito', sans-serif; font-size: 15px; color: #0E1C42;
+  line-height: 1.6; resize: vertical; background: #FAFBFF;
+  margin-top: 8px;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.textbox-prompt {
+  font-size: 14px; color: #0E1C42; font-weight: 700; line-height: 1.5;
+  padding: 8px 12px; background: #EAF8FD; border: 1.5px solid #D6F2FB;
+  border-bottom: none; border-radius: 10px 10px 0 0; margin-top: 10px;
+}
+.textbox-prompt + .journal-box { border-radius: 0 0 12px 12px; margin-top: 0; }
+
+/* CALLOUTS */
+.callout { border-radius: 14px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.callout-icon { font-size: 28px; flex-shrink: 0; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-source { background: #F0F4FF; border: 2px solid #D0DAEF; }
+
+/* SOURCE CARD */
+.source-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin-bottom: 18px; }
+.source-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.source-card-header-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-card-body { padding: 18px 22px; }
+.source-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.7; margin-bottom: 10px; }
+.source-excerpt {
+  font-family: 'Lora', Georgia, serif; font-size: 16px; color: #0E1C42;
+  font-style: italic; line-height: 1.7; padding: 16px 20px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border-left: 4px solid #D4943A; border-radius: 0 12px 12px 0; margin: 12px 0;
+}
+
+/* VIRTUE CARD */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8; border-left: 6px solid #D4943A;
+  border-radius: 14px; padding: 16px 18px; margin-bottom: 14px;
+}
+.virtue-label { font-size: 12px; color: #D4943A; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* RUBRIC */
+.rubric-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px 28px; }
+.rubric-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); padding: 16px 22px; }
+.rubric-header-icon { font-size: 26px; }
+.rubric-header-title { font-size: 19px; color: #fff; font-weight: 800; }
+.rubric-body { padding: 0; }
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table th { background: #F0F4FF; padding: 10px 14px; font-size: 12px; color: #0E1C42; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F4; text-align: left; }
+.rubric-table td { padding: 10px 14px; font-size: 13px; color: #3A4A6B; line-height: 1.5; border-bottom: 1px solid #E2E8F4; vertical-align: top; }
+.rubric-table tr:last-child td { border-bottom: none; }
+.rubric-cat { font-weight: 800; color: #0E1C42; font-size: 14px; }
+.rubric-level-3 { background: #E3F8ED; }
+.rubric-level-2 { background: #FFF8F0; }
+.rubric-level-1 { background: #FDE8E8; }
+
+/* ANSWER KEY STYLES */
+.key-correct { background: #E3F8ED; border: 2px solid #2E7D5B; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-correct-label { font-size: 12px; color: #2E7D5B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.key-explanation { font-size: 14px; color: #3A4A6B; line-height: 1.6; }
+.key-misconception { background: #FFF3DC; border: 2px solid #F5E6C8; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-misconception-label { font-size: 12px; color: #D4943A; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.key-banner { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); color: #fff; text-align: center; padding: 12px 20px; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header-title { font-size: 22px; }
+  .info-strip { flex-direction: column; }
+  .info-cell { border-right: none; border-bottom: 1px solid #E2E8F4; }
+  .section { margin: 16px 16px; }
+  .rubric-card { margin: 16px; }
+  .rubric-table { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- KEY BANNER -->
+<div class="key-banner">ANSWER KEY &#8212; FOR TEACHER USE ONLY</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg width="48" height="38" viewBox="0 0 48 38"><circle cx="24" cy="19" r="16" fill="#0E1C42"/><text x="24" y="23" text-anchor="middle" fill="#55C8E8" font-family="Nunito, sans-serif" font-size="11" font-weight="800">OAO</text></svg>
+    </div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">Grade 4 Social Studies</div>
+    </div>
+  </div>
+  <div class="header-title">Episode 2 <em>Synthesis</em> Assessment &#8212; Answer Key</div>
+  <div class="header-badge">
+    <span class="header-badge-icon">&#128273;</span>
+    <span class="header-badge-text">Unit 9 Answer Key</span>
+  </div>
+</div>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">&#128339;</div>
+    <div><div class="info-label">Time</div><div class="info-value">~35 min</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">&#129513;</div>
+    <div><div class="info-label">Sections</div><div class="info-value">4 Parts</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">&#128214;</div>
+    <div><div class="info-label">Covers</div><div class="info-value">Units 7&#8211;8</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0F4FF;">&#11088;</div>
+    <div><div class="info-label">Type</div><div class="info-value">Synthesis</div></div>
+  </div>
+</div>
+
+<!-- SECTION A: KNOWLEDGE CHECK -->
+<div class="section">
+  <div class="section-header navy">
+    <div class="section-num">A</div>
+    <div>
+      <div class="section-label">Section A</div>
+      <div class="section-title">Knowledge Check</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <!-- Q1 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">1</span>The Adams-Onis Treaty of 1819 resulted in which major change for Florida?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Florida became an independent country</li>
+        <li class="selected"><span class="q-radio"></span>B) Spain gave Florida to the United States</li>
+        <li><span class="q-radio"></span>C) Florida was divided between France and England</li>
+        <li><span class="q-radio"></span>D) The Seminole people gained control of Florida</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">The Adams-Onis Treaty (also called the Transcontinental Treaty) was an agreement between Spain and the United States in which Spain ceded Florida to the U.S. in 1819. This ended centuries of Spanish control and made Florida a U.S. territory.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse "ceded" with "independence" (A) or mix up the European powers involved (C). Some may recall the Seminole Wars and incorrectly associate the treaty with Native American control (D).</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">2</span>Which of these events happened FIRST in Florida's history?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Florida became a U.S. state in 1845</li>
+        <li class="selected"><span class="q-radio"></span>B) Fort Mose was established as a free Black settlement</li>
+        <li><span class="q-radio"></span>C) The Civil War began</li>
+        <li><span class="q-radio"></span>D) The Adams-Onis Treaty was signed</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Fort Mose was established in 1738 near St. Augustine, making it the first legally sanctioned free Black settlement in what is now the United States. This predates the Adams-Onis Treaty (1819), statehood (1845), and the Civil War (1861).</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students often struggle with chronology. Some may pick the Adams-Onis Treaty (D) because it sounds "early" or choose statehood (A) because it is a founding event. Remind students to use their timeline knowledge: Fort Mose (1738) is the earliest.</div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">3</span>What was one major reason Florida's territorial leaders wanted statehood?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) They wanted to end all farming in the territory</li>
+        <li class="selected"><span class="q-radio"></span>B) They wanted more say in the U.S. government and the ability to make their own laws</li>
+        <li><span class="q-radio"></span>C) They hoped to return Florida to Spanish control</li>
+        <li><span class="q-radio"></span>D) They wanted to move the capital to Miami</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">As a territory, Florida had limited representation in Congress and could not fully govern itself. Territorial leaders wanted statehood so they could elect their own representatives, pass their own laws, and have a stronger voice in the federal government.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may not understand the difference between a territory and a state. Some may pick absurd distractors (A, D) if they are guessing, which signals they did not retain the lesson content on statehood motivations.</div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">4</span>During the antebellum period, Florida's economy depended heavily on:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Tourism and space travel</li>
+        <li class="selected"><span class="q-radio"></span>B) Plantation agriculture and enslaved labor</li>
+        <li><span class="q-radio"></span>C) Fishing and shipbuilding only</li>
+        <li><span class="q-radio"></span>D) Gold mining and fur trading</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">The antebellum period (before the Civil War) in Florida was dominated by plantation agriculture, especially cotton and sugar, which depended on the labor of enslaved people. This economic system was central to Florida's entry into the Confederacy.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may associate Florida with tourism (A), which is a modern industry. Some may pick fishing (C) because Florida is surrounded by water, but this was not the dominant economic driver during the antebellum period.</div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">5</span>What did Reconstruction aim to do in Florida after the Civil War?</div>
+      <ul class="q-choices">
+        <li class="selected"><span class="q-radio"></span>A) Rebuild the state and protect the rights of formerly enslaved people</li>
+        <li><span class="q-radio"></span>B) Return Florida to Confederate control</li>
+        <li><span class="q-radio"></span>C) Move all Floridians to northern states</li>
+        <li><span class="q-radio"></span>D) Close all schools and churches</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: A</div>
+        <div class="key-explanation">Reconstruction was the period after the Civil War during which the federal government worked to rebuild Southern states and establish civil rights for formerly enslaved people, including the right to vote, attend school, and hold office.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse Reconstruction goals with pre-war conditions (B) or not understand that Reconstruction was about rebuilding and rights. If students pick B, they may be confusing Reconstruction with the "Redemption" era that followed it.</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6</span>Which is the correct order of these Florida events?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Civil War &#8594; Fort Mose &#8594; Statehood &#8594; Reconstruction</li>
+        <li class="selected"><span class="q-radio"></span>B) Fort Mose &#8594; Adams-Onis Treaty &#8594; Statehood &#8594; Civil War &#8594; Reconstruction</li>
+        <li><span class="q-radio"></span>C) Statehood &#8594; Fort Mose &#8594; Civil War &#8594; Adams-Onis Treaty</li>
+        <li><span class="q-radio"></span>D) Adams-Onis Treaty &#8594; Reconstruction &#8594; Fort Mose &#8594; Civil War</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">The correct chronological order is: Fort Mose (1738) &#8594; Adams-Onis Treaty (1819) &#8594; Florida Statehood (1845) &#8594; Civil War (1861&#8211;1865) &#8594; Reconstruction (1865&#8211;1877). This is the core timeline students should have mastered across Units 7&#8211;8.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">This question tests overall chronological understanding. Students who select A or C are placing Fort Mose too late in the timeline. Students who select D may be confusing the order of Reconstruction and earlier events.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION B: SOURCE & MAP TASK -->
+<div class="section">
+  <div class="section-header green">
+    <div class="section-num">B</div>
+    <div>
+      <div class="section-label">Section B</div>
+      <div class="section-title">Source &amp; Map Task</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="source-card">
+      <div class="source-card-header">
+        <div class="source-card-header-icon">&#128220;</div>
+        <div class="source-card-header-title">Historical Source: Florida Statehood (1845)</div>
+      </div>
+      <div class="source-card-body">
+        <p>Read the following excerpt from a historical account describing Florida's transition from territory to state.</p>
+        <div class="source-excerpt">"When Florida became the 27th state on March 3, 1845, many settlers celebrated. They believed statehood would bring new roads, more protection from conflicts, and a stronger voice in Congress. But not everyone shared this joy. Enslaved people, who made up nearly half the population in some counties, had no voice in this decision. For them, statehood meant that the system of slavery would continue under new laws."</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7</span>Use the source above to answer the following question.</div>
+      <div class="textbox-prompt">What does this source tell us about who benefited from Florida's statehood and who did not? Use details from the text.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">The source tells us that settlers benefited from statehood because they believed it would bring new roads, protection, and a stronger voice in Congress. However, enslaved people did not benefit. The source says they "had no voice in this decision" and that statehood meant slavery would continue under new laws. So the same event was good for some people but harmful for others.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Identifies both groups (settlers and enslaved people), uses specific text details (roads, protection, Congress, no voice, slavery continued). <strong>Developing (2):</strong> Mentions both groups but is vague or uses only one detail. <strong>Beginning (1):</strong> Names only one group or does not reference the source text.</div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8</span>Think about what you have learned in Units 7&#8211;8 along with this source.</div>
+      <div class="textbox-prompt">Based on this source and what you learned in Units 7&#8211;8, why might different groups of people have had very different feelings about the same event?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">Different groups had different feelings because statehood affected them in different ways. White settlers gained political power and hoped for economic growth, like new roads and trade. But enslaved people had no rights under the new state government, and statehood made it even harder for them to become free because Florida's laws protected slavery. From Units 7&#8211;8, we know that Florida's economy depended on enslaved labor, so the people in power wanted to keep that system going. This shows that the same event can be seen as positive or negative depending on a person's situation.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Connects the source to prior learning, explains how perspective depends on one's position in society, and references specific content from Units 7&#8211;8. <strong>Developing (2):</strong> Mentions different perspectives but does not clearly connect to Units 7&#8211;8 content. <strong>Beginning (1):</strong> Gives a one-sentence answer without evidence or connection to prior learning.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION C: SOCRATIC RESPONSE -->
+<div class="section">
+  <div class="section-header orange">
+    <div class="section-num">C</div>
+    <div>
+      <div class="section-label">Section C</div>
+      <div class="section-title">Socratic Response</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout callout-think">
+      <div class="callout-icon">&#129300;</div>
+      <p>This question asks students to make a claim and support it with evidence. Look for a clear claim statement and at least two supporting details.</p>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9</span>Read the prompt below.</div>
+      <div class="textbox-prompt">Think about the events from Fort Mose through Reconstruction. Which ONE event do you believe most changed Florida? State your claim and give at least two pieces of evidence to support it.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">I believe that the Adams-Onis Treaty most changed Florida because it shifted control of the territory from Spain to the United States, which set off a chain of events that shaped everything that followed. First, the treaty made Florida a U.S. territory, which brought American settlers and laws and eventually led to statehood in 1845. Second, under U.S. control, the plantation system and slavery expanded rapidly, which changed Florida's economy and population. Without the Adams-Onis Treaty, Florida might have remained under Spanish rule, and the path to the Civil War and Reconstruction would have looked very different.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Accept any event</strong> from the Fort Mose&#8211;Reconstruction timeline as long as the student provides a clear claim and at least two pieces of evidence. Strong answers connect the chosen event to later consequences. <strong>Secure (3):</strong> Clear claim, 2+ specific evidence pieces, explains cause&#8594;effect. <strong>Developing (2):</strong> Has a claim and 1&#8211;2 evidence pieces but reasoning is incomplete. <strong>Beginning (1):</strong> No clear claim, or evidence is missing/irrelevant. <strong>Other valid claims:</strong> Florida statehood (1845), the Civil War, Fort Mose, Reconstruction &#8212; all are acceptable with proper evidence.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION D: VIRTUE LENS REFLECTION -->
+<div class="section">
+  <div class="section-header purple">
+    <div class="section-num">D</div>
+    <div>
+      <div class="section-label">Section D</div>
+      <div class="section-title">Virtue Lens Reflection</div>
+    </div>
+    <div class="section-time">&#9202; ~5 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="virtue-card">
+      <div class="virtue-label">&#9878;&#65039; Virtue Focus: Justice</div>
+      <div class="virtue-text">Justice means treating people fairly and standing up for what is right, even when it is difficult.</div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10</span>Reflect on what you learned in Units 7&#8211;8.</div>
+      <div class="textbox-prompt">During Reconstruction, leaders tried to create fairer laws for all Floridians. Think of one example from Units 7&#8211;8 where someone showed the virtue of justice &#8212; treating people fairly even when it was hard. Who was it, what did they do, and why does it take courage to be just?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">One example of justice from Units 7&#8211;8 is the people who established Fort Mose. The Spanish governor of Florida allowed enslaved people who escaped from British colonies to live as free people at Fort Mose. This showed justice because he treated them as people who deserved freedom, even though slavery was common at the time. It took courage because it went against what many powerful people believed and could have caused conflict with the British colonies. Another example could be Reconstruction leaders who passed new laws giving formerly enslaved people the right to vote and go to school, even though many white Southerners opposed these changes.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Names a specific person or group, describes what they did, connects it to the virtue of justice, and explains why it required courage. <strong>Developing (2):</strong> Names an example and connects to justice but explanation of courage is vague. <strong>Beginning (1):</strong> No specific example, or no connection to justice. <strong>Accept any valid example</strong> from Units 7&#8211;8 content: Fort Mose founders, Reconstruction-era legislators, abolitionists, freedmen who built schools, etc.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RUBRIC -->
+<div class="rubric-card">
+  <div class="rubric-header">
+    <div class="rubric-header-icon">&#128200;</div>
+    <div class="rubric-header-title">Assessment Rubric</div>
+  </div>
+  <div class="rubric-body">
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th class="rubric-level-3">Secure (3)</th>
+          <th class="rubric-level-2">Developing (2)</th>
+          <th class="rubric-level-1">Beginning (1)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rubric-cat">Content Knowledge</td>
+          <td class="rubric-level-3">Names key people, places, events, vocabulary accurately.</td>
+          <td class="rubric-level-2">Most key facts, few errors.</td>
+          <td class="rubric-level-1">Misses/confuses key facts.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Chronology &amp; Cause&#8211;Effect</td>
+          <td class="rubric-level-3">Right order, explains cause&#8594;effect.</td>
+          <td class="rubric-level-2">Mostly right, incomplete.</td>
+          <td class="rubric-level-1">Out of order or missing.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Source &amp; Map Interpretation</td>
+          <td class="rubric-level-3">Uses evidence to support ideas.</td>
+          <td class="rubric-level-2">References source but vague.</td>
+          <td class="rubric-level-1">No evidence or misreads.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Civic &amp; Virtue Judgment</td>
+          <td class="rubric-level-3">Connects virtue with reasoning.</td>
+          <td class="rubric-level-2">Names virtue, vague connection.</td>
+          <td class="rubric-level-1">No connection or missing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- end page-wrap -->
+</body>
+</html>

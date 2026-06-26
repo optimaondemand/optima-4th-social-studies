@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Florida Assessment — Unit 10 — Answer Key</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap');
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', 'Century Gothic', Verdana, sans-serif; background: #F0F2F8; color: #0E1C42; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.page-wrap { max-width: 920px; margin: 0 auto; background: #FFFFFF; box-shadow: 0 0 40px rgba(14, 28, 66, 0.08); }
+.progress-wrap { position: sticky; top: 0; z-index: 200; background: #0E1C42; padding: 8px 20px 10px; display: flex; align-items: center; gap: 14px; }
+.progress-label { font-size: 12px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; white-space: nowrap; }
+.progress-track { flex: 1; height: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #2E7D5B, #55C8E8, #E8843A); border-radius: 10px; transition: width 0.4s ease; }
+.progress-pct { font-size: 13px; color: #2E7D5B; font-weight: 800; min-width: 36px; text-align: right; }
+.header { background: #0E1C42; border-bottom: 6px solid #55C8E8; padding: 20px 28px 18px; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 6px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8); }
+.header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.header-logo { width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+.header-title em { color: #A0E8DA; font-style: italic; }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(85,200,232,0.15); border: 1.5px solid rgba(85,200,232,0.35); border-radius: 28px; padding: 6px 16px; }
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+.info-strip { display: flex; flex-wrap: wrap; background: #FFFFFF; border-bottom: 2px solid #E2E8F4; }
+.info-cell { flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #E2E8F4; display: flex; align-items: center; gap: 10px; }
+.info-cell:last-child { border-right: none; }
+.info-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.info-label { font-size: 10px; color: #7A88A8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.instructions { padding: 20px 28px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-bottom: 2px solid #F5E6C8; }
+.instructions h2 { font-size: 20px; color: #0E1C42; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.instructions p { font-size: 16px; color: #3A4A6B; line-height: 1.7; margin-bottom: 8px; }
+.instructions ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.instructions li { font-size: 15px; color: #3A4A6B; line-height: 1.6; padding: 4px 0 4px 24px; position: relative; }
+.instructions li::before { content: '\2713'; position: absolute; left: 0; color: #2E7D5B; font-weight: 800; }
+.section { margin: 20px 28px; }
+.section-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 18px 18px 0 0; border-bottom: 2px solid rgba(255,255,255,0.15); }
+.section-header.navy { background: linear-gradient(135deg, #0E1C42, #1A2D5A); }
+.section-header.green { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.section-header.orange { background: linear-gradient(135deg, #E8843A, #F09A5A); }
+.section-header.purple { background: linear-gradient(135deg, #6B4FA0, #8B6FC0); }
+.section-num { width: 38px; height: 38px; border-radius: 14px; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.section-label { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.section-title { font-size: 19px; color: #fff; font-weight: 800; }
+.section-time { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.15); margin-left: auto; white-space: nowrap; }
+.section-body { background: #FFFFFF; border: 2px solid #E2E8F4; border-top: none; border-radius: 0 0 18px 18px; padding: 20px 22px; }
+.q-block { background: #FAFBFF; border: 2px solid #E2E8F4; border-radius: 14px; padding: 14px 18px; margin-bottom: 12px; }
+.q-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #55C8E8; color: #fff; font-weight: 800; font-size: 14px; margin-right: 8px; vertical-align: middle; }
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 8px; }
+.q-choices { list-style: none; padding: 0; margin: 8px 0 0; }
+.q-choices li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; margin-bottom: 6px; background: #FFFFFF; border: 1.5px solid #E2E8F4; border-radius: 10px; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.q-choices li.selected { background: #E3F8ED; border-color: #2E7D5B; }
+.q-radio { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #B8E0F0; background: #fff; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
+.q-choices li.selected .q-radio { border-color: #2E7D5B; background: #2E7D5B; }
+.q-choices li.selected .q-radio::after { content: '\2713'; color: #fff; font-size: 13px; font-weight: 800; }
+.journal-box { width: 100%; min-height: 100px; padding: 12px 14px; border: 2px solid #E2E8F4; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 15px; color: #0E1C42; line-height: 1.6; resize: vertical; background: #FAFBFF; margin-top: 8px; }
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.textbox-prompt { font-size: 14px; color: #0E1C42; font-weight: 700; line-height: 1.5; padding: 8px 12px; background: #EAF8FD; border: 1.5px solid #D6F2FB; border-bottom: none; border-radius: 10px 10px 0 0; margin-top: 10px; }
+.textbox-prompt + .journal-box { border-radius: 0 0 12px 12px; margin-top: 0; }
+.callout { border-radius: 14px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.callout-icon { font-size: 28px; flex-shrink: 0; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-source { background: #F0F4FF; border: 2px solid #D0DAEF; }
+.source-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin-bottom: 18px; }
+.source-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.source-card-header-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-card-body { padding: 18px 22px; }
+.source-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.7; margin-bottom: 10px; }
+.source-excerpt { font-family: 'Lora', Georgia, serif; font-size: 16px; color: #0E1C42; font-style: italic; line-height: 1.7; padding: 16px 20px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-left: 4px solid #D4943A; border-radius: 0 12px 12px 0; margin: 12px 0; }
+.virtue-card { background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border: 2px solid #F5E6C8; border-left: 6px solid #D4943A; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+.virtue-label { font-size: 12px; color: #D4943A; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+.rubric-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px 28px; }
+.rubric-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); padding: 16px 22px; }
+.rubric-header-icon { font-size: 26px; }
+.rubric-header-title { font-size: 19px; color: #fff; font-weight: 800; }
+.rubric-body { padding: 0; }
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table th { background: #F0F4FF; padding: 10px 14px; font-size: 12px; color: #0E1C42; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F4; text-align: left; }
+.rubric-table td { padding: 10px 14px; font-size: 13px; color: #3A4A6B; line-height: 1.5; border-bottom: 1px solid #E2E8F4; vertical-align: top; }
+.rubric-table tr:last-child td { border-bottom: none; }
+.rubric-cat { font-weight: 800; color: #0E1C42; font-size: 14px; }
+.rubric-level-3 { background: #E3F8ED; }
+.rubric-level-2 { background: #FFF8F0; }
+.rubric-level-1 { background: #FDE8E8; }
+.key-correct { background: #E3F8ED; border: 2px solid #2E7D5B; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-correct-label { font-size: 12px; color: #2E7D5B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.key-explanation { font-size: 14px; color: #3A4A6B; line-height: 1.6; }
+.key-misconception { background: #FFF3DC; border: 2px solid #F5E6C8; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-misconception-label { font-size: 12px; color: #D4943A; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.key-banner { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); color: #fff; text-align: center; padding: 12px 20px; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+@media (max-width: 600px) { .header-title { font-size: 22px; } .info-strip { flex-direction: column; } .info-cell { border-right: none; border-bottom: 1px solid #E2E8F4; } .section { margin: 16px 16px; } .rubric-card { margin: 16px; } .rubric-table { font-size: 12px; } }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- KEY BANNER -->
+<div class="key-banner">ANSWER KEY &#8212; FOR TEACHER USE ONLY</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg width="48" height="38" viewBox="0 0 48 38"><circle cx="24" cy="19" r="16" fill="#0E1C42"/><text x="24" y="23" text-anchor="middle" fill="#55C8E8" font-family="Nunito, sans-serif" font-size="11" font-weight="800">OAO</text></svg>
+    </div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">Grade 4 Social Studies</div>
+    </div>
+  </div>
+  <div class="header-title">Modern Florida <em>Assessment</em> &#8212; Answer Key</div>
+  <div class="header-badge">
+    <span class="header-badge-icon">&#128273;</span>
+    <span class="header-badge-text">Unit 10 Answer Key</span>
+  </div>
+</div>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">&#128339;</div>
+    <div><div class="info-label">Time</div><div class="info-value">~45 min</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">&#129513;</div>
+    <div><div class="info-label">Sections</div><div class="info-value">4 Parts</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">&#128214;</div>
+    <div><div class="info-label">Covers</div><div class="info-value">Unit 10</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0F4FF;">&#11088;</div>
+    <div><div class="info-label">Type</div><div class="info-value">Unit Assessment</div></div>
+  </div>
+</div>
+
+<!-- SECTION A: KNOWLEDGE CHECK -->
+<div class="section">
+  <div class="section-header navy">
+    <div class="section-num">A</div>
+    <div>
+      <div class="section-label">Section A</div>
+      <div class="section-title">Knowledge Check</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <!-- Q1 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">1</span>Henry Flagler is BEST known for:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Discovering gold in central Florida</li>
+        <li class="selected"><span class="q-radio"></span>B) Building railroads and hotels along Florida&#8217;s east coast</li>
+        <li><span class="q-radio"></span>C) Serving as Florida&#8217;s first governor</li>
+        <li><span class="q-radio"></span>D) Leading the Seminole Wars</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Henry Flagler built the Florida East Coast Railway and a chain of luxury hotels stretching from St. Augustine to Key West. His railroad opened up Florida&#8217;s east coast to tourism, agriculture, and settlement, transforming the region&#8217;s economy.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse Flagler with Henry Plant (who built railroads on the west coast) or mix him up with political figures. There was no significant gold discovery in Florida (A). Flagler was a businessman, not a governor (C) or military leader (D).</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">2</span>What role did Tampa play during the Spanish-American War of 1898?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It was the site of a major sea battle</li>
+        <li class="selected"><span class="q-radio"></span>B) It served as the main launching point for U.S. troops going to Cuba</li>
+        <li><span class="q-radio"></span>C) It was captured by Spanish forces</li>
+        <li><span class="q-radio"></span>D) It became the new state capital</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Tampa served as the primary staging ground for U.S. troops heading to Cuba during the Spanish-American War. Henry Plant&#8217;s railroad and his Tampa Bay Hotel made the city a logical base for military operations. Thousands of soldiers gathered there before shipping out.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse Tampa&#8217;s role as a launching point with being a battle site (A). The major naval battle took place in Santiago de Cuba, not Tampa. Tampa was never captured by Spain (C) and was never the state capital (D).</div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">3</span>Immigrants from Cuba, Spain, Italy, and other countries contributed to Florida&#8217;s growth by:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Building all of Florida&#8217;s schools</li>
+        <li class="selected"><span class="q-radio"></span>B) Working in industries like cigar-making in Ybor City and bringing new cultural traditions</li>
+        <li><span class="q-radio"></span>C) Serving as Florida&#8217;s governors</li>
+        <li><span class="q-radio"></span>D) Replacing all Native American communities</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Immigrants from Cuba, Spain, Italy, Greece, and the Bahamas contributed to Florida through industries like cigar manufacturing in Ybor City. They also brought rich cultural traditions including food, music, social clubs, and community organizations that shaped Florida&#8217;s multicultural identity.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may overgeneralize immigrant contributions (A &#8212; they did not build &#8220;all&#8221; schools). Answer D is historically inaccurate and harmful &#8212; immigrants did not &#8220;replace&#8221; Native communities. Use this as an opportunity to discuss how different groups coexisted.</div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">4</span>The Florida land boom of the 1920s ended in a &#8220;bust&#8221; mainly because:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) People stopped wanting to live in warm places</li>
+        <li class="selected"><span class="q-radio"></span>B) Land prices were driven too high by speculation, and hurricanes damaged the area</li>
+        <li><span class="q-radio"></span>C) The government banned all building in Florida</li>
+        <li><span class="q-radio"></span>D) Railroads stopped running to Florida</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">During the 1920s land boom, speculators drove land prices far above actual value. When buyers realized land was overpriced, the market collapsed. Devastating hurricanes (especially the 1926 Miami hurricane) further damaged the economy and ended the boom.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may not understand &#8220;speculation&#8221; &#8212; explain that people were buying land just to resell it at higher prices, not to live on it. The bust was caused by economic forces and natural disasters, not government bans (C) or railroad shutdowns (D).</div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">5</span>Mary McLeod Bethune is remembered for:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Building Florida&#8217;s first railroad</li>
+        <li class="selected"><span class="q-radio"></span>B) Fighting for education and civil rights, founding a school for Black students</li>
+        <li><span class="q-radio"></span>C) Discovering the Everglades</li>
+        <li><span class="q-radio"></span>D) Inventing the telegraph</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Mary McLeod Bethune founded the Daytona Educational and Industrial Training School for Negro Girls in 1904, which later became Bethune-Cookman University. She was a tireless advocate for education and civil rights and served as an advisor to President Franklin D. Roosevelt.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse Bethune with other historical figures. Railroads (A) are associated with Flagler and Plant. The Everglades (C) are associated with Marjory Stoneman Douglas. The telegraph (D) was invented by Samuel Morse, not a Floridian.</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6</span>How did the New Deal help Florida during the Great Depression?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It closed all Florida businesses</li>
+        <li class="selected"><span class="q-radio"></span>B) It created jobs through public works projects like building roads, parks, and bridges</li>
+        <li><span class="q-radio"></span>C) It moved all Floridians to other states</li>
+        <li><span class="q-radio"></span>D) It ended tourism permanently</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">President Roosevelt&#8217;s New Deal programs created jobs for unemployed Floridians through public works projects. Workers built roads, bridges, parks, public buildings, and other infrastructure. Programs like the CCC and WPA put thousands of Floridians back to work during the Depression.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may not understand that the New Deal was designed to help, not harm. All three wrong answers describe negative outcomes (closing businesses, moving people, ending tourism). If students pick these, they may not understand the purpose of government relief programs.</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7</span>Julia Tuttle is known as the &#8220;Mother of Miami&#8221; because she:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Was the first person born in Miami</li>
+        <li class="selected"><span class="q-radio"></span>B) Convinced Henry Flagler to extend his railroad to Miami</li>
+        <li><span class="q-radio"></span>C) Built Miami&#8217;s first school</li>
+        <li><span class="q-radio"></span>D) Served as Miami&#8217;s first mayor</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Julia Tuttle was a landowner who convinced Henry Flagler to extend his Florida East Coast Railway south to Miami. According to the famous story, she sent Flagler orange blossoms to prove that Miami had survived a freeze that damaged crops farther north. The railroad brought settlers and growth, leading to Miami&#8217;s founding as a city.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may interpret &#8220;Mother of Miami&#8221; literally (A) rather than understanding it as an honorary title for the person most responsible for Miami&#8217;s development. Tuttle was not a mayor (D) or school builder (C) &#8212; she was a visionary businesswoman and landowner.</div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8</span>Florida&#8217;s space program at Cape Canaveral became important because:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It was the only flat area in the United States</li>
+        <li class="selected"><span class="q-radio"></span>B) It helped the U.S. compete in the Space Race and brought jobs and technology to Florida</li>
+        <li><span class="q-radio"></span>C) It replaced all other Florida industries</li>
+        <li><span class="q-radio"></span>D) It was built during the Civil War</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Cape Canaveral (later Kennedy Space Center) became the hub of America&#8217;s space program during the Cold War Space Race with the Soviet Union. It brought thousands of high-tech jobs, scientific research, and national attention to Florida&#8217;s Space Coast, becoming a major economic driver alongside tourism and agriculture.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Cape Canaveral was chosen for its location near the equator and over the ocean (for safe launches), not because it was &#8220;flat&#8221; (A). The space program complemented other industries, it did not replace them (C). It began in the 1950s, not during the Civil War (D).</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION B: SOURCE & MAP TASK -->
+<div class="section">
+  <div class="section-header green">
+    <div class="section-num">B</div>
+    <div>
+      <div class="section-label">Section B</div>
+      <div class="section-title">Source &amp; Map Task</div>
+    </div>
+    <div class="section-time">&#9202; ~12 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="source-card">
+      <div class="source-card-header">
+        <div class="source-card-header-icon">&#128220;</div>
+        <div class="source-card-header-title">Historical Source: Ybor City Cigar Workers (c. 1910)</div>
+      </div>
+      <div class="source-card-body">
+        <p>Read the following description of an early 1900s photograph showing Ybor City cigar workers.</p>
+        <div class="source-excerpt">&#8220;This photograph from around 1910 shows the inside of a cigar factory in Ybor City, Tampa. Rows of workers &#8212; men and women from Cuba, Spain, and Italy &#8212; sit at long wooden tables, carefully rolling cigars by hand. In the corner, a man called the &#8216;lector&#8217; reads aloud from a newspaper to the workers while they work. The factories employed thousands of immigrants and became the center of a thriving multicultural neighborhood with its own restaurants, social clubs, and traditions.&#8221;</div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9</span>Use the source above to answer the following question.</div>
+      <div class="textbox-prompt">What does this source tell us about the daily lives of immigrant workers in Ybor City?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">This source tells us that immigrant workers in Ybor City spent their days rolling cigars by hand at long wooden tables inside factories. The workers were men and women from different countries including Cuba, Spain, and Italy, so the workplace was multicultural. While they worked, a &#8220;lector&#8221; read newspapers to them, which shows that their daily lives included both hard physical work and learning about the world. Outside the factories, the source says Ybor City had its own restaurants, social clubs, and traditions, so workers had a rich community life beyond just their jobs.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Uses multiple specific details from the source (rolling cigars, long tables, lector, multicultural workforce, restaurants/social clubs). Describes daily life clearly. <strong>Developing (2):</strong> References the source but only uses 1&#8211;2 details, or gives a general summary without specifics. <strong>Beginning (1):</strong> Does not reference the source text or gives only a one-word/one-phrase answer.</div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10</span>Think about the role of the lector described in the source.</div>
+      <div class="textbox-prompt">How does the role of the &#8220;lector&#8221; show that these workers valued education and staying informed?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">The role of the lector shows that these workers valued education and staying informed because even though they were doing hard manual labor, they wanted to hear the news and learn while they worked. The factory hired a special person just to read aloud to them, which means the workers thought it was important enough to pay for. Instead of working in silence, they chose to use their time to stay connected to what was happening in the world. This tells us that education and knowledge mattered to these immigrant communities, not just making money.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Explains the lector&#8217;s role clearly, connects it to the workers&#8217; values, and reasons about why this practice is significant. <strong>Developing (2):</strong> Mentions the lector reads newspapers but does not fully explain the connection to valuing education. <strong>Beginning (1):</strong> Restates the source without analysis, or does not address the question about values.</div>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">11</span>Connect the source to what you learned in Unit 10.</div>
+      <div class="textbox-prompt">Based on this source and what you learned in Unit 10, how did immigrant communities help Florida grow?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">Immigrant communities helped Florida grow in many ways. From the source, we can see that immigrants from Cuba, Spain, and Italy worked in cigar factories that employed thousands of people, which made Tampa an important industrial city. They also built a whole neighborhood &#8212; Ybor City &#8212; with restaurants, social clubs, and traditions that made the area vibrant and attracted more people. From Unit 10, we learned that immigrants also worked in agriculture, fishing, and trade. They brought skills, languages, and cultural traditions that made Florida a more diverse and interesting place. Without these immigrant communities, Florida would not have grown as quickly or become the multicultural state it is today.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Combines evidence from the source (cigar factories, Ybor City community) with Unit 10 content (agriculture, fishing, trade, cultural contributions). Explains how these contributions drove Florida&#8217;s growth. <strong>Developing (2):</strong> References the source OR Unit 10 content but not both, or connection to growth is vague. <strong>Beginning (1):</strong> Does not reference the source or Unit 10 content, or gives a single-sentence answer. <strong>Accept any valid Unit 10 connections</strong> including industries, cultural contributions, population growth, or economic development.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION C: SOCRATIC RESPONSE -->
+<div class="section">
+  <div class="section-header orange">
+    <div class="section-num">C</div>
+    <div>
+      <div class="section-label">Section C</div>
+      <div class="section-title">Socratic Response</div>
+    </div>
+    <div class="section-time">&#9202; ~15 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout callout-think">
+      <div class="callout-icon">&#129300;</div>
+      <p>These questions ask students to think deeply and support their ideas with evidence. Look for clear reasoning and specific details from Unit 10.</p>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">12</span>Read the prompt below.</div>
+      <div class="textbox-prompt">Henry Flagler, Henry Plant, Julia Tuttle, and Mary McLeod Bethune all helped Florida grow in different ways. Choose TWO of these individuals. Explain what each person did and how their contributions were similar or different.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">I will compare Henry Flagler and Mary McLeod Bethune. Henry Flagler helped Florida grow by building railroads and luxury hotels along the east coast. His Florida East Coast Railway connected cities from Jacksonville to Key West and brought tourists, settlers, and businesses to areas that were once empty. Mary McLeod Bethune helped Florida grow by fighting for education and civil rights. She founded a school for Black students in Daytona Beach with almost no money and turned it into a successful college. She also advised President Roosevelt on issues affecting Black Americans. Their contributions were similar because both helped Florida develop and become a better place. But they were different because Flagler focused on business and infrastructure while Bethune focused on education and equal rights. Flagler was wealthy and used money to build, while Bethune started with very little and used determination and hard work.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Accept any two individuals</strong> from the four listed. <strong>Secure (3):</strong> Accurately describes what each person did, provides specific details, and clearly compares/contrasts their contributions. <strong>Developing (2):</strong> Describes both individuals but comparison is vague or missing specific details. <strong>Beginning (1):</strong> Describes only one individual, or descriptions lack specific details. <strong>Key facts to look for:</strong> Flagler = east coast railroad/hotels; Plant = west coast railroad/Tampa Bay Hotel; Tuttle = convinced Flagler to extend railroad to Miami; Bethune = school founder/civil rights advocate.</div>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">13</span>Read the prompt below.</div>
+      <div class="textbox-prompt">Florida went through a boom in the 1920s, a bust, the Great Depression, and then growth again after WWII. What does this pattern teach us about how economies change over time?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">This pattern teaches us that economies go through cycles of good times and bad times. During the 1920s boom, people were excited about Florida and land prices went up very fast because of speculation. But when the bust came, prices crashed and people lost money. Then the Great Depression made things even worse, with many people losing their jobs. However, after WWII, Florida began growing again because of new industries like tourism, the space program, and military bases. This shows us that economies do not stay the same forever &#8212; they go up and down. It also teaches us that when times are bad, people can find new ways to rebuild. Florida&#8217;s recovery after the Depression shows that hard times can lead to new opportunities if people are willing to adapt and try new things.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Identifies the cyclical pattern (boom&#8594;bust&#8594;depression&#8594;recovery), uses specific examples from Florida&#8217;s history, and draws a broader lesson about how economies work. <strong>Developing (2):</strong> Describes the pattern but does not connect to broader lessons, or uses only vague examples. <strong>Beginning (1):</strong> Lists events without identifying the pattern or drawing any conclusions. <strong>Look for understanding of:</strong> speculation, economic cycles, recovery through new industries, resilience.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION D: VIRTUE LENS REFLECTION -->
+<div class="section">
+  <div class="section-header purple">
+    <div class="section-num">D</div>
+    <div>
+      <div class="section-label">Section D</div>
+      <div class="section-title">Virtue Lens Reflection</div>
+    </div>
+    <div class="section-time">&#9202; ~5 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="virtue-card">
+      <div class="virtue-label">&#127942; Virtue Focus: Perseverance</div>
+      <div class="virtue-text">Perseverance means keeping going even when things are very hard &#8212; not giving up when the path is difficult.</div>
+    </div>
+
+    <!-- Q14 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">14</span>Reflect on what you learned in Unit 10.</div>
+      <div class="textbox-prompt">Mary McLeod Bethune started a school with almost no money, using crates for desks and charcoal for pencils. Think about what perseverance means &#8212; keeping going even when things are very hard. Describe a time from Unit 10 when someone or a community showed perseverance, and explain why this virtue matters.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">Mary McLeod Bethune showed incredible perseverance when she started her school in Daytona Beach. She had almost no money and had to use wooden crates as desks and burned charcoal sticks as pencils. Many people did not believe a Black woman could build a successful school, but she refused to give up. She raised money by baking pies and selling them, and she convinced community members to support her vision. Over time, her tiny school grew into Bethune-Cookman University. This virtue matters because without perseverance, important changes would never happen. If Bethune had given up when things were hard, thousands of students would not have gotten an education. Perseverance teaches us that great things take time and effort, and that we should not quit just because the beginning is difficult.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Names a specific person or community from Unit 10, describes what they did in detail, connects their actions to the virtue of perseverance, and explains why the virtue matters. <strong>Developing (2):</strong> Names an example and connects to perseverance but explanation of why it matters is vague. <strong>Beginning (1):</strong> No specific example, or no connection to perseverance. <strong>Accept any valid example</strong> from Unit 10: Bethune (school founding), immigrant communities (building new lives in a new country), Floridians recovering from the 1920s bust or Great Depression, Julia Tuttle (persisting in convincing Flagler), Marjory Stoneman Douglas (fighting to protect the Everglades).</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RUBRIC -->
+<div class="rubric-card">
+  <div class="rubric-header">
+    <div class="rubric-header-icon">&#128200;</div>
+    <div class="rubric-header-title">Assessment Rubric</div>
+  </div>
+  <div class="rubric-body">
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th class="rubric-level-3">Secure (3)</th>
+          <th class="rubric-level-2">Developing (2)</th>
+          <th class="rubric-level-1">Beginning (1)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rubric-cat">Content Knowledge</td>
+          <td class="rubric-level-3">Names key people, places, events, vocabulary accurately.</td>
+          <td class="rubric-level-2">Most key facts, few errors.</td>
+          <td class="rubric-level-1">Misses/confuses key facts.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Chronology &amp; Cause&#8211;Effect</td>
+          <td class="rubric-level-3">Right order, explains cause&#8594;effect.</td>
+          <td class="rubric-level-2">Mostly right, incomplete.</td>
+          <td class="rubric-level-1">Out of order or missing.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Source &amp; Map Interpretation</td>
+          <td class="rubric-level-3">Uses evidence to support ideas.</td>
+          <td class="rubric-level-2">References source but vague.</td>
+          <td class="rubric-level-1">No evidence or misreads.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Civic &amp; Virtue Judgment</td>
+          <td class="rubric-level-3">Connects virtue with reasoning.</td>
+          <td class="rubric-level-2">Names virtue, vague connection.</td>
+          <td class="rubric-level-1">No connection or missing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- end page-wrap -->
+</body>
+</html>

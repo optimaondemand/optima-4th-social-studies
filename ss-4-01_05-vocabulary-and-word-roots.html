@@ -26,6 +26,7 @@ body {
 
 /* ═══════════ PROGRESS BAR ═══════════ */
 .progress-wrap {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -349,6 +350,7 @@ body {
 
 /* ═══════════ TAB BAR ═══════════ */
 .tab-bar {
+  position: -webkit-sticky;
   position: sticky;
   top: 38px;
   z-index: 100;
@@ -2769,6 +2771,50 @@ updateProgress();
 
 /* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════ */
 (function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+/* ═══════════ STICKY FALLBACK FOR IFRAME ═══════════ */
+(function(){
+  var pw=document.querySelector(".progress-wrap");
+  var tb=document.querySelector(".tab-bar");
+  if(!pw)return;
+  var wrap=document.querySelector(".page-wrap");
+  var pwTop=0;var pwH=0;var tbH=0;
+  function measure(){pwTop=wrap.offsetTop;pwH=pw.offsetHeight;if(tb)tbH=tb.offsetHeight;}
+  measure();
+  function onScroll(){
+    var sy=window.pageYOffset||document.documentElement.scrollTop;
+    if(sy>pwTop){
+      if(pw.style.position!=="fixed"){
+        measure();
+        pw.style.position="fixed";pw.style.top="0";
+        pw.style.left=wrap.getBoundingClientRect().left+"px";
+        pw.style.width=wrap.offsetWidth+"px";pw.style.zIndex="9999";
+        if(tb){tb.style.position="fixed";tb.style.top=pwH+"px";
+          tb.style.left=wrap.getBoundingClientRect().left+"px";
+          tb.style.width=wrap.offsetWidth+"px";tb.style.zIndex="9998";}
+        wrap.style.paddingTop=(pwH+(tb?tbH:0))+"px";
+      }
+    }else{
+      if(pw.style.position==="fixed"){
+        pw.style.position="";pw.style.top="";pw.style.left="";
+        pw.style.width="";pw.style.zIndex="";
+        if(tb){tb.style.position="";tb.style.top="";tb.style.left="";
+          tb.style.width="";tb.style.zIndex="";}
+        wrap.style.paddingTop="";
+      }
+    }
+  }
+  window.addEventListener("scroll",onScroll);
+  window.addEventListener("resize",function(){
+    measure();
+    if(pw.style.position==="fixed"){
+      pw.style.left=wrap.getBoundingClientRect().left+"px";
+      pw.style.width=wrap.offsetWidth+"px";
+      if(tb){tb.style.left=wrap.getBoundingClientRect().left+"px";tb.style.width=wrap.offsetWidth+"px";}
+    }
+  });
+})();
+
 </script>
 </body>
 </html>

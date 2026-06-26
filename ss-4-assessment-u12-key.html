@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government &amp; Economy Assessment — Unit 12 — Answer Key</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* HEADER */
+.header {
+  background: #0E1C42; border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px; position: relative; overflow: hidden;
+}
+.header::after { content: ''; position: absolute; bottom: 6px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8); }
+.header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.header-logo { width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+.header-title em { color: #A0E8DA; font-style: italic; }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(85,200,232,0.15); border: 1.5px solid rgba(85,200,232,0.35); border-radius: 28px; padding: 6px 16px; }
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* KEY BANNER */
+.key-banner { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); color: #fff; text-align: center; padding: 12px 20px; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+
+/* INFO STRIP */
+.info-strip { display: flex; flex-wrap: wrap; background: #FFFFFF; border-bottom: 2px solid #E2E8F4; }
+.info-cell { flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #E2E8F4; display: flex; align-items: center; gap: 10px; }
+.info-cell:last-child { border-right: none; }
+.info-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.info-label { font-size: 10px; color: #7A88A8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+
+/* SECTION CARDS */
+.section { margin: 20px 28px; }
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px; border-radius: 18px 18px 0 0;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.section-header.navy { background: linear-gradient(135deg, #0E1C42, #1A2D5A); }
+.section-header.green { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.section-header.orange { background: linear-gradient(135deg, #E8843A, #F09A5A); }
+.section-header.purple { background: linear-gradient(135deg, #6B4FA0, #8B6FC0); }
+.section-num { width: 38px; height: 38px; border-radius: 14px; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.section-label { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.section-title { font-size: 19px; color: #fff; font-weight: 800; }
+.section-time { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.15); margin-left: auto; white-space: nowrap; }
+.section-body {
+  background: #FFFFFF; border: 2px solid #E2E8F4; border-top: none;
+  border-radius: 0 0 18px 18px; padding: 20px 22px;
+}
+
+/* QUESTION BLOCKS */
+.q-block {
+  background: #FAFBFF; border: 2px solid #E2E8F4; border-radius: 14px;
+  padding: 14px 18px; margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%; background: #55C8E8;
+  color: #fff; font-weight: 800; font-size: 14px; margin-right: 8px; vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 8px; }
+.q-choices { list-style: none; padding: 0; margin: 8px 0 0; }
+.q-choices li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 14px; margin-bottom: 6px;
+  background: #FFFFFF; border: 1.5px solid #E2E8F4; border-radius: 10px;
+  font-size: 15px; color: #0E1C42; line-height: 1.5;
+}
+.q-choices li.selected { background: #E3F8ED; border-color: #2E7D5B; }
+.q-radio {
+  width: 22px; height: 22px; border-radius: 50%; border: 2px solid #B8E0F0;
+  background: #fff; flex-shrink: 0; margin-top: 1px; display: flex;
+  align-items: center; justify-content: center;
+}
+.q-choices li.selected .q-radio { border-color: #2E7D5B; background: #2E7D5B; }
+.q-choices li.selected .q-radio::after { content: '\2713'; color: #fff; font-size: 13px; font-weight: 800; }
+
+/* TEXTAREAS */
+.textbox-prompt {
+  font-size: 14px; color: #0E1C42; font-weight: 700; line-height: 1.5;
+  padding: 8px 12px; background: #EAF8FD; border: 1.5px solid #D6F2FB;
+  border-bottom: none; border-radius: 10px 10px 0 0; margin-top: 10px;
+}
+
+/* CALLOUTS */
+.callout { border-radius: 14px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.callout-icon { font-size: 28px; flex-shrink: 0; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+
+/* SOURCE CARD */
+.source-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin-bottom: 18px; }
+.source-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.source-card-header-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-card-body { padding: 18px 22px; }
+.source-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.7; margin-bottom: 10px; }
+.source-excerpt {
+  font-family: 'Lora', Georgia, serif; font-size: 16px; color: #0E1C42;
+  font-style: italic; line-height: 1.7; padding: 16px 20px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border-left: 4px solid #D4943A; border-radius: 0 12px 12px 0; margin: 12px 0;
+}
+
+/* VIRTUE CARD */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8; border-left: 6px solid #D4943A;
+  border-radius: 14px; padding: 16px 18px; margin-bottom: 14px;
+}
+.virtue-label { font-size: 12px; color: #D4943A; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* KEY-SPECIFIC */
+.key-correct { background: #E3F8ED; border: 2px solid #2E7D5B; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-correct-label { font-size: 12px; color: #2E7D5B; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.key-explanation { font-size: 14px; color: #3A4A6B; line-height: 1.6; }
+.key-misconception { background: #FFF3DC; border: 2px solid #F5E6C8; border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+.key-misconception-label { font-size: 12px; color: #D4943A; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+
+/* RUBRIC */
+.rubric-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px 28px; }
+.rubric-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); padding: 16px 22px; }
+.rubric-header-icon { font-size: 26px; }
+.rubric-header-title { font-size: 19px; color: #fff; font-weight: 800; }
+.rubric-body { padding: 0; }
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table th { background: #F0F4FF; padding: 10px 14px; font-size: 12px; color: #0E1C42; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F4; text-align: left; }
+.rubric-table td { padding: 10px 14px; font-size: 13px; color: #3A4A6B; line-height: 1.5; border-bottom: 1px solid #E2E8F4; vertical-align: top; }
+.rubric-table tr:last-child td { border-bottom: none; }
+.rubric-cat { font-weight: 800; color: #0E1C42; font-size: 14px; }
+.rubric-level-3 { background: #E3F8ED; }
+.rubric-level-2 { background: #FFF8F0; }
+.rubric-level-1 { background: #FDE8E8; }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header-title { font-size: 22px; }
+  .info-strip { flex-direction: column; }
+  .info-cell { border-right: none; border-bottom: 1px solid #E2E8F4; }
+  .section { margin: 16px 16px; }
+  .rubric-card { margin: 16px; }
+  .rubric-table { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- KEY BANNER -->
+<div class="key-banner">TEACHER ANSWER KEY &#8212; DO NOT DISTRIBUTE TO STUDENTS</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg width="48" height="38" viewBox="0 0 48 38"><circle cx="24" cy="19" r="16" fill="#0E1C42"/><text x="24" y="23" text-anchor="middle" fill="#55C8E8" font-family="Nunito, sans-serif" font-size="11" font-weight="800">OAO</text></svg>
+    </div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">Grade 4 Social Studies</div>
+    </div>
+  </div>
+  <div class="header-title">Government &amp; <em>Economy</em> Assessment</div>
+  <div class="header-badge">
+    <span class="header-badge-icon">&#128273;</span>
+    <span class="header-badge-text">Unit 12 Answer Key</span>
+  </div>
+</div>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">&#128339;</div>
+    <div><div class="info-label">Time</div><div class="info-value">~45 min</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">&#129513;</div>
+    <div><div class="info-label">Sections</div><div class="info-value">4 Parts</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">&#128214;</div>
+    <div><div class="info-label">Covers</div><div class="info-value">Unit 12</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0F4FF;">&#11088;</div>
+    <div><div class="info-label">Type</div><div class="info-value">Unit Assessment</div></div>
+  </div>
+</div>
+
+<!-- SECTION A: KNOWLEDGE CHECK -->
+<div class="section">
+  <div class="section-header navy">
+    <div class="section-num">A</div>
+    <div>
+      <div class="section-label">Section A</div>
+      <div class="section-title">Knowledge Check</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <!-- Q1 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">1</span>What is the main purpose of Florida&#8217;s constitution?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) To list every law that citizens must follow</li>
+        <li class="selected"><span class="q-radio"></span>B) To explain the structure, powers, rights, and responsibilities of state government</li>
+        <li><span class="q-radio"></span>C) To describe the history of Florida from the earliest settlers</li>
+        <li><span class="q-radio"></span>D) To tell citizens how much they should pay in taxes</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Florida&#8217;s constitution is the foundational document that establishes the structure of the state government, defines the powers of each branch, and outlines the rights and responsibilities of citizens. It is not a list of every law &#8212; individual laws are created by the legislature.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students who pick A may confuse the constitution with a law book. A constitution sets up the framework for government; it does not list every specific law. Students who pick D may confuse the constitution with the tax code.</div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">2</span>Which branch of Florida government MAKES the laws?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Executive branch</li>
+        <li class="selected"><span class="q-radio"></span>B) Legislative branch</li>
+        <li><span class="q-radio"></span>C) Judicial branch</li>
+        <li><span class="q-radio"></span>D) Local branch</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">The legislative branch &#8212; Florida&#8217;s Legislature, which includes the Senate and the House of Representatives &#8212; is responsible for writing and passing laws. The word &#8220;legislative&#8221; comes from the same root as &#8220;legislation,&#8221; meaning laws.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students often confuse the executive and legislative branches. Some think the Governor makes laws because the Governor is the most visible leader. Clarify that the Governor signs laws but does not write them. &#8220;Local branch&#8221; (D) is a distractor &#8212; there is no branch called the &#8220;local branch.&#8221;</div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">3</span>Which branch of Florida government ENFORCES the laws?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Legislative branch</li>
+        <li><span class="q-radio"></span>B) Judicial branch</li>
+        <li class="selected"><span class="q-radio"></span>C) Executive branch</li>
+        <li><span class="q-radio"></span>D) Constitutional branch</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: C</div>
+        <div class="key-explanation">The executive branch, led by the Governor, is responsible for enforcing (carrying out) the laws. The Governor oversees state agencies, law enforcement, and the day-to-day operations of government. &#8220;Execute&#8221; means to carry out or put into action.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may pick B (judicial) because they associate courts with law enforcement. Remind them that courts interpret laws and settle disputes &#8212; they do not enforce them. &#8220;Constitutional branch&#8221; (D) is a distractor; there is no branch by that name.</div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">4</span>Which branch of Florida government INTERPRETS the laws and settles disputes?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Executive branch</li>
+        <li><span class="q-radio"></span>B) Legislative branch</li>
+        <li class="selected"><span class="q-radio"></span>C) Judicial branch</li>
+        <li><span class="q-radio"></span>D) Governor&#8217;s branch</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: C</div>
+        <div class="key-explanation">The judicial branch includes Florida&#8217;s courts, from local courts up to the Florida Supreme Court. Judges interpret laws &#8212; they decide what laws mean and whether they follow the constitution. They also settle disputes between people, organizations, or the government.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students who pick D (&#8220;Governor&#8217;s branch&#8221;) may associate the Governor with all government power. Reinforce that each branch has a separate role, and the Governor leads the executive branch, not the courts. &#8220;Governor&#8217;s branch&#8221; is not a real term.</div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">5</span>Why does Florida&#8217;s government have three branches instead of one?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Because three branches can work faster than one</li>
+        <li class="selected"><span class="q-radio"></span>B) So no single branch has too much power &#8212; checks and balances</li>
+        <li><span class="q-radio"></span>C) Because the U.S. president told Florida to have three branches</li>
+        <li><span class="q-radio"></span>D) So each branch can make its own laws</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">The separation of powers into three branches exists so that no single part of government becomes too powerful. Each branch can &#8220;check&#8221; the others &#8212; for example, the Governor can veto a law, and the courts can rule a law unconstitutional. This system of checks and balances protects citizens&#8217; rights.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students who pick A may think having more branches means faster work; in reality, the purpose is balance, not speed. Students who pick D misunderstand separation of powers &#8212; only the legislative branch makes laws. Option C is factually wrong; the structure comes from the U.S. and Florida constitutions, not a presidential order.</div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6</span>A pothole on a city street would most likely be fixed by which level of government?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) The federal government in Washington, D.C.</li>
+        <li><span class="q-radio"></span>B) The state government in Tallahassee</li>
+        <li class="selected"><span class="q-radio"></span>C) Local government (city or county)</li>
+        <li><span class="q-radio"></span>D) The judicial branch</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: C</div>
+        <div class="key-explanation">Local governments (cities and counties) are responsible for maintaining local roads, sidewalks, parks, and other community infrastructure. A pothole on a city street is a local issue that would be handled by the city or county public works department, not by the state or federal government.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may think the state government handles everything within Florida. Help them understand the difference between local issues (potholes, parks, trash pickup) and state issues (statewide laws, highways, state parks). Option D confuses a branch of government with a level of government.</div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7</span>What is the difference between income and credit?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Income and credit are the same thing</li>
+        <li class="selected"><span class="q-radio"></span>B) Income is money you earn; credit is money you borrow and must pay back</li>
+        <li><span class="q-radio"></span>C) Income is money you borrow; credit is money you save</li>
+        <li><span class="q-radio"></span>D) Income is only for adults; credit is only for children</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: B</div>
+        <div class="key-explanation">Income is money that a person earns through work, such as a paycheck, allowance, or selling goods. Credit is money borrowed from a bank or lender that must be paid back, usually with interest. Understanding this difference is a key financial literacy concept.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may confuse &#8220;credit&#8221; with &#8220;savings&#8221; or think income and credit are the same because both involve money. Emphasize that credit is borrowed money with an obligation to repay, while income is money you have earned and do not owe back. Option C reverses the definitions.</div>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8</span>Which of these is an example of a financial RISK?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Putting part of your allowance into a savings account each week</li>
+        <li><span class="q-radio"></span>B) Making a budget before you go shopping</li>
+        <li class="selected"><span class="q-radio"></span>C) Spending all your savings on something you might not need</li>
+        <li><span class="q-radio"></span>D) Comparing prices before buying something</li>
+      </ul>
+      <div class="key-correct">
+        <div class="key-correct-label">Correct Answer: C</div>
+        <div class="key-explanation">A financial risk is a decision that could lead to losing money or being worse off financially. Spending all your savings on something you might not need is risky because you could end up with no money left for things you actually need. Options A, B, and D are all examples of responsible financial habits.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Common Misconceptions</div>
+        <div class="key-explanation">Students may not clearly understand what &#8220;risk&#8221; means in a financial context. Help them see that risk involves the chance of losing money or making a poor decision. The other options (saving, budgeting, comparing prices) are all strategies to reduce risk, not examples of risk itself.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION B: SOURCE & MAP TASK -->
+<div class="section">
+  <div class="section-header green">
+    <div class="section-num">B</div>
+    <div>
+      <div class="section-label">Section B</div>
+      <div class="section-title">Source &amp; Map Task</div>
+    </div>
+    <div class="section-time">&#9202; ~12 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="source-card">
+      <div class="source-card-header">
+        <div class="source-card-header-icon">&#128220;</div>
+        <div class="source-card-header-title">Diagram: Florida&#8217;s Three Branches of Government</div>
+      </div>
+      <div class="source-card-body">
+        <p>Study the diagram below showing Florida&#8217;s three branches of government and one key responsibility for each branch.</p>
+        <div class="source-excerpt">
+          <strong>Legislative Branch</strong> &#8212; Makes the laws. The Florida Legislature includes the Senate and the House of Representatives.<br><br>
+          <strong>Executive Branch</strong> &#8212; Enforces the laws. Led by the Governor of Florida, who signs bills into law and oversees state agencies.<br><br>
+          <strong>Judicial Branch</strong> &#8212; Interprets the laws. Florida&#8217;s courts, including the Supreme Court, settle disputes and decide whether laws follow the constitution.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9</span>Use the diagram above to answer the following question.</div>
+      <div class="textbox-prompt">A new law about protecting Florida&#8217;s beaches has been proposed. Explain the steps: Which branch writes it? Which branch signs it into law? Which branch would decide if it follows the constitution?</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">If a new law about protecting Florida&#8217;s beaches is proposed, here is how the three branches would be involved. First, the legislative branch would write the law. Members of the Florida Senate or House of Representatives would draft a bill about beach protection and vote on it. If it passes, the bill goes to the executive branch. The Governor would review the bill and decide whether to sign it into law. If the Governor signs it, the law takes effect. Later, if someone challenges the law &#8212; for example, if a business says the law is unfair &#8212; the judicial branch would step in. A court would interpret the law and decide whether it follows the Florida Constitution. This is how the three branches work together: one writes, one enforces, and one checks.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Correctly identifies all three branches and their roles in the process (legislative writes, executive signs/enforces, judicial interprets/checks constitutionality). Uses details from the diagram. <strong>Developing (2):</strong> Gets two of the three branches correct or describes the process but mixes up one role. <strong>Beginning (1):</strong> Only identifies one branch correctly or gives a vague answer without connecting to the diagram.</div>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10</span>Think about what you learned about local and state government.</div>
+      <div class="textbox-prompt">A family in your community wants a new park built. Would they go to local government or state government? Explain why.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">The family would go to local government, like the city council or county commission, to ask for a new park. A neighborhood park is a local issue because it affects one community, not the whole state. Local governments are responsible for things like parks, playgrounds, sidewalks, and community buildings in their area. The family could attend a town hall or city council meeting to share their idea, or they could contact their local representative. State government in Tallahassee deals with bigger issues that affect all of Florida, like statewide highways or state parks. Since this family wants a park in their own neighborhood, local government is the right place to go.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Correctly identifies local government, explains why (local issue, community-level), and may mention how citizens participate (town hall, contacting representatives). <strong>Developing (2):</strong> Says local government but explanation of why is vague or incomplete. <strong>Beginning (1):</strong> Says state government, or says local government with no explanation. <strong>Note:</strong> Accept if a student argues state government for a state park, as long as reasoning is sound.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION C: SOCRATIC RESPONSE -->
+<div class="section">
+  <div class="section-header orange">
+    <div class="section-num">C</div>
+    <div>
+      <div class="section-label">Section C</div>
+      <div class="section-title">Socratic Response</div>
+    </div>
+    <div class="section-time">&#9202; ~15 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout callout-think">
+      <div class="callout-icon">&#129300;</div>
+      <p>These questions ask students to think carefully and write multi-sentence responses. Look for specific details from Unit 12 and clear reasoning.</p>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">11</span>Read the prompt below.</div>
+      <div class="textbox-prompt">Why is it important for citizens &#8212; even young people &#8212; to understand how government works? Use one example from this unit to support your answer.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">It is important for citizens &#8212; even young people &#8212; to understand how government works because government makes decisions that affect everyone&#8217;s daily life. When citizens understand the three branches of government, they know where to go when they want something to change. For example, in Unit 12 we learned that citizens can attend town hall meetings or contact their local representatives to solve community problems, like getting a new crosswalk or fixing a broken playground. If you do not understand how government works, you might not know that you have the power to speak up and make a difference. Even young people can start learning now so that when they are old enough to vote, they will make informed choices. Understanding government is part of being a responsible citizen.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Clearly explains why understanding government matters, gives a specific example from Unit 12, and connects to citizenship or participation. <strong>Developing (2):</strong> Says it is important but the example is vague or only partially connected to Unit 12. <strong>Beginning (1):</strong> One sentence with no example, or restates the question. <strong>Accept any valid Unit 12 example:</strong> three branches, checks and balances, local vs. state government, citizen participation at town halls, voting, contacting representatives.</div>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">12</span>Read the prompt below.</div>
+      <div class="textbox-prompt">Imagine you receive $20 for your birthday. Describe how you would divide it among saving, spending, and maybe donating. Explain your choices using what you learned about responsible money decisions.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">If I received $20 for my birthday, I would divide it into three parts. First, I would save $10 by putting it in my savings account. Saving is important because it gives you money for the future in case you need it for something important, like school supplies or an emergency. Next, I would spend $5 on something I have been wanting, like a book or a small game. I would make sure to compare prices first so I get the best deal. Finally, I would donate $5 to a cause I care about, like a local animal shelter. In Unit 12, we learned that being responsible with money means thinking carefully before you spend, saving for the future, and not taking unnecessary risks. By dividing my money this way, I am making a plan instead of spending it all at once, which would be a financial risk.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Describes a clear plan for dividing money, explains reasoning for each choice, and connects to financial literacy concepts from Unit 12 (saving, budgeting, risk, responsibility). <strong>Developing (2):</strong> Divides the money but explanation is vague or does not connect to Unit 12 concepts. <strong>Beginning (1):</strong> Says &#8220;I would save some and spend some&#8221; with no reasoning or amounts. <strong>Note:</strong> There is no single &#8220;right&#8221; split &#8212; accept any reasonable division as long as the student explains their reasoning. Donating is optional (the prompt says &#8220;maybe donating&#8221;).</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION D: VIRTUE LENS REFLECTION -->
+<div class="section">
+  <div class="section-header purple">
+    <div class="section-num">D</div>
+    <div>
+      <div class="section-label">Section D</div>
+      <div class="section-title">Virtue Lens Reflection</div>
+    </div>
+    <div class="section-time">&#9202; ~5 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="virtue-card">
+      <div class="virtue-label">&#9878;&#65039; Virtue Focus: Responsibility</div>
+      <div class="virtue-text">Responsibility means taking care of your duties and being accountable for your choices. In government and in personal finances, responsibility helps people and communities thrive.</div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">13</span>Reflect on what you learned in Unit 12.</div>
+      <div class="textbox-prompt">Think about one of the virtues from this unit: responsibility or self-governance. Choose a person or situation from our government and economy lessons and explain how that virtue was important.</div>
+      <div class="key-correct" style="margin-top:10px;">
+        <div class="key-correct-label">Model Response (Secure &#8212; 3)</div>
+        <div class="key-explanation">Responsibility was an important virtue in our lesson about Florida&#8217;s three branches of government. Each branch has a specific responsibility &#8212; the legislative branch is responsible for making laws, the executive branch is responsible for enforcing them, and the judicial branch is responsible for interpreting them. If any branch failed to do its job responsibly, the whole system would break down. For example, if the judicial branch did not carefully check whether laws follow the constitution, citizens&#8217; rights could be taken away. Responsibility also showed up in our financial literacy lesson. When a person makes a budget and saves money instead of spending everything at once, they are showing self-governance &#8212; they are controlling their choices instead of acting on impulse. Responsibility matters because it keeps government fair and helps individuals make smart decisions with their money.</div>
+      </div>
+      <div class="key-misconception">
+        <div class="key-misconception-label">Scoring Notes</div>
+        <div class="key-explanation"><strong>Secure (3):</strong> Names responsibility or self-governance, connects it to a specific example from Unit 12 (government branches, financial decisions, citizen participation), and explains why the virtue matters. <strong>Developing (2):</strong> Names the virtue and gives an example but the explanation of why it matters is vague. <strong>Beginning (1):</strong> No specific example, or no connection to the virtue. <strong>Accept any valid example:</strong> branches of government fulfilling their duties, citizens participating responsibly, making responsible financial choices, self-governance in budgeting or saving.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RUBRIC -->
+<div class="rubric-card">
+  <div class="rubric-header">
+    <div class="rubric-header-icon">&#128200;</div>
+    <div class="rubric-header-title">Assessment Rubric</div>
+  </div>
+  <div class="rubric-body">
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th class="rubric-level-3">Secure (3)</th>
+          <th class="rubric-level-2">Developing (2)</th>
+          <th class="rubric-level-1">Beginning (1)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rubric-cat">Content Knowledge</td>
+          <td class="rubric-level-3">Names key people, places, events, vocabulary accurately.</td>
+          <td class="rubric-level-2">Most key facts, few errors.</td>
+          <td class="rubric-level-1">Misses/confuses key facts.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Chronology &amp; Cause&#8211;Effect</td>
+          <td class="rubric-level-3">Right order, explains cause&#8594;effect.</td>
+          <td class="rubric-level-2">Mostly right, incomplete.</td>
+          <td class="rubric-level-1">Out of order or missing.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Source &amp; Map Interpretation</td>
+          <td class="rubric-level-3">Uses evidence to support ideas.</td>
+          <td class="rubric-level-2">References source but vague.</td>
+          <td class="rubric-level-1">No evidence or misreads.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Civic &amp; Virtue Judgment</td>
+          <td class="rubric-level-3">Connects virtue with reasoning.</td>
+          <td class="rubric-level-2">Names virtue, vague connection.</td>
+          <td class="rubric-level-1">No connection or missing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- end page-wrap -->
+</body>
+</html>

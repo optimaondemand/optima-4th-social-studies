@@ -26,6 +26,7 @@ body {
 
 /* ═══════════ PROGRESS BAR ═══════════ */
 .progress-wrap {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -349,6 +350,7 @@ body {
 
 /* ═══════════ TAB BAR ═══════════ */
 .tab-bar {
+  position: -webkit-sticky;
   position: sticky;
   top: 38px;
   z-index: 100;
@@ -1154,323 +1156,7 @@ body {
   z-index: 10000;
 }
 
-/* ═══════════ CHRONO-LENS FRAGMENT (Grade 4 — Tab 1 opener) ═══════════ */
-.chrono-fragment {
-  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
-  border: 2px solid #55C8E8;
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.15);
-}
-.chrono-fragment-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 18px;
-  border-bottom: 1.5px solid rgba(85, 200, 232, 0.3);
-}
-.chrono-fragment-icon { font-size: 22px; color: #55C8E8; }
-.chrono-fragment-label {
-  font-size: 11px;
-  color: #55C8E8;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 800;
-}
-.chrono-fragment-title { font-size: 17px; color: #fff; font-weight: 800; line-height: 1.2; }
-.chrono-fragment-image {
-  width: 100%;
-  min-height: 220px;
-  background:
-    linear-gradient(135deg, rgba(85, 200, 232, 0.08), transparent),
-    repeating-linear-gradient(45deg, rgba(85, 200, 232, 0.04) 0px, rgba(85, 200, 232, 0.04) 2px, transparent 2px, transparent 8px),
-    #0A1530;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
-}
-.chrono-fragment-image::before {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px dashed rgba(85, 200, 232, 0.4);
-  border-radius: 10px;
-  pointer-events: none;
-}
-.chrono-fragment-placeholder {
-  color: rgba(85, 200, 232, 0.7);
-  font-size: 14px;
-  text-align: center;
-  padding: 20px 30px;
-  z-index: 1;
-  font-weight: 600;
-}
-.chrono-fragment-placeholder code {
-  background: rgba(85, 200, 232, 0.15);
-  color: #7FD8F0;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-}
-.chrono-fragment-body { padding: 16px 20px; }
-.chrono-prompt {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.55;
-}
-.chrono-prompt:last-child { margin-bottom: 0; }
-.chrono-prompt-icon { color: #55C8E8; font-weight: 800; flex-shrink: 0; }
 
-/* ═══════════ CHRONO-LENS LOCKED/REVEAL SYSTEM (Grade 4) ═══════════ */
-.chrono-locked-screen {
-  background:
-    radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%),
-    repeating-linear-gradient(0deg, rgba(85, 200, 232, 0.03) 0px, rgba(85, 200, 232, 0.03) 1px, transparent 1px, transparent 4px),
-    #0A1530;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 30px 20px;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
-}
-.chrono-locked-screen::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #55C8E8, transparent);
-  animation: chronoScan 4s ease-in-out infinite;
-  opacity: 0.6;
-  pointer-events: none;
-}
-@keyframes chronoScan {
-  0% { top: 0%; opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { top: 100%; opacity: 0; }
-}
-.chrono-locked-screen::after {
-  content: '';
-  position: absolute;
-  inset: 14px;
-  border: 1px dashed rgba(85, 200, 232, 0.35);
-  border-radius: 8px;
-  pointer-events: none;
-}
-.chrono-locked-status {
-  color: #55C8E8;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 800;
-  animation: chronoLockedPulse 2s ease-in-out infinite;
-  z-index: 1;
-  text-align: center;
-}
-@keyframes chronoLockedPulse {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 1; }
-}
-.chrono-engage-btn {
-  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
-  color: #0A1530;
-  border: 2px solid #7FD8F0;
-  padding: 13px 26px;
-  border-radius: 30px;
-  font-weight: 800;
-  font-size: 15px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4);
-  transition: all 0.2s ease;
-  animation: chronoEngageBtnGlow 2.4s ease-in-out infinite;
-  z-index: 1;
-  font-family: inherit;
-}
-@keyframes chronoEngageBtnGlow {
-  0%, 100% { box-shadow: 0 4px 24px rgba(85, 200, 232, 0.4); }
-  50% { box-shadow: 0 4px 36px rgba(85, 200, 232, 0.75), 0 0 0 4px rgba(85, 200, 232, 0.15); }
-}
-.chrono-engage-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 32px rgba(85, 200, 232, 0.7);
-}
-.chrono-engage-btn:active { transform: translateY(0); }
-.chrono-engage-btn:disabled {
-  animation: none;
-  cursor: wait;
-  opacity: 0.85;
-}
-.chrono-engage-btn-icon {
-  font-size: 18px;
-  display: inline-block;
-  animation: chronoIconSpin 4s linear infinite;
-}
-@keyframes chronoIconSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.chrono-locked-hint {
-  font-size: 12px;
-  color: rgba(85, 200, 232, 0.7);
-  z-index: 1;
-  font-style: italic;
-}
-.chrono-locked-screen.chrono-scanning {
-  animation: chronoFlash 1s ease forwards;
-}
-.chrono-locked-screen.chrono-scanning::before {
-  animation: chronoFastScan 0.6s ease-in-out 2;
-}
-@keyframes chronoFlash {
-  0% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
-  40% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.6), transparent 80%), #1A4060; }
-  100% { background: radial-gradient(ellipse at center, rgba(85, 200, 232, 0.08), transparent 70%), #0A1530; }
-}
-@keyframes chronoFastScan {
-  0% { top: 0%; opacity: 1; }
-  100% { top: 100%; opacity: 1; }
-}
-.chrono-hidden { display: none !important; }
-.chrono-revealed-image { animation: chronoZoomIn 0.9s cubic-bezier(0.34, 1.4, 0.6, 1) forwards; transform-origin: center; }
-@keyframes chronoZoomIn {
-  0% { opacity: 0; transform: scale(0.4); filter: blur(8px) brightness(2); }
-  60% { filter: blur(0) brightness(1.2); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0) brightness(1); }
-}
-.chrono-revealed-prompts .chrono-prompt {
-  opacity: 0;
-  animation: chronoPromptIn 0.6s ease forwards;
-}
-.chrono-revealed-prompts .chrono-prompt:nth-child(1) { animation-delay: 0.3s; }
-.chrono-revealed-prompts .chrono-prompt:nth-child(2) { animation-delay: 0.55s; }
-.chrono-revealed-prompts .chrono-prompt:nth-child(3) { animation-delay: 0.8s; }
-@keyframes chronoPromptIn {
-  0% { opacity: 0; transform: translateY(8px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ═══════════ DISTORTER ALERT (Grade 4 — Tab 2 antagonist beat) ═══════════ */
-.distorter-alert {
-  background: linear-gradient(135deg, #2A1A1A, #3A2222);
-  border: 2px solid #E8636B;
-  border-left: 6px solid #E8636B;
-  border-radius: 14px;
-  padding: 14px 18px;
-  margin-bottom: 14px;
-  position: relative;
-  overflow: hidden;
-}
-.distorter-label {
-  font-size: 11px;
-  color: #FF8E94;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 800;
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.distorter-text { font-size: 14px; color: rgba(255, 255, 255, 0.9); line-height: 1.6; }
-.distorter-text strong { color: #FFB8BC; }
-.distorter-counter {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(232, 99, 107, 0.3);
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
-}
-.distorter-counter strong { color: #B8E8CF; }
-
-/* ═══════════ TIMELINE SYNC PUZZLE IMAGES (Grade 4 — Tab 4 reveal) ═══════════ */
-.timeline-sync-card {
-  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
-  border: 2px solid #55C8E8;
-  border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.15);
-}
-.timeline-sync-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 20px;
-  border-bottom: 1.5px solid rgba(85, 200, 232, 0.3);
-}
-.timeline-sync-icon { font-size: 24px; color: #55C8E8; }
-.timeline-sync-label {
-  font-size: 11px;
-  color: #55C8E8;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 800;
-}
-.timeline-sync-title { font-size: 17px; color: #fff; font-weight: 800; }
-.timeline-sync-image {
-  width: 100%;
-  min-height: 280px;
-  background:
-    radial-gradient(ellipse at center, rgba(85, 200, 232, 0.15), transparent 70%),
-    repeating-linear-gradient(45deg, rgba(85, 200, 232, 0.03) 0px, rgba(85, 200, 232, 0.03) 2px, transparent 2px, transparent 12px),
-    #0A1530;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid rgba(85, 200, 232, 0.3);
-  position: relative;
-}
-.timeline-sync-image::before {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  border: 1px dashed rgba(85, 200, 232, 0.4);
-  border-radius: 10px;
-  pointer-events: none;
-}
-.timeline-sync-placeholder {
-  color: rgba(85, 200, 232, 0.7);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px;
-  z-index: 1;
-  font-weight: 600;
-}
-.timeline-sync-placeholder code {
-  background: rgba(85, 200, 232, 0.15);
-  color: #7FD8F0;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-}
-.timeline-sync-caption {
-  padding: 14px 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
-}
-.timeline-sync-caption strong { color: #7FD8F0; }
-
-/* When an image is loaded into a placeholder, hide the dashed ::before frame */
-.chrono-fragment-image.image-loaded::before,
-.timeline-sync-image.image-loaded::before { display: none; }
-.chrono-fragment-image.image-loaded,
-.timeline-sync-image.image-loaded { min-height: 0; padding: 0; border: none; background: none; border-radius: 12px; overflow: hidden; }
 
 /* ═══════════ SELF-CHECK QUIZ ═══════════ */
 .quiz-card {
@@ -1774,116 +1460,323 @@ body {
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
 
-/* ═══════════ STORY-ARC COLLAPSIBLE BLOCKS (HQ Status + Previously On) ═══════════ */
-.story-block {
-  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
-  border: 1px solid rgba(127,216,240,0.3);
-  border-radius: 10px;
-  margin: 14px 0 12px;
-  box-shadow: 0 2px 8px rgba(14,28,66,0.15);
-  overflow: hidden;
+
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
+   Lightweight story layer. Sticky notes for messages, manila file
+   cards for "Show or Make," kraft postcards for unit closers.
+   Florida content is the main story; these are visual novelty only.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* --- 📩 Message from Inside Canvas: yellow sticky note --- */
+.canvas-sticky {
+  position: relative;
+  background: linear-gradient(180deg, #FFF8B8 0%, #FFEC8A 100%);
+  border: 1px solid #E6D04A;
+  border-radius: 4px;
+  padding: 18px 20px 16px;
+  margin: 14px auto 18px;
+  max-width: 680px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  transform: rotate(-1.2deg);
+  font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive, system-ui;
+  color: #3D2E10;
 }
-.story-block.prev-on  { border-left: 3px solid #7FD8F0; }
-.story-block.hq-status { border-left: 3px solid #FFD580; }
-.story-block-bar {
-  width: 100%;
-  background: transparent;
-  border: 0;
-  padding: 10px 16px;
+.canvas-sticky::before {
+  /* tape strip */
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 84px;
+  height: 18px;
+  background: rgba(180, 200, 220, 0.55);
+  border: 1px solid rgba(120, 140, 160, 0.35);
+  border-radius: 2px;
+}
+.canvas-sticky-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-sticky-head-icon { font-size: 20px; }
+.canvas-sticky-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+.canvas-sticky-body {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #3D2E10;
+}
+.canvas-sticky-body p { margin: 0 0 6px; }
+.canvas-sticky-byline {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6B5418;
+  font-style: italic;
+}
+
+/* Variant: File Unlocked sticky (soft green instead of yellow) */
+.canvas-sticky.unlocked {
+  background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
+  border-color: #6FAA5C;
+  color: #1F4515;
+  transform: rotate(1deg);
+}
+.canvas-sticky.unlocked::before {
+  background: rgba(110, 150, 110, 0.45);
+  border-color: rgba(80, 110, 80, 0.4);
+}
+.canvas-sticky.unlocked .canvas-sticky-head-label { color: #2D5A1F; }
+.canvas-sticky.unlocked .canvas-sticky-body { color: #1F4515; }
+.canvas-sticky.unlocked .canvas-sticky-byline { color: #3D6A28; }
+
+/* --- 🗂️ Show or Make: manila folder/file card --- */
+.canvas-file-card {
+  position: relative;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 22px 22px 20px;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.canvas-file-card::before {
+  /* manila folder tab */
+  content: attr(data-tab);
+  position: absolute;
+  top: -22px;
+  left: 24px;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 16px 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6E5215;
+}
+.canvas-file-card-head {
   display: flex;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
-  color: #E8F1FA;
-  font-family: inherit;
-  text-align: left;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #B89860;
 }
-.story-block-bar:hover { background: rgba(127,216,240,0.06); }
-.story-block-icon { font-size: 16px; line-height: 1; }
-.story-block-label {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  font-weight: 800;
-  color: #7FD8F0;
-  white-space: nowrap;
-}
-.story-block.hq-status .story-block-label { color: #FFD580; }
-.story-block-summary {
-  flex: 1;
-  font-size: 13px;
-  color: rgba(232,241,250,0.78);
-  font-style: italic;
-  line-height: 1.4;
-}
-.story-block-toggle {
-  font-size: 11px;
-  color: rgba(232,241,250,0.6);
-  transition: transform 0.25s ease;
+.canvas-file-card-head-icon { font-size: 22px; }
+.canvas-file-card-head-text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
   font-weight: 700;
+  color: #4A3811;
 }
-.story-block:not(.collapsed) .story-block-toggle { transform: rotate(180deg); }
-.story-block:not(.collapsed) .story-block-summary { display: none; }
-.story-block-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-  padding: 0 16px;
-  font-size: 14px;
-  color: #E8F1FA;
+.canvas-file-card-body {
+  font-size: 15px;
   line-height: 1.6;
+  color: #2F2308;
 }
-.story-block:not(.collapsed) .story-block-body {
-  max-height: 500px;
-  padding: 4px 16px 14px;
+.canvas-file-card-visual {
+  background: #FFFCF2;
+  border: 1px dashed #B89860;
+  border-radius: 6px;
+  padding: 18px;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6E5215;
+  font-style: italic;
 }
-.hq-row {
-  display: flex;
-  gap: 12px;
-  padding: 8px 0;
-  border-top: 1px solid rgba(127,216,240,0.12);
-}
-.hq-row:first-child { border-top: 0; padding-top: 4px; }
-.hq-row-label {
-  flex: 0 0 120px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-  color: rgba(232,241,250,0.62);
-  padding-top: 3px;
-}
-.hq-row-value {
-  flex: 1;
-  font-size: 13px;
-  color: #E8F1FA;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  line-height: 1.5;
-}
-.rank-dots, .threat-dots {
+.canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
+
+/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
+.canvas-glitch-note {
   display: inline-flex;
-  gap: 4px;
-  vertical-align: middle;
+  align-items: center;
+  gap: 6px;
+  background: #F3E8FF;
+  border: 1px dashed #9B6BC4;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: #5B2D8C;
 }
-.dot {
+.canvas-glitch-note-icon {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  animation: glitchFlicker 3.5s ease-in-out infinite;
 }
-.dot-gold { background: transparent; border: 1.5px solid rgba(255,213,128,0.55); }
-.dot-gold.filled { background: #FFD580; box-shadow: 0 0 6px rgba(255,213,128,0.5); border-color: #FFD580; }
-.dot-red { background: transparent; border: 1.5px solid rgba(217,64,64,0.5); }
-.dot-red.filled { background: #D94040; box-shadow: 0 0 6px rgba(217,64,64,0.6); border-color: #D94040; }
-.dot-meta { font-size: 11px; color: rgba(232,241,250,0.55); font-weight: 700; }
-@media (max-width: 620px) {
-  .hq-row-label { flex: 0 0 90px; font-size: 10px; }
-  .story-block-summary { font-size: 12px; }
+@keyframes glitchFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.3; transform: translateX(-1px); }
+  96% { opacity: 1; transform: translateX(1px); }
+  98% { opacity: 0.5; }
 }
 
+/* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
+.canvas-unlock-stamp {
+  display: inline-block;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 2px solid #B91C1C;
+  border-radius: 4px;
+  padding: 4px 10px 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  margin: 0 0 12px;
+}
+.canvas-unlock-stamp::before { content: "🔓 "; }
+
+/* --- 🛤️ Course Path Updated: small progress chip --- */
+.canvas-path-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #6EE7B7;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+.canvas-path-chip-icon { font-size: 13px; }
+.canvas-path-chip-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 4px;
+}
+.canvas-path-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #D1FAE5;
+}
+.canvas-path-chip-dot.done { background: #10B981; }
+.canvas-path-chip-dot.now {
+  background: #10B981;
+  box-shadow: 0 0 0 2px #10B98140;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px #10B98140; }
+  50%      { box-shadow: 0 0 0 4px #10B98120; }
+}
+
+/* --- 📮 Postcard from the Teacher (unit closers only) --- */
+.canvas-postcard {
+  position: relative;
+  background: linear-gradient(135deg, #F5E6C8 0%, #E8D4A0 100%);
+  border: 1px solid #A78448;
+  border-radius: 6px;
+  padding: 0;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.14), inset 0 0 0 2px rgba(255,255,255,0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 220px;
+}
+.canvas-postcard-left {
+  padding: 20px 22px;
+  border-right: 2px dashed #A78448;
+  font-family: "Caveat", "Patrick Hand", cursive, system-ui;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #3D2E10;
+}
+.canvas-postcard-right {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.canvas-postcard-stamp {
+  align-self: flex-end;
+  width: 64px; height: 78px;
+  background: #FFF5E0;
+  border: 2px solid #A78448;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: relative;
+}
+.canvas-postcard-stamp::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 1.5px dashed #A78448;
+  border-radius: 6px;
+}
+.canvas-postcard-address {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #6E5215;
+  line-height: 1.55;
+}
+.canvas-postcard-cancel {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 10px;
+  color: #8B6E2A;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-top: 1px solid #A78448;
+  padding-top: 6px;
+  margin-top: 8px;
+}
+.canvas-postcard-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-postcard-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+@media (max-width: 620px) {
+  .canvas-postcard { grid-template-columns: 1fr; }
+  .canvas-postcard-left { border-right: none; border-bottom: 2px dashed #A78448; }
+}
+
+/* --- Sensitive-history tone override (quieter visual) --- */
+.canvas-sticky.quiet,
+.canvas-file-card.quiet,
+.canvas-postcard.quiet {
+  background: #F6F2EA;
+  border-color: #A89880;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.canvas-sticky.quiet::before { display: none; }
+.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
+.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -1907,7 +1800,7 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title">What Florida Historians <em>Study</em></div>
+  <div class="header-title">Historian's <em>Notebook</em></div>
   <div class="header-badge">
     <span class="header-badge-icon">🐊</span>
     <span class="header-badge-text">Lesson 4.01.06</span>
@@ -2126,7 +2019,7 @@ body {
     </g><!-- end .float-right -->
   </g><!-- end book position wrapper -->
 
-  <!-- ════ CENTER: Small Florida silhouette + Chrono-Lens hovering ════ -->
+  <!-- ════ CENTER: Small Florida silhouette + magnifying lens hovering ════ -->
   <!-- Subtle Florida glow -->
   <ellipse cx="460" cy="155" rx="50" ry="40" fill="url(#flGlow)"/>
   <!-- Small Florida outline -->
@@ -2236,93 +2129,40 @@ body {
 </div>
 
 
-<!-- ═══ HQ STATUS PANEL (collapsible — episode / rank / threat) ═══ -->
-<div class="story-block hq-status collapsed" id="hqStatusBlock">
-  <button class="story-block-bar" type="button" onclick="toggleStoryBlock('hqStatusBlock')">
-    <span class="story-block-icon">🛰️</span>
-    <span class="story-block-label">Time Lab HQ Status</span>
-    <span class="story-block-summary">Ep 1 · Junior Chrono-Historian · Threat: Static (1/4)</span>
-    <span class="story-block-toggle">▼</span>
-  </button>
-  <div class="story-block-body">
-    <div class="hq-row">
-      <div class="hq-row-label">Episode</div>
-      <div class="hq-row-value">
-        Episode <strong>1 of 4</strong> — <em>Booting Up the Florida Timeline Core</em> &nbsp;<span class="dot-meta">(Units 1–5)</span>
-      </div>
-    </div>
-    <div class="hq-row">
-      <div class="hq-row-label">Your Rank</div>
-      <div class="hq-row-value">
-        <strong>Junior Chrono-Historian</strong>
-        <span class="rank-dots" aria-label="Rank 1 of 5">
-          <span class="dot dot-gold filled"></span>
-          <span class="dot dot-gold"></span>
-          <span class="dot dot-gold"></span>
-          <span class="dot dot-gold"></span>
-          <span class="dot dot-gold"></span>
-        </span>
-        <span class="dot-meta">1 / 5</span>
-      </div>
-    </div>
-    <div class="hq-row">
-      <div class="hq-row-label">Distorter Threat</div>
-      <div class="hq-row-value">
-        <strong>Static</strong> &nbsp;<span class="dot-meta">simple flattening; easily defeated by basic evidence</span>
-        <span class="threat-dots" aria-label="Threat 1 of 4">
-          <span class="dot dot-red filled"></span>
-          <span class="dot dot-red"></span>
-          <span class="dot dot-red"></span>
-          <span class="dot dot-red"></span>
-        </span>
-        <span class="dot-meta">1 / 4</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══ PREVIOUSLY ON THE TIME LAB (collapsible) ═══ -->
-<div class="story-block prev-on collapsed" id="prevOnBlock">
-  <button class="story-block-bar" type="button" onclick="toggleStoryBlock('prevOnBlock')">
-    <span class="story-block-icon">⏪</span>
-    <span class="story-block-label">Previously on the Time Lab</span>
-    <span class="story-block-summary">Last mission: locked in the <em>"vocabulary console"</em> piece. Tap to recap.</span>
-    <span class="story-block-toggle">▼</span>
-  </button>
-  <div class="story-block-body">
-    The team had hit a word wall — terms like <em>archive</em>, <em>chronology</em>, and <em>archaeology</em> were starting to feel intimidating. The Lab Archivist powered up the vocabulary console, and the team learned five core Florida history words and the Greek/Latin roots beneath them (with help from <em>arch-</em>, "old, first, original"). The <em>"vocabulary console"</em> piece is now locked in. Only one Unit 1 slot remains — a notebook silhouette. The Lab Archivist is waiting at the workbench with a blank page…
-  </div>
-</div>
 
 
-<!-- ═══ MISSION BRIEF (Grade 4 — replaces quote strip) ═══ -->
-<div class="quote-strip">
-  <div style="font-size:10px;color:#D4663A;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;margin-bottom:6px;">🛰️ Mission Brief · Time Echo Detected</div>
-  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
-    <!-- ✏️ MISSION BRIEF: 3–5 sentences. Look up the lesson code in the
-         G4 Time Lab Story Arc and use the Claude Lesson Story Prompt + Chrono-Lens Start Piece.
-         Set the scene in the Time Lab. Don't reveal what the fragment is yet —
-         the Chrono-Lens Fragment block below will show it. -->
-    Day six in the Time Lab — and it's quiet. Not nervous-quiet. Ready-quiet. For five days the team has gathered evidence, sorted it, threaded it, named it. The Lab Archivist walks the length of the workbench, looks at the team, and slides a single blank notebook page across to each Junior Chrono-Historian. No big speech. Just: "Now you write." Today's mission is to combine everything Unit 1 has taught — sources, feeds, chronology, vocabulary — and write your <em>first full Historian's Notebook entry</em>: one honest claim about Florida history with real evidence behind it.
-  </div>
-</div>
+
+
+
+
 
 <!-- ═══ INTRO SECTION (collapsible) ═══ -->
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">🛰️</div>
-    <div class="intro-collapsed-text">Today's Mission &amp; Objectives</div>
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's File &amp; Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
+
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
+  </div>
+  <div class="canvas-sticky-body">
+    <p>Canvas won't let me open the first module until my students record evidence carefully — not guesses, but real observations backed by details they can actually see. I need each of you to open your Historian's Notebook, study today's Florida source, and write your first real entry: a claim, evidence, and one honest wondering. Help me do this right and the first locked file will open.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, still inside Module 1</div>
+</div>
 
   <div class="intro-2col">
     <!-- Mission Question -->
     <div class="intro-card theme-question">
       <div class="intro-card-head">
-        <div class="intro-card-head-icon">🛰️</div>
+        <div class="intro-card-head-icon">✨</div>
         <div>
-          <div class="intro-card-head-label">Mission Question</div>
-          <div class="intro-card-head-title">Today's Mission</div>
+          <div class="intro-card-head-label">Florida Historian's Question</div>
+          <div class="intro-card-head-title">Today's Big Question</div>
         </div>
       </div>
       <div class="intro-card-body">
@@ -2350,7 +2190,7 @@ body {
   <!-- You'll Need strip -->
   <div class="need-strip">
     <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">🔬 Chrono-Historian's Notebook</span>
+    <span class="need-chip">🔬 Florida historian's Notebook</span>
     <span class="need-chip">✏️ Pencil</span>
     <span class="need-chip">🗺️ Lesson Page</span>
   </div>
@@ -2358,10 +2198,10 @@ body {
 
 <!-- ═══ TAB BAR (3 tabs) ═══ -->
 <div class="tab-bar" id="tabBar">
-  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">🛰️ Mission Brief <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Chrono-Lens Analysis <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Signal Check <span class="tab-check">✓</span></button>
-  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📡 Timeline Sync <span class="tab-check">✓</span></button>
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -2371,9 +2211,9 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">🛰️</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
     <div>
-      <div class="tab-section-title">Mission Brief</div>
+      <div class="tab-section-title">Learn</div>
     </div>
   </div>
 
@@ -2386,13 +2226,13 @@ body {
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">🛰️ Receive Mission Brief &amp; open the blank notebook page</span>
+      <span class="todays-path-step">📍 Learn the three parts of a Historian's Notebook entry</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Study the final Florida source and draft a claim with evidence</span>
+      <span class="todays-path-step">🔍 Study a Florida primary source and gather evidence</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🧠 Run the Signal Check</span>
+      <span class="todays-path-step">🧠 Check your understanding</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📡 Sync the "first entry" piece — Unit 1 puzzle complete</span>
+      <span class="todays-path-step">📝 Write your first complete evidence entry</span>
     </div>
   </div>
 
@@ -2409,7 +2249,7 @@ body {
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> This is the last lesson of Unit 1 — name that. Welcome the team and pause for a second of "we've done a lot." Read the Mission Question aloud: "Now that I have the historian's tools, sources, feeds, timeline, and vocabulary — what's my <em>first honest claim</em> about Florida history, and what evidence backs it up?" Set the scene: the Lab Archivist slides a blank notebook page in front of each Junior Chrono-Historian. No big speech, just "Now you write." Name today's virtue: <strong>honesty</strong> — honest historians say what they know AND what they're still wondering. Hint that today's Timeline Sync isn't just one piece — the <em>whole</em> Unit 1 puzzle will be visible by the end. Keep it under 2 minutes. Warm, proud, calm.
+          <strong>Teacher recording notes:</strong> This is the last lesson of Unit 1 — name that. Welcome the team and pause for a second of "we've done a lot." Read the Mission Question aloud: "Now that I have the historian's tools, sources, feeds, timeline, and vocabulary — what's my <em>first honest claim</em> about Florida history, and what evidence backs it up?" Set the scene: your teacher slides a blank notebook page in front of each Florida historian. No big speech, just "Now you write." Name today's virtue: <strong>honesty</strong> — honest historians say what they know AND what they're still wondering. Hint that today's Timeline Sync isn't just one piece — the <em>whole</em> Unit 1 puzzle will be visible by the end. Keep it under 2 minutes. Warm, proud, calm.
         </div>
         <div class="video-placeholder-id"><!-- slot: 4-01-06-welcome --></div>
       </div>
@@ -2422,45 +2262,61 @@ body {
     <div class="virtue-text">Today honesty returns — and it's the heart of the whole entry. An honest Florida historian makes a <strong>claim</strong> they can back up with <strong>evidence</strong>. They also say <strong>what they're still wondering</strong> instead of pretending to know the whole story. A Historian's Notebook entry that says "I think X because of evidence A and B — and I'm still wondering about C" is stronger than one that pretends to have all the answers. Honesty is what makes the entry trustworthy.</div>
   </div>
 
-  <!-- Junior Chrono-Historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
+  <!-- Florida historian Role — constant role for Grade 4. Today's lab assignment varies per lesson. -->
   <div class="callout callout-info">
     <div class="callout-icon">🔬</div>
-    <p><strong>Your Role Today:</strong> You are a <strong>Junior Chrono-Historian</strong> on the student research team. Today's lab assignment — Unit 1's final mission — is to combine everything you've learned, study one final Florida source, and write your <em>first full Historian's Notebook entry</em>. When you finish, the Unit 1 puzzle locks in completely.</p>
+    <p><strong>Your Role Today:</strong> You are on the <strong>Florida History Team</strong>. Today's assignment — Unit 1's final lesson — is to combine everything you've learned, study one final Florida source, and write your <em>first full Historian's Notebook entry</em>: a claim, evidence, and one honest wondering.</p>
   </div>
 
-  <!-- ═══ CHRONO-LENS FRAGMENT — show the lesson's puzzle piece zoomed in ═══ -->
-  <div class="chrono-fragment">
-    <div class="chrono-fragment-header">
-      <div class="chrono-fragment-icon">🔭</div>
-      <div>
-        <div class="chrono-fragment-label">🛰️ Chrono-Lens · Time Echo Fragment</div>
-        <div class="chrono-fragment-title">A Blank Page on the Workbench</div>
+
+  <!-- ═══ 🗂️ SHOW OR MAKE FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.01.06">
+    <div class="canvas-file-card-head">
+      <span class="canvas-file-card-head-icon">🗂️</span>
+      <span class="canvas-file-card-head-text">Show or Make: First Historian's Notebook Evidence Entry</span>
+    </div>
+    <div class="canvas-file-card-body">
+      <p>Today you will write the first page of your Historian's Notebook — a complete evidence entry with a claim, at least two pieces of evidence, and one honest wondering.</p>
+      <div class="canvas-file-card-visual">
+        <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
+          <!-- Notebook page -->
+          <rect x="80" y="20" width="260" height="160" rx="4" fill="#FFFDF4" stroke="#B89860" stroke-width="2"/>
+          <!-- Spiral binding -->
+          <g fill="none" stroke="#8B6E2A" stroke-width="2">
+            <circle cx="90" cy="40" r="5"/>
+            <circle cx="90" cy="60" r="5"/>
+            <circle cx="90" cy="80" r="5"/>
+            <circle cx="90" cy="100" r="5"/>
+            <circle cx="90" cy="120" r="5"/>
+            <circle cx="90" cy="140" r="5"/>
+            <circle cx="90" cy="160" r="5"/>
+          </g>
+          <!-- Ruling lines -->
+          <g stroke="#D4C898" stroke-width="1">
+            <line x1="105" y1="50" x2="325" y2="50"/>
+            <line x1="105" y1="70" x2="325" y2="70"/>
+            <line x1="105" y1="90" x2="325" y2="90"/>
+            <line x1="105" y1="110" x2="325" y2="110"/>
+            <line x1="105" y1="130" x2="325" y2="130"/>
+            <line x1="105" y1="150" x2="325" y2="150"/>
+          </g>
+          <!-- Labels: Claim / Evidence / Wondering -->
+          <rect x="108" y="38" width="60" height="14" rx="3" fill="#D4943A" opacity="0.75"/>
+          <rect x="108" y="78" width="75" height="14" rx="3" fill="#1A8A7D" opacity="0.75"/>
+          <rect x="108" y="118" width="100" height="14" rx="3" fill="#8B6FC0" opacity="0.75"/>
+          <!-- Pencil -->
+          <g transform="translate(340,90) rotate(-30)">
+            <rect x="-3" y="-40" width="6" height="55" rx="1" fill="#FFD580"/>
+            <polygon points="-3,15 3,15 0,25" fill="#E8636B"/>
+            <rect x="-3" y="-44" width="6" height="6" rx="1" fill="#C0A080"/>
+          </g>
+          <!-- Florida outline small -->
+          <g transform="translate(290,150) scale(0.5)">
+            <path d="M -30,-20 L 10,-22 L 25,-15 L 28,-5 L 20,5 L 15,18 L 8,25 L 0,22 L -5,10 L -10,2 L -22,-5 L -30,-12 Z" fill="#55C8E8" opacity="0.4" stroke="#1A8A7D" stroke-width="1.5"/>
+          </g>
+        </svg>
+        <p class="canvas-file-card-caption">A blank notebook page — ready for your first complete evidence entry.</p>
       </div>
-    </div>
-
-    <!-- Locked screen (visible initially; replaced by image on click) -->
-    <div class="chrono-locked-screen">
-      <div class="chrono-locked-status">⚠️ Time Echo locked · Awaiting authorization</div>
-      <button class="chrono-engage-btn" type="button" onclick="engageChronoLens(this)">
-        <span class="chrono-engage-btn-icon">🔭</span>
-        Engage Chrono-Lens
-      </button>
-      <div class="chrono-locked-hint">Click to scan the fragment</div>
-    </div>
-
-    <!-- Image (loads in background; revealed by JS) -->
-    <div class="chrono-fragment-image chrono-hidden" data-image="puzzle-4-01-06-fragment">
-      <div class="chrono-fragment-placeholder">
-        🖼️ Zoomed-in image: a single blank lined notebook page resting on the Lab workbench, lit by a warm overhead lamp. The page is open and waiting — pencil resting beside it, a small Florida outline stamped softly in the corner. Around the edges of the frame, the five Unit 1 puzzle pieces are partly visible in the background, glowing softly as if waiting for the sixth piece to complete the set. No human hands visible.<br><br>
-        <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-01-06-fragment.jpg</code>
-      </div>
-    </div>
-
-    <!-- Observation prompts (hidden initially; cascaded in after reveal) -->
-    <div class="chrono-fragment-body chrono-hidden">
-      <div class="chrono-prompt"><span class="chrono-prompt-icon">👁️</span><span><strong style="color:#fff;">What do you notice?</strong> Look at the blank page, then at the five Unit 1 pieces glowing around it. What do all five pieces together help a historian do?</span></div>
-      <div class="chrono-prompt"><span class="chrono-prompt-icon">💭</span><span><strong style="color:#fff;">What could this be?</strong> Why might the Lab Archivist hand a Junior Chrono-Historian a <em>blank</em> page right now — after five days of evidence?</span></div>
-      <div class="chrono-prompt"><span class="chrono-prompt-icon">🔍</span><span><strong style="color:#fff;">What evidence would help?</strong> If you had to write one true sentence about Florida history right now, what would you write — and what evidence from earlier this week would back it up?</span></div>
     </div>
   </div>
 
@@ -2469,7 +2325,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">You've seen the blank page. Now let's study one last Florida source — and find the claim it's waiting for.</p>
-    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Chrono-Lens Analysis →</button>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
   </div>
 </div>
 
@@ -2483,7 +2339,7 @@ body {
     <!-- ✏️ GRADE ACCENT -->
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
     <div>
-      <div class="tab-section-title">Chrono-Lens Analysis</div>
+      <div class="tab-section-title">Explore</div>
     </div>
   </div>
 
@@ -2500,7 +2356,7 @@ body {
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Today is synthesis day. Walk students through the <strong>three parts of a Historian's Notebook entry</strong>: (1) a <em>claim</em> — one clear sentence saying what you think happened or what's true; (2) the <em>evidence</em> — at least two specific details from the source that support the claim; (3) what you're <em>still wondering</em> — an honest question you can't answer yet. Use the Source Study image to model: study the photograph, find two details that connect, draft a claim, and write one wondering. Affirm that "I'm still wondering…" sentences make entries stronger, not weaker. Tie the Distorter beat: it wants Junior Chrono-Historians either to (a) make giant claims with no evidence, or (b) make no claim at all. Honesty + evidence = balanced first entry. 4–5 minutes. Steady and reflective.
+          <strong>Teacher recording notes:</strong> Today is synthesis day. Walk students through the <strong>three parts of a Historian's Notebook entry</strong>: (1) a <em>claim</em> — one clear sentence saying what you think happened or what's true; (2) the <em>evidence</em> — at least two specific details from the source that support the claim; (3) what you're <em>still wondering</em> — an honest question you can't answer yet. Use the Source Study image to model: study the photograph, find two details that connect, draft a claim, and write one wondering. Affirm that "I'm still wondering…" sentences make entries stronger, not weaker. Tie the virtue: honesty in action means making careful claims backed by real evidence, and naming what you're still wondering. Honesty + evidence = a strong first entry. 4–5 minutes. Steady and reflective.
         </div>
         <div class="video-placeholder-id"><!-- slot: 4-01-06-explore-explainer --></div>
       </div>
@@ -2586,16 +2442,6 @@ body {
   <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- ═══ DISTORTER ALERT (Grade 4 — antagonist beat) ═══ -->
-  <div class="distorter-alert">
-    <div class="distorter-label">⚠️ Distorter Signal Detected</div>
-    <div class="distorter-text">
-      🔊 <strong>Threat level: faint signal (1 of 5)…</strong> but stirring. The Distorter has noticed the team is getting strong. Today it's trying two opposite tricks at once: pushing Junior Chrono-Historians to either <strong>make a giant claim with no evidence</strong> ("everything in this photo was perfect/terrible") OR <strong>make no claim at all</strong> ("I don't know, I'm just a kid"). Both moves make a notebook entry useless. <strong>What evidence from today's lesson would set the record straight?</strong>
-    </div>
-    <div class="distorter-counter">
-      <strong>🛡️ Junior Chrono-Historian protocol:</strong> Make <em>one</em> careful claim. Back it with <em>two</em> specific pieces of evidence from the source. Then add <em>one</em> honest wondering. Claim + evidence + honest question — the Distorter can't fight that.
-    </div>
-  </div>
 
   <!-- Key Concept -->
   <div class="key-concept">
@@ -2615,7 +2461,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">You've explored the sources and built your understanding. Let's see how much you remember.</p>
-    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Signal Check →</button>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Check →</button>
   </div>
 </div>
 
@@ -2628,7 +2474,7 @@ body {
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
     <div>
-      <div class="tab-section-title">Signal Check</div>
+      <div class="tab-section-title">Quick Self-Check</div>
     </div>
   </div>
 
@@ -2655,7 +2501,7 @@ body {
 
       <!-- QUESTION 2 -->
       <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">2. A Junior Chrono-Historian writes: "I think these workers had a hard job. The evidence shows their clothes are worn and the tools are heavy." What's missing from a complete Historian's Notebook entry?</div>
+        <div class="quiz-q-text">2. A Florida historian writes: "I think these workers had a hard job. The evidence shows their clothes are worn and the tools are heavy." What's missing from a complete Historian's Notebook entry?</div>
         <div class="quiz-options">
           <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Nothing — it's done</div>
           <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>More claims — at least three</div>
@@ -2731,7 +2577,7 @@ body {
   <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
-    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📡 Timeline Sync →</button>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
   </div>
 </div>
 
@@ -2742,9 +2588,9 @@ body {
 
   <!-- Tab Section Header -->
   <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📡</div>
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
     <div>
-      <div class="tab-section-title">Timeline Sync</div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
     </div>
   </div>
 
@@ -2759,7 +2605,7 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">Lock In Your Lab Findings</div>
+        <div class="video-wrap-title">Write Your First Evidence Entry</div>
       </div>
     </div>
     <div class="video-ratio">
@@ -2813,7 +2659,8 @@ body {
     <div class="activity-head">
       <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
-        <div class="activity-title">Your First Historian's Notebook Entry</div>
+      <span class="canvas-unlock-stamp">Unlock Challenge</span>
+      <div class="activity-title">Your First Historian's Notebook Entry</div>
         <div class="activity-sub">Claim → Evidence → Honest Wondering. Three to five sentences. Honest, careful, yours.</div>
       </div>
     </div>
@@ -2831,77 +2678,35 @@ body {
     </div>
   </div>
 
-  <!-- Lab Log Entry (Grade 4 — replaces Chronicle Sentence) -->
+  <!-- Historian's Sentence (Grade 4 — replaces Chronicle Sentence) -->
   <div class="activity bl-navy">
     <div class="activity-head">
       <div class="activity-num" style="background:#0E1C42;">📡</div>
       <div>
-        <div class="activity-title">Lab Log Entry</div>
+        <div class="activity-title">Historian's Sentence</div>
         <div class="activity-sub">One sentence to log today's mission findings.</div>
       </div>
     </div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
       <div class="textbox-prompt">In this mission, I learned that ______ because ______.</div>
-      <textarea class="journal-box" id="journal-chronicle" data-label="Lab Log Entry"
+      <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
         placeholder="In this mission, I learned that..."
         oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- ═══ TIMELINE SYNC: Placed Piece (shown every lesson) ═══ -->
-  <div class="timeline-sync-card">
-    <div class="timeline-sync-header">
-      <div class="timeline-sync-icon">📡</div>
-      <div>
-        <div class="timeline-sync-label">📡 Timeline Sync · Piece Locked In</div>
-        <div class="timeline-sync-title">The Timeline Core now shows… the first entry</div>
-      </div>
-    </div>
-    <div class="timeline-sync-image" data-image="puzzle-4-01-06-placed">
-      <div class="timeline-sync-placeholder">
-        🖼️ Image: the final Unit 1 puzzle slot is now filling with the new "first entry" piece — a small notebook page icon with three short lines on it (representing claim, evidence, wondering), glowing softly in warm gold. The five previous Unit 1 pieces are also visible and locked in: 4.01.01 "historian tools" (boot screen), 4.01.02 "two-toned evidence", 4.01.03 "dual-feed source map", 4.01.04 "main thread", 4.01.05 "vocabulary console". Together the six pieces are nearly forming a complete Unit 1 image. Soft light spreads from the new piece across the whole puzzle.<br><br>
-        <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-01-06-placed.jpg</code>
-      </div>
-    </div>
-    <div class="timeline-sync-caption">
-      <strong>Today's piece reveals:</strong> The first entry — a notebook page showing claim, evidence, and one honest wondering. The piece labeled <em>"first entry"</em> is now locked into the Timeline Core. Six days. Six pieces. Unit 1's puzzle is ready to be revealed.
-    </div>
-  </div>
 
-  <!-- ═══ COMPLETE UNIT PUZZLE — FINAL LESSON OF UNIT 1 ONLY ═══ -->
-  <div class="timeline-sync-card" style="margin-top:24px;border:2px solid #FFD580;box-shadow:0 8px 24px rgba(255,213,128,0.18);">
-    <div class="timeline-sync-card-head">
-      <div class="timeline-sync-icon" style="background:linear-gradient(135deg,#FFD580,#E8A040);">🧩</div>
-      <div>
-        <div class="timeline-sync-title">Unit 1 Puzzle Complete — Thinking Like a Florida Historian</div>
-      </div>
+    <!-- ═══ 📂 FILE UNLOCKED STICKY ═══ -->
+  <div class="canvas-sticky unlocked" style="margin-top:18px;">
+    <div class="canvas-sticky-head">
+      <span class="canvas-sticky-head-icon">📂</span>
+      <span class="canvas-sticky-head-label">File Unlocked</span>
     </div>
-    <div class="timeline-sync-image" data-image="puzzle-4-01-complete">
-      <div class="timeline-sync-placeholder">
-        🖼️ Image (zoomed out): the <strong>fully assembled Unit 1 puzzle</strong> showing all six lesson pieces locked together to form one complete image — the Florida Time Lab's first restored Time Echo. The pieces fit together to reveal the Lab Archivist's workbench, with the Chrono-Lens overhead, an open notebook beside it (showing claim/evidence/wondering), a small Florida outline glowing on the bench, and the six tools the team built across the week: the boot screen, two-toned evidence panel, dual-feed source map, main thread timeline strip, vocabulary console, and first-entry notebook page. Warm gold glow across the whole image — the Timeline Core's first complete layer.<br><br>
-        <strong style="color:#FFD580;">Save your image as:</strong> <code>puzzle-4-01-complete.jpg</code>
-      </div>
+    <div class="canvas-sticky-body">
+      <p>A historian's notebook records observations, questions, evidence, and explanations. The first locked file is complete. The course path is one step clearer.</p>
     </div>
-    <div class="timeline-sync-caption">
-      <strong>Unit 1 is now restored.</strong> The first full Time Echo is locked in. Across six days, the team built the tools to think like a Florida historian — sources, feeds, chronology, vocabulary, and the first complete notebook entry. <em>Looking forward:</em> the Chrono-Lens is already humming. The next signal sounds different — it has the rhythm of waves on a coastline…
-    </div>
-  </div>
-
-  <!-- ═══ CASE FILE UPDATE — Unit 1 closeout ═══ -->
-  <div class="case-file">
-    <div class="case-file-header">
-      <span class="case-file-icon">📁</span>
-      <span class="case-file-title">Case File Closeout · UNIT 1 COMPLETE</span>
-      <span class="case-file-tag">Day 6 of 6</span>
-    </div>
-    <div class="case-file-body">
-      <div class="case-file-row"><span class="case-file-check">✓</span><span>First full Historian's Notebook entry written — claim, evidence, honest wondering</span></div>
-      <div class="case-file-row"><span class="case-file-check">✓</span><span>All six Unit 1 pieces locked into the Timeline Core</span></div>
-      <div class="case-file-row"><span class="case-file-check">✓</span><span>Unit 1 puzzle <strong>FULLY ASSEMBLED</strong> — the lab's first restored Time Echo</span></div>
-      <div class="case-file-row case-file-pending"><span class="case-file-arrow">→</span><span>Distorter threat: still <em>faint</em>, but stirring — it noticed the team is getting strong</span></div>
-      <div class="case-file-row case-file-pending"><span class="case-file-arrow">→</span><span>Next mission: <strong>Unit 2 — Florida Geography</strong>. New routine: <em>Map Quest</em>. The next signal has the rhythm of waves on a coastline.</span></div>
-    </div>
+    <div class="canvas-sticky-byline">— Course Path Updated · Episode 1 of 13</div>
   </div>
 
   <!-- Gathered Answers -->
@@ -2928,9 +2733,9 @@ body {
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Junior Chrono-Historian!"
+        <!-- ✏️ G4 CERTIFICATE: Always "Nice work, Florida historian!"
              Second sentence references the specific mission accomplished. -->
-        <strong>Nice work, Junior Chrono-Historian!</strong> You wrote your first full Historian's Notebook entry — claim, evidence, and one honest wondering — and locked in the final piece of Unit 1. The Florida Time Lab's first Time Echo is fully restored.
+        <strong>Nice work, Florida historian!</strong> You wrote your first full Historian's Notebook entry — claim, evidence, and one honest wondering. Unit 1 is complete.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
@@ -2969,7 +2774,7 @@ body {
       <div class="turn-in-checklist">
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I analyzed the Chrono-Lens fragment and answered the evidence questions.</div>
+          <div class="turn-in-item-text">✅ I studied today's Florida source and answered the evidence questions.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2977,13 +2782,37 @@ body {
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I logged my Lab Log Entry.</div>
+          <div class="turn-in-item-text">✅ I completed my Historian's Sentence entry.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
           <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
         </div>
       </div>
+    </div>
+  </div>
+
+  
+  <!-- ═══ 🛤️ COURSE PATH UPDATED CHIP ═══ -->
+  <div style="text-align:center;">
+    <div class="canvas-path-chip">
+      <span class="canvas-path-chip-icon">🛤️</span>
+      COURSE PATH UPDATED · Episode 1 of 13
+      <span class="canvas-path-chip-dots">
+        <span class="canvas-path-chip-dot now"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+      </span>
     </div>
   </div>
 
@@ -3000,7 +2829,7 @@ body {
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> This is a big one — celebrate properly. The team finished <strong>Unit 1</strong>. Six pieces, six days, one fully restored Time Echo and one finished Historian's Notebook entry per student. Name what they built: tools, sources, feeds, chronology, vocabulary, the first entry. Pause for the reveal — show the complete Unit 1 puzzle. Then transition: the Chrono-Lens is already humming, picking up a new signal — and this one sounds like <em>waves on a coastline</em>. Tease <strong>Unit 2 — Florida Geography</strong>. The team is about to swap source-detective work for a new routine: <strong>Map Quest</strong>. Mention that the Distorter is still faint, but the lab will need to keep watch as the missions get bigger. Under 90 seconds. Warm, proud, a little adventurous.
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with the File Unlocked beat (~30 sec): <em>"A historian's notebook records observations, questions, evidence, and explanations. The first locked file is complete — and the course path is one step clearer."</em> Then celebrate properly: Unit 1 is done! Name what the team built across six lessons: historian's tools, primary and secondary sources, information feeds, timelines, vocabulary, and now the first full evidence entry. Tease Unit 2 — Florida Geography — and the new routine: Map Quest. Under 90 seconds. Warm, proud, a little adventurous.
         </div>
         <div class="video-placeholder-id"><!-- slot: 4-01-06-closing --></div>
       </div>
@@ -3025,12 +2854,6 @@ body {
 <canvas id="confettiCanvas"></canvas>
 
 <script>
-// Toggle collapsible story-arc blocks (HQ Status, Previously On)
-function toggleStoryBlock(id){
-  var el = document.getElementById(id);
-  if (el) el.classList.toggle('collapsed');
-}
-
 /* ═══════════ TAB SWITCHING ═══════════ */
 var visited = { scene: true };
 
@@ -3105,33 +2928,7 @@ function gatherAnswers() {
   if (gathered) gathered.value = output.trim();
 }
 
-/* ═══════════ CHRONO-LENS ENGAGE (Grade 4) ═══════════
-   Replaces the locked screen with a scanning animation, then reveals
-   the fragment image (with zoom-in) and the observation prompts (cascade). */
-function engageChronoLens(btn) {
-  var fragment = btn.closest('.chrono-fragment');
-  if (!fragment) return;
-  var locked = fragment.querySelector('.chrono-locked-screen');
-  var image = fragment.querySelector('.chrono-fragment-image');
-  var prompts = fragment.querySelector('.chrono-fragment-body');
-  if (!locked || !image || !prompts) return;
 
-  btn.disabled = true;
-  btn.innerHTML = '<span class="chrono-engage-btn-icon">🛰️</span>SCANNING…';
-  locked.classList.add('chrono-scanning');
-
-  setTimeout(function() {
-    locked.style.transition = 'opacity 0.4s ease';
-    locked.style.opacity = '0';
-    setTimeout(function() {
-      locked.style.display = 'none';
-      image.classList.remove('chrono-hidden');
-      image.classList.add('chrono-revealed-image');
-      prompts.classList.remove('chrono-hidden');
-      prompts.classList.add('chrono-revealed-prompts');
-    }, 400);
-  }, 1000);
-}
 
 /* ═══════════ COPY TO CLIPBOARD ═══════════ */
 function copyGathered() {
@@ -3409,8 +3206,52 @@ function scrollToTop() {
 /* ═══════════ INIT ═══════════ */
 updateProgress();
 
-/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4 — covers source, chrono-fragment, and timeline-sync) ═══════════ */
-(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image], .chrono-fragment-image[data-image], .timeline-sync-image[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+/* ═══════════ SOURCE IMAGE AUTO-LOADER (G4 — covers source image placeholders) ═══════════ */
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+/* ═══════════ STICKY FALLBACK FOR IFRAME ═══════════ */
+(function(){
+  var pw=document.querySelector(".progress-wrap");
+  var tb=document.querySelector(".tab-bar");
+  if(!pw)return;
+  var wrap=document.querySelector(".page-wrap");
+  var pwTop=0;var pwH=0;var tbH=0;
+  function measure(){pwTop=wrap.offsetTop;pwH=pw.offsetHeight;if(tb)tbH=tb.offsetHeight;}
+  measure();
+  function onScroll(){
+    var sy=window.pageYOffset||document.documentElement.scrollTop;
+    if(sy>pwTop){
+      if(pw.style.position!=="fixed"){
+        measure();
+        pw.style.position="fixed";pw.style.top="0";
+        pw.style.left=wrap.getBoundingClientRect().left+"px";
+        pw.style.width=wrap.offsetWidth+"px";pw.style.zIndex="9999";
+        if(tb){tb.style.position="fixed";tb.style.top=pwH+"px";
+          tb.style.left=wrap.getBoundingClientRect().left+"px";
+          tb.style.width=wrap.offsetWidth+"px";tb.style.zIndex="9998";}
+        wrap.style.paddingTop=(pwH+(tb?tbH:0))+"px";
+      }
+    }else{
+      if(pw.style.position==="fixed"){
+        pw.style.position="";pw.style.top="";pw.style.left="";
+        pw.style.width="";pw.style.zIndex="";
+        if(tb){tb.style.position="";tb.style.top="";tb.style.left="";
+          tb.style.width="";tb.style.zIndex="";}
+        wrap.style.paddingTop="";
+      }
+    }
+  }
+  window.addEventListener("scroll",onScroll);
+  window.addEventListener("resize",function(){
+    measure();
+    if(pw.style.position==="fixed"){
+      pw.style.left=wrap.getBoundingClientRect().left+"px";
+      pw.style.width=wrap.offsetWidth+"px";
+      if(tb){tb.style.left=wrap.getBoundingClientRect().left+"px";tb.style.width=wrap.offsetWidth+"px";}
+    }
+  });
+})();
+
 </script>
 </body>
 </html>

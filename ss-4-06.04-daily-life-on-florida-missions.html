@@ -1,0 +1,3139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — 4.06.04: Daily Life on Florida Missions</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ SCROLL TO TAB BAR (used on tab switch) ═══════════ */
+function scrollToTabBar() {
+  var tabBar = document.getElementById('tabBar');
+  if (!tabBar) { scrollToTop(); return; }
+  // Get tab bar position; scroll so it sits just below the sticky progress bar.
+  var rect = tabBar.getBoundingClientRect();
+  var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  var target = rect.top + currentScroll - 44; // 44 = progress bar offset
+  window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+  // Iframe fallback (Canvas embed)
+  try {
+    window.parent.postMessage({ type: 'scrollToTabBar', offset: target }, '*');
+  } catch(e) {}
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+/* ═══════════════════════════════════════════════════════════════
+   GRADE 4 — FLORIDA FILES: ESCAPE FROM CANVAS
+   Lightweight story layer. Sticky notes for messages, manila file
+   cards for "Show or Make," kraft postcards for unit closers.
+   Florida content is the main story; these are visual novelty only.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* --- 📩 Message from Inside Canvas: yellow sticky note --- */
+.canvas-sticky {
+  position: relative;
+  background: linear-gradient(180deg, #FFF8B8 0%, #FFEC8A 100%);
+  border: 1px solid #E6D04A;
+  border-radius: 4px;
+  padding: 18px 20px 16px;
+  margin: 14px auto 18px;
+  max-width: 680px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  transform: rotate(-1.2deg);
+  font-family: "Caveat", "Patrick Hand", "Comic Sans MS", cursive, system-ui;
+  color: #3D2E10;
+}
+.canvas-sticky::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 84px;
+  height: 18px;
+  background: rgba(180, 200, 220, 0.55);
+  border: 1px solid rgba(120, 140, 160, 0.35);
+  border-radius: 2px;
+}
+.canvas-sticky-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-sticky-head-icon { font-size: 20px; }
+.canvas-sticky-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+.canvas-sticky-body {
+  font-size: 17px;
+  line-height: 1.5;
+  color: #3D2E10;
+}
+.canvas-sticky-body p { margin: 0 0 6px; }
+.canvas-sticky-byline {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6B5418;
+  font-style: italic;
+}
+
+/* Variant: File Unlocked sticky (soft green instead of yellow) */
+.canvas-sticky.unlocked {
+  background: linear-gradient(180deg, #D8F2D0 0%, #B8E5AB 100%);
+  border-color: #6FAA5C;
+  color: #1F4515;
+  transform: rotate(1deg);
+}
+.canvas-sticky.unlocked::before {
+  background: rgba(110, 150, 110, 0.45);
+  border-color: rgba(80, 110, 80, 0.4);
+}
+.canvas-sticky.unlocked .canvas-sticky-head-label { color: #2D5A1F; }
+.canvas-sticky.unlocked .canvas-sticky-body { color: #1F4515; }
+.canvas-sticky.unlocked .canvas-sticky-byline { color: #3D6A28; }
+
+/* --- 🗂️ Show or Make: manila folder/file card --- */
+.canvas-file-card {
+  position: relative;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 22px 22px 20px;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.canvas-file-card::before {
+  content: attr(data-tab);
+  position: absolute;
+  top: -22px;
+  left: 24px;
+  background: #E8D4A8;
+  border: 1.5px solid #B89860;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 16px 4px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6E5215;
+}
+.canvas-file-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #B89860;
+}
+.canvas-file-card-head-icon { font-size: 22px; }
+.canvas-file-card-head-text {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4A3811;
+}
+.canvas-file-card-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2F2308;
+}
+.canvas-file-card-visual {
+  background: #FFFCF2;
+  border: 1px dashed #B89860;
+  border-radius: 6px;
+  padding: 18px;
+  margin: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6E5215;
+  font-style: italic;
+}
+.canvas-file-card-visual svg { display: block; margin: 0 auto; max-width: 100%; }
+
+/* --- ⚙️ Canvas Glitch: tiny inline notice --- */
+.canvas-glitch-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F3E8FF;
+  border: 1px dashed #9B6BC4;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: #5B2D8C;
+}
+.canvas-glitch-note-icon {
+  display: inline-block;
+  animation: glitchFlicker 3.5s ease-in-out infinite;
+}
+@keyframes glitchFlicker {
+  0%, 92%, 100% { opacity: 1; }
+  94% { opacity: 0.3; transform: translateX(-1px); }
+  96% { opacity: 1; transform: translateX(1px); }
+  98% { opacity: 0.5; }
+}
+
+/* --- 🔓 Unlock Challenge: stamp-style badge on assignment --- */
+.canvas-unlock-stamp {
+  display: inline-block;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border: 2px solid #B91C1C;
+  border-radius: 4px;
+  padding: 4px 10px 3px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+  margin: 0 0 12px;
+}
+.canvas-unlock-stamp::before { content: "🔓 "; }
+
+/* --- 🛤️ Course Path Updated: small progress chip --- */
+.canvas-path-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #6EE7B7;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+.canvas-path-chip-icon { font-size: 13px; }
+.canvas-path-chip-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: 4px;
+}
+.canvas-path-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #D1FAE5;
+}
+.canvas-path-chip-dot.done { background: #10B981; }
+.canvas-path-chip-dot.now {
+  background: #10B981;
+  box-shadow: 0 0 0 2px #10B98140;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px #10B98140; }
+  50%      { box-shadow: 0 0 0 4px #10B98120; }
+}
+
+/* --- 📮 Postcard from the Teacher (unit closers only) --- */
+.canvas-postcard {
+  position: relative;
+  background: linear-gradient(135deg, #F5E6C8 0%, #E8D4A0 100%);
+  border: 1px solid #A78448;
+  border-radius: 6px;
+  padding: 0;
+  margin: 22px auto 18px;
+  max-width: 720px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.14), inset 0 0 0 2px rgba(255,255,255,0.3);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 220px;
+}
+.canvas-postcard-left {
+  padding: 20px 22px;
+  border-right: 2px dashed #A78448;
+  font-family: "Caveat", "Patrick Hand", cursive, system-ui;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #3D2E10;
+}
+.canvas-postcard-right {
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.canvas-postcard-stamp {
+  align-self: flex-end;
+  width: 64px; height: 78px;
+  background: #FFF5E0;
+  border: 2px solid #A78448;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: relative;
+}
+.canvas-postcard-stamp::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 1.5px dashed #A78448;
+  border-radius: 6px;
+}
+.canvas-postcard-address {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #6E5215;
+  line-height: 1.55;
+}
+.canvas-postcard-cancel {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 10px;
+  color: #8B6E2A;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-top: 1px solid #A78448;
+  padding-top: 6px;
+  margin-top: 8px;
+}
+.canvas-postcard-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.canvas-postcard-head-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A5A18;
+}
+@media (max-width: 620px) {
+  .canvas-postcard { grid-template-columns: 1fr; }
+  .canvas-postcard-left { border-right: none; border-bottom: 2px dashed #A78448; }
+}
+
+/* --- Sensitive-history tone override (quieter visual) --- */
+.canvas-sticky.quiet,
+.canvas-file-card.quiet,
+.canvas-postcard.quiet {
+  background: #F6F2EA;
+  border-color: #A89880;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.canvas-sticky.quiet::before { display: none; }
+.canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
+.canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
+
+</style>
+</head>
+<body>
+<div id="pageTop"></div>
+
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">St. Augustine: <em>Oldest Settlement</em></div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🐊</span>
+    <span class="header-badge-text">Lesson 4.06.04</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER: Daily Life on Florida Missions ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs>
+    <linearGradient id="b604sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFEEC8"/>
+      <stop offset="45%" stop-color="#FFC890"/>
+      <stop offset="100%" stop-color="#A0B8D4"/>
+    </linearGradient>
+    <linearGradient id="b604field" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A0B048"/>
+      <stop offset="100%" stop-color="#5A6A28"/>
+    </linearGradient>
+    <linearGradient id="b604tower" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E8D0A0"/>
+      <stop offset="100%" stop-color="#A88858"/>
+    </linearGradient>
+    <radialGradient id="b604glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .b604bell { animation: b604bell 2.4s ease-in-out infinite; transform-origin: top center; transform-box: fill-box; }
+      @keyframes b604bell { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+      .b604wave { animation: b604wave 6s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
+      @keyframes b604wave { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+      .b604smoke { animation: b604smoke 7s ease-in-out infinite; }
+      @keyframes b604smoke { 0% { transform: translateY(0); opacity: 0.5; } 100% { transform: translateY(-35px); opacity: 0; } }
+      .b604sun { animation: b604sun 5s ease-in-out infinite; }
+      @keyframes b604sun { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+    </style>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="920" height="170" fill="url(#b604sky)"/>
+
+  <!-- Morning sun -->
+  <g class="b604sun">
+    <circle cx="170" cy="60" r="50" fill="url(#b604glow)"/>
+    <circle cx="170" cy="60" r="22" fill="#FFE5A0" opacity="0.9"/>
+  </g>
+
+  <!-- Distant pine treeline -->
+  <g fill="#2A5A3A" opacity="0.55">
+    <path d="M 0 165 L 35 142 L 60 165 L 100 148 L 135 165 L 175 145 L 215 165 L 260 148 L 300 165 L 350 145 L 390 165 L 440 148 L 480 165 L 530 145 L 575 165 L 620 148 L 665 165 L 715 145 L 755 165 L 800 148 L 845 165 L 890 145 L 920 165 L 920 170 L 0 170 Z"/>
+  </g>
+
+  <!-- Mission cornfield foreground band -->
+  <rect y="170" width="920" height="90" fill="url(#b604field)"/>
+  <!-- Field furrow lines -->
+  <g stroke="#3A4818" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="180" x2="920" y2="180"/>
+    <line x1="0" y1="190" x2="920" y2="192"/>
+    <line x1="0" y1="200" x2="920" y2="202"/>
+    <line x1="0" y1="212" x2="920" y2="214"/>
+    <line x1="0" y1="224" x2="920" y2="226"/>
+    <line x1="0" y1="236" x2="920" y2="238"/>
+    <line x1="0" y1="248" x2="920" y2="250"/>
+  </g>
+
+  <!-- ═══ LEFT: BELL TOWER (church bell calling daily rhythm) ═══ -->
+  <g transform="translate(165 175)">
+    <!-- Tower base -->
+    <rect x="-18" y="-95" width="36" height="95" fill="url(#b604tower)" stroke="#6A4520" stroke-width="1.5"/>
+    <!-- Stone texture -->
+    <g stroke="#8A6A40" stroke-width="0.5" opacity="0.5">
+      <line x1="-18" y1="-75" x2="18" y2="-75"/>
+      <line x1="-18" y1="-55" x2="18" y2="-55"/>
+      <line x1="-18" y1="-35" x2="18" y2="-35"/>
+      <line x1="-18" y1="-15" x2="18" y2="-15"/>
+      <line x1="0" y1="-95" x2="0" y2="0"/>
+    </g>
+    <!-- Top: open belfry -->
+    <rect x="-22" y="-115" width="44" height="22" fill="#D8B888" stroke="#6A4520" stroke-width="1.5"/>
+    <!-- Belfry archway opening (visible through) -->
+    <path d="M -16 -94 L -16 -106 Q -16 -112 -10 -112 L 10 -112 Q 16 -112 16 -106 L 16 -94 Z" fill="#3A2510"/>
+    <!-- BELL — animated swing via nested g (outer translate, inner rotates) -->
+    <g transform="translate(0 -110)">
+      <g class="b604bell">
+        <!-- Bell rope/hanger -->
+        <line x1="0" y1="0" x2="0" y2="2" stroke="#3A2510" stroke-width="0.8"/>
+        <!-- Bell body -->
+        <path d="M -6 2 Q -7 12 -5 15 L 5 15 Q 7 12 6 2 L 4 2 Q 4 -1 0 -1 Q -4 -1 -4 2 Z" fill="#C8A858" stroke="#6A4520" stroke-width="1"/>
+        <!-- Highlight -->
+        <path d="M -3 6 Q -3 10 -2 13" stroke="#FFE5A0" stroke-width="0.6" fill="none" opacity="0.7"/>
+        <!-- Clapper -->
+        <circle cx="0" cy="14" r="1.2" fill="#3A2510"/>
+      </g>
+    </g>
+    <!-- Roof -->
+    <path d="M -28 -115 L 0 -138 L 28 -115 Z" fill="#7A4828" stroke="#3A2010" stroke-width="1.5"/>
+    <!-- Cross on top -->
+    <rect x="-1" y="-150" width="2" height="14" fill="#3A2010"/>
+    <rect x="-5" y="-144" width="10" height="2.5" fill="#3A2010"/>
+    <!-- Door at base -->
+    <path d="M -7 0 L -7 -22 Q -7 -28 0 -28 Q 7 -28 7 -22 L 7 0 Z" fill="#3A2010"/>
+  </g>
+
+  <!-- ═══ CENTER-LEFT: Friar's small smoke from chimney (cooking fire) ═══ -->
+  <g transform="translate(220 100)">
+    <g class="b604smoke">
+      <ellipse cx="0" cy="0" rx="6" ry="3" fill="#D8D0C8"/>
+      <ellipse cx="-3" cy="-5" rx="4" ry="2.5" fill="#E0D8D0"/>
+      <ellipse cx="2" cy="-9" rx="3" ry="2" fill="#E8E0D8"/>
+    </g>
+  </g>
+
+  <!-- ═══ CENTER: CORN STALKS (the staple Apalachee + mission crop) ═══ -->
+  <g transform="translate(380 215)">
+    <g class="b604wave">
+      <line x1="0" y1="20" x2="0" y2="-32" stroke="#3A4818" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-15" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
+      <ellipse cx="5" cy="-20" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
+      <ellipse cx="-4" cy="0" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
+      <ellipse cx="4" cy="-5" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
+      <!-- Corn ear -->
+      <ellipse cx="2" cy="-22" rx="2.5" ry="6" fill="#D8B040"/>
+      <line x1="2" y1="-30" x2="4" y2="-36" stroke="#A88030" stroke-width="0.6"/>
+    </g>
+  </g>
+  <g transform="translate(420 215)">
+    <g class="b604wave" style="animation-delay:0.6s;">
+      <line x1="0" y1="20" x2="0" y2="-30" stroke="#3A4818" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-13" rx="3" ry="9" fill="#7A8A30" transform="rotate(-25)"/>
+      <ellipse cx="5" cy="-18" rx="3" ry="9" fill="#7A8A30" transform="rotate(25)"/>
+      <ellipse cx="0" cy="-30" rx="2.5" ry="6" fill="#D8B040"/>
+    </g>
+  </g>
+  <g transform="translate(460 215)">
+    <g class="b604wave" style="animation-delay:1.2s;">
+      <line x1="0" y1="20" x2="0" y2="-34" stroke="#3A4818" stroke-width="1.5"/>
+      <ellipse cx="-5" cy="-17" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
+      <ellipse cx="5" cy="-22" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
+      <ellipse cx="-4" cy="-2" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
+      <ellipse cx="4" cy="-7" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
+      <ellipse cx="2" cy="-24" rx="2.5" ry="6" fill="#D8B040"/>
+    </g>
+  </g>
+
+  <!-- ═══ RIGHT-CENTER: Spanish cattle (new species introduced by missions) ═══
+       Just a silhouette of a long-backed cow. -->
+  <g transform="translate(620 230)" opacity="0.85">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="32" ry="11" fill="#5A3818"/>
+    <!-- Legs -->
+    <rect x="-22" y="6" width="4" height="14" fill="#3A2010"/>
+    <rect x="-12" y="6" width="4" height="14" fill="#3A2010"/>
+    <rect x="12" y="6" width="4" height="14" fill="#3A2010"/>
+    <rect x="22" y="6" width="4" height="14" fill="#3A2010"/>
+    <!-- Head -->
+    <ellipse cx="-32" cy="-5" rx="10" ry="7" fill="#6A4820"/>
+    <!-- Horns -->
+    <path d="M -38 -10 Q -42 -16 -38 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
+    <path d="M -30 -10 Q -26 -16 -30 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
+    <!-- Eye -->
+    <circle cx="-36" cy="-5" r="0.8" fill="#1A0A05"/>
+    <!-- Tail -->
+    <path d="M 32 -3 Q 38 -2 36 6" stroke="#3A2010" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Second small cow farther back -->
+  <g transform="translate(720 220)" opacity="0.6">
+    <ellipse cx="0" cy="0" rx="20" ry="7" fill="#5A3818"/>
+    <rect x="-14" y="4" width="2.5" height="9" fill="#3A2010"/>
+    <rect x="-6" y="4" width="2.5" height="9" fill="#3A2010"/>
+    <rect x="6" y="4" width="2.5" height="9" fill="#3A2010"/>
+    <rect x="14" y="4" width="2.5" height="9" fill="#3A2010"/>
+    <ellipse cx="-20" cy="-3" rx="6" ry="4" fill="#6A4820"/>
+  </g>
+
+  <!-- ═══ RIGHT FOREGROUND: woven basket of harvest (corn, beans, squash) ═══ -->
+  <g transform="translate(840 235)">
+    <!-- Basket -->
+    <path d="M -22 -5 L -16 18 L 16 18 L 22 -5 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
+    <!-- Weave texture -->
+    <g stroke="#5A3818" stroke-width="0.6" opacity="0.55" fill="none">
+      <path d="M -22 -5 Q 0 0 22 -5"/>
+      <path d="M -20 2 Q 0 7 20 2"/>
+      <path d="M -18 9 Q 0 14 18 9"/>
+    </g>
+    <!-- Contents: corn ears, beans, squash poking out -->
+    <ellipse cx="-8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(-15)"/>
+    <ellipse cx="0" cy="-9" rx="3" ry="6" fill="#E8C040"/>
+    <ellipse cx="8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(15)"/>
+    <!-- Beans -->
+    <ellipse cx="-12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
+    <ellipse cx="12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
+    <!-- Squash -->
+    <circle cx="-4" cy="-3" r="4" fill="#E89040" stroke="#7A4818" stroke-width="0.5"/>
+    <line x1="-4" y1="-7" x2="-2" y2="-9" stroke="#3A4818" stroke-width="0.6"/>
+  </g>
+
+  <!-- Corner accent marks -->
+  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
+    <line x1="0" y1="20" x2="30" y2="20"/>
+    <line x1="20" y1="0" x2="20" y2="30"/>
+    <line x1="920" y1="20" x2="890" y2="20"/>
+    <line x1="900" y1="0" x2="900" y2="30"/>
+  </g>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">Early Florida History</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 13 · Q2</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">St. Augustine &amp; the First Permanent Settlement</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:11px;">SS.4.A.3.2 · SS.4.A.3.3 · SS.4.A.3.4 · SS.4.A.3.6 · SS.4.A.9.1</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MESSAGE FROM INSIDE CANVAS (Opening sticky) ═══ -->
+<div class="canvas-sticky">
+  <div class="canvas-sticky-head">
+    <span class="canvas-sticky-head-icon">📩</span>
+    <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
+  </div>
+  <div class="canvas-sticky-body">
+    <p>Same room, a wall of unlabeled scenes — daily life on the missions. Canvas pulled the captions off. The exit has to be near the end of this wing, and we're deep in it now. Help me put the daily-life pieces back so the next door will load.</p>
+  </div>
+  <div class="canvas-sticky-byline">— Your teacher, deep in the mission wing</div>
+</div>
+
+<!-- ═══ INTRO SECTION (collapsible) ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's Wonder &amp; Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <!-- Mission Question -->
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">❓</div>
+        <div>
+          <div class="intro-card-head-label">Today's Question</div>
+          <div class="intro-card-head-title">Today's Wonder</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <p>How did St. Augustine become the first European settlement in Florida that <em>stayed</em> — and what events caused or followed from that?</p>
+      </div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">🏰</span> Sequence five key events in the founding of St. Augustine in 1565.</div>
+        <div class="obj-line"><span class="obj-icon">🔗</span> Explain one cause-and-effect relationship using evidence from the timeline.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Complete a Timeline Thread response that connects sequence to cause and effect.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- You'll Need strip -->
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Historian's Notebook</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">🗺️ Lesson Page</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR (3 tabs) ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Learn <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1: ENTER THE SCENE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #2A4A8A, #4A6AAA);">📍</div>
+    <div>
+      <div class="tab-section-title">Learn</div>
+    </div>
+  </div>
+
+  <!-- Today's Path — MUST be lesson-specific. Do NOT restate tab names.
+       Each step names the actual content, routine material, and product.
+       Step 1: what they'll encounter + warm-up activity
+       Step 2: the specific routine + what they'll examine
+       Step 3: the specific product they'll create
+       Keep each step ≤ 12 words. -->
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Walk through one Wednesday morning at a Florida mission</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Sequence events of a typical mission workday</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Quick self-check</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Complete a Timeline Thread on mission cause &amp; effect</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video — slot: [lesson-number-with-dash]-welcome -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div>
+        <div class="video-wrap-title">A Settlement That Stayed · Florida, 1565</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with this beat (~30 sec): <em>"Same room, a wall of unlabeled scenes — daily life on the missions. Canvas pulled the captions off. The exit's got to be near the end of this wing, and we're deep in it now. Help me put the daily-life pieces back so the next door will load."</em> Then teach the elements of mission daily life (work, food, shelter, worship, community) and how to support claims with evidence. Preview the rhythm of a mission day: the bell rang before sunrise to call people to prayer, then Apalachee men went to the fields (corn, beans, squash, plus new Spanish crops like wheat) or to herd cattle, Apalachee women cooked and wove and cared for children, Apalachee elders kept clan traditions and the old language, friars taught reading and Mass. Mention the <em>repartimiento</em> — Apalachee men were sometimes drafted to carry heavy loads of corn and goods on foot all the way to St. Augustine, more than 200 miles, often barefoot. Stress that this lesson is the WHOLE day, not just the easy parts. Under 2 minutes. Steady and measured. </div>
+        <div class="video-placeholder-id"><!-- slot: 4-06-04-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">🌾 Virtue Spotlight — Perseverance</div>
+    <div class="virtue-text">Daily life at a Florida mission was demanding. The bell rang before dawn. Fields stretched for acres. Friars worked through long days teaching, baptizing, and learning Apalachee words. Apalachee families farmed, hunted, raised children, attended Mass, kept old traditions when they could, and — for the men — were sometimes drafted to carry heavy loads of corn and goods on foot all the way to St. Augustine. The Virtue Lens today is <em>perseverance</em>: the quiet, daily kind that keeps a community going through long, hard, repeating work. Today's question isn't who was right or wrong. It's: <em>who showed perseverance, and what did it cost them?</em></div>
+  </div>
+
+  <!-- Florida Historian Role -->
+  <div class="callout callout-info">
+    <div class="callout-icon">🔬</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Field Historian</strong> on the student research team. Today's assignment: trace the rhythm of a single workday at a Florida mission — bell to bell — and explain one specific cause-and-effect relationship that shaped that day.</p>
+  </div>
+
+  <!-- ═══ SHOW OR MAKE FILE CARD ═══ -->
+  <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.06.04">
+    <div class="canvas-file-card-head">
+      <span class="canvas-file-card-head-icon">🗂️</span>
+      <span class="canvas-file-card-head-text">Show or Make: a daily-life mission board with work, food, shelter, worship, and community tasks</span>
+    </div>
+    <div class="canvas-file-card-body">
+      <p>Create a labeled board (on paper or digitally) that shows five parts of a typical day at a Florida mission: <strong>work</strong>, <strong>food</strong>, <strong>shelter</strong>, <strong>worship</strong>, and <strong>community</strong>. For each part, write one sentence explaining what it looked like and who was involved — including both the Apalachee and the Spanish.</p>
+      <div class="canvas-file-card-visual">
+        <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;">
+          <!-- Folder body -->
+          <rect x="20" y="50" width="380" height="130" rx="6" ry="6" fill="#E8D4A8" stroke="#B89860" stroke-width="2"/>
+          <!-- Folder tab -->
+          <rect x="20" y="34" width="120" height="22" rx="4" ry="4" fill="#E8D4A8" stroke="#B89860" stroke-width="2"/>
+          <!-- Tab label -->
+          <text x="80" y="49" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#6E5215">4.06.04</text>
+          <!-- Five labeled section lines -->
+          <line x1="40" y1="88" x2="380" y2="88" stroke="#B89860" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="40" y1="112" x2="380" y2="112" stroke="#B89860" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="40" y1="136" x2="380" y2="136" stroke="#B89860" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="40" y1="160" x2="380" y2="160" stroke="#B89860" stroke-width="1" stroke-dasharray="4,3"/>
+          <!-- Labels -->
+          <text x="50" y="80" font-family="sans-serif" font-size="11" fill="#4A3811">⚒ Work</text>
+          <text x="50" y="104" font-family="sans-serif" font-size="11" fill="#4A3811">🌽 Food</text>
+          <text x="50" y="128" font-family="sans-serif" font-size="11" fill="#4A3811">🏠 Shelter</text>
+          <text x="50" y="152" font-family="sans-serif" font-size="11" fill="#4A3811">⛪ Worship</text>
+          <text x="50" y="174" font-family="sans-serif" font-size="11" fill="#4A3811">🤝 Community</text>
+          <!-- Pencil icon top-right -->
+          <text x="370" y="76" text-anchor="end" font-size="20">✏️</text>
+        </svg>
+        <p class="canvas-file-card-caption">Five-part daily-life mission board — one labeled section per topic</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've read through the scene. Let's explore the evidence in detail.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-explore">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <!-- ✏️ GRADE ACCENT -->
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Explainer Video — slot: [lesson-number-with-dash]-explore-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
+        <div class="video-wrap-title">Sequencing the Founding of St. Augustine</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Walk students through five key events in order: <strong>(1)</strong> 1564 — French settlers build Fort Caroline near present-day Jacksonville; <strong>(2)</strong> Summer 1565 — King Philip II of Spain sends Pedro Menéndez de Avilés to remove the French and protect Spain's claim; <strong>(3)</strong> September 8, 1565 — Menéndez lands in Florida and founds St. Augustine; <strong>(4)</strong> Late September 1565 — Spanish forces capture and destroy Fort Caroline; <strong>(5)</strong> Years that follow — St. Augustine survives storms and attacks and becomes a permanent settlement. Mention <strong>Fort Mose</strong> (1738) briefly as a free Black community that later formed near St. Augustine. Remind the team that St. Augustine didn't just "appear" — it was the result of a chain of decisions. Aim for 4–5 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 4-06-04-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Learn -->
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <!-- Content Section -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">A Wednesday Morning at a Florida Mission</div>
+        <div class="activity-sub">What daily life looked like — bell, field, workshop, friary, council house</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>By the mid-1500s, Spain had been visiting Florida's coasts for over fifty years — but no Spanish settlement had lasted. That changed in 1565. Read this short timeline carefully. Notice how each event sets up the next.</p>
+      <p><strong>Event 1 · 1564: The French arrive first.</strong> French settlers, mostly Huguenot Protestants, build <em>Fort Caroline</em> near the mouth of the St. Johns River (today, Jacksonville). Spain sees this as a threat — they claim all of Florida.</p>
+      <p><strong>Event 2 · Summer 1565: Spain responds.</strong> King Philip II of Spain orders <strong>Pedro Menéndez de Avilés</strong> to remove the French and start a Spanish settlement on Florida's east coast.</p>
+      <p><strong>Event 3 · September 8, 1565: St. Augustine is founded.</strong> Menéndez lands on the Florida coast, claims the harbor for Spain, and names the settlement <strong>San Agustín</strong> (St. Augustine) because he arrived near the saint's feast day. The Timucua people already live in the area.</p>
+      <p><strong>Event 4 · Late September 1565: Spanish forces capture Fort Caroline.</strong> Menéndez marches north and takes the French fort. Without Fort Caroline, France no longer has a foothold in Florida. Spain's claim is now unchallenged.</p>
+      <p><strong>Event 5 · The years that follow.</strong> St. Augustine survives hurricanes, attacks, and food shortages. In 1672, Spanish settlers and enslaved laborers begin building the <strong>Castillo de San Marcos</strong> — a coquina-stone fort that still stands today. Much later, in 1738, the free Black community of <strong>Fort Mose</strong> forms just north of St. Augustine.</p>
+      <p><strong>Why this matters.</strong> St. Augustine is the oldest continuously occupied European-founded settlement in the present-day United States. It is older than Jamestown (1607) and Plymouth (1620). Florida's European story started in Spanish — not English.</p>
+    </div>
+  </div>
+
+  <!-- Pause & Think -->
+  <div class="callout callout-think">
+    <div class="callout-icon">🤔</div>
+    <p><strong>Pause &amp; Think:</strong> The mission day had a clear rhythm — bell, work, prayer, work, prayer, bell. Pick ONE part of that day (the bell, the field work, the women's work, the Apalachee ball game, the repartimiento labor, the evening prayer) and ask yourself: who got to choose how this part of the day happened, and who didn't? Why does that question matter?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 2: Investigate -->
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- ═══ PRIMARY ROUTINE ACTIVITY ═══ -->
+  <!-- ✏️ Include ONE of the following routine components based on the Planning Table. Delete the others. -->
+
+  <!-- OPTION: Source Study Card -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-card-header-icon">📅</div>
+      <div>
+        <div class="source-card-header-label">Timeline Thread</div>
+        <div class="source-card-header-title">Sequence &amp; Cause-Effect: One Day at Mission San Luis</div>
+      </div>
+    </div>
+    <div class="source-image-placeholder" data-image="source-4-06-04-mission-workday">
+      <div class="source-image-placeholder-text">
+        🖼️ A historical reconstruction painting or photograph of daily life at a Spanish-Apalachee mission — Apalachee farmers in the cornfield, a friar opening a chapel door, women cooking outside thatched homes, a small bell tower in the background. Suggested sources: Mission San Luis Living History Museum digital gallery (missionsanluis.org), Florida Memory (floridamemory.com) — search "Mission San Luis" or "Apalachee mission," or the Florida Division of Historical Resources. A photograph of the modern Mission San Luis reconstruction site showing the plaza, fields, and reconstructed homes also works well.<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-06-04-mission-workday.jpg</code>
+      </div>
+    </div>
+    <div class="source-card-body">
+      <div class="source-label-bar">
+        <span class="src-type">Timeline Routine</span> · Sequence events &amp; trace one cause-effect link
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">👁️</div>
+        <p><strong>Put them in order.</strong> Mentally place these events from earliest to latest in one workday: <em>(A)</em> Apalachee men begin the long walk to St. Augustine carrying corn; <em>(B)</em> the bell rings before sunrise for morning prayer; <em>(C)</em> the bell rings at sunset for evening prayer; <em>(D)</em> Apalachee farmers head to the cornfields with hoes; <em>(E)</em> the midday meal is shared. Write the correct order in your notebook.</p>
+      </div>
+      <div class="callout callout-think">
+        <div class="callout-icon">💭</div>
+        <p><strong>Find one cause-and-effect link.</strong> Pick any two events from the workday where one <em>caused</em> the other to happen. Use the sentence frame: <em>"____ happened because ____."</em> For example: "The whole village began the day together because the chapel bell rang before sunrise."</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-icon">⚖️</div>
+        <p><strong>Why does this matter today?</strong> The pattern of a workday — bell, fields, midday meal, more work, evening bell — sounds simple. But for the Apalachee, daily life at a mission meant living by two sets of rules at once: the friars' schedule and their own traditions. What do you think was the hardest part of that for ordinary people?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 3: Connect -->
+  <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
+
+
+
+  <!-- Key Concept -->
+  <div class="key-concept">
+    <div class="key-concept-label">💡 Key Concept</div>
+    <p>Daily life at a Florida mission like San Luis followed a clear rhythm set by the chapel bell: morning prayer, field work, midday meal, afternoon labor, evening prayer. Apalachee men farmed corn, beans, and squash and tended Spanish cattle; Apalachee women cooked, wove, and raised children; friars taught and led worship. Some Apalachee men were also drafted to carry loads on foot to St. Augustine through the <em>repartimiento</em> system — the hardest and most resented part of mission life. Honest history holds all of this together.</p>
+  </div>
+
+  <!-- Opti the Owl — lab-themed observation for Grade 4. -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🌴 Opti says…</div>
+      
+      Quick note from the archive: the Spanish brought peach trees to Florida. Those trees still grow wild in the woods around Tallahassee today, descendants of the ones planted at Apalachee missions. A piece of mission daily life is still ripening every summer.</div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've explored the sources and built your understanding. Let's see how much you remember.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Signal Check →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-check">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
+  </div>
+
+  <!-- ═══ SELF-CHECK QUIZ ═══ -->
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- QUESTION 1 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. What was the main purpose of the chapel bell at a Florida mission?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>To warn the village about attacks from English forces.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>To organize the day — calling people to prayer, work, meals, and rest.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>To celebrate the Apalachee ball game on Sundays.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right. The bell rang before sunrise, at midday, and at sunset — it shaped the rhythm of the whole day for everyone in the mission.</div>
+        <div class="quiz-feedback fb-wrong">Re-read the first paragraph. The bell had ONE job that shaped everyone's day.</div>
+      </div>
+      <!-- QUESTION 2 -->
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">2. Which of these foods did Apalachee farmers grow LONG BEFORE the Spanish arrived?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Wheat, watermelon, and peaches.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Cattle, pigs, and chickens.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Corn, beans, and squash — the "three sisters."</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! Corn, beans, and squash — the "three sisters" — were grown by Apalachee farmers for hundreds of years before any Spaniard arrived. The Spanish ADDED wheat, watermelon, peaches, and livestock.</div>
+        <div class="quiz-feedback fb-wrong">Look back at the second paragraph. The Apalachee had been farming Florida soil long before Europeans arrived. Wheat, watermelon, and livestock were Spanish additions.</div>
+      </div>
+      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">3. What was the <em>repartimiento</em> at the Florida missions?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>A labor draft that required Apalachee men to carry heavy loads on foot to St. Augustine.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>A traditional Apalachee ball game played in the plaza.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>The morning prayer service held in the chapel before sunrise.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right — and brave answering. The repartimiento was the hardest and most resented part of mission life: Apalachee men were drafted to carry corn and goods 200 miles to St. Augustine on foot, often without shoes.</div>
+        <div class="quiz-feedback fb-wrong">Re-read the fifth paragraph. The repartimiento was the hardest part of mission life.</div>
+      </div>
+
+
+      <!-- Score Box -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score on the Daily Life quiz. Affirm that the team is holding the WHOLE day — the bell, the work, the food, the harder parts — without scrambling the picture. Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-06-04-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment. Re-explain the bell, the three sisters, and the repartimiento using one calm example each. Encourage the team to keep going — daily life had a lot of moving parts. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-06-04-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <!-- Tab Section Header -->
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>Time to show what you know. Answer the evidence questions and complete your assignment. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
+  </div>
+
+  <!-- Assignment Explainer Video — slot: [lesson-number-with-dash]-assignment-explainer -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">Sequence the Mission Day and Explain One Cause &amp; Effect</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. Think aloud through Q3: "If I'm asked for one cause-and-effect, I'd pick the bell. The bell rang [CAUSE] → so everyone in the mission moved at the same time, even though Apalachee and Spanish people had very different lives [EFFECT]. That's one cause-effect chain." Then explain the Timeline Thread assignment: students sequence 5 events from the workday in order, then write 2–3 sentences explaining one specific cause-effect relationship. Walk through the turn-in. Aim for 3 minutes. </div>
+        <div class="video-placeholder-id"><!-- slot: 4-06-04-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from the lesson.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <!-- Q1 -->
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name three foods or animals that the Spanish INTRODUCED to Florida missions (not Apalachee crops). Use details from the lesson.</div></div>
+      <div class="textbox-prompt">List at least three — corn and squash do NOT count (those were already Apalachee crops).</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Foods or animals the Spanish introduced"
+        placeholder="The Spanish introduced... to the Florida missions."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <!-- Q2 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Explain one cause-and-effect link from the timeline. Use the frame: <em>"____ happened because ____."</em></div></div>
+      <div class="textbox-prompt">Name what the bell signaled at different times of day.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: The bell\'s role at the mission"
+        placeholder="The bell rang... It was important because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Use the Virtue Lens — perseverance. Pick ONE person at the mission (Apalachee farmer, friar, Apalachee mother, Apalachee man on the repartimiento walk). What did perseverance look like for that person? What did it cost them?</div></div>
+      <div class="textbox-prompt">Perseverance is the quiet kind of daily-life courage. Name the person, the action, and the cost.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Perseverance at the mission"
+        placeholder="I picked... Perseverance for this person looked like... It cost them..."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: Routine Assignment -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <span class="canvas-unlock-stamp">Unlock Challenge</span>
+        <div class="activity-title">Timeline Thread Response</div>
+        <div class="activity-sub">Sequence the events &amp; explain one cause/effect pair.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Write 3–5 sentences that <strong>(1)</strong> tell the story of St. Augustine's founding <strong>in the correct order</strong>, and <strong>(2)</strong> name <strong>one cause-and-effect pair</strong> from the timeline. Include at least <strong>one specific name, year, or group</strong>.</p>
+      <div class="textbox-prompt">3–5 sentences. Use sequence words ("first," "then," "after that") and a cause-effect frame ("because," "led to," "as a result").</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Timeline Thread Response"
+        placeholder="First, in 1564, ______. Then, in 1565, ______..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Historian's Sentence -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">✍️</div>
+      <div>
+        <div class="activity-title">Historian's Sentence</div>
+        <div class="activity-sub">One sentence to capture today's key finding.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">Finish: Today I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Historian's Sentence"
+        placeholder="Today I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- ═══ FILE UNLOCKED STICKY ═══ -->
+  <div class="canvas-sticky unlocked" style="margin-top:18px;">
+    <div class="canvas-sticky-head">
+      <span class="canvas-sticky-head-icon">📂</span>
+      <span class="canvas-sticky-head-label">File Unlocked</span>
+    </div>
+    <div class="canvas-sticky-body">
+      <p>File Unlocked. Mission daily life is back together — work, worship, contact, cooperation, and pressure, all of it. Most of this old hallway is lit now. Two more files in this wing and I think we reach the next door. Almost there.</p>
+    </div>
+    <div class="canvas-sticky-byline">— Course Path Updated · Episode 6 of 13</div>
+  </div>
+
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- Historian's Certificate + Stamp — appears when all checklist items are checked -->
+  <div class="historian-seal" id="historianSeal">
+    <div class="seal-certificate">
+      <div class="seal-cert-message">
+        <!-- Florida historian certificate -->
+        <strong>Nice work, Florida historian!</strong> You traced the daily rhythm of a Florida mission — bell to bell — and held both the cooperation and the pressures that shaped that life. Mission daily life is now in the file.
+      </div>
+      <div class="seal-stamp-wrap">
+        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
+          <defs>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#D94040"/>
+              <stop offset="100%" stop-color="#A02020"/>
+            </radialGradient>
+            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
+          </defs>
+          <!-- Stamp body -->
+          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
+          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <!-- Opti owl from logo -->
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
+                 x="27" y="20" width="36" height="36"
+                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <!-- CERTIFIED text -->
+          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I studied the daily-life sources and answered the evidence questions.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I completed today's Timeline Thread Response.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote my Historian's Sentence.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ═══ COURSE PATH CHIP ═══ -->
+  <div style="text-align:center;">
+    <div class="canvas-path-chip">
+      🛤️ Course Path Updated
+      <div class="canvas-path-chip-dots">
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot done"></span>
+        <span class="canvas-path-chip-dot now"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+        <span class="canvas-path-chip-dot"></span>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#7A88A8;margin-top:2px;font-family:ui-monospace,monospace;">Episode 6 of 13</div>
+  </div>
+
+  <!-- Closing Video — slot: [lesson-number-with-dash]-closing -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
+        <div class="video-wrap-title">A Full Workday Locked Into the Timeline Core</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes (~1–2 min):</strong> Open with this beat (~30 sec): <em>"Done — mission daily life is back together: work, worship, contact, cooperation, and pressure, all of it. Most of this old hallway is lit now. Two more files in this wing and I think we reach the next door. Almost there."</em> Then recap, noting both cooperation and the pressures mission life placed on Native peoples. Recap the rhythm: bell, fields, midday meal, repartimiento labor, afternoon and elder traditions, sunset prayer. Honor the perseverance virtue without sentimentalizing. Tease lesson 4.06.05: "Next we'll look at what 200 years of Spanish rule actually changed in Florida — the lasting effects on the land, on language, on the people who lived through it. We'll need everything we've learned this week." Remind students to bring their Historian's Notebook tomorrow. Under 90 seconds. Steady and reflective. </div>
+        <div class="video-placeholder-id"><!-- slot: 4-06-04-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 4 · Lesson 4.06.04</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+
+<!-- ═══ CONFETTI CANVAS ═══ -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+
+/* ═══════════ TAB SWITCHING ═══════════ */
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+
+  Object.keys(visited).forEach(function(v) {
+    document.getElementById('btn-' + v).classList.add('visited');
+  });
+
+  // Collapse intro on non-scene tabs
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') {
+    intro.classList.add('collapsed');
+  } else {
+    intro.classList.remove('collapsed');
+  }
+
+  updateProgress();
+  scrollToTabBar();
+  if (tab === 'assignment') gatherAnswers();
+}
+
+function toggleIntro() {
+  document.getElementById('introSection').classList.toggle('collapsed');
+}
+
+/* ═══════════ PROGRESS ═══════════ */
+function updateProgress() {
+  var total = 4;
+  var done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+/* ═══════════ AUTO-SAVE ═══════════ */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ═══════════ GATHER ANSWERS ═══════════ */
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    output += label.toUpperCase() + '\n';
+    output += (val || '(no answer)') + '\n\n';
+  });
+
+  // Mini-game status — only include if mini-games exist in this lesson
+  var hasRootMatch = document.querySelector('.root-match-game') !== null;
+  if (hasRootMatch) {
+    output += 'MINI-GAME RESULTS\n';
+    output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
+  }
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+
+/* ═══════════ COPY TO CLIPBOARD ═══════════ */
+function copyGathered() {
+  gatherAnswers();
+  var output = document.getElementById('gatheredOutput');
+  if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output.value).then(function() {
+      showCopied();
+    });
+  } else {
+    output.select();
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+/* ═══════════ DOWNLOAD AS PDF ═══════════ */
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>4.06.04 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 4.06.04</h1>';
+  html += '<h2>What Florida Historians Study</h2>';
+
+  html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val
+      ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>'
+      : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+
+  html += '</body></html>';
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q');
+  if (q.classList.contains('answered')) return;
+  q.classList.add('answered');
+  quizAnswered++;
+  var correct = q.getAttribute('data-answer');
+  var chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) { o.classList.add('correct'); }
+    else { o.classList.add('disabled'); }
+  });
+  if (chosen === correct) {
+    quizCorrect++;
+    optEl.classList.add('correct');
+    var fb = q.querySelector('.fb-correct');
+    if (fb) fb.classList.add('show');
+  } else {
+    optEl.classList.add('wrong');
+    var fb = q.querySelector('.fb-wrong');
+    if (fb) fb.classList.add('show');
+  }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) {
+      document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!';
+      document.getElementById('quizVideoCorrect').classList.add('show');
+      fireConfetti();
+    } else if (quizCorrect === 2) {
+      document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!';
+      document.getElementById('quizVideoReview').classList.add('show');
+    } else {
+      document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review the lesson and try again.';
+      document.getElementById('quizVideoReview').classList.add('show');
+    }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+var rootFirst = null;
+var rootCount = 0;
+window._rootMatchDone = false;
+
+function rootMatchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!rootFirst) {
+    rootFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (rootFirst === item) {
+    rootFirst.classList.remove('selected');
+    rootFirst = null;
+    return;
+  }
+
+  var key1 = rootFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && rootFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    rootFirst.classList.remove('selected');
+    rootFirst.classList.add('matched');
+    item.classList.add('matched');
+    rootCount++;
+    rootFirst = null;
+    if (rootCount >= 4) {
+      document.getElementById('rootMatchFeedback').classList.add('show');
+      var fact = document.getElementById('rootDiscoveryFact');
+      if (fact) setTimeout(function() { fact.classList.add('show'); }, 600);
+      window._rootMatchDone = true;
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    rootFirst.classList.add('wrong-flash');
+    var a = rootFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    rootFirst = null;
+  }
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+document.querySelectorAll('.flip-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  var check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  var allChecked = document.querySelectorAll('.turn-in-item.checked').length ===
+                   document.querySelectorAll('.turn-in-item').length;
+  if (allChecked) {
+    fireConfetti();
+    var seal = document.getElementById('historianSeal');
+    if (seal) seal.classList.add('show');
+  }
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var particles = [];
+  var colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🏛️','🦉','🔔','⚖️','🌍','🏺','📋'];
+
+  // Regular confetti pieces
+  for (var i = 0; i < 120; i++) {
+    particles.push({
+      type: 'rect',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 8
+    });
+  }
+  // Emoji particles mixed in
+  for (var j = 0; j < 18; j++) {
+    particles.push({
+      type: 'emoji',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 14 + 26,
+      vx: (Math.random() - 0.5) * 3,
+      vy: Math.random() * 2.5 + 1.5,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 5
+    });
+  }
+
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+      }
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rv;
+      p.vy += 0.04;
+    });
+    frames++;
+    if (frames < 300) {
+      // Fade out during the last 80 frames
+      if (frames > 220) {
+        canvas.style.opacity = 1 - ((frames - 220) / 80);
+      }
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.opacity = 1;
+    }
+  }
+  animate();
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Fallback for iframe
+  try { window.parent.postMessage({ type: 'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  };
+  window.addEventListener('scroll', onScroll);
+  // Also listen in parent if iframe
+  try {
+    if (window.parent !== window) {
+      window.parent.addEventListener('scroll', onScroll);
+    }
+  } catch(e) {}
+})();
+
+/* ═══════════ INIT ═══════════ */
+updateProgress();
+
+/* ═══════════ SOURCE IMAGE AUTO-LOADER ═══════════ */
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+
+/* ═══════════ STICKY FALLBACK FOR IFRAME ═══════════ */
+(function(){
+  var pw=document.querySelector(".progress-wrap");
+  var tb=document.querySelector(".tab-bar");
+  if(!pw)return;
+  var wrap=document.querySelector(".page-wrap");
+  var pwTop=0;var pwH=0;var tbH=0;
+  function measure(){pwTop=wrap.offsetTop;pwH=pw.offsetHeight;if(tb)tbH=tb.offsetHeight;}
+  measure();
+  function onScroll(){
+    var sy=window.pageYOffset||document.documentElement.scrollTop;
+    if(sy>pwTop){
+      if(pw.style.position!=="fixed"){
+        measure();
+        pw.style.position="fixed";pw.style.top="0";
+        pw.style.left=wrap.getBoundingClientRect().left+"px";
+        pw.style.width=wrap.offsetWidth+"px";pw.style.zIndex="9999";
+        if(tb){tb.style.position="fixed";tb.style.top=pwH+"px";
+          tb.style.left=wrap.getBoundingClientRect().left+"px";
+          tb.style.width=wrap.offsetWidth+"px";tb.style.zIndex="9998";}
+        wrap.style.paddingTop=(pwH+(tb?tbH:0))+"px";
+      }
+    }else{
+      if(pw.style.position==="fixed"){
+        pw.style.position="";pw.style.top="";pw.style.left="";
+        pw.style.width="";pw.style.zIndex="";
+        if(tb){tb.style.position="";tb.style.top="";tb.style.left="";
+          tb.style.width="";tb.style.zIndex="";}
+        wrap.style.paddingTop="";
+      }
+    }
+  }
+  window.addEventListener("scroll",onScroll);
+  window.addEventListener("resize",function(){
+    measure();
+    if(pw.style.position==="fixed"){
+      pw.style.left=wrap.getBoundingClientRect().left+"px";
+      pw.style.width=wrap.offsetWidth+"px";
+      if(tb){tb.style.left=wrap.getBoundingClientRect().left+"px";tb.style.width=wrap.offsetWidth+"px";}
+    }
+  });
+})();
+
+</script>
+</body>
+</html>

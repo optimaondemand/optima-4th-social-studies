@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Florida Assessment — Unit 10</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;600;700&display=swap');
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', 'Century Gothic', Verdana, sans-serif; background: #F0F2F8; color: #0E1C42; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.page-wrap { max-width: 920px; margin: 0 auto; background: #FFFFFF; box-shadow: 0 0 40px rgba(14, 28, 66, 0.08); }
+.progress-wrap { position: sticky; top: 0; z-index: 200; background: #0E1C42; padding: 8px 20px 10px; display: flex; align-items: center; gap: 14px; }
+.progress-label { font-size: 12px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; white-space: nowrap; }
+.progress-track { flex: 1; height: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #2E7D5B, #55C8E8, #E8843A); border-radius: 10px; transition: width 0.4s ease; }
+.progress-pct { font-size: 13px; color: #2E7D5B; font-weight: 800; min-width: 36px; text-align: right; }
+.header { background: #0E1C42; border-bottom: 6px solid #55C8E8; padding: 20px 28px 18px; position: relative; overflow: hidden; }
+.header::after { content: ''; position: absolute; bottom: 6px; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8); }
+.header-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.header-logo { width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title { font-family: 'Lora', Georgia, serif; font-size: 28px; color: #fff; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+.header-title em { color: #A0E8DA; font-style: italic; }
+.header-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(85,200,232,0.15); border: 1.5px solid rgba(85,200,232,0.35); border-radius: 28px; padding: 6px 16px; }
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+.info-strip { display: flex; flex-wrap: wrap; background: #FFFFFF; border-bottom: 2px solid #E2E8F4; }
+.info-cell { flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #E2E8F4; display: flex; align-items: center; gap: 10px; }
+.info-cell:last-child { border-right: none; }
+.info-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.info-label { font-size: 10px; color: #7A88A8; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.instructions { padding: 20px 28px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-bottom: 2px solid #F5E6C8; }
+.instructions h2 { font-size: 20px; color: #0E1C42; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.instructions p { font-size: 16px; color: #3A4A6B; line-height: 1.7; margin-bottom: 8px; }
+.instructions ul { list-style: none; padding: 0; margin: 10px 0 0; }
+.instructions li { font-size: 15px; color: #3A4A6B; line-height: 1.6; padding: 4px 0 4px 24px; position: relative; }
+.instructions li::before { content: '\2713'; position: absolute; left: 0; color: #2E7D5B; font-weight: 800; }
+.section { margin: 20px 28px; }
+.section-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-radius: 18px 18px 0 0; border-bottom: 2px solid rgba(255,255,255,0.15); }
+.section-header.navy { background: linear-gradient(135deg, #0E1C42, #1A2D5A); }
+.section-header.green { background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.section-header.orange { background: linear-gradient(135deg, #E8843A, #F09A5A); }
+.section-header.purple { background: linear-gradient(135deg, #6B4FA0, #8B6FC0); }
+.section-num { width: 38px; height: 38px; border-radius: 14px; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.section-label { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.section-title { font-size: 19px; color: #fff; font-weight: 800; }
+.section-time { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.15); margin-left: auto; white-space: nowrap; }
+.section-body { background: #FFFFFF; border: 2px solid #E2E8F4; border-top: none; border-radius: 0 0 18px 18px; padding: 20px 22px; }
+.q-block { background: #FAFBFF; border: 2px solid #E2E8F4; border-radius: 14px; padding: 14px 18px; margin-bottom: 12px; }
+.q-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #55C8E8; color: #fff; font-weight: 800; font-size: 14px; margin-right: 8px; vertical-align: middle; }
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 8px; }
+.q-choices { list-style: none; padding: 0; margin: 8px 0 0; }
+.q-choices li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; margin-bottom: 6px; background: #FFFFFF; border: 1.5px solid #E2E8F4; border-radius: 10px; cursor: pointer; transition: all 0.2s; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.q-choices li:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.q-choices li.selected { background: #E3F8ED; border-color: #2E7D5B; }
+.q-radio { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #B8E0F0; background: #fff; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.q-choices li.selected .q-radio { border-color: #2E7D5B; background: #2E7D5B; }
+.q-choices li.selected .q-radio::after { content: '\2713'; color: #fff; font-size: 13px; font-weight: 800; }
+.journal-box { width: 100%; min-height: 100px; padding: 12px 14px; border: 2px solid #E2E8F4; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 15px; color: #0E1C42; line-height: 1.6; resize: vertical; background: #FAFBFF; transition: border-color 0.2s; margin-top: 8px; }
+.journal-box:focus { outline: none; border-color: #55C8E8; box-shadow: 0 0 0 3px rgba(85,200,232,0.15); background: #fff; }
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.textbox-prompt { font-size: 14px; color: #0E1C42; font-weight: 700; line-height: 1.5; padding: 8px 12px; background: #EAF8FD; border: 1.5px solid #D6F2FB; border-bottom: none; border-radius: 10px 10px 0 0; margin-top: 10px; }
+.textbox-prompt + .journal-box { border-radius: 0 0 12px 12px; margin-top: 0; }
+.callout { border-radius: 14px; padding: 16px 18px; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.callout-icon { font-size: 28px; flex-shrink: 0; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-source { background: #F0F4FF; border: 2px solid #D0DAEF; }
+.source-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin-bottom: 18px; }
+.source-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); }
+.source-card-header-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-card-body { padding: 18px 22px; }
+.source-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.7; margin-bottom: 10px; }
+.source-excerpt { font-family: 'Lora', Georgia, serif; font-size: 16px; color: #0E1C42; font-style: italic; line-height: 1.7; padding: 16px 20px; background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border-left: 4px solid #D4943A; border-radius: 0 12px 12px 0; margin: 12px 0; }
+.virtue-card { background: linear-gradient(135deg, #FFF8F0, #FFF3DC); border: 2px solid #F5E6C8; border-left: 6px solid #D4943A; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+.virtue-label { font-size: 12px; color: #D4943A; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+.gathered-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; box-shadow: 0 2px 10px rgba(14,28,66,0.04); margin: 22px 28px; }
+.gathered-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #0E1C42, #1A2D5A); padding: 16px 22px; }
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label { font-size: 11px; color: #55C8E8; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.gathered-header-title { font-family: 'Lora', Georgia, serif; font-size: 20px; color: #fff; font-weight: 700; }
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output { width: 100%; min-height: 250px; padding: 16px 18px; border: 2px solid #E2E8F4; border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 14px; color: #0E1C42; line-height: 1.65; background: #FAFBFF; resize: vertical; white-space: pre-wrap; }
+.gathered-actions { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
+.gathered-btn { flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border: none; border-radius: 14px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; cursor: pointer; transition: transform 0.2s; }
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy { background: linear-gradient(135deg, #55C8E8, #7FD8F0); color: #0E1C42; box-shadow: 0 4px 14px rgba(85,200,232,0.25); }
+.gathered-btn-pdf { background: linear-gradient(135deg, #0E1C42, #1A2D5A); color: #fff; border: 2px solid #55C8E8; box-shadow: 0 4px 14px rgba(14,28,66,0.25); }
+.gathered-copied { text-align: center; font-size: 14px; font-weight: 700; color: #34B76F; margin-top: 8px; display: none; }
+.gathered-copied.show { display: block; }
+.turn-in-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px; }
+.turn-in-header { display: flex; align-items: center; gap: 14px; background: #EAF8FD; padding: 18px 22px; border-bottom: 2px solid #D6F2FB; }
+.turn-in-header-icon { font-size: 36px; line-height: 1; }
+.turn-in-header-label { font-size: 11px; color: #1A6B8E; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+.turn-in-header-title { font-family: 'Lora', Georgia, serif; font-size: 22px; color: #0E1C42; font-weight: 700; }
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: #FAFBFF; border: 1.5px solid #E2E8F4; border-radius: 12px; cursor: pointer; transition: all 0.2s; }
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-check { width: 26px; height: 26px; border-radius: 8px; border: 2px solid #B8E0F0; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; transition: all 0.2s; }
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+.rubric-card { background: #FFFFFF; border: 2px solid #E2E8F4; border-radius: 18px; overflow: hidden; margin: 18px 28px 28px; }
+.rubric-header { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, #2E7D5B, #3A9A6E); padding: 16px 22px; }
+.rubric-header-icon { font-size: 26px; }
+.rubric-header-title { font-size: 19px; color: #fff; font-weight: 800; }
+.rubric-body { padding: 0; }
+.rubric-table { width: 100%; border-collapse: collapse; }
+.rubric-table th { background: #F0F4FF; padding: 10px 14px; font-size: 12px; color: #0E1C42; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F4; text-align: left; }
+.rubric-table td { padding: 10px 14px; font-size: 13px; color: #3A4A6B; line-height: 1.5; border-bottom: 1px solid #E2E8F4; vertical-align: top; }
+.rubric-table tr:last-child td { border-bottom: none; }
+.rubric-cat { font-weight: 800; color: #0E1C42; font-size: 14px; }
+.rubric-level-3 { background: #E3F8ED; }
+.rubric-level-2 { background: #FFF8F0; }
+.rubric-level-1 { background: #FDE8E8; }
+.confetti-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+.confetti-piece { position: absolute; width: 10px; height: 14px; top: -20px; opacity: 0; }
+@media (max-width: 600px) { .header-title { font-size: 22px; } .info-strip { flex-direction: column; } .info-cell { border-right: none; border-bottom: 1px solid #E2E8F4; } .section { margin: 16px 16px; } .gathered-card, .turn-in-card, .rubric-card { margin: 16px; } .rubric-table { font-size: 12px; } }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<!-- PROGRESS BAR -->
+<div class="progress-wrap">
+  <span class="progress-label">Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-pct" id="progressPct">0%</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg width="48" height="38" viewBox="0 0 48 38"><circle cx="24" cy="19" r="16" fill="#0E1C42"/><text x="24" y="23" text-anchor="middle" fill="#55C8E8" font-family="Nunito, sans-serif" font-size="11" font-weight="800">OAO</text></svg>
+    </div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">Grade 4 Social Studies</div>
+    </div>
+  </div>
+  <div class="header-title">Modern Florida <em>Assessment</em></div>
+  <div class="header-badge">
+    <span class="header-badge-icon">&#128203;</span>
+    <span class="header-badge-text">Unit 10 Assessment</span>
+  </div>
+</div>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">&#128339;</div>
+    <div><div class="info-label">Time</div><div class="info-value">~45 min</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">&#129513;</div>
+    <div><div class="info-label">Sections</div><div class="info-value">4 Parts</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">&#128214;</div>
+    <div><div class="info-label">Covers</div><div class="info-value">Unit 10</div></div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0F4FF;">&#11088;</div>
+    <div><div class="info-label">Type</div><div class="info-value">Unit Assessment</div></div>
+  </div>
+</div>
+
+<!-- INSTRUCTIONS -->
+<div class="instructions">
+  <h2>&#128221; Assessment Instructions</h2>
+  <p>This assessment covers Unit 10 &#8212; Modern Florida Growth. Show what you know about the railroads, industries, immigrants, and key individuals that helped Florida grow from the late 1800s through the Space Age.</p>
+  <ul>
+    <li>Read each question carefully before choosing or writing your answer</li>
+    <li>Choose the best answer for each multiple-choice question</li>
+    <li>Write in complete sentences for all open-response questions</li>
+    <li>Review your answers before submitting</li>
+  </ul>
+</div>
+
+<!-- SECTION A: KNOWLEDGE CHECK -->
+<div class="section">
+  <div class="section-header navy">
+    <div class="section-num">A</div>
+    <div>
+      <div class="section-label">Section A</div>
+      <div class="section-title">Knowledge Check</div>
+    </div>
+    <div class="section-time">&#9202; ~10 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">1</span>Henry Flagler is BEST known for:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Discovering gold in central Florida</li>
+        <li><span class="q-radio"></span>B) Building railroads and hotels along Florida&#8217;s east coast</li>
+        <li><span class="q-radio"></span>C) Serving as Florida&#8217;s first governor</li>
+        <li><span class="q-radio"></span>D) Leading the Seminole Wars</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">2</span>What role did Tampa play during the Spanish-American War of 1898?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It was the site of a major sea battle</li>
+        <li><span class="q-radio"></span>B) It served as the main launching point for U.S. troops going to Cuba</li>
+        <li><span class="q-radio"></span>C) It was captured by Spanish forces</li>
+        <li><span class="q-radio"></span>D) It became the new state capital</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">3</span>Immigrants from Cuba, Spain, Italy, and other countries contributed to Florida&#8217;s growth by:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Building all of Florida&#8217;s schools</li>
+        <li><span class="q-radio"></span>B) Working in industries like cigar-making in Ybor City and bringing new cultural traditions</li>
+        <li><span class="q-radio"></span>C) Serving as Florida&#8217;s governors</li>
+        <li><span class="q-radio"></span>D) Replacing all Native American communities</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">4</span>The Florida land boom of the 1920s ended in a &#8220;bust&#8221; mainly because:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) People stopped wanting to live in warm places</li>
+        <li><span class="q-radio"></span>B) Land prices were driven too high by speculation, and hurricanes damaged the area</li>
+        <li><span class="q-radio"></span>C) The government banned all building in Florida</li>
+        <li><span class="q-radio"></span>D) Railroads stopped running to Florida</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">5</span>Mary McLeod Bethune is remembered for:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Building Florida&#8217;s first railroad</li>
+        <li><span class="q-radio"></span>B) Fighting for education and civil rights, founding a school for Black students</li>
+        <li><span class="q-radio"></span>C) Discovering the Everglades</li>
+        <li><span class="q-radio"></span>D) Inventing the telegraph</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">6</span>How did the New Deal help Florida during the Great Depression?</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It closed all Florida businesses</li>
+        <li><span class="q-radio"></span>B) It created jobs through public works projects like building roads, parks, and bridges</li>
+        <li><span class="q-radio"></span>C) It moved all Floridians to other states</li>
+        <li><span class="q-radio"></span>D) It ended tourism permanently</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">7</span>Julia Tuttle is known as the &#8220;Mother of Miami&#8221; because she:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) Was the first person born in Miami</li>
+        <li><span class="q-radio"></span>B) Convinced Henry Flagler to extend his railroad to Miami</li>
+        <li><span class="q-radio"></span>C) Built Miami&#8217;s first school</li>
+        <li><span class="q-radio"></span>D) Served as Miami&#8217;s first mayor</li>
+      </ul>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">8</span>Florida&#8217;s space program at Cape Canaveral became important because:</div>
+      <ul class="q-choices">
+        <li><span class="q-radio"></span>A) It was the only flat area in the United States</li>
+        <li><span class="q-radio"></span>B) It helped the U.S. compete in the Space Race and brought jobs and technology to Florida</li>
+        <li><span class="q-radio"></span>C) It replaced all other Florida industries</li>
+        <li><span class="q-radio"></span>D) It was built during the Civil War</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION B: SOURCE & MAP TASK -->
+<div class="section">
+  <div class="section-header green">
+    <div class="section-num">B</div>
+    <div>
+      <div class="section-label">Section B</div>
+      <div class="section-title">Source &amp; Map Task</div>
+    </div>
+    <div class="section-time">&#9202; ~12 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="source-card">
+      <div class="source-card-header">
+        <div class="source-card-header-icon">&#128220;</div>
+        <div class="source-card-header-title">Historical Source: Ybor City Cigar Workers (c. 1910)</div>
+      </div>
+      <div class="source-card-body">
+        <p>Read the following description of an early 1900s photograph showing Ybor City cigar workers.</p>
+        <div class="source-excerpt">&#8220;This photograph from around 1910 shows the inside of a cigar factory in Ybor City, Tampa. Rows of workers &#8212; men and women from Cuba, Spain, and Italy &#8212; sit at long wooden tables, carefully rolling cigars by hand. In the corner, a man called the &#8216;lector&#8217; reads aloud from a newspaper to the workers while they work. The factories employed thousands of immigrants and became the center of a thriving multicultural neighborhood with its own restaurants, social clubs, and traditions.&#8221;</div>
+      </div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">9</span>Use the source above to answer the following question.</div>
+      <div class="textbox-prompt">What does this source tell us about the daily lives of immigrant workers in Ybor City?</div>
+      <textarea class="journal-box" data-label="Source Evidence Q1" placeholder="Write your answer using details from the source..."></textarea>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">10</span>Think about the role of the lector described in the source.</div>
+      <div class="textbox-prompt">How does the role of the &#8220;lector&#8221; show that these workers valued education and staying informed?</div>
+      <textarea class="journal-box" data-label="Source Evidence Q2" placeholder="Explain what the lector's role tells us about these workers..."></textarea>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">11</span>Connect the source to what you learned in Unit 10.</div>
+      <div class="textbox-prompt">Based on this source and what you learned in Unit 10, how did immigrant communities help Florida grow?</div>
+      <textarea class="journal-box" data-label="Source Evidence Q3" placeholder="Use evidence from the source and your Unit 10 lessons..."></textarea>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION C: SOCRATIC RESPONSE -->
+<div class="section">
+  <div class="section-header orange">
+    <div class="section-num">C</div>
+    <div>
+      <div class="section-label">Section C</div>
+      <div class="section-title">Socratic Response</div>
+    </div>
+    <div class="section-time">&#9202; ~15 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="callout callout-think">
+      <div class="callout-icon">&#129300;</div>
+      <p>These questions ask you to think deeply and support your ideas with evidence. Write multi-sentence responses.</p>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">12</span>Read the prompt below and write a multi-sentence response.</div>
+      <div class="textbox-prompt">Henry Flagler, Henry Plant, Julia Tuttle, and Mary McLeod Bethune all helped Florida grow in different ways. Choose TWO of these individuals. Explain what each person did and how their contributions were similar or different.</div>
+      <textarea class="journal-box" style="min-height:160px;" data-label="Socratic Response 1" placeholder="Choose two individuals and compare their contributions..."></textarea>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">13</span>Read the prompt below and write a multi-sentence response.</div>
+      <div class="textbox-prompt">Florida went through a boom in the 1920s, a bust, the Great Depression, and then growth again after WWII. What does this pattern teach us about how economies change over time?</div>
+      <textarea class="journal-box" style="min-height:140px;" data-label="Socratic Response 2" placeholder="Explain what this pattern teaches us about economies..."></textarea>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION D: VIRTUE LENS REFLECTION -->
+<div class="section">
+  <div class="section-header purple">
+    <div class="section-num">D</div>
+    <div>
+      <div class="section-label">Section D</div>
+      <div class="section-title">Virtue Lens Reflection</div>
+    </div>
+    <div class="section-time">&#9202; ~5 min</div>
+  </div>
+  <div class="section-body">
+
+    <div class="virtue-card">
+      <div class="virtue-label">&#127942; Virtue Focus: Perseverance</div>
+      <div class="virtue-text">Perseverance means keeping going even when things are very hard &#8212; not giving up when the path is difficult.</div>
+    </div>
+
+    <div class="q-block">
+      <div class="q-text"><span class="q-num">14</span>Reflect on what you learned in Unit 10.</div>
+      <div class="textbox-prompt">Mary McLeod Bethune started a school with almost no money, using crates for desks and charcoal for pencils. Think about what perseverance means &#8212; keeping going even when things are very hard. Describe a time from Unit 10 when someone or a community showed perseverance, and explain why this virtue matters.</div>
+      <textarea class="journal-box" data-label="Virtue Reflection" placeholder="Describe an example of perseverance from Unit 10..."></textarea>
+    </div>
+
+  </div>
+</div>
+
+<!-- GATHERED ANSWERS -->
+<div class="gathered-card">
+  <div class="gathered-header">
+    <div class="gathered-header-icon">&#128230;</div>
+    <div>
+      <div class="gathered-header-label">Ready to Submit</div>
+      <div class="gathered-header-title">Your Gathered Answers</div>
+    </div>
+  </div>
+  <div class="gathered-body">
+    <p class="gathered-intro">Scroll to the bottom of the page or click the button below to gather all your answers. Copy them and paste into the Canvas assignment submission box.</p>
+    <textarea id="gatheredOutput" class="gathered-output" readonly placeholder="Your answers will appear here..."></textarea>
+    <div class="gathered-actions">
+      <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers(); copyAnswers();">&#128203; Copy All Answers</button>
+      <button class="gathered-btn gathered-btn-pdf" onclick="gatherAnswers(); downloadPDF();">&#128196; Download as Text</button>
+    </div>
+    <div id="copiedMsg" class="gathered-copied">Copied to clipboard!</div>
+  </div>
+</div>
+
+<!-- TURN-IN CHECKLIST -->
+<div class="turn-in-card">
+  <div class="turn-in-header">
+    <div class="turn-in-header-icon">&#9989;</div>
+    <div>
+      <div class="turn-in-header-label">Before You Submit</div>
+      <div class="turn-in-header-title">Turn-In Checklist</div>
+    </div>
+  </div>
+  <div class="turn-in-body">
+    <p class="turn-in-intro">Check off each item to make sure your assessment is complete.</p>
+    <div class="turn-in-checklist">
+      <div class="turn-in-item">
+        <div class="turn-in-check"></div>
+        <div class="turn-in-item-text">I answered all 8 multiple-choice questions</div>
+      </div>
+      <div class="turn-in-item">
+        <div class="turn-in-check"></div>
+        <div class="turn-in-item-text">I completed all three source evidence responses</div>
+      </div>
+      <div class="turn-in-item">
+        <div class="turn-in-check"></div>
+        <div class="turn-in-item-text">I wrote both Socratic responses with evidence</div>
+      </div>
+      <div class="turn-in-item">
+        <div class="turn-in-check"></div>
+        <div class="turn-in-item-text">I reflected on the virtue of perseverance</div>
+      </div>
+      <div class="turn-in-item">
+        <div class="turn-in-check"></div>
+        <div class="turn-in-item-text">I reviewed my answers before submitting</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RUBRIC -->
+<div class="rubric-card">
+  <div class="rubric-header">
+    <div class="rubric-header-icon">&#128200;</div>
+    <div class="rubric-header-title">Assessment Rubric</div>
+  </div>
+  <div class="rubric-body">
+    <table class="rubric-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th class="rubric-level-3">Secure (3)</th>
+          <th class="rubric-level-2">Developing (2)</th>
+          <th class="rubric-level-1">Beginning (1)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rubric-cat">Content Knowledge</td>
+          <td class="rubric-level-3">Names key people, places, events, vocabulary accurately.</td>
+          <td class="rubric-level-2">Most key facts, few errors.</td>
+          <td class="rubric-level-1">Misses/confuses key facts.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Chronology &amp; Cause&#8211;Effect</td>
+          <td class="rubric-level-3">Right order, explains cause&#8594;effect.</td>
+          <td class="rubric-level-2">Mostly right, incomplete.</td>
+          <td class="rubric-level-1">Out of order or missing.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Source &amp; Map Interpretation</td>
+          <td class="rubric-level-3">Uses evidence to support ideas.</td>
+          <td class="rubric-level-2">References source but vague.</td>
+          <td class="rubric-level-1">No evidence or misreads.</td>
+        </tr>
+        <tr>
+          <td class="rubric-cat">Civic &amp; Virtue Judgment</td>
+          <td class="rubric-level-3">Connects virtue with reasoning.</td>
+          <td class="rubric-level-2">Names virtue, vague connection.</td>
+          <td class="rubric-level-1">No connection or missing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<script>
+function gatherAnswers(){let o=[];document.querySelectorAll('.q-block').forEach((b,i)=>{const q=b.querySelector('.q-text')?.textContent?.trim()||'';const s=b.querySelector('.q-choices li.selected');if(b.querySelector('.q-choices')){const a=s?s.textContent.trim():'[No answer selected]';o.push(`Q${i+1}: ${q}\nAnswer: ${a}`)}});document.querySelectorAll('.journal-box').forEach(ta=>{const p=ta.previousElementSibling;const l=(p&&p.classList.contains('textbox-prompt'))?p.textContent.trim():(ta.getAttribute('data-label')||'Response');const v=ta.value.trim()||'[No response written]';o.push(`${l}\nResponse: ${v}`)});document.getElementById('gatheredOutput').value=o.join('\n\n---\n\n')}
+function copyAnswers(){const el=document.getElementById('gatheredOutput');el.select();document.execCommand('copy');const m=document.getElementById('copiedMsg');m.classList.add('show');setTimeout(()=>m.classList.remove('show'),2500)}
+function downloadPDF(){const t=document.getElementById('gatheredOutput').value;const b=new Blob([t],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=document.title.replace(/[^a-zA-Z0-9]/g,'_')+'_answers.txt';a.click()}
+document.querySelectorAll('.q-choices li').forEach(li=>{li.addEventListener('click',()=>{li.closest('.q-choices').querySelectorAll('li').forEach(x=>x.classList.remove('selected'));li.classList.add('selected');updateProgress()})});
+document.querySelectorAll('.turn-in-item').forEach(item=>{item.addEventListener('click',()=>{item.classList.toggle('checked');const c=item.querySelector('.turn-in-check');c.innerHTML=item.classList.contains('checked')?'✓':'';const all=document.querySelectorAll('.turn-in-item');const chk=document.querySelectorAll('.turn-in-item.checked');if(chk.length===all.length)launchConfetti()})});
+function updateProgress(){const mc=document.querySelectorAll('.q-choices').length;const md=document.querySelectorAll('.q-choices li.selected').length;const tt=document.querySelectorAll('.journal-box').length;let td=0;document.querySelectorAll('.journal-box').forEach(ta=>{if(ta.value.trim())td++});const t=mc+tt;const d=md+td;const p=t>0?Math.round((d/t)*100):0;const f=document.getElementById('progressFill');const pe=document.getElementById('progressPct');if(f)f.style.width=p+'%';if(pe)pe.textContent=p+'%'}
+document.querySelectorAll('.journal-box').forEach(ta=>{ta.addEventListener('input',updateProgress)});
+function launchConfetti(){const c=document.createElement('div');c.className='confetti-container';document.body.appendChild(c);const cols=['#55C8E8','#2E7D5B','#E8843A','#D4943A','#8B6FC0','#34B76F','#FF6B6B'];for(let i=0;i<60;i++){const p=document.createElement('div');p.className='confetti-piece';p.style.left=Math.random()*100+'%';p.style.background=cols[Math.floor(Math.random()*cols.length)];p.style.transform='rotate('+Math.random()*360+'deg)';p.style.borderRadius=Math.random()>0.5?'50%':'2px';p.style.width=(6+Math.random()*8)+'px';p.style.height=(8+Math.random()*12)+'px';c.appendChild(p);const dl=Math.random()*500;const du=1500+Math.random()*1500;p.animate([{top:'-20px',opacity:1,transform:'rotate(0deg) translateX(0)'},{top:'100vh',opacity:0,transform:'rotate('+(360+Math.random()*720)+'deg) translateX('+(Math.random()*200-100)+'px)'}],{duration:du,delay:dl,easing:'cubic-bezier(0.25,0.46,0.45,0.94)',fill:'forwards'})}setTimeout(()=>c.remove(),3500)}
+let gathered=false;window.addEventListener('scroll',()=>{if(!gathered&&(window.innerHeight+window.scrollY)>=document.body.offsetHeight-200){gathered=true;gatherAnswers()}});
+</script>
+</body>
+</html>
