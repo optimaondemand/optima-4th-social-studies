@@ -1,0 +1,1990 @@
+{
+  "_readme": "Video Manifest for G4 Social Studies. Paste your SharePoint/OneDrive embed code into the 'embed' field for each slot. Set status to 'ready' when done. The lesson pages will auto-load videos from this file.",
+  "_manifest_url": "https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/video-manifest.json",
+  "videos": {
+    "4-01-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 What Florida Historians Study",
+      "file": "ss-4-01.01-what-florida-historians-study.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=a8a49e7f-c135-491f-8d00-1ecddaffbcc9&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"4-01-01-welcome.mp4\"></iframe>",
+      "status": "ready"
+    },
+    "4-01-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 What Florida Historians Study",
+      "file": "ss-4-01.01-what-florida-historians-study.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=f9d7058c-a5d7-4fb7-bc69-1bcfbe8cd281&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"4-01-01-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
+    },
+    "4-01-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 What Florida Historians Study",
+      "file": "ss-4-01.01-what-florida-historians-study.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=5ba406f2-62eb-4b15-a359-2a9dd2292e29&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"4-01-01-assignment-explainer.mp4\"></iframe>",
+      "status": "ready"
+    },
+    "4-01-01-closing": {
+      "lesson": "Optima Academy Online \u2014 What Florida Historians Study",
+      "file": "ss-4-01.01-what-florida-historians-study.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=1c02b60d-b131-4012-93c2-0e80efed7593&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"4-01-01-closing.mp4\"></iframe>",
+      "status": "ready"
+    },
+    "4-01-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 Primary And Secondary Sources",
+      "file": "ss-4-01_02-primary-and-secondary-sources.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Primary And Secondary Sources",
+      "file": "ss-4-01_02-primary-and-secondary-sources.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Primary And Secondary Sources",
+      "file": "ss-4-01_02-primary-and-secondary-sources.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-02-closing": {
+      "lesson": "Optima Academy Online \u2014 Primary And Secondary Sources",
+      "file": "ss-4-01_02-primary-and-secondary-sources.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 Print And Electronic Media",
+      "file": "ss-4-01_03-print-and-electronic-media.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Print And Electronic Media",
+      "file": "ss-4-01_03-print-and-electronic-media.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Print And Electronic Media",
+      "file": "ss-4-01_03-print-and-electronic-media.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-03-closing": {
+      "lesson": "Optima Academy Online \u2014 Print And Electronic Media",
+      "file": "ss-4-01_03-print-and-electronic-media.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 Timeline Thread Sequencing",
+      "file": "ss-4-01_04-timeline-thread-sequencing.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Timeline Thread Sequencing",
+      "file": "ss-4-01_04-timeline-thread-sequencing.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Timeline Thread Sequencing",
+      "file": "ss-4-01_04-timeline-thread-sequencing.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-04-closing": {
+      "lesson": "Optima Academy Online \u2014 Timeline Thread Sequencing",
+      "file": "ss-4-01_04-timeline-thread-sequencing.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 Vocabulary And Word Roots",
+      "file": "ss-4-01_05-vocabulary-and-word-roots.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Vocabulary And Word Roots",
+      "file": "ss-4-01_05-vocabulary-and-word-roots.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Vocabulary And Word Roots",
+      "file": "ss-4-01_05-vocabulary-and-word-roots.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-05-closing": {
+      "lesson": "Optima Academy Online \u2014 Vocabulary And Word Roots",
+      "file": "ss-4-01_05-vocabulary-and-word-roots.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 First Florida Evidence Entry",
+      "file": "ss-4-01_06-first-florida-evidence-entry.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 First Florida Evidence Entry",
+      "file": "ss-4-01_06-first-florida-evidence-entry.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 First Florida Evidence Entry",
+      "file": "ss-4-01_06-first-florida-evidence-entry.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-01-06-closing": {
+      "lesson": "Optima Academy Online \u2014 First Florida Evidence Entry",
+      "file": "ss-4-01_06-first-florida-evidence-entry.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 Physical Features Of Florida",
+      "file": "ss-4-02_01-physical-features-of-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Physical Features Of Florida",
+      "file": "ss-4-02_01-physical-features-of-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Physical Features Of Florida",
+      "file": "ss-4-02_01-physical-features-of-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-01-closing": {
+      "lesson": "Optima Academy Online \u2014 Physical Features Of Florida",
+      "file": "ss-4-02_01-physical-features-of-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 Cultural Features On A Florida Map",
+      "file": "ss-4-02_02-cultural-features-on-a-florida-map.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Cultural Features On A Florida Map",
+      "file": "ss-4-02_02-cultural-features-on-a-florida-map.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Cultural Features On A Florida Map",
+      "file": "ss-4-02_02-cultural-features-on-a-florida-map.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-02-closing": {
+      "lesson": "Optima Academy Online \u2014 Cultural Features On A Florida Map",
+      "file": "ss-4-02_02-cultural-features-on-a-florida-map.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 Weather And Climate Of Florida",
+      "file": "ss-4-02_03-weather-and-climate-of-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Weather And Climate Of Florida",
+      "file": "ss-4-02_03-weather-and-climate-of-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Weather And Climate Of Florida",
+      "file": "ss-4-02_03-weather-and-climate-of-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-03-closing": {
+      "lesson": "Optima Academy Online \u2014 Weather And Climate Of Florida",
+      "file": "ss-4-02_03-weather-and-climate-of-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 How Weather Impacts Florida",
+      "file": "ss-4-02_04-how-weather-impacts-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 How Weather Impacts Florida",
+      "file": "ss-4-02_04-how-weather-impacts-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 How Weather Impacts Florida",
+      "file": "ss-4-02_04-how-weather-impacts-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-04-closing": {
+      "lesson": "Optima Academy Online \u2014 How Weather Impacts Florida",
+      "file": "ss-4-02_04-how-weather-impacts-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 Interpreting Florida Political And Physical Maps",
+      "file": "ss-4-02_05-interpreting-florida-political-and-physical-maps.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Interpreting Florida Political And Physical Maps",
+      "file": "ss-4-02_05-interpreting-florida-political-and-physical-maps.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Interpreting Florida Political And Physical Maps",
+      "file": "ss-4-02_05-interpreting-florida-political-and-physical-maps.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-05-closing": {
+      "lesson": "Optima Academy Online \u2014 Interpreting Florida Political And Physical Maps",
+      "file": "ss-4-02_05-interpreting-florida-political-and-physical-maps.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 Florida Map Quest Latitude Longitude Scale And Symbols",
+      "file": "ss-4-02_06-florida-map-quest-latitude-longitude-scale-and-symbols.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Florida Map Quest Latitude Longitude Scale And Symbols",
+      "file": "ss-4-02_06-florida-map-quest-latitude-longitude-scale-and-symbols.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Florida Map Quest Latitude Longitude Scale And Symbols",
+      "file": "ss-4-02_06-florida-map-quest-latitude-longitude-scale-and-symbols.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-02-06-closing": {
+      "lesson": "Optima Academy Online \u2014 Florida Map Quest Latitude Longitude Scale And Symbols",
+      "file": "ss-4-02_06-florida-map-quest-latitude-longitude-scale-and-symbols.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 First Peoples Environments",
+      "file": "ss-4-03_01-first-peoples-environments.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 First Peoples Environments",
+      "file": "ss-4-03_01-first-peoples-environments.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 First Peoples Environments",
+      "file": "ss-4-03_01-first-peoples-environments.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-01-closing": {
+      "lesson": "Optima Academy Online \u2014 First Peoples Environments",
+      "file": "ss-4-03_01-first-peoples-environments.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 Compare Native American Tribes",
+      "file": "ss-4-03_02-compare-native-american-tribes.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Compare Native American Tribes",
+      "file": "ss-4-03_02-compare-native-american-tribes.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Compare Native American Tribes",
+      "file": "ss-4-03_02-compare-native-american-tribes.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-02-closing": {
+      "lesson": "Optima Academy Online \u2014 Compare Native American Tribes",
+      "file": "ss-4-03_02-compare-native-american-tribes.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 Food Shelter Tools Resources",
+      "file": "ss-4-03_03-food-shelter-tools-resources.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Food Shelter Tools Resources",
+      "file": "ss-4-03_03-food-shelter-tools-resources.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Food Shelter Tools Resources",
+      "file": "ss-4-03_03-food-shelter-tools-resources.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-03-closing": {
+      "lesson": "Optima Academy Online \u2014 Food Shelter Tools Resources",
+      "file": "ss-4-03_03-food-shelter-tools-resources.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 Artifacts As Evidence",
+      "file": "ss-4-03_04-artifacts-as-evidence.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Artifacts As Evidence",
+      "file": "ss-4-03_04-artifacts-as-evidence.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Artifacts As Evidence",
+      "file": "ss-4-03_04-artifacts-as-evidence.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-04-closing": {
+      "lesson": "Optima Academy Online \u2014 Artifacts As Evidence",
+      "file": "ss-4-03_04-artifacts-as-evidence.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
+      "file": "ss-4-03_05-geography-and-daily-life.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
+      "file": "ss-4-03_05-geography-and-daily-life.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
+      "file": "ss-4-03_05-geography-and-daily-life.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-05-closing": {
+      "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
+      "file": "ss-4-03_05-geography-and-daily-life.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
+      "file": "ss-4-03_06-courtesy-and-responsibility.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
+      "file": "ss-4-03_06-courtesy-and-responsibility.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
+      "file": "ss-4-03_06-courtesy-and-responsibility.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-03-06-closing": {
+      "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
+      "file": "ss-4-03_06-courtesy-and-responsibility.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
+      "file": "ss-4-04_01-explorers-who-came-to-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
+      "file": "ss-4-04_01-explorers-who-came-to-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
+      "file": "ss-4-04_01-explorers-who-came-to-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-01-closing": {
+      "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
+      "file": "ss-4-04_01-explorers-who-came-to-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
+      "file": "ss-4-04_02-motives-for-european-expeditions.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
+      "file": "ss-4-04_02-motives-for-european-expeditions.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
+      "file": "ss-4-04_02-motives-for-european-expeditions.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-02-closing": {
+      "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
+      "file": "ss-4-04_02-motives-for-european-expeditions.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 Spain France England In Florida",
+      "file": "ss-4-04_03-spain-france-england-in-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Spain France England In Florida",
+      "file": "ss-4-04_03-spain-france-england-in-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Spain France England In Florida",
+      "file": "ss-4-04_03-spain-france-england-in-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-03-closing": {
+      "lesson": "Optima Academy Online \u2014 Spain France England In Florida",
+      "file": "ss-4-04_03-spain-france-england-in-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 Causes And Effects Of European Colonization",
+      "file": "ss-4-04_04-causes-and-effects-of-european-colonization.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Causes And Effects Of European Colonization",
+      "file": "ss-4-04_04-causes-and-effects-of-european-colonization.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Causes And Effects Of European Colonization",
+      "file": "ss-4-04_04-causes-and-effects-of-european-colonization.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-04-04-closing": {
+      "lesson": "Optima Academy Online \u2014 Causes And Effects Of European Colonization",
+      "file": "ss-4-04_04-causes-and-effects-of-european-colonization.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 Evidence Review Geography First Peoples Exploration",
+      "file": "ss-4-05_01-evidence-review-geography-first-peoples-exploration.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Evidence Review Geography First Peoples Exploration",
+      "file": "ss-4-05_01-evidence-review-geography-first-peoples-exploration.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Evidence Review Geography First Peoples Exploration",
+      "file": "ss-4-05_01-evidence-review-geography-first-peoples-exploration.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-01-closing": {
+      "lesson": "Optima Academy Online \u2014 Evidence Review Geography First Peoples Exploration",
+      "file": "ss-4-05_01-evidence-review-geography-first-peoples-exploration.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 Council Chamber What Changed After Contact",
+      "file": "ss-4-05_02-council-chamber-what-changed-after-contact.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Council Chamber What Changed After Contact",
+      "file": "ss-4-05_02-council-chamber-what-changed-after-contact.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Council Chamber What Changed After Contact",
+      "file": "ss-4-05_02-council-chamber-what-changed-after-contact.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-05-02-closing": {
+      "lesson": "Optima Academy Online \u2014 Council Chamber What Changed After Contact",
+      "file": "ss-4-05_02-council-chamber-what-changed-after-contact.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 Early European Exploration Of Florida",
+      "file": "ss-4-06.01-early-european-exploration-of-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Early European Exploration Of Florida",
+      "file": "ss-4-06.01-early-european-exploration-of-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Early European Exploration Of Florida",
+      "file": "ss-4-06.01-early-european-exploration-of-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-01-closing": {
+      "lesson": "Optima Academy Online \u2014 Early European Exploration Of Florida",
+      "file": "ss-4-06.01-early-european-exploration-of-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 St Augustine Oldest Settlement",
+      "file": "ss-4-06.02-st-augustine-oldest-settlement.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 St Augustine Oldest Settlement",
+      "file": "ss-4-06.02-st-augustine-oldest-settlement.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 St Augustine Oldest Settlement",
+      "file": "ss-4-06.02-st-augustine-oldest-settlement.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-02-closing": {
+      "lesson": "Optima Academy Online \u2014 St Augustine Oldest Settlement",
+      "file": "ss-4-06.02-st-augustine-oldest-settlement.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 Mission San Luis De Talimali",
+      "file": "ss-4-06.03-mission-san-luis-de-talimali.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Mission San Luis De Talimali",
+      "file": "ss-4-06.03-mission-san-luis-de-talimali.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Mission San Luis De Talimali",
+      "file": "ss-4-06.03-mission-san-luis-de-talimali.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-03-closing": {
+      "lesson": "Optima Academy Online \u2014 Mission San Luis De Talimali",
+      "file": "ss-4-06.03-mission-san-luis-de-talimali.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 Daily Life On Florida Missions",
+      "file": "ss-4-06.04-daily-life-on-florida-missions.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Daily Life On Florida Missions",
+      "file": "ss-4-06.04-daily-life-on-florida-missions.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Daily Life On Florida Missions",
+      "file": "ss-4-06.04-daily-life-on-florida-missions.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-04-closing": {
+      "lesson": "Optima Academy Online \u2014 Daily Life On Florida Missions",
+      "file": "ss-4-06.04-daily-life-on-florida-missions.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Spanish Rule",
+      "file": "ss-4-06.05-effects-of-spanish-rule.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Spanish Rule",
+      "file": "ss-4-06.05-effects-of-spanish-rule.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Spanish Rule",
+      "file": "ss-4-06.05-effects-of-spanish-rule.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-05-closing": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Spanish Rule",
+      "file": "ss-4-06.05-effects-of-spanish-rule.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Colonization On Native Tribes",
+      "file": "ss-4-06.06-effects-of-colonization-on-native-tribes.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Colonization On Native Tribes",
+      "file": "ss-4-06.06-effects-of-colonization-on-native-tribes.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Colonization On Native Tribes",
+      "file": "ss-4-06.06-effects-of-colonization-on-native-tribes.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-06-closing": {
+      "lesson": "Optima Academy Online \u2014 Effects Of Colonization On Native Tribes",
+      "file": "ss-4-06.06-effects-of-colonization-on-native-tribes.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-07-welcome": {
+      "lesson": "Optima Academy Online \u2014 Architecture And Artifacts",
+      "file": "ss-4-06.07-architecture-and-artifacts.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-07-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Architecture And Artifacts",
+      "file": "ss-4-06.07-architecture-and-artifacts.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-07-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Architecture And Artifacts",
+      "file": "ss-4-06.07-architecture-and-artifacts.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-07-closing": {
+      "lesson": "Optima Academy Online \u2014 Architecture And Artifacts",
+      "file": "ss-4-06.07-architecture-and-artifacts.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-08-welcome": {
+      "lesson": "Optima Academy Online \u2014 Early Florida Source Notebook",
+      "file": "ss-4-06.08-early-florida-source-notebook.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-08-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 Early Florida Source Notebook",
+      "file": "ss-4-06.08-early-florida-source-notebook.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-08-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 Early Florida Source Notebook",
+      "file": "ss-4-06.08-early-florida-source-notebook.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-06-08-closing": {
+      "lesson": "Optima Academy Online \u2014 Early Florida Source Notebook",
+      "file": "ss-4-06.08-early-florida-source-notebook.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Fort Mose And Freedom In Spanish Florida",
+      "file": "ss-4-07-01-fort-mose-and-freedom-in-spanish-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Fort Mose And Freedom In Spanish Florida",
+      "file": "ss-4-07-01-fort-mose-and-freedom-in-spanish-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-01-assignment-explainer-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Fort Mose And Freedom In Spanish Florida",
+      "file": "ss-4-07-01-fort-mose-and-freedom-in-spanish-florida.html",
+      "type": "Video",
+      "section": "Unknown",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Fort Mose And Freedom In Spanish Florida",
+      "file": "ss-4-07-01-fort-mose-and-freedom-in-spanish-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Florida Changes Hands",
+      "file": "ss-4-07-02-florida-changes-hands.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Florida Changes Hands",
+      "file": "ss-4-07-02-florida-changes-hands.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-02-assignment-explainer-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Florida Changes Hands",
+      "file": "ss-4-07-02-florida-changes-hands.html",
+      "type": "Video",
+      "section": "Unknown",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Florida Changes Hands",
+      "file": "ss-4-07-02-florida-changes-hands.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 03 The Adams Onis Treaty And Us Territory",
+      "file": "ss-4-07-03-the-adams-onis-treaty-and-us-territory.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 The Adams Onis Treaty And Us Territory",
+      "file": "ss-4-07-03-the-adams-onis-treaty-and-us-territory.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-03-assignment-explainer-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 The Adams Onis Treaty And Us Territory",
+      "file": "ss-4-07-03-the-adams-onis-treaty-and-us-territory.html",
+      "type": "Video",
+      "section": "Unknown",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-03-closing": {
+      "lesson": "Optima Academy Online \u2014 03 The Adams Onis Treaty And Us Territory",
+      "file": "ss-4-07-03-the-adams-onis-treaty-and-us-territory.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 04 Pioneer Life In Florida",
+      "file": "ss-4-07-04-pioneer-life-in-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Pioneer Life In Florida",
+      "file": "ss-4-07-04-pioneer-life-in-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-04-assignment-explainer-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Pioneer Life In Florida",
+      "file": "ss-4-07-04-pioneer-life-in-florida.html",
+      "type": "Video",
+      "section": "Unknown",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-07-04-closing": {
+      "lesson": "Optima Academy Online \u2014 04 Pioneer Life In Florida",
+      "file": "ss-4-07-04-pioneer-life-in-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Florida Becomes A State",
+      "file": "ss-4-08-01-florida-becomes-a-state.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Florida Becomes A State",
+      "file": "ss-4-08-01-florida-becomes-a-state.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Florida Becomes A State",
+      "file": "ss-4-08-01-florida-becomes-a-state.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Florida Becomes A State",
+      "file": "ss-4-08-01-florida-becomes-a-state.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Life In Antebellum Florida",
+      "file": "ss-4-08-02-life-in-antebellum-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Life In Antebellum Florida",
+      "file": "ss-4-08-02-life-in-antebellum-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Life In Antebellum Florida",
+      "file": "ss-4-08-02-life-in-antebellum-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Life In Antebellum Florida",
+      "file": "ss-4-08-02-life-in-antebellum-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 03 Floridas Involvement In The Civil War",
+      "file": "ss-4-08-03-floridas-involvement-in-the-civil-war.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Floridas Involvement In The Civil War",
+      "file": "ss-4-08-03-floridas-involvement-in-the-civil-war.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Floridas Involvement In The Civil War",
+      "file": "ss-4-08-03-floridas-involvement-in-the-civil-war.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-03-closing": {
+      "lesson": "Optima Academy Online \u2014 03 Floridas Involvement In The Civil War",
+      "file": "ss-4-08-03-floridas-involvement-in-the-civil-war.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 04 Challenges During Reconstruction",
+      "file": "ss-4-08-04-challenges-during-reconstruction.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Challenges During Reconstruction",
+      "file": "ss-4-08-04-challenges-during-reconstruction.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Challenges During Reconstruction",
+      "file": "ss-4-08-04-challenges-during-reconstruction.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-08-04-closing": {
+      "lesson": "Optima Academy Online \u2014 04 Challenges During Reconstruction",
+      "file": "ss-4-08-04-challenges-during-reconstruction.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Timeline Review Territorial Florida To Reconstruction",
+      "file": "ss-4-09-01-timeline-review-territorial-florida-to-reconstruction.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Timeline Review Territorial Florida To Reconstruction",
+      "file": "ss-4-09-01-timeline-review-territorial-florida-to-reconstruction.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Timeline Review Territorial Florida To Reconstruction",
+      "file": "ss-4-09-01-timeline-review-territorial-florida-to-reconstruction.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Timeline Review Territorial Florida To Reconstruction",
+      "file": "ss-4-09-01-timeline-review-territorial-florida-to-reconstruction.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Evidence Claim Which Event Most Changed Florida",
+      "file": "ss-4-09-02-evidence-claim-which-event-most-changed-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Evidence Claim Which Event Most Changed Florida",
+      "file": "ss-4-09-02-evidence-claim-which-event-most-changed-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Evidence Claim Which Event Most Changed Florida",
+      "file": "ss-4-09-02-evidence-claim-which-event-most-changed-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-09-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Evidence Claim Which Event Most Changed Florida",
+      "file": "ss-4-09-02-evidence-claim-which-event-most-changed-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Technological Advances And Florida Growth",
+      "file": "ss-4-10-01-technological-advances-and-florida-growth.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Technological Advances And Florida Growth",
+      "file": "ss-4-10-01-technological-advances-and-florida-growth.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Technological Advances And Florida Growth",
+      "file": "ss-4-10-01-technological-advances-and-florida-growth.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Technological Advances And Florida Growth",
+      "file": "ss-4-10-01-technological-advances-and-florida-growth.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Major Industries In Florida",
+      "file": "ss-4-10-02-major-industries-in-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Major Industries In Florida",
+      "file": "ss-4-10-02-major-industries-in-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Major Industries In Florida",
+      "file": "ss-4-10-02-major-industries-in-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Major Industries In Florida",
+      "file": "ss-4-10-02-major-industries-in-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 03 Immigrant Contributions To Florida",
+      "file": "ss-4-10-03-immigrant-contributions-to-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Immigrant Contributions To Florida",
+      "file": "ss-4-10-03-immigrant-contributions-to-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Immigrant Contributions To Florida",
+      "file": "ss-4-10-03-immigrant-contributions-to-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-03-closing": {
+      "lesson": "Optima Academy Online \u2014 03 Immigrant Contributions To Florida",
+      "file": "ss-4-10-03-immigrant-contributions-to-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 04 Significant Individuals In Floridas Development",
+      "file": "ss-4-10-04-significant-individuals-in-floridas-development.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Significant Individuals In Floridas Development",
+      "file": "ss-4-10-04-significant-individuals-in-floridas-development.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Significant Individuals In Floridas Development",
+      "file": "ss-4-10-04-significant-individuals-in-floridas-development.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-04-closing": {
+      "lesson": "Optima Academy Online \u2014 04 Significant Individuals In Floridas Development",
+      "file": "ss-4-10-04-significant-individuals-in-floridas-development.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 05 Florida And The Spanish American War",
+      "file": "ss-4-10-05-florida-and-the-spanish-american-war.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 05 Florida And The Spanish American War",
+      "file": "ss-4-10-05-florida-and-the-spanish-american-war.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 05 Florida And The Spanish American War",
+      "file": "ss-4-10-05-florida-and-the-spanish-american-war.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-05-closing": {
+      "lesson": "Optima Academy Online \u2014 05 Florida And The Spanish American War",
+      "file": "ss-4-10-05-florida-and-the-spanish-american-war.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 06 Land Boom And Bust In The 1920S",
+      "file": "ss-4-10-06-land-boom-and-bust-in-the-1920s.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 06 Land Boom And Bust In The 1920S",
+      "file": "ss-4-10-06-land-boom-and-bust-in-the-1920s.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 06 Land Boom And Bust In The 1920S",
+      "file": "ss-4-10-06-land-boom-and-bust-in-the-1920s.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-06-closing": {
+      "lesson": "Optima Academy Online \u2014 06 Land Boom And Bust In The 1920S",
+      "file": "ss-4-10-06-land-boom-and-bust-in-the-1920s.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-07-welcome": {
+      "lesson": "Optima Academy Online \u2014 07 Florida During The Great Depression And World War Ii",
+      "file": "ss-4-10-07-florida-during-the-great-depression-and-world-war-ii.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-07-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 07 Florida During The Great Depression And World War Ii",
+      "file": "ss-4-10-07-florida-during-the-great-depression-and-world-war-ii.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-07-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 07 Florida During The Great Depression And World War Ii",
+      "file": "ss-4-10-07-florida-during-the-great-depression-and-world-war-ii.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-07-closing": {
+      "lesson": "Optima Academy Online \u2014 07 Florida During The Great Depression And World War Ii",
+      "file": "ss-4-10-07-florida-during-the-great-depression-and-world-war-ii.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-08-welcome": {
+      "lesson": "Optima Academy Online \u2014 08 Tourism The Space Program And Floridas Economy",
+      "file": "ss-4-10-08-tourism-the-space-program-and-floridas-economy.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-08-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 08 Tourism The Space Program And Floridas Economy",
+      "file": "ss-4-10-08-tourism-the-space-program-and-floridas-economy.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-08-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 08 Tourism The Space Program And Floridas Economy",
+      "file": "ss-4-10-08-tourism-the-space-program-and-floridas-economy.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-10-08-closing": {
+      "lesson": "Optima Academy Online \u2014 08 Tourism The Space Program And Floridas Economy",
+      "file": "ss-4-10-08-tourism-the-space-program-and-floridas-economy.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Floridas Role In The Civil Rights Movement",
+      "file": "ss-4-11-01-floridas-role-in-the-civil-rights-movement.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Floridas Role In The Civil Rights Movement",
+      "file": "ss-4-11-01-floridas-role-in-the-civil-rights-movement.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Floridas Role In The Civil Rights Movement",
+      "file": "ss-4-11-01-floridas-role-in-the-civil-rights-movement.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Floridas Role In The Civil Rights Movement",
+      "file": "ss-4-11-01-floridas-role-in-the-civil-rights-movement.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 African American Community Leaders In Florida",
+      "file": "ss-4-11-02-african-american-community-leaders-in-florida.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 African American Community Leaders In Florida",
+      "file": "ss-4-11-02-african-american-community-leaders-in-florida.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 African American Community Leaders In Florida",
+      "file": "ss-4-11-02-african-american-community-leaders-in-florida.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 African American Community Leaders In Florida",
+      "file": "ss-4-11-02-african-american-community-leaders-in-florida.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 03 How Immigration Impacts Florida Today",
+      "file": "ss-4-11-03-how-immigration-impacts-florida-today.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 How Immigration Impacts Florida Today",
+      "file": "ss-4-11-03-how-immigration-impacts-florida-today.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 How Immigration Impacts Florida Today",
+      "file": "ss-4-11-03-how-immigration-impacts-florida-today.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-03-closing": {
+      "lesson": "Optima Academy Online \u2014 03 How Immigration Impacts Florida Today",
+      "file": "ss-4-11-03-how-immigration-impacts-florida-today.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 04 Citizens Solving Problems With Local And State Government",
+      "file": "ss-4-11-04-citizens-solving-problems-with-local-and-state-government.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Citizens Solving Problems With Local And State Government",
+      "file": "ss-4-11-04-citizens-solving-problems-with-local-and-state-government.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Citizens Solving Problems With Local And State Government",
+      "file": "ss-4-11-04-citizens-solving-problems-with-local-and-state-government.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-04-closing": {
+      "lesson": "Optima Academy Online \u2014 04 Citizens Solving Problems With Local And State Government",
+      "file": "ss-4-11-04-citizens-solving-problems-with-local-and-state-government.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-05-welcome": {
+      "lesson": "Optima Academy Online \u2014 05 Voting Public Service And Volunteerism",
+      "file": "ss-4-11-05-voting-public-service-and-volunteerism.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-05-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 05 Voting Public Service And Volunteerism",
+      "file": "ss-4-11-05-voting-public-service-and-volunteerism.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-05-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 05 Voting Public Service And Volunteerism",
+      "file": "ss-4-11-05-voting-public-service-and-volunteerism.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-05-closing": {
+      "lesson": "Optima Academy Online \u2014 05 Voting Public Service And Volunteerism",
+      "file": "ss-4-11-05-voting-public-service-and-volunteerism.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-06-welcome": {
+      "lesson": "Optima Academy Online \u2014 06 Leader Virtue Profile",
+      "file": "ss-4-11-06-leader-virtue-profile.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-06-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 06 Leader Virtue Profile",
+      "file": "ss-4-11-06-leader-virtue-profile.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-06-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 06 Leader Virtue Profile",
+      "file": "ss-4-11-06-leader-virtue-profile.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-11-06-closing": {
+      "lesson": "Optima Academy Online \u2014 06 Leader Virtue Profile",
+      "file": "ss-4-11-06-leader-virtue-profile.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Why Florida Has A Written Constitution",
+      "file": "ss-4-12-01-why-florida-has-a-written-constitution.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Why Florida Has A Written Constitution",
+      "file": "ss-4-12-01-why-florida-has-a-written-constitution.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Why Florida Has A Written Constitution",
+      "file": "ss-4-12-01-why-florida-has-a-written-constitution.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Why Florida Has A Written Constitution",
+      "file": "ss-4-12-01-why-florida-has-a-written-constitution.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Branches And Functions Of Florida Government",
+      "file": "ss-4-12-02-branches-and-functions-of-florida-government.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Branches And Functions Of Florida Government",
+      "file": "ss-4-12-02-branches-and-functions-of-florida-government.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Branches And Functions Of Florida Government",
+      "file": "ss-4-12-02-branches-and-functions-of-florida-government.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Branches And Functions Of Florida Government",
+      "file": "ss-4-12-02-branches-and-functions-of-florida-government.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-03-welcome": {
+      "lesson": "Optima Academy Online \u2014 03 Local And State Government Problem Solving",
+      "file": "ss-4-12-03-local-and-state-government-problem-solving.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-03-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Local And State Government Problem Solving",
+      "file": "ss-4-12-03-local-and-state-government-problem-solving.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-03-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 03 Local And State Government Problem Solving",
+      "file": "ss-4-12-03-local-and-state-government-problem-solving.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-03-closing": {
+      "lesson": "Optima Academy Online \u2014 03 Local And State Government Problem Solving",
+      "file": "ss-4-12-03-local-and-state-government-problem-solving.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-04-welcome": {
+      "lesson": "Optima Academy Online \u2014 04 Income Saving Spending Credit Risk And Responsibility",
+      "file": "ss-4-12-04-income-saving-spending-credit-risk-and-responsibility.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-04-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Income Saving Spending Credit Risk And Responsibility",
+      "file": "ss-4-12-04-income-saving-spending-credit-risk-and-responsibility.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-04-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 04 Income Saving Spending Credit Risk And Responsibility",
+      "file": "ss-4-12-04-income-saving-spending-credit-risk-and-responsibility.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-12-04-closing": {
+      "lesson": "Optima Academy Online \u2014 04 Income Saving Spending Credit Risk And Responsibility",
+      "file": "ss-4-12-04-income-saving-spending-credit-risk-and-responsibility.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-01-welcome": {
+      "lesson": "Optima Academy Online \u2014 01 Build The Florida History Exhibit",
+      "file": "ss-4-13-01-build-the-florida-history-exhibit.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-01-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Build The Florida History Exhibit",
+      "file": "ss-4-13-01-build-the-florida-history-exhibit.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-01-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 01 Build The Florida History Exhibit",
+      "file": "ss-4-13-01-build-the-florida-history-exhibit.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-01-closing": {
+      "lesson": "Optima Academy Online \u2014 01 Build The Florida History Exhibit",
+      "file": "ss-4-13-01-build-the-florida-history-exhibit.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-02-welcome": {
+      "lesson": "Optima Academy Online \u2014 02 Final Florida Historian Citizen Reflection",
+      "file": "ss-4-13-02-final-florida-historian-citizen-reflection.html",
+      "type": "Teacher Welcome",
+      "section": "Welcome",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-02-explore-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Final Florida Historian Citizen Reflection",
+      "file": "ss-4-13-02-final-florida-historian-citizen-reflection.html",
+      "type": "Core Lesson",
+      "section": "Explore",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-02-assignment-explainer": {
+      "lesson": "Optima Academy Online \u2014 02 Final Florida Historian Citizen Reflection",
+      "file": "ss-4-13-02-final-florida-historian-citizen-reflection.html",
+      "type": "Assignment Explainer",
+      "section": "Assignment",
+      "embed": "",
+      "status": "pending"
+    },
+    "4-13-02-closing": {
+      "lesson": "Optima Academy Online \u2014 02 Final Florida Historian Citizen Reflection",
+      "file": "ss-4-13-02-final-florida-historian-citizen-reflection.html",
+      "type": "Closing",
+      "section": "Closing",
+      "embed": "",
+      "status": "pending"
+    }
+  }
+}
