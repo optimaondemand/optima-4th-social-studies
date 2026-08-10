@@ -1664,6 +1664,107 @@ body {
 .canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
 .canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
 
+
+/* ═══════════ TX TOGGLE SYSTEM ═══════════ */
+.tx-only { display: none !important; }
+.tx-only-inline { display: none !important; }
+.tx-only-flex { display: none !important; }
+body.tx-active .tx-only { display: block !important; }
+body.tx-active .tx-only-inline { display: inline !important; }
+body.tx-active .tx-only-flex { display: flex !important; }
+
+.tx-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 8px;
+}
+.tx-toggle:hover { background: rgba(255,255,255,0.15); }
+body.tx-active .tx-toggle {
+  background: rgba(191, 63, 63, 0.25);
+  box-shadow: 0 0 8px rgba(191, 63, 63, 0.3);
+}
+.tx-toggle-switch {
+  width: 32px;
+  height: 18px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  position: relative;
+  transition: background 0.3s ease;
+}
+.tx-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #aaa;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+body.tx-active .tx-toggle-switch {
+  background: rgba(191, 63, 63, 0.5);
+}
+body.tx-active .tx-toggle-switch::after {
+  transform: translateX(14px);
+  background: #F4C752;
+}
+.tx-toggle-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+body.tx-active .tx-toggle-label {
+  color: #F4C752;
+}
+
+.tx-standards {
+  font-size: 12px;
+  color: #BF3F3F;
+  font-weight: 700;
+  margin-top: 4px;
+  padding: 3px 0;
+  letter-spacing: 0.3px;
+}
+
+.tx-blurb {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3E0 100%);
+  border-left: 5px solid #BF3F3F;
+  border-radius: 0 14px 14px 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(191, 63, 63, 0.1);
+}
+.tx-blurb-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #BF3F3F;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tx-blurb-label span { font-size: 20px; }
+.tx-blurb p {
+  font-size: 14px;
+  color: #3E2723;
+  line-height: 1.75;
+  margin: 0 0 10px 0;
+}
+.tx-blurb p:last-child { margin-bottom: 0; }
+.tx-blurb strong { color: #BF3F3F; }
+
 </style>
 </head>
 <body>
@@ -1676,6 +1777,10 @@ body {
   <div class="progress-label">🏛️ Progress</div>
   <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   <div class="progress-pct" id="progressPct">0%</div>
+  <div class="tx-toggle" onclick="toggleTX()" title="Toggle Texas TEKS content">
+    <div class="tx-toggle-switch" id="txSwitch"></div>
+    <div class="tx-toggle-label" id="txLabel">TX</div>
+  </div>
 </div>
 
 <!-- ═══ HEADER ═══ -->
@@ -1920,6 +2025,7 @@ body {
     <div>
       <div class="info-label">Standards</div>
       <div class="info-value" style="font-size:11px;">SS.4.A.3.2 · SS.4.A.3.3 · SS.4.A.3.4 · SS.4.A.3.6 · SS.4.A.9.1</div>
+      <div class="tx-standards tx-only">TEKS §113.15 · 3(A) · 19(A)–(B)</div>
     </div>
   </div>
 </div>
@@ -2274,6 +2380,12 @@ body {
   <div class="key-concept">
     <div class="key-concept-label">💡 Key Concept</div>
     <p>Buildings (architecture) and objects (artifacts) are evidence. The Castillo de San Marcos shows how the Spanish defended St. Augustine. Mission buildings show religion and daily work. Pottery, tools, and coquina stone show what materials people used and how they lived. Historians "read" these clues the way they read written sources.</p>
+  </div>
+
+  <!-- TX Toggle: Meanwhile in Texas... learning box -->
+  <div class="tx-blurb tx-only">
+    <div class="tx-blurb-label"><span>🤠</span> Meanwhile in Texas…</div>
+    <p>Florida's colonial architecture tells its story through <strong>coquina</strong> — the shell-stone of the Castillo de San Marcos. Texas missions tell theirs through <strong>limestone</strong>. The San Antonio missions were built from local limestone blocks cut and laid by Indigenous laborers. <strong>Mission San José's</strong> famous <em>Rose Window</em> — an intricately carved stone window — is considered one of the finest examples of Spanish Colonial architecture in North America. Mission Concepción still has original paint on its interior walls, and Mission Espada's aqueduct (part of the acequia system) is the only remaining Spanish-era aqueduct in the United States. These buildings survived because stone endures — and because the San Antonio missions were designated a <strong>UNESCO World Heritage Site</strong> in 2015.</p><p>The artifacts tell the same kind of story you're reading in Florida. Archaeologists at Texas missions have found <strong>Indigenous pottery alongside Spanish ceramics</strong>, stone tools next to metal ones, and evidence of traditional foods alongside European crops. These mixed artifact layers are evidence of <strong>cultural collision</strong> — the same pattern you see at Mission San Luis. The buildings prove Spanish presence; the artifacts inside them prove Indigenous peoples didn't simply vanish. <strong>Architecture and artifacts are primary sources</strong> — physical evidence that historians use to reconstruct daily life when written records are incomplete or one-sided.</p>
   </div>
 
   <!-- Opti the Owl — lab-themed observation for Grade 4. -->
@@ -3021,6 +3133,12 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+
+
+/* ═══════════ TX TOGGLE ═══════════ */
+function toggleTX() {
+  document.body.classList.toggle('tx-active');
+}
 
 /* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════ */
 (function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];var SEL='.source-image-placeholder[data-image]';document.querySelectorAll(SEL).forEach(function(el){var name=el.getAttribute('data-image');if(!name||name.indexOf('✏️')>-1)return;tryImg(el,name,0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.classList.add('image-loaded');if(el.classList.contains('source-image-placeholder')){el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';}el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();

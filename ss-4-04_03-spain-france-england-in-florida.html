@@ -1392,6 +1392,119 @@ body {
 .canvas-sticky.quiet .canvas-sticky-head-label { color: #5C4A2A; }
 .canvas-sticky.quiet .canvas-sticky-body { color: #2D2418; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; }
 
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+
+/* ═══════════ TX TOGGLE SYSTEM ═══════════ */
+.tx-only { display: none !important; }
+.tx-only-inline { display: none !important; }
+.tx-only-flex { display: none !important; }
+body.tx-active .tx-only { display: block !important; }
+body.tx-active .tx-only-inline { display: inline !important; }
+body.tx-active .tx-only-flex { display: flex !important; }
+
+.tx-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 8px;
+}
+.tx-toggle:hover { background: rgba(255,255,255,0.15); }
+body.tx-active .tx-toggle {
+  background: rgba(191, 63, 63, 0.25);
+  box-shadow: 0 0 8px rgba(191, 63, 63, 0.3);
+}
+.tx-toggle-switch {
+  width: 32px;
+  height: 18px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  position: relative;
+  transition: background 0.3s ease;
+}
+.tx-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #aaa;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+body.tx-active .tx-toggle-switch {
+  background: rgba(191, 63, 63, 0.5);
+}
+body.tx-active .tx-toggle-switch::after {
+  transform: translateX(14px);
+  background: #F4C752;
+}
+.tx-toggle-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+body.tx-active .tx-toggle-label {
+  color: #F4C752;
+}
+
+.tx-standards {
+  font-size: 12px;
+  color: #BF3F3F;
+  font-weight: 700;
+  margin-top: 4px;
+  padding: 3px 0;
+  letter-spacing: 0.3px;
+}
+
+.tx-blurb {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3E0 100%);
+  border-left: 5px solid #BF3F3F;
+  border-radius: 0 14px 14px 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(191, 63, 63, 0.1);
+}
+.tx-blurb-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #BF3F3F;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tx-blurb-label span { font-size: 20px; }
+.tx-blurb p {
+  font-size: 14px;
+  color: #3E2723;
+  line-height: 1.75;
+  margin: 0 0 10px 0;
+}
+.tx-blurb p:last-child { margin-bottom: 0; }
+.tx-blurb strong { color: #BF3F3F; }
+
 </style>
 </head>
 <body>
@@ -1404,6 +1517,10 @@ body {
   <div class="progress-label">🏛️ Progress</div>
   <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   <div class="progress-pct" id="progressPct">0%</div>
+  <div class="tx-toggle" onclick="toggleTX()" title="Toggle Texas TEKS content">
+    <div class="tx-toggle-switch" id="txSwitch"></div>
+    <div class="tx-toggle-label" id="txLabel">TX</div>
+  </div>
 </div>
 
 <!-- ═══ HEADER ═══ -->
@@ -1570,6 +1687,7 @@ body {
     <div>
       <div class="info-label">Standards</div>
       <div class="info-value" style="font-size:12px;">SS.4.A.3.1 · SS.4.A.3.7</div>
+      <div class="tx-standards tx-only">TEKS §113.15 · 2(A)–(B)</div>
     </div>
   </div>
 </div>
@@ -1939,6 +2057,12 @@ body {
   <div class="key-concept">
     <div class="key-concept-label">💡 Key Concept</div>
     <p>Florida wasn't claimed by one European power — it was contested by three. Spain founded St. Augustine in 1565, France built Fort Caroline, and England eventually took the colony in 1763. Through every flag change, the First Peoples of Florida were the only ones with deep roots in the land.</p>
+  </div>
+
+  <!-- TX Toggle: Meanwhile in Texas... learning box -->
+  <div class="tx-blurb tx-only">
+    <div class="tx-blurb-label"><span>🤠</span> Meanwhile in Texas…</div>
+    <p>The same three-power rivalry that shaped Florida played out in Texas — but with a different twist. In Florida, France built Fort Caroline (1564) and Spain responded by founding St. Augustine (1565). In Texas, <strong>France's move came later: La Salle built Fort Saint Louis on Matagorda Bay in 1685.</strong> The colony lasted only a few years — disease, conflict with the Karankawa, and La Salle's murder by his own men destroyed it. But Spain was so alarmed by a French flag on the Gulf coast that it launched multiple expeditions to find and destroy the fort, and then began building <strong>missions and presidios</strong> (military forts) across East Texas to block any future French claims.</p><p>The lesson is the same in both states: <strong>European powers didn't just explore — they competed.</strong> Spain, France, and England each wanted to control the Gulf coast and its resources. When one nation made a move, the others responded. Fort Caroline triggered St. Augustine. Fort Saint Louis triggered the Texas mission system. And through every flag change — in Florida and in Texas — Indigenous peoples were caught in the middle of a rivalry they never started, on land that had been theirs for thousands of years.</p>
   </div>
 
   <!-- Opti the Owl — lab-themed observation for Grade 4.
@@ -2694,6 +2818,12 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+
+
+/* ═══════════ TX TOGGLE ═══════════ */
+function toggleTX() {
+  document.body.classList.toggle('tx-active');
+}
 
 /* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════
    Scans .source-image-placeholder divs

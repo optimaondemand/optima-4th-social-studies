@@ -1774,6 +1774,107 @@ body {
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
 
+
+/* ═══════════ TX TOGGLE SYSTEM ═══════════ */
+.tx-only { display: none !important; }
+.tx-only-inline { display: none !important; }
+.tx-only-flex { display: none !important; }
+body.tx-active .tx-only { display: block !important; }
+body.tx-active .tx-only-inline { display: inline !important; }
+body.tx-active .tx-only-flex { display: flex !important; }
+
+.tx-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 8px;
+}
+.tx-toggle:hover { background: rgba(255,255,255,0.15); }
+body.tx-active .tx-toggle {
+  background: rgba(191, 63, 63, 0.25);
+  box-shadow: 0 0 8px rgba(191, 63, 63, 0.3);
+}
+.tx-toggle-switch {
+  width: 32px;
+  height: 18px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.2);
+  position: relative;
+  transition: background 0.3s ease;
+}
+.tx-toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #aaa;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+body.tx-active .tx-toggle-switch {
+  background: rgba(191, 63, 63, 0.5);
+}
+body.tx-active .tx-toggle-switch::after {
+  transform: translateX(14px);
+  background: #F4C752;
+}
+.tx-toggle-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+body.tx-active .tx-toggle-label {
+  color: #F4C752;
+}
+
+.tx-standards {
+  font-size: 12px;
+  color: #BF3F3F;
+  font-weight: 700;
+  margin-top: 4px;
+  padding: 3px 0;
+  letter-spacing: 0.3px;
+}
+
+.tx-blurb {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3E0 100%);
+  border-left: 5px solid #BF3F3F;
+  border-radius: 0 14px 14px 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(191, 63, 63, 0.1);
+}
+.tx-blurb-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #BF3F3F;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tx-blurb-label span { font-size: 20px; }
+.tx-blurb p {
+  font-size: 14px;
+  color: #3E2723;
+  line-height: 1.75;
+  margin: 0 0 10px 0;
+}
+.tx-blurb p:last-child { margin-bottom: 0; }
+.tx-blurb strong { color: #BF3F3F; }
+
 </style>
 </head>
 <body>
@@ -1786,6 +1887,10 @@ body {
   <div class="progress-label">🏛️ Progress</div>
   <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   <div class="progress-pct" id="progressPct">0%</div>
+  <div class="tx-toggle" onclick="toggleTX()" title="Toggle Texas TEKS content">
+    <div class="tx-toggle-switch" id="txSwitch"></div>
+    <div class="tx-toggle-label" id="txLabel">TX</div>
+  </div>
 </div>
 
 <!-- ═══ HEADER ═══ -->
@@ -1979,6 +2084,7 @@ body {
     <div>
       <div class="info-label">Standards</div>
       <div class="info-value" style="font-size:12px;">SS.4.A.2.1 · SS.4.A.1.1 · SS.4.G.1.1</div>
+      <div class="tx-standards tx-only">TEKS §113.15 · 19(A)–(B)</div>
     </div>
   </div>
 </div>
@@ -2330,6 +2436,12 @@ body {
     <div class="key-concept-label">💡 Key Concept</div>
     <p>Some people assume that if a group didn’t leave written records, we can’t really know much about them. Artifacts prove otherwise. <strong>Name one specific thing the Key Marco Cat tells us about the Calusa that no written record needed to.</strong></p>
     <p>Artifacts are objects from the past, and they are real evidence. A Florida historian reads them honestly by telling the difference between what they directly <em>show</em> (observation) and what we <em>guess</em> from them (inference).</p>
+  </div>
+
+  <!-- TX Toggle: Meanwhile in Texas... learning box -->
+  <div class="tx-blurb tx-only">
+    <div class="tx-blurb-label"><span>🤠</span> Meanwhile in Texas…</div>
+    <p>While you're studying the Key Marco Cat — that extraordinary wooden carving found in Calusa territory — Texas students practice the same observation-vs.-inference skill on artifacts from across the Lone Star State. Archaeologists have found <strong>Caddo pottery</strong> in East Texas decorated with intricate spiral and cross-hatched patterns, telling us the Caddo had time, skill, and artistic tradition beyond mere survival. Along the Gulf coast, <strong>Karankawa shell middens</strong> — enormous mounds of discarded oyster and clam shells built up over centuries — reveal not just what people ate, but how long they lived in one place and how large their communities were.</p><p>The historian's rule is the same in both states: <strong>observation first, inference second, and always name what the artifact <em>cannot</em> tell you.</strong> You can <em>observe</em> that Caddo pottery has beautiful patterns. You can <em>infer</em> that the potter was skilled and that the community valued art. But you cannot know from the pot alone who made it, what it held, or what the patterns meant — just as you can't know from the Key Marco Cat alone who carved it or why. Honest historians in every state draw that same line between what they see and what they guess.</p>
   </div>
 
   <!-- Opti the Owl — lab-themed observation for Grade 4.
@@ -3091,6 +3203,12 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+
+
+/* ═══════════ TX TOGGLE ═══════════ */
+function toggleTX() {
+  document.body.classList.toggle('tx-active');
+}
 
 /* ═══════════ SOURCE IMAGE AUTO-LOADER (G4) ═══════════
    Scans .source-image-placeholder divs for data-image attributes,
