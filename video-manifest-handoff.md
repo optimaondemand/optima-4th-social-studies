@@ -1,23 +1,33 @@
-# Video Manifest Handoff — Grade 4 Social Studies
+# Video Manifest Handoff — Grade 3 & Grade 4 Social Studies
 
-## What we just did
+*Last updated: August 11, 2026*
 
-You asked whether a video manifest existed for the course. It does: `video-manifest.json` in this project folder. From it, I generated `g4-video-bulk-add.txt` — a pipe-delimited list of all 312 video slots formatted for your app's "Bulk add video entries" import (`Course | Week | Title | Owner`). Mapping used:
+---
 
-- **Course**: `Grade 4 Social Studies` for every row
-- **Week**: the module number pulled from the slot key (e.g. `4-07-01-...` → module `07` → Week 7)
-- **Title**: lesson title + video type, e.g. `Fort Mose And Freedom In Spanish Florida - Teacher Welcome`
-- **Owner**: `Bethany Birchum` for every row
+## Current state
 
-That file is a one-time export — if the manifest changes (new lessons, renamed slots), regenerate it rather than hand-editing it.
+### Grade 4
+- **File**: `video-manifest.json` in `optima-4th-social-studies`
+- **GitHub**: `https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/video-manifest.json`
+- **Total slots**: 248 (8 ready, 240 pending)
+- **Video types**: Teacher Welcome (62), Core Lesson (62), Assignment Explainer (58), Closing (62), Video/untyped (4)
+- **Removed**: 64 quiz-feedback slots (Perfect Score / Review & Encouragement) — replaced with generic text messages in the lesson HTML, no longer in manifest
+- **Known quirk**: 4 slots in Module 7 (`4-07-0X-assignment-explainer-explainer`) have duplicated suffix, `type: "Video"`, `section: "Unknown"` — should be renamed to match the normal pattern
+
+### Grade 3
+- **File**: `video-manifest.json` in `optima-3rd-social-studies`
+- **GitHub**: `https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/video-manifest.json`
+- **Total slots**: 366 (80 ready, 286 pending)
+- **Video types**: Teacher Welcome (61), Core Lesson (61), Perfect Score (61), Review & Encouragement (61), Assignment Explainer (61), Closing (61)
+- **Note**: G3 still has quiz-feedback slots (Perfect Score / Review & Encouragement) — remove these if applying the same generic-text approach as G4
+
+---
 
 ## How the manifest works
 
-**File**: `video-manifest.json`, project root.
-**Synced from**: `https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/video-manifest.json` — lesson pages pull from this URL to auto-load videos, so edits should go back to that GitHub repo, not just the local copy.
+Each repo has a `video-manifest.json` at root. Lesson HTML pages fetch it from the raw GitHub URL at page load via the Video Manifest Loader script (appended before `</body>` in every lesson file). The loader finds `.video-placeholder-id` elements with `<!-- slot: SLOT-KEY -->` comments and injects the matching iframe when `status` is `"ready"`.
 
-**Structure**: one `videos` object, keyed by slot ID. Each slot is one video placeholder:
-
+**Slot structure**:
 ```json
 "4-07-01-welcome": {
   "lesson": "Optima Academy Online — 01 Fort Mose And Freedom In Spanish Florida",
@@ -29,30 +39,57 @@ That file is a one-time export — if the manifest changes (new lessons, renamed
 }
 ```
 
-- **slot key**: `4-{module}-{lesson}-{video-type-slug}` — e.g. `4-07-01-welcome` is Module 7, Lesson 1, Welcome video.
-- **lesson**: display title of the lesson the video belongs to.
-- **file**: the actual HTML lesson file this video is embedded in.
-- **type / section**: what kind of video this is (see below).
-- **embed**: the raw SharePoint/Stream `<iframe>` embed code. Empty string until filled in.
-- **status**: `"pending"` until an embed is added, then set to `"ready"`. The lesson pages key off this — empty `embed` won't render.
+- **slot key**: `{grade}-{module}-{lesson}-{video-type-slug}`
+- **embed**: raw `<iframe>` embed code — works with any source (SharePoint, YouTube, Loom, etc.)
+- **status**: `"pending"` (empty embed, won't render) or `"ready"` (has embed, will render)
 
-**Video types per lesson** (not every lesson has all 6):
-| Type | Section | Count | Notes |
-|---|---|---|---|
-| Teacher Welcome | Welcome | 62 | one per lesson |
-| Core Lesson | Explore | 62 | one per lesson |
-| Perfect Score | Quiz | 32 | only lessons with a quiz reward video |
-| Review & Encouragement | Quiz | 32 | pairs with Perfect Score |
-| Assignment Explainer | Assignment | 58 | most lessons |
-| Closing | Closing | 62 | one per lesson |
-| Video *(untyped)* | Unknown | 4 | data quirk — see below |
+---
 
-Total: 62 lessons across 13 modules, 312 video slots, 4 currently `"ready"`, 308 `"pending"`.
+## Embed source: SharePoint vs YouTube
 
-**Known data quirk**: 4 slots (`4-07-01-assignment-explainer-explainer`, `4-07-02-...`, `4-07-03-...`, `4-07-04-...`) have a duplicated `-explainer` suffix in the key, `type: "Video"`, and `section: "Unknown"` instead of the normal `"Assignment Explainer"` / `"Assignment"` pattern. These look like a copy-paste error from when Module 7 was added — worth fixing at the source (rename keys, correct type/section) rather than working around them.
+SharePoint/Stream embeds require authentication. When lesson pages are viewed inside Canvas (cross-origin iframe), browsers block SharePoint's auth cookies → video won't load even if the user has access. This is a browser security boundary, not a permissions issue.
 
-## Picking this back up
+**Current decision**: Use **YouTube (unlisted)** embed codes instead. YouTube-nocookie embeds work inside Canvas iframes without authentication. Test embeds using `youtube-nocookie.com` are currently on `4-01-01-welcome` (G4) and `3-01-01-welcome` (G3).
 
-1. To add embed codes: edit `video-manifest.json` directly (or wherever the bulk-add app writes them back to), paste the SharePoint iframe into `embed`, flip `status` to `"ready"`.
-2. To regenerate the bulk-add list after manifest changes: re-run the same key-parsing logic (`4-{module}-{lesson}-` prefix regex) against the `videos` object.
-3. Push changes to the GitHub repo (`bbirchum1/optima-4th-social-studies`) since lesson pages fetch the raw URL, not the local file.
+If IT enables "Anyone" sharing links at the SharePoint tenant level in the future, SharePoint embeds would also work.
+
+---
+
+## How to add embed codes
+
+### What Bethany provides
+- A CSV or Excel file with columns: `Course`, `Week`, `Title`, `Embed Code`
+- The `<iframe>` title attribute contains the slot key (e.g. `title="4-01-02-welcome.mp4"`)
+
+### What Claude does
+1. Parse the CSV/Excel — extract slot keys from iframe title attributes (strip `.mp4`)
+2. Match each slot key to `video-manifest.json`
+3. Set `embed` to the iframe code, set `status` to `"ready"`
+4. Save the manifest
+5. Bethany commits and pushes from Git Bash:
+```
+cd ~/OneDrive\ -\ OptimaEd/Documents/Claude/optima-4th-social-studies
+git add video-manifest.json
+git commit -m "Add embed codes for [lessons]"
+git push origin main
+```
+
+### Naming convention for slot keys
+`{grade}-{module}-{lesson}-{type-slug}`
+
+| Type slug | Video type |
+|---|---|
+| `welcome` | Teacher Welcome |
+| `explore-explainer` | Core Lesson |
+| `assignment-explainer` | Assignment Explainer |
+| `closing` | Closing |
+| `quiz-perfect` | Perfect Score (G3 only, removed from G4) |
+| `quiz-review` | Review & Encouragement (G3 only, removed from G4) |
+
+---
+
+## Git push notes
+
+- The sandbox environment can't push to GitHub (no credentials). Bethany pushes manually from Git Bash.
+- If `index.lock` errors appear: `rm .git/index.lock` then retry.
+- Don't `git add .` — it picks up unrelated cache files. Use `git add video-manifest.json` (and `*.html` if lesson files changed).
