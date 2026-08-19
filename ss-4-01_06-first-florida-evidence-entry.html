@@ -3210,12 +3210,42 @@ function updateProgress() {
 }
 
 /* ═══════════ AUTO-SAVE ═══════════ */
-function autoSave(textarea, dotId) {
-  var dot = document.getElementById(dotId);
-  if (dot) {
-    dot.classList.add('saved');
-    clearTimeout(textarea._saveTimeout);
-    textarea._saveTimeout = setTimeout(function() {}, 300);
+/* ───── AUTO-SAVE ───── */
+var _lessonKey = (document.title || 'ss-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+function autoSave(el,dotId){
+  var dot=document.getElementById(dotId);
+  if(dot&&el.value.trim().length>0){dot.classList.add('saved');}
+  else if(dot){dot.classList.remove('saved');}
+  try{ localStorage.setItem(_lessonKey+'-'+el.id, el.value); }catch(e){}
+}
+
+function restoreJournals(){
+  document.querySelectorAll('textarea.journal-box,textarea.reflection-textarea').forEach(function(t){
+    if(!t.id) return;
+    try{
+      var v = localStorage.getItem(_lessonKey+'-'+t.id);
+      if(v){ t.value = v; }
+    }catch(e){}
+    var oi = t.getAttribute('oninput');
+    if(oi){
+      var m = oi.match(/'(dot-[^']+)'/);
+      if(m){
+        var dot = document.getElementById(m[1]);
+        if(dot && t.value.trim().length>0){ dot.classList.add('saved'); }
+      }
+    }
+  });
+}
+restoreJournals();
+
+window.addEventListener('beforeunload', function(e){
+  var hasWork = false;
+  document.querySelectorAll('textarea.journal-box,textarea.reflection-textarea').forEach(function(t){
+    if(t.value && t.value.trim().length > 0){ hasWork = true; }
+  });
+  if(hasWork){ e.preventDefault(); e.returnValue = ''; }
+});, 300);
   }
 }
 

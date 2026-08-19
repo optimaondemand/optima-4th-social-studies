@@ -623,6 +623,32 @@ document.querySelectorAll('.journal-box').forEach(ta=>{ta.addEventListener('inpu
 function launchConfetti(){const container=document.createElement('div');container.className='confetti-container';document.body.appendChild(container);const colors=['#55C8E8','#2E7D5B','#E8843A','#D4943A','#8B6FC0','#34B76F','#FF6B6B'];for(let i=0;i<60;i++){const piece=document.createElement('div');piece.className='confetti-piece';piece.style.left=Math.random()*100+'%';piece.style.background=colors[Math.floor(Math.random()*colors.length)];piece.style.transform='rotate('+(Math.random()*360)+'deg)';piece.style.borderRadius=Math.random()>0.5?'50%':'2px';piece.style.width=(6+Math.random()*8)+'px';piece.style.height=(8+Math.random()*12)+'px';container.appendChild(piece);const delay=Math.random()*500;const duration=1500+Math.random()*1500;piece.animate([{top:'-20px',opacity:1,transform:'rotate(0deg) translateX(0)'},{top:'100vh',opacity:0,transform:'rotate('+(360+Math.random()*720)+'deg) translateX('+(Math.random()*200-100)+'px)'}],{duration,delay,easing:'cubic-bezier(0.25, 0.46, 0.45, 0.94)',fill:'forwards'})}setTimeout(()=>container.remove(),3500)}
 let gathered=false;window.addEventListener('scroll',()=>{if(!gathered&&(window.innerHeight+window.scrollY)>=document.body.offsetHeight-200){gathered=true;gatherAnswers()}});
 
+
+
+/* ───── AUTO-SAVE (persistence patch) ───── */
+var _lessonKey = (document.title || 'ss-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+
+(function(){
+  document.querySelectorAll('textarea.journal-box,textarea.reflection-textarea').forEach(function(t){
+    if(!t.id) return;
+    try{
+      var v = localStorage.getItem(_lessonKey+'-'+t.id);
+      if(v){ t.value = v; }
+    }catch(e){}
+    t.addEventListener('input', function(){
+      try{ localStorage.setItem(_lessonKey+'-'+this.id, this.value); }catch(e){}
+    });
+  });
+})();
+
+window.addEventListener('beforeunload', function(e){
+  var hasWork = false;
+  document.querySelectorAll('textarea.journal-box,textarea.reflection-textarea').forEach(function(t){
+    if(t.value && t.value.trim().length > 0){ hasWork = true; }
+  });
+  if(hasWork){ e.preventDefault(); e.returnValue = ''; }
+});
+
 </script>
 </body>
 </html>
