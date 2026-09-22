@@ -1051,5 +1051,147 @@ window.addEventListener('beforeunload', function(e){
 })();
 
 </script>
+<!-- OAO-GATHERED-FIX v1 -->
+<script>
+(function(){
+  if (window.__oaoGatheredFix) return; window.__oaoGatheredFix = true;
+
+  /* ---------- storage that actually works in the Canvas iframe ---------- */
+  function probe(s){ try{ s.setItem('__oao_t','1'); s.removeItem('__oao_t'); return true; }catch(e){ return false; } }
+  function safe(fn){ try{ return fn(); }catch(e){ return null; } }
+  var ls = safe(function(){ return window.localStorage; });
+  var ss = safe(function(){ return window.sessionStorage; });
+  var mem = {}, backend, store;
+  if (ls && probe(ls)) { store = ls; backend = 'local'; }
+  else if (ss && probe(ss)) { store = ss; backend = 'session'; }
+  else {
+    backend = 'memory';
+    store = { getItem:function(k){ return (k in mem) ? mem[k] : null; },
+              setItem:function(k,v){ mem[k] = String(v); },
+              removeItem:function(k){ delete mem[k]; } };
+  }
+  var keyBase = (typeof _lessonKey !== 'undefined' && _lessonKey)
+    ? _lessonKey
+    : (document.title || 'ss-lesson').replace(/[^a-zA-Z0-9]+/g,'-').toLowerCase();
+  function K(id){ return keyBase + '-' + id; }
+
+  function boxes(){
+    var out = [];
+    var all = document.querySelectorAll('textarea[id]');
+    for (var i = 0; i < all.length; i++){
+      var el = all[i];
+      if (el.id === 'gatheredOutput' || el.disabled) continue;
+      out.push(el);
+    }
+    return out;
+  }
+
+  function refreshGatheredSafe(){
+    try {
+      if (typeof window.gatherAnswers === 'function') window.gatherAnswers();
+      else if (typeof window.refreshGathered === 'function') window.refreshGathered();
+    } catch(e){}
+  }
+
+  /* ---------- save on every keystroke, to whichever store works ---------- */
+  var saveTimer = null;
+  document.addEventListener('input', function(e){
+    var el = e.target;
+    if (!el || el.tagName !== 'TEXTAREA' || !el.id || el.id === 'gatheredOutput') return;
+    try { store.setItem(K(el.id), el.value); } catch(err){}
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(refreshGatheredSafe, 200);
+  }, true);
+
+  setInterval(function(){
+    boxes().forEach(function(el){ try { store.setItem(K(el.id), el.value); } catch(e){} });
+  }, 5000);
+
+  /* ---------- restore anything the page's own restore missed ---------- */
+  function restore(){
+    boxes().forEach(function(el){
+      if (el.value && el.value.trim()) return;
+      var v = null;
+      try { v = store.getItem(K(el.id)); } catch(e){}
+      if (!v) return;
+      el.value = v;
+      var oi = el.getAttribute('oninput') || '';
+      var m = oi.match(/['"](dot-[^'"]+)['"]/);
+      if (m){ var d = document.getElementById(m[1]); if (d) d.classList.add('saved'); }
+    });
+    refreshGatheredSafe();
+  }
+
+  /* ---------- tell students when their browser is not saving ---------- */
+  function banner(){
+    if (backend === 'local') return;
+    if (document.getElementById('oaoStorageWarn')) return;
+    var host = document.querySelector('.gathered-card') || document.getElementById('gatheredOutput');
+    if (!host || !host.parentNode) return;
+    var d = document.createElement('div');
+    d.id = 'oaoStorageWarn';
+    d.style.cssText = 'margin:14px 0;padding:12px 16px;border-radius:10px;background:#FFF4D6;'
+      + 'border:1px solid #E8C97A;color:#6B4E00;font-family:system-ui,-apple-system,Segoe UI,sans-serif;'
+      + 'font-size:14px;font-weight:600;line-height:1.5;';
+    d.textContent = (backend === 'session')
+      ? '⚠️ Your browser will not let this page save your work between visits. Your answers stay while this tab is open, but they will be gone once you close it. Copy or download your answers before you leave.'
+      : '⚠️ Your browser is blocking saving on this page. Your answers are only kept while you stay here. Copy or download your answers before you leave.';
+    host.parentNode.insertBefore(d, host);
+  }
+
+  /* ---------- copy that reports failure instead of silently doing nothing ---------- */
+  function note(){ return document.getElementById('gatheredCopied') || document.getElementById('copiedMsg'); }
+  function flash(msg, ok){
+    var n = note();
+    if (!n){ if (!ok && msg) alert(msg); return; }
+    if (n.getAttribute('data-oao-orig') === null) n.setAttribute('data-oao-orig', n.textContent);
+    n.textContent = msg || n.getAttribute('data-oao-orig');
+    n.style.color = ok ? '' : '#A3312B';
+    n.classList.add('show');
+    n.style.display = 'block';
+    clearTimeout(n.__oaoT);
+    n.__oaoT = setTimeout(function(){
+      n.classList.remove('show');
+      n.style.display = '';
+      n.textContent = n.getAttribute('data-oao-orig');
+      n.style.color = '';
+    }, ok ? 2500 : 8000);
+  }
+  var MANUAL = 'Your browser blocked the copy. Click inside the box above, press Ctrl+A (⌘A on Mac), then Ctrl+C (⌘C).';
+
+  window.copyGathered = function(){
+    refreshGatheredSafe();
+    var out = document.getElementById('gatheredOutput');
+    if (!out) return;
+    var text = out.value || '';
+    if (!text.trim()){ flash('Nothing to copy yet — answer a question first.', false); return; }
+    var ok = false;
+    try {
+      var ro = out.readOnly;
+      out.readOnly = false;
+      out.focus();
+      out.select();
+      if (out.setSelectionRange) out.setSelectionRange(0, text.length);
+      ok = document.execCommand('copy');
+      out.readOnly = ro;
+    } catch(e){ ok = false; }
+    if (ok){ flash(null, true); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ flash(null, true); },
+        function(){ flash(MANUAL, false); }
+      );
+    } else {
+      flash(MANUAL, false);
+    }
+  };
+
+  function init(){ restore(); banner(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+  window.addEventListener('load', function(){ setTimeout(init, 300); });
+})();
+</script>
+
 </body>
 </html>
