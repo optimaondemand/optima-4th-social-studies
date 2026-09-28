@@ -2499,25 +2499,25 @@ body.tx-active .tx-toggle-label {
     <p><strong>Word Bank:</strong> Tap each card to flip it and check the meaning. These words help you describe early Florida like a historian.</p>
   </div>
   <div class="vocab-grid">
-    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front"><div class="fc-emoji">🏛️</div><div class="fc-word">architecture</div><div class="fc-tap">tap to flip</div></div>
         <div class="flip-card-back"><div class="fc-word-back">architecture</div><div class="fc-def">The style and design of buildings.</div></div>
       </div>
     </div>
-    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front"><div class="fc-emoji">🏺</div><div class="fc-word">artifact</div><div class="fc-tap">tap to flip</div></div>
         <div class="flip-card-back"><div class="fc-word-back">artifact</div><div class="fc-def">An object made or used by people in the past.</div></div>
       </div>
     </div>
-    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front"><div class="fc-emoji">🐚</div><div class="fc-word">coquina</div><div class="fc-tap">tap to flip</div></div>
         <div class="flip-card-back"><div class="fc-word-back">coquina</div><div class="fc-def">A soft local stone made of shells that the Spanish used to build the fort.</div></div>
       </div>
     </div>
-    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front"><div class="fc-emoji">🔎</div><div class="fc-word">evidence</div><div class="fc-tap">tap to flip</div></div>
         <div class="flip-card-back"><div class="fc-word-back">evidence</div><div class="fc-def">Facts or clues used to support an idea.</div></div>
@@ -2987,6 +2987,19 @@ body.tx-active .tx-toggle-label {
 
 /* ═══════════ TAB SWITCHING ═══════════ */
 var visited = { scene: true };
+
+/* ═══════════ SCROLL TO TAB BAR (used on tab switch) ═══════════ */
+function scrollToTabBar() {
+  var tabBar = document.getElementById('tabBar');
+  if (!tabBar) { scrollToTop(); return; }
+  var rect = tabBar.getBoundingClientRect();
+  var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  var target = rect.top + currentScroll - 44;
+  window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+  try {
+    window.parent.postMessage({ type: 'scrollToTabBar', offset: target }, '*');
+  } catch(e) {}
+}
 
 function switchTab(tab) {
   visited[tab] = true;
