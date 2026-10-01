@@ -583,16 +583,16 @@
       "file": "ss-4-04_01-explorers-who-came-to-florida.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nuS1t_HSf4Q?si=DZlUyzWP4T9LSDmc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-01-explore-explainer": {
       "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
       "file": "ss-4-04_01-explorers-who-came-to-florida.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_zNwaelptGU?si=geA-swnIWuzAKGtm\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-01-assignment-explainer": {
       "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
@@ -607,8 +607,8 @@
       "file": "ss-4-04_01-explorers-who-came-to-florida.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width="560" height="315" src="https://www.youtube.com/embed/SngWVRJlo_c?si=ha_eo8Ium9fY4Q-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-02-welcome": {
       "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
