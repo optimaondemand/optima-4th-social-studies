@@ -615,16 +615,16 @@
       "file": "ss-4-04_02-motives-for-european-expeditions.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_HGiYLPmCD0?si=jVBENadXgRBOFMQE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-02-explore-explainer": {
       "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
       "file": "ss-4-04_02-motives-for-european-expeditions.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/WKZHgQ72PrQ?si=TW7GQ_QNOkomN_xw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-02-assignment-explainer": {
       "lesson": "Optima Academy Online \u2014 Motives For European Expeditions",
@@ -639,8 +639,8 @@
       "file": "ss-4-04_02-motives-for-european-expeditions.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/AoC-p6Jh82s?si=sE_P4q4X8hVURF6e\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "status": "ready"
     },
     "4-04-03-welcome": {
       "lesson": "Optima Academy Online \u2014 Spain France England In Florida",
