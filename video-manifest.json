@@ -519,64 +519,64 @@
       "file": "ss-4-03_05-geography-and-daily-life.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-05-welcome.jpg\" title=\"Welcome!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-05-welcome.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-05-explore-explainer": {
       "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
       "file": "ss-4-03_05-geography-and-daily-life.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-05-explore-explainer.jpg\" title=\"Let's Explore!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-05-explore-explainer.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-05-assignment-explainer": {
       "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
       "file": "ss-4-03_05-geography-and-daily-life.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-05-assignment-explainer.jpg\" title=\"What You'll Turn In\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-05-assignment-explainer.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-05-closing": {
       "lesson": "Optima Academy Online \u2014 Geography And Daily Life",
       "file": "ss-4-03_05-geography-and-daily-life.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-05-closing.jpg\" title=\"Great Work Today!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-05-closing.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-06-welcome": {
       "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
       "file": "ss-4-03_06-courtesy-and-responsibility.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-06-welcome.jpg\" title=\"Welcome!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-06-welcome.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-06-explore-explainer": {
       "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
       "file": "ss-4-03_06-courtesy-and-responsibility.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-06-explore-explainer.jpg\" title=\"Let's Explore!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-06-explore-explainer.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-06-assignment-explainer": {
       "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
       "file": "ss-4-03_06-courtesy-and-responsibility.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-06-assignment-explainer.jpg\" title=\"What You'll Turn In\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-06-assignment-explainer.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-03-06-closing": {
       "lesson": "Optima Academy Online \u2014 Courtesy And Responsibility",
       "file": "ss-4-03_06-courtesy-and-responsibility.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<video controls playsinline preload=\"metadata\" poster=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/posters/4-03-06-closing.jpg\" title=\"Great Work Today!\"><source src=\"https://raw.githubusercontent.com/optimaondemand/optima-4th-social-studies/main/videos/4-03-06-closing.mp4\" type=\"video/mp4\">Your browser can't play this video.</video>",
+      "status": "ready"
     },
     "4-04-01-welcome": {
       "lesson": "Optima Academy Online \u2014 Explorers Who Came To Florida",
