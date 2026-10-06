@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Floridians Unit Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Unit 3: First Floridians</h1>
+      <div class="sub">Weeks 7–9 · Florida’s Native peoples before Europeans arrived</div>
+      <div class="chips">
+        <span class="chip">3 weeks</span>
+        <span class="chip">6 lessons</span>
+        <span class="chip">4 peoples</span>
+        <span class="chip">1 unit assessment</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-03-01-calusa-coast.png');" role="img" aria-label="Artist’s picture of a Calusa shell-mound island with dugout canoes on the beach"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four tabs, in order:</strong> Learn → Explore → Check → Assignment. A button at the bottom of each tab moves to the next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> The bottom of the Assignment tab collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Download as PDF</strong> (or Copy) saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Listen</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="card">
+    <div class="card-head"><span class="ico">🐚</span><h2>About This Unit</h2></div>
+    <p>People lived in Florida for thousands of years before any European ship arrived. In this unit your student meets four of those peoples, the Apalachee, Timucua, Calusa, and Tequesta, and learns how Florida’s land, water, and seasons shaped the way each one lived.</p>
+    <p>None of these peoples left written records, so your student works the way historians do: from pictures, artifacts, and careful thinking. By the end, they should be able to say <strong>who</strong> lived where, <strong>how</strong> the land shaped their lives, and <strong>how we know</strong>. They also learn to tell the difference between what a source shows and what we’re guessing.</p>
+    <p class="quote">“Where you lived in Florida shaped how you lived.”<small>The big idea of Unit 3, from Lesson 4.03.01</small></p>
+  </section>
+
+  <!-- THE FOUR PEOPLES -->
+  <section class="card">
+    <div class="card-head"><span class="ico">🗺️</span><h2>The Four Peoples</h2><span class="tag">Quick reference</span></div>
+    <div class="peoples">
+      <div class="people"><i>Northwest panhandle</i><b>Apalachee</b>Farmers. Big fields of corn, beans, and squash in the hills near today’s Tallahassee.</div>
+      <div class="people"><i>North &amp; central</i><b>Timucua</b>Hunted deer, fished rivers, kept gardens. Round houses inside tall wooden fences.</div>
+      <div class="people"><i>Southwest coast</i><b>Calusa</b>Lived from the sea. Built island towns on shell mounds. Powerful leaders, long canoe trips.</div>
+      <div class="people"><i>Southeast coast</i><b>Tequesta</b>Fish, sea turtles, and shellfish. Small villages near rivers, close to today’s Miami.</div>
+    </div>
+    <p class="small" style="margin-top:12px;">Native nations still live in Florida today, including the <strong>Seminole Tribe of Florida</strong> and the <strong>Miccosukee Tribe of Indians of Florida</strong>. Your student learns about them in the last lesson.</p>
+  </section>
+
+  <!-- THE STORY -->
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>About the Story: The Florida Files</h2></div>
+    <p>The whole course runs on one story. Your student’s teacher is <strong>stuck inside Canvas</strong>. She can find old Florida files in there, but she can’t open them. Each lesson, she sends a message asking for help. Your student does the history work, and the file unlocks. There are <strong>13 files, one for each unit</strong>. Unit 3 is File 3.</p>
+    <div class="grid3">
+      <div class="box"><div class="box-label">Start of each lesson</div>A message from the teacher: what’s locked and what she needs.</div>
+      <div class="box"><div class="box-label">End of each lesson</div>“File Unlocked” sums up what your student just proved.</div>
+      <div class="box"><div class="box-label">New in Week 9</div>Phone texts and voice notes from the teacher right on the page.</div>
+    </div>
+    <p style="margin-top:12px;">Feel free to play along. Asking “Did you get her file open today?” is a great way to start a conversation about the lesson.</p>
+  </section>
+
+  <!-- HOW A WEEK WORKS -->
+  <section class="card">
+    <div class="card-head"><span class="ico">🗓️</span><h2>How a Week Works</h2></div>
+    <p>Every week has <strong>two lessons</strong>. Each one follows the same four steps, so your student always knows what comes next:</p>
+    <div class="rhythm">
+      <div><b>📍 Learn</b>Meet the teacher’s message, the big question, and the virtue</div>
+      <div><b>🔍 Explore</b>Read the story and study a source</div>
+      <div><b>🧠 Check</b>3 quick questions, not graded</div>
+      <div><b>📝 Assignment</b>Answer, write, and turn in</div>
+    </div>
+    <ul class="routines">
+      <li><span>🏛️</span><strong>Virtue Spotlight:</strong> a virtue tied to the lesson (service, courtesy, honesty)</li>
+      <li><span>📜</span><strong>A real source:</strong> a picture, an artifact, or old writing to study</li>
+      <li><span>❓</span><strong>3 evidence questions</strong> answered with details from the lesson</li>
+      <li><span>📓</span><strong>One longer piece:</strong> a notebook entry, a report, or a museum label</li>
+      <li><span>✏️</span><strong>Historian’s Sentence:</strong> “Today I learned that ___ because ___.”</li>
+      <li><span>📬</span><strong>Turn-in checklist</strong> at the bottom, ending with submitting in Canvas</li>
+    </ul>
+  </section>
+
+  <!-- WEEK BY WEEK -->
+  <section class="card">
+    <div class="card-head"><span class="ico">🗺️</span><h2>The Unit, Week by Week</h2></div>
+    <div class="weeks">
+
+      <div class="wk"><div class="wk-n"><b>7</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.03.01–02</span><span class="theme">Four peoples, four worlds</span></div>
+        <p class="wk-sum">Who lived where in Florida, and how the land shaped their lives. A close comparison of the Timucua and the Calusa, using a drawing from 1591.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>place shapes daily life</span><span class="sk"><i>Source</i>de Bry engraving</span><span class="sk"><i>Virtues</i>service, courtesy</span></div>
+        <a class="wk-link" href="parent-guide-week-7.html">Open the Week 7 guide →</a>
+      </div></div>
+
+      <div class="wk"><div class="wk-n"><b>8</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.03.03–04</span><span class="theme">Clever tools</span></div>
+        <p class="wk-sum">Chickees, dugout canoes, stone and shell tools. Then one real artifact, the Key Marco Cat, and the difference between seeing and guessing.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>observation vs. inference</span><span class="sk"><i>Source</i>Key Marco Cat</span><span class="sk"><i>Virtue</i>honesty</span></div>
+        <a class="wk-link" href="parent-guide-week-8.html">Open the Week 8 guide →</a>
+      </div></div>
+
+      <div class="wk"><div class="wk-n"><b>9</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.03.05–06</span><span class="theme">Telling it right</span></div>
+        <p class="wk-sum">How Florida’s seasons shaped the year, and the habits of a respectful historian. Meet the Seminole and Miccosukee nations of today. Ends with the Unit 3 Assessment.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>geography includes time</span><span class="sk"><i>Source</i>Seminole constitution, 1957</span><span class="sk"><i>Virtues</i>honesty, courtesy</span></div>
+        <a class="wk-link" href="parent-guide-week-9.html">Open the Week 9 guide →</a>
+      </div></div>
+
+    </div>
+  </section>
+
+  <!-- HOW LEARNING IS CHECKED -->
+  <section class="card">
+    <div class="card-head"><span class="ico">📋</span><h2>How Learning Is Checked</h2></div>
+    <div class="grid2">
+      <div class="box b-sky"><div class="box-label">Every lesson</div>Evidence questions, one longer writing piece, and a Historian’s Sentence, submitted in Canvas. The self-check in each lesson isn’t graded.</div>
+      <div class="box b-gold"><div class="box-label">End of unit</div><strong>Unit 3 Assessment</strong> (about 45 minutes): multiple choice, a short artifact task, two longer written answers, and a virtue reflection. Notes are allowed.</div>
+    </div>
+    <p class="small" style="margin-top:12px;"><strong>What “secure” looks like on the assessment:</strong> your student uses the right names and regions, separates what they see from what they guess, and backs up a comparison with specific examples.</p>
+  </section>
+
+  <!-- GOOD TO KNOW -->
+  <section class="card">
+    <div class="card-head"><span class="ico">💛</span><h2>Good to Know Ahead of Time</h2></div>
+    <div class="grid2">
+      <div class="box b-rose"><div class="box-label">Week 9 · Lesson 4.03.06</div>The lesson says, briefly, that many of Florida’s first peoples were lost after Europeans arrived, because of disease, war, and being forced off their land. Unit 4 picks up that story next.</div>
+      <div class="box b-plum"><div class="box-label">All unit · Word choice</div>Lessons ask students to use each people’s real name instead of “Indians,” and to avoid calling Native life “simple.” You may hear your student correct a book or a TV show!</div>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP -->
+  <section class="card">
+    <div class="card-head"><span class="ico">🤝</span><h2>How to Help (Without Doing It for Them)</h2></div>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px;">Try this</h3>
+        <ul class="check">
+          <li>Ask “How do you know?” Every answer should point to a detail from the lesson or source.</li>
+          <li>Point them to the self-check and hint buttons before you step in.</li>
+          <li>Ask the questions in each weekly guide. Talking first makes the writing easier.</li>
+          <li>Pull up a Florida map and find each people’s region together.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px;">Try to avoid</h3>
+        <ul class="check dont">
+          <li>Typing or wording answers for them. Teachers need to see your student’s own thinking.</li>
+          <li>Adding facts from outside the lesson. The questions ask for evidence from the lesson’s sources.</li>
+          <li>Skipping the submit step. Work isn’t turned in until it’s in Canvas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEE IT -->
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="grid3">
+      <div class="box b-teal"><div class="box-label">Pine Island</div><strong>Calusa Heritage Trail</strong> at the Randell Research Center. Walk among real Calusa shell mounds.</div>
+      <div class="box b-teal"><div class="box-label">Marco Island</div><strong>Marco Island Historical Museum.</strong> Calusa exhibits and the story of the Key Marco dig.</div>
+      <div class="box b-teal"><div class="box-label">Big Cypress</div><strong>Ah-Tah-Thi-Ki Museum,</strong> run by the Seminole Tribe of Florida on its own reservation.</div>
+    </div>
+    <p class="small" style="margin-top:12px;">Check hours before you go.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Unit 3 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
