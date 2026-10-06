@@ -472,28 +472,38 @@
 
   /* ================================================================ VOICE NOTES — the teacher's audio guides.
      Never read the page, never give an answer. Hidden until the .mp3 exists (?review shows empty slots).
-     DATA.voice: [{slot,label,at:'scene1'|'explore'|'write'|'score',when:'perfect'|'review',script}] */
+     DATA.voice: [{slot,label,at:'scene1'|'explore'|'mapdone'|'write'|'score',when:'perfect'|'review',script}]
+     Multi-part (plays in a row, e.g. teacher → historical voice → teacher):
+       {label,at,parts:[{slot,who,script},…]} → files g4ss-<lesson>-<slot>.mp3; shown only when every part loads. */
   var AT={
     scene1:function(){ var fc=document.querySelector('#panel-scene .canvas-file-card'); return fc&&[fc,'before']; },
     explore:function(){ var a=(R.reading&&R.reading.act)||document.querySelector('#panel-explore .activity'); var sb=a&&a.previousElementSibling; return a&&[sb&&sb.classList.contains('step-badge')?sb:a,'before']; },
     write:function(){ var h=document.getElementById('spk-step-3'); return h&&[h,'after']; },
+    mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
   function quizTotal(){ return document.querySelectorAll('#panel-check .quiz-q').length||3; }
   var WHEN={ perfect:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()===quizTotal(); },
              review:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()!==quizTotal(); } };
   function buildVoice(){ (DATA.voice||[]).forEach(function(v){ var w=AT[v.at]&&AT[v.at](); if(!w) return;
-    var file=AUD+'g4ss-'+LESSON+'-'+v.slot+'.mp3', bars=''; for(var i=0;i<30;i++) bars+='<i style="height:'+(5+Math.round(13*Math.abs(Math.sin(i*1.7+v.slot.length))))+'px"></i>';
-    var n=el('div','spk spk-vn spk-hide','<span class="spk-avatar">👩‍🏫</span><div><div class="k">Voice note from your teacher</div><div class="t">'+esc(v.label)+'</div><div class="wave">'+bars+'</div></div><button type="button" class="play" aria-label="Play voice note">▶</button><button type="button" class="rd">Read along</button><div class="tx">'+esc(v.script)+'</div>');
-    n.dataset.slot=v.slot; n.__when=WHEN[v.when]; w[1]==='after'?after(w[0],n):before(w[0],n);
-    var au=new Audio(), play=n.querySelector('.play');
-    au.preload='metadata';
-    au.addEventListener('loadedmetadata',function(){ n.classList.remove('spk-hide','spk-empty'); play.disabled=false; var m=n.querySelector('.mock'); if(m) m.remove(); });
-    au.addEventListener('error',function(){ n.classList.remove('spk-hide'); n.classList.add('spk-empty'); play.disabled=true; if(!n.querySelector('.mock')) n.querySelector('.k').insertAdjacentHTML('beforeend','<span class="mock">· empty slot — g4ss-'+LESSON+'-'+v.slot+'.mp3</span>'); });
-    au.addEventListener('ended',function(){ n.classList.remove('playing'); play.textContent='▶'; });
-    play.addEventListener('click',function(){ if(au.paused){ document.querySelectorAll('.spk-vn.playing .play').forEach(function(b){ if(b!==play) b.click(); }); au.play(); n.classList.add('playing'); play.textContent='❚❚'; } else { au.pause(); n.classList.remove('playing'); play.textContent='▶'; } });
+    var parts=v.parts||[{slot:v.slot,script:v.script}], key=v.slot||parts.map(function(p){ return p.slot; }).join('+'), bars='';
+    for(var i=0;i<30;i++) bars+='<i style="height:'+(5+Math.round(13*Math.abs(Math.sin(i*1.7+key.length))))+'px"></i>';
+    var tx=parts.map(function(p){ return (p.who?'<b>'+esc(p.who)+':</b> ':'')+esc(p.script); }).join('<br><br>');
+    var n=el('div','spk spk-vn spk-hide','<span class="spk-avatar">👩‍🏫</span><div><div class="k">Voice note from your teacher</div><div class="t">'+esc(v.label)+'</div><div class="wave">'+bars+'</div></div><button type="button" class="play" aria-label="Play voice note">▶</button><button type="button" class="rd">Read along</button><div class="tx">'+tx+'</div>');
+    n.dataset.slot=key; n.__when=WHEN[v.when]; w[1]==='after'?after(w[0],n):before(w[0],n);
+    var play=n.querySelector('.play'), cur=0, ok=0, bad=false;
+    var aus=parts.map(function(p,idx){ var au=new Audio(); au.preload='metadata';
+      au.addEventListener('loadedmetadata',function(){ if(++ok===parts.length&&!bad){ n.classList.remove('spk-hide','spk-empty'); play.disabled=false; var m=n.querySelector('.mock'); if(m) m.remove(); } });
+      au.addEventListener('error',function(){ bad=true; n.classList.remove('spk-hide'); n.classList.add('spk-empty'); play.disabled=true; if(!n.querySelector('.mock')) n.querySelector('.k').insertAdjacentHTML('beforeend','<span class="mock">· empty slot — g4ss-'+LESSON+'-'+p.slot+'.mp3</span>'); });
+      au.addEventListener('ended',function(){ if(idx<parts.length-1){ cur=idx+1; aus[cur].currentTime=0; aus[cur].play(); } else { cur=0; n.classList.remove('playing'); play.textContent='▶'; } });
+      return au; });
+    function stop(){ aus[cur].pause(); n.classList.remove('playing'); play.textContent='▶'; }
+    n.__stop=stop;
+    play.addEventListener('click',function(){ if(n.classList.contains('playing')){ stop(); return; }
+      document.querySelectorAll('.spk-vn.playing').forEach(function(o){ if(o!==n&&o.__stop) o.__stop(); });
+      aus[cur].play(); n.classList.add('playing'); play.textContent='❚❚'; });
     n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'Read along'; });
-    au.src=file; }); refreshVoice(); }
+    parts.forEach(function(p,idx){ aus[idx].src=AUD+'g4ss-'+LESSON+'-'+p.slot+'.mp3'; }); }); refreshVoice(); }
   function refreshVoice(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
   function paintVideos(){ document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
   function buildMedia(){ paintVideos(); if(!window.__spkVidObs){ window.__spkVidObs=new MutationObserver(function(){ clearTimeout(window.__spkVidT); window.__spkVidT=setTimeout(paintVideos,100); }); window.__spkVidObs.observe(document.body,{childList:true,subtree:true}); } }

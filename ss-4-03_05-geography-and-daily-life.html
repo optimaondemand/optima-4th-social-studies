@@ -2423,36 +2423,37 @@ body.tx-active .tx-toggle-label {
  },
  "voice": [
   {
-   "slot": "guide1",
-   "label": "Why we start with a map",
-   "at": "scene1",
-   "script": "Quick voice note, because typing on this phone is slow. Here’s why we start with a map and not a story. A map can’t tell you what anyone ate for breakfast. It can tell you what was possible. Some places make it easy to grow food, some make it easy to fish, some make both hard. As you match the clues, notice the reason each one fits. That reason is the lesson."
+   "label": "Before you open the file",
+   "at": "mapdone",
+   "slot": "mapdone",
+   "script": "Did you hear that? The map just came loose. I’m holding the file… it’s heavy. Before we open it, watch how I’d finish a “because” line about a different place: “People in my town built a big bridge because the river is too wide to swim.” The land had something, so people did something. Pause me and finish one of yours that way. … Got one? Good. Now the file."
   },
   {
-   "slot": "guide2",
-   "label": "Geography has a “when”",
+   "label": "A voice from 450 years ago",
    "at": "explore",
-   "script": "Most people think geography just means where. Today it also means when. Picture your own street during a big storm, and then on the nicest day of the year. Same street, two different lives. The first Floridians lived that four times every year. While you read the seasons, keep asking yourself one thing: what would I have to do differently right now?"
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "This next voice is reading real words from about 450 years ago. A Spanish boy named Fontaneda was shipwrecked in Florida and lived with the people here for seventeen years. Later he wrote down what he saw. Listen for a season hiding in his words."
+    },
+    {
+     "slot": "source-2",
+     "who": "Fontaneda (written about 1575)",
+     "script": "“They have bread of roots, which is their common food the greater part of the time… Because of the lake, which rises in some seasons so high that the roots cannot be reached in consequence of the water, they are for some time without eating this bread.”"
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Pause me. Which season made the lake rise? And what would people have to do when they couldn’t reach their roots? … Got an idea? Check it against the wheel."
+    }
+   ]
   },
   {
-   "slot": "guide3",
-   "label": "The page I care about most",
+   "label": "How I’d start mine",
    "at": "write",
-   "script": "This is the writing part, and honestly it’s the one I care about most. Anybody can list facts about a season. A historian tries to tell it the way someone who lived it would have felt it, including the hard part. So don’t write a perfect day. Write a true one. Use your plan, but the sentences have to be yours."
-  },
-  {
-   "slot": "checkperfect",
-   "label": "Three out of three",
-   "at": "score",
-   "when": "perfect",
-   "script": "Three out of three! That tells me you really read those season files. Hang on to those details, because you’ll need them when you write. Next, go to the Historian’s Notebook tab. That’s where you’ll write about one day in one season."
-  },
-  {
-   "slot": "checkreview",
-   "label": "About the ones you missed",
-   "at": "score",
-   "when": "review",
-   "script": "That’s okay. These questions are just to see what stuck, and they aren’t graded. Look at the ones you missed and find the season each one asked about. Go back to the Source Study tab and reread that season file. Then come to the Historian’s Notebook tab when you’re ready."
+   "slot": "write",
+   "script": "Here’s how I’d start a Day in the Life, but about my own day, so I’m not doing yours: “The rain was already loud on the roof when I woke up, so I knew the drive would be slow.” Hear it? A weather detail, then what it made me do. That’s the trick. Pause me and write your first sentence that way, for your people and your season. … Done? Keep going, and don’t skip the hard part. Real days have one."
   }
  ],
  "cabinet": {
