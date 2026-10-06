@@ -47,7 +47,10 @@
   /* older 4.03.05 progress used named beats; keep a returning student's texts from firing twice */
   if(S.seen.mapDone) S.seen.s1Done=true; if(S.seen.wheelDone) S.seen.s2Done=true;
   var C=get(CKEY,{opened:[],sentences:{}}); C.sentences=C.sentences||{};
-  var P=get(PKEY,null);
+  var EKEY='oao.profile';   /* the ELA course's profile: same site, so a name typed there greets them here */
+  function okName(n){ return !!n&&!nameProblem(n); }
+  function loadProfile(){ var p=get(PKEY,null); if(p&&okName(p.name)) return p; var e=get(EKEY,null); return e&&okName(e.name)?{name:e.name}:null; }
+  var P=null;   /* loaded in build(), after the name filter is defined */
   function save(){ put(KEY,S); put(CKEY,C); }
   function el(t,c,h){ var d=document.createElement(t); if(c) d.className=c; if(h!=null) d.innerHTML=h; return d; }
   function after(r,n){ r.parentNode.insertBefore(n,r.nextSibling); } function before(r,n){ r.parentNode.insertBefore(n,r); }
@@ -58,6 +61,41 @@
   function find(list,id,key){ key=key||'id'; return (list||[]).filter(function(x){ return x[key]===id; })[0]; }
   function thumb(name,emoji){ var ph=el('div','ph',emoji); if(!name) return ph; var img=new Image(); img.className='ph'; img.alt=''; (function tryI(i){ if(i>=EXT.length) return; var t=new Image(); t.onload=function(){ img.src=t.src; ph.replaceWith(img); }; t.onerror=function(){ tryI(i+1); }; t.src=IMG+name+EXT[i]; })(0); return ph; }
   function nm(){ return P&&P.name?P.name:''; }
+
+  /* ================================================================ YOUR NAME — asked once, the same way as the ELA course
+     (same card, same filter). Kept on this computer only. Saving also fixes the spelling in the ELA profile if
+     one exists; it never creates one, so ELA still asks for the owl. */
+  var NAME_STRONG=['fuck','shit','bitch','cunt','whore','slut','wank','bollock','bastard','penis','vagina','boob','anus','turd','scrotum','testicle','nigg','fagg','retard','kike','chink','tranny','porn','rape','nazi','hitler'];
+  var NAME_WHOLE=['ass','arse','hell','damn','crap','piss','poop','pee','fart','butt','bum','dick','cock','prick','knob','willy','tit','sex','kill','dumb','stupid','idiot','loser','ugly','fatso','poopy','poopyhead'];
+  function nameFold(v){ return String(v).toLowerCase().replace(/[4@]/g,'a').replace(/3/g,'e').replace(/[1!|]/g,'i').replace(/0/g,'o').replace(/[$5]/g,'s').replace(/7/g,'t').replace(/[^a-z ]+/g,' ').replace(/(.)\1+/g,'$1').replace(/\s+/g,' ').trim(); }
+  function nameProblem(raw){ var SF=NAME_STRONG.map(nameFold), WF=NAME_WHOLE.map(nameFold), name=String(raw||'').trim(), i;
+    if(!name) return 'Type your first name.';
+    if(name.replace(/[^A-Za-z]/g,'').length<2) return 'That is a bit short — what do people call you?';
+    var f=nameFold(name); if(!f) return 'Use letters for your name.';
+    for(i=0;i<SF.length;i++) if(SF[i]&&f.indexOf(SF[i])!==-1) return 'block';
+    var sq=f.replace(/ /g,''); for(i=0;i<SF.length;i++) if(SF[i].length>=4&&sq.indexOf(SF[i])!==-1) return 'block';
+    var w=f.split(' '); for(i=0;i<w.length;i++) if(WF.indexOf(w[i])!==-1) return 'block';
+    return null; }
+  function storageWorks(){ try{ var k='oao.__probe'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+  var openingWaiting=false;
+  function showNameCard(isEdit){ if(document.querySelector('.spk-name-card')) return;
+    var anchor=document.querySelector('.spk-note.opening')||document.getElementById('introSection'); if(!anchor) return;
+    var card=el('div','spk spk-name-card');
+    card.innerHTML='<div class="k"><span class="spk-avatar">👩‍🏫</span>'+(isEdit?'Fix your name':'Before we begin')+'</div><h3>'+(isEdit?'How should your name be spelled?':'What should your teacher call you?')+'</h3><p class="sub">Just your first name. It stays on this computer. Nobody else sees it.</p><div class="row"><input class="in" maxlength="24" autocomplete="off" placeholder="Your first name" aria-label="Your first name"><button type="button" class="go">'+(isEdit?'Save':'Begin')+'</button>'+(isEdit?'<button type="button" class="cancel">Cancel</button>':'')+'</div><div class="warn" role="alert"></div>';
+    before(anchor,card);
+    var input=card.querySelector('.in'), go=card.querySelector('.go'), warn=card.querySelector('.warn');
+    function clean(v){ return (v||'').replace(/[^A-Za-z \-']/g,'').trim().slice(0,24); }
+    function sync(){ go.disabled=clean(input.value).length===0; warn.textContent=''; }
+    input.value=nm(); input.addEventListener('input',sync); sync();
+    input.addEventListener('keydown',function(e){ if(e.key==='Enter'&&!go.disabled) go.click(); });
+    var cx=card.querySelector('.cancel'); if(cx) cx.addEventListener('click',function(){ card.remove(); });
+    go.addEventListener('click',function(){ var name=clean(input.value), pr=nameProblem(input.value)||nameProblem(name);
+      if(pr){ warn.textContent=pr==='block'?'Let’s use your real first name. This is the name that goes on your work.':pr; input.focus(); return; }
+      P=Object.assign({},get(PKEY,null)||{},{name:name,created:(P&&P.created)||new Date().toISOString()}); put(PKEY,P);
+      var e=get(EKEY,null); if(e&&e.name&&e.name!==name){ e.name=name; put(EKEY,e); }
+      card.remove(); paintWho(); if(openingWaiting){ openingWaiting=false; startOpening(); } });
+    if(!isEdit) setTimeout(function(){ try{ input.focus({preventScroll:true}); }catch(e){} },50); else input.focus(); }
+  function paintWho(){ var w=fileEl&&fileEl.querySelector('.spk-who'); if(!w) return; w.classList.toggle('spk-hide',!nm()); w.querySelector('b').textContent=nm(); }
   /* {name,} → "Maya, " or nothing (then the next letter is capitalised) */
   function fill(t){ t=String(t||''); return t.replace(/^\{name,\}(\s*)(.)/,function(m,s,ch){ return nm()?nm()+', '+ch:ch.toUpperCase(); }).replace(/\{name,\}/g,nm()?nm()+', ':'').replace(/\{name\}/g,nm()); }
   function notebookWritten(){ var ta=document.getElementById('journal-assign'); return !!ta && words(ta.value)>=MIN_WORDS; }
@@ -82,7 +120,7 @@
   function onNote(e){ var n=e.currentTarget; if(e.target.closest('.mini')){ openPhone(true); return; } if(e.target.closest('.fold')){ ack(n.dataset.scene); return; } onChoice(e); }
   function onChoice(e){ var b=e.target.closest('.spk-choice'); if(!b) return; var cs=CHOICES[b.dataset.key]; if(!cs||b.dataset.key!==pendingKey) return; var c=cs[+b.dataset.i]; student(c.t); if(c.reply) teacher(c.reply,c.next||null,{scene:cs.scene,quiet:true}); render(); }
   function render(){
-    if(phoneEl){ var w=phoneEl.querySelector('.spk-msgs-wrap'); w.querySelector('.spk-msgs').innerHTML='<div class="spk-msg sys">Today</div>'+thread.map(msgHTML).join(''); w.scrollTop=w.scrollHeight; var comp=phoneEl.querySelector('.spk-composer'); comp.innerHTML=pendingKey&&CHOICES[pendingKey]?'<div class="lab">Tap a reply</div>'+choicesHTML():'<div class="none">No reply needed. Keep going — I’ll text when something changes.</div>'; phoneEl.querySelector('.spk-status .tm').textContent=clock(); }
+    if(phoneEl){ var w=phoneEl.querySelector('.spk-msgs-wrap'); w.querySelector('.spk-msgs').innerHTML='<div class="spk-msg sys">Today</div>'+thread.map(msgHTML).join(''); w.scrollTop=w.scrollHeight; var comp=phoneEl.querySelector('.spk-composer'); comp.innerHTML=pendingKey&&CHOICES[pendingKey]?'<div class="lab">Tap a reply</div>'+choicesHTML():'<div class="none">No reply needed. Keep going — I’ll text when something changes.</div>'; phoneEl.querySelector('.spk-status .tm').textContent=clock(); phoneEl.querySelector('.spk-contact .st').textContent=nm()?'texting '+nm()+' · inside Canvas':'inside Canvas · online'; }
     if(mailEl){ mailEl.classList.toggle('unread',unread>0); mailEl.querySelector('.n').textContent=unread; }
     var phoneOpen=phoneEl&&phoneEl.classList.contains('open');
     ['open','scene','explore','check','assignment'].forEach(function(sc){ var n=document.querySelector('.spk-note[data-scene="'+sc+'"]'); if(!n) return; var ms=thread.filter(function(m){return m.scene===sc;});
@@ -94,7 +132,7 @@
     if(phoneOpen) save();
   }
   function openPhone(o){ if(!phoneEl) return; phoneEl.classList.toggle('open',o); mailEl&&mailEl.setAttribute('aria-expanded',!!o); if(o){ unread=0; hideToast(); render(); } }
-  function toast(text){ if(!toastEl||phoneEl.classList.contains('open')) return; toastEl.querySelector('.tx span').textContent=text; toastEl.querySelector('.tx small').textContent='now'; toastEl.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(hideToast,7000); }
+  function toast(text){ if(!toastEl||phoneEl.classList.contains('open')) return; toastEl.querySelector('.tx span').textContent=(nm()&&text.indexOf(nm())===-1?nm()+' — ':'')+text; toastEl.querySelector('.tx small').textContent='now'; toastEl.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(hideToast,7000); }
   function hideToast(){ if(toastEl) toastEl.classList.remove('show'); }
   function currentScene(){ var a=document.querySelector('.tab-panel.active'); return a?a.id.replace('panel-',''):'scene'; }
   /* DATA.texts.choices = { key: {scene, list:[{t, go, reply, next}]} } */
@@ -120,7 +158,11 @@
   function buildOpening(){
     var intro=document.getElementById('introSection'); if(!intro) return;
     var note=el('div','spk spk-note opening spk-hide'); note.dataset.scene='open'; note.innerHTML=noteHTML('Texts from your teacher · inside Canvas'); note.addEventListener('click',onNote); before(intro,note);
-    if(!thread.length){
+    if(!thread.length){ if(!nm()&&storageWorks()) openingWaiting=true; else startOpening(); }
+  }
+  function startOpening(){
+    if(thread.length) return;
+    {
       var hi=nm()?nm()+' — good, it’s you. ':'';
       var op=[].concat(T.opening||[]);
       teacher(hi+(T.hello||'Hi, it’s me, your teacher. I’m still stuck inside Canvas.')+(DATA.connector?' '+DATA.connector:''),null,{scene:'open',quiet:true});
@@ -135,8 +177,9 @@
   function folderSVG(){ var se=FILE.seals||['🗺️','📄','✍️']; return '<svg class="spk-folder-svg" viewBox="0 0 170 130" aria-hidden="true"><path d="M6,30 h50 l10,-12 h50 a6,6 0 0 1 6,6 v6 h36 a6,6 0 0 1 6,6 v84 a6,6 0 0 1 -6,6 h-152 a6,6 0 0 1 -6,-6 z" fill="#C9A96B"/><rect x="14" y="40" width="142" height="80" fill="#FFFDF5" stroke="#D8C7A2"/><g class="lid"><path d="M6,44 h158 a6,6 0 0 1 6,6 v70 a6,6 0 0 1 -6,6 h-152 a6,6 0 0 1 -6,-6 z" fill="#E8D4A8" stroke="#B89860"/><text x="16" y="66" style="font:800 9px ui-monospace,Menlo,monospace;letter-spacing:.1em;fill:#5C4A2A">'+esc(String(FILE.label||FILE_TITLE).toUpperCase())+'</text>'+seal(40,100,se[0],'s1')+seal(85,100,se[1],'s2')+seal(130,100,se[2],'s4')+'</g></svg>'; }
   function buildFile(){
     var anchor=document.querySelector('.spk-note.opening')||document.getElementById('introSection'); if(!anchor||!STAGES.length) return;
-    fileEl=el('div','spk spk-file'); fileEl.innerHTML='<div class="spk-file-row">'+folderSVG()+'<div><div class="spk-file-sub"><span><span class="ttl">The Florida Files · '+esc(FILE_TITLE)+' · </span><span class="pg"></span></span><button type="button" class="spk-mail" aria-expanded="false">📱 Messages <span class="n">0</span></button></div><div class="spk-tabs" role="tablist">'+STAGES.map(function(s,i){return '<button type="button" role="tab" class="spk-tab" data-tab="'+s.tab+'"><span class="n"><span>'+(i+1)+'</span></span><span class="l">'+esc(s.r)+'<small>'+esc(s.t)+'</small></span></button>';}).join('')+'</div></div></div>';
+    fileEl=el('div','spk spk-file'); fileEl.innerHTML='<div class="spk-file-row">'+folderSVG()+'<div><div class="spk-file-sub"><span><span class="ttl">The Florida Files · '+esc(FILE_TITLE)+' · </span><span class="pg"></span></span><span class="spk-whowrap"><button type="button" class="spk-who spk-hide" title="Fix the spelling of my name"><b></b> ✎</button><button type="button" class="spk-mail" aria-expanded="false">📱 Messages <span class="n">0</span></button></span></div><div class="spk-tabs" role="tablist">'+STAGES.map(function(s,i){return '<button type="button" role="tab" class="spk-tab" data-tab="'+s.tab+'"><span class="n"><span>'+(i+1)+'</span></span><span class="l">'+esc(s.r)+'<small>'+esc(s.t)+'</small></span></button>';}).join('')+'</div></div></div>';
     fileEl.addEventListener('click',function(e){ var t=e.target.closest('.spk-tab'); if(t){ switchTab(t.dataset.tab); } });
+    fileEl.querySelector('.spk-who').addEventListener('click',function(){ showNameCard(true); }); paintWho();
     mailEl=fileEl.querySelector('.spk-mail'); mailEl.addEventListener('click',function(){ openPhone(!phoneEl.classList.contains('open')); });
     before(anchor,fileEl);
     if(window.switchTab&&!window.__spkWrapped){ var orig=window.switchTab; window.switchTab=function(tab){ var prev=currentScene(); orig(tab); if(document.documentElement.classList.contains('spk-on')){ if(prev!==tab){ ack(prev); if(prev==='scene') ack('open'); } document.documentElement.dataset.spkTab=tab; markNow(tab); render(); } }; window.__spkWrapped=true; }
@@ -641,8 +684,8 @@
     document.querySelectorAll('.spk').forEach(function(n){n.remove();});
     document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
     fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; R={}; unread=0; }
-  function build(){ try{ P=get(PKEY,null); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
-    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
+  function build(){ try{ P=loadProfile(); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
+    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
