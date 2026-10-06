@@ -1880,8 +1880,584 @@ body.tx-active .tx-toggle-label {
 {
  "lesson": "4.03.05",
  "title": "Geography and Daily Life",
+ "quiet": false,
+ "file": {
+  "n": 3,
+  "title": "First Peoples",
+  "label": "First Peoples",
+  "seals": [
+   "🗺️",
+   "📄",
+   "✍️"
+  ]
+ },
  "prevFile": "Artifacts as Evidence",
  "connector": "Last time we looked at artifacts, like pots, tools and shell piles. Today we look at the land those people lived on.",
+ "minWords": 40,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Map Quest",
+   "t": "Match the clues",
+   "why": "Four clues fell off the map. Put each one on the place in Florida where it belongs."
+  },
+  {
+   "tab": "explore",
+   "r": "Source Study",
+   "t": "Read the seasons",
+   "why": "Read about Florida’s four seasons, then sort the cards onto the year-wheel."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Write a day",
+   "why": "Pick one season and one group of people, and write about one day in their life."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I’m still stuck inside Canvas. I found today’s file, and I need your help to open it.",
+  "opening": [
+   "I found today’s file. It’s called First Peoples. But it’s locked, and a map of Florida is stuck on the front.",
+   "To open it, you’ll match four clues to the right places on the Florida map. The map is in the Map Quest tab, below the welcome video. I can’t reach it from in here, but you can.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the map",
+      "go": true,
+      "reply": "Scroll down past the welcome video. Drag each clue onto the place in Florida where it fits. If a clue bounces back, read the hint and try a different place."
+     },
+     {
+      "t": "What’s in the file?",
+      "reply": "It’s about one year in the life of Florida’s first peoples, one season at a time. You’ll read it in the Source Study tab after the map is done."
+     },
+     {
+      "t": "Are you okay in there?",
+      "reply": "I’m okay, just a little dusty. Every file you finish gets me one room closer to getting out. So let’s start with the map!"
+     }
+    ]
+   },
+   "mapDone": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Source Study tab (tab 2). Open the four season files and read them. Then put each card on the right part of the year-wheel."
+     },
+     {
+      "t": "Why does the map matter?",
+      "reply": "The land decided a lot. People farmed where there was good soil and rain. They fished where there was water. The seasons worked the same way. You’ll see that in tab 2."
+     }
+    ]
+   },
+   "wheelDone": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Answer from what you just read. If you’re not sure, look back at the season files."
+     },
+     {
+      "t": "What if I miss one?",
+      "reply": "That’s okay. The check isn’t graded. If you miss one, reread that season before you start writing."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Where are you now?",
+      "reply": "In a new room! I can hear seagulls and smell salt water. I think one of the next files is about explorers and their ships."
+     },
+     {
+      "t": "Bye for now",
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when the next file shows up."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! All four clues are in the right places, and the map let go of the file. Before you move on, finish the “because” sentences under the map. You’ll use them in Evidence Question 1.",
+     "choice": "mapDone"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! All four cards are on the right seasons. It’s the same village, but life looks very different in each season. Next is the Self-Check tab (tab 3): three quick questions.",
+     "choice": "wheelDone"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), you’ll pick one season and one group of people. Then you’ll write about one day in their life, as if you were there. Use the planner first. It helps you choose what to write about."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, a door just opened and I got one room closer to getting out. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Some months were hard and some were easy. An honest historian tells about both.",
+ "categories": [
+  {
+   "id": "dry",
+   "label": "Dry & cool",
+   "color": "#D4943A",
+   "ico": "🦌"
+  },
+  {
+   "id": "wet",
+   "label": "Wet & warm",
+   "color": "#1A8A7D",
+   "ico": "🌧️"
+  },
+  {
+   "id": "storm",
+   "label": "Hurricane",
+   "color": "#8B6FC0",
+   "ico": "🌀"
+  },
+  {
+   "id": "mild",
+   "label": "Mild weeks",
+   "color": "#34B76F",
+   "ico": "🔥"
+  }
+ ],
+ "scene1": {
+  "type": "mapquest",
+  "kicker": "Map Quest",
+  "h": "Match each clue to a place",
+  "voice": "Drag a clue onto the place it belongs — or tap the clue, then tap the place. When a clue lands, the map tells you who lived there.",
+  "caption": "La Florida · the land before the maps",
+  "zones": [
+   {
+    "id": "north",
+    "people": "Apalachee",
+    "label": "Pine forest & fields",
+    "where": "in the pine forests and fields of the north",
+    "lon": -84.267,
+    "lat": 30.43,
+    "ico": "🌽",
+    "img": "spk-4-03-05-env-pines",
+    "clue": "Corn, beans and squash go into fields fed by the summer rain.",
+    "miss": "Big farm fields need good soil. Look at the north part of Florida."
+   },
+   {
+    "id": "rivers",
+    "people": "Timucua",
+    "label": "River country",
+    "where": "along the rivers of the center and north",
+    "lon": -81.61,
+    "lat": 29.605,
+    "ico": "🏘️",
+    "img": "spk-4-03-05-env-rivers",
+    "clue": "Villages sit along the rivers. In the dry season people walk between them to trade.",
+    "miss": "Look for the place with long rivers, in the middle and north of Florida."
+   },
+   {
+    "id": "coast",
+    "people": "Calusa",
+    "label": "Mangrove coast",
+    "where": "on the mangrove coast of the southwest",
+    "lon": -81.841,
+    "lat": 26.496,
+    "la": "end",
+    "dx": -22,
+    "dy": 4,
+    "ico": "🛶",
+    "img": "spk-4-03-05-env-mangroves",
+    "clue": "People paddle canoes through the mangroves to catch fish and gather oysters.",
+    "miss": "Mangroves are trees that grow in salty water along the coast. Look at the southwest coast."
+   },
+   {
+    "id": "wet",
+    "people": "Tequesta",
+    "label": "Southern wetlands",
+    "where": "at the edge of the southern wetlands",
+    "lon": -80.484,
+    "lat": 25.718,
+    "la": "end",
+    "dx": 24,
+    "dy": 30,
+    "ico": "🏚️",
+    "img": "spk-4-03-05-env-wetlands",
+    "clue": "Houses stand on posts above the water. Before the storms, food is sealed in pots.",
+    "miss": "Where would water come right up to your door? Look at the wetlands at the very bottom of Florida."
+   }
+  ],
+  "notes": {
+   "label": "Map Quest notes · finish each line in your own words",
+   "stem": "The {people} lived {where} because",
+   "target": "journal-q1",
+   "targetLabel": "Evidence Question 1"
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "seasongrid",
+   "activity": "A Year in Florida",
+   "lifeLabel": "Daily life",
+   "counter": {
+    "some": "season files open. Open all four to see the whole year.",
+    "allHead": "All four open.",
+    "all": "Same place, four very different lives. Now look at the year-wheel below."
+   },
+   "cards": [
+    {
+     "id": "dry",
+     "match": "^The dry, cool season",
+     "when": "About November to April",
+     "say": "Less rain, cooler nights and fewer mosquitoes. A calm time of year.",
+     "life": "Hunting deer, trading between villages, fixing tools. The Apalachee got their fields ready."
+    },
+    {
+     "id": "wet",
+     "match": "^The wet, warm season",
+     "when": "About May to October",
+     "say": "Big afternoon thunderstorms. Rivers and wetlands filled up, and the mosquitoes came back.",
+     "life": "The Calusa fished and gathered oysters. The Apalachee planted corn, beans and squash."
+    },
+    {
+     "id": "storm",
+     "match": "^Hurricane season",
+     "when": "June to November (most storms August–October)",
+     "say": "There was no weather radar. People watched the sky, the wind and the animals to know a storm was coming.",
+     "life": "Houses were built up on posts and food was sealed in pots. After a storm, families rebuilt together."
+    },
+    {
+     "id": "mild",
+     "match": "^The brief, mild",
+     "when": "The weeks in between",
+     "say": "A few gentle weeks between the big seasons, when the weather was calm.",
+     "life": "Ceremonies, weddings, stories around the fire. Elders taught the children."
+    }
+   ]
+  },
+  "evidence": {
+   "type": "wheelsort",
+   "kicker": "Source Study · What does it mean?",
+   "h": "Sort the season cards",
+   "voice": "Each card tells about one season. Drag it onto the right part of the wheel, or tap a card and then tap a season. ",
+   "aria": "Florida year wheel",
+   "order": [
+    "wet",
+    "mild",
+    "storm",
+    "dry"
+   ],
+   "center": [
+    "ONE",
+    "YEAR"
+   ],
+   "win": "All four are in the right place! Now think about the question above: the <em>same</em> village looked very different in each season. What does that tell you about how people planned their year?",
+   "journalLabel": "Year-wheel",
+   "journalUnit": "pages back in place",
+   "cards": [
+    {
+     "s": "dry",
+     "t": "Deer hunting on dry trails through the pines",
+     "miss": "Hunting is easier on dry ground with fewer mosquitoes. Which season had that?"
+    },
+    {
+     "s": "wet",
+     "t": "Apalachee plant corn, beans and squash",
+     "miss": "Corn needs heat and lots of water. Which season had the most rain?"
+    },
+    {
+     "s": "storm",
+     "t": "Food sealed in pots; houses built up on posts",
+     "miss": "These people are getting ready for something dangerous. What was coming?"
+    },
+    {
+     "s": "mild",
+     "t": "Weddings, ceremonies and stories around the fire",
+     "miss": "Big gatherings happened when the weather was gentle, in the weeks between the big seasons."
+    }
+   ]
+  }
+ },
+ "planner": {
+  "type": "picks",
+  "voice": "Pick one thing in each row. These are just notes. You’ll write your own sentences in Step 3.",
+  "catLabel": "Which season?",
+  "catWord": "Season",
+  "peopleLabel": "Which people?",
+  "gate": "Pick a season first.",
+  "gateLong": "Pick a season first, and the rest opens up.",
+  "people": [
+   {
+    "id": "apalachee",
+    "t": "Apalachee",
+    "ico": "🌽"
+   },
+   {
+    "id": "timucua",
+    "t": "Timucua",
+    "ico": "🏘️"
+   },
+   {
+    "id": "calusa",
+    "t": "Calusa",
+    "ico": "🛶"
+   },
+   {
+    "id": "tequesta",
+    "t": "Tequesta",
+    "ico": "🏚️"
+   }
+  ],
+  "steps": [
+   {
+    "k": "morning",
+    "label": "The morning"
+   },
+   {
+    "k": "midday",
+    "label": "The middle of the day"
+   },
+   {
+    "k": "evening",
+    "label": "The evening"
+   },
+   {
+    "k": "hard",
+    "label": "One honest hard thing"
+   }
+  ],
+  "plan": {
+   "dry": {
+    "morning": [
+     "cool, clear, few mosquitoes",
+     "dry ground underfoot"
+    ],
+    "midday": [
+     "deer trails through the pines",
+     "fixing tools and nets",
+     "walking to a neighboring village to trade"
+    ],
+    "evening": [
+     "working on the shelters",
+     "planning next year’s fields"
+    ],
+    "hard": [
+     "rivers lower, fewer fish",
+     "lots of work, not much rest"
+    ]
+   },
+   "wet": {
+    "morning": [
+     "hot and sticky, big storm clouds building",
+     "the river is high after a night of rain"
+    ],
+    "midday": [
+     "planting corn, beans and squash",
+     "paddling out to fish",
+     "gathering oysters by the mangroves"
+    ],
+    "evening": [
+     "smoke fires against the mosquitoes",
+     "the afternoon storm passing"
+    ],
+    "hard": [
+     "clouds of mosquitoes",
+     "heat and storms slow every job"
+    ]
+   },
+   "storm": {
+    "morning": [
+     "the sky turns a strange color and the wind changes",
+     "birds flying inland"
+    ],
+    "midday": [
+     "sealing food in pots, tying down the house",
+     "pulling the canoes up the bank",
+     "moving the elders to the strongest house"
+    ],
+    "evening": [
+     "waiting it out together with stories",
+     "going house to house after the storm"
+    ],
+    "hard": [
+     "one storm can wreck a village in a night",
+     "waiting for what you cannot stop"
+    ]
+   },
+   "mild": {
+    "morning": [
+     "nice, gentle weather",
+     "neither hot nor cold"
+    ],
+    "midday": [
+     "a ceremony, then a wedding",
+     "visitors, trading and news"
+    ],
+    "evening": [
+     "stories around the fire",
+     "elders teaching the children"
+    ],
+    "hard": [
+     "the nice weather doesn’t last long",
+     "making the stored food last"
+    ]
+   }
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a season",
+    "rx": "\\b(dry|cool|wet|warm|rainy|hurricane|storm|mild|in-between)\\b"
+   },
+   {
+    "t": "a people",
+    "rx": "\\b(apalachee|timucua|calusa|tequesta)\\b"
+   },
+   {
+    "t": "a weather detail",
+    "rx": "\\b(rain|storm|wind|sun|hot|humid|cool|mosquito|thunder|flood|dry|sky)\\w*"
+   },
+   {
+    "t": "food or work",
+    "rx": "\\b(hunt|fish|plant|corn|bean|squash|oyster|mullet|canoe|trade|build|gather|cook|eat|deer|net|ceremony|wedding|stor(y|ies))\\w*"
+   },
+   {
+    "t": "something hard",
+    "rx": "\\b(hard|difficult|dangerous|scary|hungry|tired|lost|rebuild|worry|storm|mosquito|never lasts|stretch)\\w*"
+   }
+  ],
+  "lines": [
+   "Start anywhere. Season or people — either one works.",
+   "Good. Now give them a morning. What’s the weather doing when they wake up?",
+   "That sounds like a real day. Now add one thing that was hard about it.",
+   "Great, that sounds like someone who was really there. Now finish the turn-in checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use details from the lesson."
+  },
+  {
+   "t": "Plan",
+   "w": "Choose a season, a group of people, and what happens in their day."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Day in the Life entry, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "A Day in the Life"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Day in the Life entry and check off the whole list.",
+ "vocab": {
+  "type": "rootdig",
+  "kicker": "Root Dig",
+  "h": "Dig up the geo words",
+  "root": "geo",
+  "win": "✨ Root found: <b>geo</b> = earth, land",
+  "voice": "All four words are buried in Florida ground. Brush the sand off each one (drag across it, or tap it a few times). When a word comes up, read what it means and look at how the word is built.",
+  "words": [
+   {
+    "w": "geography",
+    "rest": "graphy",
+    "m": "writing or describing the earth",
+    "part": "-graphy means writing or drawing",
+    "layer": 0,
+    "x": 16
+   },
+   {
+    "w": "geology",
+    "rest": "logy",
+    "m": "the study of the earth’s rocks",
+    "part": "-logy means the study of",
+    "layer": 1,
+    "x": 62
+   },
+   {
+    "w": "geometry",
+    "rest": "metry",
+    "m": "earth-measure: shapes and space",
+    "part": "-metry means measuring",
+    "layer": 2,
+    "x": 30
+   },
+   {
+    "w": "geothermal",
+    "rest": "thermal",
+    "m": "heat from inside the earth",
+    "part": "thermal means heat",
+    "layer": 3,
+    "x": 70
+   }
+  ]
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Why we start with a map",
+   "at": "scene1",
+   "script": "Quick voice note, because typing on this phone is slow. Here’s why we start with a map and not a story. A map can’t tell you what anyone ate for breakfast. It can tell you what was possible. Some places make it easy to grow food, some make it easy to fish, some make both hard. As you match the clues, notice the reason each one fits. That reason is the lesson."
+  },
+  {
+   "slot": "guide2",
+   "label": "Geography has a “when”",
+   "at": "explore",
+   "script": "Most people think geography just means where. Today it also means when. Picture your own street during a big storm, and then on the nicest day of the year. Same street, two different lives. The first Floridians lived that four times every year. While you read the seasons, keep asking yourself one thing: what would I have to do differently right now?"
+  },
+  {
+   "slot": "guide3",
+   "label": "The page I care about most",
+   "at": "write",
+   "script": "This is the writing part, and honestly it’s the one I care about most. Anybody can list facts about a season. A historian tries to tell it the way someone who lived it would have felt it, including the hard part. So don’t write a perfect day. Write a true one. Use your plan, but the sentences have to be yours."
+  },
+  {
+   "slot": "checkperfect",
+   "label": "Three out of three",
+   "at": "score",
+   "when": "perfect",
+   "script": "Three out of three! That tells me you really read those season files. Hang on to those details, because you’ll need them when you write. Next, go to the Historian’s Notebook tab. That’s where you’ll write about one day in one season."
+  },
+  {
+   "slot": "checkreview",
+   "label": "About the ones you missed",
+   "at": "score",
+   "when": "review",
+   "script": "That’s okay. These questions are just to see what stuck, and they aren’t graded. Look at the ones you missed and find the season each one asked about. Go back to the Source Study tab and reread that season file. Then come to the Historian’s Notebook tab when you’re ready."
+  }
+ ],
+ "cabinet": {
+  "n": 3
+ },
  "notes": {
   "learned": [
    "Florida’s first peoples lived through four seasons: dry and cool, wet and warm, hurricane season, and the mild weeks in between.",
@@ -4058,1067 +4634,9 @@ function toggleTX() {
 })();
 </script>
 
-<!-- ═══ FLORIDA FILES · SPARKLE LAYER — additive; delete the ff-data block, this style and this script to restore the plain lesson ═══ -->
-<style id="spk-css">
-/* ═══ FLORIDA FILES · sparkle layer — additive.
-   v6: the teacher texts from a phone. Every "Message from Inside Canvas" is a chat now — no sticky notes.
-   The file's tabs look like folder tabs and say what they do. The drawer became a cabinet with a map. ═══ */
-:root { --ffn:#0E1C42; --ffi:#22304A; --ffs:#5B667A; --ffl:#E7DFD0; --ffp:#FAF6EE; --ffc:#FFFDF8; --ffg:#C9A24A; --ffg2:#8A6A1E; --ffr:#A3312B; --ffk:#55C8E8; --ffgreen:#1E8C7C; --ffbubble:#2E7BF6; }
-.spk-hide { display: none !important; }
-.spk-outline .spk { outline: 2px dashed #E8636B; outline-offset: 4px; }
-.spk-mockbar { position: fixed; left: 12px; bottom: 12px; z-index: 99999; opacity: .92; background: var(--ffn); color: #fff; border-radius: 10px; padding: 7px 10px; font: 600 11px/1.3 'Nunito', sans-serif; box-shadow: 0 8px 24px rgba(0,0,0,.25); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.spk-mockbar b { color: var(--ffk); letter-spacing: .06em; }
-.spk-mockbar label { display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }
-.spk-mockbar button { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.4); border-radius: 7px; padding: 4px 8px; font: 800 11px 'Nunito', sans-serif; cursor: pointer; }
-
-/* hidden by the layer: base tab bar (file tabs replace it), Today's Path (the tabs are the path), both sticky notes (they're texts now), the path chip (the cabinet replaces it) */
-html.spk-on #tabBar, html.spk-on .todays-path, html.spk-on .canvas-path-chip, html.spk-on .tab-section-header, html.spk-on .canvas-sticky { display: none !important; }
-html.spk-on .canvas-unlock-stamp { background: #FDF6E4; }
-
-/* ---------- THE FILE — sticky bar. The tabs are folder tabs and they move you through the lesson. ---------- */
-.spk-file { position: sticky; top: 0; z-index: 60; background: linear-gradient(180deg, #F7EED8, #EFE1BE); border-bottom: 2px solid #C9B486; box-shadow: 0 6px 18px -10px rgba(60,40,10,.4); }
-.spk-file-row { display: grid; grid-template-columns: 72px 1fr auto; gap: 14px; align-items: end; padding: 8px 18px 0; }
-@media (max-width: 720px) { .spk-file-row { grid-template-columns: 1fr; } .spk-folder-svg { display: none; } }
-.spk-folder-svg { width: 72px; height: auto; display: block; filter: drop-shadow(0 4px 6px rgba(60,40,10,.25)); margin-bottom: 8px; }
-.spk-folder-svg .lid { transition: transform .9s cubic-bezier(.2,.8,.2,1); transform-origin: 0 100%; transform-box: fill-box; }
-.spk-file.open .spk-folder-svg .lid { transform: rotateX(70deg) translateY(-6px); opacity: .9; }
-.spk-seal { opacity: .22; transition: opacity .5s, transform .5s; transform-box: fill-box; transform-origin: center; }
-.spk-seal.on { opacity: 1; transform: scale(1.1); }
-.spk-file-sub { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; color: var(--ffg2); text-transform: uppercase; }
-.spk-file-sub .hint { font: italic 600 12px 'Lora', Georgia, serif; letter-spacing: 0; text-transform: none; color: #6B5A33; }
-.spk-tabs { display: flex; align-items: flex-end; gap: 4px; margin-top: 6px; }
-.spk-tab { position: relative; flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 8px 12px 9px 10px; border: 1px solid #C9B486; border-bottom: 0; border-radius: 10px 10px 0 0; background: #E4D4AC; color: #5C4A2A; font: 700 12.5px/1.2 'Nunito', sans-serif; cursor: pointer; transition: background .15s, transform .15s; text-align: left; }
-.spk-tab:hover { background: #EEE2C2; transform: translateY(-2px); }
-.spk-tab .n { flex: none; width: 20px; height: 20px; border-radius: 50%; background: #B89860; color: #fff; font: 800 11px/20px 'Nunito', sans-serif; text-align: center; }
-.spk-tab .l { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.spk-tab .l small { display: block; font: 600 10.5px 'Nunito', sans-serif; color: #7A6540; margin-top: 1px; }
-.spk-tab.now { background: #FFFDF5; color: var(--ffn); padding-top: 11px; border-color: #B89860; box-shadow: 0 -4px 10px -6px rgba(60,40,10,.4); z-index: 2; }
-.spk-tab.now::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 4px; background: #FFFDF5; }
-.spk-tab.now .n { background: var(--ffg); color: #3F2E0C; }
-.spk-tab.done .n { background: #34B76F; } .spk-tab.done .n::before { content: "✓"; }
-.spk-tab.done .n span { display: none; }
-.spk-tab:focus-visible { outline: 3px solid var(--ffk); outline-offset: -3px; }
-/* the Messages button on the file */
-.spk-mail { position: relative; display: inline-flex; align-items: center; gap: 8px; background: var(--ffn); color: #fff; border: 2px solid var(--ffn); border-radius: 999px; padding: 8px 14px 8px 10px; font: 800 12.5px 'Nunito', sans-serif; cursor: pointer; white-space: nowrap; margin-bottom: 8px; }
-.spk-mail .n { display: none; min-width: 20px; height: 20px; border-radius: 10px; background: var(--ffr); color: #fff; font: 800 11px/20px 'Nunito', sans-serif; text-align: center; padding: 0 5px; }
-.spk-mail.unread .n { display: inline-block; }
-.spk-mail.unread { animation: spk-ring 1.8s ease-out infinite; }
-@keyframes spk-ring { 0% { box-shadow: 0 0 0 0 rgba(163,49,43,.55) } 70% { box-shadow: 0 0 0 12px rgba(163,49,43,0) } 100% { box-shadow: 0 0 0 0 rgba(163,49,43,0) } }
-
-/* ---------- THE PHONE ---------- */
-.spk-phone { position: fixed; right: 18px; bottom: 18px; z-index: 9000; width: 332px; max-width: calc(100vw - 36px); height: min(620px, calc(100vh - 36px)); display: none; flex-direction: column; background: #111; border-radius: 40px; padding: 12px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 0 0 2px #333 inset; }
-.spk-phone.open { display: flex; animation: spk-phone-in .3s cubic-bezier(.2,.8,.2,1); }
-@keyframes spk-phone-in { from { transform: translateY(40px) scale(.96); opacity: 0 } to { transform: none; opacity: 1 } }
-.spk-screen { flex: 1; display: flex; flex-direction: column; background: #F2EFE6; border-radius: 30px; overflow: hidden; position: relative; }
-.spk-notch { position: absolute; top: 8px; left: 50%; width: 110px; height: 26px; margin-left: -55px; background: #111; border-radius: 16px; z-index: 3; }
-.spk-status { display: flex; justify-content: space-between; padding: 12px 22px 0; font: 700 12px 'Nunito', sans-serif; color: #111; }
-.spk-contact { display: flex; align-items: center; gap: 10px; padding: 10px 14px 10px 16px; background: #FAF8F2; border-bottom: 1px solid #DDD6C6; }
-.spk-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--ffg), var(--ffg2)); display: grid; place-items: center; font-size: 20px; color: #fff; flex: none; position: relative; }
-.spk-avatar::after { content: ""; position: absolute; right: -1px; bottom: -1px; width: 11px; height: 11px; border-radius: 50%; background: #34B76F; border: 2px solid #FAF8F2; }
-.spk-contact .nm { font: 800 14px 'Nunito', sans-serif; color: #111; } .spk-contact .st { font: 600 11.5px 'Nunito', sans-serif; color: #6B6B6B; }
-.spk-contact .x { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 0; background: #E6E1D4; color: #333; font: 800 16px/32px 'Nunito', sans-serif; cursor: pointer; }
-.spk-contact .x:hover { background: #D8D1BF; }
-.spk-msgs-wrap { flex: 1; overflow: auto; padding: 12px 12px 6px; }
-.spk-msgs { display: flex; flex-direction: column; gap: 6px; }
-.spk-msg { max-width: 84%; padding: 9px 13px; border-radius: 18px; font: 500 14.5px/1.4 'Nunito', sans-serif; animation: spk-in .3s ease-out; word-wrap: break-word; }
-.spk-msg.t { align-self: flex-start; background: #fff; color: #111; border-bottom-left-radius: 5px; box-shadow: 0 1px 1px rgba(0,0,0,.06); }
-.spk-msg.s { align-self: flex-end; background: var(--ffbubble); color: #fff; border-bottom-right-radius: 5px; }
-.spk-msg.sys { align-self: center; background: transparent; font: 600 11px 'Nunito', sans-serif; color: #8A8A8A; padding: 4px 8px; text-transform: uppercase; letter-spacing: .08em; }
-@keyframes spk-in { from { transform: translateY(6px); opacity: 0 } to { transform: none; opacity: 1 } }
-.spk-composer { padding: 8px 10px 14px; background: #FAF8F2; border-top: 1px solid #DDD6C6; }
-.spk-composer .lab { font: 700 10.5px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #8A8A8A; margin: 0 4px 6px; }
-.spk-choices { display: flex; flex-wrap: wrap; gap: 6px; }
-.spk-choice { font: 700 13px 'Nunito', sans-serif; color: var(--ffbubble); background: #fff; border: 1.5px solid var(--ffbubble); border-radius: 999px; padding: 7px 12px; cursor: pointer; transition: all .15s; }
-.spk-choice:hover { background: var(--ffbubble); color: #fff; }
-.spk-choice.go { background: var(--ffbubble); color: #fff; }
-.spk-composer .none { font: italic 500 12.5px 'Nunito', sans-serif; color: #8A8A8A; padding: 2px 4px; }
-/* the lock-screen style notification that drops in when a new text arrives */
-.spk-toast { position: fixed; top: 14px; left: 50%; z-index: 9500; width: 360px; max-width: calc(100vw - 28px); transform: translate(-50%, -140%); transition: transform .35s cubic-bezier(.2,.8,.2,1); display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 22px; background: rgba(28,28,30,.94); color: #fff; box-shadow: 0 16px 40px rgba(0,0,0,.4); cursor: pointer; backdrop-filter: blur(8px); }
-.spk-toast.show { transform: translate(-50%, 0); }
-.spk-toast .ic { width: 38px; height: 38px; border-radius: 10px; background: #34B76F; display: grid; place-items: center; font-size: 20px; flex: none; }
-.spk-toast .tx { min-width: 0; flex: 1; } .spk-toast .tx b { display: flex; justify-content: space-between; font: 800 12.5px 'Nunito', sans-serif; } .spk-toast .tx b small { font-weight: 600; color: #BBB; }
-.spk-toast .tx span { display: block; font: 500 13.5px/1.35 'Nunito', sans-serif; color: #EEE; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-/* a text that lands in the page, where it happened */
-.spk-note { max-width: 640px; margin: 18px auto 0; }
-.spk-note .k { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-.spk-note .k .spk-avatar { width: 22px; height: 22px; font-size: 12px; } .spk-note .k .spk-avatar::after { display: none; }
-.spk-note .spk-msg.t { background: #fff; border: 1px solid #E3DED1; }
-.spk-note .spk-choices { justify-content: flex-end; margin-top: 8px; }
-.spk-note.opening { max-width: none; margin: 0 0 18px; padding: 16px 20px; background: #F2EFE6; border: 1px solid #DDD6C6; border-radius: 18px; }
-
-/* ---------- scene heads ---------- */
-.spk-scene { margin: 8px 0 14px; }
-.spk-scene-head { display: flex; gap: 14px; align-items: baseline; }
-.spk-scene-n { font: 700 40px/1 'Lora', Georgia, serif; color: var(--ffg); }
-.spk-scene-k { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--ffg2); }
-.spk-scene-t { font: 700 24px 'Lora', Georgia, serif; color: var(--ffn); margin: 2px 0 2px; }
-.spk-scene-why { font: italic 500 15.5px/1.45 'Lora', Georgia, serif; color: var(--ffs); margin: 0; }
-
-/* ---------- interactions inside the lesson's own cards ---------- */
-.spk-game { margin-top: 16px; padding-top: 14px; border-top: 1px dashed #D8C7A2; }
-.spk-game-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
-.spk-h { font: 700 19px 'Lora', Georgia, serif; color: var(--ffn); }
-.spk-kicker { display: inline-flex; align-items: center; gap: 6px; font: 800 11px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; background: #FBF1D6; color: var(--ffg2); }
-.spk-voice { font: italic 500 15px/1.45 'Lora', Georgia, serif; color: var(--ffs); margin: 4px 0 12px; }
-.spk-chips { display: grid; gap: 8px; margin: 8px 0; }
-.spk-chip { display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: center; text-align: left; font: 600 13.5px/1.35 'Nunito', sans-serif; color: var(--ffi); background: #fff; border: 1.5px solid var(--ffl); border-left-width: 6px; border-radius: 8px; padding: 7px 10px 7px 7px; cursor: grab; box-shadow: 0 1px 2px rgba(34,48,74,.06); transition: transform .15s, box-shadow .15s; }
-.spk-chip.noimg { grid-template-columns: 28px 1fr; }
-.spk-chip .ico { font-size: 22px; line-height: 1; text-align: center; }
-.spk-chip .ph { width: 64px; height: 48px; border-radius: 4px; object-fit: cover; background: #EFE7D6; display: grid; place-items: center; font-size: 20px; }
-.spk-chip:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(34,48,74,.1); }
-.spk-chip.sel { border-color: var(--ffg); background: #FFF8DF; box-shadow: 0 0 0 3px rgba(201,162,74,.25); }
-.spk-chip.done { opacity: .5; cursor: default; }
-.spk-chip.shake { animation: spk-shake .4s; border-color: #E8636B; }
-@keyframes spk-shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
-.spk-miss { font: italic 500 15px 'Lora', Georgia, serif; color: var(--ffr); min-height: 24px; margin: 2px 0 0; }
-.spk-maplock { display: grid; grid-template-columns: minmax(240px, 1.1fr) minmax(220px, 1fr); gap: 18px; align-items: start; }
-@media (max-width: 640px) { .spk-maplock { grid-template-columns: 1fr; } }
-.spk-map svg { width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: inset 0 0 0 1px #B89860, 0 4px 12px rgba(60,40,10,.2); }
-.spk-zone { cursor: pointer; } .spk-zone .ring { transition: all .25s; } .spk-zone:hover .ring { stroke-width: 3; }
-.spk-zone.armed .ring { stroke: var(--ffg); stroke-width: 3; stroke-dasharray: 6 4; animation: spk-dash 1.2s linear infinite; }
-.spk-zone.over .ring { fill: #FFF4DC; fill-opacity: 1; stroke-width: 4; }
-@keyframes spk-dash { to { stroke-dashoffset: -20 } }
-.spk-zone.solved .ring { fill: #F6E3B4; fill-opacity: .95; stroke: var(--ffg2); }
-.spk-zone .pp { opacity: 0; transition: opacity .4s .1s; } .spk-zone.solved .pp { opacity: 1; }
-.spk-notes { margin-top: 14px; padding: 14px 16px; background: var(--ffc); border: 1px solid var(--ffl); border-left: 5px solid var(--ffg); border-radius: 10px; }
-.spk-notes .k { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 8px; }
-.spk-stem { display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; margin: 6px 0; font: 500 15px/1.5 'Nunito', sans-serif; color: var(--ffi); }
-.spk-stem b { font-weight: 700; }
-.spk-stem input { font: 500 15px 'Nunito', sans-serif; padding: 6px 10px; border: 1.5px solid #E7DFD0; border-radius: 8px; width: 100%; min-width: 0; }
-.spk-stem input:focus { outline: none; border-color: var(--ffg); }
-.spk-link { display: inline-block; margin-top: 10px; font: 800 13px 'Nunito', sans-serif; color: var(--ffn); background: #fff; border: 1.5px solid var(--ffn); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
-.spk-link[disabled] { opacity: .4; cursor: default; }
-.spk-wheelwrap { display: grid; grid-template-columns: minmax(200px, 240px) 1fr; gap: 18px; align-items: start; }
-@media (max-width: 640px) { .spk-wheelwrap { grid-template-columns: 1fr; } }
-.spk-wheel svg { width: 100%; height: auto; display: block; }
-.spk-quad { cursor: pointer; } .spk-quad path { transition: fill-opacity .2s; }
-.spk-quad:hover path, .spk-quad.over path { fill-opacity: 1; stroke: var(--ffn); stroke-width: 3; } .spk-quad.armed path { stroke: var(--ffg); stroke-width: 4; }
-.spk-quad .pg { opacity: 0; transition: opacity .3s; } .spk-quad .pg.on { opacity: 1; }
-.spk-win { display: none; margin-top: 12px; padding: 10px 14px; border-radius: 10px; background: #E3F2EF; border: 1px solid #9FD0C6; color: #0F5A50; font: 600 14.5px/1.45 'Nunito', sans-serif; }
-.spk-win.show { display: block; animation: spk-in .35s ease-out; }
-.spk-builder { margin: 14px 0 6px; padding: 16px 18px; background: var(--ffc); border: 1px solid var(--ffl); border-radius: 14px; }
-.spk-step { margin: 10px 0; } .spk-step .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 6px; }
-.spk-opts { display: flex; gap: 8px; flex-wrap: wrap; }
-.spk-opt { font: 700 13px 'Nunito', sans-serif; color: var(--ffn); background: #fff; border: 1.5px solid var(--ffl); border-radius: 999px; padding: 7px 13px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
-.spk-opt.on { background: var(--ffn); color: #fff; border-color: var(--ffn); }
-.spk-gate { font: italic 500 14.5px 'Lora', Georgia, serif; color: var(--ffg2); margin: 0; }
-.spk-plan { margin-top: 12px; padding: 12px 16px; background: var(--ffp); border: 1px dashed #C9B486; border-radius: 10px; font: 500 14.5px/1.7 'Nunito', sans-serif; color: var(--ffi); }
-.spk-plan b { color: var(--ffg2); font-weight: 800; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; margin-right: 4px; }
-.spk-coach { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 0; }
-.spk-coach span { font: 700 11.5px 'Nunito', sans-serif; padding: 4px 10px; border-radius: 999px; border: 1.5px dashed #CDBE98; color: #8A7A5A; background: #fff; transition: all .2s; }
-.spk-coach span.hit { border-style: solid; border-color: #1F4515; background: #E3F8ED; color: #1F4515; }
-.spk-coach-voice { font: italic 500 14.5px 'Lora', Georgia, serif; color: #4A3811; margin-top: 6px; min-height: 20px; }
-
-/* ---------- THE FLORIDA FILES — cabinet + map ---------- */
-.spk-cab { margin: 18px 0; background: var(--ffc); border: 1px solid var(--ffl); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px -18px rgba(34,48,74,.3); }
-.spk-cab-head { display: flex; align-items: center; gap: 14px; padding: 14px 20px; background: linear-gradient(180deg, #F7EED8, #EFE1BE); border-bottom: 1px solid #C9B486; }
-.spk-cab-head .tt { font: 700 20px 'Lora', Georgia, serif; color: var(--ffn); } .spk-cab-head .ss { font: italic 500 13.5px 'Lora', Georgia, serif; color: var(--ffs); }
-.spk-cab-head .cnt { margin-left: auto; font: 800 12px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--ffg2); background: #fff; border: 1px solid #D8C7A2; border-radius: 999px; padding: 6px 12px; white-space: nowrap; }
-.spk-cab-body { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 18px; padding: 18px 20px; align-items: start; }
-@media (max-width: 720px) { .spk-cab-body { grid-template-columns: 1fr; } }
-.spk-cab-map svg { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: inset 0 0 0 1px #B89860, 0 4px 12px rgba(60,40,10,.2); }
-.spk-pin { cursor: pointer; } .spk-pin .dot { fill: #CDBE98; stroke: #fff; stroke-width: 2; transition: all .25s; } .spk-pin text { font: 800 9px 'Nunito', sans-serif; fill: #fff; pointer-events: none; }
-.spk-pin.lit .dot { fill: var(--ffg); } .spk-pin.now .dot { fill: #fff; stroke: var(--ffg); stroke-width: 3; } .spk-pin.now text { fill: var(--ffn); }
-.spk-pin.now .halo { animation: spk-halo 1.6s ease-out infinite; } .spk-pin .halo { fill: none; stroke: var(--ffg); stroke-width: 2; opacity: 0; }
-@keyframes spk-halo { 0% { r: 9; opacity: .9 } 100% { r: 22; opacity: 0 } }
-.spk-pin:hover .dot { stroke-width: 4; } .spk-pin.sel .dot { stroke: var(--ffn); stroke-width: 3; }
-.spk-cab-cap { text-align: center; font: italic 500 13px 'Lora', Georgia, serif; color: var(--ffs); margin-top: 8px; }
-.spk-drawer { background: linear-gradient(#5C4A2A, #3F2E0C); border-radius: 10px; padding: 16px 12px 12px; position: relative; box-shadow: inset 0 0 0 2px var(--ffg2), 0 10px 24px rgba(0,0,0,.3); }
-.spk-drawer::after { content: ""; position: absolute; left: 50%; bottom: 5px; width: 64px; height: 7px; margin-left: -32px; border-radius: 4px; background: #D4A95A; box-shadow: inset 0 1px 0 rgba(255,255,255,.5); }
-.spk-drawer-lab { position: absolute; top: -10px; left: 16px; background: #F6E3B4; border: 1px solid var(--ffg2); border-radius: 4px; padding: 2px 8px; font: 800 9.5px ui-monospace, Menlo, monospace; letter-spacing: .12em; color: #3F2E0C; }
-.spk-folders { display: flex; gap: 3px; align-items: flex-end; height: 100px; }
-.spk-f { flex: 1; position: relative; height: 76px; background: #CDBE98; border-radius: 4px 4px 0 0; opacity: .5; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .35s, box-shadow .35s; border: 1px solid rgba(0,0,0,.15); overflow: hidden; cursor: pointer; }
-.spk-f::before { content: ""; position: absolute; top: 0; left: 15%; width: 50%; height: 7px; background: rgba(0,0,0,.08); border-radius: 0 0 3px 3px; }
-.spk-f .n { position: absolute; left: 0; right: 0; bottom: 3px; text-align: center; font: 800 9px 'Nunito', sans-serif; color: #3F2E0C; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 2px; }
-.spk-f img { position: absolute; inset: 8px 3px 16px; width: calc(100% - 6px); height: calc(100% - 24px); object-fit: cover; border-radius: 2px; }
-.spk-f:hover { transform: translateY(-6px); opacity: .85; }
-.spk-f.unlocked { opacity: 1; background: #E8D4A8; }
-.spk-f.now { opacity: 1; background: #FFF8B8; }
-.spk-f.sel { transform: translateY(-18px); opacity: 1; box-shadow: 0 0 0 2px var(--ffg), 0 8px 14px rgba(0,0,0,.35); z-index: 2; }
-.spk-f.door { background: #7A5A12; } .spk-f.door::after { content: "🚪"; position: absolute; top: 22px; left: 0; right: 0; text-align: center; font-size: 18px; opacity: .8; }
-.spk-f.justopened { animation: spk-rise .8s ease-out; } @keyframes spk-rise { 0% { transform: translateY(0) } 40% { transform: translateY(-28px) } 100% { transform: translateY(-18px) } }
-.spk-card { text-align: left; margin-top: 16px; position: relative; display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 14px 16px; background: #FFFDF5; border: 1px solid #D8C7A2; border-radius: 6px 14px 6px 6px; box-shadow: 0 6px 16px rgba(60,40,10,.15); animation: spk-in .3s ease-out; }
-.spk-card .th { width: 96px; height: 72px; border-radius: 4px; background: #EFE7D6; object-fit: cover; display: grid; place-items: center; font-size: 28px; }
-.spk-card .tab { position: absolute; top: -10px; left: 14px; background: #E8D4A8; border: 1px solid #B89860; border-radius: 4px 4px 0 0; padding: 1px 9px; font: 800 9.5px ui-monospace, Menlo, monospace; letter-spacing: .12em; color: #5C4A2A; }
-.spk-card .tt { font: 700 17px 'Lora', Georgia, serif; color: var(--ffn); margin-top: 2px; }
-.spk-card .st { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; margin: 2px 0 6px; }
-.spk-card .st.open { color: #1F7A3E; } .spk-card .st.locked { color: #8A7A5A; } .spk-card .st.now { color: var(--ffg2); }
-.spk-card .bd { font: 500 14px/1.5 'Nunito', sans-serif; color: var(--ffi); } .spk-card .bd .qq { font: italic 500 14.5px 'Lora', Georgia, serif; color: #3F2E0C; }
-.spk-card .stamp { position: absolute; right: 14px; top: 10px; transform: rotate(-12deg); border: 3px solid #A3312B; color: #A3312B; border-radius: 6px; padding: 2px 8px; font: 900 13px 'Nunito', sans-serif; letter-spacing: .18em; text-transform: uppercase; opacity: .9; }
-.spk-card .stamp.new { animation: spk-stamp .5s cubic-bezier(.2,.8,.2,1); } @keyframes spk-stamp { 0% { transform: rotate(-12deg) scale(2.2); opacity: 0 } 100% { transform: rotate(-12deg) scale(1); opacity: .9 } }
-
-/* ═════════ v7 · CLEAN-UP PASS ═════════
-   Three visual families only:
-     manila / cream  = the Florida Files story (file bar, texts, file card, cabinet)
-     white + one teal edge = learning content (readings, callouts, sources, questions)
-     navy / cyan     = actions, video, input
-   The top of the page collapses to one header row; the file tabs are the progress indicator. */
-:root { --ffedge:#1A8A7D; --ffline:#E2E8F4; }
-
-/* ---- the top: one header row, no progress bar, no info strip, hero on Learn only ---- */
-html.spk-on .progress-wrap, html.spk-on .info-strip, html.spk-on .section-divider { display: none !important; }
-html.spk-on .header { display: flex; align-items: center; gap: 12px; padding: 10px 16px 12px; flex-wrap: wrap; overflow: visible; border-bottom-width: 4px; }
-html.spk-on .header::after { display: none; }
-html.spk-on .header-brand { margin: 0; }
-html.spk-on .header-brand > div:not(.header-logo) { display: none; }
-html.spk-on .header-logo { width: 36px; height: 36px; }
-html.spk-on .header-logo img { width: 32px; height: 26px; }
-html.spk-on .header-title { flex: 1 1 260px; min-width: 0; margin: 0; font-size: 21px; }
-html.spk-on .header-badge { padding: 3px 10px; border-radius: 999px; }
-html.spk-on .header-badge-icon { font-size: 14px; } html.spk-on .header-badge-text { font-size: 13px; }
-.spk-hd-meta { font: 700 12.5px/1.3 'Nunito', sans-serif; color: #B8C6E0; margin-top: 2px; }
-.spk-hd-meta b { color: #fff; font-weight: 800; }
-.spk-hd-tools { display: flex; gap: 6px; }
-.spk-pill { font: 800 12px 'Nunito', sans-serif; color: #fff; background: rgba(85,200,232,.14); border: 1.5px solid rgba(85,200,232,.45); border-radius: 999px; padding: 5px 11px; cursor: pointer; white-space: nowrap; }
-.spk-pill:hover, .spk-pill[aria-expanded="true"] { background: #55C8E8; color: #0E1C42; border-color: #55C8E8; }
-.spk-hd-panel { display: none; background: #F4F9FC; border-bottom: 1px solid #C5DCE5; padding: 12px 18px; }
-.spk-hd-panel.open { display: block; }
-.spk-hd-panel #optima-read-aloud { margin: 0; border: 0; background: none; padding: 0; }
-.spk-hd-panel .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font: 600 13.5px/1.5 'Nunito', sans-serif; color: #22304A; }
-.spk-hd-panel .row b { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #5B667A; }
-.spk-hd-panel .tx-toggle { cursor: pointer; display: inline-flex; align-items: center; gap: 6px; background: #0E1C42; border-radius: 999px; padding: 4px 10px; }
-html.spk-on:not([data-spk-tab="scene"]) .spk-hero,
-html.spk-on:not([data-spk-tab="scene"]) #introSection,
-html.spk-on:not([data-spk-tab="scene"]) .spk-note.opening { display: none !important; }
-html.spk-on .spk-hero { height: auto; }
-/* intro: Big Question + objectives, smaller and in the content family */
-html.spk-on .intro-section { padding-top: 14px; }
-html.spk-on .intro-collapsed-bar { display: none !important; }
-html.spk-on .intro-card { border: 1px solid var(--ffline); border-left: 4px solid var(--ffedge); border-radius: 12px; box-shadow: none; background: #fff; }
-html.spk-on .intro-card-head { padding: 10px 16px 0; background: none; border: 0; }
-html.spk-on .intro-card-head-icon { display: none; }
-html.spk-on .intro-card-head-title { font-size: 16px; }
-html.spk-on .intro-card-body { padding: 6px 16px 12px; }
-html.spk-on .intro-card-body p, html.spk-on .intro-card-body .obj-line { font-size: 14.5px; line-height: 1.5; margin-bottom: 4px; }
-html.spk-on .need-chip { background: #F4F6FA; border-color: var(--ffline); color: #22304A; }
-
-/* ---- file bar: tabs + one status line. No pager. ---- */
-.spk-file-row { padding-bottom: 0; }
-.spk-folder-svg { width: 58px; }
-.spk-file-row { grid-template-columns: 58px 1fr auto; }
-.spk-file-sub .st { font: italic 600 13px 'Lora', Georgia, serif; letter-spacing: 0; text-transform: none; color: #5C4A2A; text-align: right; }
-.spk-file-sub .pg { color: var(--ffn); }
-
-/* ---- texts that land in the page: open while new, one line once seen ---- */
-.spk-note .hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.spk-note .hd .k { margin-bottom: 8px; }
-.spk-note .fold { font: 800 11.5px 'Nunito', sans-serif; color: var(--ffg2); background: none; border: 0; cursor: pointer; padding: 0 0 8px; }
-.spk-note .mini { display: none; }
-.spk-note.min .hd, .spk-note.min .spk-msgs, .spk-note.min .spk-ch { display: none; }
-.spk-note.min .mini { display: flex; align-items: center; gap: 10px; width: 100%; font: 700 13.5px 'Nunito', sans-serif; color: #5C4A2A; background: #F7EED8; border: 1px solid #D8C7A2; border-radius: 999px; padding: 7px 14px 7px 8px; cursor: pointer; text-align: left; }
-.spk-note.min .mini:hover { background: #EFE1BE; }
-.spk-note.min .mini .spk-avatar { width: 24px; height: 24px; font-size: 13px; } .spk-note.min .mini .spk-avatar::after { display: none; }
-.spk-note.min .mini .go { margin-left: auto; color: var(--ffg2); font-weight: 800; }
-.spk-note.opening.min { padding: 0; background: none; border: 0; margin: 14px 28px 4px; }
-.spk-note:not(.opening).min { max-width: 420px; }
-
-/* ---- scene heads: smaller, one job ---- */
-.spk-scene { margin: 4px 0 14px; }
-.spk-scene-n { display: none; }
-.spk-scene-t { font-size: 21px; margin: 2px 0 0; }
-.spk-scene-why { font-size: 14.5px; }
-
-/* ---- content family: white + one teal edge ---- */
-html.spk-on .activity, html.spk-on .source-card, html.spk-on .quiz-card { border: 1px solid var(--ffline); border-left: 4px solid var(--ffedge); border-radius: 14px; box-shadow: none; }
-html.spk-on .activity-num { background: var(--ffn) !important; border-radius: 10px; width: 32px; height: 32px; font-size: 15px; }
-html.spk-on .callout-info, html.spk-on .callout-think, html.spk-on .callout-tip, html.spk-on .callout-vocab, html.spk-on .callout-virtue,
-html.spk-on .key-concept, html.spk-on .owl-buddy-bubble, html.spk-on .tx-blurb { background: #fff; border: 1px solid var(--ffline); border-left: 4px solid var(--ffedge); border-radius: 12px; box-shadow: none; }
-html.spk-on .callout-icon { font-size: 20px; }
-html.spk-on .key-concept-label { color: var(--ffedge); }
-html.spk-on .owl-buddy { background: none; border: 0; box-shadow: none; padding: 0; }
-html.spk-on .owl-buddy-avatar { width: 34px; height: 34px; font-size: 20px; }
-html.spk-on .source-card-header { background: #fff; border-bottom: 1px solid var(--ffline); }
-html.spk-on .source-card-header-icon { background: #E6F3F1; color: var(--ffedge); }
-html.spk-on .source-card-header-label { color: var(--ffedge); }
-html.spk-on .source-card-header-title { color: var(--ffn); }
-html.spk-on .step-badge { background: none; color: var(--ffn); padding-left: 0; }
-html.spk-on .step-badge-num { background: var(--ffn); }
-html.spk-on .canvas-unlock-stamp, html.spk-on .virtue-card { display: none !important; }
-/* learning-content scaffolds the layer adds join the same family */
-.spk-notes, .spk-builder { background: #fff; border: 1px solid var(--ffline); border-left: 4px solid var(--ffedge); border-radius: 12px; }
-.spk-notes .k, .spk-step .lab { color: var(--ffedge); }
-.spk-plan { background: #F6F9FB; border-color: var(--ffline); }
-.spk-plan b { color: var(--ffedge); }
-.spk-kicker { background: #E6F3F1; color: var(--ffedge); }
-.canvas-file-card .spk-kicker { background: #FBF1D6; color: var(--ffg2); }
-
-/* ---- Historian Lens: virtue + role in one line ---- */
-.spk-lens { max-width: 720px; margin: 6px auto 34px; display: flex; gap: 10px; align-items: baseline; font: 500 15px/1.5 'Nunito', sans-serif; color: var(--ffi); padding: 8px 14px; border-left: 4px solid var(--ffedge); background: #fff; border-radius: 0 10px 10px 0; box-shadow: 0 0 0 1px var(--ffline); }
-.spk-lens b { flex: none; font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ffedge); }
-.spk-lens em { font-style: normal; font-weight: 800; color: var(--ffn); }
-
-/* ---- Explore: four seasons, 2 × 2 ---- */
-.spk-seasons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 6px 0 14px; }
-@media (max-width: 640px) { .spk-seasons { grid-template-columns: 1fr; } }
-.spk-season { background: #fff; border: 1px solid var(--ffline); border-top: 5px solid var(--c); border-radius: 12px; padding: 12px 14px 12px; }
-.spk-season .hd { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-.spk-season .ic { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-size: 19px; background: color-mix(in srgb, var(--c) 16%, #fff); flex: none; }
-.spk-season .nm { font: 800 16px 'Nunito', sans-serif; color: var(--ffn); line-height: 1.15; }
-.spk-season .wh { font: 700 12px 'Nunito', sans-serif; color: var(--ffs); }
-.spk-season p { font-size: 15px !important; line-height: 1.5 !important; margin: 0 0 8px !important; color: var(--ffi) !important; }
-.spk-season .life { font: 600 14px/1.45 'Nunito', sans-serif; color: var(--ffi); background: #F6F9FB; border-radius: 8px; padding: 7px 10px; }
-.spk-season .life b { display: block; font: 800 10px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--c); margin-bottom: 1px; }
-.spk-think { font: 500 15px/1.5 'Nunito', sans-serif; color: var(--ffi); border-top: 1px dashed var(--ffline); padding-top: 10px; margin-top: 4px; }
-.spk-think b { color: var(--ffedge); }
-
-/* ---- Assignment: four steps ---- */
-.spk-stepper { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 0 0 18px; counter-reset: s; }
-@media (max-width: 640px) { .spk-stepper { grid-template-columns: 1fr 1fr; } }
-.spk-stepper button { display: flex; align-items: center; gap: 8px; text-align: left; font: 800 13px/1.2 'Nunito', sans-serif; color: var(--ffn); background: #fff; border: 1px solid var(--ffline); border-radius: 10px; padding: 8px 10px; cursor: pointer; }
-.spk-stepper button:hover { border-color: #55C8E8; }
-.spk-stepper .n, .spk-stephead .n { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--ffn); color: #fff; font: 800 12px/24px 'Nunito', sans-serif; text-align: center; }
-.spk-stepper button.done .n { background: #34B76F; } .spk-stepper button.done .n span { display: none; } .spk-stepper button.done .n::before { content: "✓"; }
-.spk-stephead { display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; scroll-margin-top: 140px; }
-.spk-stephead .n { width: 30px; height: 30px; font-size: 14px; line-height: 30px; }
-.spk-stephead .t { font: 700 20px 'Lora', Georgia, serif; color: var(--ffn); }
-.spk-stephead .w { font: italic 500 14px 'Lora', Georgia, serif; color: var(--ffs); }
-html.spk-on #panel-assignment .activity.bl-navy { display: none !important; }
-.spk-last { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--ffline); }
-.spk-last .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffedge); margin-bottom: 4px; }
-.spk-last p { font-size: 15px !important; margin-bottom: 6px !important; }
-.spk-review { display: inline-flex; align-items: center; gap: 8px; font: 800 14px 'Nunito', sans-serif; color: #fff; background: var(--ffn); border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer; margin: 0 0 14px; }
-.spk-review:hover { background: #22304A; }
-html.spk-on .gathered-card.spk-folded { display: none; }
-.spk-lockline { display: flex; align-items: center; gap: 10px; margin: 18px 0; padding: 10px 16px; background: #F7EED8; border: 1px dashed #C9B486; border-radius: 12px; font: italic 500 14.5px 'Lora', Georgia, serif; color: #5C4A2A; }
-.spk-lockline .i { font-size: 20px; font-style: normal; }
-.spk-step.wait { display: none; }
-
-/* ═════════ v8 · file bar fits any width · texts stay folded · voice notes ═════════ */
-.spk-file-row { grid-template-columns: 58px minmax(0,1fr); gap: 12px; padding: 6px 16px 0; }
-.spk-file-row > div { min-width: 0; }
-.spk-file-sub { align-items: center; }
-.spk-file-sub > span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.spk-mail { margin: 0; padding: 5px 12px 5px 9px; font-size: 12px; flex: none; }
-.spk-tabs { min-width: 0; }
-.spk-tab { padding: 7px 10px 8px 8px; gap: 7px; }
-@media (max-width: 760px) {
-  .spk-file-row { grid-template-columns: minmax(0,1fr); padding: 6px 10px 0; }
-  .spk-folder-svg { display: none; }
-  .spk-tab .l small { display: none; }
-  .spk-tab { font-size: 12px; padding: 7px 7px 8px 6px; gap: 5px; }
-}
-@media (max-width: 480px) {
-  .spk-file-sub .ttl { display: none; }
-  .spk-tab .n { width: 18px; height: 18px; font-size: 10px; line-height: 18px; }
-  .spk-tab .l { font-size: 11px; white-space: normal; line-height: 1.15; }
-  .spk-tabs { gap: 2px; }
-}
-/* the objectives line broke apart around <em> (base flex quirk) */
-html.spk-on .intro-card-body .obj-line { display: block; padding-left: 28px; text-indent: -28px; }
-html.spk-on .intro-card-body .obj-icon { display: inline-block; width: 28px; text-indent: 0; }
-
-/* texts in the page: always one line; tapping it opens the phone */
-.spk-note .hd, .spk-note .spk-msgs, .spk-note .spk-ch { display: none !important; }
-.spk-note .mini { display: flex !important; align-items: center; gap: 10px; width: 100%; font: 700 13.5px 'Nunito', sans-serif; color: #5C4A2A; background: #F7EED8; border: 1px solid #D8C7A2; border-radius: 999px; padding: 7px 14px 7px 8px; cursor: pointer; text-align: left; }
-.spk-note .mini:hover { background: #EFE1BE; }
-.spk-note .mini .spk-avatar { width: 24px; height: 24px; font-size: 13px; flex: none; } .spk-note .mini .spk-avatar::after { display: none; }
-.spk-note .mini .pv { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: #3F2E0C; }
-.spk-note .mini .pv b { font-weight: 800; color: #5C4A2A; }
-.spk-note .mini .go { margin-left: auto; flex: none; color: var(--ffg2); font-weight: 800; }
-.spk-note.new .mini { border-color: var(--ffr); box-shadow: 0 0 0 3px rgba(163,49,43,.12); }
-.spk-note.new .mini .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ffr); flex: none; }
-.spk-note:not(.new) .mini .dot { display: none; }
-.spk-note, .spk-note.opening { padding: 0 !important; background: none !important; border: 0 !important; max-width: 560px; }
-.spk-note.opening { margin: 14px 28px 4px !important; }
-.spk-note:not(.opening) { margin: 18px auto 0; }
-
-/* voice notes from the teacher — short audio guides, story family */
-.spk-vn { max-width: 720px; margin: 0 auto 30px; display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 12px; align-items: center; padding: 10px 14px 10px 10px; background: #F7EED8; border: 1px solid #D8C7A2; border-radius: 16px; }
-.spk-vn .spk-avatar { width: 40px; height: 40px; font-size: 20px; } .spk-vn .spk-avatar::after { display: none; }
-.spk-vn .k { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ffg2); }
-.spk-vn .t { font: 700 15px/1.3 'Lora', Georgia, serif; color: var(--ffn); }
-.spk-vn .wave { display: flex; gap: 2px; align-items: center; height: 18px; margin-top: 4px; }
-.spk-vn .wave i { width: 3px; border-radius: 2px; background: #C9B486; }
-.spk-vn.playing .wave i { background: var(--ffg2); animation: spk-wv .9s ease-in-out infinite alternate; }
-@keyframes spk-wv { to { transform: scaleY(.35); } }
-.spk-vn .play { width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--ffn); color: #fff; font-size: 16px; cursor: pointer; }
-.spk-vn .play:hover { background: #22304A; }
-.spk-vn .play[disabled] { background: #B8AE96; cursor: default; }
-.spk-vn .rd { grid-column: 2 / 4; font: 800 12px 'Nunito', sans-serif; color: var(--ffg2); background: none; border: 0; padding: 0; cursor: pointer; justify-self: start; }
-.spk-vn .tx { grid-column: 1 / 4; display: none; font: 500 14.5px/1.55 'Nunito', sans-serif; color: var(--ffi); background: #FFFDF5; border-radius: 10px; padding: 10px 12px; }
-.spk-vn.read .tx { display: block; }
-.spk-vn .mock { font: 700 10.5px 'Nunito', sans-serif; color: #A3312B; margin-left: 6px; letter-spacing: 0; text-transform: none; }
-
-/* ═════════ v9 · answer checklists, hint ladders, go-further, Self-Check miss lines ═════════ */
-.spk-help { margin: 8px 0 18px; display: grid; gap: 8px; }
-.spk-flags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.spk-flags .lab { font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffs); margin-right: 2px; }
-.spk-flags .f { font: 700 12px 'Nunito', sans-serif; padding: 4px 10px; border-radius: 999px; border: 1.5px dashed #C3CCDB; color: #5B667A; background: #fff; transition: all .2s; }
-.spk-flags .f.hit { border-style: solid; border-color: #1E8C7C; background: #E3F5F1; color: #0F5A50; }
-.spk-flags .f.hit::before { content: "✓ "; }
-.spk-nudge { font: 800 12.5px 'Nunito', sans-serif; color: var(--ffn); background: #fff; border: 1.5px solid #C3CCDB; border-radius: 999px; padding: 5px 12px; cursor: pointer; }
-.spk-nudge:hover { border-color: #55C8E8; } .spk-nudge[disabled] { opacity: .55; cursor: default; }
-.spk-rungs { margin: 6px 0 0; padding: 0 0 0 22px; font: 600 14px/1.5 'Nunito', sans-serif; color: var(--ffi); }
-.spk-rungs li { margin: 4px 0; padding: 6px 10px; background: #F6F9FB; border-radius: 8px; animation: spk-in .3s ease-out; }
-.spk-further { font: italic 500 14px/1.45 'Lora', Georgia, serif; color: var(--ffedge); }
-.spk-further span { color: var(--ffs); font-size: 12.5px; }
-.spk-notes .spk-help { margin-bottom: 0; }
-.spk-qmiss { margin-top: 8px; padding: 8px 12px; border-radius: 10px; background: #FFF7EC; border: 1px solid #F0D3A8; font: 600 14px/1.5 'Nunito', sans-serif; color: #6B4310; animation: spk-in .3s ease-out; }
-.spk-qmiss b { color: #8A4A10; }
-.spk-stem { grid-template-columns: 1fr; gap: 4px; margin: 10px 0; }
-
-/* v11 · the teacher-text pill breathes: a soft ring radiates from it (stronger while there's a new text) */
-.spk-note .mini { position: relative; overflow: visible; }
-.spk-note .mini::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 2px solid rgba(201,162,74,.55); pointer-events: none; animation: spk-radiate 3.2s ease-out infinite; }
-.spk-note.new .mini::after { border-color: rgba(163,49,43,.55); animation-duration: 2.2s; }
-.spk-note .mini .spk-avatar { animation: spk-breathe 3.2s ease-in-out infinite; }
-@keyframes spk-radiate { 0% { transform: scale(1); opacity: .9; } 70% { transform: scale(1.04, 1.35); opacity: 0; } 100% { opacity: 0; } }
-@keyframes spk-breathe { 0%,100% { box-shadow: 0 0 0 0 rgba(201,162,74,.45); } 50% { box-shadow: 0 0 0 5px rgba(201,162,74,0); } }
-@media (prefers-reduced-motion: reduce) { .spk-note .mini::after, .spk-note .mini .spk-avatar { animation: none; } }
-
-/* v12 · no You'll-need strip; the four seasons are files to open */
-html.spk-on .need-strip { display: none !important; }
-.spk-season { position: relative; perspective: 900px; min-height: 172px; }
-.spk-season > .hd, .spk-season > p, .spk-season > .life { transition: opacity .35s .25s; }
-.spk-season:not(.open) > .hd, .spk-season:not(.open) > p, .spk-season:not(.open) > .life { opacity: 0; }
-.spk-season .cover { position: absolute; inset: -1px; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid #C9B486; border-top: 5px solid var(--c); border-radius: 12px; cursor: pointer; font-family: 'Nunito', sans-serif;
-  background: linear-gradient(180deg, #F3E6C4, #E8D4A8); box-shadow: 0 4px 10px -4px rgba(60,40,10,.35), inset 0 1px 0 rgba(255,255,255,.5);
-  transform-origin: 50% 100%; transition: transform .65s cubic-bezier(.3,.7,.2,1), opacity .4s .3s, box-shadow .2s; }
-.spk-season .cover:hover { box-shadow: 0 8px 18px -6px rgba(60,40,10,.45); transform: translateY(-2px); }
-.spk-season .cover:focus-visible { outline: 3px solid #55C8E8; outline-offset: 2px; }
-.spk-season .cover .tabk { position: absolute; top: 8px; left: 12px; font: 800 9.5px ui-monospace, Menlo, monospace; letter-spacing: .12em; text-transform: uppercase; color: #6E5215; background: #FFF8E6; border: 1px solid #C9B486; border-radius: 4px; padding: 1px 7px; }
-.spk-season .cover .big { font-size: 36px; line-height: 1; filter: drop-shadow(0 2px 2px rgba(0,0,0,.15)); }
-.spk-season .cover .cw { font: 700 12.5px 'Nunito', sans-serif; color: #5C4A2A; }
-.spk-season .cover .tap { font: 800 11px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--c); border-radius: 999px; padding: 4px 11px; margin-top: 4px; animation: spk-tap 2.6s ease-in-out infinite; }
-@keyframes spk-tap { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
-.spk-season.open .cover { transform: rotateX(96deg); opacity: 0; pointer-events: none; }
-.spk-season.opening { animation: spk-pop .6s ease-out; }
-@keyframes spk-pop { 0% { transform: scale(.98); } 60% { transform: scale(1.015); } 100% { transform: none; } }
-.spk-seasons-ct { grid-column: 1 / -1; font: 600 14px 'Nunito', sans-serif; color: var(--ffs); text-align: center; padding: 2px 0 0; }
-.spk-seasons-ct b { color: var(--ffn); }
-.spk-seasons.all .spk-seasons-ct { color: #0F5A50; } .spk-seasons.all .spk-seasons-ct b { color: #0F5A50; }
-@media (prefers-reduced-motion: reduce) { .spk-season .cover { transition: none; } .spk-season .cover .tap, .spk-season.opening { animation: none; } }
-
-/* v14 · media stays invisible until its file exists; quiz videos replaced by voice notes */
-html.spk-on:not(.spk-showempty) .spk-empty { display: none !important; }
-html.spk-on .spk-vn.spk-wait { display: none !important; }
-html.spk-on #quizVideoCorrect, html.spk-on #quizVideoReview { display: none !important; }
-#panel-check .spk-vn { margin-top: 16px; }
-
-/* v14 · ROOT DIG */
-.spk-dig { margin-top: 14px; }
-.spk-site { position: relative; height: 360px; border-radius: 14px; overflow: hidden; box-shadow: inset 0 0 0 1px #B89860, 0 6px 16px -8px rgba(60,40,10,.4); touch-action: none; user-select: none; }
-.spk-site .strata { position: absolute; inset: 0; display: grid; grid-template-rows: 1fr 1fr 1fr 1fr; }
-.spk-site .strata i { display: block; border-bottom: 2px dashed rgba(255,255,255,.18); }
-.spk-site .s0 { background: linear-gradient(180deg,#F2DFB0,#E7CF98); }
-.spk-site .s1 { background: radial-gradient(circle at 20% 40%, rgba(255,255,255,.35) 0 3px, transparent 4px) 0 0/36px 30px, linear-gradient(180deg,#D9BE88,#CDAE74); }
-.spk-site .s2 { background: radial-gradient(circle at 70% 50%, rgba(0,0,0,.07) 0 5px, transparent 6px) 0 0/44px 36px, linear-gradient(180deg,#C7B9A0,#B5A68A); }
-.spk-site .s3 { background: linear-gradient(180deg,#B9765A,#8E4E3A); }
-.spk-site .deco { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.spk-site .warm { position: absolute; left: 0; right: 0; bottom: 0; height: 25%; background: radial-gradient(60% 120% at 70% 120%, rgba(255,150,70,.55), transparent 70%); animation: spk-warm 3.5s ease-in-out infinite alternate; pointer-events: none; }
-@keyframes spk-warm { from { opacity: .45; } to { opacity: .9; } }
-.spk-site .tab { position: absolute; left: calc(var(--x) * 1%); width: 30%; min-width: 120px; min-height: 52px; padding: 8px 10px; border: 2px solid #8A6A1E; border-radius: 10px; background: linear-gradient(180deg,#FFFDF5,#F3E8CC); box-shadow: 0 3px 0 #8A6A1E33; cursor: pointer; text-align: center; font-family: 'Nunito', sans-serif; overflow: hidden; }
-.spk-site .tab .word { font: 800 19px 'Lora', Georgia, serif; color: var(--ffn); letter-spacing: .01em; }
-.spk-site .tab .word b { color: #B8862A; }
-.spk-site .tab .mean { display: block; font: 700 12px/1.3 'Nunito', sans-serif; color: #0F5A50; margin-top: 2px; }
-.spk-site .tab .mean small { display: block; font-weight: 600; color: var(--ffs); font-size: 11px; }
-.spk-site .tab .sand { position: absolute; inset: 0; border-radius: 8px; transition: opacity .15s;
-  background: radial-gradient(circle at 30% 40%, #E9D29E 0 6px, transparent 7px) 0 0/18px 14px, radial-gradient(circle at 70% 70%, #D8BC82 0 5px, transparent 6px) 0 0/22px 16px, #E2C78E; }
-.spk-site .tab:not(.dug)::after { content: "🖌️"; position: absolute; right: 6px; bottom: 4px; font-size: 14px; opacity: .8; animation: spk-tap 2.4s ease-in-out infinite; }
-.spk-site .tab.dug { cursor: pointer; }
-.spk-site .tab.matched { border-color: #1E8C7C; background: linear-gradient(180deg,#F4FFFB,#DDF3EC); box-shadow: 0 0 0 3px rgba(30,140,124,.18); }
-.spk-site .tab.pop { animation: spk-pop .6s ease-out; }
-.spk-site .tab.shake { animation: spk-shake .4s; border-color: #E8636B; }
-.spk-site .tab.spark::before { content: "✨"; position: absolute; left: 50%; top: -4px; font-size: 22px; transform: translateX(-50%); animation: spk-spark .9s ease-out forwards; }
-@keyframes spk-spark { from { opacity: 1; transform: translate(-50%,10px) scale(.6); } to { opacity: 0; transform: translate(-50%,-26px) scale(1.4); } }
-.spk-site .dust { position: absolute; inset: 0; pointer-events: none; }
-.spk-site .dust i { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #E2C78E; animation: spk-dust .7s ease-out forwards; }
-@keyframes spk-dust { to { opacity: 0; transform: translate(var(--dx), -22px); } }
-.spk-dig-bank { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
-.spk-dig-bank .mtag { font: 700 13.5px 'Nunito', sans-serif; color: var(--ffn); background: #fff; border: 1.5px solid #C3CCDB; border-radius: 999px; padding: 7px 13px; cursor: pointer; }
-.spk-dig-bank .mtag:hover { border-color: #B8862A; }
-.spk-dig-bank .mtag.sel { background: var(--ffn); color: #fff; border-color: var(--ffn); }
-.spk-dig-bank .mtag.used { opacity: .35; text-decoration: line-through; cursor: default; }
-.spk-dig-win { display: none; margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: #FFF8E6; border: 1px solid #E6CF97; }
-.spk-dig.done .spk-dig-win { display: block; animation: spk-in .4s ease-out; }
-.spk-dig-win .stamp { display: inline-block; font: 900 14px 'Nunito', sans-serif; letter-spacing: .06em; color: #8A4A10; border: 2.5px solid #C08A2A; border-radius: 8px; padding: 3px 10px; transform: rotate(-2deg); background: #fff; }
-.spk-dig-win p { font: 500 14.5px/1.5 'Nunito', sans-serif !important; color: var(--ffi) !important; margin: 8px 0 0 !important; }
-.spk-dig.done .spk-site .deco g { animation: spk-tw 1.6s ease-in-out infinite alternate; }
-@media (max-width: 560px) { .spk-site { height: 470px; } .spk-site .tab { width: 78%; left: calc(var(--x) * .3%); } .spk-site .tab .word { font-size: 16px; } }
-@media (prefers-reduced-motion: reduce) { .spk-site .warm, .spk-site .tab::after, .spk-dig.done .spk-site .deco g { animation: none; } }
-.spk-dig-ct { font: 600 14px 'Nunito', sans-serif; color: var(--ffs); margin: 8px 0 0; text-align: center; } .spk-dig-ct b { color: var(--ffn); }
-
-/* v16 · less text: no secondary headings, no kickers, no "Now that you've…" lines, no source label bar */
-html.spk-on .activity-sub, html.spk-on .tab-transition-voice, html.spk-on .source-label-bar, html.spk-on .spk-kicker { display: none !important; }
-html.spk-on .activity-head { padding: 12px 18px; }
-.spk-lens { margin: 14px 28px 6px; max-width: none; }
-html.spk-on #panel-check > .callout-info { display: none !important; }
-.spk-scene-t { margin-top: 0; }
-/* Self-Check: one question at a time */
-#panel-check .quiz-q.spk-qhide, #panel-check .quiz-score-box.spk-qhide { display: none !important; }
-.spk-qprog { display: flex; align-items: center; gap: 6px; margin: 0 0 12px; }
-.spk-qprog i { width: 26px; height: 6px; border-radius: 3px; background: #DDE3EC; }
-.spk-qprog i.now { background: #55C8E8; } .spk-qprog i.done { background: #34B76F; }
-.spk-qprog span { margin-left: 8px; font: 800 12px 'Nunito', sans-serif; color: var(--ffs); letter-spacing: .04em; }
-.spk-qnext { display: none; margin-top: 12px; font: 800 14px 'Nunito', sans-serif; color: #fff; background: var(--ffn); border: 0; border-radius: 999px; padding: 9px 18px; cursor: pointer; }
-.quiz-q.spk-qready .spk-qnext { display: inline-block; animation: spk-in .3s ease-out; }
-/* Opti's hoot: a tiny head-tilt to go with the sound */
-.owl-buddy-avatar.spk-hoot { animation: spk-hootwig .7s ease-in-out; }
-@keyframes spk-hootwig { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-10deg); } 60% { transform: rotate(8deg); } }
-html.spk-on .owl-buddy { cursor: pointer; }
-
-/* v18 · year-wheel source redrawn to match the reading */
-.spk-yw .spk-wheelsrc { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
-.spk-wheel-key { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; max-width: 620px; margin: 12px auto 0; font: 600 13.5px/1.4 'Nunito', sans-serif; color: #22304A; }
-.spk-wheel-key i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
-.spk-wheel-key b { font-weight: 800; }
-@media (max-width: 560px) { .spk-wheel-key { grid-template-columns: 1fr; } }
-</style>
-
-<script id="spk-js">
-/* ═══ FLORIDA FILES · sparkle layer v9 (MOCKUP for 4.03.05) ═══
-   v9: per-lesson DATA (#ff-data) now drives the connector, the Learning Journal, answer checklists (flags), hint
-   ladders, "go further" lines and a line for each wrong Self-Check answer.
-   v8: the file bar fits narrow Canvas frames (Messages sits in the bar's top row); texts in the page are always one
-   line and open in the phone; the phone never opens by itself; each text moves the story and says what to do next;
-   three teacher voice notes (audio guides) frame the work without reading the page.
-   v7 clean-up: one-row header (Read aloud + Lesson details pills), no progress bar (the file tabs are the progress),
-   hero on Learn only, texts fold to one line once seen, three card families, a Historian Lens line,
-   a 2×2 season grid on Explore, and the Assignment cut into four steps with the reward after the checklist.
-   The teacher texts from a phone. Every "Message from Inside Canvas" is a text now; the two sticky notes are hidden and
-   their jobs are done by the phone, a lock-screen notification, and a text that lands in the page where it happened.
-   The file's four tabs are folder tabs that drive the lesson's own tab engine. The drawer is a cabinet with a map.
-   Honest gates: a tab is "done" only when the thing was done; the file opens when the notebook page is written and
-   the turn-in checklist is complete. Additive: built at runtime on anchors the lesson already has. */
-(function(){
-  'use strict';
-  var KEY='oao.ff.4-03-05', PKEY='oao.ff.profile', CKEY='oao.ff.course';
-  var IMG='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/images/', EXT=['.jpg','.png','.webp','.jpeg'];
-  var LESSON='4-03-05', FILE_TITLE='First Peoples', THIS=3, MIN_WORDS=40;
-  var FLORIDA='M256.8,278.9L258.5,277L259.1,278.1L257.4,279.5ZM253.3,281L254.4,279.7L255.8,279.6L255.1,280.7ZM243.8,284.7L250.3,281.7L251,282.7L245.5,285.3ZM220,289.9L222.3,286.5L224.8,285L227.9,283.6L228.3,282.8L232.8,280.6L237.5,282.8L238,284.5L239.7,285.9L239.2,286.3L234.3,287.9L233.9,287L230.5,287.2L230.2,287.9L224.4,290.3L220,290.8ZM213,290.9L217.9,290.1L216.6,291.5L214.5,292L212.9,291.7ZM207.8,290.2L208.5,289L210,289.4L209.4,290.7ZM204.3,208.1L204.9,208.7L207.3,215.8L208.3,216.7L210.4,217.6L211.3,217L213,217.7L211.3,218.7L210.2,218.8L207.5,217.1L206.7,216.2L205.1,212.3L204.3,209.8ZM181.2,287.5L183.1,287.1L183.6,287.8L181.1,288.2ZM121,86.4L124.6,84.8L124.6,85.8L122.7,87.1L121.3,87.3ZM109.5,38L110.2,40.7L111.6,42.5L111.8,45.4L112.6,48L114.3,49.7L131.2,50.5L163.7,52.5L189.3,54.2L206.1,55.4L205.4,55.9L205.7,57.9L206.5,58.8L206.2,61.2L207.5,63.8L212.1,63.4L212.1,60.8L212.9,59.2L213.3,55.1L211.8,51.9L212.3,49.9L212.1,48.2L213.1,47.6L212.6,46.8L214.1,47L215.2,45L217.1,45.2L218,46.4L220.1,46.5L222.3,47.5L223.2,48.3L227.3,49L229.4,49.6L231.2,49.1L232.8,49.7L233.3,50.2L232.8,54.1L233.1,57.3L232.6,58L233.9,58.9L234.4,62.2L234.5,66.1L237.4,79.5L239,83.9L239,85.6L242.5,96L246.4,105.8L250,113.6L258.1,127.6L262.9,134.4L263.3,136.5L264.6,139.3L262.4,141.3L261.9,143.1L261.7,146L262.4,150.4L263.1,153.7L265.1,158.5L269.4,167.6L271.3,173.2L271.9,176L272.5,177L273.9,181.7L276,186.7L277.1,189L277.9,192.1L279.5,195.7L281.6,204.3L281.5,212.2L280.6,218L280,225L279.6,226.2L278.6,235.7L278.6,241.2L278.3,243.9L277.4,246.6L277.4,248L276.6,247.3L277,245.6L276.4,244.9L274.4,245.7L273.2,249.1L272.4,249.7L272.3,251.8L271.3,253.1L271.1,255.7L271.7,256.8L271.4,258.3L272.2,258.8L271.2,260.5L270.2,261L270.1,262.6L272.7,261.3L275.8,254.9L276.6,253.6L276.6,254.9L275.7,257.6L271.4,265L270.3,267.6L267.2,270.7L263,275.3L260,277.4L259.6,277L263.8,273L265.6,271.7L266.5,270L266.8,267.3L267.4,266.3L266.7,265.5L265.6,265.9L264.7,265L264,265.6L259.7,266.3L258,267.7L256.9,267.9L254.6,266.4L252.4,266.8L251.5,268.2L248.2,268.8L245.3,269L243.2,267.3L242.2,265L242.5,262.4L243.2,260.4L244,260.5L243.7,258.9L242.2,255.7L240.9,254.2L241.1,253.1L240.1,251L238.7,250L238.1,247.2L237.4,246.6L236,247.1L234.9,243.7L231.9,242.7L231.8,242.2L229.2,240.9L226.6,239.1L225.2,239.5L224.2,240.8L222.2,236.7L220.3,231.8L219.7,226L218.9,222.4L218,220.5L214.5,216.8L213.1,216.5L213,214.7L211.5,214L211.5,216.1L209.8,216.5L209.7,214.3L208.7,210.5L207.2,208.8L207.5,208L209.2,208.1L210.3,209.4L211.6,204.1L211.4,201.2L210.4,200.8L210.4,199.4L211.4,199.1L210.9,198.1L209.4,198.2L208.8,199.3L207.4,199.7L208.4,204.6L207.3,205.3L204.8,205.6L204.2,207.3L204.2,204.8L203.4,203.1L201.3,200L198.1,194.1L197,191L194.6,186.3L191.3,181.3L189.5,179.4L189,177.5L187.8,175.4L189,176.1L189.1,177.1L191,176.1L192.3,173.6L193.7,172.7L195.4,169.4L197,168.3L196.7,167.5L198.5,166.6L199.8,163.8L199.2,161.3L196.5,160.6L197.1,164.4L194.4,163.4L195.1,162.2L195,160L194.4,158.7L189.6,156.3L189.8,158.5L188.4,159.5L189.8,160.7L191.8,160.9L193.1,164.6L191.9,166L191.9,168.1L191.4,169L188.8,169.2L188.4,170.3L189.3,171.6L188.2,172.6L187.7,171.2L187.9,168.4L186.2,165.6L185,164.7L184.1,162.8L184.8,156.6L184.2,154.4L183.7,148.9L184.8,148.8L184.8,152L185.3,155L186.4,155.2L185.9,150.1L187,148.8L187.2,147.4L188.2,145.9L188.2,144.6L189,143L189,141.6L190.1,140.1L190.3,137L190.9,134.2L190.1,131.9L190.4,130L188.8,129L189.3,127.6L188.2,123.9L189.6,121.7L187,118L187.4,116.9L186.4,115.1L185.2,115L185.8,113.9L185.7,112.2L184.8,111.7L179,111L177.8,112.7L177,112.8L175.9,109.4L176.2,107.9L174.5,106.8L173,106.5L172.7,104.3L171.9,102.4L170.5,100.8L168.6,100.6L168,99.1L165,97.5L165,93.7L164.5,91.4L163,91.1L161.8,89.8L160.2,89.3L158.6,87.2L158.6,85.7L157.5,84.5L156.8,82.8L155.1,81.3L151.6,79.1L146.6,76.7L143.4,74.1L142,74.2L138.8,75.3L135,74.3L134.8,75.5L131.6,77.9L132.7,81.3L132.4,82.2L131.1,82.5L129.2,82L128.6,81.1L125.6,81.8L121.8,84.3L113.7,88.9L113,88.8L113.8,87.3L112.6,86.9L111.7,88.2L109.9,89.6L105.4,89.6L107,91.3L107.2,92.6L109.2,93.3L113,91.5L116.6,90.1L119.9,87.2L120.3,87.7L117.3,90.5L113.8,92L109.5,94.2L108,94.7L106.7,93.6L104.8,92.8L101.9,91.1L99.5,90.8L97.4,91.8L95.8,88.6L95.2,84.5L96.2,83.1L96.2,86.7L96.9,89.8L97.8,90.5L99,89.2L99.2,85.9L97.1,82.3L94.8,80.2L92.7,79.8L90.8,78.4L88.9,76L85.5,74.3L82.8,72L77.7,68.7L71.8,66.1L64.6,63.7L60.8,63L53.1,62.4L49,62.5L43.1,63.4L35,65.1L31.1,65.6L30.2,65.3L22.4,67L24.2,66.1L23.4,65.3L24.5,64.8L25.5,61.9L27.7,60.7L25.2,59L24.8,57.1L26.7,53.6L26.3,51.2L21.9,48.4L21.5,47L18.6,44.2L18.4,43.4L20,39.5L19.6,38.1L40.3,38.1L57,38.3L78.7,38.3L92.3,38.2L101.2,38Z'; /* real outline: us-atlas states-10m (US Census), Mercator, fitted to 300×300 */
-  function get(k,d){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):d; }catch(e){ return d; } }
-  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
-  var S=get(KEY,{}); S.mapSolved=S.mapSolved||[]; S.stems=S.stems||{}; S.wheelPlaced=S.wheelPlaced||[]; S.thread=S.thread||[]; S.seen=S.seen||{}; S.plan=S.plan||{}; S.ack=S.ack||{};
-  var C=get(CKEY,{opened:[],sentences:{}}); C.sentences=C.sentences||{};
-  var P=get(PKEY,null);
-  var DATA={}; try{ var dj=document.getElementById('ff-data'); if(dj) DATA=JSON.parse(dj.textContent)||{}; }catch(e){ console.warn('sparkle layer: bad ff-data',e); }
-  function save(){ put(KEY,S); put(CKEY,C); }
-  function el(t,c,h){ var d=document.createElement(t); if(c) d.className=c; if(h!=null) d.innerHTML=h; return d; }
-  function after(r,n){ r.parentNode.insertBefore(n,r.nextSibling); } function before(r,n){ r.parentNode.insertBefore(n,r); }
-  function voice(t){ return '<p class="spk-voice">'+t+'</p>'; }
-  function words(s){ return (s||'').trim().split(/\s+/).filter(Boolean).length; }
-  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
-  function thumb(name,emoji){ var ph=el('div','ph',emoji); var img=new Image(); img.className='ph'; img.alt=''; (function tryI(i){ if(i>=EXT.length) return; var t=new Image(); t.onload=function(){ img.src=t.src; ph.replaceWith(img); }; t.onerror=function(){ tryI(i+1); }; t.src=IMG+name+EXT[i]; })(0); return ph; }
-  var mapDone=function(){return S.mapSolved.length===4;}, wheelDone=function(){return S.wheelPlaced.length===4;};
-  function notebookWritten(){ var ta=document.getElementById('journal-assign'); return !!ta && words(ta.value)>=MIN_WORDS; }
-  function checklistDone(){ var items=document.querySelectorAll('.turn-in-item'); return items.length>0 && [].every.call(items,function(i){return i.classList.contains('checked');}); }
-  function nm(){ return P&&P.name?P.name:''; }
-  /* base nodes the layer moves are put back by teardown */
-  var MOVES=[], ATTRS=[];
-  function move(n,fn){ if(!n||!n.parentNode) return; var m=document.createComment('spk-move'); n.parentNode.insertBefore(m,n); MOVES.push([n,m]); fn(n); }
-  function setAttr(n,a,v){ ATTRS.push([n,a,n.getAttribute(a)]); n.setAttribute(a,v); }
-  function clock(){ var d=new Date(),h=d.getHours(),m=d.getMinutes(); return (h%12||12)+':'+(m<10?'0':'')+m; }
-
-  /* ================================================================
-     THE PHONE — the teacher, texting from inside Canvas.
-     Replies are choices; the thread and any open choice are remembered. A new text: badge on the file's Messages
-     button, a notification drops in from the top, and the text also lands in the page where it happened.
-     ================================================================ */
-  var thread=S.thread, pendingKey=S.pendingKey||null, phoneEl, mailEl, toastEl, toastTimer, unread=0, CHOICES={};
-  function push(m){ thread.push(m); save(); render(); }
-  function teacher(text,choiceKey,opts){ opts=opts||{}; push({f:'t',t:text,scene:opts.scene||currentScene(),ts:Date.now()}); if(choiceKey){ pendingKey=choiceKey; S.pendingKey=choiceKey; save(); } if(!opts.quiet){ unread++; toast(text); } render(); }
-  function student(text){ var sc=(pendingKey&&CHOICES[pendingKey]&&CHOICES[pendingKey].scene)||currentScene(); push({f:'s',t:text,scene:sc}); pendingKey=null; S.pendingKey=null; save(); }
-  function choicesHTML(){ var cs=pendingKey&&CHOICES[pendingKey]; if(!cs) return ''; return '<div class="spk-choices">'+cs.map(function(c,i){ return '<button type="button" class="spk-choice'+(c.go?' go':'')+'" data-key="'+pendingKey+'" data-i="'+i+'">'+c.t+'</button>'; }).join('')+'</div>'; }
-  function msgHTML(m){ return m.f==='sys'?'<div class="spk-msg sys">'+m.t+'</div>':'<div class="spk-msg '+m.f+'">'+m.t+'</div>'; }
-  function ack(sc){ var n=thread.filter(function(m){return m.scene===sc;}).length; if((S.ack[sc]||0)!==n){ S.ack[sc]=n; save(); render(); } }
-  function noteHTML(label){ return '<div class="hd"><div class="k"><span class="spk-avatar">👩‍🏫</span>'+label+'</div><button type="button" class="fold">Fold up ▴</button></div><div class="spk-msgs"></div><div class="spk-ch"></div><button type="button" class="mini"><span class="dot"></span><span class="spk-avatar">👩‍🏫</span><span class="pv"></span><span class="go">Open ▸</span></button>'; }
-  function onNote(e){ var n=e.currentTarget; if(e.target.closest('.mini')){ openPhone(true); return; } if(e.target.closest('.fold')){ ack(n.dataset.scene); return; } onChoice(e); }
-  function onChoice(e){ var b=e.target.closest('.spk-choice'); if(!b) return; var cs=CHOICES[b.dataset.key]; if(!cs||b.dataset.key!==pendingKey) return; var c=cs[+b.dataset.i]; student(c.t); if(c.then) c.then(); render(); }
-  function render(){
-    if(phoneEl){ var w=phoneEl.querySelector('.spk-msgs-wrap'); w.querySelector('.spk-msgs').innerHTML='<div class="spk-msg sys">Today</div>'+thread.map(msgHTML).join(''); w.scrollTop=w.scrollHeight; var comp=phoneEl.querySelector('.spk-composer'); comp.innerHTML=pendingKey&&CHOICES[pendingKey]?'<div class="lab">Tap a reply</div>'+choicesHTML():'<div class="none">No reply needed. Keep going — I’ll text when something changes.</div>'; phoneEl.querySelector('.spk-status .tm').textContent=clock(); }
-    if(mailEl){ mailEl.classList.toggle('unread',unread>0); mailEl.querySelector('.n').textContent=unread; }
-    var phoneOpen=phoneEl&&phoneEl.classList.contains('open');
-    ['open','scene','explore','check','assignment'].forEach(function(sc){ var n=document.querySelector('.spk-note[data-scene="'+sc+'"]'); if(!n) return; var ms=thread.filter(function(m){return m.scene===sc;});
-      /* read in the phone = seen. A text in the page stays open only while it's new; after that it folds to one line. */
-      if(phoneOpen) S.ack[sc]=ms.length;
-      var fresh=ms.length>(S.ack[sc]||0), lt=ms.filter(function(m){return m.f==='t';}).slice(-1)[0];
-      n.classList.toggle('spk-hide',!ms.length); n.classList.toggle('new',fresh);
-      n.querySelector('.spk-msgs').innerHTML=(sc==='open'?ms:ms.slice(-4)).map(msgHTML).join(''); n.querySelector('.spk-ch').innerHTML=(pendingKey&&CHOICES[pendingKey]&&CHOICES[pendingKey].scene===sc)?choicesHTML():'';
-      var tc=thread.filter(function(m){return m.f==='t';}).length; n.querySelector('.mini .pv').innerHTML=fresh&&lt?'<b>New text:</b> '+esc(lt.t):'<b>Texts from your teacher</b> · '+tc+' message'+(tc===1?'':'s'); });
-    if(phoneOpen) save();
-  }
-  function openPhone(o){ if(!phoneEl) return; phoneEl.classList.toggle('open',o); mailEl&&mailEl.setAttribute('aria-expanded',!!o); if(o){ unread=0; hideToast(); render(); } }
-  function toast(text){ if(!toastEl||phoneEl.classList.contains('open')) return; toastEl.querySelector('.tx span').textContent=text; toastEl.querySelector('.tx small').textContent='now'; toastEl.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(hideToast,7000); }
-  function hideToast(){ if(toastEl) toastEl.classList.remove('show'); }
-  function currentScene(){ var a=document.querySelector('.tab-panel.active'); return a?a.id.replace('panel-',''):'scene'; }
-  function def(key,scene,list){ list.scene=scene; CHOICES[key]=list; return key; }
-  /* ---- the words. One person, the teacher, texting. Plain words a 4th grader can follow:
-     every text says what is happening and what to do next, using the real tab names. The story
-     (she gets one room closer to getting out each time a file is finished) stays to one short line. ---- */
-  def('start','open',[
-    {t:'Show me the map',go:true,then:function(){ teacher('Scroll down past the welcome video. Drag each clue onto the place in Florida where it fits. If a clue bounces back, read the hint and try a different place.',null,{scene:'open',quiet:true}); }},
-    {t:'What’s in the file?',then:function(){ teacher('It’s about one year in the life of Florida’s first peoples, one season at a time. You’ll read it in the Source Study tab after the map is done.',null,{scene:'open',quiet:true}); }},
-    {t:'Are you okay in there?',then:function(){ teacher('I’m okay, just a little dusty. Every file you finish gets me one room closer to getting out. So let’s start with the map!',null,{scene:'open',quiet:true}); }}
-  ]);
-  def('mapDone','scene',[
-    {t:'What’s next?',go:true,then:function(){ teacher('Go to the Source Study tab (tab 2). Open the four season files and read them. Then put each card on the right part of the year-wheel.',null,{scene:'scene',quiet:true}); }},
-    {t:'Why does the map matter?',then:function(){ teacher('The land decided a lot. People farmed where there was good soil and rain. They fished where there was water. The seasons worked the same way. You’ll see that in tab 2.',null,{scene:'scene',quiet:true}); }}
-  ]);
-  def('wheelDone','explore',[
-    {t:'On to the check',go:true,then:function(){ teacher('Answer from what you just read. If you’re not sure, look back at the season files.',null,{scene:'explore',quiet:true}); }},
-    {t:'What if I miss one?',then:function(){ teacher('That’s okay. The check isn’t graded. If you miss one, reread that season before you start writing.',null,{scene:'explore',quiet:true}); }}
-  ]);
-  def('cracked','assignment',[
-    {t:'Where are you now?',then:function(){ teacher('In a new room! I can hear seagulls and smell salt water. I think one of the next files is about explorers and their ships.',null,{scene:'assignment',quiet:true}); }},
-    {t:'Bye for now',then:function(){ teacher('Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when the next file shows up.',null,{scene:'assignment',quiet:true}); }}
-  ]);
-  var BEATS={
-    mapDone:function(){ teacher('You did it! All four clues are in the right places, and the map let go of the file. Before you move on, finish the “because” sentences under the map. You’ll use them in Evidence Question 1.','mapDone',{scene:'scene'}); },
-    wheelDone:function(){ teacher('Nice work! All four cards are on the right seasons. It’s the same village, but life looks very different in each season. Next is the Self-Check tab (tab 3): three quick questions.','wheelDone',{scene:'explore'}); },
-    quizDone:function(){ teacher('Now for the writing. In the Historian’s Notebook tab (tab 4), you’ll pick one season and one group of people. Then you’ll write about one day in their life, as if you were there. Use the planner first. It helps you choose what to write about.',null,{scene:'check'}); },
-    cracked:function(){ teacher('You did it! This file is finished.',null,{scene:'assignment',quiet:true}); teacher((nm()?nm()+', because':'Because')+' you finished this file, a door just opened and I got one room closer to getting out. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.','cracked',{scene:'assignment'}); }
-  };
-  function beat(k){ if(S.seen[k]) return; S.seen[k]=true; save(); BEATS[k](); }
-  var missStreak=0;
-  function missBeat(hint){ missStreak++; if(missStreak===2){ missStreak=0; teacher('That’s two misses in a row. Here’s a hint: '+hint,null,{scene:'scene'}); } }
-
-  function buildPhone(){
-    phoneEl=el('div','spk spk-phone'); phoneEl.setAttribute('role','dialog'); phoneEl.setAttribute('aria-label','Messages from your teacher');
-    phoneEl.innerHTML='<div class="spk-screen"><div class="spk-notch"></div><div class="spk-status"><span class="tm"></span><span>●●● 🔋</span></div><div class="spk-contact"><div class="spk-avatar">👩‍🏫</div><div><div class="nm">Your teacher</div><div class="st">inside Canvas · online</div></div><button type="button" class="x" aria-label="Close messages">✕</button></div><div class="spk-msgs-wrap"><div class="spk-msgs"></div></div><div class="spk-composer"></div></div>';
-    phoneEl.addEventListener('click',onChoice); phoneEl.querySelector('.x').addEventListener('click',function(){ openPhone(false); });
-    document.body.appendChild(phoneEl);
-    toastEl=el('div','spk spk-toast'); toastEl.setAttribute('role','status'); toastEl.innerHTML='<div class="ic">💬</div><div class="tx"><b>Your teacher · inside Canvas <small>now</small></b><span></span></div>';
-    toastEl.addEventListener('click',function(){ openPhone(true); }); document.body.appendChild(toastEl);
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&phoneEl.classList.contains('open')) openPhone(false); });
-  }
-  function buildOpening(){
-    var sticky=document.querySelector('.canvas-sticky:not(.unlocked)'); var intro=document.getElementById('introSection'); if(!intro) return;
-    /* the opening texts land in the page where the sticky note used to be */
-    var note=el('div','spk spk-note opening spk-hide'); note.dataset.scene='open'; note.innerHTML=noteHTML('Texts from your teacher · inside Canvas'); note.addEventListener('click',onNote); before(intro,note);
-    if(!thread.length){
-      var hi=nm()?nm()+' — good, it’s you. ':'';
-      teacher(hi+'Hi, it’s me, your teacher. I’m still stuck inside Canvas. '+(DATA.connector||''),null,{scene:'open',quiet:true});
-      teacher('I found today’s file. It’s called First Peoples. But it’s locked, and a map of Florida is stuck on the front.',null,{scene:'open',quiet:true});
-      teacher('To open it, you’ll match four clues to the right places on the Florida map. The map is in the Map Quest tab, below the welcome video. I can’t reach it from in here, but you can.',null,{scene:'open',quiet:true});
-      teacher('Where do you want to start?','start',{scene:'open',quiet:true});
-      unread=4; render(); setTimeout(function(){ toast('Hi, it’s me, your teacher. I’m still stuck inside Canvas. I found today’s file, and I need your help to open it.'); },900);
-    }
-  }
-
-  /* ================================================================ THE FILE — folder tabs that move through the lesson */
-  var fileEl, STAGES=[
-    {tab:'scene',     r:'Map Quest',            t:'Match the clues', why:'Four clues fell off the map. Put each one on the place in Florida where it belongs.'},
-    {tab:'explore',   r:'Source Study',         t:'Read the seasons', why:'Read about Florida’s four seasons, then sort the cards onto the year-wheel.'},
-    {tab:'check',     r:'Self-Check',           t:'Check yourself', why:'Three quick questions. They are not graded.'},
-    {tab:'assignment',r:'Historian’s Notebook', t:'Write a day',    why:'Pick one season and one group of people, and write about one day in their life.'}
-  ];
-  function seal(x,y,ico,id){ return '<g class="spk-seal" data-seal="'+id+'"><circle cx="'+x+'" cy="'+y+'" r="13" fill="#A3312B"/><circle cx="'+x+'" cy="'+y+'" r="9.5" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.5" stroke-dasharray="2 2"/><text x="'+x+'" y="'+(y+4.5)+'" text-anchor="middle" style="font-size:11px">'+ico+'</text></g>'; }
-  function folderSVG(){ return '<svg class="spk-folder-svg" viewBox="0 0 170 130" aria-hidden="true"><path d="M6,30 h50 l10,-12 h50 a6,6 0 0 1 6,6 v6 h36 a6,6 0 0 1 6,6 v84 a6,6 0 0 1 -6,6 h-152 a6,6 0 0 1 -6,-6 z" fill="#C9A96B"/><rect x="14" y="40" width="142" height="80" fill="#FFFDF5" stroke="#D8C7A2"/><g class="lid"><path d="M6,44 h158 a6,6 0 0 1 6,6 v70 a6,6 0 0 1 -6,6 h-152 a6,6 0 0 1 -6,-6 z" fill="#E8D4A8" stroke="#B89860"/><text x="16" y="66" style="font:800 9px ui-monospace,Menlo,monospace;letter-spacing:.1em;fill:#5C4A2A">FIRST PEOPLES</text>'+seal(40,100,'🗺️','map')+seal(85,100,'📄','pages')+seal(130,100,'✍️','page')+'</g></svg>'; }
-  function fileLine(){ if(S.cracked) return 'File open.'; if(notebookWritten()) return 'Your page is written. Finish the checklist and the file opens.'; if(S.quizDone) return 'Plan a day, then write it in your own words.'; if(wheelDone()) return 'Pages back in order. A quick check, then the missing page.'; if(mapDone()) return 'The land talked. Now read the year.'; return 'Locked behind a map. Get the land to talk.'; }
-  function buildFile(){
-    var anchor=document.querySelector('.spk-note.opening')||document.getElementById('introSection'); if(!anchor) return;
-    fileEl=el('div','spk spk-file'); fileEl.innerHTML='<div class="spk-file-row">'+folderSVG()+'<div><div class="spk-file-sub"><span><span class="ttl">The Florida Files · '+FILE_TITLE+' · </span><span class="pg"></span></span><button type="button" class="spk-mail" aria-expanded="false">📱 Messages <span class="n">0</span></button></div><div class="spk-tabs" role="tablist">'+STAGES.map(function(s,i){return '<button type="button" role="tab" class="spk-tab" data-tab="'+s.tab+'"><span class="n"><span>'+(i+1)+'</span></span><span class="l">'+s.r+'<small>'+s.t+'</small></span></button>';}).join('')+'</div></div></div>';
-    fileEl.addEventListener('click',function(e){ var t=e.target.closest('.spk-tab'); if(t){ switchTab(t.dataset.tab); } });
-    mailEl=fileEl.querySelector('.spk-mail'); mailEl.addEventListener('click',function(){ openPhone(!phoneEl.classList.contains('open')); });
-    before(anchor,fileEl);
-    /* leaving a tab = its texts have been seen; they fold to one line */
-    if(window.switchTab&&!window.__spkWrapped){ var orig=window.switchTab; window.switchTab=function(tab){ var prev=currentScene(); orig(tab); if(document.documentElement.classList.contains('spk-on')){ if(prev!==tab){ ack(prev); if(prev==='scene') ack('open'); } document.documentElement.dataset.spkTab=tab; markNow(tab); render(); } }; window.__spkWrapped=true; }
-    document.documentElement.dataset.spkTab=currentScene();
-    markNow(currentScene());
-  }
-  function markNow(tab){ if(!fileEl) return; var i=STAGES.map(function(s){return s.tab;}).indexOf(tab); fileEl.querySelectorAll('.spk-tab').forEach(function(s){ var on=s.dataset.tab===tab; s.classList.toggle('now',on); s.setAttribute('aria-selected',on); }); fileEl.querySelector('.pg').textContent='tab '+(i+1)+' of '+STAGES.length; }
-  function refreshFile(){ if(!fileEl) return; var st=[mapDone(),wheelDone(),!!S.quizDone,!!S.cracked]; fileEl.querySelectorAll('.spk-tab').forEach(function(s,i){ s.classList.toggle('done',st[i]); }); ['map','pages','page'].forEach(function(k,i){ fileEl.querySelector('[data-seal="'+k+'"]').classList.toggle('on',[st[0],st[1],st[3]][i]); }); fileEl.classList.toggle('open',!!S.cracked); updateStepper();
-    if(mapDone()) beat('mapDone'); if(wheelDone()) beat('wheelDone'); if(S.quizDone) beat('quizDone'); if(S.cracked) beat('cracked'); }
-
-  /* ================================================================ scenes: a head per tab, a text that lands at each tab's end */
-  function buildScenes(){
-    STAGES.forEach(function(s,i){ var panel=document.getElementById('panel-'+s.tab); if(!panel) return;
-      var sc=el('div','spk spk-scene'); sc.innerHTML='<div class="spk-scene-head"><div class="spk-scene-n">'+(i+1)+'</div><div><div class="spk-scene-t">'+s.t+'</div><p class="spk-scene-why">'+s.why+'</p></div></div>';
-      panel.insertBefore(sc,panel.firstChild);
-      var tw=panel.querySelector('.tab-next-wrap')||panel.lastElementChild; var note=el('div','spk spk-note spk-hide'); note.dataset.scene=s.tab; note.innerHTML=noteHTML('New text from inside Canvas'); note.addEventListener('click',onNote); before(tw,note); });
-  }
-
-  /* ================================================================ SCENE 1 · Map Quest */
-  var ZONES=[
-    {id:'north', people:'Apalachee', label:'Pine forest & fields', where:'in the pine forests and fields of the north', cx:135,cy:61, ico:'🌽', img:'spk-'+LESSON+'-env-pines',    clue:'Corn, beans and squash go into fields fed by the summer rain.', miss:'Big farm fields need good soil. Look at the north part of Florida.'},
-    {id:'rivers',people:'Timucua',   label:'River country',        where:'along the rivers of the center and north',   cx:227,cy:94,ico:'🏘️', img:'spk-'+LESSON+'-env-rivers',   clue:'Villages sit along the rivers. In the dry season people walk between them to trade.', miss:'Look for the place with long rivers, in the middle and north of Florida.'},
-    {id:'coast', people:'Calusa',    label:'Mangrove coast',       where:'on the mangrove coast of the southwest',     cx:219,cy:216,la:'end',lx:197,ly:220,ico:'🛶', img:'spk-'+LESSON+'-env-mangroves',clue:'People paddle canoes through the mangroves to catch fish and gather oysters.', miss:'Mangroves are trees that grow in salty water along the coast. Look at the southwest coast.'},
-    {id:'wet',   people:'Tequesta',  label:'Southern wetlands',    where:'at the edge of the southern wetlands',       cx:266,cy:246,la:'end',lx:290,ly:276,ico:'🏚️', img:'spk-'+LESSON+'-env-wetlands', clue:'Houses stand on posts above the water. Before the storms, food is sealed in pots.', miss:'Where would water come right up to your door? Look at the wetlands at the very bottom of Florida.'}
-  ];
-  function floridaBase(label){ return '<defs><pattern id="spkWave'+label+'" width="22" height="10" patternUnits="userSpaceOnUse"><path d="M0,6 q5.5,-5 11,0 t11,0" fill="none" stroke="#7FB5CC" stroke-width="1" opacity=".6"/></pattern></defs><rect width="300" height="300" fill="#BFE3EE"/><rect width="300" height="300" fill="url(#spkWave'+label+')"/><path d="'+FLORIDA+'" fill="#E7E0B5" stroke="#8A7A4A" stroke-width="1" transform="translate(2,2)" opacity=".35"/><path d="'+FLORIDA+'" fill="#D8E6AE" stroke="#6E8A3A" stroke-width="1.2" stroke-linejoin="round"/><g fill="#4A7830">'+[[61,52],[103,48],[182,62],[44,46]].map(function(p){return '<polygon points="'+p[0]+','+(p[1]-8)+' '+(p[0]+4.5)+','+(p[1]+3)+' '+(p[0]-4.5)+','+(p[1]+3)+'"/>';}).join('')+'</g><path d="M250,153 C239,122 233,98 226,74 S233,62 237,58" fill="none" stroke="#6FA9C4" stroke-width="2" opacity=".85"/><ellipse cx="254" cy="198" rx="8" ry="7" fill="#9FD0E0" stroke="#6FA9C4" stroke-width=".8"/><g transform="translate(272,32)" opacity=".85"><circle r="18" fill="#FFFDF5" stroke="#8A6A1E"/><path d="M0,-15 L4,0 L0,15 L-4,0 Z" fill="#A3312B"/><path d="M-15,0 L0,4 L15,0 L0,-4 Z" fill="#5C4A2A"/><text y="-19" text-anchor="middle" style="font:800 8px Nunito,sans-serif;fill:#5C4A2A">N</text></g>'; }
-  function mapSVG(){ var s='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Florida environment map">'+floridaBase('A')+'<text x="14" y="288" style="font:italic 700 10px Lora,Georgia,serif;fill:#5C4A2A">La Florida · the land before the maps</text>';
-    ZONES.forEach(function(z){ var la=z.la||'middle', lx=z.lx!=null?z.lx:z.cx, ly=z.ly!=null?z.ly:z.cy+31; s+='<g class="spk-zone" data-zone="'+z.id+'"><circle class="ring" cx="'+z.cx+'" cy="'+z.cy+'" r="19" fill="#FFFDF5" fill-opacity=".6" stroke="#5C4A2A" stroke-width="1.5"/><text class="ico" x="'+z.cx+'" y="'+(z.cy+6)+'" text-anchor="middle" style="font-size:17px">'+z.ico+'</text><text x="'+lx+'" y="'+ly+'" text-anchor="'+la+'" style="font:800 9px Nunito,sans-serif;fill:#0E1C42;paint-order:stroke;stroke:#EAF4F7;stroke-width:3">'+z.label+'</text><text class="pp" x="'+z.cx+'" y="'+(z.cy-24)+'" text-anchor="middle" style="font:italic 800 10px Lora,Georgia,serif;fill:#A3312B;paint-order:stroke;stroke:#FFFDF5;stroke-width:3">'+z.people+'</text></g>'; }); return s+'</svg>'; }
-  function buildMapQuest(){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return;
-    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
-    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">Map Quest</span><span class="spk-h">Match each clue to a place</span></div>'+voice('Drag a clue onto the place it belongs — or tap the clue, then tap the place. When a clue lands, the map tells you who lived there.')+'<div class="spk-maplock"><div class="spk-map">'+mapSVG()+'</div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-notes spk-hide"><div class="k">Map Quest notes · finish each line in your own words</div><div class="spk-stems"></div><button type="button" class="spk-link" disabled>Use these in Evidence Question 1 →</button></div>';
-    var chips=g.querySelector('.spk-chips'), miss=g.querySelector('.spk-miss'), notes=g.querySelector('.spk-notes'), stems=g.querySelector('.spk-stems'), link=g.querySelector('.spk-link'), sel=null;
-    ZONES.slice().sort(function(){return .5-Math.random();}).forEach(function(z){ var c=el('div','spk-chip'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.zone=z.id; c.appendChild(thumb(z.img,z.ico)); c.appendChild(el('span',null,z.clue)); chips.appendChild(c); });
-    ZONES.forEach(function(z){ var row=el('div','spk-stem'); row.innerHTML='<span>The <b>'+z.people+'</b> lived '+z.where+' because</span>'; var inp=el('input'); inp.placeholder='…'; inp.value=S.stems[z.id]||''; inp.addEventListener('input',function(){ S.stems[z.id]=inp.value; save(); linkState(); }); row.appendChild(inp); stems.appendChild(row); });
-    function linkState(){ var n=ZONES.filter(function(z){return words(S.stems[z.id])>=3;}).length; link.disabled=n<2; link.textContent=n<2?'Finish at least two lines, then use them in Evidence Question 1 →':'Use these '+n+' lines in Evidence Question 1 →'; }
-    link.addEventListener('click',function(){ var ta=document.getElementById('journal-q1'); if(!ta) return; var lines=ZONES.filter(function(z){return words(S.stems[z.id])>=3;}).map(function(z){ var w=S.stems[z.id].trim(); return 'The '+z.people+' lived '+z.where+' because '+w+(/[.!?]$/.test(w)?'':'.'); }); var cur=ta.value.trim(); ta.value=(cur?cur+'\n':'')+lines.join(' '); ta.dispatchEvent(new Event('input',{bubbles:true})); switchTab('assignment'); setTimeout(function(){ ta.focus(); ta.scrollIntoView({behavior:'smooth',block:'center'}); },50); });
-    function paint(){ S.mapSolved.forEach(function(id){ var zg=g.querySelector('.spk-zone[data-zone="'+id+'"]'); if(zg) zg.classList.add('solved'); var c=chips.querySelector('[data-zone="'+id+'"]'); if(c){ c.classList.add('done'); c.draggable=false; } }); notes.classList.toggle('spk-hide',!mapDone()); linkState(); }
-    function attempt(chip,zg){ if(!chip||!zg||zg.classList.contains('solved')||chip.classList.contains('done')) return; g.querySelectorAll('.spk-zone').forEach(function(z){z.classList.remove('armed','over');});
-      if(zg.dataset.zone===chip.dataset.zone){ S.mapSolved.push(zg.dataset.zone); save(); chip.classList.remove('sel'); sel=null; miss.textContent=''; paint(); refreshFile(); }
-      else { chip.classList.add('shake'); setTimeout(function(){chip.classList.remove('shake');},450); var mz=ZONES.filter(function(z){return z.id===chip.dataset.zone;})[0].miss; miss.textContent=mz; missBeat(mz); } }
-    paint();
-    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-chip'); if(!c||c.classList.contains('done')) return; ack('open'); chips.querySelectorAll('.spk-chip').forEach(function(x){x.classList.remove('sel');}); c.classList.add('sel'); sel=c; miss.textContent=''; g.querySelectorAll('.spk-zone').forEach(function(z){ z.classList.toggle('armed',!z.classList.contains('solved')); }); });
-    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-chip'); if(!c||c.classList.contains('done')){ e.preventDefault(); return; } ack('open'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.zone); e.dataTransfer.effectAllowed='move'; g.querySelectorAll('.spk-zone').forEach(function(z){ z.classList.toggle('armed',!z.classList.contains('solved')); }); });
-    var map=g.querySelector('.spk-map');
-    map.addEventListener('click',function(e){ attempt(sel,e.target.closest('.spk-zone')); });
-    map.addEventListener('dragover',function(e){ var zg=e.target.closest('.spk-zone'); g.querySelectorAll('.spk-zone').forEach(function(z){z.classList.toggle('over',z===zg);}); if(zg){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
-    map.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-zone')); });
-    body.appendChild(g); }
-
-  /* ================================================================ SCENE 2 · Source Study */
-  var SEASONS=[ {id:'dry',label:'Dry & cool',color:'#D4943A',ico:'🦌'},{id:'wet',label:'Wet & warm',color:'#1A8A7D',ico:'🌧️'},{id:'storm',label:'Hurricane',color:'#8B6FC0',ico:'🌀'},{id:'mild',label:'Mild weeks',color:'#34B76F',ico:'🔥'} ];
-  var PAGES=[
-    {s:'dry',  t:'Deer hunting on dry trails through the pines',        miss:'Hunting is easier on dry ground with fewer mosquitoes. Which season had that?'},
-    {s:'wet',  t:'Apalachee plant corn, beans and squash',              miss:'Corn needs heat and lots of water. Which season had the most rain?'},
-    {s:'storm',t:'Food sealed in pots; houses built up on posts',        miss:'These people are getting ready for something dangerous. What was coming?'},
-    {s:'mild', t:'Weddings, ceremonies and stories around the fire',    miss:'Big gatherings happened when the weather was gentle, in the weeks between the big seasons.'}
-  ];
-  function buildSourceStudy(){ var src=document.querySelector('#panel-explore .source-card'), body=src&&src.querySelector('.source-card-body'); if(!body) return;
-    var anchor=[].filter.call(body.querySelectorAll('.callout'),function(c){ return /What does it mean\?/.test(c.textContent); })[0]||body.lastElementChild;
-    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">Source Study · What does it mean?</span><span class="spk-h">Sort the season cards</span></div>'+voice('Each card tells about one season. Drag it onto the right part of the wheel, or tap a card and then tap a season. ')+'<div class="spk-wheelwrap"><div class="spk-wheel"></div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-win">All four are in the right place! Now think about the question above: the <em>same</em> village looked very different in each season. What does that tell you about how people planned their year?</div>';
-    var cx=150,cy=150,r=120; function arc(a0,a1){ var x0=cx+r*Math.cos(a0),y0=cy+r*Math.sin(a0),x1=cx+r*Math.cos(a1),y1=cy+r*Math.sin(a1); return 'M'+cx+','+cy+' L'+x0.toFixed(1)+','+y0.toFixed(1)+' A'+r+','+r+' 0 0 1 '+x1.toFixed(1)+','+y1.toFixed(1)+' Z'; }
-    var order=['wet','mild','storm','dry'];
-    var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Florida year wheel"><circle cx="150" cy="150" r="126" fill="#FFFDF5" stroke="#8A6A1E" stroke-width="2"/>';
-    order.forEach(function(id,i){ var s=SEASONS.filter(function(x){return x.id===id;})[0]; var a0=-Math.PI/2+i*Math.PI/2,a1=a0+Math.PI/2,am=(a0+a1)/2,lx=cx+74*Math.cos(am),ly=cy+74*Math.sin(am);
-      svg+='<g class="spk-quad" data-season="'+s.id+'"><path d="'+arc(a0,a1)+'" fill="'+s.color+'" fill-opacity=".78" stroke="#FFFDF5" stroke-width="3"/><text x="'+lx.toFixed(0)+'" y="'+(ly-14).toFixed(0)+'" text-anchor="middle" style="font-size:20px;pointer-events:none">'+s.ico+'</text><text x="'+lx.toFixed(0)+'" y="'+(ly+6).toFixed(0)+'" text-anchor="middle" style="font:800 12px Nunito,sans-serif;fill:#fff;pointer-events:none">'+s.label+'</text><text class="pg" x="'+lx.toFixed(0)+'" y="'+(ly+30).toFixed(0)+'" text-anchor="middle" style="font-size:14px;pointer-events:none">📄</text></g>'; });
-    svg+='<circle cx="150" cy="150" r="27" fill="#FFFDF5" stroke="#8A6A1E" stroke-width="2"/><text x="150" y="147" text-anchor="middle" style="font:800 10px Nunito,sans-serif;fill:#3F2E0C">ONE</text><text x="150" y="159" text-anchor="middle" style="font:800 10px Nunito,sans-serif;fill:#3F2E0C">YEAR</text></svg>';
-    g.querySelector('.spk-wheel').innerHTML=svg;
-    var chips=g.querySelector('.spk-chips'), miss=g.querySelector('.spk-miss'), sel=null;
-    PAGES.slice().sort(function(){return .5-Math.random();}).forEach(function(p){ var c=el('div','spk-chip noimg','<span class="ico">📄</span><span>'+p.t+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.s=p.s; c.dataset.i=PAGES.indexOf(p); chips.appendChild(c); });
-    function paint(){ S.wheelPlaced.forEach(function(i){ var p=PAGES[i]; var c=chips.querySelector('[data-i="'+i+'"]'); if(c){ c.classList.add('done'); c.draggable=false; } var pg=g.querySelector('[data-season="'+p.s+'"] .pg'); if(pg) pg.classList.add('on'); }); g.querySelector('.spk-win').classList.toggle('show',wheelDone()); }
-    function attempt(chip,q){ if(!chip||!q||chip.classList.contains('done')) return; g.querySelectorAll('.spk-quad').forEach(function(x){x.classList.remove('armed','over');});
-      if(q.dataset.season===chip.dataset.s){ S.wheelPlaced.push(+chip.dataset.i); save(); chip.classList.remove('sel'); sel=null; miss.textContent=''; paint(); refreshFile(); }
-      else { chip.classList.add('shake'); setTimeout(function(){chip.classList.remove('shake');},450); miss.textContent=PAGES[chip.dataset.i].miss; } }
-    paint();
-    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-chip'); if(!c||c.classList.contains('done')) return; chips.querySelectorAll('.spk-chip').forEach(function(x){x.classList.remove('sel');}); c.classList.add('sel'); sel=c; miss.textContent=''; g.querySelectorAll('.spk-quad').forEach(function(q){q.classList.add('armed');}); });
-    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-chip'); if(!c||c.classList.contains('done')){ e.preventDefault(); return; } sel=c; e.dataTransfer.setData('text/plain',c.dataset.i); g.querySelectorAll('.spk-quad').forEach(function(q){q.classList.add('armed');}); });
-    var w=g.querySelector('.spk-wheel'); w.addEventListener('click',function(e){ attempt(sel,e.target.closest('.spk-quad')); });
-    w.addEventListener('dragover',function(e){ var q=e.target.closest('.spk-quad'); g.querySelectorAll('.spk-quad').forEach(function(x){x.classList.toggle('over',x===q);}); if(q) e.preventDefault(); });
-    w.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-quad')); });
-    after(anchor,g); }
-
-  /* ================================================================ SCENE 3 */
-  function buildCheck(){ var score=document.getElementById('quizScore'); if(!score) return;
-    function check(){ if(score.classList.contains('show')&&!S.quizDone){ S.quizDone=true; save(); } refreshFile(); if(typeof refreshVoice==='function') refreshVoice(); } new MutationObserver(check).observe(score,{attributes:true,attributeFilter:['class']}); check(); }
-
-  /* ================================================================ SCENE 4 · plan it, write it, open it */
-  var PEOPLE=[{id:'apalachee',t:'Apalachee',ico:'🌽'},{id:'timucua',t:'Timucua',ico:'🏘️'},{id:'calusa',t:'Calusa',ico:'🛶'},{id:'tequesta',t:'Tequesta',ico:'🏚️'}];
-  var PLAN={
-    dry:  {morning:['cool, clear, few mosquitoes','dry ground underfoot'], midday:['deer trails through the pines','fixing tools and nets','walking to a neighboring village to trade'], evening:['working on the shelters','planning next year’s fields'], hard:['rivers lower, fewer fish','lots of work, not much rest']},
-    wet:  {morning:['hot and sticky, big storm clouds building','the river is high after a night of rain'], midday:['planting corn, beans and squash','paddling out to fish','gathering oysters by the mangroves'], evening:['smoke fires against the mosquitoes','the afternoon storm passing'], hard:['clouds of mosquitoes','heat and storms slow every job']},
-    storm:{morning:['the sky turns a strange color and the wind changes','birds flying inland'], midday:['sealing food in pots, tying down the house','pulling the canoes up the bank','moving the elders to the strongest house'], evening:['waiting it out together with stories','going house to house after the storm'], hard:['one storm can wreck a village in a night','waiting for what you cannot stop']},
-    mild: {morning:['nice, gentle weather','neither hot nor cold'], midday:['a ceremony, then a wedding','visitors, trading and news'], evening:['stories around the fire','elders teaching the children'], hard:['the nice weather doesn’t last long','making the stored food last']}
-  };
-  var STEPS=['morning','midday','evening','hard'], STEPLAB={morning:'The morning',midday:'The middle of the day',evening:'The evening',hard:'One honest hard thing'};
-  function buildPlanner(){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return;
-    var b=el('div','spk spk-builder'); b.innerHTML=voice('Pick one thing in each row. These are just notes. You’ll write your own sentences in Step 3.')
-      +'<div class="spk-step"><div class="lab">1 · Which season?</div><div class="spk-opts" data-k="season">'+SEASONS.map(function(s){return '<button type="button" class="spk-opt" data-v="'+s.id+'">'+s.ico+' '+s.label+'</button>';}).join('')+'</div></div>'
-      +'<div class="spk-step"><div class="lab">2 · Which people?</div><div class="spk-opts" data-k="people">'+PEOPLE.map(function(p){return '<button type="button" class="spk-opt" data-v="'+p.id+'">'+p.ico+' '+p.t+'</button>';}).join('')+'</div></div>'
-      +STEPS.map(function(k,i){return '<div class="spk-step"><div class="lab">'+(i+3)+' · '+STEPLAB[k]+'</div><div class="spk-opts" data-k="'+k+'"><p class="spk-gate">Pick a season first.</p></div></div>';}).join('')
-      +'<div class="spk-plan">Your plan will show up here as you choose.</div>';
-    var pick=S.plan;
-    function fill(){ var s=pick.season; STEPS.forEach(function(k,i){ var box=b.querySelector('[data-k="'+k+'"]'); box.parentNode.classList.toggle('wait',!s&&i>0); if(!s){ box.innerHTML='<p class="spk-gate">Pick a season first, and the rest opens up.</p>'; return; } box.innerHTML=PLAN[s][k].map(function(t,i){return '<button type="button" class="spk-opt'+(pick[k]===i?' on':'')+'" data-v="'+i+'">'+t+'</button>';}).join(''); }); }
-    function plan(){ var s=pick.season, sn=SEASONS.filter(function(x){return x.id===s;})[0], p=PEOPLE.filter(function(x){return x.id===pick.people;})[0]; var parts=[]; if(sn) parts.push('<b>Season</b> '+sn.label); if(p) parts.push('<b>People</b> '+p.t); STEPS.forEach(function(k){ if(s&&pick[k]!=null) parts.push('<b>'+STEPLAB[k]+'</b> '+PLAN[s][k][pick[k]]); }); b.querySelector('.spk-plan').innerHTML=parts.length?parts.join('<br>'):'Your plan will show up here as you choose.'; }
-    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var k=o.parentNode.dataset.k; var v=(k==='season'||k==='people')?o.dataset.v:+o.dataset.v; if(k==='season'&&pick.season!==v){ STEPS.forEach(function(x){ delete pick[x]; }); } pick[k]=v; S.plan=pick; save(); updateStepper(); o.parentNode.querySelectorAll('.spk-opt').forEach(function(x){x.classList.toggle('on',x===o);}); if(k==='season') fill(); plan(); });
-    b.querySelectorAll('.spk-opt').forEach(function(o){ var k=o.parentNode.dataset.k; if((k==='season'||k==='people')&&pick[k]===o.dataset.v) o.classList.add('on'); }); fill(); plan();
-    before(partB,b); }
-  function buildCoach(){ var ta=document.getElementById('journal-assign'); if(!ta) return;
-    var coach=el('div','spk spk-coach','<span data-k="season">a season</span><span data-k="people">a people</span><span data-k="weather">a weather detail</span><span data-k="work">food or work</span><span data-k="hard">something hard</span>'), cv=el('div','spk spk-coach-voice',''); after(ta,coach); after(coach,cv);
-    var RX={season:/\b(dry|cool|wet|warm|rainy|hurricane|storm|mild|in-between)\b/i,people:/\b(apalachee|timucua|calusa|tequesta)\b/i,weather:/\b(rain|storm|wind|sun|hot|humid|cool|mosquito|thunder|flood|dry|sky)\w*/i,work:/\b(hunt|fish|plant|corn|bean|squash|oyster|mullet|canoe|trade|build|gather|cook|eat|deer|net|ceremony|wedding|stor(y|ies))\w*/i,hard:/\b(hard|difficult|dangerous|scary|hungry|tired|lost|rebuild|worry|storm|mosquito|never lasts|stretch)\w*/i};
-    var LINES=['Start anywhere. Season or people — either one works.','Good. Now give them a morning. What’s the weather doing when they wake up?','That sounds like a real day. Now add one thing that was hard about it.','Great, that sounds like someone who was really there. Now finish the turn-in checklist.'];
-    function coachIt(){ var v=ta.value,hits=0; coach.querySelectorAll('span').forEach(function(s){ var h=RX[s.dataset.k].test(v); s.classList.toggle('hit',h); if(h) hits++; }); cv.textContent=v.trim()?LINES[Math.min(hits>=5?3:Math.floor(hits/2),3)]:''; refreshFile(); tryOpen(); } ta.addEventListener('input',coachIt); coachIt();
-    var hs=document.getElementById('journal-chronicle'); if(hs){ var keep=function(){ C.sentences[THIS]=hs.value.trim(); save(); paintCabinet(); }; hs.addEventListener('input',keep); if(hs.value.trim()) keep(); } }
-  function buildKey(){ document.querySelectorAll('.turn-in-item').forEach(function(i){ i.addEventListener('click',function(){ setTimeout(tryOpen,0); }); }); tryOpen(); }
-  function tryOpen(){ if(S.cracked) return; if(!(notebookWritten()&&checklistDone())) return; S.cracked=true; if(C.opened.indexOf(THIS)<0) C.opened.push(THIS); save(); refreshFile(); showCabinet(); paintCabinet(true); var cab=document.querySelector('.spk-cab'); if(cab) cab.scrollIntoView({behavior:'smooth',block:'center'}); }
-
-  /* ================================================================ v7 · THE TOP — one header row.
-     Read aloud and Lesson details (standards + the TX switch) become pills that open a thin panel under the header.
-     Unit · Week · Focus ride along under the title. The hero shows on Learn only (CSS); the progress bar is gone. */
-  function buildTop(){ var hd=document.querySelector('.header'); if(!hd) return;
-    var hero=hd.nextElementSibling; if(hero&&hero.tagName.toLowerCase()==='svg'){ hero.classList.add('spk-hero'); }
-    var cells=document.querySelectorAll('.info-strip .info-cell'), vals=[].map.call(cells,function(c){ var v=c.querySelector('.info-value'); return v?v.textContent.trim():''; });
-    var title=hd.querySelector('.header-title');
-    if(title&&vals.length>=3) title.appendChild(el('div','spk spk-hd-meta','Unit: <b>'+esc(vals[0])+'</b> · <b>'+esc(vals[1])+'</b> · Focus: <b>'+esc(vals[2])+'</b>'));
-    var ra=document.getElementById('optima-read-aloud'), tools=el('div','spk spk-hd-tools'), panels=[];
-    function pill(label,panel){ var b=el('button','spk-pill',label); b.type='button'; b.setAttribute('aria-expanded','false'); b.addEventListener('click',function(){ var o=!panel.classList.contains('open'); panels.forEach(function(p){ p[1].classList.remove('open'); p[0].setAttribute('aria-expanded','false'); }); panel.classList.toggle('open',o); b.setAttribute('aria-expanded',o); }); panels.push([b,panel]); tools.appendChild(b); }
-    var anchor=hd;
-    if(ra){ var rp=el('div','spk spk-hd-panel'); after(anchor,rp); anchor=rp; move(ra,function(n){ rp.appendChild(n); }); pill('🔊 Read aloud',rp); }
-    var std=cells[3]&&cells[3].querySelector('.info-value'), stdTx=cells[3]&&cells[3].querySelector('.tx-standards'), tx=document.querySelector('.progress-wrap .tx-toggle');
-    if(std||tx){ var dp=el('div','spk spk-hd-panel','<div class="row"><b>Standards</b><span>'+(std?std.innerHTML:'')+'</span>'+(stdTx?'<span class="tx-standards tx-only">'+stdTx.innerHTML+'</span>':'')+(tx?'<b style="margin-left:auto">Texas content</b>':'')+'</div>'); after(anchor,dp); if(tx) move(tx,function(n){ dp.querySelector('.row').appendChild(n); }); pill('ⓘ Lesson details',dp); }
-    hd.appendChild(tools); }
-
-  /* ================================================================ v7 · Historian Lens — Virtue Spotlight + Florida History Team role in one line, right above the map */
-  var LENS='Some months were hard and some were easy. An honest historian tells about both.';
-  function buildLens(){ var panel=document.getElementById('panel-scene'); if(!panel) return; var fc=panel.querySelector('.canvas-file-card'); if(!fc) return;
-    var v=panel.querySelector('.virtue-card .virtue-label'), virtue=v&&(v.textContent.match(/—\s*(.+)$/)||[])[1];
-    var role=[].filter.call(panel.querySelectorAll('.callout'),function(c){ return /Your Role Today/.test(c.textContent); })[0]; if(role) role.classList.add('spk-hide');
-    var two=document.querySelector('#introSection .intro-2col'); var lens=el('div','spk spk-lens','<b>Historian Lens</b><span>'+(virtue?'<em>'+esc(virtue.trim())+'.</em> ':'')+LENS+' You’re on the Florida History Team.</span>'); if(two) after(two,lens); else before(fc,lens); }
-
-  /* ================================================================ v7 · Explore — the four seasons as a 2×2 grid instead of four paragraphs */
-  var SEASON_GRID=[
-    {id:'dry',  rx:/^The dry, cool season/i,  when:'About November to April', say:'Less rain, cooler nights and fewer mosquitoes. A calm time of year.', life:'Hunting deer, trading between villages, fixing tools. The Apalachee got their fields ready.'},
-    {id:'wet',  rx:/^The wet, warm season/i,  when:'About May to October',    say:'Big afternoon thunderstorms. Rivers and wetlands filled up, and the mosquitoes came back.', life:'The Calusa fished and gathered oysters. The Apalachee planted corn, beans and squash.'},
-    {id:'storm',rx:/^Hurricane season/i,      when:'June to November (most storms August–October)', say:'There was no weather radar. People watched the sky, the wind and the animals to know a storm was coming.', life:'Houses were built up on posts and food was sealed in pots. After a storm, families rebuilt together.'},
-    {id:'mild', rx:/^The brief, mild/i,       when:'The weeks in between',    say:'A few gentle weeks between the big seasons, when the weather was calm.', life:'Ceremonies, weddings, stories around the fire. Elders taught the children.'}
-  ];
-  function buildSeasonGrid(){ var act=[].filter.call(document.querySelectorAll('#panel-explore .activity'),function(a){ return /A Year in Florida/.test(a.textContent); })[0]; if(!act) return; var body=act.querySelector('.activity-body'); if(!body) return;
-    var first=null;
-    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ var st=p.querySelector('strong'); if(!st) return; if(SEASON_GRID.some(function(g){ return g.rx.test(st.textContent.trim()); })){ p.classList.add('spk-hide'); if(!first) first=p; } });
-    if(!first) return;
-    /* v12: each season is a closed file the student opens — four touchpoints before the wheel */
-    S.seasonsOpen=S.seasonsOpen||[];
-    var grid=el('div','spk spk-seasons', SEASON_GRID.map(function(g){ var s=SEASONS.filter(function(x){return x.id===g.id;})[0]; return '<div class="spk-season" data-s="'+g.id+'" style="--c:'+s.color+'"><div class="hd"><span class="ic">'+s.ico+'</span><div><div class="nm">'+s.label+'</div><div class="wh">'+g.when+'</div></div></div><p>'+g.say+'</p><div class="life"><b>Daily life</b>'+g.life+'</div>'
-      +'<button type="button" class="cover" aria-label="Open the '+s.label+' file"><span class="tabk">'+s.label+'</span><span class="big">'+s.ico+'</span><span class="cw">'+g.when+'</span><span class="tap">Tap to open</span></button></div>'; }).join('')+'<div class="spk-seasons-ct"></div>');
-    function seasonPaint(){ var n=S.seasonsOpen.length; grid.querySelectorAll('.spk-season').forEach(function(c){ c.classList.toggle('open',S.seasonsOpen.indexOf(c.dataset.s)>=0); }); grid.querySelector('.spk-seasons-ct').innerHTML=n<4?'<b>'+n+' of 4</b> season files open. Open all four to see the whole year.':'<b>All four open.</b> Same place, four very different lives. Now look at the year-wheel below.'; grid.classList.toggle('all',n===4); }
-    grid.addEventListener('click',function(e){ var cv=e.target.closest('.cover'); if(!cv) return; var c=cv.parentNode; if(S.seasonsOpen.indexOf(c.dataset.s)<0){ S.seasonsOpen.push(c.dataset.s); save(); } c.classList.add('opening'); setTimeout(function(){ c.classList.remove('opening'); },700); seasonPaint(); });
-    seasonPaint();
-    before(first,grid);
-    var think=act.nextElementSibling; if(think&&think.classList.contains('callout-think')){ var tp=think.querySelector('p'); if(tp){ think.classList.add('spk-hide'); body.appendChild(el('div','spk spk-think',tp.innerHTML)); } } }
-
-  /* ================================================================ v7 · Assignment — four steps: Gather evidence → Plan → Write → Review & turn in.
-     Historian's Sentence becomes the last line of Step 3. Gathered Answers waits behind "Review my work".
-     The certificate and the cabinet come after the checklist. */
-  var STEP4=[
-    {t:'Gather evidence', w:'Three questions. Use details from the lesson.'},
-    {t:'Plan',            w:'Choose a season, a group of people, and what happens in their day.'},
-    {t:'Write',           w:'Write your Day in the Life entry, then your Historian’s Sentence.'},
-    {t:'Review & turn in',w:'Look over your work, copy or download it, then check the list.'}
-  ];
-  var stepperEl=null;
-  function stepHead(i){ var h=el('div','spk spk-stephead','<span class="n">'+(i+1)+'</span><div><div class="t">'+STEP4[i].t+'</div></div>'); h.id='spk-step-'+(i+1); return h; }
-  function buildSteps(){ var panel=document.getElementById('panel-assignment'); if(!panel) return;
-    var A=panel.querySelector('.activity.bl-cyan'), B=panel.querySelector('.activity.bl-gold'), PL=panel.querySelector('.spk-builder'), G=panel.querySelector('.gathered-card'), T=panel.querySelector('.turn-in-card'), seal=document.getElementById('historianSeal'), navy=panel.querySelector('.activity.bl-navy');
-    if(!A||!B||!G||!T) return;
-    stepperEl=el('div','spk spk-stepper',STEP4.map(function(s,i){ return '<button type="button" data-i="'+(i+1)+'"><span class="n"><span>'+(i+1)+'</span></span>'+s.t+'</button>'; }).join(''));
-    stepperEl.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; var h=document.getElementById('spk-step-'+b.dataset.i); if(h) h.scrollIntoView({behavior:'smooth',block:'start'}); });
-    var intro=[].filter.call(panel.children,function(c){ return c.classList.contains('callout-info'); })[0]; if(intro) intro.classList.add('spk-hide');
-    var sh=panel.querySelector('.spk-scene'); if(sh) after(sh,stepperEl); else before(A,stepperEl); before(A,stepHead(0)); before(PL||B,stepHead(1)); before(B,stepHead(2));
-    /* Historian's Sentence → last line of the notebook entry */
-    var hs=document.getElementById('journal-chronicle');
-    if(navy&&hs){ var last=el('div','spk spk-last','<div class="lab">Last line · Historian’s Sentence</div><p>Finish it in your own words.</p>'); var pr=navy.querySelector('.textbox-prompt'); B.querySelector('.activity-body').appendChild(last); if(pr) move(pr,function(n){ last.appendChild(n); }); move(hs,function(n){ last.appendChild(n); }); }
-    /* Step 4: review button, then the gathered answers (folded), then the checklist, then the reward */
-    var h4=stepHead(3); before(G,h4); var rv=el('button','spk spk-review','📋 Review my work'); rv.type='button'; after(h4,rv);
-    G.classList.add('spk-folded'); rv.addEventListener('click',function(){ var f=G.classList.toggle('spk-folded'); if(!f&&typeof gatherAnswers==='function') gatherAnswers(); rv.textContent=f?'📋 Review my work':'Hide my work ▴'; });
-    move(T,function(n){ after(G,n); }); if(seal) move(seal,function(n){ after(T,n); });
-    panel.addEventListener('input',updateStepper); T.addEventListener('click',function(){ setTimeout(updateStepper,0); });
-    updateStepper(); }
-  function updateStepper(){ if(!stepperEl) return; var w=function(id){ var t=document.getElementById(id); return t?words(t.value):0; };
-    var st=[ ['journal-q1','journal-q2','journal-q3'].every(flagsMet),
-             !!(S.plan.season&&S.plan.people&&STEPS.every(function(k){ return S.plan[k]!=null; })),
-             notebookWritten()&&w('journal-chronicle')>=5,
-             checklistDone() ];
-    stepperEl.querySelectorAll('button').forEach(function(b,i){ b.classList.toggle('done',st[i]); }); }
-
-  /* ================================================================ v8 · VOICE NOTES — the teacher's audio guides.
-     Same job as the ELA sparkle guides: say why the work is worth doing, before it starts. Never read the page,
-     never give an answer, no time of day. 40–75 words. One per scene that earns it (none on the Check tab).
-     Production: hidden until the .mp3 exists. MOCK: shown with the script and a "not recorded yet" note. */
-  var AUD='https://raw.githubusercontent.com/bbirchum1/optima-4th-social-studies/main/audio/guide/';
-  var VOICE=[
-    {slot:'guide1', label:'Why we start with a map', where:function(){ var fc=document.querySelector('#panel-scene .canvas-file-card'); return fc&&[fc,'before']; },
-     script:'Quick voice note, because typing on this phone is slow. Here’s why we start with a map and not a story. A map can’t tell you what anyone ate for breakfast. It can tell you what was possible. Some places make it easy to grow food, some make it easy to fish, some make both hard. As you match the clues, notice the reason each one fits. That reason is the lesson.'},
-    {slot:'guide2', label:'Geography has a “when”', where:function(){ var g=document.querySelector('#panel-explore .spk-seasons'); var a=g&&g.closest('.activity'); var sb=a&&a.previousElementSibling; return a&&[sb&&sb.classList.contains('step-badge')?sb:a,'before']; },
-     script:'Most people think geography just means where. Today it also means when. Picture your own street during a big storm, and then on the nicest day of the year. Same street, two different lives. The first Floridians lived that four times every year. While you read the seasons, keep asking yourself one thing: what would I have to do differently right now?'},
-    {slot:'guide3', label:'The page I care about most', where:function(){ var h=document.getElementById('spk-step-3'); return h&&[h,'after']; },
-     script:'This is the writing part, and honestly it’s the one I care about most. Anybody can list facts about a season. A historian tries to tell it the way someone who lived it would have felt it, including the hard part. So don’t write a perfect day. Write a true one. Use your plan, but the sentences have to be yours.'},
-    {slot:'checkperfect', label:'Three out of three', where:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }, when:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&n.textContent.trim()==='3'; },
-     script:'Three out of three! That tells me you really read those season files. Hang on to those details, because you’ll need them when you write. Next, go to the Historian’s Notebook tab. That’s where you’ll write about one day in one season.'},
-    {slot:'checkreview', label:'About the ones you missed', where:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }, when:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&n.textContent.trim()!=='3'; },
-     script:'That’s okay. These questions are just to see what stuck, and they aren’t graded. Look at the ones you missed and find the season each one asked about. Go back to the Source Study tab and reread that season file. Then come to the Historian’s Notebook tab when you’re ready.'}
-  ];
-  function buildVoice(){ VOICE.forEach(function(v){ var w=v.where(); if(!w) return;
-    var file=AUD+'g4ss-'+LESSON+'-'+v.slot+'.mp3', bars=''; for(var i=0;i<30;i++) bars+='<i style="height:'+(5+Math.round(13*Math.abs(Math.sin(i*1.7+v.slot.length))))+'px"></i>';
-    var n=el('div','spk spk-vn spk-hide','<span class="spk-avatar">👩‍🏫</span><div><div class="k">Voice note from your teacher</div><div class="t">'+v.label+'</div><div class="wave">'+bars+'</div></div><button type="button" class="play" aria-label="Play voice note">▶</button><button type="button" class="rd">Read along</button><div class="tx">'+esc(v.script)+'</div>');
-    n.dataset.slot=v.slot; n.__when=v.when; w[1]==='after'?after(w[0],n):before(w[0],n);
-    var au=new Audio(), play=n.querySelector('.play');
-    au.preload='metadata';
-    /* invisible until the recording exists (like the ELA sparkle): a missing file is .spk-empty, which only the mock bar's
-       "show empty media slots" box reveals */
-    au.addEventListener('loadedmetadata',function(){ n.classList.remove('spk-hide','spk-empty'); play.disabled=false; var m=n.querySelector('.mock'); if(m) m.remove(); });
-    au.addEventListener('error',function(){ n.classList.remove('spk-hide'); n.classList.add('spk-empty'); play.disabled=true; if(!n.querySelector('.mock')) n.querySelector('.k').insertAdjacentHTML('beforeend','<span class="mock">· empty slot — g4ss-'+LESSON+'-'+v.slot+'.mp3</span>'); });
-    au.addEventListener('ended',function(){ n.classList.remove('playing'); play.textContent='▶'; });
-    play.addEventListener('click',function(){ if(au.paused){ document.querySelectorAll('.spk-vn.playing .play').forEach(function(b){ if(b!==play) b.click(); }); au.play(); n.classList.add('playing'); play.textContent='❚❚'; } else { au.pause(); n.classList.remove('playing'); play.textContent='▶'; } });
-    n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'Read along'; });
-    au.src=file; }); refreshVoice(); }
-  function refreshVoice(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
-  /* videos too: a .video-wrap with no player in it yet (the manifest hasn't filled it) stays out of sight */
-  function paintVideos(){ document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
-  function buildMedia(){ paintVideos(); if(!window.__spkVidObs){ window.__spkVidObs=new MutationObserver(function(){ clearTimeout(window.__spkVidT); window.__spkVidT=setTimeout(paintVideos,100); }); window.__spkVidObs.observe(document.body,{childList:true,subtree:true}); } }
-
-  /* ================================================================ v9 · borrowed from the ELA sparkle machinery, all driven by this
-     lesson's own DATA (<script type="application/json" id="ff-data">): what each answer needs (flags), hint ladders,
-     "go further" lines, a line for each wrong Self-Check answer, and the Learning Journal download. */
-  function flagCount(f,v){ if(f.groups) return f.groups.filter(function(g){ return new RegExp('\\b('+g+')','i').test(v); }).length;
-    var m=v.match(new RegExp(f.rx,'gi'))||[]; var u={}; m.forEach(function(x){ u[x.toLowerCase().trim()]=1; }); return Object.keys(u).length; }
-  function flagsMet(id){ var fl=(DATA.flags||{})[id], t=document.getElementById(id); if(!t) return true; if(!fl) return words(t.value)>=3; return fl.every(function(f){ return flagCount(f,t.value)>=f.n; }); }
-  function buildHelp(){ S.hints=S.hints||{};
-    var ids={}; ['flags','hints','scholar'].forEach(function(k){ Object.keys(DATA[k]||{}).forEach(function(id){ ids[id]=1; }); });
-    Object.keys(ids).forEach(function(id){
-      var host=id==='spk-stems'?document.querySelector('.spk-notes .spk-stems'):document.getElementById(id); if(!host) return;
-      var fl=(DATA.flags||{})[id], hs=(DATA.hints||{})[id], sc=(DATA.scholar||{})[id];
-      var box=el('div','spk spk-help');
-      if(fl) box.innerHTML+='<div class="spk-flags"><span class="lab">Your answer needs</span>'+fl.map(function(f,i){ return '<span class="f" data-i="'+i+'">'+esc(f.t)+'</span>'; }).join('')+'</div>';
-      if(hs) box.innerHTML+='<div class="spk-ladder"><button type="button" class="spk-nudge">💡 Need a nudge?</button><ol class="spk-rungs"></ol></div>';
-      if(sc) box.innerHTML+='<div class="spk-further">✦ '+esc(sc)+' <span>(optional)</span></div>';
-      after(host,box);
-      if(fl){ var paint=function(){ box.querySelectorAll('.spk-flags .f').forEach(function(c){ var f=fl[+c.dataset.i]; c.classList.toggle('hit',flagCount(f,host.value||'')>=f.n); }); updateStepper(); }; host.addEventListener('input',paint); paint(); }
-      if(hs){ var btn=box.querySelector('.spk-nudge'), ol=box.querySelector('.spk-rungs');
-        var show=function(){ var n=S.hints[id]||0; ol.innerHTML=hs.slice(0,n).map(function(h){ return '<li>'+esc(h)+'</li>'; }).join(''); btn.textContent=n===0?'💡 Need a nudge?':n<hs.length?'💡 Another nudge':'That’s every nudge — you’ve got this'; btn.disabled=n>=hs.length; };
-        btn.addEventListener('click',function(){ S.hints[id]=Math.min((S.hints[id]||0)+1,hs.length); save(); show(); }); show(); }
-    }); }
-  function buildQuizMiss(){ if(!DATA.quizMiss||typeof window.checkQuiz!=='function'||window.__spkQuizWrapped) return; window.__spkQuizWrapped=true;
-    var orig=window.checkQuiz;
-    window.checkQuiz=function(opt){ var q=opt.closest('.quiz-q'), was=q&&q.classList.contains('answered'); orig(opt);
-      if(was||!q||!document.documentElement.classList.contains('spk-on')) return;
-      var idx=[].indexOf.call(document.querySelectorAll('.quiz-q'),q), v=opt.getAttribute('data-val'), line=(DATA.quizMiss[idx]||{})[v];
-      if(line&&v!==q.getAttribute('data-answer')){ var fb=q.querySelector('.fb-wrong')||q.lastElementChild; after(fb,el('div','spk spk-qmiss','<b>Why that one’s tempting:</b> '+esc(line))); } }; }
-
-  /* ---- the Learning Journal: a page to keep, built from the lesson's notes and the student's own work ---- */
-  var TEXTS=[];
-  function setText(n,t){ if(!n) return; TEXTS.push([n,n.innerHTML]); n.innerHTML=t; }
-  function journalHTML(){ var e=function(s){ return esc(s==null?'':s); }, NA='<p class="na">(not answered yet)</p>', box=function(v){ v=(v||'').trim(); return v?'<p class="a">'+e(v).replace(/\n/g,'<br>')+'</p>':NA; };
-    var bq=document.querySelector('.theme-question .intro-card-body p'), cells=[].map.call(document.querySelectorAll('.info-strip .info-value'),function(c){ return c.textContent.trim(); });
-    var N=DATA.notes||{}, h='';
-    h+='<h1>📓 My Social Studies Journal</h1><div class="sub">'+e(DATA.lesson)+' · '+e(DATA.title)+(cells[0]?' · '+e(cells[0])+' · '+e(cells[1]):'')+(nm()?' · '+e(nm()):'')+'</div>';
-    if(bq) h+='<div class="bq"><b>Big Question</b>'+e(bq.textContent.trim())+'</div>';
-    h+='<h2>What I learned</h2><ul>'+(N.learned||[]).map(function(x){ return '<li>'+e(x)+'</li>'; }).join('')+(N.wordParts?'<li>'+e(N.wordParts)+' '+(N.vocab||[]).map(function(v){ return '<b>'+e(v[0])+'</b> — '+e(v[1]); }).join('; ')+'.</li>':'')+'</ul>';
-    h+='<h2>1 · Map Quest</h2>';
-    var st=ZONES.filter(function(z){ return words(S.stems[z.id])>=1; });
-    h+=st.length?st.map(function(z){ return '<p class="a">The '+e(z.people)+' lived '+e(z.where)+' because '+e(S.stems[z.id].trim().replace(/[.!?]?$/,function(m){ return m||'.'; }))+'</p>'; }).join(''):NA;
-    h+='<h2>2 · Source Study</h2><p class="a">Year-wheel: '+S.wheelPlaced.length+' of 4 pages back in place.</p>';
-    var sn=document.getElementById('quizScoreNum'); h+='<h2>3 · Self-Check</h2>'+(S.quizDone&&sn?'<p class="a">Score: '+e(sn.textContent)+' out of 3</p>':NA);
-    h+='<h2>4 · Historian’s Notebook</h2>';
-    ['journal-q1','journal-q2','journal-q3'].forEach(function(id,i){ var t=document.getElementById(id); if(!t) return; var qb=t.previousElementSibling; while(qb&&!qb.classList.contains('q-block')) qb=qb.previousElementSibling; var qt=qb?qb.querySelector('.q-text'):null, qtext=qt?qt.textContent.replace(/^\s*\d+\s*/,'').trim():t.getAttribute('data-label'); h+='<h3>'+(i+1)+'. '+e(qtext)+'</h3>'+box(t.value); });
-    var plan=[]; var sn2=SEASONS.filter(function(x){ return x.id===S.plan.season; })[0], pp=PEOPLE.filter(function(x){ return x.id===S.plan.people; })[0]; if(sn2) plan.push('Season: '+sn2.label); if(pp) plan.push('People: '+pp.t); STEPS.forEach(function(k){ if(sn2&&S.plan[k]!=null) plan.push(STEPLAB[k]+': '+PLAN[S.plan.season][k][S.plan[k]]); });
-    h+='<h3>My plan</h3>'+(plan.length?'<p class="a">'+plan.map(e).join('<br>')+'</p>':NA);
-    var da=document.getElementById('journal-assign'), hs=document.getElementById('journal-chronicle');
-    h+='<h3>A Day in the Life</h3>'+box(da&&da.value)+'<h3>My Historian’s Sentence</h3>'+box(hs&&hs.value);
-    return '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>'+e(DATA.lesson)+' — My Social Studies Journal</title><style>body{font-family:Georgia,serif;max-width:700px;margin:36px auto;padding:0 20px;color:#1a1a2e;line-height:1.6}h1{font-size:24px;margin:0;border-bottom:3px solid #C9A24A;padding-bottom:8px}.sub{color:#5B667A;font:14px system-ui,sans-serif;margin:6px 0 18px}.bq{background:#FAF6EE;border-left:4px solid #C9A24A;padding:10px 14px;margin:0 0 8px}.bq b{display:block;font:700 11px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#8A6A1E}h2{font-size:17px;color:#0E1C42;border-bottom:2px solid #E2E8F4;padding-bottom:4px;margin:26px 0 8px}h3{font:700 14px system-ui,sans-serif;color:#3A4A6B;margin:16px 0 4px}ul{padding-left:20px}li{margin:4px 0}.a{white-space:normal;background:#f8f9fc;border-left:3px solid #1A8A7D;border-radius:4px;padding:6px 12px;margin:4px 0}.na{color:#9AA3B8;font-style:italic;margin:4px 0}.ft{margin-top:30px;color:#9AA3B8;font:12px system-ui,sans-serif}</style></head><body>'+h+'<div class="ft">Optima Academy Online · Social Studies · Grade 4 · The Florida Files</div></body></html>'; }
-  function spkJournal(){ if(typeof gatherAnswers==='function') gatherAnswers(); var html=journalHTML(), win=null; try{ win=window.open('','_blank'); }catch(e){}
-    if(win){ win.document.write(html); win.document.close(); setTimeout(function(){ try{ win.print(); }catch(e){} },400); return; }
-    try{ var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([html],{type:'text/html'})); a.download=(DATA.lesson||'lesson')+'-my-journal.html'; document.body.appendChild(a); a.click(); a.remove(); }catch(e){} }
-  function buildJournal(){ if(!DATA.notes) return; window.__spkJournalHTML=journalHTML;
-    if(!window.__spkJournalWrapped&&typeof window.downloadJournal==='function'){ var orig=window.downloadJournal; window.downloadJournal=function(){ if(document.documentElement.classList.contains('spk-on')) spkJournal(); else orig(); }; window.__spkJournalWrapped=true; }
-    setText(document.querySelector('.gathered-btn-pdf'),'📓 Download your Social Studies journal for the day');
-    setText(document.querySelector('.gathered-intro'),'Look over your answers here. Download your journal for the day to keep, and copy your answers to paste into Canvas.'); }
-
-  /* ================================================================ v14 · ROOT DIG — the Word Roots match, made into a dig site.
-     Every word has the root geo ("earth, land"), so the words are buried in Florida ground: sand, shell, limestone, and a warm
-     clay layer at the bottom (geothermal sits down there). Brush the sand off each tablet, then match it to its meaning.
-     Each match teaches the OTHER word part too: geo + logy = earth + study of. Replaces the base click-and-match grid. */
-  var DIG=[
-    {w:'geography', rest:'graphy', m:'writing or describing the earth', part:'-graphy means writing or drawing', layer:0, x:16},
-    {w:'geology',   rest:'logy',   m:'the study of the earth’s rocks',  part:'-logy means the study of',          layer:1, x:62},
-    {w:'geometry',  rest:'metry',  m:'earth-measure: shapes and space', part:'-metry means measuring',            layer:2, x:30},
-    {w:'geothermal',rest:'thermal',m:'heat from inside the earth',      part:'thermal means heat',                layer:3, x:70}
-  ];
-  var DIG_MISS_UNUSED={'writing or describing the earth':'That meaning has “writing” in it. Which word ends in -graphy, like a biography (writing about a life)?',
-    'the study of the earth’s rocks':'That meaning is about studying. Which word ends in -logy, like biology (the study of living things)?',
-    'earth-measure: shapes and space':'That meaning is about measuring. Which word ends in -metry, like a meter for measuring?',
-    'heat from inside the earth':'That meaning is about heat. Which word has “thermal” in it, like a thermos that keeps soup hot?'};
-  function buildDig(){ var game=document.querySelector('.root-match-game'); if(!game) return; var body=game.closest('.activity-body'); if(!body) return;
-    S.dig=S.dig||{dug:{},matched:[]}; Object.keys(S.dig.dug).forEach(function(k){ if(S.dig.dug[k]>=1&&S.dig.matched.indexOf(+k)<0) S.dig.matched.push(+k); });
-    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
-    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
-    var g=el('div','spk spk-dig');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">Root Dig</span><span class="spk-h">Dig up the geo words</span></div>'
-      +voice('All four words are buried in Florida ground. Brush the sand off each one (drag across it, or tap it a few times). When a word comes up, read what it means and look at how the word is built.')
-      +'<div class="spk-site"><div class="strata"><i class="s0"></i><i class="s1"></i><i class="s2"></i><i class="s3"></i></div>'
-      +'<svg class="deco" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><g fill="#E9D8B4" opacity=".7"><path d="M40,20 q6,-8 12,0 q-6,4 -12,0z"/><path d="M330,40 q6,-8 12,0 q-6,4 -12,0z"/></g><g fill="#F5EBD6" opacity=".55"><path d="M120,92 a6,6 0 1 1 12,0 l-6,6z"/><path d="M300,88 a5,5 0 1 1 10,0 l-5,5z"/><path d="M60,100 a4,4 0 1 1 8,0 l-4,4z"/></g><g stroke="#E4DCCB" stroke-width="1.2" fill="none" opacity=".6"><path d="M200,150 q8,-6 16,0 t16,0"/><path d="M40,160 q6,-5 12,0"/></g></svg>'
-      +'<div class="warm"></div>'
-      +DIG.map(function(d,i){ return '<button type="button" class="tab" data-i="'+i+'" style="top:'+(4+d.layer*24)+'%;--x:'+d.x+'"><span class="word"><b>geo</b>'+d.rest+'</span><span class="mean"></span><span class="sand"></span></button>'; }).join('')
-      +'<div class="dust"></div></div>'
-      +'<p class="spk-dig-ct"></p>'
-      +'<div class="spk-dig-win"><span class="stamp">✨ Root found: <b>geo</b> = earth, land</span><p>'+esc(factTx)+'</p></div>';
-    after(game,g);
-    var site=g.querySelector('.spk-site'), dust=g.querySelector('.dust'), brushing=null;
-    function prog(i){ return S.dig.dug[i]||0; }
-    function paint(){ g.querySelectorAll('.tab').forEach(function(t){ var i=+t.dataset.i, p=prog(i), m=S.dig.matched.indexOf(i)>=0; t.querySelector('.sand').style.opacity=Math.max(0,1-p); t.classList.toggle('dug',p>=1); t.classList.toggle('matched',m); t.querySelector('.mean').innerHTML=m?esc(DIG[i].m)+'<small>geo + '+esc(DIG[i].rest)+' · '+esc(DIG[i].part)+'</small>':''; });
-      var n=S.dig.matched.length; g.querySelector('.spk-dig-ct').innerHTML=n<DIG.length?'<b>'+n+' of '+DIG.length+'</b> words dug up.':'';
-      var all=S.dig.matched.length===DIG.length; g.classList.toggle('done',all); if(all){ window._rootMatchDone=true; } }
-    function puff(x,y){ for(var k=0;k<3;k++){ var p=el('i'); p.style.left=(x+(Math.random()*16-8))+'px'; p.style.top=(y+(Math.random()*10-5))+'px'; p.style.setProperty('--dx',(Math.random()*30-15)+'px'); dust.appendChild(p); setTimeout(function(q){ return function(){ q.remove(); }; }(p),700); } }
-    function brush(t,amt,e){ var i=+t.dataset.i; if(prog(i)>=1) return; S.dig.dug[i]=Math.min(1,prog(i)+amt); if(e){ var r=site.getBoundingClientRect(); puff(e.clientX-r.left,e.clientY-r.top); } if(S.dig.dug[i]>=1){ if(S.dig.matched.indexOf(i)<0) S.dig.matched.push(i); t.classList.add('pop','spark'); setTimeout(function(){ t.classList.remove('pop','spark'); },900); } save(); paint(); }
-    site.addEventListener('pointerdown',function(e){ var t=e.target.closest('.tab'); if(!t) return; brushing=t; if(prog(+t.dataset.i)<1) brush(t,.3,e); });
-    site.addEventListener('pointermove',function(e){ if(!brushing) return; var t=e.target.closest('.tab'); if(t&&t===brushing) brush(t,.045,e); });
-    window.addEventListener('pointerup',function(){ brushing=null; });
-    site.addEventListener('keydown',function(e){ var t=e.target.closest('.tab'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); if(prog(+t.dataset.i)<1) brush(t,.34); } });
-    paint(); }
-
-  /* ================================================================ v16 · Self-Check one question at a time */
-  function buildQuizSteps(){ var qs=[].slice.call(document.querySelectorAll('#panel-check .quiz-q')); if(qs.length<2) return;
-    var cur=0, bar=el('div','spk spk-qprog'); before(qs[0],bar);
-    qs.forEach(function(q,i){ var nx=el('button','spk spk-qnext',i<qs.length-1?'Next question →':'See my score →'); nx.type='button'; q.appendChild(nx);
-      nx.addEventListener('click',function(){ cur=i+1; paint(); var t=qs[cur]||document.getElementById('quizScore'); if(t) t.scrollIntoView({behavior:'smooth',block:'center'}); }); });
-    var score=document.getElementById('quizScore');
-    function paint(){ qs.forEach(function(q,i){ q.classList.toggle('spk-qhide',i!==cur); q.classList.toggle('spk-qready',q.classList.contains('answered')); });
-      if(score) score.classList.toggle('spk-qhide',cur<qs.length);
-      bar.innerHTML=cur<qs.length?qs.map(function(q,i){ return '<i class="'+(i<cur?'done':i===cur?'now':'')+'"></i>'; }).join('')+'<span>Question '+(cur+1)+' of '+qs.length+'</span>':''; bar.classList.toggle('spk-hide',cur>=qs.length); }
-    new MutationObserver(paint).observe(document.getElementById('panel-check'),{attributes:true,subtree:true,attributeFilter:['class']});
-    paint(); }
-
-  /* ================================================================ v16 · Opti hoots — softly, once, when you hover (or tap) the owl.
-     Made with WebAudio (no file): two low "hoo" notes, quiet, and at most once every 8 seconds. */
-  var hootAt=0, actx=null;
-  function hoot(){ var now=Date.now(); if(now-hootAt<8000) return; hootAt=now;
-    try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); }catch(e){ return; }
-    [[0,0.34],[0.46,0.5]].forEach(function(n){ var t0=actx.currentTime+n[0], d=n[1], o=actx.createOscillator(), g=actx.createGain(), lfo=actx.createOscillator(), lg=actx.createGain(), f=actx.createBiquadFilter();
-      o.type='sine'; o.frequency.setValueAtTime(410,t0); o.frequency.linearRampToValueAtTime(360,t0+d);
-      lfo.frequency.value=6; lg.gain.value=6; lfo.connect(lg); lg.connect(o.frequency);
-      f.type='lowpass'; f.frequency.value=900;
-      g.gain.setValueAtTime(0.0001,t0); g.gain.exponentialRampToValueAtTime(0.07,t0+0.06); g.gain.exponentialRampToValueAtTime(0.0001,t0+d);
-      o.connect(f); f.connect(g); g.connect(actx.destination); o.start(t0); lfo.start(t0); o.stop(t0+d+0.05); lfo.stop(t0+d+0.05); }); }
-  function buildOpti(){ document.querySelectorAll('.owl-buddy').forEach(function(o){ if(o.__spkHoot) return; o.__spkHoot=true;
-    var go=function(){ if(!document.documentElement.classList.contains('spk-on')) return; hoot(); var a=o.querySelector('.owl-buddy-avatar'); if(a){ a.classList.remove('spk-hoot'); void a.offsetWidth; a.classList.add('spk-hoot'); } };
-    o.addEventListener('mouseenter',go); o.addEventListener('click',go); }); }
-
-  /* ================================================================ THE FLORIDA FILES — a cabinet and a map. Click a folder or a pin. */
-  var FILES=[
-    {n:1,t:'Being a Historian',    img:'source-4-01-01-florida-historic-photo.jpg', x:203,y:106, where:'Everywhere — a historian’s desk', blurb:'How Florida historians ask questions, read sources, and tell the difference between a fact and a guess.'},
-    {n:2,t:'The Map Room',         img:'source-4-02-01-florida-physical-map.png',  x:89, y:56,  where:'The Panhandle and the peninsula', blurb:'Florida’s land and water: coasts, rivers, wetlands, and the maps that show them.'},
-    {n:3,t:'First Peoples',        img:'source-4-03-05-florida-year-wheel.png',    x:219,y:212, where:'The mangrove coast, the river country, the fields of the north', blurb:'The Apalachee, Timucua, Calusa and Tequesta, and the year they lived through.'},
-    {n:4,t:'Explorers',            x:261,y:142,  where:'The Atlantic coast', blurb:'Ships on the horizon. Spain, France and England arrive in La Florida.'},
-    {n:5,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
-    {n:6,t:'Spanish Florida',      x:240,y:81,  where:'St. Augustine and the missions', blurb:'The oldest city, the mission trail, and life in a Spanish colony.'},
-    {n:7,t:'Fort Mose & Pioneers', x:229,y:67,  where:'Fort Mose, north of St. Augustine', blurb:'The first free Black settlement, and the pioneers who followed.'},
-    {n:8,t:'Statehood & War',      x:123, y:53,  where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
-    {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
-    {n:10,t:'Modern Florida',      x:198,y:159, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
-    {n:11,t:'Civil Rights & Citizens', x:248,y:98, where:'St. Augustine, 1964', blurb:'Floridians who stood up for their rights, and what changed.'},
-    {n:12,t:'Government',          x:143, y:67,  where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
-    {n:13,t:'The Exhibit',         x:234,y:138, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
-  ];
-  var MOCK_SENT={1:'As a Florida historian, I learned that a photograph is a source because somebody took it for a reason.',2:'As a Florida historian, I learned that Florida is mostly water with land around it because the map showed rivers and wetlands everywhere.'};
-  var cabEl, lockEl, cabSel=null;
-  function cabMapSVG(){ var s='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Florida, with a pin for every file">'+floridaBase('B')+'<text x="14" y="288" style="font:italic 700 10px Lora,Georgia,serif;fill:#5C4A2A">Where the files have taken us</text>';
-    FILES.filter(function(f){return !f.door;}).forEach(function(f){ s+='<g class="spk-pin" data-n="'+f.n+'"><circle class="halo" cx="'+f.x+'" cy="'+f.y+'" r="9"/><circle class="dot" cx="'+f.x+'" cy="'+f.y+'" r="9"/><text x="'+f.x+'" y="'+(f.y+3.5)+'" text-anchor="middle">'+f.n+'</text><title>'+f.t+'</title></g>'; }); return s+'</svg>'; }
-  function buildCabinet(){ var chip=document.querySelector('.canvas-path-chip'); if(!chip) return;
-    cabEl=el('div','spk spk-cab'); cabEl.innerHTML='<div class="spk-cab-head"><span style="font-size:28px" aria-hidden="true">🗄️</span><div><div class="tt">The Florida Files</div><div class="ss">Thirteen files, one state. Tap a folder, or a pin on the map.</div></div><span class="cnt"></span></div><div class="spk-cab-body"><div><div class="spk-cab-map">'+cabMapSVG()+'</div><div class="spk-cab-cap">Pins light up as files open.</div></div><div><div class="spk-drawer"><span class="spk-drawer-lab">G4 · FLORIDA HISTORY</span><div class="spk-folders">'+FILES.map(function(f){return '<div class="spk-f'+(f.door?' door':'')+'" data-n="'+f.n+'" role="button" tabindex="0" title="'+f.t+'">'+(f.img?'<img alt="" src="'+IMG+f.img+'" onerror="this.remove()">':'')+'<div class="n">'+(f.door?'':f.t)+'</div></div>';}).join('')+'</div></div><div class="spk-cardwrap"></div></div></div>';
-    cabEl.addEventListener('click',function(e){ var f=e.target.closest('.spk-f')||e.target.closest('.spk-pin'); if(f){ cabSel=+f.dataset.n; paintCabinet(); } });
-    cabEl.addEventListener('keydown',function(e){ var f=e.target.closest('.spk-f'); if(f&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); cabSel=+f.dataset.n; paintCabinet(); } });
-    before(chip,cabEl); lockEl=el('div','spk spk-lockline','<span class="i">🗄️</span><span>The Florida Files cabinet shows up here after you write your Day in the Life entry and check off the whole list.</span>'); before(cabEl,lockEl); if(cabSel==null) cabSel=THIS; showCabinet(); paintCabinet(false); }
-  function showCabinet(){ if(!cabEl) return; cabEl.classList.toggle('spk-hide',!S.cracked); lockEl.classList.toggle('spk-hide',!!S.cracked); }
-  function paintCabinet(anim){ if(!cabEl) return;
-    cabEl.querySelectorAll('.spk-f').forEach(function(f){ var n=+f.dataset.n,u=C.opened.indexOf(n)>=0; f.classList.toggle('unlocked',u); f.classList.toggle('now',n===THIS&&!S.cracked); f.classList.toggle('sel',n===cabSel); if(anim&&n===THIS) f.classList.add('justopened'); });
-    cabEl.querySelectorAll('.spk-pin').forEach(function(p){ var n=+p.dataset.n; p.classList.toggle('lit',C.opened.indexOf(n)>=0); p.classList.toggle('now',n===THIS&&!S.cracked); p.classList.toggle('sel',n===cabSel); });
-    cabEl.querySelector('.cnt').textContent=C.opened.length+' of 13 open'+(nm()?' · '+nm()+'’s drawer':'');
-    var f=FILES.filter(function(x){return x.n===cabSel;})[0]; var w=cabEl.querySelector('.spk-cardwrap'); if(!f){ w.innerHTML=''; return; }
-    var open=C.opened.indexOf(f.n)>=0, now=f.n===THIS&&!S.cracked;
-    var st=f.door?'<div class="st locked">Checkpoint door</div>':open?'<div class="st open">✓ File open</div>':now?'<div class="st now">This file · in progress</div>':'<div class="st locked">🔒 Locked · opens in unit '+f.n+'</div>';
-    var sent=open?C.sentences[f.n]:null;
-    var body=f.blurb+(f.where?'<br><span style="color:var(--ffs)">📍 '+f.where+'</span>':'')+(sent?'<br><span class="qq">“'+esc(sent)+'”</span><br><span style="font-size:12px;color:var(--ffs)">— your Historian’s Sentence</span>':(now?'<br><span style="color:var(--ffs)">Your Historian’s Sentence will be filed here when you write it.</span>':''));
-    w.innerHTML='<div class="spk-card"><span class="tab">FILE · '+(f.n<10?'0':'')+f.n+'</span>'+(f.img&&(open||now)?'<img class="th" alt="" src="'+IMG+f.img+'" onerror="this.outerHTML=\'<div class=th>📁</div>\'">':'<div class="th">'+(f.door?'🚪':open?'📂':'📁')+'</div>')+'<div><div class="tt">'+f.t+'</div>'+st+'<div class="bd">'+body+'</div></div>'+(open?'<span class="stamp'+(anim&&f.n===THIS?' new':'')+'">Open</span>':'')+'</div>'; }
-
-  /* ================================================================ mock-only controls */
-  function buildMockBar(){ var bar=el('div','spk-mockbar'); bar.innerHTML='<b>✦ SPARKLE MOCKUP v18</b><label><input type="checkbox" id="spkOn" checked> layer on</label><label><input type="checkbox" id="spkEmpty"> show empty media slots</label><label><input type="checkbox" id="spkOutline"> outline additions</label><button type="button" id="spkReset">reset progress</button><button type="button" id="spkTwo">pretend files 1–2 open</button><button type="button" id="spkName">pretend name: Maya</button>'; document.body.appendChild(bar);
-    bar.querySelector('#spkOn').addEventListener('change',function(e){ e.target.checked?build():teardown(); }); bar.querySelector('#spkEmpty').addEventListener('change',function(e){ document.documentElement.classList.toggle('spk-showempty',e.target.checked); }); bar.querySelector('#spkOutline').addEventListener('change',function(e){ document.body.classList.toggle('spk-outline',e.target.checked); });
-    bar.querySelector('#spkReset').addEventListener('click',function(){ try{localStorage.removeItem(KEY);localStorage.removeItem(CKEY);localStorage.removeItem(PKEY);}catch(e){} S={mapSolved:[],stems:{},wheelPlaced:[],thread:[],seen:{},plan:{},ack:{},hints:{},seasonsOpen:[],dig:{dug:{},matched:[]}}; thread=S.thread; pendingKey=null; C={opened:[],sentences:{}}; P=null; teardown(); build(); });
-    bar.querySelector('#spkTwo').addEventListener('click',function(){ [1,2].forEach(function(n){ if(C.opened.indexOf(n)<0) C.opened.push(n); }); save(); paintCabinet(false); });
-    bar.querySelector('#spkName').addEventListener('click',function(){ P={name:'Maya',from:'ss'}; put(PKEY,P); teardown(); build(); }); }
-  function teardown(){ var h=document.documentElement; h.classList.remove('spk-on'); delete h.dataset.spkTab;
-    MOVES.reverse().forEach(function(x){ x[1].parentNode.insertBefore(x[0],x[1]); x[1].remove(); }); MOVES=[];
-    TEXTS.reverse().forEach(function(x){ x[0].innerHTML=x[1]; }); TEXTS=[];
-    ATTRS.forEach(function(x){ x[2]==null?x[0].removeAttribute(x[1]):x[0].setAttribute(x[1],x[2]); }); ATTRS=[];
-    document.querySelectorAll('.spk').forEach(function(n){n.remove();});
-    document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
-    fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; unread=0; }
-  function build(){ try{ P=get(PKEY,null); document.documentElement.classList.add('spk-on'); buildTop(); buildPhone(); buildOpening(); buildFile(); buildScenes(); buildLens(); buildMapQuest(); buildSeasonGrid(); buildSourceStudy(); buildCheck(); buildPlanner(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildDig(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){build();}); else { build(); }
-})();
-</script>
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 
 </body>
 </html>
