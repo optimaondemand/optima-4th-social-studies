@@ -163,6 +163,11 @@
     var note=el('div','spk spk-note opening spk-hide'); note.dataset.scene='open'; note.innerHTML=noteHTML('Texts from your teacher · inside Canvas'); note.addEventListener('click',onNote); before(intro,note);
     if(!thread.length){ if(!nm()&&storageWorks()) openingWaiting=true; else startOpening(); }
   }
+  /* THE STORY SO FAR — one line at the top for students who join mid-year (rolling enrollment).
+     Course default here; a lesson can override with DATA.storySoFar. */
+  function buildStory(){ var anchor=document.querySelector('.spk-note.opening')||document.getElementById('introSection'); if(!anchor) return;
+    var t=DATA.storySoFar||(QUIET?'Your teacher is stuck inside Canvas. Every Florida File you finish opens a door and gets your teacher one room closer to getting out.':'Your teacher is stuck inside Canvas! Every Florida File you finish opens a door and gets your teacher one room closer to getting out.');
+    before(anchor,el('div','spk spk-story','<span class="k">📁 The story so far</span><span class="t">'+esc(t)+'</span>')); }
   function startOpening(){
     if(thread.length) return;
     {
@@ -688,7 +693,7 @@
     document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
     fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; R={}; unread=0; }
   function build(){ try{ P=loadProfile(); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
-    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
+    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); buildStory(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();

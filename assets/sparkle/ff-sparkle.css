@@ -593,3 +593,8 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-who:hover b { text-decoration: underline; }
 @media (max-width: 760px) { .spk-who { margin-bottom: 0; } }
 @media (max-width: 420px) { .spk-who { max-width: 90px; overflow: hidden; text-overflow: ellipsis; } }
+
+/* ---------- THE STORY SO FAR — one quiet line under the tabs (story family) ---------- */
+.spk-story { max-width: 720px; margin: 14px auto 0; padding: 7px 14px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; background: #FAF3E2; border: 1px dashed #D8C7A2; border-radius: 10px; }
+.spk-story .k { flex: none; font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ffg2); }
+.spk-story .t { flex: 1 1 260px; font: italic 500 14.5px/1.4 'Lora', Georgia, serif; color: #5C4A2A; }
