@@ -114,6 +114,9 @@
     toastEl.addEventListener('click',function(){ openPhone(true); }); document.body.appendChild(toastEl);
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&phoneEl&&phoneEl.classList.contains('open')) openPhone(false); });
   }
+  /* The phone and its notification hang from the sticky file bar, so they open on screen wherever the student is
+     scrolled (a fixed corner fails in Canvas, where the iframe can be taller than the window). */
+  function dockPhone(){ if(!fileEl) return; if(phoneEl) fileEl.appendChild(phoneEl); if(toastEl) fileEl.appendChild(toastEl); fileEl.classList.add('spk-docked'); }
   function buildOpening(){
     var intro=document.getElementById('introSection'); if(!intro) return;
     var note=el('div','spk spk-note opening spk-hide'); note.dataset.scene='open'; note.innerHTML=noteHTML('Texts from your teacher · inside Canvas'); note.addEventListener('click',onNote); before(intro,note);
@@ -639,7 +642,7 @@
     document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
     fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; R={}; unread=0; }
   function build(){ try{ P=get(PKEY,null); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
-    buildTop(); buildPhone(); buildOpening(); buildFile(); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
+    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();

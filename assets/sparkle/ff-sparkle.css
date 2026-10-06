@@ -46,6 +46,11 @@ html.spk-on .canvas-unlock-stamp { background: #FDF6E4; }
 .spk-phone { position: fixed; right: 18px; bottom: 18px; z-index: 9000; width: 332px; max-width: calc(100vw - 36px); height: min(620px, calc(100vh - 36px)); display: none; flex-direction: column; background: #111; border-radius: 40px; padding: 12px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 0 0 2px #333 inset; }
 .spk-phone.open { display: flex; animation: spk-phone-in .3s cubic-bezier(.2,.8,.2,1); }
 @keyframes spk-phone-in { from { transform: translateY(40px) scale(.96); opacity: 0 } to { transform: none; opacity: 1 } }
+/* docked: the phone drops down from the sticky file bar (under Messages), so it is always on screen */
+.spk-file.spk-docked .spk-phone { position: absolute; top: calc(100% + 8px); right: 14px; bottom: auto; height: min(600px, calc(100vh - 140px)); min-height: 380px; }
+.spk-file.spk-docked .spk-toast { position: absolute; top: calc(100% + 10px); transform: translate(-50%, -12px); opacity: 0; visibility: hidden; pointer-events: none; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s, visibility 0s .35s; }
+.spk-file.spk-docked .spk-toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; pointer-events: auto; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .25s; }
+@media (max-width: 480px) { .spk-file.spk-docked .spk-phone { right: 8px; left: 8px; width: auto; max-width: none; } }
 .spk-screen { flex: 1; display: flex; flex-direction: column; background: #F2EFE6; border-radius: 30px; overflow: hidden; position: relative; }
 .spk-notch { position: absolute; top: 8px; left: 50%; width: 110px; height: 26px; margin-left: -55px; background: #111; border-radius: 16px; z-index: 3; }
 .spk-status { display: flex; justify-content: space-between; padding: 12px 22px 0; font: 700 12px 'Nunito', sans-serif; color: #111; }
