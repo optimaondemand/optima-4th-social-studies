@@ -15,9 +15,10 @@
    Interaction types (pick per lesson in DATA):
      scene1.type   mapquest | habitcard | shiporder
      explore.reading.type   seasongrid | filesgrid | routemap
+     explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
      explore.evidence.type  wheelsort  | spotdetail | shipshore
      planner.type  picks | fixit | choose
-     vocab.type    rootdig
+     vocab.type    rootdig | flags
    Add a new type by adding one entry to the MOD table below.
 
    Review tools: add ?review to the page address to get the review bar (layer on/off, show empty media slots,
@@ -497,27 +498,71 @@
      After each paragraph, the student shows that expedition's route; it draws itself on the map. ---- */
   function geoPath(pts){ return pts.map(function(p,i){ var q=project(p[0],p[1]); return (i?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1); }).join(' '); }
   MOD.routemap=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
-    var RT=(cfg.routes||[]).map(function(r){ return Object.assign({},r,{rx:new RegExp(r.match,'i')}); }), paras={}, first=null;
+    var RT=(cfg.routes||[]).map(function(r){ return Object.assign({},r,{rx:new RegExp(r.match,'i')}); }), SP=cfg.spots||[], paras={}, first=null;
     [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ var st=p.querySelector('strong'); if(!st) return; RT.forEach(function(r){ if(!paras[r.id]&&r.rx.test(p.textContent)){ paras[r.id]=p; if(!first) first=p; } }); });
     if(!first) return null;
-    S.routes=S.routes||[];
+    S.routes=S.routes||[]; if(S.routeStep==null) S.routeStep=0;
+    var done=function(){ return RT.every(function(r){ return S.routes.indexOf(r.id)>=0; }); };
     var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Florida map')+'">'+floridaBase('R')
       +(cfg.peoples||[]).map(function(p){ var q=project(p.lon,p.lat); return '<text class="pp" x="'+q[0].toFixed(0)+'" y="'+q[1].toFixed(0)+'" text-anchor="'+(p.a||'middle')+'">'+esc(p.t)+'</text>'; }).join('')
       +RT.map(function(r){ var land=r.land?geoPath(r.land):'', end=r.sea[r.sea.length-1], q=project(end[0],end[1]), lq=r.labelAt?project(r.labelAt[0],r.labelAt[1]):[q[0]+8,q[1]-6], fq=r.from?project(r.from.lon,r.from.lat):null;
         return '<g class="spk-rt" data-r="'+r.id+'" style="--c:'+r.color+'"><path class="sea" pathLength="100" d="'+geoPath(r.sea)+'"/>'+(land?'<path class="land" pathLength="100" d="'+land+'"/>':'')+(r.arrow?'<path class="land" pathLength="100" d="'+geoPath(r.arrow)+'"/>':'')
           +'<circle class="pin" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="5"/><text class="lb" x="'+lq[0].toFixed(0)+'" y="'+lq[1].toFixed(0)+'" text-anchor="'+(r.labelAnchor||'start')+'">'+esc(r.label)+'</text>'
           +(fq?'<text class="fr" x="'+Math.min(296,Math.max(4,fq[0])).toFixed(0)+'" y="'+Math.min(296,fq[1]).toFixed(0)+'" text-anchor="'+(r.from.a||'middle')+'">'+esc(r.from.t)+'</text>':'')+'</g>'; }).join('')
-      +(cfg.caption?'<text x="14" y="288" style="font:italic 700 10px Lora,Georgia,serif;fill:#5C4A2A">'+esc(cfg.caption)+'</text>':'')+'</svg>';
-    var wrap=el('div','spk spk-routes','<div class="spk-routes-read"></div><div class="spk-routes-side"><div class="spk-map">'+svg+'</div><p class="spk-routes-ct"></p></div>');
-    before(first,wrap); var read=wrap.querySelector('.spk-routes-read');
-    RT.forEach(function(r){ var p=paras[r.id]; if(!p) return; move(p,function(n){ read.appendChild(n); }); var b=el('button','spk-routebtn','<span class="ic">📍</span> '+esc(r.btn||'Show this route on the map')); b.type='button'; b.dataset.r=r.id; b.style.setProperty('--c',r.color); read.appendChild(b); });
+      +SP.map(function(s){ var q=project(s.lon,s.lat); return '<g class="spk-spot" data-s="'+s.id+'" role="button" tabindex="0" aria-label="'+esc(s.label)+'"><circle class="hit" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="15"/><circle class="ring" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="9"/><text class="sl" x="'+(q[0]+(s.dx||0)).toFixed(0)+'" y="'+(q[1]+(s.dy!=null?s.dy:22)).toFixed(0)+'" text-anchor="'+(s.a||'middle')+'">'+esc(s.label)+'</text></g>'; }).join('')+'</svg>';
+    var wrap=el('div','spk spk-routes spk-plot','<div class="spk-routes-read"><div class="spk-plot-dots">'+RT.map(function(r,i){ return '<button type="button" class="dot" data-i="'+i+'" style="--c:'+r.color+'">'+(i+1)+'</button>'; }).join('')+'<span class="of"></span></div><div class="spk-plot-steps"></div></div><div class="spk-routes-side"><div class="spk-map">'+svg+'</div><p class="spk-routes-ct"></p></div>');
+    before(first,wrap); var steps=wrap.querySelector('.spk-plot-steps');
+    RT.forEach(function(r,i){ var st=el('div','spk-plot-step'); st.dataset.i=i; st.style.setProperty('--c',r.color);
+      st.innerHTML='<div class="hd"><span class="yr">'+esc(r.year||'')+'</span> '+esc(r.name||'')+'</div><p class="clue">'+esc(r.clue||'')+'</p><div class="spk-plot-do"><div class="spk-chip noimg spk-plotship" draggable="true" role="button" tabindex="0"><span class="ico">'+shipIcon(r.size||1,r.color)+'</span><span>'+esc(cfg.doT||'Drag the ship to where he landed, or tap the spot on the map.')+'</span></div><p class="spk-miss"></p></div><div class="spk-plot-read"></div><button type="button" class="spk-plot-next"></button>';
+      steps.appendChild(st); var p=paras[r.id]; if(p) move(p,function(n){ st.querySelector('.spk-plot-read').appendChild(n); }); });
     var ct=cfg.counter||{};
-    function paint(anim){ RT.forEach(function(r){ var on=S.routes.indexOf(r.id)>=0, gEl=wrap.querySelector('.spk-rt[data-r="'+r.id+'"]'), b=read.querySelector('.spk-routebtn[data-r="'+r.id+'"]'); gEl.classList.toggle('on',on); if(on&&anim===r.id){ gEl.classList.add('drawing'); setTimeout(function(){ gEl.classList.remove('drawing'); },1600); } if(b){ b.classList.toggle('done',on); b.innerHTML=on?'<span class="ic">✓</span> '+esc(r.doneT||'On the map'):'<span class="ic">📍</span> '+esc(r.btn||'Show this route on the map'); } });
-      var n=S.routes.length; wrap.querySelector('.spk-routes-ct').innerHTML=n<RT.length?'<b>'+n+' of '+RT.length+'</b> '+esc(ct.some||'routes on the map.'):'<b>'+esc(ct.allHead||'All on the map.')+'</b> '+esc(ct.all||''); wrap.classList.toggle('all',n===RT.length); }
-    read.addEventListener('click',function(e){ var b=e.target.closest('.spk-routebtn'); if(!b) return; var id=b.dataset.r; if(S.routes.indexOf(id)<0){ S.routes.push(id); save(); paint(id); refreshFile(); } wrap.querySelector('.spk-map').scrollIntoView({behavior:'smooth',block:'nearest'}); });
-    paint(); foldThink(act,body);
-    return {act:act, done:function(){ return S.routes.length===RT.length; }, journal:function(e){ return '<p class="a">Routes on the map: '+S.routes.length+' of '+RT.length+'.</p>'; }};
+    function paint(anim){ var cur=S.routeStep;
+      RT.forEach(function(r,i){ var on=S.routes.indexOf(r.id)>=0, gEl=wrap.querySelector('.spk-rt[data-r="'+r.id+'"]'), st=steps.children[i];
+        gEl.classList.toggle('on',on); if(on&&anim===r.id){ gEl.classList.add('drawing'); setTimeout(function(){ gEl.classList.remove('drawing'); },1600); }
+        st.classList.toggle('now',i===cur); st.classList.toggle('plotted',on);
+        var nx=st.querySelector('.spk-plot-next'); nx.textContent=i<RT.length-1?(cfg.nextT||'Next explorer')+' →':(cfg.lastT||'All three are on the map ✓'); nx.disabled=i===RT.length-1;
+        var d=wrap.querySelector('.dot[data-i="'+i+'"]'); d.classList.toggle('on',on); d.classList.toggle('now',i===cur); d.disabled=!(on||i===cur||i===firstOpen()); });
+      wrap.querySelectorAll('.spk-spot').forEach(function(s){ s.classList.toggle('armed',!!RT[cur]&&S.routes.indexOf(RT[cur].id)<0); });
+      wrap.querySelector('.of').textContent=(cfg.stepWord||'Explorer')+' '+(cur+1)+' of '+RT.length;
+      var n=S.routes.length; wrap.querySelector('.spk-routes-ct').innerHTML=n<RT.length?'<b>'+n+' of '+RT.length+'</b> '+esc(ct.some||'routes on the map.'):'<b>'+esc(ct.allHead||'All on the map.')+'</b> '+esc(ct.all||'');
+      wrap.classList.toggle('all',done()); var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function firstOpen(){ for(var i=0;i<RT.length;i++) if(S.routes.indexOf(RT[i].id)<0) return i; return -1; }
+    function attempt(spotId){ var r=RT[S.routeStep]; if(!r||S.routes.indexOf(r.id)>=0) return; var st=steps.children[S.routeStep], miss=st.querySelector('.spk-miss'), chip=st.querySelector('.spk-plotship');
+      if(spotId===r.spot){ S.routes.push(r.id); save(); miss.textContent=''; paint(r.id); refreshFile(); setTimeout(function(){ var rd=st.querySelector('.spk-plot-read'); if(rd&&rd.getBoundingClientRect().top>innerHeight) rd.scrollIntoView({behavior:'smooth',block:'center'}); },300); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); miss.textContent=(r.miss&&r.miss[spotId])||r.missAny||''; } }
+    var map=wrap.querySelector('.spk-map');
+    map.addEventListener('click',function(e){ var s=e.target.closest('.spk-spot'); if(s) attempt(s.dataset.s); });
+    map.addEventListener('keydown',function(e){ var s=e.target.closest('.spk-spot'); if(s&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); attempt(s.dataset.s); } });
+    map.addEventListener('dragover',function(e){ var s=e.target.closest('.spk-spot'); wrap.querySelectorAll('.spk-spot').forEach(function(x){ x.classList.toggle('over',x===s); }); if(s) e.preventDefault(); });
+    map.addEventListener('drop',function(e){ e.preventDefault(); var s=e.target.closest('.spk-spot'); wrap.querySelectorAll('.spk-spot').forEach(function(x){ x.classList.remove('over'); }); if(s) attempt(s.dataset.s); });
+    steps.addEventListener('dragstart',function(e){ if(!e.target.closest('.spk-plotship')) return; e.dataTransfer.setData('text/plain','ship'); e.dataTransfer.effectAllowed='move'; });
+    steps.addEventListener('click',function(e){ var c=e.target.closest('.spk-plotship'); if(c){ map.scrollIntoView({behavior:'smooth',block:'nearest'}); return; }
+      var nx=e.target.closest('.spk-plot-next'); if(nx&&!nx.disabled){ S.routeStep=Math.min(RT.length-1,S.routeStep+1); save(); paint(); var t=steps.children[S.routeStep]; if(t.getBoundingClientRect().top<120) wrap.scrollIntoView({behavior:'smooth',block:'start'}); } });
+    wrap.querySelector('.spk-plot-dots').addEventListener('click',function(e){ var d=e.target.closest('.dot'); if(!d||d.disabled) return; S.routeStep=+d.dataset.i; save(); paint(); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(e){ return '<p class="a">Routes plotted on the map: '+S.routes.length+' of '+RT.length+'.</p>'; }};
   };
+
+  /* ---- Source image · tap-to-reveal labels: invisible buttons sit on the numbered badges already drawn on the
+     image (positions in % from DATA.source.hotspots). Tapping one shows what that part is. The lesson's own key
+     callout is hidden while the layer is on. ---- */
+  function buildHotspots(){ var cfg=DATA.source; if(!cfg||!cfg.hotspots) return null;
+    var ph=document.querySelector('#panel-explore .source-card .source-image-placeholder'); if(!ph) return null;
+    var card=ph.closest('.source-card'), key=card.querySelector('.callout-vocab'); if(key) key.classList.add('spk-hide');
+    S.hot=S.hot||[]; var H=cfg.hotspots;
+    var info=el('div','spk spk-hotinfo'); ph.parentNode.insertBefore(info,ph.nextSibling);
+    var sel=null;
+    function paintInfo(){ var h=sel!=null?H[sel]:null, n=H.filter(function(x,i){ return S.hot.indexOf(i)>=0; }).length;
+      info.innerHTML=(h?'<div class="now"><span class="n">'+esc(h.n)+'</span><div><b>'+esc(h.title||'')+'</b> '+esc(h.t)+'</div></div>':'<p class="hint">'+esc(cfg.prompt||'Tap each gold number on the map to see what it shows.')+'</p>')
+        +'<p class="ct">'+(n<H.length?'<b>'+n+' of '+H.length+'</b> labels opened.':'<b>All '+H.length+' labels opened.</b> '+esc(cfg.allT||''))+'</p>';
+      ph.querySelectorAll('.spk-hot').forEach(function(b){ var i=+b.dataset.i; b.classList.toggle('seen',S.hot.indexOf(i)>=0); b.classList.toggle('sel',i===sel); }); }
+    function mount(){ if(!ph.classList.contains('image-loaded')||ph.querySelector('.spk-hotlayer')) return; ph.classList.add('spk-hotimg');
+      var lay=el('div','spk spk-hotlayer',H.map(function(h,i){ return '<button type="button" class="spk-hot" data-i="'+i+'" style="left:'+h.x+'%;top:'+h.y+'%" aria-label="Label '+esc(h.n)+': '+esc(h.title||'')+'"></button>'; }).join(''));
+      ph.appendChild(lay); paintInfo(); }
+    ph.addEventListener('click',function(e){ var b=e.target.closest('.spk-hot'); if(!b) return; var i=+b.dataset.i; sel=i; if(S.hot.indexOf(i)<0){ S.hot.push(i); save(); } paintInfo(); });
+    new MutationObserver(mount).observe(ph,{attributes:true,childList:true}); mount(); paintInfo();
+    return {done:function(){ return S.hot.length>=H.length; }};
+  }
 
   /* ---- Explore evidence · ship and shore: match each expedition (the ship) to what it meant for the people
      already living here (the shore). One shore card is not true for these years and takes no ship. ---- */
@@ -562,10 +607,61 @@
     return {done:function(){ return ST.every(ok); }, lines:lines};
   };
 
+  /* ---- Vocabulary · Run Up the Flags: each word has a mast. Tap a rolled flag to unroll it and read the meaning,
+     then hoist it on the mast of the word it means (tap the flag, then the mast, or drag). All flags up → the ship sails. ---- */
+  var FLAGART={
+    a:'<rect width="40" height="14" fill="#F2C230"/><rect y="14" width="40" height="14" fill="#1F5FA8"/>',
+    b:'<rect width="40" height="28" fill="#1F5FA8"/><rect x="12" y="8" width="16" height="12" fill="#fff"/>',
+    c:'<rect width="40" height="28" fill="#fff"/><rect width="20" height="14" fill="#C8352E"/><rect x="20" y="14" width="20" height="14" fill="#C8352E"/>',
+    d:'<rect width="40" height="28" fill="#F2C230"/><path d="M0,28 L40,0 L40,28 Z" fill="#C8352E"/>',
+    e:'<rect width="40" height="28" fill="#fff"/><path d="M0,0 L40,28 M40,0 L0,28" stroke="#1F5FA8" stroke-width="6"/>',
+    f:'<rect width="40" height="28" fill="#2E8B57"/><circle cx="20" cy="14" r="7" fill="#fff"/>'};
+  function flagSVG(k,w){ return '<svg class="fl" viewBox="0 0 40 28" width="'+(w||40)+'" height="'+Math.round((w||40)*.7)+'" aria-hidden="true">'+(FLAGART[k]||FLAGART.a)+'<rect width="40" height="28" fill="none" stroke="#3E2612" stroke-width="1.2"/></svg>'; }
+  MOD.flags=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[]; S.flags=S.flags||{open:[],up:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&W.every(function(x,i){ return S.flags.up.indexOf(i)>=0; }); };
+    var g=el('div','spk spk-flagrun');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Run Up the Flags')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+      +'<div class="spk-flagsea"><div class="spk-flagship"><div class="masts">'+W.map(function(x,i){ return '<div class="mast" data-i="'+i+'" role="button" tabindex="0" aria-label="Mast for '+esc(x.w)+'"><div class="top"><span class="slot"></span></div><div class="pole"></div><div class="plaque"><b>'+esc(cfg.root||'')+'</b>'+esc(x.w.slice((cfg.root||'').length))+'</div></div>'; }).join('')+'</div><div class="hull"></div></div><div class="waves"></div></div>'
+      +'<div class="spk-fr-box">'+shuffle(W.map(function(x,i){ return i; })).map(function(i){ var x=W[i]; return '<button type="button" class="spk-fr-flag" data-i="'+i+'" draggable="false"><span class="roll"><span class="tube"></span><span class="tap">'+esc(cfg.tapT||'Tap to unroll')+'</span></span><span class="open">'+flagSVG(x.flag,44)+'<span class="m">'+esc(x.m)+'</span></span></button>'; }).join('')+'</div>'
+      +'<p class="spk-miss"></p><p class="spk-fr-ct"></p>'
+      +'<div class="spk-fr-win"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var box=g.querySelector('.spk-fr-box'), miss=g.querySelector('.spk-miss'), sel=null;
+    function paint(){ g.querySelectorAll('.spk-fr-flag').forEach(function(f){ var i=+f.dataset.i, op=S.flags.open.indexOf(i)>=0, up=S.flags.up.indexOf(i)>=0; f.classList.toggle('opened',op); f.classList.toggle('up',up); f.draggable=op&&!up; f.setAttribute('aria-label',op?'Flag: '+W[i].m:'Rolled-up flag. Tap to unroll.'); });
+      g.querySelectorAll('.mast').forEach(function(m){ var i=+m.dataset.i, up=S.flags.up.indexOf(i)>=0; m.classList.toggle('flying',up); m.querySelector('.slot').innerHTML=up?'<span class="m">'+esc(W[i].m)+'</span>'+flagSVG(W[i].flag,46):''; });
+      var n=S.flags.up.length, o=S.flags.open.length; g.querySelector('.spk-fr-ct').innerHTML=done()?'':(o<W.length&&n===0?'<b>'+o+' of '+W.length+'</b> flags unrolled.':'<b>'+n+' of '+W.length+'</b> flags flying.');
+      g.classList.toggle('done',done()); if(done()) window._rootMatchDone=true; }
+    function arm(on){ g.querySelectorAll('.mast').forEach(function(m){ m.classList.toggle('armed',on&&!m.classList.contains('flying')); m.classList.remove('over'); }); }
+    function attempt(flag,mast){ if(!flag||!mast||mast.classList.contains('flying')) return; var i=+flag.dataset.i; if(S.flags.up.indexOf(i)>=0||S.flags.open.indexOf(i)<0) return; arm(false);
+      if(+mast.dataset.i===i){ S.flags.up.push(i); save(); flag.classList.remove('sel'); sel=null; miss.textContent=''; var was=done(); paint(); mast.classList.add('spk-justin'); setTimeout(function(){ mast.classList.remove('spk-justin'); },700); if(!was&&done()){ g.classList.add('sailing'); setTimeout(function(){ g.classList.remove('sailing'); },2600); } }
+      else { flag.classList.add('shake'); setTimeout(function(){ flag.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    box.addEventListener('click',function(e){ var f=e.target.closest('.spk-fr-flag'); if(!f) return; var i=+f.dataset.i; if(S.flags.up.indexOf(i)>=0) return;
+      if(S.flags.open.indexOf(i)<0){ S.flags.open.push(i); save(); f.classList.add('unrolling'); setTimeout(function(){ f.classList.remove('unrolling'); },600); }
+      box.querySelectorAll('.spk-fr-flag').forEach(function(x){ x.classList.remove('sel'); }); f.classList.add('sel'); sel=f; miss.textContent=''; paint(); arm(true); });
+    box.addEventListener('dragstart',function(e){ var f=e.target.closest('.spk-fr-flag'); if(!f||!f.draggable){ e.preventDefault(); return; } sel=f; e.dataTransfer.setData('text/plain',f.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    box.addEventListener('dragend',function(){ arm(false); });
+    var ship=g.querySelector('.masts');
+    ship.addEventListener('click',function(e){ attempt(sel,e.target.closest('.mast')); });
+    ship.addEventListener('keydown',function(e){ var m=e.target.closest('.mast'); if(m&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); attempt(sel,m); } });
+    ship.addEventListener('dragover',function(e){ var m=e.target.closest('.mast'); g.querySelectorAll('.mast').forEach(function(x){ x.classList.toggle('over',x===m); }); if(m&&!m.classList.contains('flying')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    ship.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.mast')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
     R.scene1=run(DATA.scene1); R.reading=run(ex.reading); R.evidence=run(ex.evidence); R.planner=run(DATA.planner); R.vocab=run(DATA.vocab);
+    try{ R.source=buildHotspots(); }catch(e){ console.warn('sparkle layer: hotspots',e); }
+    /* DATA.explore.directive = {k, steps:[…]}: a plain "what to do" list right under the Investigate step badge */
+    var dir=ex.directive, b2=document.querySelectorAll('#panel-explore .step-badge')[1];
+    if(dir&&dir.steps&&b2) after(b2,el('div','spk spk-directive','<div class="k">'+esc(dir.k||'What to do')+'</div><ol>'+dir.steps.map(function(s){ return '<li>'+esc(s)+'</li>'; }).join('')+'</ol>'));
+    /* DATA.explore.timelineLast: move the lesson's Timeline Thread card below the source card (put back on teardown) */
+    var tl=document.querySelector('#panel-explore .timeline-card'), sc=document.querySelector('#panel-explore .source-card');
+    if(ex.timelineLast&&tl&&sc) move(tl,function(n){ after(sc,n); });
   }
 
   /* ================================================================ SCENE 3 · Self-Check */

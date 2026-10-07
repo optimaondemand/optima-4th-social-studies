@@ -1903,7 +1903,7 @@ body.tx-active .tx-toggle-label {
    "tab": "explore",
    "r": "Source Study",
    "t": "Read and match",
-   "why": "Read about each expedition and show its route on the map. Then match each ship to what it meant for the people on the shore."
+   "why": "Plot each explorer’s route on the map, then read his story. Then study an old Spanish map and match each ship to the shore."
   },
   {
    "tab": "check",
@@ -1953,7 +1953,7 @@ body.tx-active .tx-toggle-label {
      {
       "t": "What’s next?",
       "go": true,
-      "reply": "Go to the Source Study tab (tab 2). Read about each expedition and show its route on the map. Then look at an old Spanish map and match each ship to what it meant for the people on the shore."
+      "reply": "Go to the Source Study tab (tab 2). Put each explorer’s ship where he landed on the map, then read his part of the story. After that, study the old Spanish map and match each ship to what it meant for the people on the shore."
      },
      {
       "t": "Why does the order matter?",
@@ -2100,8 +2100,6 @@ body.tx-active .tx-toggle-label {
       30.42
      ],
      "labelAnchor": "end",
-     "btn": "Show Ponce de León’s route",
-     "doneT": "Ponce de León’s route is on the map",
      "from": {
       "t": "from Puerto Rico ↖",
       "lon": -79.7,
@@ -2129,7 +2127,16 @@ body.tx-active .tx-toggle-label {
        -81.15,
        29.6
       ]
-     ]
+     ],
+     "year": "1513",
+     "name": "Juan Ponce de León",
+     "size": 1,
+     "spot": "atlantic",
+     "clue": "He sailed north from Puerto Rico. He landed on Florida’s Atlantic coast, the side that faces east toward the ocean.",
+     "miss": {
+      "tampa": "Tampa Bay is on the Gulf side. Ponce de León landed on the Atlantic side, the side that faces east.",
+      "pensacola": "That’s on the Gulf side, far to the west. Ponce de León landed on the Atlantic side, the side that faces east."
+     }
     },
     {
      "id": "narvaez",
@@ -2141,8 +2148,6 @@ body.tx-active .tx-toggle-label {
       28.15
      ],
      "labelAnchor": "end",
-     "btn": "Show Narváez’s route",
-     "doneT": "Narváez’s route is on the map",
      "from": {
       "t": "from Cuba ↑",
       "lon": -84.6,
@@ -2188,7 +2193,16 @@ body.tx-active .tx-toggle-label {
        -84.28,
        30.45
       ]
-     ]
+     ],
+     "year": "1528",
+     "name": "Pánfilo de Narváez",
+     "size": 2,
+     "spot": "tampa",
+     "clue": "He sailed from Cuba and landed near a big bay in the middle of Florida’s west coast, the Gulf side.",
+     "miss": {
+      "atlantic": "That’s the Atlantic side. Narváez landed on the west coast, the Gulf side.",
+      "pensacola": "That bay is too far west. Look for the big bay in the middle of the west coast."
+     }
     },
     {
      "id": "desoto",
@@ -2200,8 +2214,6 @@ body.tx-active .tx-toggle-label {
       27.45
      ],
      "labelAnchor": "end",
-     "btn": "Show de Soto’s route",
-     "doneT": "De Soto’s route is on the map",
      "sea": [
       [
        -83.2,
@@ -2259,14 +2271,51 @@ body.tx-active .tx-toggle-label {
        -83.8,
        31.3
       ]
-     ]
+     ],
+     "year": "1539",
+     "name": "Hernando de Soto",
+     "size": 3,
+     "spot": "tampa",
+     "clue": "He sailed from Cuba too, and he landed near the same big bay as Narváez.",
+     "miss": {
+      "atlantic": "That’s the Atlantic side. De Soto landed near the same bay as Narváez.",
+      "pensacola": "That bay is too far west. De Soto landed near the same bay as Narváez."
+     }
     }
    ],
    "counter": {
-    "some": "routes on the map. Show all three.",
+    "some": "routes plotted.",
     "allHead": "All three are on the map.",
-    "all": "Two of them landed near Tampa Bay. Now look at the old Spanish map below."
-   }
+    "all": "Two of them landed near Tampa Bay. Next, look at the old Spanish map below."
+   },
+   "spots": [
+    {
+     "id": "atlantic",
+     "lon": -81.15,
+     "lat": 29.6,
+     "label": "Atlantic coast",
+     "dx": -12,
+     "dy": -9,
+     "a": "end"
+    },
+    {
+     "id": "tampa",
+     "lon": -82.62,
+     "lat": 27.8,
+     "label": "Tampa Bay",
+     "dx": -14,
+     "dy": 4,
+     "a": "end"
+    },
+    {
+     "id": "pensacola",
+     "lon": -87.2,
+     "lat": 30.4,
+     "label": "Pensacola Bay",
+     "dy": 22
+    }
+   ],
+   "doT": "Drag the ship to where he landed, or tap that spot on the map."
   },
   "evidence": {
    "type": "shipshore",
@@ -2312,7 +2361,17 @@ body.tx-active .tx-toggle-label {
     }
    ],
    "win": "✨ All three matched. Every one of those ships landed on a shore where people already lived."
-  }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each gold number on the old Spanish map to see what it shows.",
+    "Read the three questions under the map. Think about your answers. You don’t write them here.",
+    "Match each ship to what it meant for the people on the shore.",
+    "Use the timeline at the bottom to check names and years for your writing."
+   ]
+  },
+  "timelineLast": true
  },
  "planner": {
   "type": "choose",
@@ -2465,44 +2524,36 @@ body.tx-active .tx-toggle-label {
  },
  "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
  "vocab": {
-  "type": "rootdig",
-  "kicker": "Root Dig",
-  "h": "Dig up the nav words",
+  "type": "flags",
+  "kicker": "Run Up the Flags",
+  "h": "Run up the nav flags",
   "root": "nav",
-  "win": "✨ Root found: <b>nav</b> = ship",
-  "voice": "All four words are buried in the sand. Brush the sand off each one (drag across it, or tap it a few times). When a word comes up, read what it means and look at how the word is built.",
+  "win": "⛵ All four flags are flying: <b>nav</b> = ship",
+  "voice": "Tap a rolled-up flag to unroll it and read what it means. Then hoist it on the mast of the word it means. Tap the flag, then tap the mast, or drag it.",
   "words": [
    {
     "w": "navigate",
-    "rest": "igate",
     "m": "to steer a ship and find the way",
-    "part": "-igate comes from a Latin word for drive or steer",
-    "layer": 0,
-    "x": 16
+    "flag": "a",
+    "miss": "This flag is about doing something. Which nav word is an action, something you do?"
    },
    {
     "w": "navigator",
-    "rest": "igator",
     "m": "the person who finds the way for a ship",
-    "part": "-or means a person who does something",
-    "layer": 1,
-    "x": 62
+    "flag": "b",
+    "miss": "This flag names a person. The ending -or means a person who does something."
    },
    {
     "w": "navy",
-    "rest": "y",
     "m": "a country’s group of warships and sailors",
-    "part": "navy comes from navis, the Latin word for ship",
-    "layer": 2,
-    "x": 30
+    "flag": "c",
+    "miss": "This flag names a big group of ships and sailors. It’s the shortest nav word."
    },
    {
     "w": "naval",
-    "rest": "al",
     "m": "having to do with ships or a navy",
-    "part": "-al means having to do with",
-    "layer": 3,
-    "x": 70
+    "flag": "d",
+    "miss": "This flag describes something. The ending -al means “having to do with.”"
    }
   ]
  },
@@ -2652,7 +2703,48 @@ body.tx-active .tx-toggle-label {
    "b": "That’s the mistake the lesson warns about. People had lived here for thousands of years.",
    "c": "The Spanish hadn’t built anything here yet. Look at event 4 on the timeline."
   }
- ]
+ ],
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now read the three questions below the map.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 29.25,
+    "y": 71.69,
+    "title": "The title.",
+    "t": "“La Florida, made by Hieronymus Chaves.” That’s the Latin spelling of the Spanish mapmaker’s name."
+   },
+   {
+    "n": "2",
+    "x": 38.0,
+    "y": 12.13,
+    "title": "Native towns.",
+    "t": "Each small red building is a Native town. Historians think many of these town names came from men who marched with de Soto."
+   },
+   {
+    "n": "3",
+    "x": 65.25,
+    "y": 70.22,
+    "title": "Bay of the Holy Spirit.",
+    "t": "“Baya de Spu Santo” means Bay of the Holy Spirit. That’s what de Soto’s men called the bay where they landed. Most historians think it’s Tampa Bay."
+   },
+   {
+    "n": "4",
+    "x": 84.5,
+    "y": 91.91,
+    "title": "The Martyrs.",
+    "t": "“Martyres” is what Spanish sailors called the Florida Keys, the little islands at the tip of Florida."
+   },
+   {
+    "n": "5",
+    "x": 91.5,
+    "y": 44.12,
+    "title": "The Bahama Channel.",
+    "t": "“Canal de Bahama” is the sea path Spanish ships sailed along Florida’s Atlantic coast."
+   }
+  ]
+ }
 }
 </script>
 </head>

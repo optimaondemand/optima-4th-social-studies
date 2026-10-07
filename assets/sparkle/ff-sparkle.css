@@ -657,3 +657,87 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-choose .spk-miss { min-height: 0; }
 
 @media (prefers-reduced-motion: reduce) { .spk-berth.armed .slot, .spk-rt.drawing .sea, .spk-rt.drawing .land { animation: none; } .spk-rt.drawing .sea { stroke-dasharray: 5 3; } .spk-rt.drawing .land { stroke-dasharray: 1.5 2.5; } }
+
+/* ---------- vocab · Run Up the Flags ---------- */
+.spk-flagsea { position: relative; margin: 10px 0 12px; padding: 16px 10px 0; border-radius: 12px; overflow: hidden; background: linear-gradient(180deg, #CFE9F3 0%, #E8F5F9 62%, #5DB0C8 62%, #2E7F99 100%); border: 1px solid #B9D7E2; }
+.spk-flagship { position: relative; max-width: 520px; margin: 0 auto; transition: transform 2.4s ease-in-out; }
+.spk-flagrun.sailing .spk-flagship { animation: spk-sail 2.6s ease-in-out; }
+@keyframes spk-sail { 0% { transform: translateX(0); } 45% { transform: translateX(40px) rotate(1deg); } 100% { transform: translateX(0); } }
+.spk-flagship .masts { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 0 22px; }
+.spk-flagship .mast { display: flex; flex-direction: column; align-items: center; cursor: pointer; border-radius: 10px; padding: 2px 0 0; }
+.spk-flagship .mast .top { width: 100%; height: 112px; display: flex; justify-content: center; align-items: flex-end; }
+.spk-flagship .mast .slot { min-width: 70px; min-height: 40px; border: 2px dashed #8CB7C8; border-radius: 6px; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 4px; background: rgba(255,255,255,.45); }
+.spk-flagship .mast.flying .slot { border: 0; background: none; padding: 0; }
+.spk-flagship .mast.flying .slot .fl { margin-bottom: -2px; }
+.spk-flagship .mast .slot .fl { transform-origin: 0 50%; animation: spk-wave 2.4s ease-in-out infinite; }
+.spk-flagship .mast .slot .m { font: 700 11px/1.25 'Nunito', sans-serif; color: var(--ffn); text-align: center; background: rgba(255,255,255,.85); border-radius: 6px; padding: 2px 5px; max-width: 120px; }
+@keyframes spk-wave { 50% { transform: skewY(-4deg) scaleX(.94); } }
+.spk-flagship .mast .pole { width: 5px; height: 40px; background: #5A3418; border-radius: 2px; }
+.spk-flagship .mast .plaque { margin-top: -2px; font: 700 14px 'Lora', Georgia, serif; color: #FFF6E0; background: #7A4A26; border: 2px solid #C9A24A; border-radius: 6px; padding: 2px 8px; white-space: nowrap; }
+.spk-flagship .mast .plaque b { color: #F2C230; }
+.spk-flagship .mast.armed .slot { border-color: var(--ffg); background: #FFF8DF; animation: spk-pulse 1.2s ease-in-out infinite; }
+.spk-flagship .mast.over .slot { background: #FFF0C8; border-color: var(--ffg2); }
+.spk-flagship .hull { position: relative; height: 34px; margin: -4px 0 0; background: #7A4A26; border: 2px solid #3E2612; border-top: 6px solid #C9A24A; clip-path: polygon(0 0, 100% 0, 92% 100%, 8% 100%); }
+.spk-flagsea .waves { height: 22px; background: radial-gradient(circle at 10px -4px, transparent 12px, rgba(255,255,255,.35) 13px, transparent 15px) 0 0 / 22px 22px repeat-x; }
+.spk-fr-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.spk-fr-flag { position: relative; min-height: 70px; border: 1.5px solid var(--ffl); border-radius: 10px; background: #fff; cursor: pointer; padding: 8px; font: inherit; text-align: left; transition: transform .15s, box-shadow .15s; }
+.spk-fr-flag:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(34,48,74,.1); }
+.spk-fr-flag .roll { display: flex; align-items: center; gap: 10px; }
+.spk-fr-flag .tube { width: 52px; height: 14px; border-radius: 7px; background: linear-gradient(180deg, #F3E7C8, #D9C79C); border: 1.5px solid #A88F5C; }
+.spk-fr-flag .tap { font: italic 500 13px 'Lora', Georgia, serif; color: var(--ffs); }
+.spk-fr-flag .open { display: none; align-items: center; gap: 10px; }
+.spk-fr-flag .open .m { font: 600 13.5px/1.35 'Nunito', sans-serif; color: var(--ffi); }
+.spk-fr-flag.opened .roll { display: none; } .spk-fr-flag.opened .open { display: flex; }
+.spk-fr-flag.opened { cursor: grab; }
+.spk-fr-flag.unrolling .open .fl { animation: spk-unroll .5s ease-out; transform-origin: 0 50%; }
+@keyframes spk-unroll { from { transform: scaleX(.1); } to { transform: scaleX(1); } }
+.spk-fr-flag.sel { border-color: var(--ffg); background: #FFF8DF; box-shadow: 0 0 0 3px rgba(201,162,74,.25); }
+.spk-fr-flag.up { opacity: .35; cursor: default; }
+.spk-fr-flag.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-fr-ct { font: 500 14px 'Nunito', sans-serif; color: var(--ffi); margin: 4px 0 0; }
+.spk-fr-win { display: none; margin-top: 10px; padding: 12px 14px; border-radius: 10px; background: var(--ffp, #FBF6E8); border: 1px solid #E5D3A6; }
+.spk-flagrun.done .spk-fr-win { display: block; animation: spk-in .35s ease-out; }
+.spk-fr-win .stamp { display: inline-block; font: 800 13px 'Nunito', sans-serif; color: var(--ffg2); border: 2px solid var(--ffg); border-radius: 8px; padding: 3px 10px; margin-bottom: 6px; }
+.spk-fr-win p { margin: 0; font: 500 14px/1.5 'Nunito', sans-serif; color: var(--ffi); }
+@media (max-width: 520px) { .spk-flagship .masts { padding: 0 6px; gap: 2px; } .spk-flagship .mast .slot { min-width: 0; width: 100%; } .spk-flagship .mast .slot .m { font-size: 10px; } .spk-flagship .mast .plaque { font-size: 11.5px; padding: 2px 4px; } .spk-flagship .mast .top { height: 150px; } }
+@media (prefers-reduced-motion: reduce) { .spk-flagrun.sailing .spk-flagship, .spk-flagship .mast .slot .fl, .spk-fr-flag.unrolling .open .fl, .spk-flagship .mast.armed .slot { animation: none; } }
+
+/* ---------- route map, step-through (plot first, then read) ---------- */
+.spk-plot-dots { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.spk-plot-dots .dot { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--c); background: #fff; color: var(--c); font: 800 13px 'Nunito', sans-serif; cursor: pointer; }
+.spk-plot-dots .dot.on { background: var(--c); color: #fff; } .spk-plot-dots .dot.now { box-shadow: 0 0 0 3px rgba(201,162,74,.35); } .spk-plot-dots .dot[disabled] { opacity: .35; cursor: default; }
+.spk-plot-dots .of { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffs); margin-left: 6px; }
+.spk-plot-step { display: none; border-left: 4px solid var(--c); padding: 2px 0 4px 14px; }
+.spk-plot-step.now { display: block; animation: spk-in .35s ease-out; }
+.spk-plot-step .hd { font: 700 19px 'Lora', Georgia, serif; color: var(--ffn); margin-bottom: 4px; }
+.spk-plot-step .hd .yr { display: inline-block; font: 800 13px 'Nunito', sans-serif; color: #fff; background: var(--c); border-radius: 999px; padding: 2px 10px; vertical-align: 3px; }
+.spk-plot-step .clue { font: 600 15px/1.5 'Nunito', sans-serif; color: var(--ffi); margin: 0 0 8px; }
+.spk-plot-step .spk-plotship { grid-template-columns: 62px 1fr; cursor: grab; font-weight: 600; }
+.spk-plot-step.plotted .spk-plot-do { display: none; }
+.spk-plot-read { display: none; } .spk-plot-step.plotted .spk-plot-read { display: block; animation: spk-in .45s ease-out; }
+.spk-plot-read p { margin: 4px 0 8px; }
+.spk-plot-next { display: none; margin: 4px 0 6px; font: 800 13.5px 'Nunito', sans-serif; color: #fff; background: var(--ffn); border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+.spk-plot-step.plotted .spk-plot-next { display: inline-block; } .spk-plot-next[disabled] { background: #E3F2EF; color: #0F5A50; cursor: default; }
+.spk-spot { cursor: pointer; outline: none; } .spk-spot:focus-visible .ring { stroke: #0E1C42; stroke-width: 2.5; } .spk-spot .hit { fill: transparent; }
+.spk-spot .ring { fill: #FFFDF5; fill-opacity: .55; stroke: #5C4A2A; stroke-width: 1.4; stroke-dasharray: 3 2; }
+.spk-spot.armed .ring { stroke: var(--ffg2, #8A6A1E); stroke-width: 2; animation: spk-dash 1.2s linear infinite; }
+.spk-spot.over .ring, .spk-spot:hover .ring { fill: #FFF0C8; fill-opacity: 1; }
+.spk-spot .sl { font: 800 8.5px Nunito, sans-serif; fill: #3F2E0C; paint-order: stroke; stroke: #FFFDF5; stroke-width: 3; pointer-events: none; }
+.spk-routes.all .spk-spot { display: none; }
+
+/* ---------- source image · tap-to-reveal labels ---------- */
+.spk-hotimg { position: relative !important; }
+.spk-hotlayer { position: absolute; inset: 0; pointer-events: none; }
+.spk-hot { position: absolute; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; border: 3px solid transparent; background: transparent; cursor: pointer; pointer-events: auto; box-shadow: 0 0 0 0 rgba(242,183,5,.7); animation: spk-hotping 1.8s ease-out infinite; }
+.spk-hot.seen { animation: none; } .spk-hot.sel { border-color: #fff; box-shadow: 0 0 0 3px #0E1C42; }
+@keyframes spk-hotping { 0% { box-shadow: 0 0 0 0 rgba(242,183,5,.75); } 100% { box-shadow: 0 0 0 16px rgba(242,183,5,0); } }
+@media (max-width: 640px) { .spk-hot { width: 34px; height: 34px; margin: -17px 0 0 -17px; } }
+.spk-hotinfo { margin: 10px 16px 0; padding: 10px 14px; border-radius: 10px; background: #FBF6E8; border: 1px solid #E5D3A6; }
+.spk-hotinfo .hint { margin: 0; font: italic 500 15px 'Lora', Georgia, serif; color: var(--ffs); }
+.spk-hotinfo .now { display: flex; gap: 10px; align-items: flex-start; font: 500 15px/1.5 'Nunito', sans-serif; color: var(--ffi); animation: spk-in .3s ease-out; }
+.spk-hotinfo .now .n { flex: none; width: 28px; height: 28px; border-radius: 50%; background: #F2B705; color: #281A0A; font: 800 15px 'Nunito', sans-serif; display: grid; place-items: center; border: 2px solid #281A0A; }
+.spk-hotinfo .ct { margin: 6px 0 0; font: 500 13.5px 'Nunito', sans-serif; color: var(--ffs); }
+.spk-directive { margin: 6px 0 14px; padding: 12px 16px; border-radius: 12px; background: #fff; border: 1px solid var(--ffline, #D8E3EA); border-left: 5px solid var(--ffedge, #1A8A7D); }
+.spk-directive .k { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffedge, #1A8A7D); margin-bottom: 4px; }
+.spk-directive ol { margin: 0; padding-left: 20px; font: 500 15px/1.55 'Nunito', sans-serif; color: var(--ffi); }
+@media (prefers-reduced-motion: reduce) { .spk-hot, .spk-spot.armed .ring, .spk-plot-step.now, .spk-plot-step.plotted .spk-plot-read { animation: none; } }
