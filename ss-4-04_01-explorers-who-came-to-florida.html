@@ -1874,6 +1874,787 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.04.01",
+ "title": "Explorers Who Came to Florida",
+ "quiet": false,
+ "file": {
+  "n": 4,
+  "title": "Explorers",
+  "label": "Explorers",
+  "seals": [
+   "⛵",
+   "🗺️",
+   "✍️"
+  ]
+ },
+ "prevFile": "Courtesy and Responsibility",
+ "connector": "Last time we finished the First Peoples files. Today, ships show up on the horizon.",
+ "minWords": 35,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Route File",
+   "t": "Put the ships in order",
+   "why": "Put the three Spanish ships in order on the timeline. Each ship has a clue."
+  },
+  {
+   "tab": "explore",
+   "r": "Source Study",
+   "t": "Read and match",
+   "why": "Read about each expedition and show its route on the map. Then match each ship to what it meant for the people on the shore."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Write about first contact",
+   "why": "Answer three questions. Then write 3 to 5 sentences about who came and what it meant for the people already here."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I’m in a new room inside Canvas, and I can see ships on the horizon. I need your help to open the explorers file.",
+  "opening": [
+   "This file is about the first Spanish explorers who came to Florida, and the people who were already here.",
+   "To open it, put three ships in order on a timeline. The timeline is in the Route File tab, below the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the timeline",
+      "go": true,
+      "reply": "Scroll down past the welcome video. Drag each ship onto its year, or tap a ship and then tap the year. Read the clue on each ship. It tells you which one came first."
+     },
+     {
+      "t": "What’s an explorer?",
+      "reply": "An explorer is someone who travels to a place that’s new to them, to learn about it or claim it. These explorers sailed for Spain."
+     },
+     {
+      "t": "Are you okay in there?",
+      "reply": "I’m okay. Every file you finish gets me one room closer to getting out. I can hear waves in this room!"
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Source Study tab (tab 2). Read about each expedition and show its route on the map. Then look at an old Spanish map and match each ship to what it meant for the people on the shore."
+     },
+     {
+      "t": "Why does the order matter?",
+      "reply": "Putting events in order helps historians see how one thing led to another. You’ll use these years in your writing, too."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Answer from what you just read. If you’re not sure, look back at the timeline."
+     },
+     {
+      "t": "What if I miss one?",
+      "reply": "That’s okay. The check isn’t graded. If you miss one, reread that part of the story before you start writing."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Where are you now?",
+      "reply": "In a new room! There’s an old desk in here covered in papers with Spanish writing on them. I think the next file is about why the Spanish came at all."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when the next file shows up."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! All three ships are in order: 1513, 1528, 1539. The file let go. Keep those years handy. You’ll need them for Evidence Question 1.",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! Every ship is matched to the shore. Remember, people lived on that shore the whole time. Next is the Self-Check tab (tab 3): three quick questions.",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 3 to 5 sentences about who came to Florida and what it meant for the people already living here. Use the planner first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, a door just opened and I got one room closer to getting out. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "A careful historian tells about the brave voyages, and also about what they cost the people who already lived here.",
+ "scene1": {
+  "type": "shiporder",
+  "kicker": "Route File",
+  "h": "Put the ships in order",
+  "empty": "Which ship?",
+  "voice": "Drag each ship onto its year, or tap a ship and then tap the year. Read the clue on each ship first.",
+  "ships": [
+   {
+    "id": "ponce",
+    "year": 1513,
+    "name": "Ponce de León",
+    "size": 1,
+    "color": "#C9A24A",
+    "clue": "He gave Florida its name, so his ship came first.",
+    "fact": "Named the land La Florida.",
+    "miss": "Read the clue. The explorer who named Florida had to come first."
+   },
+   {
+    "id": "narvaez",
+    "year": 1528,
+    "name": "Narváez",
+    "size": 2,
+    "color": "#0E8A7A",
+    "clue": "He came 15 years after Florida got its name.",
+    "fact": "About 400 men. Only four lived through it.",
+    "miss": "Count 15 years after 1513. Which year is that?"
+   },
+   {
+    "id": "desoto",
+    "year": 1539,
+    "name": "de Soto",
+    "size": 3,
+    "color": "#6B4FA8",
+    "clue": "The biggest expedition. It came 11 years after Narváez.",
+    "fact": "More than 600 soldiers, plus horses and pigs.",
+    "miss": "Count 11 years after 1528. Which year is that?"
+   }
+  ],
+  "shore": "The whole time, the Calusa, Timucua, Apalachee and Tequesta already lived in Florida. Every ship landed on their shore.",
+  "win": "✨ All three ships are on the timeline: <b>1513 → 1528 → 1539</b>."
+ },
+ "explore": {
+  "reading": {
+   "type": "routemap",
+   "activity": "Three Spanish Expeditions",
+   "aria": "Map of Florida. Each expedition's route appears after you read about it.",
+   "peoples": [
+    {
+     "t": "Calusa",
+     "lon": -81.6,
+     "lat": 26.35
+    },
+    {
+     "t": "Tequesta",
+     "lon": -80.45,
+     "lat": 25.62
+    },
+    {
+     "t": "Timucua",
+     "lon": -81.45,
+     "lat": 29.25
+    },
+    {
+     "t": "Apalachee",
+     "lon": -84.95,
+     "lat": 30.72
+    }
+   ],
+   "routes": [
+    {
+     "id": "ponce",
+     "match": "Ponce de León",
+     "color": "#B5761A",
+     "label": "1513 · Ponce de León",
+     "labelAt": [
+      -81.35,
+      30.42
+     ],
+     "labelAnchor": "end",
+     "btn": "Show Ponce de León’s route",
+     "doneT": "Ponce de León’s route is on the map",
+     "from": {
+      "t": "from Puerto Rico ↖",
+      "lon": -79.7,
+      "lat": 24.95,
+      "a": "end"
+     },
+     "sea": [
+      [
+       -78.6,
+       25.4
+      ],
+      [
+       -79.5,
+       26.6
+      ],
+      [
+       -80.1,
+       28.0
+      ],
+      [
+       -80.55,
+       29.0
+      ],
+      [
+       -81.15,
+       29.6
+      ]
+     ]
+    },
+    {
+     "id": "narvaez",
+     "match": "Narváez",
+     "color": "#0E8A7A",
+     "label": "1528 · Narváez",
+     "labelAt": [
+      -83.25,
+      28.15
+     ],
+     "labelAnchor": "end",
+     "btn": "Show Narváez’s route",
+     "doneT": "Narváez’s route is on the map",
+     "from": {
+      "t": "from Cuba ↑",
+      "lon": -84.6,
+      "lat": 24.75,
+      "a": "start"
+     },
+     "sea": [
+      [
+       -82.4,
+       24.3
+      ],
+      [
+       -82.95,
+       26.0
+      ],
+      [
+       -82.95,
+       27.3
+      ],
+      [
+       -82.65,
+       27.8
+      ]
+     ],
+     "land": [
+      [
+       -82.65,
+       27.8
+      ],
+      [
+       -82.55,
+       28.7
+      ],
+      [
+       -82.95,
+       29.6
+      ],
+      [
+       -83.8,
+       30.2
+      ],
+      [
+       -84.28,
+       30.45
+      ]
+     ]
+    },
+    {
+     "id": "desoto",
+     "match": "de Soto",
+     "color": "#6B4FA8",
+     "label": "1539 · de Soto",
+     "labelAt": [
+      -83.35,
+      27.45
+     ],
+     "labelAnchor": "end",
+     "btn": "Show de Soto’s route",
+     "doneT": "De Soto’s route is on the map",
+     "sea": [
+      [
+       -83.2,
+       24.3
+      ],
+      [
+       -83.4,
+       26.2
+      ],
+      [
+       -83.05,
+       27.4
+      ],
+      [
+       -82.7,
+       27.6
+      ]
+     ],
+     "land": [
+      [
+       -82.7,
+       27.6
+      ],
+      [
+       -82.25,
+       28.4
+      ],
+      [
+       -82.14,
+       29.19
+      ],
+      [
+       -82.55,
+       29.95
+      ],
+      [
+       -83.5,
+       30.3
+      ],
+      [
+       -84.2,
+       30.4
+      ]
+     ],
+     "arrow": [
+      [
+       -84.2,
+       30.4
+      ],
+      [
+       -84.0,
+       30.8
+      ],
+      [
+       -83.8,
+       31.3
+      ]
+     ]
+    }
+   ],
+   "counter": {
+    "some": "routes on the map. Show all three.",
+    "allHead": "All three are on the map.",
+    "all": "Two of them landed near Tampa Bay. Now look at the old Spanish map below."
+   }
+  },
+  "evidence": {
+   "type": "shipshore",
+   "kicker": "Ship and Shore",
+   "h": "What did each ship mean for the people on the shore?",
+   "voice": "Drag each ship onto what it meant for the people already living here, or tap a ship and then tap a card. One card on the shore side isn’t true for these years.",
+   "pairs": [
+    {
+     "id": "ponce",
+     "year": "1513",
+     "name": "Ponce de León",
+     "size": 1,
+     "color": "#B5761A",
+     "ship": "A few ships land on the Atlantic coast.",
+     "shore": "Their homeland is claimed for Spain and given a new Spanish name, La Florida.",
+     "miss": "Ponce de León is the one who named the land. Look for the card about a new name."
+    },
+    {
+     "id": "narvaez",
+     "year": "1528",
+     "name": "Narváez",
+     "size": 2,
+     "color": "#0E8A7A",
+     "ship": "About 400 men land near Tampa Bay, looking for gold and food.",
+     "shore": "Hungry soldiers march into Apalachee land, and the two sides fight.",
+     "miss": "Reread the Narváez paragraph. Which Native people did his men fight?"
+    },
+    {
+     "id": "desoto",
+     "year": "1539",
+     "name": "de Soto",
+     "size": 3,
+     "color": "#6B4FA8",
+     "ship": "More than 600 soldiers land with horses and pigs.",
+     "shore": "Soldiers take food by force, and new diseases spread from town to town.",
+     "miss": "Reread the de Soto paragraph. What did his expedition take, and what did it spread?"
+    }
+   ],
+   "decoys": [
+    {
+     "t": "Spanish settlers build big cities all across Florida.",
+     "miss": "That didn’t happen in these years. None of these three expeditions built a town that lasted. Try another card."
+    }
+   ],
+   "win": "✨ All three matched. Every one of those ships landed on a shore where people already lived."
+  }
+ },
+ "planner": {
+  "type": "choose",
+  "voice": "Pick one thing in each row. These are just notes. You’ll write your own sentences in Step 3.",
+  "steps": [
+   {
+    "k": "who",
+    "label": "Which explorer?",
+    "word": "Explorer",
+    "opts": [
+     {
+      "v": "ponce",
+      "t": "Ponce de León",
+      "ico": "⛵"
+     },
+     {
+      "v": "narvaez",
+      "t": "Narváez",
+      "ico": "⛵"
+     },
+     {
+      "v": "desoto",
+      "t": "de Soto",
+      "ico": "⛵"
+     }
+    ]
+   },
+   {
+    "k": "year",
+    "label": "What year did he come?",
+    "word": "Year",
+    "opts": [
+     {
+      "v": "1513",
+      "t": "1513"
+     },
+     {
+      "v": "1528",
+      "t": "1528"
+     },
+     {
+      "v": "1539",
+      "t": "1539"
+     }
+    ],
+    "mustMatch": {
+     "step": "who",
+     "map": {
+      "ponce": "1513",
+      "narvaez": "1528",
+      "desoto": "1539"
+     },
+     "miss": "Check the timeline. That isn’t his year."
+    }
+   },
+   {
+    "k": "fact",
+    "label": "One fact about the people already here",
+    "word": "Fact",
+    "opts": [
+     {
+      "v": "f1",
+      "t": "The Calusa, Timucua, Apalachee and Tequesta already lived in Florida."
+     },
+     {
+      "v": "f2",
+      "t": "People had lived on this land for thousands of years."
+     },
+     {
+      "v": "f3",
+      "t": "Narváez’s men fought with the Apalachee."
+     },
+     {
+      "v": "f4",
+      "t": "De Soto’s expedition took food by force and spread disease."
+     }
+    ]
+   },
+   {
+    "k": "meant",
+    "label": "What did his arrival mean for them?",
+    "word": "What it meant",
+    "opts": [
+     {
+      "v": "m1",
+      "t": "Their land was claimed for Spain."
+     },
+     {
+      "v": "m2",
+      "t": "Fights over food and land."
+     },
+     {
+      "v": "m3",
+      "t": "New diseases."
+     },
+     {
+      "v": "m4",
+      "t": "Their world began to change."
+     }
+    ]
+   }
+  ]
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "an explorer’s name",
+    "rx": "ponce|le[oó]n|narv[aá]ez|soto|cabeza"
+   },
+   {
+    "t": "a year",
+    "rx": "\\b15(13|28|39)\\b"
+   },
+   {
+    "t": "the people already here",
+    "rx": "calusa|timucua|apalachee|tequesta|native|first peoples|already liv|lived here"
+   },
+   {
+    "t": "what it meant",
+    "rx": "meant|mean|chang|claim|disease|sick|food|fight|died|lost|took|force"
+   }
+  ],
+  "lines": [
+   "Start with an explorer’s name.",
+   "Good. Add the year he came, and a fact about the people already living here.",
+   "Almost there. Say what his arrival meant for those people.",
+   "That’s a careful entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use names and years from the lesson."
+  },
+  {
+   "t": "Plan",
+   "w": "Pick an explorer, his year, a fact, and what it meant."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "rootdig",
+  "kicker": "Root Dig",
+  "h": "Dig up the nav words",
+  "root": "nav",
+  "win": "✨ Root found: <b>nav</b> = ship",
+  "voice": "All four words are buried in the sand. Brush the sand off each one (drag across it, or tap it a few times). When a word comes up, read what it means and look at how the word is built.",
+  "words": [
+   {
+    "w": "navigate",
+    "rest": "igate",
+    "m": "to steer a ship and find the way",
+    "part": "-igate comes from a Latin word for drive or steer",
+    "layer": 0,
+    "x": 16
+   },
+   {
+    "w": "navigator",
+    "rest": "igator",
+    "m": "the person who finds the way for a ship",
+    "part": "-or means a person who does something",
+    "layer": 1,
+    "x": 62
+   },
+   {
+    "w": "navy",
+    "rest": "y",
+    "m": "a country’s group of warships and sailors",
+    "part": "navy comes from navis, the Latin word for ship",
+    "layer": 2,
+    "x": 30
+   },
+   {
+    "w": "naval",
+    "rest": "al",
+    "m": "having to do with ships or a navy",
+    "part": "-al means having to do with",
+    "layer": 3,
+    "x": 70
+   }
+  ]
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Every ship landed on a shore",
+   "at": "s1done",
+   "script": "Did you hear that? The ships clicked into place, and the route file came loose. From in here I can see all three: the small one, the bigger one, and the biggest. But here’s what I keep looking at. Every ship landed on a shore where people already lived. When you get to the Source Study tab, watch for the people on the shore, not just the ships."
+  },
+  {
+   "slot": "guide2",
+   "label": "Trying one out loud",
+   "at": "write",
+   "script": "Before you write, I’ll try one out loud about something different. “In 2019, the Parker family moved onto my street. For the kids who already lived there, it meant a new friend. It also meant sharing the basketball hoop.” See what I put in? A name, a year, and what it meant for the people already there, the good and the hard. Now it’s your turn with the explorers. Use your planner."
+  }
+ ],
+ "cabinet": {
+  "n": 4,
+  "img": "source-4-04-01-la-florida-map-1584.jpg",
+  "where": "The Atlantic coast and Tampa Bay",
+  "blurb": "Ships on the horizon: Ponce de León, Narváez and de Soto arrive in La Florida, where the First Peoples already lived."
+ },
+ "notes": {
+  "learned": [
+   "Juan Ponce de León reached Florida in 1513 and named it La Florida, “the flowery land.”",
+   "Pánfilo de Narváez landed near Tampa Bay in 1528. Only four men lived through his expedition, including Cabeza de Vaca.",
+   "Hernando de Soto landed near Tampa Bay in 1539 with more than 600 soldiers. He looked for rich cities and never found them.",
+   "The Calusa, Timucua, Apalachee and Tequesta already lived in Florida. Their world began to change when the ships came.",
+   "A 1584 Spanish map shows both sides: Spanish names on the coast and Native towns on the land."
+  ],
+  "vocab": [
+   [
+    "expedition",
+    "a long trip made for a reason"
+   ],
+   [
+    "explorer",
+    "someone who travels to a new place to learn about it or claim it"
+   ],
+   [
+    "La Florida",
+    "“the flowery land,” the Spanish name for Florida"
+   ],
+   [
+    "navigate",
+    "to steer a ship and find the way"
+   ],
+   [
+    "navigator",
+    "the person who finds the way for a ship"
+   ],
+   [
+    "navy",
+    "a country’s group of warships and sailors"
+   ],
+   [
+    "naval",
+    "having to do with ships or a navy"
+   ]
+  ],
+  "wordParts": "The Latin root nav means “ship.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "two explorers",
+    "groups": [
+     "ponce|le[oó]n",
+     "narv[aá]ez",
+     "soto"
+    ],
+    "n": 2
+   },
+   {
+    "t": "their years",
+    "groups": [
+     "1513",
+     "1528",
+     "1539"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a danger",
+    "rx": "storm|hunger|hungry|sick|ill|disease|fight|conflict|food|died|die|lost|weather|apalachee",
+    "n": 1
+   },
+   {
+    "t": "what so few survivors shows",
+    "rx": "four|\\b4\\b|few|most|almost|only|many",
+    "n": 1
+   },
+   {
+    "t": "because…",
+    "rx": "because|since|so |shows|proves",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a people’s name or “First Peoples”",
+    "rx": "calusa|timucua|apalachee|tequesta|first peoples|native",
+    "n": 1
+   },
+   {
+    "t": "a reason",
+    "rx": "because|so |since|that way",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the timeline in the Source Study tab.",
+   "Each event on the timeline starts with a year and a name.",
+   "Try this shape: “___ came in ___, and ___ came in ___.”"
+  ],
+  "journal-q2": [
+   "Reread the Narváez paragraph in the Source Study tab.",
+   "Find the things that went wrong: storms, hunger, sickness, and fights.",
+   "Try this shape: “Only four men lived, which shows that ___ because ___.”"
+  ],
+  "journal-q3": [
+   "Look at event 4 on the timeline, and at the red towns on the old map.",
+   "Name one of the peoples who lived here. Then think: what would a story without them leave out?",
+   "Try this shape: “It’s important because ___. For example, ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: name all three explorers, in order, with their years.",
+  "journal-q2": "Go further: what else in the lesson shows how hard these trips were?",
+  "journal-q3": "Go further: how does the 1584 map show that people already lived here?"
+ },
+ "quizMiss": [
+  {
+   "a": "1492 is when Columbus first sailed to the Caribbean. Look at the first event on the timeline.",
+   "c": "1539 is de Soto’s year. Ponce de León came first. Look at event 1 on the timeline."
+  },
+  {
+   "a": "No one ever found a city of gold. Reread the second paragraph of the story.",
+   "b": "Narváez didn’t build a town. His expedition fell apart. Reread the second paragraph of the story."
+  },
+  {
+   "b": "That’s the mistake the lesson warns about. People had lived here for thousands of years.",
+   "c": "The Spanish hadn’t built anything here yet. Look at event 4 on the timeline."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2117,101 +2898,93 @@ body.tx-active .tx-toggle-label {
      Bright and cheerful — saturated, warm colors even for serious topics.
      Show the WORLD: landscapes, objects, tools, ships, maps, buildings, landmarks.
      2–3 CSS animations (floating, drifting, pulsing). -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-  <defs>
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFD89B"/>
-      <stop offset="55%" stop-color="#E89B6C"/>
-      <stop offset="100%" stop-color="#A04E3F"/>
-    </linearGradient>
-    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3FA8C9"/>
-      <stop offset="100%" stop-color="#1E5F7A"/>
-    </linearGradient>
-    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFF4B0"/>
-      <stop offset="100%" stop-color="#F2A45A" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three wooden sailing ships, one small, one bigger and one biggest, cross a blue sea toward a green Florida coast covered in flowers and palm trees." style="width:100%;height:auto;display:block;">
   <style>
-    .b1drift { transform-origin: center; animation: b1drift 7s ease-in-out infinite; }
-    @keyframes b1drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-    .b1sway  { transform-origin: center bottom; animation: b1sway 6s ease-in-out infinite; }
-    @keyframes b1sway { 0%,100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
-    .b1pulse { animation: b1pulse 4s ease-in-out infinite; }
-    @keyframes b1pulse { 0%,100% { opacity: 0.85; } 50% { opacity: 1; } }
+    .b401-bob{animation:b401bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .b401-s2{animation-duration:6.2s;animation-delay:-2s} .b401-s3{animation-duration:7.4s;animation-delay:-4s}
+    .b401-flag{animation:b401flag 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+    .b401-cloud{animation:b401drift 60s linear infinite} .b401-cloud2{animation-duration:85s;animation-delay:-30s}
+    .b401-glint{animation:b401glint 4s ease-in-out infinite} .b401-g2{animation-delay:-1.3s} .b401-g3{animation-delay:-2.6s}
+    .b401-sway{animation:b401sway 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .b401-birds{animation:b401birds 26s ease-in-out infinite alternate}
+    @keyframes b401bob{0%,100%{transform:translateY(0) rotate(-.8deg)}50%{transform:translateY(2px) rotate(.8deg)}}
+    @keyframes b401flag{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.6)}}
+    @keyframes b401drift{from{transform:translateX(-140px)}to{transform:translateX(1000px)}}
+    @keyframes b401glint{0%,100%{opacity:.15}50%{opacity:.75}}
+    @keyframes b401sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+    @keyframes b401birds{from{transform:translate(0,0)}to{transform:translate(-40px,6px)}}
+    @media (prefers-reduced-motion: reduce){.b401-bob,.b401-flag,.b401-cloud,.b401-glint,.b401-sway,.b401-birds{animation:none}}
   </style>
-  <rect width="920" height="170" fill="url(#skyGrad)"/>
-  <g class="b1pulse"><circle cx="155" cy="80" r="48" fill="#FFE08C"/><circle cx="155" cy="80" r="110" fill="url(#sunGrad)"/></g>
-  <g fill="#FFE9C8" opacity="0.7">
-    <ellipse cx="380" cy="55" rx="48" ry="11"/>
-    <ellipse cx="430" cy="50" rx="34" ry="8"/>
-    <ellipse cx="690" cy="70" rx="56" ry="12"/>
-    <ellipse cx="745" cy="63" rx="32" ry="8"/>
-  </g>
-  <path d="M 720 170 Q 780 158 830 168 Q 880 174 920 168 L 920 175 L 720 175 Z" fill="#5E8C6C" opacity="0.7"/>
-  <g transform="translate(840, 160)">
-    <rect x="13" y="0" width="5" height="55" fill="#6B4A2A"/>
-    <g><g class="b1sway">
-      <path d="M 15 0 Q -8 -12 -22 -8 Q -4 -2 15 0 Z" fill="#2F8B5C"/>
-      <path d="M 15 0 Q 38 -12 52 -8 Q 34 -2 15 0 Z" fill="#2F8B5C"/>
-      <path d="M 15 0 Q 5 -22 -12 -28 Q 4 -10 15 0 Z" fill="#3FA070"/>
-      <path d="M 15 0 Q 25 -22 42 -28 Q 26 -10 15 0 Z" fill="#3FA070"/>
+  <defs>
+    <linearGradient id="b401sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FD3E8"/><stop offset=".65" stop-color="#DDF0EE"/><stop offset="1" stop-color="#FCE9C2"/></linearGradient>
+    <linearGradient id="b401sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DB0C8"/><stop offset="1" stop-color="#1F6F8C"/></linearGradient>
+    <radialGradient id="b401sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6C8"/><stop offset=".45" stop-color="#FFE38A" stop-opacity=".9"/><stop offset="1" stop-color="#FFE38A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="b401hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CC163"/><stop offset="1" stop-color="#4E8A3A"/></linearGradient>
+  </defs>
+  <rect width="920" height="200" fill="url(#b401sky)"/>
+  <circle cx="820" cy="42" r="54" fill="url(#b401sun)"/><circle cx="820" cy="42" r="17" fill="#FFF3B8"/>
+  <g class="b401-cloud" opacity=".9"><path d="M60,40 q10,-16 28,-8 q12,-14 30,-2 q18,-2 18,12 l-84,0 q-6,-2 8,-2z" fill="#FFFFFF"/></g>
+  <g class="b401-cloud b401-cloud2" opacity=".75"><path d="M300,26 q8,-12 22,-6 q10,-10 24,-1 q14,0 14,9 l-66,0z" fill="#FFFFFF"/></g>
+  <rect y="112" width="920" height="88" fill="url(#b401sea)"/>
+  <path d="M0,112 L920,112" stroke="#CFEAF1" stroke-width="1.2" opacity=".8"/>
+  <path d="M10,150 C190,118 420,112 690,112" fill="none" stroke="#FFFDF5" stroke-width="2" stroke-dasharray="3 7" opacity=".55"/>
+  <!-- the flowery coast -->
+  <path d="M640,113 C690,110 720,98 770,88 C820,78 860,72 920,62 L920,130 L700,122 Z" fill="#6FA94F"/>
+  <path d="M700,121 C740,106 800,96 850,90 C880,86 905,82 920,80 L920,136 L720,124 Z" fill="url(#b401hill)"/>
+  <circle cx="712" cy="104" r="2.2" fill="#F7A8C4"/><circle cx="726" cy="99" r="2" fill="#FFE07A"/><circle cx="744" cy="95" r="2.4" fill="#FFFFFF"/><circle cx="760" cy="92" r="2" fill="#F7A8C4"/><circle cx="781" cy="90" r="2.2" fill="#FFE07A"/><circle cx="805" cy="86" r="2.6" fill="#F7A8C4"/><circle cx="828" cy="84" r="2" fill="#FFFFFF"/><circle cx="850" cy="80" r="2.4" fill="#FFE07A"/><circle cx="872" cy="78" r="2.2" fill="#F7A8C4"/><circle cx="896" cy="74" r="2.4" fill="#FFFFFF"/><circle cx="734" cy="110" r="2" fill="#FFFFFF"/><circle cx="770" cy="104" r="2.4" fill="#F7A8C4"/><circle cx="812" cy="98" r="2.2" fill="#FFE07A"/><circle cx="845" cy="94" r="2.6" fill="#FFFFFF"/><circle cx="880" cy="90" r="2.2" fill="#F7A8C4"/><circle cx="905" cy="86" r="2" fill="#FFE07A"/><circle cx="752" cy="116" r="2.2" fill="#FFE07A"/><circle cx="796" cy="110" r="2" fill="#FFFFFF"/><circle cx="862" cy="104" r="2.4" fill="#FFE07A"/>
+  <path d="M646,114 C700,121 780,116 920,110 L920,146 C840,144 740,136 646,116 Z" fill="#F2DFAE"/>
+  <path d="M650,116 C740,136 840,144 920,146" fill="none" stroke="#FFFDF5" stroke-width="2.5" opacity=".9"/>
+  <g transform="translate(742,120) scale(0.9)"><g class="b401-sway"><path d="M0,0 Q-4,-30 4,-58" fill="none" stroke="#7A5A2E" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#3F8A3A"><path d="M4,-58 q-26,-6 -40,10 q20,-14 40,-10z"/><path d="M4,-58 q24,-10 40,6 q-20,-12 -40,-6z"/><path d="M4,-58 q-8,-22 -30,-26 q22,10 30,26z"/><path d="M4,-58 q10,-24 32,-22 q-22,4 -32,22z"/><path d="M4,-58 q-2,20 -16,34 q10,-18 16,-34z"/></g></g></g><g transform="translate(786,116) scale(1.15)"><g class="b401-sway"><path d="M0,0 Q-4,-30 4,-58" fill="none" stroke="#7A5A2E" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#3F8A3A"><path d="M4,-58 q-26,-6 -40,10 q20,-14 40,-10z"/><path d="M4,-58 q24,-10 40,6 q-20,-12 -40,-6z"/><path d="M4,-58 q-8,-22 -30,-26 q22,10 30,26z"/><path d="M4,-58 q10,-24 32,-22 q-22,4 -32,22z"/><path d="M4,-58 q-2,20 -16,34 q10,-18 16,-34z"/></g></g></g><g transform="translate(888,108) scale(1)"><g class="b401-sway"><path d="M0,0 Q-4,-30 4,-58" fill="none" stroke="#7A5A2E" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#3F8A3A"><path d="M4,-58 q-26,-6 -40,10 q20,-14 40,-10z"/><path d="M4,-58 q24,-10 40,6 q-20,-12 -40,-6z"/><path d="M4,-58 q-8,-22 -30,-26 q22,10 30,26z"/><path d="M4,-58 q10,-24 32,-22 q-22,4 -32,22z"/><path d="M4,-58 q-2,20 -16,34 q10,-18 16,-34z"/></g></g></g>
+  <g class="b401-birds" fill="none" stroke="#2E4A5A" stroke-width="1.6" stroke-linecap="round"><path d="M620,56 q5,-5 10,0 q5,-5 10,0"/><path d="M648,44 q4,-4 8,0 q4,-4 8,0"/><path d="M598,70 q4,-4 8,0 q4,-4 8,0"/></g>
+  <!-- three ships: small, bigger, biggest -->
+  <g transform="translate(178,114) scale(0.32)"><g class="b401-bob b401-s1">
+      <path d="M-74,6 q20,6 40,0 t40,0 t40,0" fill="none" stroke="#E8F6FA" stroke-width="3" opacity=".7" class="b401-wake"/>
+      <path d="M-62,-6 L-46,-2 L48,-2 L66,-14 L62,2 Q54,18 44,24 L-42,24 Q-56,12 -62,-6 Z" fill="#7A4A26" stroke="#3E2612" stroke-width="2"/>
+      <path d="M-50,6 L56,6" stroke="#C9A24A" stroke-width="3"/>
+      <path d="M-44,14 L50,14" stroke="#5A3418" stroke-width="2"/>
+      <line x1="0" y1="-2" x2="0" y2="-118" stroke="#3E2612" stroke-width="4"/>
+      <line x1="-34" y1="-2" x2="-34" y2="-86" stroke="#3E2612" stroke-width="3.5"/>
+      <line x1="36" y1="-6" x2="36" y2="-76" stroke="#3E2612" stroke-width="3"/>
+      <path d="M-24,-104 Q0,-98 24,-104 L28,-62 Q0,-54 -28,-62 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-28,-56 Q0,-48 28,-56 L32,-18 Q0,-10 -32,-18 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-52,-78 Q-34,-72 -16,-78 L-14,-44 Q-34,-38 -54,-44 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M36,-74 L62,-22 L36,-16 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M0,-118 L22,-113 L0,-108 Z" fill="#C9A24A" class="b401-flag"/>
     </g></g>
-  </g>
-  <g transform="translate(880, 158)">
-    <rect x="13" y="0" width="4" height="50" fill="#6B4A2A"/>
-    <g><g class="b1sway">
-      <path d="M 15 0 Q -4 -10 -16 -6 Q -2 -2 15 0 Z" fill="#3FA070"/>
-      <path d="M 15 0 Q 34 -10 46 -6 Q 32 -2 15 0 Z" fill="#3FA070"/>
-      <path d="M 15 0 Q 6 -20 -8 -24 Q 4 -10 15 0 Z" fill="#2F8B5C"/>
+  <g transform="translate(352,136) scale(0.55)"><g class="b401-bob b401-s2">
+      <path d="M-74,6 q20,6 40,0 t40,0 t40,0" fill="none" stroke="#E8F6FA" stroke-width="3" opacity=".7" class="b401-wake"/>
+      <path d="M-62,-6 L-46,-2 L48,-2 L66,-14 L62,2 Q54,18 44,24 L-42,24 Q-56,12 -62,-6 Z" fill="#7A4A26" stroke="#3E2612" stroke-width="2"/>
+      <path d="M-50,6 L56,6" stroke="#C9A24A" stroke-width="3"/>
+      <path d="M-44,14 L50,14" stroke="#5A3418" stroke-width="2"/>
+      <line x1="0" y1="-2" x2="0" y2="-118" stroke="#3E2612" stroke-width="4"/>
+      <line x1="-34" y1="-2" x2="-34" y2="-86" stroke="#3E2612" stroke-width="3.5"/>
+      <line x1="36" y1="-6" x2="36" y2="-76" stroke="#3E2612" stroke-width="3"/>
+      <path d="M-24,-104 Q0,-98 24,-104 L28,-62 Q0,-54 -28,-62 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-28,-56 Q0,-48 28,-56 L32,-18 Q0,-10 -32,-18 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-52,-78 Q-34,-72 -16,-78 L-14,-44 Q-34,-38 -54,-44 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M36,-74 L62,-22 L36,-16 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M0,-118 L22,-113 L0,-108 Z" fill="#A3312B" class="b401-flag"/>
     </g></g>
-  </g>
-  <rect y="170" width="920" height="90" fill="url(#seaGrad)"/>
-  <g stroke="#9FE0F0" stroke-width="2" fill="none" opacity="0.55">
-    <path d="M 0 195 Q 60 192 120 195 T 240 195 T 360 195 T 480 195 T 600 195"/>
-    <path d="M 200 220 Q 260 217 320 220 T 440 220 T 560 220 T 680 220 T 800 220"/>
-    <path d="M 40 240 Q 100 237 160 240 T 280 240 T 400 240 T 520 240 T 640 240"/>
-  </g>
-  <g transform="translate(390, 130)"><g class="b1drift">
-    <path d="M -85 50 Q -75 75 -55 78 L 70 78 Q 90 75 100 50 Z" fill="#7A4A26"/>
-    <path d="M -75 53 L 90 53" stroke="#4A2A14" stroke-width="2"/>
-    <rect x="55" y="30" width="42" height="25" fill="#8B5A30" stroke="#4A2A14" stroke-width="1.5"/>
-    <rect x="62" y="36" width="6" height="8" fill="#3A2410"/>
-    <rect x="76" y="36" width="6" height="8" fill="#3A2410"/>
-    <rect x="-78" y="38" width="22" height="18" fill="#8B5A30" stroke="#4A2A14" stroke-width="1.5"/>
-    <rect x="-2" y="-65" width="4" height="115" fill="#5A3818"/>
-    <rect x="-55" y="-30" width="3" height="80" fill="#5A3818"/>
-    <rect x="60" y="-20" width="3" height="55" fill="#5A3818"/>
-    <path d="M -40 -55 L 40 -55 L 38 0 L -38 0 Z" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="1.2"/>
-    <line x1="0" y1="-55" x2="0" y2="0" stroke="#C03030" stroke-width="3.5"/>
-    <line x1="-30" y1="-27.5" x2="30" y2="-27.5" stroke="#C03030" stroke-width="3.5"/>
-    <path d="M -70 -22 L -40 -22 L -42 18 L -68 18 Z" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="1"/>
-    <path d="M 62 -15 L 92 8 L 62 32 Z" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="1"/>
-    <rect x="0" y="-72" width="2" height="10" fill="#5A3818"/>
-    <path d="M 2 -72 L 22 -68 L 2 -64 Z" fill="#C03030"/>
-    <line x1="0" y1="-55" x2="-78" y2="-22" stroke="#3A2410" stroke-width="0.8" opacity="0.7"/>
-    <line x1="0" y1="-55" x2="92" y2="8" stroke="#3A2410" stroke-width="0.8" opacity="0.7"/>
-  </g></g>
-  <g opacity="0.7" transform="translate(580, 158)">
-    <path d="M -25 14 Q -20 22 -10 23 L 22 23 Q 30 22 35 14 Z" fill="#7A4A26"/>
-    <rect x="-1" y="-22" width="2" height="38" fill="#5A3818"/>
-    <path d="M -14 -20 L 14 -20 L 13 -2 L -13 -2 Z" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="0.6"/>
-    <line x1="0" y1="-20" x2="0" y2="-2" stroke="#C03030" stroke-width="1.5"/>
-  </g>
-  <g transform="translate(85, 215)" opacity="0.9">
-    <circle r="28" fill="#F2E4C0" stroke="#5A3818" stroke-width="2"/>
-    <circle r="22" fill="none" stroke="#5A3818" stroke-width="0.8"/>
-    <path d="M 0 -22 L 5 0 L 0 22 L -5 0 Z" fill="#C03030"/>
-    <path d="M -22 0 L 0 5 L 22 0 L 0 -5 Z" fill="#0E1C42"/>
-    <circle r="3" fill="#5A3818"/>
-  </g>
-  <g transform="translate(700, 235)" opacity="0.85">
-    <rect x="-30" y="-12" width="60" height="20" fill="#F2E4C0" stroke="#7A4A26" stroke-width="1.5" rx="2"/>
-    <line x1="-22" y1="-6" x2="22" y2="-6" stroke="#7A4A26" stroke-width="0.5"/>
-    <path d="M -16 0 Q -8 -3 0 0 Q 8 3 16 0" stroke="#C03030" stroke-width="1" fill="none" stroke-dasharray="2,1"/>
-    <circle cx="-16" cy="0" r="1.5" fill="#0E1C42"/>
-    <circle cx="16" cy="0" r="1.5" fill="#0E1C42"/>
+  <g transform="translate(560,166) scale(0.86)"><g class="b401-bob b401-s3">
+      <path d="M-74,6 q20,6 40,0 t40,0 t40,0" fill="none" stroke="#E8F6FA" stroke-width="3" opacity=".7" class="b401-wake"/>
+      <path d="M-62,-6 L-46,-2 L48,-2 L66,-14 L62,2 Q54,18 44,24 L-42,24 Q-56,12 -62,-6 Z" fill="#7A4A26" stroke="#3E2612" stroke-width="2"/>
+      <path d="M-50,6 L56,6" stroke="#C9A24A" stroke-width="3"/>
+      <path d="M-44,14 L50,14" stroke="#5A3418" stroke-width="2"/>
+      <line x1="0" y1="-2" x2="0" y2="-118" stroke="#3E2612" stroke-width="4"/>
+      <line x1="-34" y1="-2" x2="-34" y2="-86" stroke="#3E2612" stroke-width="3.5"/>
+      <line x1="36" y1="-6" x2="36" y2="-76" stroke="#3E2612" stroke-width="3"/>
+      <path d="M-24,-104 Q0,-98 24,-104 L28,-62 Q0,-54 -28,-62 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-28,-56 Q0,-48 28,-56 L32,-18 Q0,-10 -32,-18 Z" fill="#FFF6E0" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M-52,-78 Q-34,-72 -16,-78 L-14,-44 Q-34,-38 -54,-44 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M36,-74 L62,-22 L36,-16 Z" fill="#FBEFD3" stroke="#C9B48A" stroke-width="1.5"/>
+      <path d="M0,-118 L22,-113 L0,-108 Z" fill="#A3312B" class="b401-flag"/>
+    </g></g>
+  <g stroke="#E8F6FA" stroke-width="1.6" stroke-linecap="round">
+    <path class="b401-glint" d="M90,170 l26,0"/><path class="b401-glint b401-g2" d="M260,186 l34,0"/><path class="b401-glint b401-g3" d="M430,160 l22,0"/>
+    <path class="b401-glint b401-g2" d="M690,178 l30,0"/><path class="b401-glint" d="M820,190 l24,0"/><path class="b401-glint b401-g3" d="M150,134 l18,0"/>
   </g>
 </svg>
 
@@ -3817,5 +4590,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

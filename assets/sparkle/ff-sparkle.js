@@ -13,10 +13,10 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard
-     explore.reading.type   seasongrid | filesgrid
-     explore.evidence.type  wheelsort  | spotdetail
-     planner.type  picks | fixit
+     scene1.type   mapquest | habitcard | shiporder
+     explore.reading.type   seasongrid | filesgrid | routemap
+     explore.evidence.type  wheelsort  | spotdetail | shipshore
+     planner.type  picks | fixit | choose
      vocab.type    rootdig
    Add a new type by adding one entry to the MOD table below.
 
@@ -456,6 +456,112 @@
     paint(); return {done:function(){ return S.dig.matched.length===DIG.length; }};
   };
 
+  /* ---- small ship drawing for the explorer modules (no words, no people) ---- */
+  function shipIcon(sz,col){ var w=Math.round(30+sz*10), h=Math.round(w*.8); return '<svg class="spk-shipico" viewBox="0 0 50 40" width="'+w+'" height="'+h+'" aria-hidden="true"><path d="M4,27 L46,27 L40,36 L10,36 Z" fill="#6B4423" stroke="#3E2612" stroke-width="1"/><line x1="25" y1="4" x2="25" y2="27" stroke="#3E2612" stroke-width="1.6"/><line x1="14" y1="9" x2="14" y2="27" stroke="#3E2612" stroke-width="1.2"/><path d="M26,6 Q37,13 26,24 Z" fill="#FFF8E6" stroke="#B8A27A" stroke-width=".8"/><path d="M15,11 Q22,16 15,23 Z" fill="#FFF8E6" stroke="#B8A27A" stroke-width=".8"/><path d="M25,4 L32,6 L25,8 Z" fill="'+(col||'#A3312B')+'"/><path d="M2,38 q6,-3 12,0 t12,0 t12,0 t12,0" fill="none" stroke="#7FB5CC" stroke-width="1.4"/></svg>'; }
+
+  /* ---- Scene 1 · Ship order: put each expedition's ship on its year on the timeline. Tap or drag. ---- */
+  MOD.shiporder=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var SH=cfg.ships||[]; S.ships=S.ships||[];
+    var done=function(){ return SH.length>0&&SH.every(function(s){ return S.ships.indexOf(s.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var slots=SH.slice().sort(function(a,b){ return a.year-b.year; });
+    var g=el('div','spk spk-game spk-ships');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+      +'<div class="spk-dock"><div class="spk-dock-line"></div>'+slots.map(function(s){ return '<div class="spk-berth" data-y="'+s.year+'" role="button" tabindex="0" aria-label="Put a ship on '+s.year+'"><div class="yr">'+s.year+'</div><div class="post"></div><div class="slot"><span class="empty">'+esc(cfg.empty||'Which ship?')+'</span><span class="got"></span></div><p class="fact"></p></div>'; }).join('')+'</div>'
+      +'<div class="spk-chips spk-shipchips"></div><p class="spk-miss"></p>'
+      +'<div class="spk-shore spk-hide">'+esc(cfg.shore||'')+'</div>'
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    var chips=g.querySelector('.spk-shipchips'), miss=g.querySelector('.spk-miss'), sel=null;
+    shuffle(SH).forEach(function(s){ var c=el('div','spk-chip noimg spk-shipchip','<span class="ico">'+shipIcon(s.size||1,s.color)+'</span><span><b>'+esc(s.name)+'</b><br>'+esc(s.clue)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.id=s.id; chips.appendChild(c); });
+    function paint(){ g.querySelectorAll('.spk-berth').forEach(function(b){ var s=find(SH,+b.dataset.y,'year'), on=s&&S.ships.indexOf(s.id)>=0; b.classList.toggle('placed',!!on); b.querySelector('.got').innerHTML=on?shipIcon(s.size||1,s.color)+'<b>'+esc(s.name)+'</b>':''; b.querySelector('.fact').textContent=on?s.fact:''; });
+      chips.querySelectorAll('.spk-shipchip').forEach(function(c){ var on=S.ships.indexOf(c.dataset.id)>=0; c.classList.toggle('done',on); c.classList.toggle('spk-hide',on); c.draggable=!on; });
+      g.querySelector('.spk-shore').classList.toggle('spk-hide',!done()); g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    function arm(on){ g.querySelectorAll('.spk-berth').forEach(function(b){ b.classList.toggle('armed',on&&!b.classList.contains('placed')); b.classList.remove('over'); }); }
+    function attempt(chip,berth){ if(!chip||!berth||berth.classList.contains('placed')||chip.classList.contains('done')) return; arm(false); var s=find(SH,chip.dataset.id);
+      if(s.year===+berth.dataset.y){ S.ships.push(s.id); save(); chip.classList.remove('sel'); sel=null; miss.textContent=''; paint(); berth.classList.add('spk-justin'); setTimeout(function(){ berth.classList.remove('spk-justin'); },700); refreshFile(); refreshVoice(); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); miss.textContent=s.miss||''; missBeat(s.miss||''); } }
+    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-shipchip'); if(!c||c.classList.contains('done')) return; ack('open'); chips.querySelectorAll('.spk-shipchip').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    chips.addEventListener('keydown',function(e){ if((e.key==='Enter'||e.key===' ')&&e.target.closest('.spk-shipchip')){ e.preventDefault(); e.target.closest('.spk-shipchip').click(); } });
+    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-shipchip'); if(!c||c.classList.contains('done')){ e.preventDefault(); return; } ack('open'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.id); e.dataTransfer.effectAllowed='move'; arm(true); });
+    chips.addEventListener('dragend',function(){ arm(false); });
+    var dock=g.querySelector('.spk-dock');
+    dock.addEventListener('click',function(e){ attempt(sel,e.target.closest('.spk-berth')); });
+    dock.addEventListener('keydown',function(e){ var b=e.target.closest('.spk-berth'); if(b&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); attempt(sel,b); } });
+    dock.addEventListener('dragover',function(e){ var b=e.target.closest('.spk-berth'); g.querySelectorAll('.spk-berth').forEach(function(x){ x.classList.toggle('over',x===b); }); if(b&&!b.classList.contains('placed')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    dock.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-berth')); });
+    paint(); body.appendChild(g);
+    return {done:done, journal:function(e,NA){ var p=slots.filter(function(s){ return S.ships.indexOf(s.id)>=0; }); return p.length?'<p class="a">'+p.map(function(s){ return e(s.year+' · '+s.name); }).join(' → ')+'</p>':NA; }};
+  };
+
+  /* ---- Explore reading · route map: the lesson's own paragraphs sit beside the real Florida map.
+     After each paragraph, the student shows that expedition's route; it draws itself on the map. ---- */
+  function geoPath(pts){ return pts.map(function(p,i){ var q=project(p[0],p[1]); return (i?'L':'M')+q[0].toFixed(1)+','+q[1].toFixed(1); }).join(' '); }
+  MOD.routemap=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var RT=(cfg.routes||[]).map(function(r){ return Object.assign({},r,{rx:new RegExp(r.match,'i')}); }), paras={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ var st=p.querySelector('strong'); if(!st) return; RT.forEach(function(r){ if(!paras[r.id]&&r.rx.test(p.textContent)){ paras[r.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    S.routes=S.routes||[];
+    var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Florida map')+'">'+floridaBase('R')
+      +(cfg.peoples||[]).map(function(p){ var q=project(p.lon,p.lat); return '<text class="pp" x="'+q[0].toFixed(0)+'" y="'+q[1].toFixed(0)+'" text-anchor="'+(p.a||'middle')+'">'+esc(p.t)+'</text>'; }).join('')
+      +RT.map(function(r){ var land=r.land?geoPath(r.land):'', end=r.sea[r.sea.length-1], q=project(end[0],end[1]), lq=r.labelAt?project(r.labelAt[0],r.labelAt[1]):[q[0]+8,q[1]-6], fq=r.from?project(r.from.lon,r.from.lat):null;
+        return '<g class="spk-rt" data-r="'+r.id+'" style="--c:'+r.color+'"><path class="sea" pathLength="100" d="'+geoPath(r.sea)+'"/>'+(land?'<path class="land" pathLength="100" d="'+land+'"/>':'')+(r.arrow?'<path class="land" pathLength="100" d="'+geoPath(r.arrow)+'"/>':'')
+          +'<circle class="pin" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="5"/><text class="lb" x="'+lq[0].toFixed(0)+'" y="'+lq[1].toFixed(0)+'" text-anchor="'+(r.labelAnchor||'start')+'">'+esc(r.label)+'</text>'
+          +(fq?'<text class="fr" x="'+Math.min(296,Math.max(4,fq[0])).toFixed(0)+'" y="'+Math.min(296,fq[1]).toFixed(0)+'" text-anchor="'+(r.from.a||'middle')+'">'+esc(r.from.t)+'</text>':'')+'</g>'; }).join('')
+      +(cfg.caption?'<text x="14" y="288" style="font:italic 700 10px Lora,Georgia,serif;fill:#5C4A2A">'+esc(cfg.caption)+'</text>':'')+'</svg>';
+    var wrap=el('div','spk spk-routes','<div class="spk-routes-read"></div><div class="spk-routes-side"><div class="spk-map">'+svg+'</div><p class="spk-routes-ct"></p></div>');
+    before(first,wrap); var read=wrap.querySelector('.spk-routes-read');
+    RT.forEach(function(r){ var p=paras[r.id]; if(!p) return; move(p,function(n){ read.appendChild(n); }); var b=el('button','spk-routebtn','<span class="ic">📍</span> '+esc(r.btn||'Show this route on the map')); b.type='button'; b.dataset.r=r.id; b.style.setProperty('--c',r.color); read.appendChild(b); });
+    var ct=cfg.counter||{};
+    function paint(anim){ RT.forEach(function(r){ var on=S.routes.indexOf(r.id)>=0, gEl=wrap.querySelector('.spk-rt[data-r="'+r.id+'"]'), b=read.querySelector('.spk-routebtn[data-r="'+r.id+'"]'); gEl.classList.toggle('on',on); if(on&&anim===r.id){ gEl.classList.add('drawing'); setTimeout(function(){ gEl.classList.remove('drawing'); },1600); } if(b){ b.classList.toggle('done',on); b.innerHTML=on?'<span class="ic">✓</span> '+esc(r.doneT||'On the map'):'<span class="ic">📍</span> '+esc(r.btn||'Show this route on the map'); } });
+      var n=S.routes.length; wrap.querySelector('.spk-routes-ct').innerHTML=n<RT.length?'<b>'+n+' of '+RT.length+'</b> '+esc(ct.some||'routes on the map.'):'<b>'+esc(ct.allHead||'All on the map.')+'</b> '+esc(ct.all||''); wrap.classList.toggle('all',n===RT.length); }
+    read.addEventListener('click',function(e){ var b=e.target.closest('.spk-routebtn'); if(!b) return; var id=b.dataset.r; if(S.routes.indexOf(id)<0){ S.routes.push(id); save(); paint(id); refreshFile(); } wrap.querySelector('.spk-map').scrollIntoView({behavior:'smooth',block:'nearest'}); });
+    paint(); foldThink(act,body);
+    return {act:act, done:function(){ return S.routes.length===RT.length; }, journal:function(e){ return '<p class="a">Routes on the map: '+S.routes.length+' of '+RT.length+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · ship and shore: match each expedition (the ship) to what it meant for the people
+     already living here (the shore). One shore card is not true for these years and takes no ship. ---- */
+  MOD.shipshore=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var P=cfg.pairs||[], SHORE=P.filter(function(p){ return p.shore; }).map(function(p){ return {id:p.id,t:p.shore}; }).concat((cfg.decoys||[]).map(function(d,i){ return {id:'decoy'+i,t:d.t,decoy:d.miss}; }));
+    S.shore=S.shore||[]; var done=function(){ return P.every(function(p){ return S.shore.indexOf(p.id)>=0; }); };
+    var g=el('div','spk spk-game spk-shipshore');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+      +'<div class="spk-ss"><div class="col"><div class="lab">'+esc(cfg.shipLabel||'From the ship')+'</div><div class="spk-chips"></div></div><div class="col"><div class="lab">'+esc(cfg.shoreLabel||'On the shore')+'</div><div class="spk-shores"></div></div></div><p class="spk-miss"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    var chips=g.querySelector('.spk-chips'), shores=g.querySelector('.spk-shores'), miss=g.querySelector('.spk-miss'), sel=null;
+    P.forEach(function(p){ var c=el('div','spk-chip noimg spk-sship','<span class="ico">'+shipIcon(p.size||1,p.color)+'</span><span><b>'+esc(p.year)+'</b> · '+esc(p.name)+'<br><small>'+esc(p.ship)+'</small></span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.id=p.id; chips.appendChild(c); });
+    shuffle(SHORE).forEach(function(s){ var d=el('div','spk-shorecard','<span class="tag"></span><span class="tx">'+esc(s.t)+'</span>'); d.dataset.id=s.id; d.setAttribute('role','button'); d.tabIndex=0; shores.appendChild(d); });
+    function paint(){ P.forEach(function(p){ var on=S.shore.indexOf(p.id)>=0, c=chips.querySelector('[data-id="'+p.id+'"]'), d=shores.querySelector('[data-id="'+p.id+'"]'); c.classList.toggle('done',on); c.draggable=!on; d.classList.toggle('matched',on); d.querySelector('.tag').textContent=on?p.year+' · '+p.name:''; if(on) d.style.setProperty('--c',p.color); });
+      var w=done(); g.querySelector('.spk-win').classList.toggle('show',w); shores.querySelectorAll('.spk-shorecard').forEach(function(d){ if(/^decoy/.test(d.dataset.id)) d.classList.toggle('struck',w); }); }
+    function arm(on){ shores.querySelectorAll('.spk-shorecard').forEach(function(d){ d.classList.toggle('armed',on&&!d.classList.contains('matched')); d.classList.remove('over'); }); }
+    function attempt(chip,card){ if(!chip||!card||card.classList.contains('matched')||chip.classList.contains('done')) return; arm(false); var p=find(P,chip.dataset.id), s=find(SHORE,card.dataset.id);
+      if(card.dataset.id===p.id){ S.shore.push(p.id); save(); chip.classList.remove('sel'); sel=null; miss.textContent=''; paint(); card.classList.add('spk-justin'); setTimeout(function(){ card.classList.remove('spk-justin'); },700); refreshFile(); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=s.decoy||p.miss||''; miss.textContent=m; } }
+    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-sship'); if(!c||c.classList.contains('done')) return; chips.querySelectorAll('.spk-sship').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    chips.addEventListener('keydown',function(e){ if((e.key==='Enter'||e.key===' ')&&e.target.closest('.spk-sship')){ e.preventDefault(); e.target.closest('.spk-sship').click(); } });
+    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-sship'); if(!c||c.classList.contains('done')){ e.preventDefault(); return; } sel=c; e.dataTransfer.setData('text/plain',c.dataset.id); e.dataTransfer.effectAllowed='move'; arm(true); });
+    chips.addEventListener('dragend',function(){ arm(false); });
+    shores.addEventListener('click',function(e){ attempt(sel,e.target.closest('.spk-shorecard')); });
+    shores.addEventListener('keydown',function(e){ var d=e.target.closest('.spk-shorecard'); if(d&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); attempt(sel,d); } });
+    shores.addEventListener('dragover',function(e){ var d=e.target.closest('.spk-shorecard'); shores.querySelectorAll('.spk-shorecard').forEach(function(x){ x.classList.toggle('over',x===d); }); if(d&&!d.classList.contains('matched')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    shores.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-shorecard')); });
+    paint(); after(anchor,g);
+    return {done:done, journal:function(e){ return P.filter(function(p){ return S.shore.indexOf(p.id)>=0; }).map(function(p){ return '<p class="a"><b>'+e(p.year+' · '+p.name)+'</b> — '+e(p.shore)+'</p>'; }).join('')||'<p class="a"><i>(not matched yet)</i></p>'; }};
+  };
+
+  /* ---- Planner · choose: one pick per row (notes only — the student writes the sentences).
+     A row can be checked against an earlier pick (cfg.steps[i].mustMatch = {earlierStep, map:{pick:rightAnswer}}). ---- */
+  MOD.choose=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var ST=cfg.steps||[]; S.choose=S.choose||{}; var pick=S.choose;
+    var b=el('div','spk spk-builder spk-choose'); b.innerHTML=voice(cfg.voice)+ST.map(function(s,i){ return '<div class="spk-step" data-k="'+s.k+'"><div class="lab">'+(i+1)+' · '+esc(s.label)+'</div><div class="spk-opts">'+s.opts.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.v)+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div><p class="spk-miss"></p></div>'; }).join('')+'<div class="spk-plan"></div>';
+    function ok(s){ var v=pick[s.k]; if(v==null) return false; var m=s.mustMatch; if(!m) return true; var want=m.map[pick[m.step]]; return want==null||want===v; }
+    function lines(){ var out=[]; ST.forEach(function(s){ var v=pick[s.k]; if(v==null) return; var o=find(s.opts,v,'v'); if(o) out.push([s.word||s.label,o.t]); }); return out; }
+    function paint(){ ST.forEach(function(s){ var row=b.querySelector('.spk-step[data-k="'+s.k+'"]'); row.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===pick[s.k]); }); var bad=pick[s.k]!=null&&!ok(s); row.classList.toggle('bad',bad); row.querySelector('.spk-miss').textContent=bad?(s.mustMatch.miss||''):''; });
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.empty||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var k=o.closest('.spk-step').dataset.k; pick[k]=o.dataset.v; S.choose=pick; save(); paint(); });
+    paint(); before(partB,b);
+    return {done:function(){ return ST.every(ok); }, lines:lines};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -526,7 +632,7 @@
 
   /* ================================================================ VOICE NOTES — the teacher's audio guides.
      Never read the page, never give an answer. Hidden until the .mp3 exists (?review shows empty slots).
-     DATA.voice: [{slot,label,at:'scene1'|'explore'|'mapdone'|'write'|'score',when:'perfect'|'review',script}]
+     DATA.voice: [{slot,label,at:'scene1'|'s1done'|'explore'|'mapdone'|'write'|'score',when:'perfect'|'review',script}]
      Multi-part (plays in a row, e.g. teacher → historical voice → teacher):
        {label,at,parts:[{slot,who,script},…]} → files g4ss-<lesson>-<slot>.mp3; shown only when every part loads. */
   var AT={
@@ -534,6 +640,7 @@
     explore:function(){ var a=(R.reading&&R.reading.act)||document.querySelector('#panel-explore .activity'); var sb=a&&a.previousElementSibling; return a&&[sb&&sb.classList.contains('step-badge')?sb:a,'before']; },
     write:function(){ var h=document.getElementById('spk-step-3'); return h&&[h,'after']; },
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
+    s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
   function quizTotal(){ return document.querySelectorAll('#panel-check .quiz-q').length||3; }

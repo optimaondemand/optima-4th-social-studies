@@ -598,3 +598,62 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-story { max-width: 720px; margin: 14px auto 0; padding: 7px 14px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; background: #FAF3E2; border: 1px dashed #D8C7A2; border-radius: 10px; }
 .spk-story .k { flex: none; font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ffg2); }
 .spk-story .t { flex: 1 1 260px; font: italic 500 14.5px/1.4 'Lora', Georgia, serif; color: #5C4A2A; }
+
+/* ---------- 4.04.01 · ship order (Scene 1) ---------- */
+.spk-dock { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0 6px; padding: 10px 6px 6px; background: linear-gradient(180deg, #E3F1F6 0%, #CFE7EF 100%); border-radius: 12px; border: 1px solid #B9D7E2; }
+.spk-dock-line { position: absolute; left: 18px; right: 18px; top: 40px; height: 4px; background: repeating-linear-gradient(90deg, #8A6A1E 0 10px, transparent 10px 16px); opacity: .55; }
+.spk-berth { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; cursor: pointer; padding: 0 2px 6px; border-radius: 10px; }
+.spk-berth .yr { position: relative; z-index: 1; font: 800 15px 'Nunito', sans-serif; color: #fff; background: var(--ffn); border-radius: 999px; padding: 3px 12px; }
+.spk-berth .post { width: 4px; height: 10px; background: #8A6A1E; border-radius: 2px; }
+.spk-berth .slot { width: 100%; min-height: 78px; display: grid; place-items: center; border: 2px dashed #9CC3D1; border-radius: 10px; background: rgba(255,255,255,.55); padding: 4px; transition: all .2s; }
+.spk-berth .slot .empty { font: italic 500 13px 'Lora', Georgia, serif; color: #4F7A8A; }
+.spk-berth .slot .got { display: none; flex-direction: column; align-items: center; gap: 2px; font: 700 12.5px/1.2 'Nunito', sans-serif; color: var(--ffn); }
+.spk-berth.placed .slot { border-style: solid; border-color: #7FB5CC; background: #fff; }
+.spk-berth.placed .slot .empty { display: none; } .spk-berth.placed .slot .got { display: flex; }
+.spk-berth .fact { margin: 0; font: 500 13px/1.35 'Nunito', sans-serif; color: var(--ffi); min-height: 0; }
+.spk-berth.armed .slot { border-color: var(--ffg); background: #FFF8DF; animation: spk-pulse 1.2s ease-in-out infinite; }
+.spk-berth.over .slot { border-color: var(--ffg2); background: #FFF0C8; }
+@keyframes spk-pulse { 50% { box-shadow: 0 0 0 4px rgba(201,162,74,.25); } }
+.spk-shipchips { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.spk-chip.spk-shipchip, .spk-chip.spk-sship { grid-template-columns: 62px 1fr; }
+.spk-shipchip > span:last-child { font-weight: 500; } .spk-shipchip b { font-weight: 800; }
+.spk-shipchip .ico, .spk-sship .ico { display: grid; place-items: center; }
+.spk-shore { margin-top: 8px; padding: 10px 14px; border-radius: 10px; background: #F1EAD3; border: 1px solid #D8C7A2; font: 600 14.5px/1.45 'Nunito', sans-serif; color: #4A3A16; }
+.spk-shore::before { content: '🏝️ '; }
+@media (max-width: 640px) { .spk-dock { grid-template-columns: 1fr; } .spk-dock-line { display: none; } .spk-berth { display: grid; grid-template-columns: 64px 1fr; align-items: center; text-align: left; } .spk-berth .post { display: none; } .spk-berth .fact { grid-column: 1 / -1; } }
+
+/* ---------- route map (Explore reading) ---------- */
+.spk-routes { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(240px, 1fr); gap: 20px; align-items: start; }
+.spk-routes-side { position: sticky; top: 130px; }
+.spk-routes-read p { margin: 0 0 6px; }
+.spk-routebtn { display: inline-flex; align-items: center; gap: 6px; margin: 2px 0 16px; font: 800 13px 'Nunito', sans-serif; color: #fff; background: var(--c); border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.spk-routebtn.done { background: #fff; color: var(--c); box-shadow: inset 0 0 0 2px var(--c); cursor: default; }
+.spk-routes-ct { font: 500 14px 'Nunito', sans-serif; color: var(--ffi); margin: 8px 2px 0; }
+.spk-routes .pp { font: italic 700 9px Lora, Georgia, serif; fill: #7A4A2A; paint-order: stroke; stroke: #F4F0D8; stroke-width: 3; }
+.spk-rt { opacity: 0; transition: opacity .3s; } .spk-rt.on { opacity: 1; }
+.spk-rt .sea { fill: none; stroke: var(--c); stroke-width: 2.6; stroke-dasharray: 5 3; }
+.spk-rt .land { fill: none; stroke: var(--c); stroke-width: 1.8; stroke-dasharray: 1.5 2.5; stroke-linecap: round; }
+.spk-rt .pin { fill: var(--c); stroke: #fff; stroke-width: 1.5; }
+.spk-rt .lb { font: 800 9.5px Nunito, sans-serif; fill: var(--c); paint-order: stroke; stroke: #FFFDF5; stroke-width: 3; }
+.spk-rt .fr { font: 800 8.5px Nunito, sans-serif; fill: #2E4A5A; paint-order: stroke; stroke: #BFE3EE; stroke-width: 3; }
+.spk-rt.drawing .sea, .spk-rt.drawing .land { stroke-dasharray: 100; animation: spk-draw 1.4s ease-out both; }
+@keyframes spk-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@media (max-width: 760px) { .spk-routes { grid-template-columns: 1fr; } .spk-routes-side { position: static; order: -1; max-width: 360px; } }
+
+/* ---------- ship and shore (Explore evidence) ---------- */
+.spk-ss { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.spk-ss .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffedge, #1A8A7D); margin-bottom: 6px; }
+.spk-sship small { font-weight: 500; color: var(--ffs); }
+.spk-shores { display: grid; gap: 8px; margin: 8px 0; }
+.spk-shorecard { position: relative; padding: 10px 12px; border: 2px dashed #C9B486; border-radius: 10px; background: #FBF6E8; font: 600 14px/1.4 'Nunito', sans-serif; color: var(--ffi); cursor: pointer; transition: all .2s; }
+.spk-shorecard .tag { display: none; font: 800 11px 'Nunito', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--c); margin-bottom: 2px; }
+.spk-shorecard.matched { border-style: solid; border-color: var(--c); background: #fff; cursor: default; } .spk-shorecard.matched .tag { display: block; }
+.spk-shorecard.armed { border-color: var(--ffg); background: #FFF8DF; } .spk-shorecard.over { background: #FFF0C8; border-color: var(--ffg2); }
+.spk-shorecard.struck { opacity: .55; text-decoration: line-through; cursor: default; }
+@media (max-width: 640px) { .spk-ss { grid-template-columns: 1fr; } }
+
+/* ---------- choose planner ---------- */
+.spk-choose .spk-step.bad .spk-opt.on { background: #FFF0EC; color: #A3312B; border-color: #E8636B; }
+.spk-choose .spk-miss { min-height: 0; }
+
+@media (prefers-reduced-motion: reduce) { .spk-berth.armed .slot, .spk-rt.drawing .sea, .spk-rt.drawing .land { animation: none; } .spk-rt.drawing .sea { stroke-dasharray: 5 3; } .spk-rt.drawing .land { stroke-dasharray: 1.5 2.5; } }
