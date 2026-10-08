@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots)
-     planner.type  picks | fixit | choose | scale
-     vocab.type    rootdig | flags | bells
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread)
+     planner.type  picks | fixit | choose | scale | ledger
+     vocab.type    rootdig | flags | bells | streams
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -814,6 +814,239 @@
     return {done:function(){ return !!(pk.motive&&pk.took.length&&pk.cost.length&&pk.answer); }, lines:lines};
   };
 
+  /* ================================================================ 4.04.03 additions (Oct 2026)
+     Flag art for the rival powers, a few WebAudio sounds, and five modules:
+     claimcoast (Scene 1) · yearslider (reading) · domino (evidence) · ledger (planner) · streams (vocab). */
+  function fleur(x,y,s){ return '<path transform="translate('+x+','+y+') scale('+s+')" d="M0,-6C2,-4 2,-1 0,1C-2,-1 -2,-4 0,-6ZM-1,1C-4,-1 -6,1 -4,3.5C-3,2.4 -2,2.2 -1,2.6ZM1,1C4,-1 6,1 4,3.5C3,2.4 2,2.2 1,2.6ZM-3.2,3h6.4v1.3h-6.4ZM-.8,4.3h1.6l.9,2.4h-3.4Z" fill="#F2C230"/>'; }
+  /* Spain: the Cross of Burgundy (red ragged X on white). France: the royal arms (gold fleurs-de-lis on blue).
+     England: St George's Cross. Great Britain: the Union Flag of 1707–1801 (before Ireland's cross was added). */
+  FLAGART.es='<rect width="40" height="28" fill="#FFFDF5"/><g stroke="#B3261E" stroke-linecap="round"><path d="M7,4L33,24M33,4L7,24" stroke-width="4.5"/><path d="M13.5,9l-2.6,3.1M26.5,19l2.6,-3.1M26.5,9l2.6,3.1M13.5,19l-2.6,-3.1" stroke-width="2.6"/></g>';
+  FLAGART.fr='<rect width="40" height="28" fill="#1F3F8F"/>'+fleur(12,10,.95)+fleur(28,10,.95)+fleur(20,20,.95);
+  FLAGART.en='<rect width="40" height="28" fill="#FFFDF5"/><rect x="16.5" width="7" height="28" fill="#C8352E"/><rect y="10.5" width="40" height="7" fill="#C8352E"/>';
+  FLAGART.gb='<rect width="40" height="28" fill="#1F3A7A"/><path d="M0,0L40,28M40,0L0,28" stroke="#fff" stroke-width="5"/><rect x="15" width="10" height="28" fill="#fff"/><rect y="9" width="40" height="10" fill="#fff"/><rect x="17" width="6" height="28" fill="#C8352E"/><rect y="11" width="40" height="6" fill="#C8352E"/>';
+  var FLAGCOL={es:'#B3261E',fr:'#1F3F8F',en:'#C8352E',gb:'#1F3A7A'};
+  /* map-unit flag on a pole, planted at (x,y): pole base at the spot */
+  function poleFlag(k,x,y,s,cls){ s=s||1; return '<g class="spk-pf '+(cls||'')+'" transform="translate('+x.toFixed(1)+','+y.toFixed(1)+') scale('+s+')"><line class="pole" x1="0" y1="0" x2="0" y2="-9" stroke="#3E2612" stroke-width=".7" stroke-linecap="round"/><g transform="translate(0,-9) scale(.16)"><g class="cloth">'+(FLAGART[k]||'')+'<rect width="40" height="28" fill="none" stroke="#3E2612" stroke-width="1.6"/></g></g></g>'; }
+  function sfx(kind){ if(QUIET&&kind!=='click') return; try{ ACtx=ACtx||new (window.AudioContext||window.webkitAudioContext)(); var t=ACtx.currentTime, sr=ACtx.sampleRate;
+      function noise(dur,f,q,vol,shape){ var n=Math.floor(sr*dur), b=ACtx.createBuffer(1,n,sr), d=b.getChannelData(0); for(var i=0;i<n;i++){ var e=shape?shape(i/n):1; d[i]=(Math.random()*2-1)*e; } var src=ACtx.createBufferSource(); src.buffer=b; var bp=ACtx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=f; bp.Q.value=q; var g=ACtx.createGain(); g.gain.value=vol; src.connect(bp); bp.connect(g); g.connect(ACtx.destination); src.start(t); }
+      function tone(f,dur,vol,type,f2){ var o=ACtx.createOscillator(), g=ACtx.createGain(); o.type=type||'sine'; o.frequency.setValueAtTime(f,t); if(f2) o.frequency.exponentialRampToValueAtTime(f2,t+dur); g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+0.01); g.gain.exponentialRampToValueAtTime(0.0001,t+dur); o.connect(g); g.connect(ACtx.destination); o.start(t); o.stop(t+dur+0.05); }
+      if(kind==='flap') noise(.45,900,1.2,.35,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.55+.45*Math.abs(Math.sin(p*38))); });
+      else if(kind==='click'){ tone(1900,.05,.12,'triangle',700); noise(.04,3000,2,.18); }
+      else if(kind==='water') noise(1.1,1400,.8,.22,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.4+.6*Math.random()); });
+      else if(kind==='thud'){ tone(140,.25,.35,'sine',60); noise(.08,500,1,.25); }
+      else if(kind==='win') [523,659,784].forEach(function(f,i){ setTimeout(function(){ chime(f); },i*180); });
+    }catch(e){} }
+
+  /* ---- Scene 1 · Claim the coast: a close-up of Florida's northeast coast (real lon/lat). Drag each flag card (or tap it,
+     then tap a spot) to the place that power came to. Each claim shades the coast around it; where claims overlap, it glows. ---- */
+  MOD.claimcoast=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var B=cfg.box||[-82.05,29.45,-80.85,30.75], nw=project(B[0],B[3]), se=project(B[2],B[1]), vw=se[0]-nw[0], vh=se[1]-nw[1], u=vw/42;
+    var SP=(cfg.spots||[]).map(function(s){ var q=project(s.lon,s.lat); return Object.assign({},s,{x:q[0],y:q[1]}); }), FL=cfg.flags||[];
+    S.claims=S.claims||[]; var done=function(){ return FL.length>0&&FL.every(function(f){ return S.claims.indexOf(f.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    function spot(id){ return find(SP,id); }
+    var R0=(cfg.zoneR||11)*u/1;
+    var defs='<defs><pattern id="spkWaveC" width="'+(4*u)+'" height="'+(2*u)+'" patternUnits="userSpaceOnUse"><path d="M0,'+(1.2*u)+' q'+(u)+','+(-u)+' '+(2*u)+',0 t'+(2*u)+',0" fill="none" stroke="#7FB5CC" stroke-width="'+(.18*u)+'" opacity=".6"/></pattern>'
+      +FL.map(function(f){ var s=spot(f.spot); return '<clipPath id="spkCZ-'+f.id+'"><circle cx="'+s.x.toFixed(1)+'" cy="'+s.y.toFixed(1)+'" r="'+((f.r||cfg.zoneR||11)*u/1).toFixed(1)+'"/></clipPath>'; }).join('')+'<clipPath id="spkCland"><path d="'+FLORIDA+'"/></clipPath></defs>';
+    var land='<rect x="'+nw[0]+'" y="'+nw[1]+'" width="'+vw+'" height="'+vh+'" fill="#BFE3EE"/><rect x="'+nw[0]+'" y="'+nw[1]+'" width="'+vw+'" height="'+vh+'" fill="url(#spkWaveC)"/><path d="'+FLORIDA+'" fill="#D8E6AE" stroke="#6E8A3A" stroke-width="1.4" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>';
+    var rivers=(cfg.rivers||[]).map(function(r){ return '<path d="'+geoPath(r.pts)+'" fill="none" stroke="#6FA9C4" stroke-width="'+((r.w||.9)*u).toFixed(2)+'" stroke-linecap="round" stroke-linejoin="round"/>'+(r.label?'<text class="rv" x="'+project(r.label[0],r.label[1])[0].toFixed(1)+'" y="'+project(r.label[0],r.label[1])[1].toFixed(1)+'" style="font-size:'+(1.35*u).toFixed(2)+'px" text-anchor="'+(r.a||'middle')+'">'+esc(r.t)+'</text>':''); }).join('');
+    var zones='<g class="zones">'+FL.map(function(f){ var s=spot(f.spot); return '<circle class="cz" data-f="'+f.id+'" cx="'+s.x.toFixed(1)+'" cy="'+s.y.toFixed(1)+'" r="'+((f.r||cfg.zoneR||11)*u).toFixed(1)+'" fill="'+FLAGCOL[f.flag]+'" clip-path="url(#spkCland)"/>'; }).join('')
+      +FL.map(function(a,i){ return FL.slice(i+1).map(function(b){ var sa=spot(a.spot); return '<g clip-path="url(#spkCZ-'+b.id+')"><circle class="ov" data-a="'+a.id+'" data-b="'+b.id+'" cx="'+sa.x.toFixed(1)+'" cy="'+sa.y.toFixed(1)+'" r="'+((a.r||cfg.zoneR||11)*u).toFixed(1)+'" clip-path="url(#spkCland)"/></g>'; }).join(''); }).join('')+'</g>';
+    var peoples=(cfg.peoples||[]).map(function(p){ var q=project(p.lon,p.lat); return '<text class="pp" x="'+q[0].toFixed(1)+'" y="'+q[1].toFixed(1)+'" style="font-size:'+(1.5*u).toFixed(2)+'px" text-anchor="'+(p.a||'middle')+'">'+esc(p.t)+'</text>'; }).join('');
+    var sea=(cfg.sea||[]).map(function(p){ var q=project(p.lon,p.lat); return '<text class="sea" x="'+q[0].toFixed(1)+'" y="'+q[1].toFixed(1)+'" style="font-size:'+(1.6*u).toFixed(2)+'px" text-anchor="middle">'+esc(p.t)+'</text>'; }).join('');
+    var spots=SP.map(function(s){ return '<g class="spk-cspot" data-s="'+s.id+'" role="button" tabindex="0" aria-label="'+esc(s.label)+'"><circle class="hit" cx="'+s.x.toFixed(1)+'" cy="'+s.y.toFixed(1)+'" r="'+(3.4*u).toFixed(1)+'"/><circle class="ring" cx="'+s.x.toFixed(1)+'" cy="'+s.y.toFixed(1)+'" r="'+(1.5*u).toFixed(1)+'" stroke-width="'+(.35*u).toFixed(2)+'"/><text class="sl" x="'+(s.x+(s.dx||0)*u).toFixed(1)+'" y="'+(s.y+(s.dy!=null?s.dy:3.4)*u).toFixed(1)+'" style="font-size:'+(1.45*u).toFixed(2)+'px;stroke-width:'+(.5*u).toFixed(2)+'px" text-anchor="'+(s.a||'middle')+'">'+esc(s.label)+'</text></g>'; }).join('');
+    var flags='<g class="planted">'+FL.map(function(f){ var s=spot(f.spot); return poleFlag(f.flag,s.x+(f.px||0)*u,s.y+(f.py||0)*u,u*.62,'f-'+f.id).replace('class="spk-pf ','data-f="'+f.id+'" class="spk-pf '); }).join('')+'</g>';
+    var svg='<svg viewBox="'+nw[0].toFixed(1)+' '+nw[1].toFixed(1)+' '+vw.toFixed(1)+' '+vh.toFixed(1)+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Map of Florida’s northeast coast')+'">'+defs+land+zones+rivers+peoples+sea+spots+flags+(cfg.caption?'<text class="cap" x="'+(nw[0]+1.2*u).toFixed(1)+'" y="'+(se[1]-1.3*u).toFixed(1)+'" style="font-size:'+(1.35*u).toFixed(2)+'px">'+esc(cfg.caption)+'</text>':'')+'</svg>';
+    var g=el('div','spk spk-game spk-claim');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Claim the Coast')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-maplock"><div class="spk-map">'+svg+'</div><div><div class="spk-chips spk-cflags"></div><p class="spk-miss"></p><p class="spk-claim-ct"></p></div></div><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    var chips=g.querySelector('.spk-cflags'), miss=g.querySelector('.spk-miss'), sel=null;
+    FL.forEach(function(f){ var c=el('div','spk-chip noimg spk-cflag','<span class="ico">'+flagSVG(f.flag,30)+'</span><span><b>'+esc(f.year)+' · '+esc(f.name)+'</b><br>'+esc(f.t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.f=f.id; c.style.borderLeftColor=FLAGCOL[f.flag]; chips.appendChild(c); });
+    function paint(anim){ FL.forEach(function(f){ var on=S.claims.indexOf(f.id)>=0, pf=g.querySelector('.spk-pf[data-f="'+f.id+'"]'), cz=g.querySelector('.cz[data-f="'+f.id+'"]'), c=chips.querySelector('[data-f="'+f.id+'"]');
+        pf.classList.toggle('on',on); cz.classList.toggle('on',on); if(on&&anim===f.id){ pf.classList.add('rise'); setTimeout(function(){ pf.classList.remove('rise'); },1300); }
+        c.classList.toggle('done',on); c.draggable=!on; });
+      g.querySelectorAll('.ov').forEach(function(o){ o.classList.toggle('on',S.claims.indexOf(o.dataset.a)>=0&&S.claims.indexOf(o.dataset.b)>=0); });
+      var n=S.claims.length; g.querySelector('.spk-claim-ct').innerHTML=n<FL.length?'<b>'+n+' of '+FL.length+'</b> '+esc(cfg.countT||'flags planted.'):'';
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    function arm(on){ g.querySelectorAll('.spk-cspot').forEach(function(s){ s.classList.toggle('armed',on); s.classList.remove('over'); }); }
+    function attempt(chip,sp){ if(!chip||!sp) return; var f=find(FL,chip.dataset.f); if(!f||S.claims.indexOf(f.id)>=0) return; arm(false);
+      if(sp.dataset.s===f.spot){ S.claims.push(f.id); save(); sel=null; chip.classList.remove('sel'); miss.textContent=''; sfx('flap'); paint(f.id); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },700); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=(f.miss&&f.miss[sp.dataset.s])||f.missAny||''; miss.textContent=m; missBeat(m); } }
+    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-cflag'); if(!c||c.classList.contains('done')) return; ack('open'); chips.querySelectorAll('.spk-cflag').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    chips.addEventListener('keydown',function(e){ if((e.key==='Enter'||e.key===' ')&&e.target.closest('.spk-cflag')){ e.preventDefault(); e.target.closest('.spk-cflag').click(); } });
+    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-cflag'); if(!c||!c.draggable){ e.preventDefault(); return; } ack('open'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.f); e.dataTransfer.effectAllowed='move'; arm(true); });
+    chips.addEventListener('dragend',function(){ arm(false); });
+    var map=g.querySelector('.spk-map');
+    map.addEventListener('click',function(e){ var s=e.target.closest('.spk-cspot'); if(s) attempt(sel,s); });
+    map.addEventListener('keydown',function(e){ var s=e.target.closest('.spk-cspot'); if(s&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); attempt(sel,s); } });
+    map.addEventListener('dragover',function(e){ var s=e.target.closest('.spk-cspot'); g.querySelectorAll('.spk-cspot').forEach(function(x){ x.classList.toggle('over',x===s); }); if(s){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    map.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-cspot')); });
+    paint(); body.appendChild(g);
+    return {done:done, journal:function(e,NA){ var p=FL.filter(function(f){ return S.claims.indexOf(f.id)>=0; }); return p.length?'<p class="a">'+p.map(function(f){ return e(f.year+' · '+f.name+' → '+spot(f.spot).label); }).join('<br>')+'</p>':NA; }};
+  };
+
+  /* ---- Explore reading · Year slider: slide through the years. The map changes, and the lesson's own paragraph
+     for that year appears (nothing shows until the student moves to it). DATA: stops [{year,label,paras:[id],show:[layer ids]}],
+     paras [{id,match}], layers drawn on the real Florida map. ---- */
+  MOD.yearslider=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent)){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var ST=cfg.stops||[];
+    S.yrSeen=S.yrSeen||[]; if(S.yrAt==null) S.yrAt=-1;
+    var done=function(){ return ST.every(function(s,i){ return S.yrSeen.indexOf(i)>=0; }); };
+    function at(lon,lat){ return project(lon,lat).map(function(v){ return v.toFixed(1); }); }
+    var L=cfg.layers||{}, lay='';
+    Object.keys(L).forEach(function(id){ var l=L[id], q=l.lon!=null?at(l.lon,l.lat):null;
+      if(l.kind==='tint') lay+='<g class="yl" data-l="'+id+'"><path d="'+FLORIDA+'" fill="'+l.color+'" opacity=".22"/>'+(l.t?'<text class="tl" x="'+at(l.tlon,l.tlat)[0]+'" y="'+at(l.tlon,l.tlat)[1]+'" text-anchor="middle" style="fill:'+l.color+'">'+esc(l.t)+'</text>':'')+'</g>';
+      else if(l.kind==='flag') lay+='<g class="yl" data-l="'+id+'">'+poleFlag(l.flag,+q[0],+q[1],l.s||1.6)+(l.t?'<text class="fl-t" x="'+(+q[0]+(l.dx||8))+'" y="'+(+q[1]+(l.dy||-3))+'" text-anchor="'+(l.a||'start')+'">'+esc(l.t)+'</text>':'')+'</g>';
+      else if(l.kind==='gone') lay+='<g class="yl" data-l="'+id+'"><path d="M'+(q[0]-4)+','+(q[1]-4)+'l8,8M'+(+q[0]+4)+','+(q[1]-4)+'l-8,8" stroke="#5C4A2A" stroke-width="2" stroke-linecap="round"/>'+(l.t?'<text class="fl-t" x="'+(q[0]-(l.dx||7))+'" y="'+(+q[1]+(l.dy||3))+'" text-anchor="end">'+esc(l.t)+'</text>':'')+'</g>';
+      else if(l.kind==='fire') lay+='<g class="yl fire" data-l="'+id+'"><circle cx="'+q[0]+'" cy="'+q[1]+'" r="7" fill="#F28C28" opacity=".35"/><path d="M'+q[0]+','+(q[1]-9)+'c3,4 5,6 3,9 c-1,2 -5,2 -6,0 c-2,-3 1,-5 3,-9z" fill="#E8542A"/></g>';
+      else if(l.kind==='ships') lay+='<g class="yl ships" data-l="'+id+'">'+(l.pts||[]).map(function(p){ var s=at(p[0],p[1]); return '<g transform="translate('+(s[0]-9)+','+(s[1]-8)+') scale(.38)">'+shipIcon(1,FLAGCOL.en).replace(/<svg[^>]*>|<\/svg>/g,'')+'</g>'; }).join('')+(l.t?'<text class="fl-t" x="'+at(l.tlon,l.tlat)[0]+'" y="'+at(l.tlon,l.tlat)[1]+'" text-anchor="start">'+esc(l.t)+'</text>':'')+'</g>';
+    });
+    var peoples=(cfg.peoples||[]).map(function(p){ var q=at(p.lon,p.lat); return '<text class="pp" x="'+q[0]+'" y="'+q[1]+'" text-anchor="'+(p.a||'middle')+'">'+esc(p.t)+'</text>'; }).join('');
+    var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Map of Florida that changes with the year')+'">'+floridaBase('Y')+lay+peoples+'<text class="yr-big" x="16" y="282"></text></svg>';
+    var wrap=el('div','spk spk-yslider');
+    wrap.innerHTML='<div class="spk-ys-top"><div class="spk-map">'+svg+'</div><div class="spk-ys-side"><div class="spk-ys-ctl"><div class="lab">'+esc(cfg.label||'Slide to a year')+'</div><input type="range" min="-100" max="'+((ST.length-1)*100)+'" step="1" value="'+(S.yrAt>=0?S.yrAt*100:-100)+'" aria-label="Year"><div class="ticks">'+ST.map(function(s,i){ return '<button type="button" class="tick" data-i="'+i+'" style="left:'+((i+1)/ST.length*100).toFixed(1)+'%">'+s.year+'</button>'; }).join('')+'</div></div><p class="spk-ys-ct"></p></div></div><div class="spk-ys-read"></div>';
+    before(first,wrap);
+    var read=wrap.querySelector('.spk-ys-read'), rng=wrap.querySelector('input'), boxes={};
+    PA.forEach(function(a){ var p=found[a.id]; if(!p) return; var b=el('div','spk-ys-p'); boxes[a.id]=b; read.appendChild(b); move(p,function(n){ b.appendChild(n); }); });
+    function paint(anim){ var i=S.yrAt, s=ST[i];
+      wrap.querySelectorAll('.yl').forEach(function(l){ l.classList.toggle('on',!!s&&(s.show||[]).indexOf(l.dataset.l)>=0); });
+      Object.keys(boxes).forEach(function(id){ var on=!!s&&(s.paras||[]).indexOf(id)>=0; boxes[id].classList.toggle('on',on); if(on&&anim) { boxes[id].classList.remove('pop'); void boxes[id].offsetWidth; boxes[id].classList.add('pop'); } });
+      wrap.querySelector('.yr-big').textContent=s?(s.label||s.year):'';
+      wrap.querySelectorAll('.tick').forEach(function(t,k){ t.classList.toggle('seen',S.yrSeen.indexOf(k)>=0); t.classList.toggle('now',k===i); });
+      var n=S.yrSeen.length; wrap.querySelector('.spk-ys-ct').innerHTML=i<0?esc(cfg.startT||'Drag the slider to the first year.'):(n<ST.length?'<b>'+n+' of '+ST.length+'</b> '+esc(cfg.countT||'years visited. Slide on to the next year.'):'<b>'+esc(cfg.allT||'You visited every year.')+'</b>');
+      wrap.classList.toggle('all',done()); var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function go(i,fromTick){ if(i<0||i>=ST.length) return; var was=S.yrAt; S.yrAt=i; if(S.yrSeen.indexOf(i)<0) S.yrSeen.push(i); save(); if(fromTick) rng.value=i*100; paint(was!==i); if(was!==i) sfx('click'); refreshFile(); }
+    function nearest(v){ var i=Math.round(v/100); return Math.abs(v-i*100)<=22&&i>=0&&i<ST.length?i:-1; }
+    rng.addEventListener('input',function(){ var i=nearest(+rng.value); if(i>=0&&i!==S.yrAt) go(i); });
+    rng.addEventListener('change',function(){ var i=Math.max(0,Math.min(ST.length-1,Math.round(+rng.value/100))); rng.value=i*100; go(i); });
+    wrap.querySelector('.ticks').addEventListener('click',function(e){ var t=e.target.closest('.tick'); if(t) go(+t.dataset.i,true); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(e){ return '<p class="a">Years visited on the map: '+S.yrSeen.length+' of '+ST.length+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · Domino chain: put the dominoes in cause → effect order (tap the one that comes next, or
+     drag it to the line). When a line is full, tip the first one and watch them fall. DATA: chains [{id,title,items:[{yr,t,miss}]}] ---- */
+  MOD.domino=function(cfg){ var tl=document.querySelector('#panel-explore .timeline-card'); if(!tl) return null;
+    var CH=cfg.chains||[]; S.dom=S.dom||{}; CH.forEach(function(c){ S.dom[c.id]=S.dom[c.id]||{placed:[],fell:false}; });
+    var done=function(){ return CH.length>0&&CH.every(function(c){ return S.dom[c.id].fell; }); };
+    function cur(){ for(var i=0;i<CH.length;i++) if(!S.dom[CH[i].id].fell) return i; return CH.length-1; }
+    var g=el('div','spk spk-game spk-domino');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Domino Chain')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +CH.map(function(c,ci){ return '<div class="spk-dchain" data-c="'+ci+'"><div class="hd">'+esc(c.title||'')+'</div><div class="line">'+c.items.map(function(x,k){ return '<div class="slot" data-k="'+k+'"><span class="n">'+(k+1)+'</span></div>'; }).join('<span class="arr" aria-hidden="true">→</span>')+'</div><div class="spk-chips spk-dtray"></div><p class="spk-miss"></p><button type="button" class="spk-tip">'+esc(cfg.tipT||'Tip the first domino')+' 👉</button><p class="spk-dwin">'+(c.win||'')+'</p></div>'; }).join('')
+      +'<div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(tl,g);
+    function tile(x){ return '<span class="pips">'+esc(x.yr||'')+'</span><span class="tx">'+esc(x.t)+'</span>'; }
+    CH.forEach(function(c,ci){ var box=g.querySelector('.spk-dchain[data-c="'+ci+'"]'), tray=box.querySelector('.spk-dtray');
+      shuffle(c.items.map(function(x,k){ return k; })).forEach(function(k){ var d=el('div','spk-dom',tile(c.items[k])); d.setAttribute('role','button'); d.tabIndex=0; d.draggable=true; d.dataset.k=k; tray.appendChild(d); }); });
+    function paint(){ var on=cur();
+      CH.forEach(function(c,ci){ var st=S.dom[c.id], box=g.querySelector('.spk-dchain[data-c="'+ci+'"]'); box.classList.toggle('wait',ci>on&&!st.fell); box.classList.toggle('fell',st.fell); box.classList.toggle('full',st.placed.length===c.items.length);
+        box.querySelectorAll('.slot').forEach(function(sl,k){ var has=st.placed[k]; if(has!=null&&!sl.querySelector('.spk-dom')){ var d=el('div','spk-dom in',tile(c.items[has])); sl.appendChild(d); } sl.classList.toggle('next',k===st.placed.length&&!st.fell&&ci===on); });
+        box.querySelectorAll('.spk-dtray .spk-dom').forEach(function(d){ d.classList.toggle('spk-hide',st.placed.indexOf(+d.dataset.k)>=0); });
+        box.querySelector('.spk-tip').classList.toggle('spk-hide',!(st.placed.length===c.items.length&&!st.fell)); });
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    function place(ci,k,d){ var c=CH[ci], st=S.dom[c.id]; if(ci!==cur()||st.fell||st.placed.indexOf(k)>=0) return; var box=g.querySelector('.spk-dchain[data-c="'+ci+'"]'), miss=box.querySelector('.spk-miss');
+      if(k===st.placed.length){ st.placed.push(k); save(); miss.textContent=''; sfx('click'); paint(); var sl=box.querySelectorAll('.slot')[k]; if(sl){ sl.classList.add('snap'); setTimeout(function(){ sl.classList.remove('snap'); },400); } }
+      else { if(d){ d.classList.add('shake'); setTimeout(function(){ d.classList.remove('shake'); },450); } var m=c.items[k].miss||cfg.missT||'Not yet. What had to happen first?'; miss.textContent=m; missBeat(m); } }
+    function topple(ci){ var c=CH[ci], st=S.dom[c.id], box=g.querySelector('.spk-dchain[data-c="'+ci+'"]'), sl=box.querySelectorAll('.slot .spk-dom'), reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+      box.querySelector('.spk-tip').classList.add('spk-hide');
+      [].forEach.call(sl,function(d,k){ setTimeout(function(){ d.classList.add('fall'); sfx('click'); },reduce?0:k*260); });
+      setTimeout(function(){ st.fell=true; save(); paint(); refreshFile(); refreshVoice(); if(done()) sfx('win'); },reduce?50:sl.length*260+500); }
+    g.addEventListener('click',function(e){ var tip=e.target.closest('.spk-tip'); if(tip){ topple(+tip.closest('.spk-dchain').dataset.c); return; }
+      var d=e.target.closest('.spk-dtray .spk-dom'); if(d){ ack('explore'); place(+d.closest('.spk-dchain').dataset.c,+d.dataset.k,d); } });
+    g.addEventListener('keydown',function(e){ var d=e.target.closest('.spk-dtray .spk-dom'); if(d&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); d.click(); } });
+    g.addEventListener('dragstart',function(e){ var d=e.target.closest('.spk-dtray .spk-dom'); if(!d){ e.preventDefault(); return; } e.dataTransfer.setData('text/plain',d.closest('.spk-dchain').dataset.c+':'+d.dataset.k); e.dataTransfer.effectAllowed='move'; });
+    g.addEventListener('dragover',function(e){ if(e.target.closest('.line')) e.preventDefault(); });
+    g.addEventListener('drop',function(e){ var ln=e.target.closest('.line'); if(!ln) return; e.preventDefault(); var v=(e.dataTransfer.getData('text/plain')||'').split(':'); if(v.length!==2) return; var ci=+v[0], k=+v[1]; if(+ln.closest('.spk-dchain').dataset.c!==ci) return; place(ci,k,g.querySelector('.spk-dchain[data-c="'+ci+'"] .spk-dtray .spk-dom[data-k="'+k+'"]')); });
+    paint();
+    return {done:done, journal:function(e,NA){ var out=CH.filter(function(c){ return S.dom[c.id].placed.length; }).map(function(c){ return '<p class="a"><b>'+e(c.title||'')+'</b>: '+S.dom[c.id].placed.map(function(k){ return e(c.items[k].t); }).join(' → ')+'</p>'; }); return out.length?out.join(''):NA; }};
+  };
+
+  /* ---- Planner · Three-flag ledger: one column per power (a motive + one event), then the people already here
+     (a nation + what the rivalry meant). Each finished column gets a wax seal. Notes only — the student writes. ---- */
+  MOD.ledger=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var PW=cfg.powers||[], MO=cfg.motives||[]; S.ledger=S.ledger||{cols:{},nation:null,meant:[]}; var L=S.ledger, MAXM=cfg.maxMeant||2;
+    PW.forEach(function(p){ L.cols[p.id]=L.cols[p.id]||{}; });
+    function colDone(id){ var c=L.cols[id]; return !!(c&&c.motive&&c.event); }
+    var peopleDone=function(){ return !!(L.nation&&L.meant.length); };
+    var done=function(){ return PW.every(function(p){ return colDone(p.id); })&&peopleDone(); };
+    function opts(k,list){ return '<div class="spk-opts" data-k="'+k+'">'+list.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+o.id+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div>'; }
+    function wax(t){ return '<span class="spk-wax" aria-hidden="true"><svg viewBox="0 0 60 60"><path d="M30 3c5 0 7 4 11 5s8 0 10 4-1 8 1 12 5 6 4 11-6 6-8 10-3 9-8 10-8-3-10-3-6 4-11 2-4-7-8-9-9-3-11-8 2-8 1-12-5-7-2-11 8-2 11-5S25 3 30 3z" fill="#A3312B"/><circle cx="30" cy="30" r="16" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="2" stroke-dasharray="3 2"/><text x="30" y="36" text-anchor="middle" font-size="17">'+t+'</text></svg></span>'; }
+    var b=el('div','spk spk-builder spk-ledger');
+    b.innerHTML=voice(cfg.voice,cfg)
+      +'<div class="spk-lbook"><div class="cols">'+PW.map(function(p){ return '<div class="col" data-p="'+p.id+'" style="--c:'+(FLAGCOL[p.flag]||'#5C4A2A')+'"><div class="hd">'+flagSVG(p.flag,34)+'<span>'+esc(p.name)+'</span></div><div class="lab">'+esc(cfg.motiveLabel||'Motive')+'</div>'+opts('m:'+p.id,MO)+'<div class="lab">'+esc(cfg.eventLabel||'One event')+'</div>'+opts('e:'+p.id,p.events||[])+wax(p.seal||'✓')+'</div>'; }).join('')+'</div>'
+      +'<div class="ppl"><div class="lab">'+esc(cfg.nationLabel||'The people already here')+'</div>'+opts('nation',cfg.nations||[])+'<div class="lab">'+esc(cfg.meantLabel||'What the rivalry meant for them (pick 1 or 2)')+'</div>'+opts('meant',cfg.meant||[])+wax(cfg.peopleSeal||'🌿')+'</div>'
+      +'<div class="final">'+wax(cfg.finalSeal||'🗝️')+'<span>'+esc(cfg.doneT||'Ledger sealed.')+'</span></div></div>'
+      +'<div class="spk-plan"></div>';
+    function f(list,id){ return find(list||[],id); }
+    function lines(){ var out=[]; PW.forEach(function(p){ var c=L.cols[p.id], m=f(MO,c.motive), ev=f(p.events,c.event); if(m||ev) out.push([p.name,[m&&m.t,ev&&ev.t].filter(Boolean).join(' · ')]); });
+      var n=f(cfg.nations,L.nation); if(n||L.meant.length) out.push([cfg.nationShort||'First Peoples',[n&&n.t].concat(L.meant.map(function(id){ return f(cfg.meant,id).t; })).filter(Boolean).join(' · ')]); return out; }
+    var was={};
+    function paint(){ PW.forEach(function(p){ var c=L.cols[p.id], col=b.querySelector('.col[data-p="'+p.id+'"]');
+        col.querySelectorAll('[data-k="m:'+p.id+'"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===c.motive); });
+        col.querySelectorAll('[data-k="e:'+p.id+'"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===c.event); });
+        var d=colDone(p.id); col.classList.toggle('sealed',d); if(d&&was[p.id]===false){ col.classList.add('stamp'); sfx('thud'); setTimeout(function(){ col.classList.remove('stamp'); },700); } was[p.id]=d; });
+      b.querySelectorAll('[data-k="nation"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===L.nation); });
+      b.querySelectorAll('[data-k="meant"] .spk-opt').forEach(function(o){ o.classList.toggle('on',L.meant.indexOf(o.dataset.v)>=0); });
+      var pp=b.querySelector('.ppl'), pd=peopleDone(); pp.classList.toggle('sealed',pd); if(pd&&was.ppl===false){ pp.classList.add('stamp'); sfx('thud'); setTimeout(function(){ pp.classList.remove('stamp'); },700); } was.ppl=pd;
+      var all=done(); b.querySelector('.spk-lbook').classList.toggle('sealed',all); if(all&&was.all===false){ b.querySelector('.final').classList.add('stamp'); setTimeout(function(){ sfx('win'); },300); } was.all=all;
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var k=o.parentNode.dataset.k, v=o.dataset.v;
+      if(k==='meant'){ var i=L.meant.indexOf(v); if(i>=0) L.meant.splice(i,1); else { L.meant.push(v); if(L.meant.length>MAXM) L.meant.shift(); } }
+      else if(k==='nation') L.nation=v;
+      else { var pr=k.split(':'), c=L.cols[pr[1]]; c[pr[0]==='m'?'motive':'event']=v; }
+      S.ledger=L; save(); paint(); });
+    paint(); before(partB,b);
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Dig the streams: tap a word to dig a channel from the spring to it — the water flows in and the
+     teacher says the word (g4ss-<lesson>-stream-<n>.mp3 when it exists). Then float each meaning down to its word. ---- */
+  MOD.streams=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[]; S.streams=S.streams||{dug:[],fed:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&S.streams.fed.length===W.length; };
+    var n=W.length, xs=W.map(function(x,i){ return (i+.5)*400/n; });
+    var ch=xs.map(function(x,i){ return 'M200,22 C200,58 '+x.toFixed(0)+',52 '+x.toFixed(0)+',100'; });
+    var svg='<svg class="spk-chan" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true">'+ch.map(function(d,i){ return '<path class="dirt" d="'+d+'" vector-effect="non-scaling-stroke"/><path class="wtr" data-i="'+i+'" d="'+d+'" pathLength="100" vector-effect="non-scaling-stroke"/><path class="glint" data-i="'+i+'" d="'+d+'" pathLength="100" vector-effect="non-scaling-stroke"/>'; }).join('')+'</svg>';
+    var g=el('div','spk spk-streams');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Dig the Streams')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-valley"><div class="spring"><span class="pool"></span><span class="nm"><b>'+esc(cfg.root||'riv')+'</b> '+esc(cfg.rootMeaning||'= stream')+'</span></div>'+svg
+      +'<div class="basins">'+W.map(function(x,i){ return '<div class="basin" data-i="'+i+'" role="button" tabindex="0" aria-label="Dig to '+esc(x.w)+'"><span class="shovel" aria-hidden="true">⛏️</span><span class="word">'+(x.root?esc(x.w).replace(esc(x.root),'<b>'+esc(x.root)+'</b>'):esc(x.w))+'</span><span class="mean"></span></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-st-ct"></p><div class="spk-chips spk-sleaves"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var leaves=g.querySelector('.spk-sleaves'), miss=g.querySelector('.spk-miss'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-stream-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-sleaf','<span class="ico">🍃</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; leaves.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allDug=S.streams.dug.length===W.length;
+      g.querySelectorAll('.basin').forEach(function(b){ var i=+b.dataset.i, d=S.streams.dug.indexOf(i)>=0, f=S.streams.fed.indexOf(i)>=0; b.classList.toggle('dug',d); b.classList.toggle('fed',f); b.querySelector('.mean').textContent=f?W[i].m:''; });
+      g.querySelectorAll('.wtr,.glint').forEach(function(p){ var i=+p.dataset.i; p.classList.toggle('on',S.streams.dug.indexOf(i)>=0); if(anim===i&&p.classList.contains('wtr')){ p.classList.remove('flow'); void p.getBoundingClientRect(); p.classList.add('flow'); } });
+      leaves.classList.toggle('wait',!allDug); leaves.querySelectorAll('.spk-sleaf').forEach(function(t){ var f=S.streams.fed.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allDug&&!f; });
+      g.querySelector('.spk-st-ct').innerHTML=!allDug?'<b>'+S.streams.dug.length+' of '+W.length+'</b> '+esc(cfg.digT||'streams dug. Tap each word to dig its stream and hear it.'):(done()?'':'<b>'+S.streams.fed.length+' of '+W.length+'</b> '+esc(cfg.floatT||'meanings floated. Send each meaning down the stream to its word.'));
+      g.classList.toggle('done',done()); if(done()) window._rootMatchDone=true; }
+    function arm(on){ g.querySelectorAll('.basin').forEach(function(b){ b.classList.toggle('armed',on&&!b.classList.contains('fed')); b.classList.remove('over'); }); }
+    function attempt(t,b){ if(!t||!b) return; var i=+t.dataset.i; if(S.streams.fed.indexOf(i)>=0||S.streams.dug.length<W.length) return; arm(false);
+      if(+b.dataset.i===i){ S.streams.fed.push(i); save(); sel=null; miss.textContent=''; sfx('water'); paint(); if(done()) setTimeout(function(){ sfx('win'); },400); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    var bs=g.querySelector('.basins');
+    bs.addEventListener('click',function(e){ var b=e.target.closest('.basin'); if(!b) return; var i=+b.dataset.i;
+      if(sel&&S.streams.dug.length===W.length){ attempt(sel,b); return; }
+      var first=S.streams.dug.indexOf(i)<0; if(first){ S.streams.dug.push(i); save(); sfx('water'); } say(i); paint(first?i:null); });
+    bs.addEventListener('keydown',function(e){ var b=e.target.closest('.basin'); if(b&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); b.click(); } });
+    leaves.addEventListener('click',function(e){ var t=e.target.closest('.spk-sleaf'); if(!t) return; if(S.streams.dug.length<W.length){ miss.textContent=cfg.digFirstT||'Dig every stream first, so you hear each word.'; return; } leaves.querySelectorAll('.spk-sleaf').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    leaves.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-sleaf'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    leaves.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-sleaf'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    leaves.addEventListener('dragend',function(){ arm(false); });
+    bs.addEventListener('dragover',function(e){ var b=e.target.closest('.basin'); g.querySelectorAll('.basin').forEach(function(x){ x.classList.toggle('over',x===b); }); if(b&&!b.classList.contains('fed')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    bs.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.basin')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -901,7 +1134,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino'); return d&&[d,'before']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };

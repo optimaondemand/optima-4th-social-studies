@@ -1786,6 +1786,1008 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.04.03",
+ "title": "Spain, France, and England in Florida",
+ "quiet": false,
+ "file": {
+  "n": 4,
+  "title": "Explorers",
+  "label": "Explorers",
+  "seals": [
+   "🚩",
+   "🔗",
+   "✍️"
+  ]
+ },
+ "prevFile": "Motives for European Expeditions",
+ "connector": "Last time we packed God, Gold, and Glory. Today two more countries come to Florida for those same reasons.",
+ "minWords": 45,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Claim the Coast",
+   "t": "Plant the flags",
+   "why": "Plant each country’s flag where it came to Florida’s coast."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read and investigate",
+   "why": "Slide through the years to read what happened. Then line up the dominoes to show what caused what."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill the ledger",
+   "why": "Answer three questions. Then write about why three countries fought over Florida, and what it meant for the people already here."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I’m in the room with three flags on the wall, and the next file is locked.",
+  "opening": [
+   "This file is about three countries that all wanted Florida: Spain, France, and England.",
+   "To open it, plant each country’s flag where it came to Florida’s coast. The map is in the Claim the Coast tab, below the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the map",
+      "go": true,
+      "reply": "Scroll down past the welcome video. Drag each flag card to its spot on the map, or tap a card and then tap a spot."
+     },
+     {
+      "t": "Who were the Huguenots?",
+      "reply": "Huguenots were French Protestants, a kind of Christian. In France they were often treated badly for their faith, so some hoped Florida could be a safe home."
+     },
+     {
+      "t": "Are you okay in there?",
+      "reply": "I’m okay. The flags on this wall keep moving, like there’s a breeze. Every file you finish gets me one room closer to the door!"
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Slide through the years and watch the map change. Then line up the dominoes to show what caused what."
+     },
+     {
+      "t": "Why did they all want it?",
+      "reply": "Good question. The year slider in the Explore tab shows you, one year at a time."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. If you’re not sure, look back at the year slider."
+     },
+     {
+      "t": "What if I miss one?",
+      "reply": "That’s okay. The check isn’t graded. If you miss one, reread that part before you start writing."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Where are you now?",
+      "reply": "In a new room! There’s a big chart on the wall with two columns: Causes and Effects. I think the next file is about what all this changed for Florida."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when the next file shows up."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! All three flags are on the coast. See where the claims overlap? That glow is where the trouble started.",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! Both lines of dominoes fell. One event led to the next. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 4 to 6 sentences about why three countries fought over Florida, and what it meant for the people already here. Fill in the three-flag ledger first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, a door just opened and I got one room closer to getting out. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "A careful historian follows every flag, and never forgets the people who were already here.",
+ "scene1": {
+  "type": "claimcoast",
+  "kicker": "Claim the Coast",
+  "h": "Three flags, one coast",
+  "voice": "Drag each flag card to the spot on the map where that country came, or tap a card and then tap a spot.",
+  "caption": "Florida’s northeast coast",
+  "zoneR": 12.5,
+  "spots": [
+   {
+    "id": "fc",
+    "label": "Fort Caroline",
+    "lon": -81.4986,
+    "lat": 30.3866,
+    "a": "end",
+    "dx": -2.2,
+    "dy": -1.6
+   },
+   {
+    "id": "sa",
+    "label": "St. Augustine",
+    "lon": -81.314,
+    "lat": 29.894,
+    "a": "end",
+    "dx": -2.2,
+    "dy": 0.6
+   },
+   {
+    "id": "mi",
+    "label": "Matanzas Inlet",
+    "lon": -81.231,
+    "lat": 29.715,
+    "a": "end",
+    "dx": -2.2,
+    "dy": 1.6
+   }
+  ],
+  "flags": [
+   {
+    "id": "fr",
+    "flag": "fr",
+    "year": "1564",
+    "name": "France",
+    "t": "French Huguenots build a fort on the St. Johns River.",
+    "spot": "fc",
+    "miss": {
+     "sa": "That’s where Spain built its town. The French fort was on a river, farther north.",
+     "mi": "That’s Matanzas Inlet. The French fort was on the St. Johns River, farther north."
+    }
+   },
+   {
+    "id": "es",
+    "flag": "es",
+    "year": "1565",
+    "name": "Spain",
+    "t": "Spain builds a town by the sea, about 35 miles south of the French fort.",
+    "spot": "sa",
+    "miss": {
+     "fc": "That’s the French fort. Spain’s town was by the sea, about 35 miles south.",
+     "mi": "Close! Spain’s town was a little farther north."
+    }
+   },
+   {
+    "id": "en",
+    "flag": "en",
+    "year": "1586",
+    "name": "England",
+    "t": "English ships led by Francis Drake attack Spain’s town and burn it.",
+    "spot": "sa",
+    "px": 2.4,
+    "py": 0.8,
+    "r": 6.5,
+    "miss": {
+     "fc": "Drake attacked Spain’s town, not a French fort. By 1586 the French fort was gone.",
+     "mi": "Drake’s target was Spain’s town. Find it a little farther north."
+    }
+   }
+  ],
+  "rivers": [
+   {
+    "pts": [
+     [
+      -81.393,
+      30.398
+     ],
+     [
+      -81.45,
+      30.394
+     ],
+     [
+      -81.5,
+      30.393
+     ],
+     [
+      -81.55,
+      30.402
+     ],
+     [
+      -81.6,
+      30.383
+     ],
+     [
+      -81.64,
+      30.336
+     ],
+     [
+      -81.665,
+      30.315
+     ],
+     [
+      -81.68,
+      30.25
+     ],
+     [
+      -81.7,
+      30.17
+     ],
+     [
+      -81.69,
+      30.08
+     ],
+     [
+      -81.665,
+      30.0
+     ],
+     [
+      -81.64,
+      29.92
+     ],
+     [
+      -81.62,
+      29.8
+     ],
+     [
+      -81.63,
+      29.68
+     ],
+     [
+      -81.65,
+      29.6
+     ],
+     [
+      -81.68,
+      29.46
+     ]
+    ],
+    "w": 0.9,
+    "t": "St. Johns River",
+    "label": [
+     -81.73,
+     30.05
+    ],
+    "a": "end"
+   },
+   {
+    "pts": [
+     [
+      -81.305,
+      29.9
+     ],
+     [
+      -81.287,
+      29.85
+     ],
+     [
+      -81.27,
+      29.8
+     ],
+     [
+      -81.25,
+      29.75
+     ],
+     [
+      -81.231,
+      29.715
+     ]
+    ],
+    "w": 0.55
+   }
+  ],
+  "peoples": [
+   {
+    "t": "Timucua lands",
+    "lon": -81.9,
+    "lat": 30.62
+   }
+  ],
+  "sea": [
+   {
+    "t": "Atlantic Ocean",
+    "lon": -81.08,
+    "lat": 30.18
+   }
+  ],
+  "countT": "flags planted.",
+  "win": "✨ All three flags are planted. Look where the claims <b>overlap<\/b>. That’s where the fighting started.",
+  "why": {
+   "icon": "🚩",
+   "q": "Why plant flags?",
+   "t": "When Europeans claimed land, they set up a sign of their country, like a flag, a cross, or a carved stone post. In 1562, a French captain set up a stone post with France’s coat of arms near the mouth of the St. Johns River. The people already living there were never asked. That’s why you plant flags here."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "yearslider",
+   "activity": "Three Powers, One Florida Coast",
+   "from": 1500,
+   "label": "Slide to a year",
+   "startT": "Drag the slider to 1513 to start, or tap a year.",
+   "countT": "years visited. Slide to the next year.",
+   "allT": "You visited every year. Florida changed hands, but the First Peoples were here the whole time.",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^For most of the 1500s"
+    },
+    {
+     "id": "p2",
+     "match": "^In 1564"
+    },
+    {
+     "id": "p3",
+     "match": "^England joined"
+    },
+    {
+     "id": "p4",
+     "match": "^For nearly 200"
+    },
+    {
+     "id": "p5",
+     "match": "^The Calusa, Timucua"
+    }
+   ],
+   "stops": [
+    {
+     "year": 1513,
+     "paras": [
+      "p1"
+     ],
+     "show": [
+      "spain"
+     ]
+    },
+    {
+     "year": 1564,
+     "paras": [
+      "p2"
+     ],
+     "show": [
+      "spain",
+      "fr"
+     ]
+    },
+    {
+     "year": 1565,
+     "paras": [
+      "p2"
+     ],
+     "show": [
+      "spain",
+      "es",
+      "frgone"
+     ]
+    },
+    {
+     "year": 1586,
+     "paras": [
+      "p3"
+     ],
+     "show": [
+      "spain",
+      "es",
+      "ships",
+      "fire"
+     ]
+    },
+    {
+     "year": 1763,
+     "paras": [
+      "p4",
+      "p5"
+     ],
+     "show": [
+      "gb",
+      "gbflag"
+     ]
+    }
+   ],
+   "layers": {
+    "spain": {
+     "kind": "tint",
+     "color": "#B3261E",
+     "t": "Spain’s claim",
+     "tlon": -82.0,
+     "tlat": 28.3
+    },
+    "gb": {
+     "kind": "tint",
+     "color": "#1F3A7A",
+     "t": "Great Britain",
+     "tlon": -82.0,
+     "tlat": 28.3
+    },
+    "fr": {
+     "kind": "flag",
+     "flag": "fr",
+     "lon": -81.4986,
+     "lat": 30.3866,
+     "t": "Fort Caroline",
+     "a": "end",
+     "dx": -3,
+     "dy": -6
+    },
+    "frgone": {
+     "kind": "gone",
+     "lon": -81.4986,
+     "lat": 30.3866,
+     "t": "Fort Caroline captured",
+     "dx": 7,
+     "dy": -6
+    },
+    "es": {
+     "kind": "flag",
+     "flag": "es",
+     "lon": -81.314,
+     "lat": 29.894,
+     "t": "St. Augustine",
+     "a": "end",
+     "dx": -3,
+     "dy": 2
+    },
+    "gbflag": {
+     "kind": "flag",
+     "flag": "gb",
+     "lon": -81.314,
+     "lat": 29.894,
+     "t": "St. Augustine",
+     "a": "end",
+     "dx": -3,
+     "dy": 2
+    },
+    "ships": {
+     "kind": "ships",
+     "pts": [
+      [
+       -80.95,
+       30.05
+      ],
+      [
+       -80.9,
+       29.8
+      ]
+     ],
+     "t": "Drake’s ships",
+     "tlon": -81.15,
+     "tlat": 30.42
+    },
+    "fire": {
+     "kind": "fire",
+     "lon": -81.314,
+     "lat": 29.894
+    }
+   },
+   "peoples": [
+    {
+     "t": "Timucua",
+     "lon": -82.45,
+     "lat": 29.25
+    },
+    {
+     "t": "Apalachee",
+     "lon": -84.2,
+     "lat": 30.62
+    },
+    {
+     "t": "Calusa",
+     "lon": -81.6,
+     "lat": 26.55
+    },
+    {
+     "t": "Tequesta",
+     "lon": -80.5,
+     "lat": 25.75,
+     "a": "end"
+    }
+   ],
+   "why": {
+    "icon": "🗓️",
+    "q": "Why a slider?",
+    "t": "Historians often watch one place change over many years. Florida’s coast stayed in the same spot, but the flags over it kept changing. Slide through the years to watch it happen."
+   }
+  },
+  "evidence": {
+   "type": "domino",
+   "kicker": "Domino Chain",
+   "h": "What caused what?",
+   "voice": "Put the dominoes in order so each one causes the next. Tap the domino that comes next, or drag it to the line.",
+   "tipT": "Tip the first domino",
+   "chains": [
+    {
+     "id": "a",
+     "title": "France and Spain, 1564–1565",
+     "items": [
+      {
+       "yr": "1564",
+       "t": "France builds Fort Caroline on land Spain says is its own."
+      },
+      {
+       "yr": "1565",
+       "t": "Spain’s king sends Pedro Menéndez to push the French out.",
+       "miss": "Not yet. Why would Spain need to push anyone out? Start with what France did first."
+      },
+      {
+       "yr": "Sept. 1565",
+       "t": "Menéndez builds St. Augustine as his base.",
+       "miss": "Not yet. Who sent Menéndez, and why? That has to come first."
+      },
+      {
+       "yr": "Sept.–Oct. 1565",
+       "t": "He captures Fort Caroline. At Matanzas Inlet, his soldiers kill hundreds of French soldiers.",
+       "miss": "Not yet. Menéndez needed a base close by before he could attack."
+      }
+     ],
+     "win": "💥 Down they go! France built a fort → Spain sent Menéndez → he built St. Augustine → he captured the French fort."
+    },
+    {
+     "id": "b",
+     "title": "England and Spain, 1585–1586",
+     "items": [
+      {
+       "yr": "1585",
+       "t": "England and Spain go to war."
+      },
+      {
+       "yr": "1586",
+       "t": "Francis Drake’s English ships burn St. Augustine.",
+       "miss": "Not yet. Why would English ships attack a Spanish town? Something had to start first."
+      },
+      {
+       "yr": "After 1586",
+       "t": "Spain rebuilds St. Augustine and keeps Florida until 1763.",
+       "miss": "Not yet. Spain could only rebuild after the town was burned."
+      }
+     ],
+     "win": "💥 Down they go! A war began → Drake burned the town → Spain rebuilt it."
+    }
+   ],
+   "win": "✨ Both lines fell. A <b>cause<\/b> makes something happen. An <b>effect<\/b> is what happens because of it.",
+   "why": {
+    "icon": "🔗",
+    "q": "Why dominoes?",
+    "t": "When one domino falls, it knocks over the next one. History can work like that: one event <b>causes<\/b> the next. A cause is what makes something happen. An effect is what happens because of it. That’s why the events here are dominoes."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Read the Timeline Thread.",
+    "Line up the dominoes so each one causes the next. Tap the domino that comes next, or drag it to the line.",
+    "When a line is full, tip the first domino."
+   ]
+  }
+ },
+ "planner": {
+  "type": "ledger",
+  "voice": "Fill in each column: pick a motive and one event. Then pick a First Peoples nation and what the rivalry meant for them. These are just notes. You’ll write your own sentences in Step 3.",
+  "motives": [
+   {
+    "id": "god",
+    "ico": "⛪",
+    "t": "God"
+   },
+   {
+    "id": "gold",
+    "ico": "🪙",
+    "t": "Gold"
+   },
+   {
+    "id": "glory",
+    "ico": "🚩",
+    "t": "Glory"
+   }
+  ],
+  "powers": [
+   {
+    "id": "es",
+    "name": "Spain",
+    "flag": "es",
+    "events": [
+     {
+      "id": "e1",
+      "t": "founded St. Augustine (1565)"
+     },
+     {
+      "id": "e2",
+      "t": "captured Fort Caroline (1565)"
+     },
+     {
+      "id": "e3",
+      "t": "Matanzas Inlet (1565)"
+     }
+    ]
+   },
+   {
+    "id": "fr",
+    "name": "France",
+    "flag": "fr",
+    "events": [
+     {
+      "id": "f1",
+      "t": "built Fort Caroline (1564)"
+     },
+     {
+      "id": "f2",
+      "t": "made friends with Saturiwa’s Timucua"
+     }
+    ]
+   },
+   {
+    "id": "en",
+    "name": "England",
+    "flag": "en",
+    "events": [
+     {
+      "id": "n1",
+      "t": "Drake burned St. Augustine (1586)"
+     },
+     {
+      "id": "n2",
+      "t": "Great Britain got Florida (1763)"
+     }
+    ]
+   }
+  ],
+  "nations": [
+   {
+    "id": "tim",
+    "t": "Timucua"
+   },
+   {
+    "id": "apa",
+    "t": "Apalachee"
+   },
+   {
+    "id": "cal",
+    "t": "Calusa"
+   },
+   {
+    "id": "teq",
+    "t": "Tequesta"
+   }
+  ],
+  "meant": [
+   {
+    "id": "m1",
+    "t": "caught in the middle of battles"
+   },
+   {
+    "id": "m2",
+    "t": "had to choose a side"
+   },
+   {
+    "id": "m3",
+    "t": "strangers claimed their land"
+   },
+   {
+    "id": "m4",
+    "t": "new forts and towns on their land"
+   }
+  ],
+  "motiveLabel": "Motive",
+  "eventLabel": "One event",
+  "nationLabel": "The people already here",
+  "meantLabel": "What the rivalry meant for them (pick 1 or 2)",
+  "nationShort": "First Peoples",
+  "doneT": "Ledger sealed. Now write your entry in Step 3.",
+  "why": {
+   "icon": "📒",
+   "q": "Why a ledger?",
+   "t": "A <b>ledger<\/b> is a book with columns for keeping records. Spanish, French, and English officials kept careful records, and they closed important letters with a <b>wax seal<\/b>. Your ledger has one column for each flag, and one for the people who were here first."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a motive",
+    "rx": "\\b(god|gold|glory|religio|faith|church|riches|rich|wealth|treasure|money|land|power|fame|honor|empire|safe)"
+   },
+   {
+    "t": "an event",
+    "rx": "fort caroline|st\\.? ?augustine|saint augustine|matanzas|drake|1564|1565|1586|1763|burn|captur|attack|war|battle"
+   },
+   {
+    "t": "a First Peoples nation",
+    "rx": "timucua|apalachee|calusa|tequesta|saturiwa"
+   },
+   {
+    "t": "what it meant for them",
+    "rx": "caught|middle|side|lost|lose|hurt|harm|fight|fought|claim|took|taken|forced|never asked|didn.t ask|not asked|meant"
+   }
+  ],
+  "lines": [
+   "Start with why the countries wanted Florida: God, Gold, or Glory.",
+   "Good. Name an event, like Fort Caroline, St. Augustine, Matanzas, Drake’s raid, or 1763.",
+   "Now name a First Peoples nation and say what the rivalry meant for them.",
+   "That’s a careful answer. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use details from the lesson."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the three-flag ledger: a motive and an event for each flag, then the First Peoples."
+  },
+  {
+   "t": "Write",
+   "w": "Write 4 to 6 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "streams",
+  "kicker": "Dig the Streams",
+  "h": "riv = stream",
+  "root": "riv",
+  "rootMeaning": "= stream",
+  "voice": "Tap each word to dig a stream to it and hear it. Then send each meaning down the stream to its word: tap the meaning, then tap the word, or drag it.",
+  "win": "🌊 All four streams are flowing: <b>riv<\/b> = stream",
+  "words": [
+   {
+    "w": "rival",
+    "root": "riv",
+    "m": "a person or country that wants the same thing as another",
+    "miss": "This meaning is about one person or country. Look for the shortest riv word.",
+    "say": "Rival. A person or country that wants the same thing as another. Spain and France were rivals."
+   },
+   {
+    "w": "rivalry",
+    "root": "riv",
+    "m": "a contest between rivals",
+    "miss": "This one names the contest itself. It’s the word rival with -ry on the end.",
+    "say": "Rivalry. A contest between rivals."
+   },
+   {
+    "w": "rivulet",
+    "root": "riv",
+    "m": "a very small stream",
+    "miss": "-let means small, like in piglet. Which word means a small stream?",
+    "say": "Rivulet. A very small stream."
+   },
+   {
+    "w": "derive",
+    "root": "riv",
+    "m": "to get something from a source",
+    "miss": "De- means from. Which word means to get something from a source?",
+    "say": "Derive. To get something from a source. Long ago, it meant to lead water away from a stream."
+   }
+  ],
+  "why": {
+   "icon": "🌊",
+   "q": "Why streams?",
+   "t": "The Latin word <i>rivus<\/i> means stream. In Latin, a <i>rivalis<\/i> was someone who used the same stream as you. Later it came to mean someone who wants the same thing you want. That’s where we get <b>rival<\/b>. Spain and France both wanted the same coast, and the French fort sat right on a river. That’s why you dig streams here."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Three flags, one coast",
+   "at": "scene1",
+   "script": "I’m standing under three flags in here, and they all point at the same coast: Spain, France, and England. Before you plant them, look at the map. See how close Fort Caroline and St. Augustine are? About thirty-five miles. Close enough for soldiers to march there in a few days. Keep that in mind."
+  },
+  {
+   "slot": "guide2",
+   "label": "Where the glow is",
+   "at": "s1done",
+   "script": "Look at the glow where the claims touch. That’s the trouble spot. Two countries, one small piece of coast. When two people want the same thing, what usually happens? Hold on to your answer. In the Explore tab, you’ll see what really happened."
+  },
+  {
+   "label": "A French captain, in his own words",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "Here’s René de Laudonnière. He was the French captain who built Fort Caroline in 1564. He climbed a hill by the St. Johns River and wrote about what he saw. Listen for why the French wanted to stay."
+    },
+    {
+     "slot": "source-2",
+     "who": "René de Laudonnière, 1564 (English translation, 1587, spelling updated)",
+     "script": "Therefore I went right to the top thereof, where we found nothing else but cedars, palm, and bay trees of so sovereign odour, that balm smelleth nothing like in comparison… Briefly, the place is so pleasant, that those which are melancholic would be enforced to change their humour."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you catch that? Melancholic means sad. He said this place was so pleasant that even a sad person would cheer up. The French wanted to stay. So did Spain. And the Timucua already lived there. Pause me and think: what happens when everyone wants the same place?"
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "My own domino chain",
+   "at": "evidence",
+   "script": "Here’s a domino chain from my own life. My alarm didn’t go off, so I woke up late. I woke up late, so I missed the bus. I missed the bus, so I was late to school. Each one caused the next. Now look at your dominoes. For each one, ask: what made this happen?"
+  },
+  {
+   "slot": "guide6",
+   "label": "Filling in my ledger",
+   "at": "plan",
+   "script": "Before you fill the ledger, I’ll try one column: France. Motive? The Huguenots wanted a safe place to practice their faith. That’s God. Event? They built Fort Caroline in 1564. One motive, one event. Now you try all three columns. And don’t forget the people who were already here."
+  }
+ ],
+ "cabinet": {
+  "n": 4,
+  "where": "St. Augustine and Fort Caroline",
+  "blurb": "Three flags on one coast: France at Fort Caroline, Spain at St. Augustine, and England’s raid in 1586."
+ },
+ "notes": {
+  "learned": [
+   "Three European countries wanted Florida: Spain, France, and England.",
+   "In 1564, French Huguenots built Fort Caroline near today’s Jacksonville.",
+   "In 1565, Pedro Menéndez founded St. Augustine for Spain, then captured Fort Caroline. People have lived in St. Augustine ever since, so it is the oldest European town in the mainland United States.",
+   "In 1586, the English captain Francis Drake burned St. Augustine. Spain rebuilt it.",
+   "In 1763, Spain gave Florida to Great Britain. The Timucua, Calusa, Apalachee, and Tequesta lived through every flag change."
+  ],
+  "vocab": [
+   [
+    "rival",
+    "a person or country that wants the same thing as another"
+   ],
+   [
+    "rivalry",
+    "a contest between rivals"
+   ],
+   [
+    "rivulet",
+    "a very small stream"
+   ],
+   [
+    "derive",
+    "to get something from a source"
+   ],
+   [
+    "Huguenot",
+    "a French Protestant"
+   ],
+   [
+    "cause",
+    "what makes something happen"
+   ],
+   [
+    "effect",
+    "what happens because of a cause"
+   ]
+  ],
+  "wordParts": "The Latin root riv means “stream.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "all three countries",
+    "groups": [
+     "spain|spanish|men[eé]ndez",
+     "france|french|huguenot",
+     "england|english|britain|british|drake"
+    ],
+    "n": 3
+   },
+   {
+    "t": "a place or event for each",
+    "rx": "fort caroline|caroline|st\\.? ?augustine|saint augustine|augustine|matanzas|drake|burn|raid|1564|1565|1586|1763|jacksonville|fort|town|settle|built|build|attack|captur|war|fought|fight|took|kill",
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a motive",
+    "rx": "\\b(god|gold|glory|religio|faith|church|pray|worship|riches|rich|wealth|treasure|money|silver|land|power|fame|famous|honor|honour|empire|safe|free|beautiful|pretty|pleasant)",
+    "n": 1
+   },
+   {
+    "t": "one country",
+    "rx": "spain|spanish|france|french|huguenot|england|english|britain|british|drake|men[eé]ndez",
+    "n": 1
+   },
+   {
+    "t": "because…",
+    "rx": "because|since|so |wanted|want|to get|to have|hoped|hope",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a First Peoples nation",
+    "rx": "timucua|apalachee|calusa|tequesta|saturiwa|first peoples|native|indian|indigenous|tribe",
+    "n": 1
+   },
+   {
+    "t": "what it was like for them",
+    "rx": "caught|middle|side|lost|lose|hurt|harm|fight|fought|battle|war|kill|died|die|sick|scar|afraid|land|took|taken|take|claim|forced|force|friend|trade|help|ally|hard|bad|sad|unfair|never asked|didn.t ask|not asked|home|attack",
+    "n": 1
+   },
+   {
+    "t": "a detail from the lesson",
+    "rx": "fort caroline|caroline|st\\.? ?augustine|saint augustine|augustine|matanzas|drake|burn|raid|1564|1565|1586|1763|jacksonville|fort|town|settle|built|build|attack|captur|war|fought|fight|took|kill|flag|spain|france|england|french|spanish|english|europe|countr|power|saturiwa|land",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the flags you planted on the map in the Claim the Coast tab.",
+   "Each country has one place: a fort, a town, or a raid. Check the Timeline Thread in the Explore tab.",
+   "Try this shape: “France built ___. Spain built ___. England ___.”"
+  ],
+  "journal-q2": [
+   "Think back to last lesson: God, Gold, and Glory.",
+   "The French Huguenots wanted a safe place for their faith. Which G is that?",
+   "Try this shape: “They all wanted Florida because ___. For example, ___ wanted ___.”"
+  ],
+  "journal-q3": [
+   "Reread the last part of the year slider, at 1763.",
+   "Who lived near Fort Caroline? Saturiwa’s people, the Timucua.",
+   "Try this shape: “The ___ were already living here. The fighting meant they ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which two places on your map were only about 35 miles apart?",
+  "journal-q2": "Go further: did any country have more than one motive?",
+  "journal-q3": "Go further: why might Saturiwa have chosen to be friends with the French?"
+ },
+ "quizMiss": [
+  {
+   "a": "France built Fort Caroline, not St. Augustine. Which country sent Pedro Menéndez?",
+   "c": "England came later, in 1586, and burned St. Augustine. Who built it first?"
+  },
+  {
+   "b": "England didn’t build Fort Caroline. Drake came in 1586 to raid. Look at the 1564 flag.",
+   "c": "Menéndez attacked Fort Caroline. He didn’t build it. Look at who built it in 1564."
+  },
+  {
+   "a": "Florida wasn’t empty. The Timucua, Calusa, Apalachee, and Tequesta already lived here.",
+   "b": "Spain mattered too. It founded St. Augustine and held Florida for about 200 years."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2029,116 +3031,134 @@ body.tx-active .tx-toggle-label {
      Bright and cheerful — saturated, warm colors even for serious topics.
      Show the WORLD: landscapes, objects, tools, ships, maps, buildings, landmarks.
      2–3 CSS animations (floating, drifting, pulsing). -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-  <defs>
-    <linearGradient id="b3sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFE9B0"/>
-      <stop offset="60%" stop-color="#E89B6C"/>
-      <stop offset="100%" stop-color="#3E5F8A"/>
-    </linearGradient>
-    <linearGradient id="b3sea" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4FAFCA"/>
-      <stop offset="100%" stop-color="#1E5F7A"/>
-    </linearGradient>
-    <linearGradient id="b3sand" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E8C480"/>
-      <stop offset="100%" stop-color="#B68838"/>
-    </linearGradient>
-  </defs>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A coquina stone fort at dusk on the Matanzas River. Three flagpoles stand on its walls, and the flags of Spain, France and England lift in the wind one at a time while the tide shimmers below." style="width:100%;height:auto;display:block;">
   <style>
-    .b3wave1, .b3wave2, .b3wave3 { transform-box: fill-box; transform-origin: 0% 50%; }
-    .b3wave1 { animation: b3ripple1 6s ease-in-out infinite; }
-    @keyframes b3ripple1 { 0%,100% { transform: skewY(-2deg) scaleX(0.97); } 50% { transform: skewY(2deg) scaleX(1); } }
-    .b3wave2 { animation: b3ripple2 5s ease-in-out infinite -1.5s; }
-    @keyframes b3ripple2 { 0%,100% { transform: skewY(-1.5deg) scaleX(0.98); } 50% { transform: skewY(2deg) scaleX(1); } }
-    .b3wave3 { animation: b3ripple3 5.5s ease-in-out infinite -3s; }
-    @keyframes b3ripple3 { 0%,100% { transform: skewY(-2.5deg) scaleX(0.96); } 50% { transform: skewY(2deg) scaleX(1); } }
-    .b3pulse { animation: b3pulse 4s ease-in-out infinite; }
-    @keyframes b3pulse { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+    .c403-f{opacity:0;animation:c403show 12s ease-in-out infinite}
+    .c403-f2{animation-delay:4s} .c403-f3{animation-delay:8s}
+    .c403-cloth{animation:c403rip 1.3s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+    .c403-sh{animation:c403sh 5s ease-in-out infinite} .c403-s2{animation-delay:-1.7s} .c403-s3{animation-delay:-3.4s}
+    .c403-star{animation:c403tw 4s ease-in-out infinite} .c403-t2{animation-delay:-1.3s} .c403-t3{animation-delay:-2.6s}
+    .c403-bird{animation:c403bd 26s linear infinite} .c403-b2{animation-delay:-13s}
+    .c403-glow{animation:c403gl 6s ease-in-out infinite}
+    @keyframes c403show{0%{opacity:0}4%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
+    @keyframes c403rip{0%,100%{transform:skewY(0) scaleX(1)}25%{transform:skewY(-6deg) scaleX(.94)}50%{transform:skewY(2deg) scaleX(1)}75%{transform:skewY(-3deg) scaleX(.97)}}
+    @keyframes c403sh{0%,100%{opacity:.15;transform:translateX(0)}50%{opacity:.75;transform:translateX(8px)}}
+    @keyframes c403tw{0%,100%{opacity:.35}50%{opacity:1}}
+    @keyframes c403bd{from{transform:translateX(-120px)}to{transform:translateX(1040px)}}
+    @keyframes c403gl{0%,100%{opacity:.55}50%{opacity:.8}}
+    @media (prefers-reduced-motion: reduce){.c403-f,.c403-cloth,.c403-sh,.c403-star,.c403-bird,.c403-glow{animation:none}.c403-f1{opacity:1}}
   </style>
-  <rect width="920" height="170" fill="url(#b3sky)"/>
-  <!-- Sun behind everything -->
-  <g class="b3pulse"><circle cx="460" cy="60" r="38" fill="#FFE08C"/></g>
-  <!-- Sea -->
-  <rect y="170" width="920" height="60" fill="url(#b3sea)"/>
-  <g stroke="#9FE0F0" stroke-width="2" fill="none" opacity="0.55">
-    <path d="M 0 195 Q 60 192 120 195 T 240 195 T 360 195 T 480 195 T 600 195 T 720 195 T 840 195 T 920 195"/>
-    <path d="M 40 215 Q 100 213 160 215 T 280 215 T 400 215 T 520 215 T 640 215 T 760 215 T 880 215"/>
+  <defs>
+    <linearGradient id="c403sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26285A"/><stop offset=".38" stop-color="#6E4C86"/><stop offset=".66" stop-color="#E08A6A"/><stop offset=".86" stop-color="#F6C27A"/><stop offset="1" stop-color="#FBE2A2"/>
+    </linearGradient>
+    <linearGradient id="c403water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5D5A8C"/><stop offset=".5" stop-color="#34396B"/><stop offset="1" stop-color="#1E2550"/>
+    </linearGradient>
+    <linearGradient id="c403wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B49C80"/><stop offset="1" stop-color="#7C6656"/>
+    </linearGradient>
+    <linearGradient id="c403wallL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9C846C"/><stop offset="1" stop-color="#6E5A4C"/>
+    </linearGradient>
+    <linearGradient id="c403path" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBE2A2" stop-opacity=".9"/><stop offset="1" stop-color="#F6C27A" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="c403sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF3C8"/><stop offset=".35" stop-color="#FFD98A" stop-opacity=".9"/><stop offset="1" stop-color="#F6A85E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="c403shell" width="14" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r=".9" fill="#E9DCC4" opacity=".5"/><circle cx="10" cy="7" r=".7" fill="#5E4A3C" opacity=".35"/><path d="M6 8 q1.5 -1.5 3 0" fill="none" stroke="#E9DCC4" stroke-width=".6" opacity=".45"/>
+    </pattern>
+  </defs>
+
+  <!-- sky, stars, sun -->
+  <rect width="920" height="200" fill="url(#c403sky)"/>
+  <g fill="#FFF8E0">
+    <circle class="c403-star" cx="96" cy="22" r="1.3"/><circle class="c403-star c403-t2" cx="212" cy="12" r="1"/><circle class="c403-star c403-t3" cx="318" cy="30" r="1.2"/>
+    <circle class="c403-star c403-t2" cx="612" cy="16" r="1.1"/><circle class="c403-star" cx="742" cy="28" r="1.3"/><circle class="c403-star c403-t3" cx="858" cy="14" r="1"/>
   </g>
-  <!-- Sand -->
-  <rect y="230" width="920" height="30" fill="url(#b3sand)"/>
-  <!-- Spain flag (LEFT) - red-yellow-red horizontal -->
-  <g transform="translate(140, 130)">
-    <rect x="-2" y="-90" width="4" height="180" fill="#3A2410"/>
-    <g class="b3wave1">
-      <rect x="2" y="-90" width="100" height="60" fill="#C03030"/>
-      <rect x="2" y="-70" width="100" height="20" fill="#F2C030"/>
-      <!-- coat of arms blob -->
-      <circle cx="38" cy="-60" r="8" fill="#C03030" opacity="0.8"/>
-      <rect x="34" y="-66" width="8" height="12" fill="#7A1818" opacity="0.6"/>
-      <!-- flag ripple shading -->
-      <path d="M 2 -88 L 100 -88 L 100 -32 L 2 -32 Z" fill="none" stroke="#7A1818" stroke-width="0.5" opacity="0.6"/>
-    </g>
+  <circle class="c403-glow" cx="560" cy="128" r="120" fill="url(#c403sun)"/>
+  <circle cx="560" cy="128" r="22" fill="#FFF0BE"/>
+  <!-- far shore and palms -->
+  <path d="M0 132 C90 126 160 129 250 127 L250 140 L0 140 Z" fill="#4E3E5E"/>
+  <path d="M700 128 C780 124 860 127 920 125 L920 140 L700 140 Z" fill="#4E3E5E"/>
+  <g fill="#3A2E4A">
+    <path d="M48 128 q2 -26 6 -40 l2 0 q-3 16 -4 40z"/><path d="M55 89 q-16 -4 -26 6 q12 -4 26 -4z M55 89 q14 -8 26 0 q-12 -2 -26 2z M55 89 q-4 -12 -14 -14 q8 6 12 14z M55 89 q6 -12 16 -12 q-9 5 -14 12z"/>
+    <path d="M150 128 q1 -20 4 -30 l2 0 q-2 12 -3 30z"/><path d="M155 99 q-12 -3 -20 5 q9 -3 20 -3z M155 99 q11 -6 20 0 q-9 -1 -20 2z M155 99 q-3 -9 -11 -10 q6 4 9 10z"/>
+    <path d="M820 126 q2 -28 7 -42 l2 0 q-3 17 -5 42z"/><path d="M828 85 q-16 -4 -26 6 q12 -4 26 -4z M828 85 q14 -8 26 0 q-12 -2 -26 2z M828 85 q-4 -12 -14 -14 q8 6 12 14z M828 85 q6 -12 16 -12 q-9 5 -14 12z"/>
   </g>
-  <!-- France flag (CENTER) - vertical blue-white-red -->
-  <g transform="translate(460, 130)">
-    <rect x="-2" y="-90" width="4" height="180" fill="#3A2410"/>
-    <g class="b3wave2">
-      <rect x="2" y="-90" width="33" height="58" fill="#1A3A8A"/>
-      <rect x="35" y="-90" width="33" height="58" fill="#F5F0E0"/>
-      <rect x="68" y="-90" width="33" height="58" fill="#C03030"/>
-      <!-- shading -->
-      <path d="M 2 -88 L 100 -88 L 100 -34 L 2 -34 Z" fill="none" stroke="#1A2A4A" stroke-width="0.5" opacity="0.4"/>
-      <!-- Fleur-de-lis hint on the white panel -->
-      <path d="M 50 -64 L 53 -70 L 56 -64 L 53 -58 Z" fill="#D4943A" opacity="0.6"/>
-    </g>
+  <!-- birds -->
+  <g fill="none" stroke="#2C2440" stroke-width="1.6" stroke-linecap="round">
+    <path class="c403-bird" d="M0 52 q5 -4 9 0 q4 -4 9 0"/>
+    <path class="c403-bird c403-b2" d="M0 70 q4 -3 7 0 q3 -3 7 0"/>
   </g>
-  <!-- England flag (RIGHT) - white with red cross of St George -->
-  <g transform="translate(780, 130)">
-    <rect x="-2" y="-90" width="4" height="180" fill="#3A2410"/>
-    <g class="b3wave3">
-      <rect x="2" y="-90" width="100" height="60" fill="#F5F0E0"/>
-      <rect x="2" y="-62" width="100" height="10" fill="#C03030"/>
-      <rect x="46" y="-90" width="12" height="60" fill="#C03030"/>
-      <!-- shading -->
-      <path d="M 2 -88 L 100 -88 L 100 -32 L 2 -32 Z" fill="none" stroke="#7A1818" stroke-width="0.5" opacity="0.4"/>
-    </g>
+
+  <!-- flagpoles and the three flags (one lifts at a time) -->
+  <g stroke="#2E2420" stroke-width="2.2" stroke-linecap="round">
+    <line x1="336" y1="92" x2="336" y2="38"/><line x1="462" y1="84" x2="462" y2="24"/><line x1="588" y1="92" x2="588" y2="38"/>
   </g>
-  <!-- Wooden fort silhouette in distance (suggests competing settlements) -->
-  <g opacity="0.8" transform="translate(290, 200)">
-    <rect x="0" y="0" width="60" height="30" fill="#7A4A26"/>
-    <rect x="-5" y="-8" width="6" height="38" fill="#8B5A30"/>
-    <rect x="58" y="-8" width="6" height="38" fill="#8B5A30"/>
-    <rect x="28" y="-15" width="6" height="45" fill="#8B5A30"/>
-    <!-- Tiny flag on top -->
-    <rect x="29" y="-25" width="0.8" height="10" fill="#3A2410"/>
-    <path d="M 30 -25 L 38 -22 L 30 -19 Z" fill="#C03030"/>
-    <!-- Palisade vertical lines -->
-    <line x1="10" y1="0" x2="10" y2="30" stroke="#4A2A14" stroke-width="0.4"/>
-    <line x1="20" y1="0" x2="20" y2="30" stroke="#4A2A14" stroke-width="0.4"/>
-    <line x1="40" y1="0" x2="40" y2="30" stroke="#4A2A14" stroke-width="0.4"/>
-    <line x1="50" y1="0" x2="50" y2="30" stroke="#4A2A14" stroke-width="0.4"/>
+  <g fill="#E8C66A"><circle cx="336" cy="37" r="2.4"/><circle cx="462" cy="23" r="2.4"/><circle cx="588" cy="37" r="2.4"/></g>
+  <!-- Spain: Cross of Burgundy -->
+  <g class="c403-f c403-f1" transform="translate(337,40)"><g class="c403-cloth">
+    <rect width="40" height="27" fill="#FFF8E6"/><g stroke="#B3261E" stroke-linecap="round"><path d="M6 4 L34 23 M34 4 L6 23" stroke-width="4.2"/><path d="M13 9 l-2.6 3 M27 18 l2.6 -3 M27 9 l2.6 3 M13 18 l-2.6 -3" stroke-width="2.4"/></g>
+  </g></g>
+  <!-- France: gold fleurs-de-lis on blue -->
+  <g class="c403-f c403-f2" transform="translate(463,26)"><g class="c403-cloth">
+    <rect width="40" height="27" fill="#1F3F8F"/>
+    <g fill="#F2C230"><path transform="translate(12,10) scale(.9)" d="M0,-6C2,-4 2,-1 0,1C-2,-1 -2,-4 0,-6ZM-1,1C-4,-1 -6,1 -4,3.5C-3,2.4 -2,2.2 -1,2.6ZM1,1C4,-1 6,1 4,3.5C3,2.4 2,2.2 1,2.6ZM-3.2,3h6.4v1.3h-6.4ZM-.8,4.3h1.6l.9,2.4h-3.4Z"/><path transform="translate(28,10) scale(.9)" d="M0,-6C2,-4 2,-1 0,1C-2,-1 -2,-4 0,-6ZM-1,1C-4,-1 -6,1 -4,3.5C-3,2.4 -2,2.2 -1,2.6ZM1,1C4,-1 6,1 4,3.5C3,2.4 2,2.2 1,2.6ZM-3.2,3h6.4v1.3h-6.4ZM-.8,4.3h1.6l.9,2.4h-3.4Z"/><path transform="translate(20,19) scale(.9)" d="M0,-6C2,-4 2,-1 0,1C-2,-1 -2,-4 0,-6ZM-1,1C-4,-1 -6,1 -4,3.5C-3,2.4 -2,2.2 -1,2.6ZM1,1C4,-1 6,1 4,3.5C3,2.4 2,2.2 1,2.6ZM-3.2,3h6.4v1.3h-6.4ZM-.8,4.3h1.6l.9,2.4h-3.4Z"/></g>
+  </g></g>
+  <!-- England: St George's Cross -->
+  <g class="c403-f c403-f3" transform="translate(589,40)"><g class="c403-cloth">
+    <rect width="40" height="27" fill="#FFF8E6"/><rect x="16.5" width="7" height="27" fill="#C8352E"/><rect y="10" width="40" height="7" fill="#C8352E"/>
+  </g></g>
+
+  <!-- seawall / shore -->
+  <path d="M0 140 L920 140 L920 156 L0 156 Z" fill="#3A3048"/>
+  <path d="M170 152 C300 146 620 146 760 152 Z" fill="#4A3E52"/>
+  <!-- the coquina fort: a low star fort with pointed bastions and corner watchtowers -->
+  <path d="M180 140 L270 112 L650 112 L740 140 Z" fill="#3E4A3A" opacity=".55"/>
+  <!-- back curtain wall -->
+  <rect x="300" y="92" width="320" height="30" fill="url(#c403wall)"/><rect x="300" y="92" width="320" height="30" fill="url(#c403shell)"/>
+  <path d="M300 92 h320" stroke="#F3D59A" stroke-width="2" opacity=".8"/>
+  <g fill="#6B5848"><rect x="314" y="86" width="12" height="6"/><rect x="340" y="86" width="12" height="6"/><rect x="366" y="86" width="12" height="6"/><rect x="392" y="86" width="12" height="6"/><rect x="418" y="86" width="12" height="6"/><rect x="496" y="86" width="12" height="6"/><rect x="522" y="86" width="12" height="6"/><rect x="548" y="86" width="12" height="6"/><rect x="574" y="86" width="12" height="6"/><rect x="600" y="86" width="12" height="6"/></g>
+  <!-- center watchtower -->
+  <rect x="446" y="74" width="32" height="48" fill="url(#c403wall)"/><rect x="446" y="74" width="32" height="48" fill="url(#c403shell)"/>
+  <path d="M442 74 h40 l-4 -8 h-32 z" fill="#5E4C40"/><path d="M446 74 h32" stroke="#F3D59A" stroke-width="1.6" opacity=".8"/>
+  <rect x="457" y="86" width="10" height="14" rx="5" fill="#2E2420"/>
+  <!-- left bastion (pointed, toward the water) -->
+  <path d="M250 120 L336 92 L392 120 L336 150 Z" fill="url(#c403wallL)"/>
+  <path d="M250 120 L336 92 L392 120 L336 150 Z" fill="url(#c403shell)"/>
+  <path d="M336 150 L392 120 L392 128 L336 158 Z" fill="#5A4A3E"/><path d="M250 120 L336 150 L336 158 L250 128 Z" fill="#7C6656"/>
+  <path d="M250 120 L336 92 L392 120" fill="none" stroke="#F3D59A" stroke-width="2" opacity=".85"/>
+  <!-- right bastion -->
+  <path d="M528 120 L588 92 L670 120 L588 150 Z" fill="url(#c403wallL)"/>
+  <path d="M528 120 L588 92 L670 120 L588 150 Z" fill="url(#c403shell)"/>
+  <path d="M528 120 L588 150 L588 158 L528 128 Z" fill="#7C6656"/><path d="M588 150 L670 120 L670 128 L588 158 Z" fill="#5A4A3E"/>
+  <path d="M528 120 L588 92 L670 120" fill="none" stroke="#F3D59A" stroke-width="2" opacity=".85"/>
+  <!-- front curtain wall between the bastions -->
+  <path d="M392 120 L528 120 L528 134 L392 134 Z" fill="url(#c403wall)"/><path d="M392 120 L528 120 L528 134 L392 134 Z" fill="url(#c403shell)"/>
+  <path d="M392 120 h136" stroke="#F3D59A" stroke-width="1.6" opacity=".75"/>
+  <path d="M452 134 v-9 a8 8 0 0 1 16 0 v9 z" fill="#2E2420"/>
+  <!-- corner sentry boxes (garitas) -->
+  <g><rect x="244" y="110" width="10" height="13" fill="#9C846C"/><path d="M242 110 h14 l-7 -8 z" fill="#5E4C40"/></g>
+  <g><rect x="666" y="110" width="10" height="13" fill="#8A7360"/><path d="M664 110 h14 l-7 -8 z" fill="#5E4C40"/></g>
+  <g><rect x="331" y="146" width="10" height="12" fill="#8A7360"/><path d="M329 146 h14 l-7 -8 z" fill="#5E4C40"/></g>
+  <g><rect x="583" y="146" width="10" height="12" fill="#8A7360"/><path d="M581 146 h14 l-7 -8 z" fill="#5E4C40"/></g>
+
+  <!-- the Matanzas River -->
+  <rect y="156" width="920" height="44" fill="url(#c403water)"/>
+  <path d="M520 152 L600 152 L640 200 L480 200 Z" fill="url(#c403path)" opacity=".55"/>
+  <g opacity=".22" transform="translate(0,304) scale(1,-1)">
+    <path d="M250 152 L336 136 L392 152 Z M528 152 L588 136 L670 152 Z" fill="#B49C80"/><rect x="392" y="140" width="136" height="12" fill="#B49C80"/>
   </g>
-  <g opacity="0.75" transform="translate(610, 200)">
-    <rect x="0" y="0" width="55" height="28" fill="#7A4A26"/>
-    <polygon points="0,0 27.5,-12 55,0" fill="#8B5A30"/>
-    <rect x="22" y="10" width="10" height="18" fill="#3A2410"/>
-    <!-- Tiny flag -->
-    <rect x="26" y="-22" width="0.8" height="12" fill="#3A2410"/>
-    <path d="M 27 -22 L 35 -18 L 27 -14 Z" fill="#1A3A8A"/>
-  </g>
-  <!-- Small palm trees framing -->
-  <g transform="translate(60, 215)">
-    <rect x="-1" y="0" width="3" height="28" fill="#6B4A2A"/>
-    <path d="M 0 0 Q -12 -8 -22 -4 Q -8 -2 0 0 Z" fill="#2F8B5C"/>
-    <path d="M 0 0 Q 12 -8 22 -4 Q 8 -2 0 0 Z" fill="#2F8B5C"/>
-    <path d="M 0 0 Q 3 -16 -6 -20 Q 1 -8 0 0 Z" fill="#3FA070"/>
-  </g>
-  <g transform="translate(900, 215)">
-    <rect x="-1" y="0" width="3" height="28" fill="#6B4A2A"/>
-    <path d="M 0 0 Q -12 -8 -22 -4 Q -8 -2 0 0 Z" fill="#3FA070"/>
-    <path d="M 0 0 Q 12 -8 22 -4 Q 8 -2 0 0 Z" fill="#3FA070"/>
-    <path d="M 0 0 Q -3 -16 6 -20 Q -1 -8 0 0 Z" fill="#2F8B5C"/>
+  <g stroke-linecap="round" fill="none">
+    <path class="c403-sh" d="M500 160 h44 M560 160 h30" stroke="#FFE6A8" stroke-width="2"/>
+    <path class="c403-sh c403-s2" d="M470 170 h60 M548 170 h52" stroke="#FFE6A8" stroke-width="2"/>
+    <path class="c403-sh c403-s3" d="M454 182 h70 M540 182 h80" stroke="#FFD98A" stroke-width="2.2"/>
+    <path class="c403-sh c403-s2" d="M60 166 h50 M180 176 h70 M300 190 h60" stroke="#9FA6D8" stroke-width="1.6"/>
+    <path class="c403-sh c403-s3" d="M700 166 h60 M780 178 h70 M650 192 h50" stroke="#9FA6D8" stroke-width="1.6"/>
+    <path class="c403-sh" d="M120 190 h40 M820 190 h50" stroke="#9FA6D8" stroke-width="1.4"/>
   </g>
 </svg>
 
@@ -3728,5 +4748,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
