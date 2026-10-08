@@ -1123,6 +1123,7 @@
     stepperEl.querySelectorAll('button').forEach(function(b,i){ b.classList.toggle('done',st[i]); });
     /* say plainly what Step 3 still needs, so nobody wonders why it won't check off */
     function wc(id,boxId,msg){ var t=document.getElementById(id); if(!t) return; var c=document.getElementById(boxId); if(!c){ c=el('div','spk spk-wc'); c.id=boxId; after(t,c); } var r=msg(words(t.value)); c.innerHTML=r[1]; c.classList.toggle('ok',r[0]); }
+    ['journal-q1','journal-q2','journal-q3'].forEach(function(id){ var need=(DATA.flags||{})[id]?8:3; wc(id,'spk-wc-'+id,function(n){ return n>=need?[true,'✓ '+n+' words.']:[false,'📝 <b>'+n+' of '+need+' words.</b> '+(n?'Add a little more.':'Write at least '+need+' words.')]; }); });
     wc('journal-assign','spk-wc-main',function(n){ return n>=MIN_WORDS?[true,'✓ '+n+' words. That’s enough for this step.']:[false,'📝 <b>'+n+' of '+MIN_WORDS+' words.</b> '+(n?'Keep going: add another sentence.':'Write at least '+MIN_WORDS+' words.')]; });
     wc('journal-chronicle','spk-wc-hs',function(n){ return n>=5?[true,'✓ Historian’s Sentence done.']:[false,'📝 Finish your Historian’s Sentence (at least 5 words). Step 3 checks off when both boxes are done.']; }); }
 
@@ -1258,16 +1259,16 @@
     {n:1,t:'Being a Historian',    img:'source-4-01-01-florida-historic-photo.jpg', lon:-82.32,lat:29.65, where:'Everywhere — a historian’s desk', blurb:'How Florida historians ask questions, read sources, and tell the difference between a fact and a guess.'},
     {n:2,t:'The Map Room',         img:'source-4-02-01-florida-physical-map.png',  lon:-85.60,lat:30.55, where:'The Panhandle and the peninsula', blurb:'Florida’s land and water: coasts, rivers, wetlands, and the maps that show them.'},
     {n:3,t:'First Peoples',        img:'source-4-03-05-florida-year-wheel.png',    lon:-81.87,lat:26.64, where:'The mangrove coast, the river country, the fields of the north', blurb:'The Apalachee, Timucua, Calusa and Tequesta, and the year they lived through.'},
-    {n:4,t:'Explorers',            lon:-80.60,lat:28.39, where:'The Atlantic coast', blurb:'Ships on the horizon. Spain, France and England arrive in La Florida.'},
+    {n:4,t:'Explorers',            img:'source-4-04-01-la-florida-map-1584.jpg', lon:-80.60,lat:28.39, where:'The Atlantic coast', blurb:'Ships on the horizon. Spain, France and England arrive in La Florida.'},
     {n:5,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
-    {n:6,t:'Spanish Florida',      lon:-81.31,lat:29.89, where:'St. Augustine and the missions', blurb:'The oldest city, the mission trail, and life in a Spanish colony.'},
-    {n:7,t:'Fort Mose & Pioneers', lon:-81.33,lat:30.05, where:'Fort Mose, north of St. Augustine', blurb:'The first free Black settlement, and the pioneers who followed.'},
-    {n:8,t:'Statehood & War',      lon:-84.28,lat:30.44, where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
+    {n:6,t:'Spanish Florida',      img:'source-4-06-02-st-augustine-engraving.png', lon:-81.31,lat:29.89, where:'St. Augustine and the missions', blurb:'The oldest city, the mission trail, and life in a Spanish colony.'},
+    {n:7,t:'Fort Mose & Pioneers', img:'source-4-07-01-fort-mose-map.jpg', lon:-81.33,lat:30.05, where:'Fort Mose, north of St. Augustine', blurb:'The first free Black settlement, and the pioneers who followed.'},
+    {n:8,t:'Statehood & War',      img:'source-4-08-01-florida-statehood-map.png', lon:-84.28,lat:30.44, where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
     {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
-    {n:10,t:'Modern Florida',      lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
-    {n:11,t:'Civil Rights & Citizens', lon:-81.20,lat:29.60, where:'St. Augustine, 1964', blurb:'Floridians who stood up for their rights, and what changed.'},
-    {n:12,t:'Government',          lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
-    {n:13,t:'The Exhibit',         lon:-81.38,lat:28.54, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
+    {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
+    {n:11,t:'Civil Rights & Citizens', img:'source-4-11-01-civil-rights.png', lon:-81.20,lat:29.60, where:'St. Augustine, 1964', blurb:'Floridians who stood up for their rights, and what changed.'},
+    {n:12,t:'Government',          img:'source-4-12-01-florida-constitution.png', lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
+    {n:13,t:'The Exhibit',         img:'source-4-13-01-exhibit-board.png', lon:-81.38,lat:28.54, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
   ];
   if(DATA.cabinet){ var ce=find(FILES,DATA.cabinet.n||THIS,'n'); if(ce) Object.assign(ce,DATA.cabinet); }
   FILES.forEach(function(f){ if(f.lon!=null){ var p=project(f.lon,f.lat); f.x=Math.round(p[0]); f.y=Math.round(p[1]); } });
@@ -1289,7 +1290,7 @@
     var st=f.door?'<div class="st locked">Checkpoint door</div>':open?'<div class="st open">✓ File open</div>':now?'<div class="st now">This file · in progress</div>':'<div class="st locked">🔒 Locked · opens in unit '+f.n+'</div>';
     var sent=open?C.sentences[f.n]:null;
     var body=esc(f.blurb)+(f.where?'<br><span style="color:var(--ffs)">📍 '+esc(f.where)+'</span>':'')+(sent?'<br><span class="qq">“'+esc(sent)+'”</span><br><span style="font-size:12px;color:var(--ffs)">— your Historian’s Sentence</span>':(now?'<br><span style="color:var(--ffs)">Your Historian’s Sentence will be filed here when you write it.</span>':''));
-    w.innerHTML='<div class="spk-card"><span class="tab">FILE · '+(f.n<10?'0':'')+f.n+'</span>'+(f.img&&(open||now)?'<img class="th" alt="" src="'+IMG+f.img+'" onerror="this.outerHTML=\'<div class=th>📁</div>\'">':'<div class="th">'+(f.door?'🚪':open?'📂':'📁')+'</div>')+'<div><div class="tt">'+esc(f.t)+'</div>'+st+'<div class="bd">'+body+'</div></div>'+(open?'<span class="stamp'+(anim&&f.n===THIS?' new':'')+'">Open</span>':'')+'</div>'; }
+    w.innerHTML='<div class="spk-card"><span class="tab">FILE · '+(f.n<10?'0':'')+f.n+'</span>'+(f.img?'<span class="thw'+(open||now?'':' lk')+'"><img class="th" alt="" src="'+IMG+f.img+'" onerror="this.parentNode.outerHTML=\'<div class=th>📁</div>\'">'+(open||now?'':'<span class="lkb">🔒</span>')+'</span>':'<div class="th">'+(f.door?'🚪':open?'📂':'📁')+'</div>')+'<div><div class="tt">'+esc(f.t)+'</div>'+st+'<div class="bd">'+body+'</div></div>'+(open?'<span class="stamp'+(anim&&f.n===THIS?' new':'')+'">Open</span>':'')+'</div>'; }
 
   /* ================================================================ review bar (?review in the address) */
   function buildReviewBar(){ if(!/[?&#]review\b/.test(location.search+location.hash)||document.querySelector('.spk-mockbar')) return;
