@@ -880,7 +880,7 @@
     panel.addEventListener('input',updateStepper); Tn.addEventListener('click',function(){ setTimeout(updateStepper,0); });
     updateStepper(); }
   function updateStepper(){ if(!stepperEl) return; var w=function(id){ var t=document.getElementById(id); return t?words(t.value):0; };
-    var st=[ ['journal-q1','journal-q2','journal-q3'].every(flagsMet),
+    var st=[ ['journal-q1','journal-q2','journal-q3'].every(qDone),
              R.planner?R.planner.done():true,
              notebookWritten()&&w('journal-chronicle')>=5,
              checklistDone() ];
@@ -931,6 +931,11 @@
   /* ================================================================ flags, hints, "go further", wrong-answer lines — all from DATA */
   function flagCount(f,v){ if(f.groups) return f.groups.filter(function(g){ return new RegExp('\\b('+g+')','i').test(v); }).length;
     var m=v.match(new RegExp(f.rx,'gi'))||[]; var u={}; m.forEach(function(x){ u[x.toLowerCase().trim()]=1; }); return Object.keys(u).length; }
+  /* a question counts as answered when it has a real answer (8+ words) and misses at most one "needs" chip —
+     the chips are hints, not locks, so a good answer in the student's own words still counts */
+  function qDone(id){ var fl=(DATA.flags||{})[id], t=document.getElementById(id); if(!t) return true; var v=t.value||'';
+    if(!fl) return words(v)>=3; var hit=fl.filter(function(f){ return flagCount(f,v)>=f.n; }).length;
+    return hit===fl.length || (words(v)>=8 && hit>=fl.length-1); }
   function flagsMet(id){ var fl=(DATA.flags||{})[id], t=document.getElementById(id); if(!t) return true; if(!fl) return words(t.value)>=3; return fl.every(function(f){ return flagCount(f,t.value)>=f.n; }); }
   function buildHelp(){
     var ids={}; ['flags','hints','scholar'].forEach(function(k){ Object.keys(DATA[k]||{}).forEach(function(id){ ids[id]=1; }); });
