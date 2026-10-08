@@ -56,7 +56,10 @@
   function save(){ put(KEY,S); put(CKEY,C); }
   function el(t,c,h){ var d=document.createElement(t); if(c) d.className=c; if(h!=null) d.innerHTML=h; return d; }
   function after(r,n){ r.parentNode.insertBefore(n,r.nextSibling); } function before(r,n){ r.parentNode.insertBefore(n,r); }
-  function voice(t){ return t?'<p class="spk-voice">'+t+'</p>':''; }
+  /* every mini-game can carry DATA.<game>.why = {icon, q, t}: a short "why this game?" card that gives the context
+     behind the immersion (what a mission was before ringing mission bells, why ships flew flags…). Shown above the directions. */
+  function whyCard(w){ if(!w) return ''; if(typeof w==='string') w={t:w}; return '<div class="spk-why"><span class="ic" aria-hidden="true">'+esc(w.icon||'🔎')+'</span><div><b>'+esc(w.q||'Why this?')+'</b> '+w.t+'</div></div>'; }
+  function voice(t,c){ return whyCard(c&&c.why)+(t?'<p class="spk-voice">'+t+'</p>':''); }
   function words(s){ return (s||'').trim().split(/\s+/).filter(Boolean).length; }
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
   function shuffle(a){ return a.slice().sort(function(){return .5-Math.random();}); }
@@ -236,7 +239,7 @@
     function mapSVG(){ var s='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Florida map">'+floridaBase('A')+(cfg.caption?'<text x="14" y="288" style="font:italic 700 10px Lora,Georgia,serif;fill:#5C4A2A">'+esc(cfg.caption)+'</text>':'');
       Z.forEach(function(z){ var la=z.la||'middle', lx=z.cx+(z.dx||0), ly=z.cy+(z.dy!=null?z.dy:31); s+='<g class="spk-zone" data-zone="'+z.id+'"><circle class="ring" cx="'+z.cx+'" cy="'+z.cy+'" r="19" fill="#FFFDF5" fill-opacity=".6" stroke="#5C4A2A" stroke-width="1.5"/><text class="ico" x="'+z.cx+'" y="'+(z.cy+6)+'" text-anchor="middle" style="font-size:17px">'+z.ico+'</text><text x="'+lx+'" y="'+ly+'" text-anchor="'+la+'" style="font:800 9px Nunito,sans-serif;fill:#0E1C42;paint-order:stroke;stroke:#EAF4F7;stroke-width:3">'+esc(z.label)+'</text><text class="pp" x="'+z.cx+'" y="'+(z.cy-24)+'" text-anchor="middle" style="font:italic 800 10px Lora,Georgia,serif;fill:#A3312B;paint-order:stroke;stroke:#FFFDF5;stroke-width:3">'+esc(z.people)+'</text></g>'; }); return s+'</svg>'; }
     var N=cfg.notes||{};
-    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Map Quest')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)+'<div class="spk-maplock"><div class="spk-map">'+mapSVG()+'</div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-notes spk-hide"><div class="k">'+esc(N.label||'Notes · finish each line in your own words')+'</div><div class="spk-stems" data-help="spk-stems"></div><button type="button" class="spk-link" disabled></button></div>';
+    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Map Quest')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)+'<div class="spk-maplock"><div class="spk-map">'+mapSVG()+'</div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-notes spk-hide"><div class="k">'+esc(N.label||'Notes · finish each line in your own words')+'</div><div class="spk-stems" data-help="spk-stems"></div><button type="button" class="spk-link" disabled></button></div>';
     var chips=g.querySelector('.spk-chips'), miss=g.querySelector('.spk-miss'), notes=g.querySelector('.spk-notes'), stems=g.querySelector('.spk-stems'), link=g.querySelector('.spk-link'), sel=null;
     var target=N.target||'journal-q1', tlab=N.targetLabel||'Evidence Question 1';
     function stemText(z){ return (N.stem||'The {people} lived {where} because').replace('{people}',z.people).replace('{where}',z.where); }
@@ -268,7 +271,7 @@
     var done=function(){ return placed()&&H.every(function(h){ return words(S.habit.lines[h.id])>=minW; }); };
     var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
     var g=el('div','spk spk-game spk-habit');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-habit-stamps" aria-label="Habits"></div><p class="spk-miss"></p>'
       +'<div class="spk-icard"><div class="spk-icard-top">'+esc(cfg.cardTitle||'My reminder card')+'</div>'
       +H.map(function(h,i){ return '<div class="spk-islot" data-ex="'+h.id+'"><div class="ex"><span class="q">“</span>'+esc(h.example)+'<span class="q">”</span></div><div class="drop" role="button" tabindex="0" aria-label="Put a habit here"><span class="empty">Drop the habit this shows</span><span class="got"></span></div><label class="mine"><span>'+esc(cfg.lineLabel||'In my words:')+'</span><input type="text" placeholder="…"></label></div>'; }).join('')
@@ -343,7 +346,7 @@
   MOD.wheelsort=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
     var PG=cfg.cards||[]; S.wheelPlaced=S.wheelPlaced||[];
     var done=function(){ return S.wheelPlaced.length===PG.length; };
-    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)+'<div class="spk-wheelwrap"><div class="spk-wheel"></div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-win">'+(cfg.win||'')+'</div>';
+    var g=el('div','spk spk-game'); g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)+'<div class="spk-wheelwrap"><div class="spk-wheel"></div><div><div class="spk-chips"></div><p class="spk-miss"></p></div></div><div class="spk-win">'+(cfg.win||'')+'</div>';
     var cx=150,cy=150,r=120; function arc(a0,a1){ var x0=cx+r*Math.cos(a0),y0=cy+r*Math.sin(a0),x1=cx+r*Math.cos(a1),y1=cy+r*Math.sin(a1); return 'M'+cx+','+cy+' L'+x0.toFixed(1)+','+y0.toFixed(1)+' A'+r+','+r+' 0 0 1 '+x1.toFixed(1)+','+y1.toFixed(1)+' Z'; }
     var order=cfg.order||CATS.map(function(c){return c.id;}), q=2*Math.PI/order.length, ctr=cfg.center||[];
     var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Sorting wheel')+'"><circle cx="150" cy="150" r="126" fill="#FFFDF5" stroke="#8A6A1E" stroke-width="2"/>';
@@ -374,7 +377,7 @@
     var targets=parts.map(function(p,i){ return p.k?i:-1; }).filter(function(i){ return i>=0; });
     var done=function(){ return targets.every(function(i){ return S.spot.indexOf(i)>=0; }); };
     var g=el('div','spk spk-game spk-spot');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-spot-pair"><div class="spk-sent flat"><div class="lab">'+esc(cfg.flatLabel||'Careless')+'</div><p>'+esc(cfg.flat||'')+'</p></div>'
       +'<div class="spk-sent care"><div class="lab">'+esc(cfg.careLabel||'Careful')+' · tap the details</div><p>'+parts.map(function(p,i){ return '<button type="button" class="w" data-i="'+i+'">'+esc(p.t)+'</button>'; }).join(' ')+'</p></div></div>'
       +'<p class="spk-miss"></p><div class="spk-spot-key">'+Object.keys(KINDS).map(function(k){ return '<span class="kind" data-k="'+k+'" style="--c:'+KINDS[k].color+'">'+KINDS[k].ico+' '+esc(KINDS[k].t)+' <b>0</b></span>'; }).join('')+'</div><p class="spk-spot-ct"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
@@ -393,7 +396,7 @@
   MOD.picks=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
     var PEOPLE=cfg.people||[], PLAN=cfg.plan||{}, STEPS=(cfg.steps||[]).map(function(s){return s.k;}), LAB={}; (cfg.steps||[]).forEach(function(s){ LAB[s.k]=s.label; });
     S.plan=S.plan||{}; var pick=S.plan;
-    var b=el('div','spk spk-builder'); b.innerHTML=voice(cfg.voice)
+    var b=el('div','spk spk-builder'); b.innerHTML=voice(cfg.voice,cfg)
       +'<div class="spk-step"><div class="lab">1 · '+esc(cfg.catLabel||'Which one?')+'</div><div class="spk-opts" data-k="season">'+CATS.map(function(s){return '<button type="button" class="spk-opt" data-v="'+s.id+'">'+s.ico+' '+esc(s.label)+'</button>';}).join('')+'</div></div>'
       +'<div class="spk-step"><div class="lab">2 · '+esc(cfg.peopleLabel||'Which people?')+'</div><div class="spk-opts" data-k="people">'+PEOPLE.map(function(p){return '<button type="button" class="spk-opt" data-v="'+p.id+'">'+p.ico+' '+esc(p.t)+'</button>';}).join('')+'</div></div>'
       +STEPS.map(function(k,i){return '<div class="spk-step"><div class="lab">'+(i+3)+' · '+esc(LAB[k])+'</div><div class="spk-opts" data-k="'+k+'"><p class="spk-gate">'+esc(cfg.gate||'Pick one first.')+'</p></div></div>';}).join('')
@@ -413,7 +416,7 @@
     var OLD=cfg.old||[], PEOPLE=cfg.people||[]; S.fix=S.fix||{tapped:[]}; var pick=S.fix;
     var bad=OLD.map(function(p,i){ return p.fix?i:-1; }).filter(function(i){ return i>=0; });
     var b=el('div','spk spk-builder spk-fixit');
-    b.innerHTML=voice(cfg.voice)
+    b.innerHTML=voice(cfg.voice,cfg)
       +'<div class="spk-step"><div class="lab">1 · '+esc(cfg.step1||'Find the careless words')+'</div><div class="spk-oldsent">'+OLD.map(function(p,i){ return p.fix?'<button type="button" class="bad" data-i="'+i+'">'+esc(p.t)+'<span class="fx"></span></button>':'<span>'+esc(p.t)+'</span>'; }).join(' ')+'</div><p class="spk-fix-ct"></p></div>'
       +'<div class="spk-step"><div class="lab">2 · '+esc(cfg.step2||'Which people?')+'</div><div class="spk-opts" data-k="people">'+PEOPLE.map(function(p){ return '<button type="button" class="spk-opt" data-v="'+p.id+'">'+p.ico+' '+esc(p.t)+'</button>'; }).join('')+'</div></div>'
       +'<div class="spk-step"><div class="lab">3 · '+esc(cfg.step3||'Which place?')+'</div><div class="spk-opts" data-k="place"></div></div>'
@@ -442,7 +445,7 @@
     var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
     var g=el('div','spk spk-dig');
     g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Root Dig')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'
-      +voice(cfg.voice)
+      +voice(cfg.voice,cfg)
       +'<div class="spk-site"><div class="strata"><i class="s0"></i><i class="s1"></i><i class="s2"></i><i class="s3"></i></div>'
       +'<svg class="deco" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><g fill="#E9D8B4" opacity=".7"><path d="M40,20 q6,-8 12,0 q-6,4 -12,0z"/><path d="M330,40 q6,-8 12,0 q-6,4 -12,0z"/></g><g fill="#F5EBD6" opacity=".55"><path d="M120,92 a6,6 0 1 1 12,0 l-6,6z"/><path d="M300,88 a5,5 0 1 1 10,0 l-5,5z"/><path d="M60,100 a4,4 0 1 1 8,0 l-4,4z"/></g><g stroke="#E4DCCB" stroke-width="1.2" fill="none" opacity=".6"><path d="M200,150 q8,-6 16,0 t16,0"/><path d="M40,160 q6,-5 12,0"/></g></svg>'
       +'<div class="warm"></div>'
@@ -475,7 +478,7 @@
     var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
     var slots=SH.slice().sort(function(a,b){ return a.year-b.year; });
     var g=el('div','spk spk-game spk-ships');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-dock"><div class="spk-dock-line"></div>'+slots.map(function(s){ return '<div class="spk-berth" data-y="'+s.year+'" role="button" tabindex="0" aria-label="Put a ship on '+s.year+'"><div class="yr">'+s.year+'</div><div class="post"></div><div class="slot"><span class="empty">'+esc(cfg.empty||'Which ship?')+'</span><span class="got"></span></div><p class="fact"></p></div>'; }).join('')+'</div>'
       +'<div class="spk-chips spk-shipchips"></div><p class="spk-miss"></p>'
       +'<div class="spk-shore spk-hide">'+esc(cfg.shore||'')+'</div>'
@@ -578,7 +581,7 @@
     var P=cfg.pairs||[], SHORE=P.filter(function(p){ return p.shore; }).map(function(p){ return {id:p.id,t:p.shore}; }).concat((cfg.decoys||[]).map(function(d,i){ return {id:'decoy'+i,t:d.t,decoy:d.miss}; }));
     S.shore=S.shore||[]; var done=function(){ return P.every(function(p){ return S.shore.indexOf(p.id)>=0; }); };
     var g=el('div','spk spk-game spk-shipshore');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-ss"><div class="col"><div class="lab">'+esc(cfg.shipLabel||'From the ship')+'</div><div class="spk-chips"></div></div><div class="col"><div class="lab">'+esc(cfg.shoreLabel||'On the shore')+'</div><div class="spk-shores"></div></div></div><p class="spk-miss"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
     var chips=g.querySelector('.spk-chips'), shores=g.querySelector('.spk-shores'), miss=g.querySelector('.spk-miss'), sel=null;
     P.forEach(function(p){ var c=el('div','spk-chip noimg spk-sship','<span class="ico">'+shipIcon(p.size||1,p.color)+'</span><span><b>'+esc(p.year)+'</b> · '+esc(p.name)+'<br><small>'+esc(p.ship)+'</small></span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.id=p.id; chips.appendChild(c); });
@@ -605,7 +608,7 @@
      A row can be checked against an earlier pick (cfg.steps[i].mustMatch = {earlierStep, map:{pick:rightAnswer}}). ---- */
   MOD.choose=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
     var ST=cfg.steps||[]; S.choose=S.choose||{}; var pick=S.choose;
-    var b=el('div','spk spk-builder spk-choose'); b.innerHTML=voice(cfg.voice)+ST.map(function(s,i){ return '<div class="spk-step" data-k="'+s.k+'"><div class="lab">'+(i+1)+' · '+esc(s.label)+'</div><div class="spk-opts">'+s.opts.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.v)+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div><p class="spk-miss"></p></div>'; }).join('')+'<div class="spk-plan"></div>';
+    var b=el('div','spk spk-builder spk-choose'); b.innerHTML=voice(cfg.voice,cfg)+ST.map(function(s,i){ return '<div class="spk-step" data-k="'+s.k+'"><div class="lab">'+(i+1)+' · '+esc(s.label)+'</div><div class="spk-opts">'+s.opts.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.v)+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div><p class="spk-miss"></p></div>'; }).join('')+'<div class="spk-plan"></div>';
     function ok(s){ var v=pick[s.k]; if(v==null) return false; var m=s.mustMatch; if(!m) return true; var want=m.map[pick[m.step]]; return want==null||want===v; }
     function lines(){ var out=[]; ST.forEach(function(s){ var v=pick[s.k]; if(v==null) return; var o=find(s.opts,v,'v'); if(o) out.push([s.word||s.label,o.t]); }); return out; }
     function paint(){ ST.forEach(function(s){ var row=b.querySelector('.spk-step[data-k="'+s.k+'"]'); row.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===pick[s.k]); }); var bad=pick[s.k]!=null&&!ok(s); row.classList.toggle('bad',bad); row.querySelector('.spk-miss').textContent=bad?(s.mustMatch.miss||''):''; });
@@ -631,7 +634,7 @@
     var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
     var done=function(){ return W.length>0&&W.every(function(x,i){ return S.flags.up.indexOf(i)>=0; }); };
     var g=el('div','spk spk-flagrun');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Run Up the Flags')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Run Up the Flags')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-flagsea"><div class="spk-flagship"><div class="masts">'+W.map(function(x,i){ return '<div class="mast" data-i="'+i+'" role="button" tabindex="0" aria-label="Mast for '+esc(x.w)+'"><div class="top"><span class="slot"></span></div><div class="pole"></div><div class="plaque"><b>'+esc(cfg.root||'')+'</b>'+esc(x.w.slice((cfg.root||'').length))+'</div></div>'; }).join('')+'</div><div class="hull"></div></div><div class="waves"></div></div>'
       +'<div class="spk-fr-box">'+shuffle(W.map(function(x,i){ return i; })).map(function(i){ var x=W[i]; return '<button type="button" class="spk-fr-flag" data-i="'+i+'" draggable="false"><span class="roll"><span class="tube"></span><span class="tap">'+esc(cfg.tapT||'Tap to unroll')+'</span></span><span class="open">'+flagSVG(x.flag,44)+'<span class="m">'+esc(x.m)+'</span></span></button>'; }).join('')+'</div>'
       +'<p class="spk-miss"></p><p class="spk-fr-ct"></p>'
@@ -670,7 +673,7 @@
     var done=function(){ return CD.length>0&&CD.every(function(c,i){ return S.packed.indexOf(i)>=0; }); };
     var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
     var g=el('div','spk spk-game spk-pack');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-trunks">'+TR.map(function(t){ return '<div class="spk-trunk" data-t="'+t.id+'" role="button" tabindex="0" style="--c:'+t.color+'"><div class="lid"><span class="em">'+emblem(t.emblem,34)+'</span></div><div class="box"><span class="nm">'+esc(t.label)+'</span><span class="ct"></span></div><ul class="in"></ul></div>'; }).join('')+'</div>'
       +'<div class="spk-chips spk-packcards"></div><p class="spk-miss"></p><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
     var chips=g.querySelector('.spk-packcards'), miss=g.querySelector('.spk-miss'), sel=null;
@@ -725,7 +728,7 @@
     var done=function(){ return right()&&S.doc.found.length>=need; };
     var anchor=[].filter.call(cb.querySelectorAll('.callout'),function(c){ return /What do I see\?/.test(c.textContent); })[0]||cb.firstElementChild;
     var g=el('div','spk spk-game spk-doctype');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-step"><div class="lab">1 · '+esc(cfg.step1||'What kind of document is this?')+'</div><div class="spk-opts">'+CH.map(function(c){ return '<button type="button" class="spk-opt" data-v="'+c.id+'">'+(c.ico?c.ico+' ':'')+esc(c.t)+'</button>'; }).join('')+'</div><p class="spk-miss m1"></p></div>'
       +'<div class="spk-step s2"><div class="lab">2 · '+esc(cfg.step2||'Tap two numbers on the document that prove it.')+'</div><div class="spk-proofs"></div><p class="spk-miss m2"></p></div>'
       +'<div class="spk-win">'+(cfg.win||'')+'</div>';
@@ -754,7 +757,7 @@
     var done=function(){ return W.length>0&&S.bells.hung.length===W.length; };
     var bellSVG='<svg viewBox="0 0 60 60" aria-hidden="true"><path d="M30 6c-11 0-17 9-17 20v10l-6 9h46l-6-9V26C47 15 41 6 30 6z" fill="url(#spkBronze)" stroke="#5E3A12" stroke-width="2"/><rect x="26" y="1" width="8" height="7" rx="2" fill="#5E3A12"/><circle cx="30" cy="50" r="5" fill="#5E3A12"/><defs><linearGradient id="spkBronze" x1="0" x2="1"><stop offset="0" stop-color="#9C6B2E"/><stop offset=".45" stop-color="#E2B866"/><stop offset="1" stop-color="#8A5A22"/></linearGradient></defs></svg>';
     var g=el('div','spk spk-bells');
-    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Mission Bells')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice)
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Mission Bells')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
       +'<div class="spk-belltower"><div class="wall">'+W.map(function(x,i){ return '<div class="arch" data-i="'+i+'"><button type="button" class="bell" aria-label="Ring the bell: '+esc(x.w)+'">'+bellSVG+'</button><div class="word">'+(x.root?esc(x.w).replace(esc(x.root),'<b>'+esc(x.root)+'</b>'):esc(x.w))+'</div><div class="said"></div><div class="rope" role="button" tabindex="0" aria-label="Rope for '+esc(x.w)+'"><span class="knot"></span><span class="tag"></span></div></div>'; }).join('')+'</div></div>'
       +'<p class="spk-bell-ct"></p><div class="spk-chips spk-belltags"></div><p class="spk-miss"></p>'
       +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
@@ -789,7 +792,7 @@
     S.scale=S.scale||{took:[],cost:[]}; var pk=S.scale; var MAXP=cfg.maxPerPan||2;
     var b=el('div','spk spk-builder spk-scale');
     function opts(k,list,multi){ return '<div class="spk-opts" data-k="'+k+'">'+list.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+o.id+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div>'; }
-    b.innerHTML=voice(cfg.voice)
+    b.innerHTML=voice(cfg.voice,cfg)
       +'<div class="spk-balance"><svg viewBox="0 0 320 170" aria-hidden="true"><rect x="150" y="40" width="20" height="112" rx="4" fill="#7A4A26"/><rect x="110" y="150" width="100" height="14" rx="5" fill="#5A3418"/><circle cx="160" cy="40" r="9" fill="#C9A24A" stroke="#5A3418" stroke-width="2"/><g class="beam"><rect x="30" y="34" width="260" height="10" rx="5" fill="#C9A24A" stroke="#5A3418" stroke-width="2"/><g class="pan L"><line x1="45" y1="40" x2="25" y2="96" stroke="#5A3418" stroke-width="1.5"/><line x1="45" y1="40" x2="65" y2="96" stroke="#5A3418" stroke-width="1.5"/><path d="M12 96h66a33 12 0 0 1-66 0z" fill="#E8D4A8" stroke="#5A3418" stroke-width="2"/><text class="n" x="45" y="120" text-anchor="middle">0</text></g><g class="pan R"><line x1="275" y1="40" x2="255" y2="96" stroke="#5A3418" stroke-width="1.5"/><line x1="275" y1="40" x2="295" y2="96" stroke="#5A3418" stroke-width="1.5"/><path d="M242 96h66a33 12 0 0 1-66 0z" fill="#E8D4A8" stroke="#5A3418" stroke-width="2"/><text class="n" x="275" y="120" text-anchor="middle">0</text></g></g></svg><div class="pl"><span>'+esc(cfg.tookLabel||'What it took')+'</span><span>'+esc(cfg.costLabel||'What it cost')+'</span></div></div>'
       +'<div class="spk-step"><div class="lab">1 · '+esc(cfg.motiveLabel||'Which motive?')+'</div>'+opts('motive',cfg.motives||[])+'</div>'
       +'<div class="spk-step"><div class="lab">2 · '+esc(cfg.tookStep||'What did the voyage take? (pick 1 or 2)')+'</div>'+opts('took',cfg.took||[])+'</div>'

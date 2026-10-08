@@ -817,3 +817,8 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-say.ok { display: inline-block; } .spk-say.playing { background: #A3312B; }
 .spk-directive + .spk-vn { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) { .spk-trunk, .spk-trunk.thud .box, .spk-trunk.thud .lid, .spk-trunk .lid, .spk-belltower .arch.swing .bell, .spk-belltower .arch.armed .knot, .spk-sr-card.now, .spk-balance .beam, .spk-balance .pan { animation: none; transition: none; } }
+
+/* "why this game?" context card */
+.spk-why { display: flex; gap: 10px; align-items: flex-start; margin: 6px 0 12px; padding: 10px 14px; border-radius: 12px; background: #FBF4E4; border: 1px solid #E8D5A8; font: 500 15px/1.5 'Nunito', system-ui, sans-serif; color: #3D2C14; }
+.spk-why .ic { font-size: 22px; line-height: 1.2; flex: none; }
+.spk-why b { color: #6B3F12; }
