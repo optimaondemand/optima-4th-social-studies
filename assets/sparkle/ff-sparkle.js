@@ -1120,7 +1120,11 @@
              R.planner?R.planner.done():true,
              notebookWritten()&&w('journal-chronicle')>=5,
              checklistDone() ];
-    stepperEl.querySelectorAll('button').forEach(function(b,i){ b.classList.toggle('done',st[i]); }); }
+    stepperEl.querySelectorAll('button').forEach(function(b,i){ b.classList.toggle('done',st[i]); });
+    /* say plainly what Step 3 still needs, so nobody wonders why it won't check off */
+    function wc(id,boxId,msg){ var t=document.getElementById(id); if(!t) return; var c=document.getElementById(boxId); if(!c){ c=el('div','spk spk-wc'); c.id=boxId; after(t,c); } var r=msg(words(t.value)); c.innerHTML=r[1]; c.classList.toggle('ok',r[0]); }
+    wc('journal-assign','spk-wc-main',function(n){ return n>=MIN_WORDS?[true,'✓ '+n+' words. That’s enough for this step.']:[false,'📝 <b>'+n+' of '+MIN_WORDS+' words.</b> '+(n?'Keep going: add another sentence.':'Write at least '+MIN_WORDS+' words.')]; });
+    wc('journal-chronicle','spk-wc-hs',function(n){ return n>=5?[true,'✓ Historian’s Sentence done.']:[false,'📝 Finish your Historian’s Sentence (at least 5 words). Step 3 checks off when both boxes are done.']; }); }
 
   /* ================================================================ VOICE NOTES — the teacher's audio guides.
      Never read the page, never give an answer. Hidden until the .mp3 exists (?review shows empty slots).

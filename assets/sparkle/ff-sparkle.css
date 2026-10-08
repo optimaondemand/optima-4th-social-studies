@@ -952,3 +952,8 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-streams.done .spk-flag-win2 { display: block; }
 @media (max-width: 460px) { .spk-valley .basin .word { font-size: 14px; } .spk-valley .basin .mean { font-size: 11px; } }
 @media (prefers-reduced-motion: reduce) { .spk-claim .ov.on, .spk-cspot.armed .ring, .spk-pf.on .cloth, .spk-pf.rise .pole, .spk-pf.rise .cloth, .spk-yslider .yl.on .spk-pf .cloth, .spk-yslider .yl.fire.on path, .spk-yslider .yl.ships.on > g, .spk-dchain .slot.snap .spk-dom, .spk-dchain .slot .spk-dom.fall, .stamp > .spk-wax, .spk-valley .pool, .spk-chan .wtr.flow, .spk-chan .glint.on, .spk-valley .basin.armed, .spk-ys-p.pop { animation: none !important; } }
+
+/* Step 3 word counter (Oct 2026): tells the student exactly what Step 3 still needs */
+.spk-wc { margin: 6px 0 0; font: 600 14px 'Nunito', sans-serif; color: #8A5A12; }
+.spk-wc b { font-weight: 800; }
+.spk-wc.ok { color: #1F6B3A; }
