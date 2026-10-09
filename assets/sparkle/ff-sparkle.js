@@ -838,6 +838,8 @@
       else if(kind==='plop'){ tone(620,.18,.22,'sine',180); noise(.5,700,1,.12,function(p){ return Math.max(0,1-p)*(.5+.5*Math.random()); }); }
       else if(kind==='clink'){ tone(2300,.12,.1,'triangle',2100); tone(3100,.09,.06,'sine'); }
       else if(kind==='plant'){ tone(180,.18,.25,'sine',90); noise(.18,900,1,.18,function(p){ return 1-p; }); }
+      else if(kind==='slide') noise(.4,500,.7,.16,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.7+.3*Math.random()); });
+      else if(kind==='paper') noise(.3,2600,.6,.14,function(p){ return Math.max(0,1-p)*(.4+.6*Math.random()); });
       else if(kind==='win') [523,659,784].forEach(function(f,i){ setTimeout(function(){ chime(f); },i*180); });
     }catch(e){} }
 
@@ -1246,6 +1248,176 @@
     paint(); return {done:done};
   };
 
+  /* ---- Scene 1 · File drawers (4.05.01): a filing cabinet with one drawer per file group. Tap (or drag) an evidence
+     card and the drawers slide open; tap a drawer and the card drops in. A full drawer thuds shut and gets a ✓.
+     DATA: drawers [{id,ico,label,sub,color}], cards [{t,d,miss:{drawerId:hint}}] ---- */
+  MOD.drawers=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var DR=cfg.drawers||[], CD=cfg.cards||[]; S.filed=S.filed||[];
+    var done=function(){ return CD.length>0&&CD.every(function(c,i){ return S.filed.indexOf(i)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-drawers');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'File Drawers')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-chips spk-drcards"></div><p class="spk-miss"></p>'
+      +'<div class="spk-cabinet2"><div class="top" aria-hidden="true"></div>'+DR.map(function(d){ return '<div class="spk-dr" data-d="'+esc(d.id)+'" role="button" tabindex="0" style="--c:'+(d.color||'#1A8A7D')+'" aria-label="'+esc(d.label)+' drawer"><div class="tray"><ul class="in"></ul></div><div class="front"><span class="tag"><span class="ic" aria-hidden="true">'+(d.ico||'')+'</span><span><b>'+esc(d.label)+'</b><small>'+esc(d.sub||'')+'</small></span></span><span class="pull" aria-hidden="true"></span><span class="ct"></span><span class="ok" aria-hidden="true">✓ Filed</span></div></div>'; }).join('')+'<div class="feet" aria-hidden="true"></div></div>'
+      +'<p class="spk-bell-ct spk-dr-ct"></p><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    var chips=g.querySelector('.spk-drcards'), miss=g.querySelector('.spk-miss'), sel=null, was={};
+    shuffle(CD.map(function(c,i){ return i; })).forEach(function(i){ var c=el('div','spk-chip noimg spk-drcard','<span class="ico">🗂️</span><span>'+esc(CD[i].t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.i=i; chips.appendChild(c); });
+    function paint(drop){ DR.forEach(function(d){ var dr=g.querySelector('.spk-dr[data-d="'+d.id+'"]'), mine=CD.map(function(c,i){ return i; }).filter(function(i){ return CD[i].d===d.id&&S.filed.indexOf(i)>=0; }), all=CD.filter(function(c){ return c.d===d.id; }).length, full=all>0&&mine.length===all;
+        dr.querySelector('.ct').textContent=mine.length+' of '+all; dr.querySelector('.in').innerHTML=mine.map(function(i){ return '<li'+(drop===i?' class="new"':'')+'>'+esc(CD[i].t)+'</li>'; }).join('');
+        dr.classList.toggle('full',full); if(full&&was[d.id]===false){ dr.classList.add('shut'); setTimeout(function(){ dr.classList.remove('shut'); },700); setTimeout(function(){ sfx('thud'); },220); } was[d.id]=full; });
+      chips.querySelectorAll('.spk-drcard').forEach(function(c){ var on=S.filed.indexOf(+c.dataset.i)>=0; c.classList.toggle('spk-hide',on); c.draggable=!on; });
+      var n=S.filed.length; g.querySelector('.spk-dr-ct').innerHTML=done()?'':'<b>'+n+' of '+CD.length+'</b> '+esc(cfg.countT||'cards filed.');
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    function arm(on){ g.querySelectorAll('.spk-dr').forEach(function(d){ d.classList.toggle('armed',on&&!d.classList.contains('full')); d.classList.remove('over'); }); if(on) sfx('slide'); }
+    function attempt(chip,dr){ if(!chip||!dr) return; var i=+chip.dataset.i; if(S.filed.indexOf(i)>=0) return; arm(false);
+      if(CD[i].d===dr.dataset.d){ S.filed.push(i); save(); sel=null; miss.textContent=''; sfx('thud'); paint(i); dr.classList.add('peek'); clearTimeout(dr.__pk); dr.__pk=setTimeout(function(){ dr.classList.remove('peek'); },1600); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },700); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=(CD[i].miss&&CD[i].miss[dr.dataset.d])||CD[i].hint||''; miss.textContent=m; missBeat(m); } }
+    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-drcard'); if(!c) return; ack('open'); chips.querySelectorAll('.spk-drcard').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    chips.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-drcard'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-drcard'); if(!c||!c.draggable){ e.preventDefault(); return; } ack('open'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    chips.addEventListener('dragend',function(){ arm(false); });
+    var cab=g.querySelector('.spk-cabinet2');
+    cab.addEventListener('click',function(e){ var d=e.target.closest('.spk-dr'); if(!d) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a card first, then the drawer it belongs in.'; return; } attempt(sel,d); });
+    cab.addEventListener('keydown',function(e){ var d=e.target.closest('.spk-dr'); if(d&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); d.click(); } });
+    cab.addEventListener('dragover',function(e){ var d=e.target.closest('.spk-dr'); g.querySelectorAll('.spk-dr').forEach(function(x){ x.classList.toggle('over',x===d); }); if(d){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    cab.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-dr')); });
+    paint(); body.appendChild(g);
+    return {done:done, journal:function(e,NA){ return DR.map(function(d){ var it=CD.filter(function(c,i){ return c.d===d.id&&S.filed.indexOf(i)>=0; }); return it.length?'<p class="a"><b>'+e(d.label)+'</b>: '+e(it.map(function(c){ return c.t; }).join(' · '))+'</p>':''; }).join('')||NA; }};
+  };
+
+  /* ---- Explore reading · Build the map (4.05.01): one real Florida map. Each tap adds the next layer
+     (land and water → the First Peoples → the Europeans → contact), and the lesson's own paragraph for it appears.
+     DATA: paras [{id,match}], steps [{label,ico,paras:[ids],show:[layer ids]}], layers {id:{kind,…}}
+     kinds: spring · emoji · names · ship · flag · fade · text ---- */
+  function lmLayer(l,at){ var pts=(l.pts||(l.lon!=null?[[l.lon,l.lat]]:[])).map(function(p){ return at(p[0],p[1]); }), s='';
+    if(l.kind==='spring') s=pts.map(function(q,k){ return '<g class="sg" transform="translate('+q[0]+','+q[1]+')"><circle class="rp" r="3" style="animation-delay:'+(k*.4).toFixed(1)+'s"/><circle r="2.6" fill="#2F9BD0" stroke="#FFFDF5" stroke-width=".8"/></g>'; }).join('');
+    else if(l.kind==='emoji') s=pts.map(function(q,k){ return '<text class="em" x="'+q[0]+'" y="'+(q[1]+4)+'" text-anchor="middle" style="animation-delay:'+(k*.12).toFixed(2)+'s">'+esc(l.e||'•')+'</text>'; }).join('');
+    else if(l.kind==='names') s=(l.items||[]).map(function(p,k){ var q=at(p.lon,p.lat); return '<g class="nm" style="animation-delay:'+(k*.15).toFixed(2)+'s"><circle cx="'+q[0]+'" cy="'+q[1]+'" r="2.4" fill="#6B4A2A"/><text x="'+(q[0]+(p.a==='end'?-4:p.a==='middle'?0:4))+'" y="'+(q[1]+(p.dy!=null?p.dy:3))+'" text-anchor="'+(p.a||'start')+'">'+esc(p.t)+'</text></g>'; }).join('');
+    else if(l.kind==='ship') s=pts.map(function(q){ return '<g class="shp" transform="translate('+(q[0]-9)+','+(q[1]-12)+') scale(.36)">'+shipIcon(1,l.color||FLAGCOL.es).replace(/<svg[^>]*>|<\/svg>/g,'')+'</g>'; }).join('');
+    else if(l.kind==='flag') s=poleFlag(l.flag,pts[0][0],pts[0][1],l.s||1.4).replace('spk-pf ','spk-pf on ');
+    else if(l.kind==='fade') s=pts.map(function(q,k){ return '<circle class="vd" cx="'+q[0]+'" cy="'+q[1]+'" r="3.2" style="animation-delay:'+(k*.18).toFixed(2)+'s"/>'; }).join('');
+    var tl=l.t?'<text class="lb" x="'+(l.tlon!=null?at(l.tlon,l.tlat)[0]:(pts[0]?pts[0][0]:0)+(l.dx||8))+'" y="'+(l.tlon!=null?at(l.tlon,l.tlat)[1]:(pts[0]?pts[0][1]:0)+(l.dy||3))+'" text-anchor="'+(l.a||'start')+'"'+(l.rot&&l.tlon!=null?' transform="rotate('+l.rot+' '+at(l.tlon,l.tlat).join(' ')+')"':'')+'>'+esc(l.t)+'</text>':'';
+    return s+tl; }
+  MOD.layermap=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var ST=cfg.steps||[]; if(S.lm==null) S.lm=-1;
+    var done=function(){ return ST.length>0&&S.lm>=ST.length-1; };
+    function at(lon,lat){ return project(lon,lat).map(function(v){ return +v.toFixed(1); }); }
+    var L=cfg.layers||{}, lay='';
+    Object.keys(L).forEach(function(id){ lay+='<g class="ml k-'+L[id].kind+'" data-l="'+id+'">'+lmLayer(L[id],at)+'</g>'; });
+    var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Map of Florida that builds up one layer at a time')+'">'+floridaBase('M')+lay+'<g class="tapme" transform="translate(150,150)"><circle r="9"/><text y="4" text-anchor="middle">👆</text></g></svg>';
+    var wrap=el('div','spk spk-layermap');
+    wrap.innerHTML='<div class="spk-rp-top"><div class="spk-map">'+svg+'</div><div class="spk-rp-side"><div class="lab">'+esc(cfg.label||'Build the map')+'</div><ol class="spk-rp-list">'+ST.map(function(r,i){ return '<li data-i="'+i+'"><button type="button" disabled><span class="ic">'+(r.ico||'•')+'</span><span>'+esc(r.label)+'</span></button></li>'; }).join('')+'</ol><button type="button" class="spk-rp-go spk-lm-go"></button><p class="spk-ys-ct spk-lm-ct"></p></div></div><div class="spk-rp-read"></div>';
+    before(first,wrap);
+    var read=wrap.querySelector('.spk-rp-read'), boxes={};
+    PA.forEach(function(a){ var p=found[a.id]; if(!p) return; var b=el('div','spk-ys-p spk-lm-p'); boxes[a.id]=b; read.appendChild(b); move(p,function(n){ b.appendChild(n); }); });
+    var view=S.lm;
+    function paint(anim){ var r=ST[view], shown={}, nowL={};
+      for(var i=0;i<=S.lm;i++) (ST[i].show||[]).forEach(function(id){ shown[id]=true; }); if(r) (r.show||[]).forEach(function(id){ nowL[id]=true; });
+      wrap.querySelectorAll('.ml').forEach(function(l){ var id=l.dataset.l; l.classList.toggle('on',!!shown[id]); l.classList.toggle('now',!!nowL[id]); if(anim&&nowL[id]){ l.classList.remove('pop'); void l.getBoundingClientRect(); l.classList.add('pop'); } });
+      Object.keys(boxes).forEach(function(id){ var on=!!r&&(r.paras||[]).indexOf(id)>=0; boxes[id].classList.toggle('on',on); if(on&&anim){ boxes[id].classList.remove('pop'); void boxes[id].offsetWidth; boxes[id].classList.add('pop'); } });
+      wrap.querySelectorAll('.spk-rp-list li').forEach(function(li){ var i=+li.dataset.i, b=li.querySelector('button'); b.disabled=i>S.lm; li.classList.toggle('seen',i<=S.lm); li.classList.toggle('now',i===view); });
+      var go=wrap.querySelector('.spk-lm-go'), nx=ST[S.lm+1]; go.classList.toggle('spk-hide',!nx); if(nx) go.textContent=(cfg.nextBtn||'Add the next layer')+' → '+nx.label;
+      wrap.classList.toggle('started',S.lm>=0); wrap.classList.toggle('all',done());
+      var n=S.lm+1; wrap.querySelector('.spk-lm-ct').innerHTML=S.lm<0?esc(cfg.startT||'Tap the map or the button to lay down the first layer.'):(n<ST.length?'<b>'+n+' of '+ST.length+'</b> '+esc(cfg.countT||'layers on the map. Read this part, then add the next one.'):'<b>'+esc(cfg.allT||'Every layer is on the map.')+'</b>');
+      var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function next(){ if(S.lm>=ST.length-1) return; S.lm++; view=S.lm; save(); sfx('paper'); paint(true); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },600); }
+    wrap.querySelector('.spk-map').addEventListener('click',function(){ if(S.lm<0){ ack('explore'); next(); } });
+    wrap.querySelector('.spk-lm-go').addEventListener('click',function(){ ack('explore'); next(); var t=read.getBoundingClientRect(); if(t.top>window.innerHeight*.8) read.scrollIntoView({behavior:'smooth',block:'nearest'}); });
+    wrap.querySelector('.spk-rp-list').addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b||b.disabled) return; view=+b.closest('li').dataset.i; paint(true); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(e){ return '<p class="a">Map layers added: '+(S.lm+1)+' of '+ST.length+'.</p>'; }};
+  };
+
+  /* ---- Planner · Bridge builder (4.05.01): pick three cards (they become the bridge's stone posts), one detail from
+     each, then lay a plank between each pair with a connecting word. Notes only — the student writes.
+     DATA: cards [{id,ico,lab,opts:[{id,t}]}], words [..], pick (default 3) ---- */
+  MOD.bridge=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var CA=cfg.cards||[], WD=cfg.words||['because','so','even though','this meant'], NP=cfg.pick||3;
+    S.br=S.br||{cards:[],det:{},plank:{}}; var was={};
+    function chosen(){ return CA.filter(function(c){ return S.br.cards.indexOf(c.id)>=0; }); }
+    function gaps(){ var c=chosen(); var out=[]; for(var i=0;i+1<c.length;i++) out.push(c[i].id+'>'+c[i+1].id); return out; }
+    var done=function(){ var c=chosen(); return c.length===NP&&c.every(function(x){ return !!S.br.det[x.id]; })&&gaps().every(function(k){ return !!S.br.plank[k]; }); };
+    var b=el('div','spk spk-builder spk-bridgeb');
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-bridge"><svg viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><defs><linearGradient id="spkBrW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FC3DA"/><stop offset="1" stop-color="#2F86B0"/></linearGradient></defs><rect x="0" y="104" width="600" height="46" fill="url(#spkBrW)"/><path class="wv" d="M0,112 q15,-6 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0" fill="none" stroke="#E8F6FB" stroke-width="1.4" opacity=".7"/><path d="M0,104 L40,92 L40,150 L0,150Z M600,104 L560,92 L560,150 L600,150Z" fill="#B7A46A"/><g class="posts"></g><g class="planks"></g></svg><div class="labs"></div></div>'
+      +'<div class="spk-step" data-k="cards"><div class="lab">1 · '+esc(cfg.q1||'Pick three cards from the Evidence Wall')+'</div><div class="spk-opts">'+CA.map(function(c){ return '<button type="button" class="spk-opt" data-c="'+esc(c.id)+'">'+(c.ico||'')+' '+esc(c.lab)+'</button>'; }).join('')+'</div></div>'
+      +'<div class="spk-step" data-k="det"><div class="lab">2 · '+esc(cfg.q2||'Pick one detail from each card')+'</div><div class="dets"></div></div>'
+      +'<div class="spk-step" data-k="plank"><div class="lab">3 · '+esc(cfg.q3||'Lay a plank: pick a connecting word for each gap')+'</div><div class="pls"></div></div>'
+      +'<p class="spk-chain-done">'+esc(cfg.doneT||'The bridge holds. Now write your synthesis entry in Step 3.')+'</p><div class="spk-plan"></div>';
+    var X=[120,300,480];
+    function lines(){ var c=chosen(), out=[]; c.forEach(function(x,i){ var d=find(x.opts,S.br.det[x.id]); out.push([x.lab,d?d.t:'(pick a detail)']); if(i+1<c.length){ var w=S.br.plank[x.id+'>'+c[i+1].id]; if(w) out.push(['Connect',w]); } }); return out; }
+    function paint(){ var c=chosen();
+      b.querySelectorAll('[data-k="cards"] .spk-opt').forEach(function(o){ var on=S.br.cards.indexOf(o.dataset.c)>=0; o.classList.toggle('on',on); o.disabled=!on&&S.br.cards.length>=NP; });
+      b.querySelector('.dets').innerHTML=c.length?c.map(function(x){ return '<div class="spk-brdet" data-c="'+esc(x.id)+'"><div class="k">'+(x.ico||'')+' '+esc(x.lab)+'</div><div class="spk-opts">'+(x.opts||[]).map(function(o){ return '<button type="button" class="spk-opt'+(S.br.det[x.id]===o.id?' on':'')+'" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'; }).join(''):'<p class="spk-brwait">'+esc(cfg.waitT||'Pick your three cards first.')+'</p>';
+      var G=gaps(); b.querySelector('.pls').innerHTML=c.length===NP?G.map(function(k){ var p=k.split('>'), a=find(CA,p[0]), z=find(CA,p[1]); return '<div class="spk-brpl" data-g="'+esc(k)+'"><div class="k">'+esc(a.lab)+' → '+esc(z.lab)+'</div><div class="spk-opts">'+WD.map(function(w){ return '<button type="button" class="spk-opt'+(S.br.plank[k]===w?' on':'')+'" data-w="'+esc(w)+'">'+esc(w)+'</button>'; }).join('')+'</div></div>'; }).join(''):'<p class="spk-brwait">'+esc(cfg.wait3T||'The planks come after your three cards.')+'</p>';
+      var posts='', planks='', labs='';
+      for(var i=0;i<NP;i++){ var x=c[i], has=!!x, det=has&&!!S.br.det[x.id];
+        posts+='<g class="post'+(has?' up':'')+(det?' set':'')+'" transform="translate('+X[i]+',0)"><rect x="-26" y="70" width="52" height="80" rx="4"/><rect class="cap" x="-32" y="62" width="64" height="12" rx="3"/><text x="0" y="104" text-anchor="middle">'+(has?(x.ico||''):'')+'</text></g>';
+        labs+='<span style="left:'+(X[i]/6)+'%">'+(has?esc(x.lab):'')+'</span>';
+        if(i+1<NP){ var k=has&&c[i+1]?x.id+'>'+c[i+1].id:null, w=k&&S.br.plank[k]; planks+='<g class="plank'+(w?' on':'')+(w&&was[k]===false?' drop':'')+'"><rect x="'+(X[i]+30)+'" y="58" width="'+(X[i+1]-X[i]-60)+'" height="9" rx="2"/><text x="'+((X[i]+X[i+1])/2)+'" y="52" text-anchor="middle">'+(w?esc(w):'')+'</text></g>'; if(k){ if(w&&was[k]===false) sfx('thud'); was[k]=!!w; } } }
+      b.querySelector('.posts').innerHTML=posts; b.querySelector('.planks').innerHTML=planks; b.querySelector('.labs').innerHTML=labs;
+      var all=done(); if(all&&was.all===false) setTimeout(function(){ sfx('win'); },300); was.all=all; b.classList.toggle('done',all);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o||o.disabled) return; var st=o.closest('.spk-step').dataset.k;
+      if(st==='cards'){ var id=o.dataset.c, i=S.br.cards.indexOf(id); if(i>=0){ S.br.cards.splice(i,1); delete S.br.det[id]; } else if(S.br.cards.length<NP){ S.br.cards.push(id); sfx('click'); }
+        S.br.cards=CA.map(function(c){ return c.id; }).filter(function(c){ return S.br.cards.indexOf(c)>=0; });
+        var keep={}; gaps().forEach(function(k){ if(S.br.plank[k]) keep[k]=S.br.plank[k]; }); S.br.plank=keep; }
+      else if(st==='det'){ S.br.det[o.closest('.spk-brdet').dataset.c]=o.dataset.v; sfx('click'); }
+      else if(st==='plank'){ var k=o.closest('.spk-brpl').dataset.g; if(!(k in was)) was[k]=false; S.br.plank[k]=o.dataset.w; }
+      save(); paint(); });
+    before(partB,b); was.all=done(); gaps().forEach(function(k){ was[k]=!!S.br.plank[k]; }); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Chord (4.05.01, syn/sym = together): each word is a note on the staff. Tap a word to hear it
+     (g4ss-<lesson>-chord-<n>.mp3 when it exists) and its note plays. Then match each meaning to its word: the note
+     fills in. When all four are matched, the notes slide together into one chord and play at the same time. ---- */
+  MOD.chord=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[]; S.chord=S.chord||{heard:[],matched:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var HZ=cfg.notes||[261.63,329.63,392.0,523.25], NY=[110,96,82,61];
+    var done=function(){ return W.length>0&&S.chord.matched.length===W.length; };
+    var g=el('div','spk spk-chord');
+    var staff=''; for(var s=0;s<5;s++) staff+='<line x1="10" x2="430" y1="'+(40+s*14)+'" y2="'+(40+s*14)+'"/>';
+    var notes=W.map(function(x,i){ var cx=110+i*85; return '<g class="nt" data-i="'+i+'" style="--x:'+cx+'px;--dx:'+(330-cx)+'px"><g class="mv"><g transform="rotate(-20 '+cx+' '+NY[i]+')"><ellipse cx="'+cx+'" cy="'+NY[i]+'" rx="9" ry="6.5"/></g>'+(NY[i]>=110?'<line class="ledger" x1="'+(cx-14)+'" x2="'+(cx+14)+'" y1="'+NY[i]+'" y2="'+NY[i]+'"/>':'')+'<text x="'+cx+'" y="136" text-anchor="middle">'+esc(x.w)+'</text></g></g>'; }).join('');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Play the Chord')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-staff"><svg viewBox="0 0 440 142" aria-hidden="true"><g class="ln">'+staff+'</g><text class="clef" x="16" y="88">𝄞</text>'+notes+'<g class="glow"><circle cx="330" cy="86" r="42"/></g></svg></div>'
+      +'<div class="spk-chwords">'+W.map(function(x,i){ return '<div class="spk-chw" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+(x.root?esc(x.w).replace(esc(x.root),'<b>'+esc(x.root)+'</b>'):esc(x.w))+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-ch-ct"></p><div class="spk-chips spk-chmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-chmeans'), miss=g.querySelector('.spk-miss'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-chord-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-chmean','<span class="ico">🎵</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function note(f,d,v){ if(QUIET) v=(v||.12)*.6; try{ ACtx=ACtx||new (window.AudioContext||window.webkitAudioContext)(); var t=ACtx.currentTime; [[1,'triangle',v||.12],[2,'sine',(v||.12)*.25]].forEach(function(h){ var o=ACtx.createOscillator(), gn=ACtx.createGain(); o.type=h[1]; o.frequency.value=f*h[0]; gn.gain.setValueAtTime(0.0001,t); gn.gain.exponentialRampToValueAtTime(h[2],t+0.02); gn.gain.exponentialRampToValueAtTime(0.0001,t+(d||1.4)); o.connect(gn); gn.connect(ACtx.destination); o.start(t); o.stop(t+(d||1.4)+0.05); }); }catch(e){} }
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.chord.heard.length===W.length;
+      g.querySelectorAll('.spk-chw').forEach(function(b){ var i=+b.dataset.i, h=S.chord.heard.indexOf(i)>=0, m=S.chord.matched.indexOf(i)>=0; b.classList.toggle('heard',h); b.classList.toggle('matched',m); b.querySelector('.m').textContent=m?W[i].m:''; });
+      g.querySelectorAll('.nt').forEach(function(n){ var i=+n.dataset.i; n.classList.toggle('heard',S.chord.heard.indexOf(i)>=0); n.classList.toggle('on',S.chord.matched.indexOf(i)>=0); if(anim===i){ n.classList.remove('ping'); void n.getBoundingClientRect(); n.classList.add('ping'); } });
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-chmean').forEach(function(t){ var f=S.chord.matched.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-ch-ct').innerHTML=!allH?'<b>'+S.chord.heard.length+' of '+W.length+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it and its note.'):(done()?'':'<b>'+S.chord.matched.length+' of '+W.length+'</b> '+esc(cfg.matchT||'notes in the chord. Put each meaning on its word.'));
+      g.classList.toggle('done',done()); if(done()) window._rootMatchDone=true; }
+    function arm(on){ g.querySelectorAll('.spk-chw').forEach(function(b){ b.classList.toggle('armed',on&&!b.classList.contains('matched')); b.classList.remove('over'); }); }
+    function attempt(t,b){ if(!t||!b) return; var i=+t.dataset.i; if(S.chord.matched.indexOf(i)>=0||S.chord.heard.length<W.length) return; arm(false);
+      if(+b.dataset.i===i){ S.chord.matched.push(i); save(); sel=null; miss.textContent=''; note(HZ[i],1.6); paint(i); if(done()) setTimeout(function(){ g.classList.add('strum'); HZ.forEach(function(f){ note(f,2.8,.09); }); setTimeout(function(){ g.classList.remove('strum'); },2600); },900); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    var row=g.querySelector('.spk-chwords');
+    row.addEventListener('click',function(e){ var b=e.target.closest('.spk-chw'); if(!b) return; var i=+b.dataset.i;
+      if(sel&&S.chord.heard.length===W.length){ attempt(sel,b); return; }
+      if(S.chord.heard.indexOf(i)<0){ S.chord.heard.push(i); save(); } note(HZ[i],1.2); say(i); paint(i); });
+    row.addEventListener('keydown',function(e){ var b=e.target.closest('.spk-chw'); if(b&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); b.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-chmean'); if(!t) return; if(S.chord.heard.length<W.length){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-chmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-chmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-chmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    row.addEventListener('dragover',function(e){ var b=e.target.closest('.spk-chw'); g.querySelectorAll('.spk-chw').forEach(function(x){ x.classList.toggle('over',x===b); }); if(b&&!b.classList.contains('matched')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    row.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-chw')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -1486,7 +1658,7 @@
     cabEl.querySelector('.cnt').textContent=C.opened.length+' of 13 open'+(nm()?' · '+nm()+'’s drawer':'');
     var f=find(FILES,cabSel,'n'); var w=cabEl.querySelector('.spk-cardwrap'); if(!f){ w.innerHTML=''; return; }
     var open=C.opened.indexOf(f.n)>=0, now=f.n===THIS&&!S.cracked;
-    var st=f.door?'<div class="st locked">Checkpoint door</div>':open?'<div class="st open">✓ File open</div>':now?'<div class="st now">This file · in progress</div>':'<div class="st locked">🔒 Locked · opens in unit '+f.n+'</div>';
+    var st=f.door?(open?'<div class="st open">✓ Checkpoint door open</div>':now?'<div class="st now">This checkpoint · in progress</div>':'<div class="st locked">Checkpoint door</div>'):open?'<div class="st open">✓ File open</div>':now?'<div class="st now">This file · in progress</div>':'<div class="st locked">🔒 Locked · opens in unit '+f.n+'</div>';
     var sent=open?C.sentences[f.n]:null;
     var body=esc(f.blurb)+(f.where?'<br><span style="color:var(--ffs)">📍 '+esc(f.where)+'</span>':'')+(sent?'<br><span class="qq">“'+esc(sent)+'”</span><br><span style="font-size:12px;color:var(--ffs)">— your Historian’s Sentence</span>':(now?'<br><span style="color:var(--ffs)">Your Historian’s Sentence will be filed here when you write it.</span>':''));
     w.innerHTML='<div class="spk-card"><span class="tab">FILE · '+(f.n<10?'0':'')+f.n+'</span>'+(f.img?'<span class="thw'+(open||now?'':' lk')+'"><img class="th" alt="" src="'+IMG+f.img+'" onerror="this.parentNode.outerHTML=\'<div class=th>📁</div>\'">'+(open||now?'':'<span class="lkb">🔒</span>')+'</span>':'<div class="th">'+(f.door?'🚪':open?'📂':'📁')+'</div>')+'<div><div class="tt">'+esc(f.t)+'</div>'+st+'<div class="bd">'+body+'</div></div>'+(open?'<span class="stamp'+(anim&&f.n===THIS?' new':'')+'">Open</span>':'')+'</div>'; }

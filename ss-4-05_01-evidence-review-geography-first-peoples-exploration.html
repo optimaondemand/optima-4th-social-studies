@@ -1781,6 +1781,1139 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.05.01",
+ "title": "Evidence Review: Geography, First Peoples, and Exploration",
+ "quiet": false,
+ "file": {
+  "n": 5,
+  "title": "Checkpoint",
+  "label": "Checkpoint",
+  "seals": [
+   "🗄️",
+   "🗺️",
+   "🌉"
+  ]
+ },
+ "prevFile": "Causes and Effects of European Colonization",
+ "connector": "Last time we tied causes to effects. Today we sort everything from the first four units and connect it.",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "File Drawers",
+   "t": "Sort the files",
+   "why": "Put each evidence card in the right drawer: the land, the First Peoples, or the explorers."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read and investigate",
+   "why": "Build the map one layer at a time and read each part. Then sort each sentence: honest, stretched, or leaves someone out."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Build the bridge",
+   "why": "Answer three questions. Then connect three cards from the Evidence Wall in 4 to 5 sentences."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. A door just showed up at the end of the Florida Files. It’s a checkpoint!",
+  "opening": [
+   "A checkpoint is a stop where you have to show what you know before you can go on. The sign on this door says: Sort the first Florida files, then connect them.",
+   "Start with the file drawers in the File Drawers tab, below the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the drawers",
+      "go": true,
+      "reply": "Scroll down past the welcome video. Tap a card, then tap the drawer it belongs in. Or drag the card onto the drawer."
+     },
+     {
+      "t": "What’s in the drawers?",
+      "reply": "Three drawers: Florida’s land and water, the First Peoples, and the explorers. You studied them in Units 2, 3, and 4."
+     },
+     {
+      "t": "Is this the way out?",
+      "reply": "I hope so! I can see light around the edges of the door. Let’s find out together."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Build the map one layer at a time and read each part. Then sort the sentences into trays."
+     },
+     {
+      "t": "Why sort first?",
+      "reply": "Because you can’t connect things until you know what you have. Sorting comes first. Connecting comes next."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. If you’re not sure, look back at the map."
+     },
+     {
+      "t": "What does stretch mean?",
+      "reply": "Stretching the evidence means saying more than the facts show. If the cards say some people fought back, you can’t say everyone was happy."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s past the door?",
+      "reply": "A long hallway, and another door at the end. It’s not the way out yet, but I’m closer than ever. Next time we answer one big question: what changed after contact?"
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when I reach the next door."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! Every card is in its drawer. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! The map is built and every sentence is sorted. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 4 to 5 sentences that connect three cards. Build the bridge first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}the checkpoint door just swung open! Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Say only what your sources show. A claim, an idea you say is true, has to match the evidence. When a fact complicates your idea (makes it messier), keep it in. Don’t stretch the evidence by saying more than it shows, and don’t leave anyone out.",
+ "scene1": {
+  "type": "drawers",
+  "kicker": "File Drawers",
+  "h": "Which drawer does it go in?",
+  "voice": "Tap a card, then tap the drawer it belongs in. Or drag the card onto the drawer.",
+  "countT": "cards filed.",
+  "drawers": [
+   {
+    "id": "geo",
+    "ico": "📍",
+    "label": "Geography",
+    "sub": "Florida’s land and water",
+    "color": "#D4943A"
+   },
+   {
+    "id": "fp",
+    "ico": "👣",
+    "label": "First Peoples",
+    "sub": "The people who lived here first",
+    "color": "#34B76F"
+   },
+   {
+    "id": "ex",
+    "ico": "⛵",
+    "label": "Exploration",
+    "sub": "The Europeans who came by ship",
+    "color": "#2F9BD0"
+   }
+  ],
+  "cards": [
+   {
+    "t": "Florida is a peninsula: it has water on three sides.",
+    "d": "geo",
+    "miss": {
+     "fp": "This card is about the land and the water around it, not about people.",
+     "ex": "No ship in this one. It’s about the shape of the land."
+    }
+   },
+   {
+    "t": "Hundreds of freshwater springs bubble up from under the ground.",
+    "d": "geo",
+    "miss": {
+     "fp": "People drank from the springs, but this card is about the water itself.",
+     "ex": "No explorer here. This card is about Florida’s water."
+    }
+   },
+   {
+    "t": "The Everglades is a huge wetland, a slow, wide river of grass in south Florida.",
+    "d": "geo",
+    "miss": {
+     "fp": "This card is about a place, not the people who lived there.",
+     "ex": "This card is about the land and water of south Florida."
+    }
+   },
+   {
+    "t": "The Calusa built huge shell mounds on the southwest coast.",
+    "d": "fp",
+    "miss": {
+     "geo": "The coast is land, but who built the mounds? This card is about people.",
+     "ex": "The Calusa were here long before any ship came."
+    }
+   },
+   {
+    "t": "The Apalachee grew corn, beans, and squash in the north.",
+    "d": "fp",
+    "miss": {
+     "geo": "Soil is land, but who grew the corn? This card is about people.",
+     "ex": "The Apalachee were farming here long before Europeans came."
+    }
+   },
+   {
+    "t": "Timucua villages stood along the St. Johns River.",
+    "d": "fp",
+    "miss": {
+     "geo": "The river is water, but whose villages were there? This card is about people.",
+     "ex": "A French fort was built on this river later, but these villages were there first."
+    }
+   },
+   {
+    "t": "In 1513, Ponce de León landed on the Atlantic coast and named the land La Florida.",
+    "d": "ex",
+    "miss": {
+     "geo": "It mentions the coast, but who landed there? He came by ship from Europe’s side of the world.",
+     "fp": "Ponce de León came by ship. He wasn’t one of the First Peoples."
+    }
+   },
+   {
+    "t": "In 1539, de Soto marched through Florida looking for gold.",
+    "d": "ex",
+    "miss": {
+     "geo": "Who was looking for gold? This card is about a Spanish explorer.",
+     "fp": "De Soto came by ship from Spain’s lands. He wasn’t one of the First Peoples."
+    }
+   },
+   {
+    "t": "In 1564, France built Fort Caroline on the St. Johns River.",
+    "d": "ex",
+    "miss": {
+     "geo": "It names a river, but who built the fort? France came by ship.",
+     "fp": "The Timucua lived along this river, but they didn’t build this fort. France did."
+    }
+   }
+  ],
+  "win": "🗄️ Every drawer is full and shut. You sorted the land, the First Peoples, and the explorers. Now you can connect them.",
+  "why": {
+   "icon": "🗄️",
+   "q": "Why drawers?",
+   "t": "Historians keep their evidence in files, and the files go in drawers. When every fact is in the right drawer, you can find it fast and see what goes together. That’s why you file these cards before you connect them."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "layermap",
+   "activity": "The Four Cards on the Wall",
+   "aria": "Map of Florida. Each layer appears when you add it: land and water, the First Peoples, the Europeans, and contact.",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^The Evidence Wall holds"
+    },
+    {
+     "id": "p1",
+     "match": "^1\\. The land"
+    },
+    {
+     "id": "p2",
+     "match": "^2\\. The First"
+    },
+    {
+     "id": "p3",
+     "match": "^3\\. Europeans"
+    },
+    {
+     "id": "p4",
+     "match": "^4\\. Contact"
+    }
+   ],
+   "label": "Build the map",
+   "nextBtn": "Add the next layer",
+   "startT": "Tap the map or the button to lay down the first layer.",
+   "countT": "layers on the map. Read this part, then add the next one.",
+   "allT": "Every layer is on the map. Land, people, ships, contact: one story.",
+   "steps": [
+    {
+     "label": "Land and water",
+     "ico": "🌊",
+     "paras": [
+      "p0",
+      "p1"
+     ],
+     "show": [
+      "gulf",
+      "atl",
+      "springs",
+      "glades",
+      "keys"
+     ]
+    },
+    {
+     "label": "The First Peoples",
+     "ico": "👣",
+     "paras": [
+      "p2"
+     ],
+     "show": [
+      "peoples",
+      "mound",
+      "corn"
+     ]
+    },
+    {
+     "label": "The Europeans arrive",
+     "ico": "⛵",
+     "paras": [
+      "p3"
+     ],
+     "show": [
+      "ponce",
+      "tampa",
+      "fc",
+      "sta"
+     ]
+    },
+    {
+     "label": "Contact",
+     "ico": "⚖️",
+     "paras": [
+      "p4"
+     ],
+     "show": [
+      "sick",
+      "cattle"
+     ]
+    }
+   ],
+   "layers": {
+    "gulf": {
+     "kind": "text",
+     "t": "Gulf coast",
+     "tlon": -84.3,
+     "tlat": 28.2,
+     "a": "middle"
+    },
+    "atl": {
+     "kind": "text",
+     "t": "Atlantic coast",
+     "tlon": -79.95,
+     "tlat": 28.55,
+     "a": "middle",
+     "rot": 68
+    },
+    "springs": {
+     "kind": "spring",
+     "pts": [
+      [
+       -82.05,
+       29.22
+      ],
+      [
+       -84.3,
+       30.24
+      ],
+      [
+       -82.76,
+       29.98
+      ],
+      [
+       -81.34,
+       28.95
+      ],
+      [
+       -82.44,
+       29.1
+      ]
+     ],
+     "t": "Springs",
+     "tlon": -82.2,
+     "tlat": 28.68,
+     "a": "middle"
+    },
+    "glades": {
+     "kind": "emoji",
+     "e": "🌾",
+     "pts": [
+      [
+       -80.85,
+       25.85
+      ],
+      [
+       -81.15,
+       26.15
+      ],
+      [
+       -80.6,
+       26.2
+      ],
+      [
+       -80.95,
+       26.5
+      ]
+     ],
+     "t": "Everglades",
+     "tlon": -80.9,
+     "tlat": 26.85,
+     "a": "middle"
+    },
+    "keys": {
+     "kind": "text",
+     "t": "The Keys",
+     "tlon": -81.2,
+     "tlat": 24.35,
+     "a": "middle"
+    },
+    "peoples": {
+     "kind": "names",
+     "items": [
+      {
+       "t": "Apalachee",
+       "lon": -84.3,
+       "lat": 30.55,
+       "a": "end"
+      },
+      {
+       "t": "Timucua",
+       "lon": -81.75,
+       "lat": 29.75,
+       "a": "end"
+      },
+      {
+       "t": "Ais",
+       "lon": -80.6,
+       "lat": 27.6,
+       "a": "end"
+      },
+      {
+       "t": "Calusa",
+       "lon": -81.8,
+       "lat": 26.65,
+       "a": "end"
+      },
+      {
+       "t": "Tequesta",
+       "lon": -80.3,
+       "lat": 25.75,
+       "a": "end",
+       "dy": 12
+      }
+     ]
+    },
+    "mound": {
+     "kind": "emoji",
+     "e": "🐚",
+     "pts": [
+      [
+       -81.86,
+       26.42
+      ]
+     ],
+     "t": "Shell mounds",
+     "tlon": -82.75,
+     "tlat": 26.0,
+     "a": "middle"
+    },
+    "corn": {
+     "kind": "emoji",
+     "e": "🌽",
+     "pts": [
+      [
+       -83.8,
+       30.3
+      ]
+     ],
+     "t": "Farms",
+     "dx": 8,
+     "dy": 4
+    },
+    "ponce": {
+     "kind": "ship",
+     "pts": [
+      [
+       -80.55,
+       29.6
+      ]
+     ],
+     "color": "#B3261E",
+     "t": "1513",
+     "tlon": -80.15,
+     "tlat": 29.25,
+     "a": "middle"
+    },
+    "tampa": {
+     "kind": "ship",
+     "pts": [
+      [
+       -83.15,
+       27.65
+      ]
+     ],
+     "color": "#B3261E",
+     "t": "1528 · 1539",
+     "tlon": -83.4,
+     "tlat": 27.2,
+     "a": "middle"
+    },
+    "fc": {
+     "kind": "flag",
+     "flag": "fr",
+     "lon": -81.5,
+     "lat": 30.39,
+     "s": 1.3,
+     "t": "1564",
+     "dx": 8,
+     "dy": -6
+    },
+    "sta": {
+     "kind": "flag",
+     "flag": "es",
+     "lon": -81.31,
+     "lat": 29.89,
+     "s": 1.3,
+     "t": "1565",
+     "dx": 8,
+     "dy": 2
+    },
+    "sick": {
+     "kind": "fade",
+     "pts": [
+      [
+       -84.3,
+       30.55
+      ],
+      [
+       -83.9,
+       30.45
+      ],
+      [
+       -81.75,
+       29.75
+      ],
+      [
+       -82.3,
+       29.6
+      ],
+      [
+       -81.45,
+       30.1
+      ],
+      [
+       -80.6,
+       27.6
+      ],
+      [
+       -81.8,
+       26.65
+      ],
+      [
+       -81.95,
+       26.4
+      ],
+      [
+       -80.25,
+       25.75
+      ]
+     ],
+     "t": "Sickness spreads",
+     "tlon": -84.5,
+     "tlat": 29.05,
+     "a": "middle"
+    },
+    "cattle": {
+     "kind": "emoji",
+     "e": "🐄",
+     "pts": [
+      [
+       -82.32,
+       29.45
+      ]
+     ],
+     "t": "New animals",
+     "tlon": -82.47,
+     "tlat": 29.38,
+     "a": "end"
+    }
+   },
+   "why": {
+    "icon": "🗺️",
+    "q": "Why build a map?",
+    "t": "Every part of Florida’s story happened in a real place. When you stack the land, the people, and the ships on one map, you can see how each part sets up the next. Seeing something that shows up again and again is how you find a pattern. That’s why you build the map one layer at a time."
+   }
+  },
+  "evidence": {
+   "type": "sayinfer",
+   "kicker": "Honest or stretched?",
+   "h": "Does this sentence tell the truth about the wall?",
+   "voice": "Tap a sentence, then tap the tray it belongs in. Or drag it. Use the four cards on the Evidence Wall above.",
+   "countT": "sentences sorted.",
+   "firstT": "Tap a sentence first, then the tray it belongs in.",
+   "readT": "Last step: finish building the map in Learn the Story.",
+   "bins": [
+    {
+     "id": "show",
+     "ico": "📌",
+     "t": "The cards show this",
+     "sub": "It’s on the wall. Nothing is stretched or left out.",
+     "ink": "Honest"
+    },
+    {
+     "id": "stretch",
+     "ico": "🧶",
+     "t": "Stretches the evidence",
+     "sub": "It says more than the cards show, or something they don’t show at all.",
+     "ink": "Stretched"
+    },
+    {
+     "id": "leaves",
+     "ico": "👥",
+     "t": "Leaves someone out",
+     "sub": "Part of it may be true, but it skips the people who were already here.",
+     "ink": "Left out"
+    }
+   ],
+   "cards": [
+    {
+     "t": "The First Peoples lived in Florida for thousands of years before Europeans came.",
+     "bin": "show",
+     "why": "The First Peoples card says this.",
+     "misses": {
+      "stretch": "Read the First Peoples card. Does it say this?",
+      "leaves": "This sentence is about the First Peoples, so it doesn’t leave them out."
+     }
+    },
+    {
+     "t": "The coast gave the Calusa fish and shellfish, so they built towns there.",
+     "bin": "show",
+     "why": "The Geography card and the First Peoples card connect here.",
+     "misses": {
+      "stretch": "Look at the Geography card. Was the water full of food?",
+      "leaves": "This sentence is about the Calusa, so it doesn’t leave them out."
+     }
+    },
+    {
+     "t": "Europeans came looking for gold, land to claim, and people to convert.",
+     "bin": "show",
+     "why": "The Exploration card lists these reasons.",
+     "misses": {
+      "stretch": "Read the Exploration card. These are the reasons it lists.",
+      "leaves": "This sentence is only about why Europeans came. Is anything in it untrue?"
+     }
+    },
+    {
+     "t": "Diseases from Europe killed many First Peoples.",
+     "bin": "show",
+     "why": "The Contact card says the First Peoples had no defense against these diseases.",
+     "misses": {
+      "stretch": "Read the Contact card. It talks about diseases and people who were lost.",
+      "leaves": "This sentence is about the First Peoples. It doesn’t leave them out."
+     }
+    },
+    {
+     "t": "Every explorer found gold in Florida.",
+     "bin": "stretch",
+     "why": "The cards say they came looking for gold. They never say anyone found it.",
+     "misses": {
+      "show": "Read the Exploration card again. Does it say they found gold, or that they were looking for it?",
+      "leaves": "This one isn’t about who is missing. Did the explorers really find gold?"
+     }
+    },
+    {
+     "t": "All the First Peoples were happy when the Europeans came.",
+     "bin": "stretch",
+     "why": "The Contact card says some communities fought back. That doesn’t sound happy.",
+     "misses": {
+      "show": "Read the Contact card. Did everyone welcome the Europeans?",
+      "leaves": "It talks about the First Peoples, but is it true? Check the Contact card."
+     }
+    },
+    {
+     "t": "Only Spain sent ships to Florida.",
+     "bin": "stretch",
+     "why": "The Exploration card names France and England too.",
+     "misses": {
+      "show": "Read the Exploration card. How many countries does it name?",
+      "leaves": "This isn’t about people being left out. Is it even true? Check the Exploration card."
+     }
+    },
+    {
+     "t": "Ponce de León discovered Florida in 1513.",
+     "bin": "leaves",
+     "why": "People already lived here. You can’t discover a place where people already live.",
+     "misses": {
+      "show": "He did land in 1513. But who was already living here?",
+      "stretch": "The date is right. The problem is the word discovered. Who does it leave out?"
+     }
+    },
+    {
+     "t": "Europeans brought new animals and tools, and that’s the whole story of contact.",
+     "bin": "leaves",
+     "why": "Animals and tools did come. But the Contact card also says diseases came and people lost their land.",
+     "misses": {
+      "show": "Part of it is true. But is that the whole Contact card?",
+      "stretch": "The animals and tools part is true. What did it skip, and who paid?"
+     }
+    }
+   ],
+   "win": "✨ Sorted! An honest historian says what the evidence shows, doesn’t <b>stretch<\/b> it, and doesn’t <b>leave anyone out<\/b>.",
+   "why": {
+    "icon": "⚖️",
+    "q": "Why three trays?",
+    "t": "Today’s virtue is honesty. For a historian, honesty means saying only what the evidence shows. A sentence can match the cards, it can stretch the evidence and say too much, or it can leave out people who were part of the story. That’s why there are three trays."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Read the four cards on the Evidence Wall.",
+    "Sort each sentence below into a tray: the cards show this, it stretches the evidence, or it leaves someone out."
+   ]
+  }
+ },
+ "planner": {
+  "type": "bridge",
+  "voice": "Build your bridge. Pick three cards from the Evidence Wall, one detail from each, and a connecting word for each gap. These are just notes. You’ll write your own sentences in Step 3.",
+  "cards": [
+   {
+    "id": "geo",
+    "ico": "📍",
+    "lab": "Geography",
+    "opts": [
+     {
+      "id": "g1",
+      "t": "Two coasts full of fish and shellfish"
+     },
+     {
+      "id": "g2",
+      "t": "Freshwater springs and rivers"
+     },
+     {
+      "id": "g3",
+      "t": "Warm, wet weather"
+     },
+     {
+      "id": "g4",
+      "t": "Wetlands and the Keys"
+     }
+    ]
+   },
+   {
+    "id": "fp",
+    "ico": "👣",
+    "lab": "First Peoples",
+    "opts": [
+     {
+      "id": "f1",
+      "t": "The Calusa built shell mounds on the coast"
+     },
+     {
+      "id": "f2",
+      "t": "The Apalachee farmed in the north"
+     },
+     {
+      "id": "f3",
+      "t": "They traded along rivers"
+     },
+     {
+      "id": "f4",
+      "t": "They lived here for thousands of years"
+     }
+    ]
+   },
+   {
+    "id": "ex",
+    "ico": "⛵",
+    "lab": "Exploration",
+    "opts": [
+     {
+      "id": "e1",
+      "t": "Ships came looking for gold"
+     },
+     {
+      "id": "e2",
+      "t": "They wanted land to claim"
+     },
+     {
+      "id": "e3",
+      "t": "Spain wanted to convert people"
+     },
+     {
+      "id": "e4",
+      "t": "Spain, France, and England all came"
+     }
+    ]
+   },
+   {
+    "id": "ct",
+    "ico": "⚖️",
+    "lab": "Contact",
+    "opts": [
+     {
+      "id": "c1",
+      "t": "Diseases spread, and people had no defense"
+     },
+     {
+      "id": "c2",
+      "t": "New animals and tools arrived"
+     },
+     {
+      "id": "c3",
+      "t": "Some fought back, some adapted"
+     },
+     {
+      "id": "c4",
+      "t": "Many were forced off their land"
+     }
+    ]
+   }
+  ],
+  "words": [
+   "because",
+   "so",
+   "even though",
+   "this meant"
+  ],
+  "doneT": "The bridge holds. Now write your synthesis entry in Step 3.",
+  "why": {
+   "icon": "🌉",
+   "q": "Why a bridge?",
+   "t": "A bridge carries you from one side to the other, but only if every plank is in. Your three cards are the strong stone posts. Your connecting words, like because and so, are the planks that carry a reader from one card to the next. That’s why you build a bridge."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a land detail",
+    "rx": "coast|shore|beach|ocean|sea\\b|water|gulf|atlantic|spring|river|lake|wetland|swamp|everglades|marsh|keys|island|peninsula|land\\b|soil|warm|hot\\b|wet\\b|rain|weather|climate|fish|shellfish|oyster|clam|shell|food|mangrove|estuar|forest|geograph|grass"
+   },
+   {
+    "t": "a people detail",
+    "rx": "first peoples?|native|indian|tribe|calusa|tequesta|apalachee|timucua|\\bais\\b|mound|village|town|lived|\\blive|farm|corn|bean|squash|trade|canoe|thousands of years|communit|people"
+   },
+   {
+    "t": "an explorer or contact detail",
+    "rx": "europe|spain|spanish|france|french|england|english|ship|sail|explor|ponce|narv[aá]ez|soto|ribault|laudonni|drake|1513|1528|1539|1564|1565|1586|gold|claim|convert|christian|religio|fort\\b|augustine|contact|disease|sick|smallpox|measles|died|\\bdie\\b|death|kill|horse|cattle|cow|pig|animal|tool|fought|fight|resist|adapt|forced|lost|took|taken"
+   },
+   {
+    "t": "a connecting word",
+    "rx": "\\b(because|so|even though|this meant|that meant|which meant|since|that'?s why|that is why|as a result|then|but|led to|connect)\\b"
+   }
+  ],
+  "lines": [
+   "Start with your first card: one detail about the land, the people, or the explorers.",
+   "Good. Now add a second card, and connect them with a word like because or so.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful synthesis. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use details from the Evidence Wall."
+  },
+  {
+   "t": "Plan",
+   "w": "Build the bridge: three cards, a detail from each, and connecting words."
+  },
+  {
+   "t": "Write",
+   "w": "Write 4 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Synthesis Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your synthesis entry and check off the whole list.",
+ "vocab": {
+  "type": "chord",
+  "kicker": "Play the Chord",
+  "h": "syn / sym = together",
+  "root": "syn",
+  "rootMeaning": "= together",
+  "voice": "Tap each word to hear it and play its note. Then put each meaning on its word: tap the meaning, then the word, or drag it.",
+  "words": [
+   {
+    "w": "synthesis",
+    "root": "syn",
+    "m": "putting pieces of evidence together to tell one bigger story",
+    "miss": "This meaning is about evidence and stories. Which word is today’s big word?",
+    "say": "Synthesis. Putting pieces of evidence together to tell one bigger story."
+   },
+   {
+    "w": "synonym",
+    "root": "syn",
+    "m": "a word that means the same, or almost the same, as another word",
+    "miss": "The ending -onym means name, or word. Which word is about words?",
+    "say": "Synonym. A word that means the same, or almost the same, as another word. Big and large are synonyms."
+   },
+   {
+    "w": "symphony",
+    "root": "sym",
+    "m": "a long piece of music where many instruments play together",
+    "miss": "The ending -phony means sound, like in telephone. Which word is about music?",
+    "say": "Symphony. A long piece of music where many instruments play together."
+   },
+   {
+    "w": "synchronize",
+    "root": "syn",
+    "m": "to make things happen at the same time",
+    "miss": "Chron means time, like in chronology. Which word is about time?",
+    "say": "Synchronize. To make things happen at the same time."
+   }
+  ],
+  "win": "🎵 All four notes ring together: <b>syn<\/b> and <b>sym<\/b> = together",
+  "why": {
+   "icon": "🎵",
+   "q": "Why a chord?",
+   "t": "A chord is a group of notes played together at the same time. One note alone is just a sound. Played together, the notes make music. The Greek root <i>syn<\/i> means together, so each word you match adds a note to the chord. That’s why you play a chord here."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "My own file drawers",
+   "at": "scene1",
+   "script": "Here’s how I sorted my junk drawer at home. I made three piles: things for the kitchen, things for school, and things to fix. A dead flashlight went in the fix pile. A pencil went in the school pile. My one rule: ask what the thing is about, then pick its pile. Now try that with each card."
+  },
+  {
+   "slot": "guide2",
+   "label": "Three units, one story",
+   "at": "s1done",
+   "script": "Look at your drawers. You studied the land in Unit 2, the First Peoples in Unit 3, and the explorers in Unit 4. Three different units. But they aren’t three different stories. In the Explore tab, you’ll see how they connect into one."
+  },
+  {
+   "slot": "guide3",
+   "label": "The chain in one breath",
+   "at": "afterread",
+   "script": "Here’s the whole chain in one breath. The land came first. The land shaped where the First Peoples lived. Then ships came from Europe looking for gold and land. And contact changed everything for the people already here. Pause me and say the chain back, out loud, in your own words."
+  },
+  {
+   "slot": "guide4",
+   "label": "Honest or stretched: my pizza",
+   "at": "evidence",
+   "script": "Here’s an honest check from my own life. My sister says our corner shop has the best pizza in the whole world. Did she taste every pizza in the world? No. That’s stretching. Honest would be: it’s the best pizza I’ve ever had. Now check each sentence. Does it say more than the cards show? Does it leave someone out?"
+  },
+  {
+   "slot": "guide5",
+   "label": "My three-post bridge",
+   "at": "plan",
+   "script": "Here’s a bridge from my own life. Post one: my street got a new stop sign. Post two: cars slowed down at the corner. Post three: kids can walk to school safely. Now the planks. We got a stop sign, so cars slowed down. Cars slowed down, and this meant kids could walk safely. Now build yours. Three posts, and a plank in every gap."
+  }
+ ],
+ "cabinet": {
+  "n": 5,
+  "where": "The door between Unit 4 and Unit 6",
+  "blurb": "The first checkpoint: sort the land, the First Peoples, and the explorers, then connect them into one story."
+ },
+ "notes": {
+  "learned": [
+   "A synthesis puts pieces of evidence together to tell one bigger story.",
+   "The land came first: two coasts, springs, wetlands, and the Keys. It shaped where the First Peoples lived.",
+   "The Calusa, Tequesta, Apalachee, Timucua, and Ais lived in Florida for thousands of years before Europeans came.",
+   "Ships from Spain, France, and England came for gold, new routes, land to claim, and to convert people to Christianity.",
+   "Contact brought new animals and tools, and diseases that killed many First Peoples. Many lost their land.",
+   "An honest historian doesn’t stretch the evidence and doesn’t leave anyone out. People already lived here, so “discovery” is not an honest word."
+  ],
+  "vocab": [
+   [
+    "evidence",
+    "facts and clues that show what really happened"
+   ],
+   [
+    "synthesis",
+    "putting pieces of evidence together to tell one bigger story"
+   ],
+   [
+    "pattern",
+    "something that shows up again and again"
+   ],
+   [
+    "checkpoint",
+    "a stop where you have to show what you know before you go on"
+   ],
+   [
+    "peninsula",
+    "land with water on three sides"
+   ],
+   [
+    "climate",
+    "the usual weather of a place"
+   ],
+   [
+    "claim",
+    "an idea you say is true; a country’s claim on land means it says, “This land is ours”"
+   ],
+   [
+    "convert",
+    "to get someone to change their religion"
+   ],
+   [
+    "expedition",
+    "a long trip to explore"
+   ],
+   [
+    "contact",
+    "when two groups of people meet for the first time"
+   ],
+   [
+    "resist",
+    "to fight back"
+   ],
+   [
+    "adapt",
+    "to change how you live"
+   ],
+   [
+    "stretch the evidence",
+    "to say more than the facts show"
+   ],
+   [
+    "synonym",
+    "a word that means the same, or almost the same, as another word"
+   ],
+   [
+    "symphony",
+    "a long piece of music where many instruments play together"
+   ],
+   [
+    "synchronize",
+    "to make things happen at the same time"
+   ]
+  ],
+  "wordParts": "The Greek root syn / sym means “together.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a geography detail",
+    "rx": "coast|shore|beach|ocean|sea\\b|water|gulf|atlantic|spring|river|lake|wetland|swamp|everglades|marsh|keys|island|peninsula|land\\b|soil|warm|hot\\b|wet\\b|rain|weather|climate|fish|shellfish|oyster|clam|shell|food|mangrove|estuar|forest|geograph|grass",
+    "n": 1
+   },
+   {
+    "t": "a First Peoples detail",
+    "rx": "first peoples?|native|indian|tribe|calusa|tequesta|apalachee|timucua|\\bais\\b|mound|village|town|lived|\\blive|farm|corn|bean|squash|trade|canoe|thousands of years|communit|people",
+    "n": 1
+   },
+   {
+    "t": "how they connect",
+    "rx": "because|\\bso\\b|since|that'?s why|connect|gave|give|helped|help|let them|could|used|use|needed|need|got|get|made it|for food|to eat|to live|near|close to|by the|\\bmade\\b|out of|from the",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "your answer",
+    "rx": "\\bgood\\b|\\bbad\\b|both|harm|hurt|mostly|terrible|awful|helped|worse|better|mixed|unfair|\\bsad\\b|horrible|wrong|not fair|it was not",
+    "n": 1
+   },
+   {
+    "t": "evidence from the Contact card",
+    "rx": "disease|sick|smallpox|measles|illness|germ|died|\\bdie\\b|dying|death|dead|kill|horse|animal|tool|weapon|gun|goods|fought|fight|resist|adapt|forced|lost|\\bland\\b|leave|left|defense|lost their",
+    "n": 1
+   },
+   {
+    "t": "a reason",
+    "rx": "because|\\bso\\b|since|that'?s why|for example|like|when|\\bif\\b|but|even though",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "your new word",
+    "rx": "arriv|contact|encounter|\\bmeet|meeting|\\bmet\\b|invasion|invad|\\bcame\\b|coming|visit|landing|landed|explor|took|taking|takeover|conquer|settl|found\\b|showed up|reached|entered|word",
+    "n": 1
+   },
+   {
+    "t": "evidence from the cards",
+    "rx": "people|peoples|lived|living|\\blive|already|thousands|calusa|tequesta|apalachee|timucua|\\bais\\b|native|tribe|disease|\\bland\\b|mound|village|town|card",
+    "n": 1
+   },
+   {
+    "t": "why it’s more honest",
+    "rx": "because|already|\\bso\\b|since|wasn'?t|was not|not new|didn'?t|did not|honest|true|fair|before",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the Geography card and the First Peoples card on the Evidence Wall in the Explore tab (tab 2).",
+   "Pick one thing about the land, like the fish on the coast. Then find people who used it, like the Calusa.",
+   "Try this shape: “The Geography card says ___. The First Peoples card says ___. They connect because ___.”"
+  ],
+  "journal-q2": [
+   "Reread the Contact card in the Explore tab (tab 2), and look at the last layer of the map.",
+   "Some things that came were new, like horses and tools. Other things hurt people, like disease. Was it more good or more bad for the First Peoples?",
+   "Try this shape: “It was mostly ___ for the First Peoples because ___. For example, ___.”"
+  ],
+  "journal-q3": [
+   "Think about who was already living in Florida in 1513.",
+   "Can you discover a place where people already live? Try a word like arrival, contact, or meeting.",
+   "Try this shape: “I would use the word ___ because ___. The First Peoples card shows ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: how did the land shape where the explorers landed too?",
+  "journal-q2": "Go further: did anything good for the First Peoples come from contact? Was it worth the cost?",
+  "journal-q3": "Go further: why do you think older books used the word discovery?"
+ },
+ "quizMiss": [
+  {
+   "a": "Ship names tell us who came, not why people lived in a place. Which card answers “why here?”",
+   "c": "A date tells when, not why. Look at the Geography card: what did the land give people?"
+  },
+  {
+   "a": "Hiding a source is the opposite of honest. Reread the Historian Lens near the top of the File Drawers tab.",
+   "c": "Ignoring a source is like hiding it. An honest historian lets the evidence change the idea."
+  },
+  {
+   "b": "History isn’t about what’s easy. Look at the map you built: what came first, the land or the ships?",
+   "c": "Pretty maps aren’t the reason. Think about the order of the map layers: land first, then people, then ships."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2017,140 +3150,95 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Evidence Wall — Synthesis Gallery ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the checkpoint door on a Florida shore (4.05.01 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A tall arched wooden door stands alone on a Florida shore at sunrise. Its four carved panels show a spring in the wetlands, a shell mound, a sailing ship and a small village fire. The panels glow one at a time, and golden light leaks through the seam of the door onto the sand." style="width:100%;height:auto;display:block;">
+  <style>
+    .c501-pn{opacity:0;animation:c501pn 12s ease-in-out infinite}
+    .c501-p2{animation-delay:3s} .c501-p3{animation-delay:6s} .c501-p4{animation-delay:9s}
+    .c501-seam{animation:c501seam 4s ease-in-out infinite}
+    .c501-ray{animation:c501ray 6s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+    .c501-wv{animation:c501wv 14s linear infinite}
+    .c501-bob{animation:c501bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .c501-fl{animation:c501fl .9s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+    .c501-sw{animation:c501sw 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    @keyframes c501pn{0%,30%,100%{opacity:0}8%,22%{opacity:.75}}
+    @keyframes c501seam{0%,100%{opacity:.75}50%{opacity:1}}
+    @keyframes c501ray{0%,100%{opacity:.35;transform:scaleX(1)}50%{opacity:.6;transform:scaleX(1.06)}}
+    @keyframes c501wv{to{transform:translateX(-80px)}}
+    @keyframes c501bob{0%,100%{transform:translateY(0)}50%{transform:translateY(1.5px)}}
+    @keyframes c501fl{from{transform:scaleY(.85)}to{transform:scaleY(1.1)}}
+    @keyframes c501sw{0%,100%{transform:rotate(0)}50%{transform:rotate(1.6deg)}}
+    @media (prefers-reduced-motion: reduce){.c501-pn,.c501-seam,.c501-ray,.c501-wv,.c501-bob,.c501-fl,.c501-sw{animation:none}.c501-p1{opacity:.6}}
+  </style>
   <defs>
-    <linearGradient id="bannerGrad" x1="0" y1="0" x2="920" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0E1F44"/>
-      <stop offset="60%" stop-color="#22386E"/>
-      <stop offset="100%" stop-color="#3F5A9A"/>
-    </linearGradient>
-    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1A2A52" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#0A1530" stop-opacity="0.45"/>
-    </linearGradient>
-    <radialGradient id="cardGlow" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.45"/><stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/></radialGradient>
-    <style>
-      .pin-pulse { animation: pinPulse 2.6s ease-in-out infinite; transform-origin:center; }
-      @keyframes pinPulse { 0%,100% { opacity:0.7; } 50% { opacity:1; } }
-      .card-drift { animation: cardDrift 7s ease-in-out infinite; }
-      @keyframes cardDrift { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,-3px); } }
-      .thread-shimmer { animation: threadShim 4s ease-in-out infinite; }
-      @keyframes threadShim { 0%,100% { opacity:0.45; } 50% { opacity:0.85; } }
-      .twk { animation: tw 2.4s ease-in-out infinite; }
-      @keyframes tw { 0%,100% { opacity:0.25; } 50% { opacity:1; } }
-    </style>
+    <linearGradient id="c501sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B4C7E"/><stop offset=".55" stop-color="#E9A86A"/><stop offset="1" stop-color="#F7D79A"/></linearGradient>
+    <radialGradient id="c501glow" cx="0.6" cy="0.62" r="0.5"><stop offset="0" stop-color="#FFF3C4" stop-opacity=".95"/><stop offset=".4" stop-color="#F6C96A" stop-opacity=".45"/><stop offset="1" stop-color="#F6C96A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="c501sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3F86A8"/><stop offset="1" stop-color="#1D5F80"/></linearGradient>
+    <linearGradient id="c501sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBD39A"/><stop offset="1" stop-color="#C9A86A"/></linearGradient>
+    <linearGradient id="c501wood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6B4423"/><stop offset=".5" stop-color="#8B5A2B"/><stop offset="1" stop-color="#5A3418"/></linearGradient>
+    <linearGradient id="c501ray" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFF3C4" stop-opacity=".9"/><stop offset="1" stop-color="#FFF3C4" stop-opacity="0"/></linearGradient>
+    <clipPath id="c501arch"><path d="M512,176 V74 A48,48 0 0 1 608,74 V176 Z"/></clipPath>
   </defs>
-
-  <rect width="920" height="260" fill="url(#bannerGrad)"/>
-  <rect width="920" height="260" fill="url(#wallGrad)"/>
-
-  <!-- starry data points -->
-  <g fill="#FFE5A0">
-    <circle class="twk" cx="60" cy="40" r="1.4" style="animation-delay:0s"/>
-    <circle class="twk" cx="180" cy="28" r="1.1" style="animation-delay:0.7s"/>
-    <circle class="twk" cx="850" cy="35" r="1.4" style="animation-delay:0.3s"/>
-    <circle class="twk" cx="760" cy="60" r="1" style="animation-delay:1.2s"/>
-    <circle class="twk" cx="280" cy="50" r="1" style="animation-delay:1.6s"/>
-    <circle class="twk" cx="640" cy="25" r="1.2" style="animation-delay:0.9s"/>
+  <rect width="920" height="200" fill="url(#c501sky)"/>
+  <rect width="920" height="200" fill="url(#c501glow)"/>
+  <!-- a few last stars -->
+  <g fill="#FFFDF5" opacity=".7"><circle cx="70" cy="22" r="1.2"/><circle cx="190" cy="14" r="1"/><circle cx="330" cy="30" r="1.1"/><circle cx="780" cy="18" r="1.2"/><circle cx="870" cy="40" r="1"/></g>
+  <!-- distant birds (shapes only) -->
+  <g fill="none" stroke="#2B3A55" stroke-width="1.4" stroke-linecap="round" opacity=".55"><path d="M250,52 q5,-5 10,0 q5,-5 10,0"/><path d="M282,62 q4,-4 8,0 q4,-4 8,0"/></g>
+  <!-- sea, left -->
+  <path d="M0,128 H470 L440,200 H0 Z" fill="url(#c501sea)"/>
+  <g class="c501-wv" fill="none" stroke="#CFE9F2" stroke-width="1.3" opacity=".6">
+    <path d="M0,140 q20,-5 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0"/>
+    <path d="M0,160 q20,-5 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0"/>
+    <path d="M0,182 q20,-5 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0"/>
   </g>
-
-  <!-- evidence wall: corkboard panel -->
-  <rect x="60" y="50" width="800" height="170" rx="6" fill="#3A2A18" opacity="0.55"/>
-  <rect x="60" y="50" width="800" height="170" rx="6" fill="none" stroke="#8A6A40" stroke-width="2" opacity="0.85"/>
-  <!-- corkboard texture dots -->
-  <g fill="#5A4020" opacity="0.35">
-    <circle cx="120" cy="80" r="1"/><circle cx="200" cy="100" r="1"/><circle cx="300" cy="70" r="1"/><circle cx="400" cy="180" r="1"/><circle cx="500" cy="120" r="1"/><circle cx="600" cy="90" r="1"/><circle cx="700" cy="170" r="1"/><circle cx="780" cy="110" r="1"/><circle cx="350" cy="200" r="1"/><circle cx="450" cy="60" r="1"/>
+  <!-- sand and dunes -->
+  <path d="M380,200 C420,150 470,134 540,130 C640,124 760,128 920,120 V200 Z" fill="url(#c501sand)"/>
+  <path d="M380,200 C420,152 470,136 540,132" fill="none" stroke="#FFF8E0" stroke-width="2" opacity=".7"/>
+  <!-- mangroves at the water's edge -->
+  <g fill="#3C6B34"><ellipse cx="402" cy="150" rx="26" ry="12"/><ellipse cx="428" cy="142" rx="20" ry="10"/></g>
+  <g stroke="#4A3A22" stroke-width="1.4" fill="none"><path d="M392,160 q-4,8 -9,12 M400,160 q0,9 -3,13 M410,158 q3,9 8,12 M424,152 q2,9 6,12"/></g>
+  <!-- palms, right -->
+  <g class="c501-sw">
+    <path d="M800,128 C803,100 806,78 812,52" fill="none" stroke="#6B4A2A" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#2F6B3A"><path d="M812,52 q-30,-6 -46,10 q22,-12 46,-6z"/><path d="M812,52 q28,-10 46,4 q-24,-8 -46,0z"/><path d="M812,52 q-10,-22 -32,-26 q20,10 30,26z"/><path d="M812,52 q14,-20 36,-20 q-22,6 -34,22z"/><path d="M812,52 q-2,22 -20,34 q12,-16 18,-34z"/></g>
   </g>
-
-  <!-- connecting threads (red strings) between cards -->
-  <g stroke="#E85050" stroke-width="1.5" fill="none" class="thread-shimmer">
-    <path d="M 160 110 Q 280 80 380 120" opacity="0.7"/>
-    <path d="M 380 120 Q 500 160 620 110" opacity="0.7"/>
-    <path d="M 620 110 Q 720 90 800 150" opacity="0.7"/>
-    <path d="M 160 110 L 380 120" opacity="0.4" stroke-dasharray="3,3"/>
+  <g class="c501-sw" style="animation-delay:-3s">
+    <path d="M862,124 C864,104 868,90 872,74" fill="none" stroke="#6B4A2A" stroke-width="4" stroke-linecap="round"/>
+    <g fill="#386F3E"><path d="M872,74 q-22,-4 -34,8 q16,-8 34,-4z"/><path d="M872,74 q20,-8 34,2 q-18,-6 -34,0z"/><path d="M872,74 q-6,-16 -22,-20 q14,8 20,20z"/><path d="M872,74 q10,-14 26,-14 q-16,4 -24,16z"/></g>
   </g>
-
-  <!-- CARD 1: Florida outline (Unit 1/2) -->
-  <g transform="translate(115 75)"><g class="card-drift" style="animation-delay:0s;">
-    <rect x="0" y="0" width="90" height="80" rx="3" fill="#FFF8E0" stroke="#8A6A40" stroke-width="1.5" transform="rotate(-4)"/>
-    <!-- mini florida -->
-    <g transform="translate(20 15) rotate(-4)">
-      <path d="M 5 8 L 30 9 L 48 14 L 50 22 L 46 32 L 40 42 L 32 50 L 25 54 L 18 50 L 12 40 L 8 28 Z" fill="#D4943A" stroke="#8A6A40" stroke-width="1"/>
-      <circle cx="28" cy="56" r="1" fill="#D4943A"/>
+  <!-- light spilling from the door onto the sand -->
+  <path class="c501-ray" d="M608,176 L760,196 L760,150 Z" fill="url(#c501ray)"/>
+  <ellipse cx="560" cy="180" rx="90" ry="9" fill="#5A3A1A" opacity=".18"/>
+  <!-- stone frame -->
+  <path d="M498,180 V74 A62,62 0 0 1 622,74 V180 Z" fill="#B9AE95" stroke="#6E6450" stroke-width="2"/>
+  <g stroke="#8A7F68" stroke-width="1" opacity=".7"><path d="M498,100 h14 M498,128 h14 M498,156 h14 M608,100 h14 M608,128 h14 M608,156 h14 M517,40 l9,10 M603,40 l-9,10 M560,12 v12"/></g>
+  <!-- the door -->
+  <path d="M512,176 V74 A48,48 0 0 1 608,74 V176 Z" fill="url(#c501wood)" stroke="#3E2612" stroke-width="2"/>
+  <g clip-path="url(#c501arch)">
+    <!-- four panels: spring, shell mound, ship, village fire -->
+    <g stroke="#3E2612" stroke-width="1.5" fill="#7A4E26">
+      <rect x="520" y="62" width="36" height="50" rx="4"/><rect x="564" y="62" width="36" height="50" rx="4"/>
+      <rect x="520" y="120" width="36" height="48" rx="4"/><rect x="564" y="120" width="36" height="48" rx="4"/>
     </g>
-    <!-- pushpin -->
-    <circle cx="45" cy="-2" r="4" fill="#E85050" stroke="#7A1818" stroke-width="0.8" class="pin-pulse"/>
-  </g></g>
-
-  <!-- CARD 2: First Peoples - shell / pottery (Unit 3) -->
-  <g transform="translate(330 85)"><g class="card-drift" style="animation-delay:1.2s;">
-    <rect x="0" y="0" width="100" height="75" rx="3" fill="#FFF0D0" stroke="#8A6A40" stroke-width="1.5" transform="rotate(3)"/>
-    <!-- pottery jar silhouette -->
-    <g transform="translate(28 14) rotate(3)">
-      <path d="M 18 8 Q 8 8 8 22 Q 8 38 22 42 Q 36 38 36 22 Q 36 8 26 8 L 22 6 L 18 8 Z" fill="#9A5C2A" stroke="#5A3010" stroke-width="1"/>
-      <path d="M 14 24 Q 22 26 30 24" stroke="#5A3010" stroke-width="0.8" fill="none"/>
-      <path d="M 16 30 Q 22 32 28 30" stroke="#5A3010" stroke-width="0.8" fill="none"/>
-    </g>
-    <!-- shell beside -->
-    <g transform="translate(70 38) rotate(3)">
-      <path d="M 0 0 Q 4 -8 10 -6 Q 14 0 10 8 Q 4 10 0 0 Z" fill="#F0DAB0" stroke="#8A6A40" stroke-width="0.8"/>
-    </g>
-    <circle cx="50" cy="-2" r="4" fill="#E85050" stroke="#7A1818" stroke-width="0.8" class="pin-pulse" style="animation-delay:0.4s"/>
-  </g></g>
-
-  <!-- CARD 3: Exploration - ship (Unit 4) -->
-  <g transform="translate(570 78)"><g class="card-drift" style="animation-delay:2.4s;">
-    <rect x="0" y="0" width="100" height="80" rx="3" fill="#FFF8E0" stroke="#8A6A40" stroke-width="1.5" transform="rotate(-2)"/>
-    <!-- ship silhouette -->
-    <g transform="translate(15 20) rotate(-2)">
-      <!-- hull -->
-      <path d="M 8 38 L 12 46 L 60 46 L 64 38 Z" fill="#5A3010" stroke="#3A1F10" stroke-width="1"/>
-      <!-- masts -->
-      <line x1="22" y1="38" x2="22" y2="10" stroke="#3A1F10" stroke-width="1.5"/>
-      <line x1="38" y1="38" x2="38" y2="6" stroke="#3A1F10" stroke-width="1.5"/>
-      <line x1="54" y1="38" x2="54" y2="14" stroke="#3A1F10" stroke-width="1.5"/>
-      <!-- sails -->
-      <path d="M 22 12 Q 30 18 22 24 Z" fill="#FFFFFF" stroke="#8A6A40" stroke-width="0.6"/>
-      <path d="M 38 8 Q 48 16 38 26 Z" fill="#FFFFFF" stroke="#8A6A40" stroke-width="0.6"/>
-      <path d="M 54 16 Q 60 22 54 28 Z" fill="#FFFFFF" stroke="#8A6A40" stroke-width="0.6"/>
-      <!-- water ripples -->
-      <path d="M 4 50 Q 14 48 24 50 Q 34 52 44 50 Q 54 48 68 50" stroke="#55C8E8" stroke-width="1" fill="none" opacity="0.7"/>
-    </g>
-    <circle cx="50" cy="-2" r="4" fill="#E85050" stroke="#7A1818" stroke-width="0.8" class="pin-pulse" style="animation-delay:0.8s"/>
-  </g></g>
-
-  <!-- CARD 4: Evidence ledger -->
-  <g transform="translate(770 130)"><g class="card-drift" style="animation-delay:3.6s;">
-    <rect x="0" y="0" width="70" height="60" rx="3" fill="#E8F3FF" stroke="#446090" stroke-width="1.5" transform="rotate(5)"/>
-    <g transform="translate(8 10) rotate(5)" stroke="#446090" stroke-width="0.8" opacity="0.7">
-      <line x1="0" y1="4" x2="50" y2="4"/>
-      <line x1="0" y1="12" x2="44" y2="12"/>
-      <line x1="0" y1="20" x2="48" y2="20"/>
-      <line x1="0" y1="28" x2="40" y2="28"/>
-      <line x1="0" y1="36" x2="46" y2="36"/>
-    </g>
-    <circle cx="35" cy="-2" r="4" fill="#E85050" stroke="#7A1818" stroke-width="0.8" class="pin-pulse" style="animation-delay:1.2s"/>
-  </g></g>
-
-  <!-- soft glow under center for synthesis vibe -->
-  <ellipse cx="460" cy="160" rx="320" ry="40" fill="url(#cardGlow)"/>
-
-  <!-- bottom HUD ticks -->
-  <g stroke="#55C8E8" stroke-width="1" opacity="0.45" fill="none">
-    <rect x="20" y="232" width="60" height="14" rx="2"/>
-    <line x1="26" y1="239" x2="74" y2="239" stroke-dasharray="3,2"/>
-    <rect x="840" y="232" width="60" height="14" rx="2"/>
-    <line x1="846" y1="239" x2="894" y2="239" stroke-dasharray="3,2"/>
+    <!-- glow on each panel, one at a time -->
+    <g fill="#FFE08A"><rect class="c501-pn c501-p1" x="520" y="62" width="36" height="50" rx="4"/><rect class="c501-pn c501-p2" x="564" y="62" width="36" height="50" rx="4"/><rect class="c501-pn c501-p3" x="520" y="120" width="36" height="48" rx="4"/><rect class="c501-pn c501-p4" x="564" y="120" width="36" height="48" rx="4"/></g>
+    <!-- 1 spring in the wetlands -->
+    <g transform="translate(538,90)"><ellipse rx="12" ry="5" fill="#4FA9D0" stroke="#2A5A70" stroke-width="1"/><ellipse rx="6" ry="2.4" fill="none" stroke="#E8F6FB" stroke-width="1"/><path d="M-13,0 v-14 M-10,0 v-11 M11,0 v-13 M13,-1 v-9" stroke="#3C6B34" stroke-width="1.6" stroke-linecap="round"/></g>
+    <!-- 2 shell mound -->
+    <g transform="translate(582,100)"><path d="M-14,4 Q0,-22 14,4 Z" fill="#E9DCC0" stroke="#6B5A3A" stroke-width="1"/><g fill="#F7EEDA" stroke="#8A7A5A" stroke-width=".7"><path d="M-6,-2 q3,-6 6,0 z"/><path d="M1,-7 q3,-6 6,0 z"/><path d="M2,1 q3,-6 6,0 z"/><path d="M-9,2 q3,-6 6,0z"/></g></g>
+    <!-- 3 ship -->
+    <g class="c501-bob" transform="translate(538,152)"><path d="M-13,2 h26 l-5,6 h-16 z" fill="#4A2E14"/><path d="M0,2 V-20" stroke="#3E2612" stroke-width="1.4"/><path d="M1,-19 L12,-4 L1,-2 Z" fill="#F4EAD2" stroke="#6B5A3A" stroke-width=".7"/><path d="M-1,-17 L-11,-2 L-1,-1 Z" fill="#EFE2C2" stroke="#6B5A3A" stroke-width=".7"/><path d="M-15,9 q4,-2 8,0 t8,0 t8,0 t8,0" fill="none" stroke="#9FD0E0" stroke-width="1"/></g>
+    <!-- 4 village fire -->
+    <g transform="translate(582,156)"><path d="M-12,6 L-6,-6 L0,6 Z" fill="#B88A4A" stroke="#5A3A1A" stroke-width=".8"/><path d="M2,6 L8,-4 L14,6 Z" fill="#B88A4A" stroke="#5A3A1A" stroke-width=".8" opacity=".8"/><g transform="translate(-4,10)"><path d="M-6,2 h12" stroke="#4A2E14" stroke-width="2"/><path class="c501-fl" d="M0,0 c3,-4 3,-7 0,-11 c-3,4 -4,7 0,11z" fill="#F2A33A"/></g></g>
   </g>
-
-  <!-- palmettos -->
-  <g fill="#1A4A3A" opacity="0.65">
-    <path d="M 25 240 Q 25 200 18 195 Q 25 205 30 205 Q 25 195 30 188 Q 35 198 35 205 Q 42 192 50 190 Q 42 200 38 208 Q 50 200 55 200 Q 45 210 35 215 L 32 240 Z"/>
-    <rect x="30" y="225" width="3" height="15" fill="#1A2A1A"/>
-    <path d="M 870 240 Q 870 200 877 195 Q 870 205 865 205 Q 870 195 865 188 Q 860 198 860 205 Q 853 192 845 190 Q 853 200 857 208 Q 845 200 840 200 Q 850 210 860 215 L 863 240 Z"/>
-    <rect x="862" y="225" width="3" height="15" fill="#1A2A1A"/>
-  </g>
+  <!-- seam of light at the edge: the door is open a crack -->
+  <path class="c501-seam" d="M606,176 V78 A46,46 0 0 0 600,52" fill="none" stroke="#FFF3C4" stroke-width="3" stroke-linecap="round"/>
+  <!-- iron ring handle and hinges -->
+  <circle cx="598" cy="128" r="5" fill="none" stroke="#2B2418" stroke-width="2"/>
+  <g fill="#2B2418"><rect x="512" y="80" width="14" height="4" rx="1"/><rect x="512" y="150" width="14" height="4" rx="1"/></g>
+  <!-- threshold stone -->
+  <rect x="494" y="176" width="132" height="8" rx="2" fill="#A39880" stroke="#6E6450" stroke-width="1"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3691,5 +4779,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain page. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
