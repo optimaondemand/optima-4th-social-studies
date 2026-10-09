@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread)
-     planner.type  picks | fixit | choose | scale | ledger
-     vocab.type    rootdig | flags | bells | streams
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots)
+     planner.type  picks | fixit | choose | scale | ledger | chain
+     vocab.type    rootdig | flags | bells | streams | plantfield
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -834,6 +834,10 @@
       else if(kind==='click'){ tone(1900,.05,.12,'triangle',700); noise(.04,3000,2,.18); }
       else if(kind==='water') noise(1.1,1400,.8,.22,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.4+.6*Math.random()); });
       else if(kind==='thud'){ tone(140,.25,.35,'sine',60); noise(.08,500,1,.25); }
+      else if(kind==='pluck'){ tone(392,.5,.22,'triangle',386); tone(784,.25,.06,'sine'); }
+      else if(kind==='plop'){ tone(620,.18,.22,'sine',180); noise(.5,700,1,.12,function(p){ return Math.max(0,1-p)*(.5+.5*Math.random()); }); }
+      else if(kind==='clink'){ tone(2300,.12,.1,'triangle',2100); tone(3100,.09,.06,'sine'); }
+      else if(kind==='plant'){ tone(180,.18,.25,'sine',90); noise(.18,900,1,.18,function(p){ return 1-p; }); }
       else if(kind==='win') [523,659,784].forEach(function(f,i){ setTimeout(function(){ chime(f); },i*180); });
     }catch(e){} }
 
@@ -1047,6 +1051,201 @@
     paint(); return {done:done};
   };
 
+  /* ═══ 4.04.04 additions: string board · ripples · says / infer / ask · cause-effect chain · plant the field ═══ */
+
+  /* ---- Scene 1 · String board: cause cards pinned on the left, effect cards on the right. Tap (or drag) a cause, then
+     its effect: a red string pulls taut between the two pins. DATA: causes [{id,ico,t,effect,miss}], effects [{id,ico,t}] ---- */
+  MOD.stringboard=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var CA=cfg.causes||[], EF=cfg.effects||[]; S.strings=S.strings||[];
+    var done=function(){ return CA.length>0&&CA.every(function(c){ return S.strings.indexOf(c.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-sboard');
+    function cardH(x,side){ return '<div class="spk-scard '+side+'" data-id="'+esc(x.id)+'" role="button" tabindex="0"'+(side==='c'?' draggable="true"':'')+'><span class="pin" aria-hidden="true"></span><span class="ic" aria-hidden="true">'+(x.ico||'')+'</span><span class="tx">'+esc(x.t)+'</span></div>'; }
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'String Board')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-cork"><svg class="spk-strings" aria-hidden="true"></svg><div class="col"><div class="lab">'+esc(cfg.causeLabel||'Causes')+'</div>'+CA.map(function(c){ return cardH(c,'c'); }).join('')+'</div><div class="col"><div class="lab">'+esc(cfg.effectLabel||'Effects')+'</div>'+EF.map(function(f){ return cardH(f,'e'); }).join('')+'</div></div>'
+      +'<p class="spk-miss"></p><p class="spk-claim-ct spk-sb-ct"></p><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var cork=g.querySelector('.spk-cork'), svg=g.querySelector('.spk-strings'), miss=g.querySelector('.spk-miss'), sel=null, fresh=null;
+    function pinXY(cardEl){ var r=cork.getBoundingClientRect(), p=cardEl.querySelector('.pin').getBoundingClientRect(); return [p.left+p.width/2-r.left, p.top+p.height/2-r.top]; }
+    function draw(){ if(!cork.offsetWidth) return; var r=cork.getBoundingClientRect(); svg.setAttribute('viewBox','0 0 '+r.width.toFixed(0)+' '+r.height.toFixed(0)); svg.setAttribute('width',r.width.toFixed(0)); svg.setAttribute('height',r.height.toFixed(0));
+      svg.innerHTML=S.strings.map(function(id){ var c=find(CA,id); if(!c) return ''; var a=g.querySelector('.spk-scard.c[data-id="'+id+'"]'), b=g.querySelector('.spk-scard.e[data-id="'+c.effect+'"]'); if(!a||!b) return '';
+        var p=pinXY(a), q=pinXY(b), mx=(p[0]+q[0])/2, my=Math.max(p[1],q[1])+14, d='M'+p[0].toFixed(1)+','+p[1].toFixed(1)+' Q'+mx.toFixed(1)+','+my.toFixed(1)+' '+q[0].toFixed(1)+','+q[1].toFixed(1);
+        return '<path class="sh" d="'+d+'" transform="translate(1.5,2.5)"/><path class="st'+(fresh===id?' new':'')+'" d="'+d+'" pathLength="100"/>'; }).join(''); }
+    function paint(){ g.querySelectorAll('.spk-scard').forEach(function(x){ var id=x.dataset.id, on=x.classList.contains('c')?S.strings.indexOf(id)>=0:CA.some(function(c){ return c.effect===id&&S.strings.indexOf(c.id)>=0; }); x.classList.toggle('tied',on); if(x.classList.contains('c')) x.draggable=!on; });
+      var n=S.strings.length; g.querySelector('.spk-sb-ct').innerHTML=n<CA.length?'<b>'+n+' of '+CA.length+'</b> '+esc(cfg.countT||'strings tied.'):'';
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); draw(); }
+    function arm(on){ g.querySelectorAll('.spk-scard.e').forEach(function(x){ x.classList.toggle('armed',on&&!x.classList.contains('tied')); x.classList.remove('over'); }); }
+    function choose(c){ g.querySelectorAll('.spk-scard.c').forEach(function(x){ x.classList.remove('sel'); }); sel=c; if(c){ c.classList.add('sel'); miss.textContent=''; } arm(!!c); }
+    function attempt(cEl,eEl){ if(!cEl||!eEl) return; var c=find(CA,cEl.dataset.id); if(!c||S.strings.indexOf(c.id)>=0) return;
+      if(eEl.dataset.id===c.effect){ S.strings.push(c.id); fresh=c.id; save(); choose(null); sfx('pluck'); [cEl,eEl].forEach(function(x){ x.classList.remove('pop'); void x.offsetWidth; x.classList.add('pop'); }); paint(); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },500); setTimeout(function(){ fresh=null; },1200); }
+      else { eEl.classList.add('shake'); setTimeout(function(){ eEl.classList.remove('shake'); },450); var m=(c.misses&&c.misses[eEl.dataset.id])||c.miss||''; miss.textContent=m; missBeat(m); } }
+    g.addEventListener('click',function(e){ var x=e.target.closest('.spk-scard'); if(!x) return; ack('open');
+      if(x.classList.contains('c')){ if(x.classList.contains('tied')) return; choose(x); return; }
+      if(x.classList.contains('tied')) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a cause on the left first, then the effect it led to.'; return; } attempt(sel,x); });
+    g.addEventListener('keydown',function(e){ var x=e.target.closest('.spk-scard'); if(x&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); x.click(); } });
+    g.addEventListener('dragstart',function(e){ var x=e.target.closest('.spk-scard.c'); if(!x||!x.draggable){ e.preventDefault(); return; } ack('open'); choose(x); e.dataTransfer.setData('text/plain',x.dataset.id); e.dataTransfer.effectAllowed='link'; });
+    g.addEventListener('dragend',function(){ arm(false); });
+    g.addEventListener('dragover',function(e){ var x=e.target.closest('.spk-scard.e'); g.querySelectorAll('.spk-scard.e').forEach(function(y){ y.classList.toggle('over',y===x); }); if(x&&!x.classList.contains('tied')){ e.preventDefault(); e.dataTransfer.dropEffect='link'; } });
+    g.addEventListener('drop',function(e){ var x=e.target.closest('.spk-scard.e'); if(!x) return; e.preventDefault(); attempt(sel,x); });
+    if(window.ResizeObserver) new ResizeObserver(function(){ if(document.documentElement.classList.contains('spk-on')) draw(); }).observe(cork); else window.addEventListener('resize',draw);
+    var tabBtn=document.getElementById('panel-scene'); if(tabBtn) new MutationObserver(function(){ if(document.documentElement.classList.contains('spk-on')) draw(); }).observe(tabBtn,{attributes:true,attributeFilter:['class']});
+    paint(); setTimeout(draw,60);
+    return {done:done, journal:function(e,NA){ var p=CA.filter(function(c){ return S.strings.indexOf(c.id)>=0; }); return p.length?'<p class="a">'+p.map(function(c){ return e(c.t)+' → '+e((find(EF,c.effect)||{}).t||''); }).join('<br>')+'</p>':NA; }};
+  };
+
+  /* ---- Explore reading · Ripples: a ship drops anchor off Florida's coast. Each tap on the water sends out a ring;
+     each ring reaches a new effect on the map, and the lesson's own paragraph for it appears.
+     DATA: paras [{id,match}], ship [lon,lat], rings [{label,ico,paras:[ids],show:[layer ids]}], layers {id:{kind,…}} ---- */
+  MOD.ripples=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent)){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var RG=cfg.rings||[]; if(S.rip==null) S.rip=-1;
+    var done=function(){ return RG.length>0&&S.rip>=RG.length-1; };
+    function at(lon,lat){ return project(lon,lat).map(function(v){ return +v.toFixed(1); }); }
+    var sh=at(cfg.ship[0],cfg.ship[1]), L=cfg.layers||{}, lay='';
+    Object.keys(L).forEach(function(id){ var l=L[id], pts=(l.pts||(l.lon!=null?[[l.lon,l.lat]]:[])).map(function(p){ return at(p[0],p[1]); }), s='';
+      if(l.kind==='fade') s=pts.map(function(q,k){ return '<circle class="vd" cx="'+q[0]+'" cy="'+q[1]+'" r="3.2" style="animation-delay:'+(k*.18).toFixed(2)+'s"/>'; }).join('');
+      else if(l.kind==='cross') s=pts.map(function(q,k){ return '<g class="mx" style="animation-delay:'+(k*.15).toFixed(2)+'s" transform="translate('+q[0]+','+q[1]+')"><rect x="-1" y="-6" width="2" height="9" fill="#5C3A1A"/><rect x="-3.4" y="-3.8" width="6.8" height="1.8" fill="#5C3A1A"/></g>'; }).join('');
+      else if(l.kind==='fire') s=pts.map(function(q){ return '<g class="fx" transform="translate('+q[0]+','+q[1]+')"><circle r="6" fill="#F28C28" opacity=".3"/><path d="M0,-7c2.4,3 4,4.6 2.4,7 c-.8,1.6 -4,1.6 -4.8,0 c-1.6,-2.4 .8,-4 2.4,-7z" fill="#E8542A"/></g>'; }).join('');
+      else if(l.kind==='arrow'&&pts.length>1) s='<path class="ar" d="M'+pts[0][0]+','+pts[0][1]+' Q'+((pts[0][0]+pts[1][0])/2+(l.bend||0))+','+((pts[0][1]+pts[1][1])/2)+' '+pts[1][0]+','+pts[1][1]+'" marker-end="url(#spkRipAr)"/>';
+      else if(l.kind==='star') s=pts.map(function(q){ return '<path class="stx" transform="translate('+q[0]+','+q[1]+')" d="M0,-6 L1.8,-1.9 6,-1.9 2.6,.8 3.8,5 0,2.5 -3.8,5 -2.6,.8 -6,-1.9 -1.8,-1.9Z"/>'; }).join('');
+      else if(l.kind==='emoji') s=pts.map(function(q){ return '<text class="em" x="'+q[0]+'" y="'+(q[1]+4)+'" text-anchor="middle">'+esc(l.e||'•')+'</text>'; }).join('');
+      else if(l.kind==='flag') s=poleFlag(l.flag,pts[0][0],pts[0][1],l.s||1.5).replace('spk-pf ','spk-pf on ');
+      var tl=l.t?'<text class="lb" x="'+(l.tlon!=null?at(l.tlon,l.tlat)[0]:pts[0][0]+(l.dx||8))+'" y="'+(l.tlon!=null?at(l.tlon,l.tlat)[1]:pts[0][1]+(l.dy||3))+'" text-anchor="'+(l.a||'start')+'">'+esc(l.t)+'</text>':'';
+      lay+='<g class="rl k-'+l.kind+'" data-l="'+id+'">'+s+tl+'</g>'; });
+    var peoples=(cfg.peoples||[]).map(function(p){ var q=at(p.lon,p.lat); return '<text class="pp" x="'+q[0]+'" y="'+q[1]+'" text-anchor="'+(p.a||'middle')+'">'+esc(p.t)+'</text>'; }).join('');
+    var rings=RG.map(function(r,i){ return '<circle class="rg" data-i="'+i+'" cx="'+sh[0]+'" cy="'+sh[1]+'" r="'+(r.r||(26+i*42))+'"/>'; }).join('');
+    var ship='<g class="sp" transform="translate('+(sh[0]-11)+','+(sh[1]-15)+') scale(.45)">'+shipIcon(1,cfg.shipColor||FLAGCOL.es).replace(/<svg[^>]*>|<\/svg>/g,'')+'</g>';
+    var svg='<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Map of Florida with rings spreading from a ship')+'"><defs><marker id="spkRipAr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#A3312B"/></marker><clipPath id="spkRipClip"><rect width="300" height="300"/></clipPath></defs>'+floridaBase('R')+'<g clip-path="url(#spkRipClip)">'+rings+'<circle class="wave" cx="'+sh[0]+'" cy="'+sh[1]+'" r="10"/></g>'+peoples+lay+ship+'<g class="tapme" transform="translate('+sh[0]+','+(sh[1]+16)+')"><circle r="7"/><text y="3" text-anchor="middle">👆</text></g></svg>';
+    var wrap=el('div','spk spk-ripples');
+    wrap.innerHTML='<div class="spk-rp-top"><div class="spk-map">'+svg+'</div><div class="spk-rp-side"><div class="lab">'+esc(cfg.label||'Send out the ripples')+'</div><ol class="spk-rp-list">'+RG.map(function(r,i){ return '<li data-i="'+i+'"><button type="button" disabled><span class="ic">'+(r.ico||'〰️')+'</span><span>'+esc(r.label)+'</span></button></li>'; }).join('')+'</ol><button type="button" class="spk-rp-go"></button><p class="spk-ys-ct spk-rp-ct"></p></div></div><div class="spk-rp-read"></div>';
+    before(first,wrap);
+    var read=wrap.querySelector('.spk-rp-read'), boxes={};
+    PA.forEach(function(a){ var p=found[a.id]; if(!p) return; var b=el('div','spk-ys-p spk-rp-p'); boxes[a.id]=b; read.appendChild(b); move(p,function(n){ b.appendChild(n); }); });
+    var view=S.rip;
+    function paint(anim){ var r=RG[view];
+      var shown={}; for(var i=0;i<=S.rip;i++) (RG[i].show||[]).forEach(function(id){ shown[id]=true; });
+      wrap.querySelectorAll('.rl').forEach(function(l){ l.classList.toggle('on',!!shown[l.dataset.l]); l.classList.toggle('now',!!r&&(r.show||[]).indexOf(l.dataset.l)>=0); });
+      wrap.querySelectorAll('.rg').forEach(function(c){ var i=+c.dataset.i; c.classList.toggle('on',i<=S.rip); if(anim&&i===S.rip){ c.classList.remove('go'); void c.getBoundingClientRect(); c.classList.add('go'); } });
+      Object.keys(boxes).forEach(function(id){ var on=!!r&&(r.paras||[]).indexOf(id)>=0; boxes[id].classList.toggle('on',on); if(on&&anim){ boxes[id].classList.remove('pop'); void boxes[id].offsetWidth; boxes[id].classList.add('pop'); } });
+      wrap.querySelectorAll('.spk-rp-list li').forEach(function(li){ var i=+li.dataset.i, b=li.querySelector('button'); b.disabled=i>S.rip; li.classList.toggle('seen',i<=S.rip); li.classList.toggle('now',i===view); });
+      var go=wrap.querySelector('.spk-rp-go'), nx=RG[S.rip+1]; go.classList.toggle('spk-hide',!nx); if(nx) go.textContent=(S.rip<0?(cfg.startBtn||'Drop the anchor'):(cfg.nextBtn||'Send the next ripple'))+' → '+nx.label;
+      wrap.classList.toggle('started',S.rip>=0); wrap.classList.toggle('all',done());
+      var n=S.rip+1; wrap.querySelector('.spk-rp-ct').innerHTML=S.rip<0?esc(cfg.startT||'Tap the ship to drop its anchor.'):(n<RG.length?'<b>'+n+' of '+RG.length+'</b> '+esc(cfg.countT||'ripples sent. Read this part, then send the next one.'):'<b>'+esc(cfg.allT||'Every ripple reached the shore.')+'</b>');
+      var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function next(){ if(S.rip>=RG.length-1) return; S.rip++; view=S.rip; save(); sfx('plop'); paint(true); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },600); }
+    wrap.querySelector('.spk-map').addEventListener('click',function(e){ if(e.target.closest('.sp,.tapme,.wave,.rg')||S.rip<0) next(); });
+    wrap.querySelector('.spk-rp-go').addEventListener('click',function(){ ack('explore'); next(); var t=read.getBoundingClientRect(); if(t.top>window.innerHeight*.8) read.scrollIntoView({behavior:'smooth',block:'nearest'}); });
+    wrap.querySelector('.spk-rp-list').addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b||b.disabled) return; view=+b.closest('li').dataset.i; paint(true); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(e){ return '<p class="a">Ripples sent: '+(S.rip+1)+' of '+RG.length+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · Says / Infer / Ask: tap the numbered labels on the source (DATA.source.hotspots), then sort
+     each statement into what the source SAYS, what we can INFER from it, and what we still have to ASK.
+     DATA: bins [{id,ico,t,sub}], cards [{t,bin,why,miss}] ---- */
+  MOD.sayinfer=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var BI=cfg.bins||[], CD=cfg.cards||[]; S.sort=S.sort||{};
+    var sorted=function(){ return CD.length>0&&CD.every(function(c,i){ return S.sort[i]===c.bin; }); };
+    var done=function(){ return sorted()&&(!R.source||R.source.done())&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-sayinfer');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Says · Infer · Ask')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-sicards spk-chips"></div><p class="spk-miss"></p>'
+      +'<div class="spk-trays">'+BI.map(function(b){ return '<div class="spk-tray" data-b="'+esc(b.id)+'" role="button" tabindex="0"><div class="hd"><span class="ic" aria-hidden="true">'+(b.ico||'')+'</span><div><b>'+esc(b.t)+'</b><small>'+esc(b.sub||'')+'</small></div></div><div class="in"></div><span class="ink" aria-hidden="true">'+esc(b.ink||b.t)+'</span></div>'; }).join('')+'</div>'
+      +'<p class="spk-claim-ct spk-si-ct"></p><p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var tray=g.querySelector('.spk-sicards'), miss=g.querySelector('.spk-miss'), sel=null;
+    shuffle(CD.map(function(c,i){ return i; })).forEach(function(i){ var c=el('div','spk-chip noimg spk-sicard','<span class="ico">🗒️</span><span>'+esc(CD[i].t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.i=i; tray.appendChild(c); });
+    function paint(stampB){ var n=0;
+      g.querySelectorAll('.spk-tray').forEach(function(t){ var b=t.dataset.b, inn=t.querySelector('.in'); var have=CD.map(function(c,i){ return i; }).filter(function(i){ return S.sort[i]===b; });
+        inn.innerHTML=have.map(function(i){ return '<div class="put"><span>'+esc(CD[i].t)+'</span>'+(CD[i].why?'<small>'+esc(CD[i].why)+'</small>':'')+'</div>'; }).join(''); t.classList.toggle('has',have.length>0);
+        if(stampB===b){ t.classList.remove('stamp'); void t.offsetWidth; t.classList.add('stamp'); } });
+      tray.querySelectorAll('.spk-sicard').forEach(function(c){ var p=S.sort[+c.dataset.i]!=null; c.classList.toggle('spk-hide',p); c.draggable=!p; if(p) n++; });
+      g.querySelector('.spk-si-ct').innerHTML=n<CD.length?'<b>'+n+' of '+CD.length+'</b> '+esc(cfg.countT||'cards sorted.'):'';
+      var gate=''; if(sorted()&&R.source&&!R.source.done()) gate=cfg.hotT||'Last step: tap every gold number on the baptism book above.'; else if(sorted()&&R.reading&&!R.reading.done()) gate=cfg.readT||'Last step: finish the ripples in Learn the Story.';
+      g.querySelector('.spk-si-gate').textContent=gate;
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    function arm(on){ g.querySelectorAll('.spk-tray').forEach(function(t){ t.classList.toggle('armed',on); t.classList.remove('over'); }); }
+    function attempt(c,t){ if(!c||!t) return; var i=+c.dataset.i, card=CD[i]; if(S.sort[i]!=null) return; arm(false);
+      if(t.dataset.b===card.bin){ S.sort[i]=card.bin; save(); sel=null; miss.textContent=''; sfx('thud'); paint(card.bin); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },400); }
+      else { c.classList.add('shake'); setTimeout(function(){ c.classList.remove('shake'); },450); var m=(card.misses&&card.misses[t.dataset.b])||card.miss||''; miss.textContent=m; missBeat(m); } }
+    tray.addEventListener('click',function(e){ var c=e.target.closest('.spk-sicard'); if(!c) return; ack('explore'); tray.querySelectorAll('.spk-sicard').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    tray.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-sicard'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    tray.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-sicard'); if(!c||!c.draggable){ e.preventDefault(); return; } sel=c; e.dataTransfer.setData('text/plain',c.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    tray.addEventListener('dragend',function(){ arm(false); });
+    var trays=g.querySelector('.spk-trays');
+    trays.addEventListener('click',function(e){ var t=e.target.closest('.spk-tray'); if(!t) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a card first, then the tray it belongs in.'; return; } attempt(sel,t); });
+    trays.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-tray'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    trays.addEventListener('dragover',function(e){ var t=e.target.closest('.spk-tray'); g.querySelectorAll('.spk-tray').forEach(function(x){ x.classList.toggle('over',x===t); }); if(t){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    trays.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.spk-tray')); });
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, journal:function(e,NA){ var out=BI.map(function(b){ var have=CD.filter(function(c,i){ return S.sort[i]===b.id; }); return have.length?'<b>'+e(b.t)+':</b> '+have.map(function(c){ return e(c.t); }).join(' · '):''; }).filter(Boolean); return out.length?'<p class="a">'+out.join('<br>')+'</p>':NA; }};
+  };
+
+  /* ---- Planner · Cause → effect chain: four links (a cause, an effect, a detail from the source, the Virtue Lens).
+     Each link clinks shut when it's filled. Notes only — the student writes. DATA: links [{id,lab,ico,opts:[{id,t}]}] ---- */
+  MOD.chain=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var LK=cfg.links||[]; S.chain=S.chain||{}; var was={};
+    var done=function(){ return LK.length>0&&LK.every(function(l){ return !!S.chain[l.id]; }); };
+    var b=el('div','spk spk-builder spk-chainb');
+    var ring='<svg class="lk" viewBox="0 0 64 40" aria-hidden="true"><rect class="o" x="5" y="5" width="54" height="30" rx="15"/><rect class="i" x="14" y="13" width="36" height="14" rx="7"/><path class="gap" d="M27,4 h10 M27,36 h10"/></svg>';
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-chainrow">'+LK.map(function(l,i){ return (i?'<span class="cn" aria-hidden="true"></span>':'')+'<div class="spk-link2" data-l="'+esc(l.id)+'">'+ring+'<span class="ic">'+(l.ico||'')+'</span><span class="nm">'+esc(l.lab)+'</span></div>'; }).join('')+'</div>'
+      +LK.map(function(l,i){ return '<div class="spk-step" data-l="'+esc(l.id)+'"><div class="lab">'+(i+1)+' · '+esc(l.q||l.lab)+'</div><div class="spk-opts">'+(l.opts||[]).map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'; }).join('')
+      +'<p class="spk-chain-done">'+esc(cfg.doneT||'Every link is shut. Now write your Source Study in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ return LK.filter(function(l){ return S.chain[l.id]; }).map(function(l){ return [l.lab,(find(l.opts,S.chain[l.id])||{}).t||'']; }); }
+    function paint(){ LK.forEach(function(l){ var v=S.chain[l.id], lk=b.querySelector('.spk-link2[data-l="'+l.id+'"]');
+        b.querySelectorAll('.spk-step[data-l="'+l.id+'"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===v); });
+        lk.classList.toggle('shut',!!v); if(v&&was[l.id]===false){ lk.classList.add('clink'); sfx('clink'); setTimeout(function(){ lk.classList.remove('clink'); },600); } was[l.id]=!!v; });
+      var all=done(); if(all&&was.all===false) setTimeout(function(){ sfx('win'); },250); was.all=all; b.classList.toggle('done',all);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var id=o.closest('.spk-step').dataset.l; S.chain[id]=o.dataset.v; save(); paint(); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Plant the field: tap each furrow to plant a word — it sprouts and the teacher says it
+     (g4ss-<lesson>-seed-<n>.mp3 when it exists). Then water each sprout with its meaning and it grows tall. ---- */
+  MOD.plantfield=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[]; S.field=S.field||{planted:[],grown:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&S.field.grown.length===W.length; };
+    var g=el('div','spk spk-field');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Plant the Field')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-farm"><div class="sun" aria-hidden="true"></div><div class="sign"><b>'+esc(cfg.root||'col')+'</b> '+esc(cfg.rootMeaning||'')+'</div><div class="rows">'+W.map(function(x,i){ return '<div class="plot" data-i="'+i+'" role="button" tabindex="0" aria-label="Plant '+esc(x.w)+'"><span class="seed" aria-hidden="true">🌰</span><span class="crop" aria-hidden="true"><span class="stem"></span><span class="fruit">'+(x.crop||'🌱')+'</span></span><span class="soil" aria-hidden="true"></span><span class="word">'+(x.root?esc(x.w).replace(esc(x.root),'<b>'+esc(x.root)+'</b>'):esc(x.w))+'</span><span class="mean"></span></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-fd-ct"></p><div class="spk-chips spk-cans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var cans=g.querySelector('.spk-cans'), miss=g.querySelector('.spk-miss'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-seed-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-can','<span class="ico">💧</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; cans.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allP=S.field.planted.length===W.length;
+      g.querySelectorAll('.plot').forEach(function(b){ var i=+b.dataset.i, p=S.field.planted.indexOf(i)>=0, gr=S.field.grown.indexOf(i)>=0; b.classList.toggle('planted',p); b.classList.toggle('grown',gr); b.querySelector('.mean').textContent=gr?W[i].m:'';
+        if(anim===i){ b.classList.remove('sprout','bloom'); void b.offsetWidth; b.classList.add(gr?'bloom':'sprout'); } });
+      cans.classList.toggle('wait',!allP); cans.querySelectorAll('.spk-can').forEach(function(t){ var f=S.field.grown.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allP&&!f; });
+      g.querySelector('.spk-fd-ct').innerHTML=!allP?'<b>'+S.field.planted.length+' of '+W.length+'</b> '+esc(cfg.plantT||'seeds planted. Tap each row to plant its word and hear it.'):(done()?'':'<b>'+S.field.grown.length+' of '+W.length+'</b> '+esc(cfg.waterT||'plants watered. Pour each meaning on its word.'));
+      g.classList.toggle('done',done()); if(done()) window._rootMatchDone=true; }
+    function arm(on){ g.querySelectorAll('.plot').forEach(function(b){ b.classList.toggle('armed',on&&!b.classList.contains('grown')); b.classList.remove('over'); }); }
+    function attempt(t,b){ if(!t||!b) return; var i=+t.dataset.i; if(S.field.grown.indexOf(i)>=0||S.field.planted.length<W.length) return; arm(false);
+      if(+b.dataset.i===i){ S.field.grown.push(i); save(); sel=null; miss.textContent=''; sfx('water'); paint(i); if(done()) setTimeout(function(){ sfx('win'); },500); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    var rows=g.querySelector('.rows');
+    rows.addEventListener('click',function(e){ var b=e.target.closest('.plot'); if(!b) return; var i=+b.dataset.i;
+      if(sel&&S.field.planted.length===W.length){ attempt(sel,b); return; }
+      var first=S.field.planted.indexOf(i)<0; if(first){ S.field.planted.push(i); save(); sfx('plant'); } say(i); paint(first?i:null); });
+    rows.addEventListener('keydown',function(e){ var b=e.target.closest('.plot'); if(b&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); b.click(); } });
+    cans.addEventListener('click',function(e){ var t=e.target.closest('.spk-can'); if(!t) return; if(S.field.planted.length<W.length){ miss.textContent=cfg.plantFirstT||'Plant every row first, so you hear each word.'; return; } cans.querySelectorAll('.spk-can').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    cans.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-can'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    cans.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-can'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    cans.addEventListener('dragend',function(){ arm(false); });
+    rows.addEventListener('dragover',function(e){ var b=e.target.closest('.plot'); g.querySelectorAll('.plot').forEach(function(x){ x.classList.toggle('over',x===b); }); if(b&&!b.classList.contains('grown')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    rows.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.plot')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -1139,7 +1338,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino'); return d&&[d,'before']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
@@ -1166,7 +1365,7 @@
     n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'Read along'; });
     parts.forEach(function(p,idx){ aus[idx].src=AUD+'g4ss-'+LESSON+'-'+p.slot+'.mp3'; }); }); refreshVoice(); }
   function refreshVoice(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
-  function paintVideos(){ document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
+  function paintVideos(){ if(!document.documentElement.classList.contains('spk-on')) return; document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
   function buildMedia(){ paintVideos(); if(!window.__spkVidObs){ window.__spkVidObs=new MutationObserver(function(){ clearTimeout(window.__spkVidT); window.__spkVidT=setTimeout(paintVideos,100); }); window.__spkVidObs.observe(document.body,{childList:true,subtree:true}); } }
 
   /* ================================================================ flags, hints, "go further", wrong-answer lines — all from DATA */
@@ -1237,7 +1436,7 @@
     function paint(){ qs.forEach(function(q,i){ q.classList.toggle('spk-qhide',i!==cur); q.classList.toggle('spk-qready',q.classList.contains('answered')); });
       if(score) score.classList.toggle('spk-qhide',cur<qs.length);
       bar.innerHTML=cur<qs.length?qs.map(function(q,i){ return '<i class="'+(i<cur?'done':i===cur?'now':'')+'"></i>'; }).join('')+'<span>Question '+(cur+1)+' of '+qs.length+'</span>':''; bar.classList.toggle('spk-hide',cur>=qs.length); }
-    new MutationObserver(paint).observe(document.getElementById('panel-check'),{attributes:true,subtree:true,attributeFilter:['class']});
+    new MutationObserver(function(){ if(document.documentElement.classList.contains('spk-on')) paint(); }).observe(document.getElementById('panel-check'),{attributes:true,subtree:true,attributeFilter:['class']});
     paint(); }
 
   /* ================================================================ Opti hoots softly on hover/tap (WebAudio, once per 8 s) */

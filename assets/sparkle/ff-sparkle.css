@@ -963,3 +963,134 @@ html.spk-quiet .spk-mail.unread { animation: none !important; }
 .spk-card .thw .th { width: 96px; height: 72px; }
 .spk-card .thw.lk .th { filter: grayscale(.85) brightness(.85); opacity: .75; }
 .spk-card .thw .lkb { position: absolute; right: 4px; bottom: 4px; font-size: 15px; background: rgba(255,253,245,.9); border-radius: 50%; width: 24px; height: 24px; display: grid; place-items: center; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+
+/* ═══ 4.04.04 additions: string board · ripples · says / infer / ask · cause-effect chain · plant the field ═══ */
+/* String board (cork board, red string from each cause pin to its effect pin) */
+.spk-cork { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 46px; padding: 14px 12px 16px; border-radius: 12px; border: 6px solid #8B5E34; background: #C99B66; background-image: radial-gradient(rgba(90,55,20,.22) 1px, transparent 1.4px), radial-gradient(rgba(255,240,210,.25) 1px, transparent 1.4px); background-size: 7px 7px, 11px 11px; background-position: 0 0, 3px 4px; box-shadow: inset 0 2px 8px rgba(60,30,5,.35); }
+.spk-cork .col { display: grid; gap: 9px; align-content: start; position: relative; z-index: 2; }
+.spk-cork .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #FFF6E2; text-shadow: 0 1px 2px rgba(60,30,5,.6); }
+.spk-strings { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 3; overflow: visible; }
+.spk-strings .st { fill: none; stroke: #C0262D; stroke-width: 2.6; stroke-linecap: round; }
+.spk-strings .st.new { stroke-dasharray: 100; animation: spk-sbdraw .55s ease-out both; }
+.spk-strings .sh { fill: none; stroke: rgba(50,20,5,.28); stroke-width: 2.6; }
+@keyframes spk-sbdraw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+.spk-scard { position: relative; display: grid; grid-template-columns: 24px 1fr; gap: 6px; align-items: start; padding: 12px 10px 9px; background: #FFFDF6; border-radius: 3px; box-shadow: 1px 2px 4px rgba(60,30,5,.35); font: 600 13px/1.35 'Nunito', sans-serif; color: #22304A; cursor: pointer; transition: transform .15s; }
+.spk-cork .col:first-child .spk-scard:nth-child(even) { transform: rotate(-1.2deg); } .spk-cork .col:last-child .spk-scard:nth-child(odd) { transform: rotate(1deg); }
+.spk-scard .ic { font-size: 18px; line-height: 1.1; }
+.spk-scard .pin { position: absolute; top: 50%; width: 13px; height: 13px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #FF8A80, #B71C1C 70%); box-shadow: 0 2px 2px rgba(0,0,0,.35); z-index: 4; }
+.spk-scard.c .pin { right: -7px; } .spk-scard.e .pin { left: -7px; }
+.spk-scard.e { background: #FFF8E1; }
+.spk-scard:hover { box-shadow: 2px 4px 8px rgba(60,30,5,.4); }
+.spk-scard.sel { outline: 3px solid #F2C230; outline-offset: 1px; }
+.spk-scard.armed { animation: spk-cpulse2 1.2s ease-in-out infinite; } .spk-scard.over { background: #FFF3C4; }
+.spk-scard.tied { cursor: default; } .spk-scard.tied .pin { background: radial-gradient(circle at 35% 35%, #FFD27A, #B8860B 70%); }
+.spk-scard.pop .pin { animation: spk-sbpop .45s cubic-bezier(.3,1.8,.5,1); }
+@keyframes spk-sbpop { 0% { transform: scale(1); } 40% { transform: scale(1.8); } 100% { transform: scale(1); } }
+.spk-scard.shake { animation: spk-shake .4s; outline: 2px solid #E8636B; }
+.spk-sboard.done .spk-cork { box-shadow: inset 0 2px 8px rgba(60,30,5,.35), 0 0 0 3px rgba(52,183,111,.45); }
+@media (max-width: 520px) { .spk-cork { gap: 8px 30px; padding: 10px 8px 12px; border-width: 4px; } .spk-scard { grid-template-columns: 1fr; font-size: 12px; padding: 10px 8px 8px; } .spk-scard .ic { font-size: 15px; } }
+
+/* Ripples */
+.spk-ripples { margin: 4px 0 16px; }
+.spk-rp-top { display: grid; grid-template-columns: minmax(230px, 1fr) minmax(220px, 1fr); gap: 18px; align-items: center; }
+@media (max-width: 640px) { .spk-rp-top { grid-template-columns: 1fr; } }
+.spk-ripples .spk-map svg { cursor: pointer; }
+.spk-ripples .rg { fill: none; stroke: #2F86B0; stroke-width: 1.6; opacity: 0; }
+.spk-ripples .rg.on { opacity: .45; }
+.spk-ripples .rg.go { animation: spk-ripple 1.6s ease-out both; transform-box: fill-box; transform-origin: center; }
+@keyframes spk-ripple { from { transform: scale(.08); opacity: .95; stroke-width: 3.5; } to { transform: scale(1); opacity: .45; stroke-width: 1.6; } }
+.spk-ripples .wave { fill: none; stroke: #2F86B0; stroke-width: 1.2; opacity: .6; animation: spk-rwave 2.4s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes spk-rwave { from { transform: scale(.5); opacity: .7; } to { transform: scale(2.2); opacity: 0; } }
+.spk-ripples .tapme circle { fill: #F2C230; opacity: .9; } .spk-ripples .tapme text { font-size: 8px; }
+.spk-ripples .tapme { animation: spk-tapbob 1.2s ease-in-out infinite; } .spk-ripples.started .tapme { display: none; }
+@keyframes spk-tapbob { 0%,100% { translate: 0 0; } 50% { translate: 0 -2px; } }
+.spk-ripples .rl { opacity: 0; transition: opacity .6s; } .spk-ripples .rl.on { opacity: 1; }
+.spk-ripples .rl:not(.now) { opacity: 0; } .spk-ripples .rl.on:not(.now) { opacity: .55; }
+.spk-ripples .rl.now .vd { animation: spk-vfade 1.6s ease-in both; }
+.spk-ripples .vd { fill: #8A6A3A; stroke: #FFFDF5; stroke-width: .8; }
+.spk-ripples .rl.on .vd { fill: #B9B2A2; }
+@keyframes spk-vfade { 0% { fill: #8A6A3A; r: 3.2; } 100% { fill: #B9B2A2; r: 2.6; } }
+.spk-ripples .rl.now .mx { animation: spk-mxin .5s ease-out both; transform-box: fill-box; }
+@keyframes spk-mxin { from { opacity: 0; translate: 0 -5px; } to { opacity: 1; translate: 0 0; } }
+.spk-ripples .ar { fill: none; stroke: #A3312B; stroke-width: 2; stroke-dasharray: 4 3; }
+.spk-ripples .rl.now .ar { animation: spk-arrdraw 1.6s linear infinite; }
+@keyframes spk-arrdraw { to { stroke-dashoffset: -14; } }
+.spk-ripples .rl.now .fx path { animation: spk-flick .5s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: bottom; }
+.spk-ripples .stx { fill: #F2C230; stroke: #6B3F12; stroke-width: .8; }
+.spk-ripples .em { font-size: 11px; }
+.spk-ripples .lb { font: 800 8.5px 'Nunito', sans-serif; fill: #0E1C42; paint-order: stroke; stroke: #EAF4F7; stroke-width: 3px; }
+.spk-ripples .pp { font: italic 700 9px 'Lora', Georgia, serif; fill: #6B5A2E; opacity: .85; }
+.spk-rp-side .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ffg2, #8A6A1E); margin-bottom: 8px; }
+.spk-rp-list { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 6px; }
+.spk-rp-list button { width: 100%; display: flex; gap: 8px; align-items: center; text-align: left; font: 700 13.5px 'Nunito', sans-serif; color: #5C4A2A; background: #fff; border: 1.5px dashed #D8C7A2; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.spk-rp-list button:disabled { cursor: default; opacity: .55; }
+.spk-rp-list li.seen button { border-style: solid; border-color: #9FC6D8; background: #EEF7FB; color: #0E1C42; }
+.spk-rp-list li.now button { background: #2F86B0; border-color: #2F86B0; color: #fff; }
+.spk-rp-go { font: 800 14px 'Nunito', sans-serif; color: #fff; background: #2F86B0; border: 0; border-radius: 999px; padding: 9px 16px; cursor: pointer; box-shadow: 0 2px 0 #1D5F80; }
+.spk-rp-read { margin-top: 12px; } .spk-rp-p { border-left-color: #2F86B0 !important; }
+
+/* Says / Infer / Ask */
+.spk-sicards { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.spk-trays { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 6px; }
+@media (max-width: 640px) { .spk-trays { grid-template-columns: 1fr; } }
+.spk-tray { position: relative; min-height: 120px; padding: 10px 10px 12px; background: #F4ECDA; border: 2px solid #C9B486; border-radius: 6px 6px 12px 12px; box-shadow: inset 0 -6px 0 #E3D5B3; cursor: pointer; overflow: hidden; }
+.spk-tray .hd { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 6px; } .spk-tray .ic { font-size: 22px; line-height: 1; }
+.spk-tray .hd b { display: block; font: 800 14.5px 'Lora', Georgia, serif; color: #2B2418; } .spk-tray .hd small { display: block; font: 600 12px/1.3 'Nunito', sans-serif; color: #6B5A33; }
+.spk-tray .put { position: relative; z-index: 2; margin-top: 6px; padding: 6px 9px; background: #fff; border-radius: 4px; box-shadow: 0 1px 2px rgba(60,40,10,.2); font: 600 12.5px/1.35 'Nunito', sans-serif; color: #22304A; animation: spk-in .3s ease-out; }
+.spk-tray .put small { display: block; margin-top: 3px; font: italic 500 12px/1.35 'Lora', Georgia, serif; color: #0F5A50; }
+.spk-tray .ink { position: absolute; right: 8px; bottom: 8px; font: 900 13px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #A3312B; border: 2px solid #A3312B; border-radius: 6px; padding: 1px 7px; opacity: 0; transform: rotate(-10deg); }
+.spk-tray.has .ink { opacity: .55; }
+.spk-tray.stamp .ink { animation: spk-traystamp .45s cubic-bezier(.3,1.6,.6,1) both; }
+@keyframes spk-traystamp { 0% { opacity: 0; transform: scale(2) rotate(-24deg); } 100% { opacity: .55; transform: rotate(-10deg); } }
+.spk-tray.armed { animation: spk-cpulse2 1.2s ease-in-out infinite; } .spk-tray.over { background: #FFF3C4; }
+.spk-sicard.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-si-gate { font: italic 600 14.5px 'Lora', Georgia, serif; color: #8A5A12; margin: 4px 0 0; }
+
+/* Cause → effect chain */
+.spk-chainrow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0; margin: 4px 0 10px; }
+.spk-chainrow .cn { width: 14px; height: 4px; background: #9AA3B0; border-radius: 2px; }
+.spk-link2 { position: relative; width: 112px; text-align: center; }
+.spk-link2 .lk { width: 100%; height: auto; display: block; }
+.spk-link2 .lk .o { fill: none; stroke: #B7BEC9; stroke-width: 6; }
+.spk-link2 .lk .i { fill: none; stroke: none; }
+.spk-link2 .lk .gap { stroke: #fff; stroke-width: 8; }
+.spk-link2.shut .lk .o { stroke: #3A6B8C; } .spk-link2.shut .lk .gap { display: none; }
+.spk-link2 .ic { position: absolute; left: 0; right: 0; top: 23%; font-size: 17px; line-height: 1; opacity: .45; }
+.spk-link2.shut .ic { opacity: 1; }
+.spk-link2 .nm { display: block; font: 800 10.5px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #5B667A; margin-top: 2px; }
+.spk-link2.clink { animation: spk-clink .5s ease-out; }
+@keyframes spk-clink { 0% { transform: scale(1); } 30% { transform: scale(1.12) rotate(-4deg); } 60% { transform: scale(.97) rotate(2deg); } 100% { transform: none; } }
+.spk-chain-done { display: none; font: 800 14.5px 'Nunito', sans-serif; color: #1F6B3A; margin: 8px 0 0; }
+.spk-chainb.done .spk-chain-done { display: block; animation: spk-in .35s ease-out; }
+@media (max-width: 520px) { .spk-link2 { width: 76px; } .spk-link2 .ic { font-size: 13px; top: 18%; } .spk-link2 .nm { font-size: 9px; } .spk-chainrow .cn { width: 6px; } }
+
+/* Plant the field */
+.spk-field { margin-top: 14px; }
+.spk-farm { position: relative; padding: 12px 10px 12px; border-radius: 14px; border: 1px solid #C4B07A; background: linear-gradient(#DDF0F7 0 30%, #E9DDB8 30% 100%); overflow: hidden; }
+.spk-farm .sun { position: absolute; right: 18px; top: 10px; width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(#FFE58A, #F2B705); box-shadow: 0 0 0 6px rgba(242,183,5,.18); animation: spk-sunglow 3s ease-in-out infinite; }
+@keyframes spk-sunglow { 50% { box-shadow: 0 0 0 11px rgba(242,183,5,.08); } }
+.spk-farm .sign { display: inline-block; margin: 0 0 10px 4px; padding: 4px 12px; background: #8B5E34; color: #FFF6E2; border-radius: 4px; font: 600 14px 'Nunito', sans-serif; box-shadow: 0 2px 0 #5C3A1A; } .spk-farm .sign b { font: 800 17px 'Lora', Georgia, serif; color: #FFE58A; }
+.spk-farm .rows { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.spk-farm .plot { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px; min-height: 150px; padding: 6px 4px 8px; border-radius: 10px; background: rgba(255,250,235,.55); border: 2px dashed #B89860; cursor: pointer; text-align: center; }
+.spk-farm .plot .soil { order: 3; width: 86%; height: 14px; border-radius: 50%; background: repeating-linear-gradient(90deg, #6B4423 0 6px, #7C5230 6px 12px); box-shadow: inset 0 3px 3px rgba(0,0,0,.25); }
+.spk-farm .plot .seed { order: 2; font-size: 18px; transition: opacity .3s; } .spk-farm .plot.planted .seed { display: none; }
+.spk-farm .plot .crop { order: 2; display: none; flex-direction: column; align-items: center; transform-origin: bottom center; }
+.spk-farm .plot.planted .crop { display: flex; }
+.spk-farm .plot .stem { width: 4px; height: 18px; background: #4A8C3A; border-radius: 2px; transition: height .6s; order: 2; }
+.spk-farm .plot .fruit { font-size: 16px; order: 1; transition: font-size .5s; }
+.spk-farm .plot.grown .stem { height: 34px; } .spk-farm .plot.grown .fruit { font-size: 28px; }
+.spk-farm .plot.sprout .crop { animation: spk-sprout .7s cubic-bezier(.3,1.5,.6,1) both; }
+.spk-farm .plot.bloom .crop { animation: spk-bloom .8s cubic-bezier(.3,1.6,.6,1) both; }
+@keyframes spk-sprout { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes spk-bloom { 0% { transform: scale(.8); } 60% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.spk-farm .plot .word { order: 4; font: 800 15px 'Lora', Georgia, serif; color: #2B2418; } .spk-farm .plot .word b { color: #7C4A12; }
+.spk-farm .plot .mean { order: 5; font: 600 11.5px/1.25 'Nunito', sans-serif; color: #0F5A50; }
+.spk-farm .plot.planted { border-style: solid; border-color: #9BBF6A; } .spk-farm .plot.grown { background: rgba(232,246,214,.85); border-color: #34B76F; }
+.spk-farm .plot.armed { animation: spk-cpulse2 1.2s ease-in-out infinite; } .spk-farm .plot.over { background: #FFF3C4; }
+.spk-cans { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); margin-top: 10px; } .spk-cans.wait { opacity: .55; }
+.spk-can.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-field.done .spk-flag-win2 { display: block; animation: spk-in .35s ease-out; }
+@media (max-width: 520px) { .spk-farm .rows { grid-template-columns: 1fr 1fr; } .spk-farm .plot { min-height: 130px; } }
+
+@media (prefers-reduced-motion: reduce) { .spk-strings .st.new, .spk-scard.pop .pin, .spk-scard.armed, .spk-ripples .rg.go, .spk-ripples .wave, .spk-ripples .tapme, .spk-ripples .rl.now .vd, .spk-ripples .rl.now .mx, .spk-ripples .rl.now .ar, .spk-ripples .rl.now .fx path, .spk-tray.stamp .ink, .spk-tray.armed, .spk-link2.clink, .spk-farm .sun, .spk-farm .plot.sprout .crop, .spk-farm .plot.bloom .crop, .spk-farm .plot.armed { animation: none !important; } .spk-ripples .rg.on { opacity: .45; } }
+html.spk-quiet .spk-farm .sun { animation: none; }

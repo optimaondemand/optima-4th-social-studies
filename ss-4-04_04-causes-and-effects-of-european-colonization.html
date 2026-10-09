@@ -1754,6 +1754,1063 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.04.04",
+ "title": "Causes and Effects of European Colonization",
+ "quiet": false,
+ "file": {
+  "n": 4,
+  "title": "Explorers",
+  "label": "Explorers",
+  "seals": [
+   "🧵",
+   "📜",
+   "✍️"
+  ]
+ },
+ "prevFile": "Spain, France, and England in Florida",
+ "connector": "Last time we followed three flags on one coast. Today we ask what all of it caused.",
+ "minWords": 38,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "String Board",
+   "t": "Tie the strings",
+   "why": "Tie a string from each cause to the effect it led to."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read and investigate",
+   "why": "Send out the ripples to read what colonization caused. Then sort what the baptism book says, what we can figure out, and what we still have to ask."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Build the chain",
+   "why": "Answer three questions. Then write 5 to 7 sentences about the causes and effects of colonization, and weigh them with the Virtue Lens."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This room has a big chart on the wall: Causes and Effects. The last file of Unit 4 is locked.",
+  "opening": [
+   "This is the last file of Unit 4. It’s about what colonization caused in Florida. Colonization is when a country sends people to take over land far away and rule it.",
+   "To open it, tie strings from causes to effects. The String Board is in the String Board tab, below the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the board",
+      "go": true,
+      "reply": "Scroll down past the welcome video. Tap a cause on the left, then tap the effect it led to. Or drag the cause card onto its effect."
+     },
+     {
+      "t": "What’s a cause?",
+      "reply": "A cause is what makes something happen. An effect is what happens because of it. Rain is a cause. A wet sidewalk is an effect."
+     },
+     {
+      "t": "Are you okay in there?",
+      "reply": "I’m okay. The chart on this wall has strings hanging loose. I think if you tie them, the last door in this unit will open!"
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Tap the ship to send out ripples and read each part. Then sort the cards about the baptism book."
+     },
+     {
+      "t": "Why does it matter?",
+      "reply": "Because effects keep spreading, like rings on water. Some effects from 400 years ago are still part of Florida today."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. If you’re not sure, look back at the ripples."
+     },
+     {
+      "t": "What does infer mean?",
+      "reply": "To infer is to figure something out from clues. The book doesn’t say it in words, but the clues point to it."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Where are you now?",
+      "reply": "Out of the Unit 4 room! The next room is a big hall with all four Florida Files on the walls. Next time we put them all together."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you when the next file shows up."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! Every string is tied. See how one cause can lead to something big? Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! You sent every ripple and sorted every card. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 5 to 7 sentences about the causes and effects of colonization. Build the cause-and-effect chain first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}you finished the last file of Unit 4! A door just opened and I got one room closer to getting out. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Hold both halves: the courage it took, and what it cost the people already here. That’s the Virtue Lens.",
+ "scene1": {
+  "type": "stringboard",
+  "kicker": "String Board",
+  "h": "What led to what?",
+  "voice": "Tap a cause on the left, then tap the effect it led to. Or drag the cause card onto its effect.",
+  "causeLabel": "Causes",
+  "effectLabel": "Effects",
+  "countT": "strings tied.",
+  "causes": [
+   {
+    "id": "c1",
+    "ico": "⛪",
+    "t": "Spain wanted to spread the Christian religion (God).",
+    "effect": "e1",
+    "miss": "This cause is about religion. Which effect is about priests and churches?"
+   },
+   {
+    "id": "c2",
+    "ico": "🚩",
+    "t": "France built a fort in Florida in 1564.",
+    "effect": "e2",
+    "miss": "Spain didn’t want France in Florida. Which effect shows what Spain built to push the French out?"
+   },
+   {
+    "id": "c3",
+    "ico": "⛵",
+    "t": "Sailors and newcomers carried sicknesses like smallpox and measles.",
+    "effect": "e3",
+    "miss": "Sickness spreads from person to person. Which effect is about people dying?"
+   },
+   {
+    "id": "c4",
+    "ico": "⚔️",
+    "t": "Carolina, a colony ruled by England, wanted Spain out of Florida.",
+    "effect": "e4",
+    "miss": "Carolina belonged to England. Which effect is about attacks on the Spanish missions?"
+   }
+  ],
+  "effects": [
+   {
+    "id": "e3",
+    "ico": "🕯️",
+    "t": "Tens of thousands of First Peoples died over about 200 years."
+   },
+   {
+    "id": "e1",
+    "ico": "🔔",
+    "t": "Priests built missions, church towns where they taught Christianity."
+   },
+   {
+    "id": "e4",
+    "ico": "🔥",
+    "t": "In the early 1700s, attackers burned missions and captured Native people to sell as slaves, people forced to work for no pay."
+   },
+   {
+    "id": "e2",
+    "ico": "🏰",
+    "t": "Spain built St. Augustine in 1565 and pushed the French out."
+   }
+  ],
+  "win": "🧵 Every string is tied. One cause can lead to a big effect, and some effects lasted for hundreds of years.",
+  "why": {
+   "icon": "🧵",
+   "q": "Why a string board?",
+   "t": "When detectives and historians want to see how events connect, they pin each clue to a board and tie a string from one to the next. The string means “this led to that.” That’s why you tie strings here."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "ripples",
+   "activity": "What European Colonization Caused",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Over the last three lessons"
+    },
+    {
+     "id": "p2",
+     "match": "^The causes are"
+    },
+    {
+     "id": "p3",
+     "match": "^The effects are harder"
+    },
+    {
+     "id": "p4",
+     "match": "^Disease was not the only"
+    },
+    {
+     "id": "p5",
+     "match": "^There were other effects"
+    },
+    {
+     "id": "p6",
+     "match": "^An honest historian holds"
+    }
+   ],
+   "ship": [
+    -80.35,
+    29.6
+   ],
+   "label": "Send out the ripples",
+   "startT": "Tap the ship to drop its anchor.",
+   "countT": "ripples sent. Read this part, then send the next one.",
+   "allT": "Every ripple reached the shore. Some effects are still part of Florida today.",
+   "rings": [
+    {
+     "label": "The ships arrive",
+     "ico": "⛵",
+     "paras": [
+      "p1",
+      "p2"
+     ],
+     "show": []
+    },
+    {
+     "label": "Sickness spreads",
+     "ico": "🤒",
+     "paras": [
+      "p3"
+     ],
+     "show": [
+      "sick"
+     ]
+    },
+    {
+     "label": "Raids on the missions",
+     "ico": "🔥",
+     "paras": [
+      "p4"
+     ],
+     "show": [
+      "raid",
+      "raidar"
+     ]
+    },
+    {
+     "label": "Missions, a town, new animals",
+     "ico": "⛪",
+     "paras": [
+      "p5"
+     ],
+     "show": [
+      "missions",
+      "sta",
+      "cattle",
+      "gb"
+     ]
+    },
+    {
+     "label": "Both halves",
+     "ico": "⚖️",
+     "paras": [
+      "p6"
+     ],
+     "show": []
+    }
+   ],
+   "layers": {
+    "sick": {
+     "kind": "fade",
+     "pts": [
+      [
+       -82.4,
+       29.65
+      ],
+      [
+       -82.75,
+       29.95
+      ],
+      [
+       -82.1,
+       30.25
+      ],
+      [
+       -81.65,
+       30.45
+      ],
+      [
+       -82.6,
+       30.4
+      ],
+      [
+       -81.75,
+       29.35
+      ],
+      [
+       -83.1,
+       30.05
+      ],
+      [
+       -84.3,
+       30.45
+      ],
+      [
+       -84.0,
+       30.6
+      ],
+      [
+       -84.6,
+       30.38
+      ],
+      [
+       -81.95,
+       26.55
+      ],
+      [
+       -81.75,
+       26.95
+      ],
+      [
+       -80.2,
+       25.8
+      ],
+      [
+       -80.85,
+       26.95
+      ]
+     ],
+     "t": "Sickness spreads",
+     "tlon": -83.35,
+     "tlat": 28.9,
+     "a": "middle"
+    },
+    "raid": {
+     "kind": "fire",
+     "pts": [
+      [
+       -84.25,
+       30.45
+      ],
+      [
+       -83.5,
+       30.45
+      ],
+      [
+       -82.7,
+       29.95
+      ]
+     ],
+     "t": "Missions burned",
+     "tlon": -84.55,
+     "tlat": 29.95,
+     "a": "middle"
+    },
+    "raidar": {
+     "kind": "arrow",
+     "pts": [
+      [
+       -82.6,
+       31.15
+      ],
+      [
+       -83.9,
+       30.62
+      ]
+     ],
+     "bend": -12,
+     "t": "Raiders from Carolina",
+     "tlon": -82.7,
+     "tlat": 31.2,
+     "a": "end"
+    },
+    "missions": {
+     "kind": "cross",
+     "pts": [
+      [
+       -84.32,
+       30.45
+      ],
+      [
+       -83.45,
+       30.5
+      ],
+      [
+       -82.76,
+       29.96
+      ],
+      [
+       -81.43,
+       30.43
+      ]
+     ],
+     "t": "Missions",
+     "tlon": -83.15,
+     "tlat": 30.22,
+     "a": "middle"
+    },
+    "sta": {
+     "kind": "star",
+     "lon": -81.314,
+     "lat": 29.894,
+     "t": "St. Augustine",
+     "dx": -8,
+     "dy": 3,
+     "a": "end"
+    },
+    "cattle": {
+     "kind": "emoji",
+     "e": "🐄",
+     "lon": -82.32,
+     "lat": 29.6,
+     "t": "La Chua ranch",
+     "dx": 7,
+     "dy": 9,
+     "a": "start"
+    },
+    "gb": {
+     "kind": "flag",
+     "flag": "gb",
+     "lon": -81.27,
+     "lat": 29.85,
+     "s": 1.5,
+     "t": "1763: Britain",
+     "tlon": -81.15,
+     "tlat": 30.2,
+     "a": "start"
+    }
+   },
+   "peoples": [
+    {
+     "t": "Timucua",
+     "lon": -82.45,
+     "lat": 29.25
+    },
+    {
+     "t": "Apalachee",
+     "lon": -84.2,
+     "lat": 30.85
+    },
+    {
+     "t": "Calusa",
+     "lon": -81.6,
+     "lat": 26.3
+    },
+    {
+     "t": "Tequesta",
+     "lon": -80.5,
+     "lat": 25.55,
+     "a": "end"
+    }
+   ],
+   "why": {
+    "icon": "🌊",
+    "q": "Why ripples?",
+    "t": "Drop a stone in a pond and rings spread out, farther and farther. Colonization worked like that. Ships landed in one place, but the effects spread across all of Florida for 200 years. That’s why each part of the reading is a ripple."
+   }
+  },
+  "evidence": {
+   "type": "sayinfer",
+   "kicker": "Says · Infer · Ask",
+   "h": "What can this book tell us?",
+   "voice": "First tap each gold number on the baptism book. Then sort each card: tap it, then tap its tray. Or drag it.",
+   "bins": [
+    {
+     "id": "says",
+     "ico": "📜",
+     "t": "The book says",
+     "sub": "It’s written right there on the page.",
+     "ink": "Says"
+    },
+    {
+     "id": "infer",
+     "ico": "💭",
+     "t": "We can infer",
+     "sub": "We figure it out from clues in the book.",
+     "ink": "Infer"
+    },
+    {
+     "id": "ask",
+     "ico": "❓",
+     "t": "We still have to ask",
+     "sub": "This page can’t tell us. We need more sources.",
+     "ink": "Ask"
+    }
+   ],
+   "cards": [
+    {
+     "t": "Entry 39 is dated April 13, 1777.",
+     "bin": "says",
+     "why": "Label 3 shows the date.",
+     "misses": {
+      "infer": "Look at label 3. Is the date written right on the page?",
+      "ask": "Look at label 3. The page already tells us this."
+     }
+    },
+    {
+     "t": "A priest signed his name under the entry.",
+     "bin": "says",
+     "why": "Label 4 is his signature.",
+     "misses": {
+      "infer": "Look at label 4. You can see the signature right on the page.",
+      "ask": "Look at label 4. The page already shows this."
+     }
+    },
+    {
+     "t": "Entry 39 is a baby girl named María Gertrudis.",
+     "bin": "says",
+     "why": "Label 2 shows her name.",
+     "misses": {
+      "infer": "Look at label 2. Her name is written right on the page.",
+      "ask": "Look at label 2. The page already tells us her name."
+     }
+    },
+    {
+     "t": "The priests counted every baptism, in order.",
+     "bin": "infer",
+     "why": "The entries are numbered 38, 39, 40. The page doesn’t say “we counted,” but the numbers show it.",
+     "misses": {
+      "says": "The page doesn’t say this in words. You have to figure it out from the numbers.",
+      "ask": "We don’t need more sources for this. The numbers on the page are the clue."
+     }
+    },
+    {
+     "t": "By the end of this page, the mission had baptized at least 40 people.",
+     "bin": "infer",
+     "why": "The last number on the page is 40, so there were at least 40.",
+     "misses": {
+      "says": "No sentence on the page says this. Use the numbers to figure it out.",
+      "ask": "We don’t need more sources for this. Look at the last number on the page."
+     }
+    },
+    {
+     "t": "How did the families feel about the mission?",
+     "bin": "ask",
+     "why": "A list of names can’t tell us feelings. We would need other sources, like letters.",
+     "misses": {
+      "says": "Is this written on the page? It’s only names, dates, and numbers.",
+      "infer": "Can clues on this page tell us how people felt? A list of names can’t."
+     }
+    },
+    {
+     "t": "How many people at this mission got sick and died?",
+     "bin": "ask",
+     "why": "This is the baptism book. A historian would also need the burial book.",
+     "misses": {
+      "says": "Is this written on the page? This book is about baptisms.",
+      "infer": "The baptism numbers can’t tell us about deaths. What other book would we need?"
+     }
+    }
+   ],
+   "win": "✨ Sorted! A historian reads a source three ways: what it <b>says</b>, what we can <b>infer</b>, and what we still have to <b>ask</b>.",
+   "why": {
+    "icon": "🗂️",
+    "q": "Why three trays?",
+    "t": "Historians ask three questions about every source. What does it say? What can we <b>infer</b>, or figure out from clues? What do we still have to ask, because this source can’t tell us? That’s why there are three trays."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each gold number on the baptism book to see what it shows.",
+    "Sort each card into a tray: what the book says, what we can infer (figure out from clues), or what we still have to ask."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the baptism book to see what it shows.",
+  "allT": "Now sort the cards below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 17.03,
+    "y": 46.72,
+    "title": "Entry number.",
+    "t": "Each baptism gets the next number. This page shows 38, 39 and 40."
+   },
+   {
+    "n": "2",
+    "x": 21.52,
+    "y": 35.62,
+    "title": "Name.",
+    "t": "The person baptized. Entry 39 is a baby girl named María Gertrudis."
+   },
+   {
+    "n": "3",
+    "x": 36.96,
+    "y": 37.93,
+    "title": "Date.",
+    "t": "“En 13 de Abril de 1777” means “On April 13, 1777.”"
+   },
+   {
+    "n": "4",
+    "x": 89.37,
+    "y": 59.94,
+    "title": "Priest’s signature.",
+    "t": "Fray Gregorio de Amurrio, a priest, wrote entry 39 and signed it. A priest signed every entry."
+   }
+  ]
+ },
+ "planner": {
+  "type": "chain",
+  "voice": "Build your chain one link at a time: a cause, an effect, a detail from the baptism book, and the Virtue Lens. These are just notes. You’ll write your own sentences in Step 3.",
+  "links": [
+   {
+    "id": "cause",
+    "ico": "🧭",
+    "lab": "Cause",
+    "q": "Pick one cause",
+    "opts": [
+     {
+      "id": "god",
+      "t": "God: spreading Christianity"
+     },
+     {
+      "id": "gold",
+      "t": "Gold and Glory: land and riches"
+     },
+     {
+      "id": "rival",
+      "t": "The rivalry between Spain, France, and England"
+     },
+     {
+      "id": "search",
+      "t": "The search for new lands and sea paths"
+     }
+    ]
+   },
+   {
+    "id": "effect",
+    "ico": "🌊",
+    "lab": "Effect",
+    "q": "Pick one effect",
+    "opts": [
+     {
+      "id": "dis",
+      "t": "Sickness killed tens of thousands"
+     },
+     {
+      "id": "mis",
+      "t": "Missions taught Christianity and Spanish"
+     },
+     {
+      "id": "sta",
+      "t": "St. Augustine was built in 1565"
+     },
+     {
+      "id": "raid",
+      "t": "Raids captured Native people as slaves"
+     },
+     {
+      "id": "ani",
+      "t": "New animals, like cattle and horses"
+     },
+     {
+      "id": "gb",
+      "t": "Great Britain got Florida in 1763"
+     }
+    ]
+   },
+   {
+    "id": "book",
+    "ico": "📜",
+    "lab": "The book",
+    "q": "Pick a detail from the baptism book",
+    "opts": [
+     {
+      "id": "num",
+      "t": "Every baptism got a number"
+     },
+     {
+      "id": "name",
+      "t": "Each entry has a name and a date"
+     },
+     {
+      "id": "sign",
+      "t": "A priest signed each entry"
+     },
+     {
+      "id": "burial",
+      "t": "Priests kept a second book for burials"
+     }
+    ]
+   },
+   {
+    "id": "lens",
+    "ico": "⚖️",
+    "lab": "Virtue Lens",
+    "q": "How will you weigh it?",
+    "opts": [
+     {
+      "id": "cour",
+      "t": "The courage it took"
+     },
+     {
+      "id": "cost",
+      "t": "What it cost the First Peoples"
+     },
+     {
+      "id": "both",
+      "t": "Both: the courage and the cost"
+     }
+    ]
+   }
+  ],
+  "doneT": "Every link is shut. Now write your Source Study in Step 3.",
+  "why": {
+   "icon": "🔗",
+   "q": "Why a chain?",
+   "t": "A chain is only as strong as each link. Your writing needs four links: a cause, an effect, a detail from the baptism book, and the Virtue Lens. If one link is missing, the chain breaks."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a cause",
+    "rx": "\\b(god|gold|glory|religio|christian|faith|church|spread|riches|rich|wealth|treasure|money|silver|land|power|fame|famous|honor|empire|rival|compet|wanted|search|explor|route|sea path|new land|trade|france|french|england|english|carolina|fort caroline)"
+   },
+   {
+    "t": "an effect",
+    "rx": "sick|disease|smallpox|measles|germ|died|die\\b|dying|death|dead|kill|mission|st\\.? ?augustine|saint augustine|augustine|town|city|raid|slave|captur|burn|cattle|cow|horse|pig|animal|crop|1763|britain|british|lost|loss|gone|church|taught|teach|christian"
+   },
+   {
+    "t": "the baptism book",
+    "rx": "baptism|baptiz|book|record|entry|entries|number|name|date|priest|sign|count|burial|1777|mar[ií]a"
+   },
+   {
+    "t": "the Virtue Lens",
+    "rx": "courage|brave|bold|cost|both|hard|harm|hurt|unfair|honest|virtue|lens|risk|danger|wrong|right|good|bad|sad"
+   }
+  ],
+  "lines": [
+   "Start with a cause and an effect: why Europeans came, and what it changed.",
+   "Good. Now use the baptism book as evidence, and weigh it with the Virtue Lens: what took courage, and what did it cost?",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful answer. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use details from the lesson."
+  },
+  {
+   "t": "Plan",
+   "w": "Build the chain: a cause, an effect, a detail from the baptism book, and the Virtue Lens."
+  },
+  {
+   "t": "Write",
+   "w": "Write 5 to 7 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Source Study"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "plantfield",
+  "kicker": "Plant the Field",
+  "h": "col / cult = to farm, to live on land",
+  "root": "col / cult",
+  "rootMeaning": "= to farm, to live on land",
+  "voice": "Tap each row to plant its word and hear it. Then water each word with its meaning: tap the meaning, then tap the word, or drag it.",
+  "words": [
+   {
+    "w": "colony",
+    "root": "col",
+    "crop": "🌽",
+    "m": "a place ruled by a faraway country, where people from that country come to live and farm",
+    "miss": "This meaning is about a place. Which word names a place?",
+    "say": "Colony. A place ruled by a faraway country, where people from that country come to live and farm. Spanish Florida was a colony."
+   },
+   {
+    "w": "colonist",
+    "root": "col",
+    "crop": "🌾",
+    "m": "a person who moves to live in a colony",
+    "miss": "The ending -ist means a person, like in artist. Which word names a person?",
+    "say": "Colonist. A person who moves to live in a colony."
+   },
+   {
+    "w": "cultivate",
+    "root": "cult",
+    "crop": "🎃",
+    "m": "to get land ready and grow crops on it",
+    "miss": "This meaning is something you do. Which word is an action?",
+    "say": "Cultivate. To get land ready and grow crops on it."
+   },
+   {
+    "w": "agriculture",
+    "root": "cult",
+    "crop": "🌻",
+    "m": "farming: growing crops and raising animals",
+    "miss": "Agri- means field, like a farm field. Which word means farming?",
+    "say": "Agriculture. Farming: growing crops and raising animals."
+   }
+  ],
+  "win": "🌱 The whole field is growing: <b>col</b> and <b>cult</b> = to farm, to live on land",
+  "why": {
+   "icon": "🌱",
+   "q": "Why plant a field?",
+   "t": "The Latin word <i>colere</i> meant to farm, or to live on land and take care of it. A <i>colonus</i> was a farmer, and a <i>colonia</i> was a town of farmers far from home. That’s where we get <b>colony</b>. That’s why you plant a field here."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "My own string board",
+   "at": "scene1",
+   "script": "Here’s a string board from my own life. Cause: I forgot to water my garden for a week. Effect: my tomato plants wilted. Another cause: it rained all weekend. Effect: my soccer game got canceled. One string for each. Now look at your board. For each cause, ask: what did this lead to?"
+  },
+  {
+   "slot": "guide2",
+   "label": "The one nobody chose",
+   "at": "s1done",
+   "script": "Look at your strings. Some causes were choices people made, like building a fort. One cause, sickness, wasn’t a choice at all. Nobody back then knew about germs. But its effect was the biggest of all. Keep that in mind when you read the next part."
+  },
+  {
+   "label": "The priests write to the king, 1707",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "In 1707, the priests in St. Augustine wrote a letter to the king of Spain about what had happened to the Apalachee missions. Here is a short part, in English. Listen for two reasons the mission towns were emptying."
+    },
+    {
+     "slot": "source-2",
+     "who": "Franciscan priests of Florida, letter to the king of Spain, May 7, 1707 (English translation by John E. Worth)",
+     "script": "…very depopulated on account of the many plagues and sicknesses that have consumed them… many others of the said province, and of Timucua and Guale, have been sold and have passed to the islands of the domain of the Queen of England."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Depopulated means emptied of people. Plagues and sicknesses are diseases. Sold to the islands means people were captured and sold as slaves on English islands in the Caribbean Sea. Pause me and say the two reasons out loud."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Says, infer, ask: my door frame",
+   "at": "evidence",
+   "script": "Here’s how I’d read the growth chart on my kitchen door frame. It says: Sam, four feet tall, May 2025. I can infer Sam grew, because last year’s mark is lower. But I still have to ask: why did Sam grow so fast this year? The chart can’t tell me. Now try the same three questions on the baptism book."
+  },
+  {
+   "slot": "guide6",
+   "label": "Building my chain",
+   "at": "plan",
+   "script": "Here’s a chain from my own life. Cause: our town built a new park. Effect: more families walk there on weekends. Evidence: the sign-in sheet at the gate has more names each month. Lens: building it took hard work, and it cost a few old trees. Now build your chain. Four links, and don’t skip one."
+  }
+ ],
+ "cabinet": {
+  "n": 4,
+  "where": "The missions of north Florida, and St. Augustine",
+  "blurb": "Unit 4’s last file: what colonization caused, from missions and a new town to sickness, raids and loss."
+ },
+ "notes": {
+  "learned": [
+   "Colonization is when a country sends people to take over land far away and rule it.",
+   "Causes: God, Gold, and Glory; the rivalry between Spain, France, and England; and the search for new lands and sea paths.",
+   "The biggest effect was disease. Over about 200 years, sickness killed tens of thousands of Florida’s First Peoples.",
+   "In the early 1700s, raiders from the English colony of Carolina burned missions and captured thousands of Native people as slaves.",
+   "Spain built missions and St. Augustine (1565). In 1763, Spain traded Florida to Great Britain to get back Havana, Cuba.",
+   "A historian reads a source three ways: what it says, what we can infer, and what we still have to ask."
+  ],
+  "vocab": [
+   [
+    "colonization",
+    "when a country sends people to take over land far away and rule it"
+   ],
+   [
+    "cause",
+    "what makes something happen"
+   ],
+   [
+    "effect",
+    "what happens because of a cause"
+   ],
+   [
+    "motive",
+    "a reason for doing something"
+   ],
+   [
+    "rivalry",
+    "a contest between countries that want the same thing"
+   ],
+   [
+    "colony",
+    "a place ruled by a faraway country"
+   ],
+   [
+    "ally",
+    "a friend who fights on the same side"
+   ],
+   [
+    "slave",
+    "a person forced to work for no pay and never set free"
+   ],
+   [
+    "mission",
+    "a small church town where priests taught Christianity"
+   ],
+   [
+    "infer",
+    "to figure something out from clues"
+   ],
+   [
+    "Virtue Lens",
+    "looking at what people did and asking what took courage and what it cost"
+   ],
+   [
+    "colonist",
+    "a person who moves to live in a colony"
+   ],
+   [
+    "cultivate",
+    "to get land ready and grow crops on it"
+   ],
+   [
+    "agriculture",
+    "farming: growing crops and raising animals"
+   ]
+  ],
+  "wordParts": "The Latin root col / cult means “to farm, to live on land.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "two things the priest wrote",
+    "groups": [
+     "name|named|names|mar[ií]a|gertrudis|who",
+     "date|dates|day|when|april|1777|year|month",
+     "number|numbered|numbers|entry|entries|38|39|40",
+     "sign|signs|signature|signed|his name|amurrio"
+    ],
+    "n": 2
+   },
+   {
+    "t": "what the book counted",
+    "rx": "count|baptiz|baptism|baptis|people|person|joined|church|christian|how many|members|kids|babies|baby|born",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "one cause",
+    "rx": "\\b(god|gold|glory|religio|christian|faith|church|spread|riches|rich|wealth|treasure|money|silver|land|power|fame|famous|honor|empire|rival|compet|wanted|search|explor|route|sea path|new land|trade|france|french|england|english|carolina|fort caroline)",
+    "n": 1
+   },
+   {
+    "t": "one effect",
+    "rx": "sick|disease|smallpox|measles|germ|died|die\\b|dying|death|dead|kill|mission|st\\.? ?augustine|saint augustine|augustine|town|city|raid|slave|captur|burn|cattle|cow|horse|pig|animal|crop|1763|britain|british|lost|loss|gone|church|taught|teach|christian",
+    "n": 1
+   },
+   {
+    "t": "a detail from the unit",
+    "rx": "1565|1763|1700|1614|1617|1777|200 years|st\\.? ?augustine|augustine|smallpox|measles|timucua|apalachee|calusa|tequesta|carolina|havana|cuba|louisiana|britain|british|spain|spanish|france|french|england|english|mission|priest|cattle|horse|pig|men[eé]ndez|god|gold|glory|baptism|book|thousand",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "the courage side",
+    "rx": "courage|brave|bold|risk|danger|hard work|sail|ocean|explor|new land|built|build|faith|hero|strong|daring|scary|scared|long trip|journey",
+    "n": 1
+   },
+   {
+    "t": "the cost side",
+    "rx": "cost|harm|hurt|died|die\\b|dying|death|dead|sick|disease|slave|captur|lost|loss|took|taken|forced|force|unfair|bad|sad|wrong|kill|burn|raid",
+    "n": 1
+   },
+   {
+    "t": "evidence from the unit",
+    "rx": "1565|1763|1700|1614|1617|1777|200 years|st\\.? ?augustine|augustine|smallpox|measles|timucua|apalachee|calusa|tequesta|carolina|havana|cuba|louisiana|britain|british|spain|spanish|france|french|england|english|mission|priest|cattle|horse|pig|men[eé]ndez|god|gold|glory|baptism|book|thousand",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Go back to the Explore tab (tab 2) and tap the gold numbers on the baptism book.",
+   "Labels 1 to 4 show four things in each entry. Pick two. Then think: why would every entry get a number?",
+   "Try this shape: “The priest wrote down the ___ and the ___. The book was counting ___.”"
+  ],
+  "journal-q2": [
+   "Look at your strings in the String Board tab.",
+   "Causes are why Europeans came: God, Gold, Glory, or the rivalry. Effects are what changed: sickness, missions, St. Augustine, raids, or 1763.",
+   "Try this shape: “One cause was ___. One effect was ___. For example, ___.”"
+  ],
+  "journal-q3": [
+   "Reread the last ripple in the Explore tab: Both halves.",
+   "Find one thing that took courage, like sailing across the ocean or building St. Augustine. Then find one thing it cost, like sickness or raids.",
+   "Try this shape: “It was both. It took courage to ___. But it was harmful because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: if a historian counted the burial book too, what could they learn?",
+  "journal-q2": "Go further: which effect do you think lasted the longest? Why?",
+  "journal-q3": "Go further: did the First Peoples show courage too? How?"
+ },
+ "quizMiss": [
+  {
+   "a": "Missions changed many lives, but they didn’t wipe out whole villages. Reread the part about sickness.",
+   "b": "New crops and horses changed Florida, but they weren’t deadly. Which effect killed tens of thousands?"
+  },
+  {
+   "a": "Some Spaniards hoped for gold, but that wasn’t what missions were for. Reread the part about missions.",
+   "c": "Forts and soldiers defended Florida. A mission was a church town. What did the priests there teach?"
+  },
+  {
+   "b": "An honest historian doesn’t leave out part of the story. Who else lived in Florida?",
+   "c": "The settlers matter too. An honest historian keeps both halves of the story."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1997,126 +3054,131 @@ body.tx-active .tx-toggle-label {
      Bright and cheerful — saturated, warm colors even for serious topics.
      Show the WORLD: landscapes, objects, tools, ships, maps, buildings, landmarks.
      2–3 CSS animations (floating, drifting, pulsing). -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-  <defs>
-    <linearGradient id="b4sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F5C88A"/>
-      <stop offset="100%" stop-color="#8B5A6B"/>
-    </linearGradient>
-    <radialGradient id="b4smoke" cx="50%" cy="100%" r="80%">
-      <stop offset="0%" stop-color="#7A6A60" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#7A6A60" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="b4ground" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5E8C6C"/>
-      <stop offset="100%" stop-color="#3A5840"/>
-    </linearGradient>
-  </defs>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A Spanish ship at anchor off Florida's coast. Rings spread out across the water from the ship and reach the shore, where a mission bell tower, a stone fort and a Native village stand among palm trees." style="width:100%;height:auto;display:block;">
   <style>
-    .b4grow { animation: b4grow 5s ease-in-out infinite; transform-origin: center bottom; }
-    @keyframes b4grow { 0%,100% { transform: scaleY(0.96); } 50% { transform: scaleY(1.04); } }
-    .b4float { animation: b4float 8s ease-in-out infinite; }
-    @keyframes b4float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    .b4spin { animation: b4spin 30s linear infinite; transform-origin: center; }
-    @keyframes b4spin { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+    .c404-rip{fill:none;stroke:#FFFFFF;stroke-width:1.6;opacity:0;transform-box:fill-box;transform-origin:center;animation:c404rip 9s ease-out infinite}
+    .c404-r2{animation-delay:-3s} .c404-r3{animation-delay:-6s}
+    .c404-ship{animation:c404bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .c404-flag{animation:c404wave 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:0 50%}
+    .c404-smoke{animation:c404sm 7s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%} .c404-sm2{animation-delay:-3.5s}
+    .c404-bell{animation:c404bell 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 0}
+    .c404-gl{animation:c404gl 4s ease-in-out infinite} .c404-g2{animation-delay:-2s}
+    .c404-cl{animation:c404cl 60s linear infinite} .c404-c2{animation-delay:-30s}
+    @keyframes c404rip{0%{transform:scale(.06);opacity:0}8%{opacity:.85}100%{transform:scale(1);opacity:0}}
+    @keyframes c404bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(1.5px) rotate(.6deg)}}
+    @keyframes c404wave{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(-5deg) scaleX(.94)}}
+    @keyframes c404sm{0%{transform:translateY(0) scale(.7);opacity:0}25%{opacity:.55}100%{transform:translateY(-26px) scale(1.4);opacity:0}}
+    @keyframes c404bell{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(9deg)}92%{transform:rotate(-7deg)}}
+    @keyframes c404gl{0%,100%{opacity:.25}50%{opacity:.7}}
+    @keyframes c404cl{from{transform:translateX(0)}to{transform:translateX(120px)}}
+    @media (prefers-reduced-motion: reduce){.c404-rip,.c404-ship,.c404-flag,.c404-smoke,.c404-bell,.c404-gl,.c404-cl{animation:none}.c404-rip{opacity:.35;transform:none}.c404-r2{transform:scale(.6)}.c404-r3{transform:scale(.3)}.c404-smoke{opacity:.4}}
   </style>
-  <rect width="920" height="260" fill="url(#b4sky)"/>
-  <!-- Background smoke clouds -->
-  <ellipse cx="220" cy="120" rx="130" ry="50" fill="url(#b4smoke)"/>
-  <ellipse cx="700" cy="100" rx="150" ry="55" fill="url(#b4smoke)"/>
-  <!-- Ground -->
-  <rect y="200" width="920" height="60" fill="url(#b4ground)"/>
-  <!-- LEFT SIDE: causes -->
-  <!-- Caravel silhouette (cause: explorers) -->
-  <g opacity="0.85" transform="translate(95, 165)">
-    <path d="M -28 18 Q -22 28 -10 30 L 22 30 Q 32 28 38 18 Z" fill="#4A3018"/>
-    <rect x="-1" y="-30" width="2" height="48" fill="#3A2410"/>
-    <path d="M -16 -28 L 16 -28 L 14 -2 L -14 -2 Z" fill="#E8DCBC"/>
-    <line x1="0" y1="-28" x2="0" y2="-2" stroke="#C03030" stroke-width="2"/>
+  <defs>
+    <linearGradient id="c404sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C7FB8"/><stop offset=".55" stop-color="#8FC3E2"/><stop offset=".9" stop-color="#F7DDB0"/><stop offset="1" stop-color="#FBE8C2"/>
+    </linearGradient>
+    <linearGradient id="c404sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2F86B0"/><stop offset=".5" stop-color="#1F6E99"/><stop offset="1" stop-color="#14527A"/>
+    </linearGradient>
+    <linearGradient id="c404land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7FAE52"/><stop offset="1" stop-color="#4E7F33"/>
+    </linearGradient>
+    <linearGradient id="c404sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#EBD8A6"/><stop offset="1" stop-color="#F5E6BD"/>
+    </linearGradient>
+    <radialGradient id="c404sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6D0"/><stop offset=".45" stop-color="#FFE08A" stop-opacity=".9"/><stop offset="1" stop-color="#FFD36A" stop-opacity="0"/></radialGradient>
+    <clipPath id="c404water"><path d="M0,96 H920 V200 H0Z M610,200 C600,170 585,140 560,118 C548,108 520,99 498,96 H920 V200Z" clip-rule="evenodd"/></clipPath>
+  </defs>
+  <!-- sky -->
+  <rect width="920" height="200" fill="url(#c404sky)"/>
+  <circle cx="760" cy="58" r="58" fill="url(#c404sun)"/>
+  <circle cx="760" cy="58" r="16" fill="#FFF3C4"/>
+  <g class="c404-cl" opacity=".85"><ellipse cx="110" cy="38" rx="46" ry="11" fill="#FFFFFF"/><ellipse cx="140" cy="31" rx="28" ry="10" fill="#FFFFFF"/></g>
+  <g class="c404-cl c404-c2" opacity=".7"><ellipse cx="420" cy="28" rx="40" ry="9" fill="#FFFFFF"/><ellipse cx="446" cy="22" rx="22" ry="8" fill="#FFFFFF"/></g>
+  <!-- sea -->
+  <rect y="96" width="920" height="104" fill="url(#c404sea)"/>
+  <g stroke="#8FD0EA" stroke-width="1.2" stroke-linecap="round" opacity=".45" fill="none">
+    <path d="M30,118 h26 M90,128 h18 M260,114 h24 M320,132 h30 M60,160 h34 M210,176 h28 M380,170 h22 M430,122 h20 M470,150 h26"/>
   </g>
-  <!-- Spanish crown coin (cause: gold motive) -->
-  <g transform="translate(180, 115)"><g class="b4float">
-    <circle r="22" fill="#D4943A" stroke="#7A4A26" stroke-width="2"/>
-    <circle r="17" fill="none" stroke="#7A4A26" stroke-width="0.8"/>
-    <path d="M -10 -10 L 10 -10 L 0 10 Z" fill="#7A4A26" opacity="0.5"/>
-    <circle r="3" fill="#FFE08C"/>
-  </g></g>
-  <!-- Cross (cause: God motive) -->
-  <g transform="translate(95, 95)">
-    <rect x="-4" y="-22" width="8" height="44" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="1"/>
-    <rect x="-14" y="-10" width="28" height="8" fill="#F5F0E0" stroke="#7A6A4A" stroke-width="1"/>
+  <!-- ripples from the ship (clipped to the water) -->
+  <g clip-path="url(#c404water)">
+    <ellipse class="c404-rip" cx="200" cy="150" rx="460" ry="64"/>
+    <ellipse class="c404-rip c404-r2" cx="200" cy="150" rx="460" ry="64"/>
+    <ellipse class="c404-rip c404-r3" cx="200" cy="150" rx="460" ry="64"/>
   </g>
-  <!-- Arrow from causes side -->
-  <g transform="translate(255, 130)">
-    <path d="M 0 0 L 70 0 L 70 -8 L 95 5 L 70 18 L 70 10 L 0 10 Z" fill="#C03030" opacity="0.85" stroke="#7A1818" stroke-width="1.5"/>
-    <!-- 'C' text replaced by shape -->
-    <circle cx="35" cy="5" r="5" fill="#FFE08C"/>
+  <!-- the Florida shore -->
+  <path d="M498,96 C520,99 548,108 560,118 C585,140 600,170 610,200 H920 V96Z" fill="url(#c404sand)"/>
+  <path d="M528,96 C552,100 576,112 590,124 C612,146 628,172 636,200 H920 V96Z" fill="url(#c404land)"/>
+  <path d="M498,96 C520,99 548,108 560,118 C585,140 600,170 610,200" fill="none" stroke="#FFFFFF" stroke-width="2" opacity=".7"/>
+  <g class="c404-gl"><path d="M512,99 C532,103 552,111 564,121" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".6"/></g>
+  <g class="c404-gl c404-g2"><path d="M576,136 C590,152 600,172 606,192" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".6"/></g>
+  <!-- far tree line -->
+  <path d="M540,97 q14,-10 26,-2 q12,-12 26,-3 q12,-9 24,0 q16,-12 30,-1 q14,-9 28,0 q16,-11 30,-2 q12,-8 26,0 q14,-10 30,-1 q14,-9 28,0 q12,-8 26,1 q14,-9 30,0 q12,-8 24,0 q14,-10 30,0 V100 H540Z" fill="#3F6E2A" opacity=".75"/>
+  <!-- coquina fort (bastion) -->
+  <g>
+    <path d="M640,128 L652,112 H740 L752,128Z" fill="#D9C7A0"/>
+    <rect x="652" y="112" width="88" height="16" fill="#CDB78C"/>
+    <path d="M652,112 h6 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h7 v-5 h7 v5" fill="none" stroke="#CDB78C" stroke-width="0" />
+    <path d="M652,112 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h8 v-5 h7 v5 h7 v-5 h7 v5 h7Z" fill="#CDB78C"/>
+    <path d="M736,104 h12 v8 h-12Z" fill="#BFA77A"/><path d="M738,98 h8 l2,6 h-12Z" fill="#A98F62"/>
+    <g fill="#B8A27A" opacity=".55"><circle cx="664" cy="120" r="1"/><circle cx="690" cy="123" r="1"/><circle cx="712" cy="118" r="1"/><circle cx="728" cy="124" r="1"/></g>
   </g>
-  <!-- CENTER: balance/scale (Virtue Lens / cause & effect weighing) -->
-  <g transform="translate(460, 145)"><g class="b4float">
-    <!-- Base column -->
-    <rect x="-3" y="0" width="6" height="50" fill="#5A3818"/>
-    <rect x="-20" y="48" width="40" height="6" fill="#5A3818"/>
-    <!-- Arm -->
-    <rect x="-55" y="-3" width="110" height="4" fill="#5A3818"/>
-    <!-- Left pan (causes) -->
-    <line x1="-55" y1="-1" x2="-55" y2="20" stroke="#5A3818" stroke-width="1"/>
-    <ellipse cx="-55" cy="22" rx="25" ry="5" fill="#7A4A26" stroke="#3A2410" stroke-width="1.2"/>
-    <ellipse cx="-55" cy="20" rx="25" ry="5" fill="#8B5A30"/>
-    <!-- Right pan (effects) -->
-    <line x1="55" y1="-1" x2="55" y2="20" stroke="#5A3818" stroke-width="1"/>
-    <ellipse cx="55" cy="22" rx="25" ry="5" fill="#7A4A26" stroke="#3A2410" stroke-width="1.2"/>
-    <ellipse cx="55" cy="20" rx="25" ry="5" fill="#8B5A30"/>
-    <!-- Top decoration -->
-    <circle cx="0" cy="-3" r="5" fill="#D4943A" stroke="#7A4A26" stroke-width="1"/>
-  </g></g>
-  <!-- Arrow to effects side -->
-  <g transform="translate(570, 130)">
-    <path d="M 0 0 L 70 0 L 70 -8 L 95 5 L 70 18 L 70 10 L 0 10 Z" fill="#4A6AAA" opacity="0.85" stroke="#1A3A6B" stroke-width="1.5"/>
-    <circle cx="35" cy="5" r="5" fill="#9FCFE8"/>
+  <!-- mission church with bell tower -->
+  <g>
+    <rect x="772" y="104" width="44" height="30" fill="#F6EFE0"/>
+    <path d="M768,106 L794,88 L820,106Z" fill="#9A5B34"/>
+    <rect x="820" y="80" width="18" height="54" fill="#F1E8D4"/>
+    <path d="M818,80 L829,66 L840,80Z" fill="#9A5B34"/>
+    <rect x="828" y="56" width="2" height="11" fill="#5C3A1A"/><rect x="824.5" y="59" width="9" height="2" fill="#5C3A1A"/>
+    <path d="M823,84 h12 v14 h-12Z" fill="#5C4030"/>
+    <g class="c404-bell"><path d="M829,85 c-3.5,0 -4.5,4 -4.5,7.5 h9 c0,-3.5 -1,-7.5 -4.5,-7.5Z" fill="#C9A24A"/><circle cx="829" cy="93.5" r="1.2" fill="#8A6A1E"/></g>
+    <path d="M789,134 v-12 a5,5 0 0 1 10,0 v12Z" fill="#6B4423"/>
+    <rect x="777" y="111" width="6" height="8" rx="3" fill="#8FB6C8"/><rect x="805" y="111" width="6" height="8" rx="3" fill="#8FB6C8"/>
   </g>
-  <!-- RIGHT SIDE: effects -->
-  <!-- Mission church (effect: missions) -->
-  <g transform="translate(720, 175)">
-    <rect x="-22" y="-30" width="44" height="40" fill="#E8C480" stroke="#7A4A26" stroke-width="1.5"/>
-    <path d="M -25 -30 L 25 -30 L 0 -50 Z" fill="#A06A2A" stroke="#5A3818" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-66" width="2" height="16" fill="#5A3818"/>
-    <rect x="-5" y="-60" width="10" height="3" fill="#5A3818"/>
-    <!-- Door -->
-    <rect x="-7" y="-12" width="14" height="22" fill="#5A3818" stroke="#3A2410" stroke-width="0.5"/>
-    <path d="M -7 -12 L 0 -18 L 7 -12" stroke="#3A2410" stroke-width="0.6" fill="none"/>
-    <!-- Window -->
-    <circle cx="0" cy="-22" r="3" fill="#8B5A30"/>
+  <!-- Native village: palmetto-thatched houses, smoke rising -->
+  <g>
+    <path d="M846,150 q14,-26 28,0Z" fill="#B88A4A"/><path d="M846,150 q14,-26 28,0" fill="none" stroke="#8A6233" stroke-width="1.2"/>
+    <path d="M852,141 l16,0 M849,146 l22,0" stroke="#8A6233" stroke-width="1" opacity=".7"/>
+    <rect x="857" y="142" width="6" height="8" fill="#5C3A1A"/>
+    <path d="M880,156 q16,-30 32,0Z" fill="#C2964F"/><path d="M880,156 q16,-30 32,0" fill="none" stroke="#8A6233" stroke-width="1.2"/>
+    <path d="M887,146 l18,0 M884,151 l24,0" stroke="#8A6233" stroke-width="1" opacity=".7"/>
+    <rect x="893" y="147" width="6" height="9" fill="#5C3A1A"/>
+    <ellipse class="c404-smoke" cx="878" cy="130" rx="5" ry="7" fill="#F2F2F2"/>
+    <ellipse class="c404-smoke c404-sm2" cx="880" cy="126" rx="4" ry="6" fill="#F2F2F2"/>
+    <circle cx="877" cy="153" r="2.6" fill="#E8542A" opacity=".85"/>
   </g>
-  <!-- A broken vessel (effect: disrupted indigenous life) -->
-  <g opacity="0.9" transform="translate(820, 220)">
-    <path d="M -18 0 L -14 -25 L 14 -25 L 18 0 Z" fill="#A06A2A" stroke="#5A3818" stroke-width="1"/>
-    <line x1="-14" y1="-15" x2="14" y2="-15" stroke="#5A3818" stroke-width="0.6"/>
-    <!-- Crack line -->
-    <path d="M -2 -25 L -4 -15 L 2 -8 L -2 0" stroke="#3A2410" stroke-width="1" fill="none"/>
-    <!-- Broken piece nearby -->
-    <path d="M 20 0 L 26 -6 L 30 -2 L 26 4 Z" fill="#A06A2A" stroke="#5A3818" stroke-width="0.8"/>
+  <!-- palms -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M622,162 q-4,-26 4,-48" stroke="#7A5A34" stroke-width="3.5"/>
+    <g stroke="#2F6B2A" stroke-width="3"><path d="M626,114 q-14,-4 -22,6"/><path d="M626,114 q-10,-12 -24,-10"/><path d="M626,114 q6,-14 20,-14"/><path d="M626,114 q14,-2 20,10"/><path d="M626,114 q2,-14 -4,-22"/></g>
+    <path d="M758,150 q-3,-22 3,-40" stroke="#7A5A34" stroke-width="3"/>
+    <g stroke="#2F6B2A" stroke-width="2.6"><path d="M761,110 q-12,-3 -19,5"/><path d="M761,110 q-8,-10 -20,-9"/><path d="M761,110 q5,-12 17,-12"/><path d="M761,110 q12,-2 17,9"/></g>
+    <path d="M912,176 q-3,-24 2,-44" stroke="#7A5A34" stroke-width="3"/>
+    <g stroke="#2F6B2A" stroke-width="2.6"><path d="M914,132 q-12,-3 -19,5"/><path d="M914,132 q-8,-10 -20,-9"/><path d="M914,132 q8,-10 14,-8"/></g>
   </g>
-  <!-- Plant (effect: new crops, mixing) -->
-  <g transform="translate(870, 200)"><g class="b4grow">
-    <rect x="-1" y="-10" width="2" height="14" fill="#3A5840"/>
-    <ellipse cx="-6" cy="-8" rx="6" ry="3" fill="#3FA070"/>
-    <ellipse cx="6" cy="-8" rx="6" ry="3" fill="#3FA070"/>
-    <ellipse cx="0" cy="-14" rx="5" ry="3" fill="#5BC080"/>
-  </g></g>
-  <!-- Compass below center: showing both sides -->
-  <g transform="translate(460, 230)" opacity="0.85">
-    <g class="b4spin"><circle r="14" fill="none" stroke="#F5F0E0" stroke-width="0.8" stroke-dasharray="2,2"/></g>
-    <circle r="10" fill="#F2E4C0" stroke="#5A3818" stroke-width="1.2"/>
-    <path d="M 0 -8 L 2 0 L 0 8 L -2 0 Z" fill="#C03030"/>
-    <path d="M -8 0 L 0 2 L 8 0 L 0 -2 Z" fill="#0E1C42"/>
+  <!-- grazing cattle (brought on the ships) -->
+  <g fill="#6B4423">
+    <path d="M676,168 h16 a3,3 0 0 1 3,3 v4 h-22 v-4 a3,3 0 0 1 3,-3Z"/><rect x="674" y="175" width="2" height="6"/><rect x="690" y="175" width="2" height="6"/><path d="M673,170 l-5,4 l2,2 l4,-3Z"/>
+    <path d="M712,176 h14 a3,3 0 0 1 3,3 v3 h-20 v-3 a3,3 0 0 1 3,-3Z" opacity=".85"/><rect x="711" y="182" width="2" height="5" opacity=".85"/><rect x="725" y="182" width="2" height="5" opacity=".85"/>
   </g>
-  <!-- Dotted decorative texture in sky -->
-  <g fill="#F5F0E0" opacity="0.3">
-    <circle cx="50" cy="30" r="1.5"/><circle cx="380" cy="25" r="1.5"/><circle cx="540" cy="40" r="1.5"/>
-    <circle cx="870" cy="35" r="1.5"/>
+  <!-- the ship at anchor -->
+  <g class="c404-ship">
+    <path d="M148,146 L242,146 L232,164 L160,164Z" fill="#6B3F1E"/>
+    <path d="M148,146 L160,164 H232 L242,146" fill="none" stroke="#3E2612" stroke-width="1.5"/>
+    <rect x="156" y="150" width="78" height="2.4" fill="#C9A24A"/>
+    <path d="M226,146 L244,136 L246,146Z" fill="#7A4A26"/><path d="M146,146 L150,134 L168,134 L166,146Z" fill="#7A4A26"/>
+    <rect x="193" y="76" width="3" height="70" fill="#4A2E16"/>
+    <rect x="166" y="96" width="2.4" height="50" fill="#4A2E16"/>
+    <rect x="221" y="104" width="2.2" height="42" fill="#4A2E16"/>
+    <path d="M178,86 h33 q4,16 0,34 h-33 q-4,-18 0,-34Z" fill="#F4EEDD" stroke="#C9BFA4" stroke-width="1"/>
+    <path d="M186,95 l17,14 M203,95 l-17,14" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M156,106 h22 q3,11 0,22 h-22 q-3,-11 0,-22Z" fill="#EFE7D2" stroke="#C9BFA4" stroke-width="1"/>
+    <path d="M222,108 l16,14 h-16Z" fill="#EFE7D2" stroke="#C9BFA4" stroke-width="1"/>
+    <path d="M196,77 L150,146 M196,77 L242,140" stroke="#3E2612" stroke-width=".7" opacity=".7"/>
+    <g transform="translate(196,70)"><g class="c404-flag"><rect width="18" height="11" fill="#FFFDF5" stroke="#3E2612" stroke-width=".6"/><path d="M3,2 L15,9 M15,2 L3,9" stroke="#B3261E" stroke-width="2" stroke-linecap="round"/></g></g>
+    <path d="M206,164 q4,10 2,22" fill="none" stroke="#3E2612" stroke-width="1" opacity=".6"/>
   </g>
+  <ellipse cx="195" cy="166" rx="56" ry="4" fill="#0F3F5E" opacity=".35"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3664,5 +4726,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
