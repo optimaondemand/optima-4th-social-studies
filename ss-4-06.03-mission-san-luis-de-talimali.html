@@ -1766,6 +1766,904 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.03",
+ "title": "Mission San Luis de Talimali",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🖌️",
+   "👣",
+   "🚪"
+  ]
+ },
+ "prevFile": "St. Augustine: Oldest Permanent European Settlement",
+ "connector": "Last time we saw how St. Augustine became a town that stayed. Today we travel west to a town that two peoples shared.",
+ "minWords": 38,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Dig Site",
+   "t": "Dig the site",
+   "why": "Brush away the dirt and find both sides of the plaza."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Walk and look",
+   "why": "Walk the plaza one stop at a time. Then see what half a picture can hide."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Two doors, one plaza",
+   "why": "Answer three questions. Then write 5 to 7 sentences about life on both sides of the plaza."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. The next room down this hallway looks like a dig site. There’s dirt everywhere!",
+  "opening": [
+   "This file is about Mission San Luis, in what is now Tallahassee. A mission was a town where Spanish priests taught their religion. Two peoples shared this one: the Apalachee and the Spanish.",
+   "Start in the Dig Site tab (tab 1). Scroll down to the dig site under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the dig",
+      "go": true,
+      "reply": "Tap a square to brush the dirt away, or press and drag across the squares. Find all 7 buried clues."
+     },
+     {
+      "t": "What’s an archaeologist?",
+      "reply": "A scientist who digs up clues from the past. They brush the dirt away slowly, so nothing breaks."
+     },
+     {
+      "t": "Are we close to the exit?",
+      "reply": "I think so! This hallway feels shorter. Let’s keep opening files."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Walk the plaza one stop at a time. Each stop opens part of the story."
+     },
+     {
+      "t": "Who lived on each side?",
+      "reply": "The Apalachee side had the Council House and the chief’s house. The Spanish side had the church, the friary, the homes, and the fort."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "What happened in 1704?",
+      "reply": "English soldiers and their Creek allies were attacking the missions. Before they reached San Luis, the people there burned their own town and left."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about daily life on the missions: what a regular day was like for the people who lived there."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! You found both sides of the plaza: the Apalachee side, the Spanish side, and the open plaza they shared. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! You walked the whole town, and you looked at the whole picture, not just half. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 5 to 7 sentences about Mission San Luis, with one detail from each side of the plaza. Plan with the two doors first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "At San Luis, the Apalachee chief served his people, and the friars (Spanish priests) served their faith. Notice whom each person served, and what that service looked like every day.",
+ "scene1": {
+  "type": "sitedig",
+  "kicker": "Dig the Site",
+  "h": "Brush away the dirt and find both sides of the plaza",
+  "voice": "Tap a square to brush the dirt away. Or press and drag across the squares. Find all 7 buried clues.",
+  "alt": "An archaeology dig site at Mission San Luis, covered with dirt in squares",
+  "cols": 6,
+  "rows": 4,
+  "sides": {
+   "ap": "Apalachee side",
+   "sp": "Spanish side",
+   "both": "Shared"
+  },
+  "feats": [
+   {
+    "id": "council",
+    "ico": "🔥",
+    "t": "The Council House",
+    "short": "Council House",
+    "side": "ap",
+    "shape": "ring",
+    "x": 8,
+    "y": 8,
+    "w": 110,
+    "h": 110,
+    "tells": "A giant ring of post holes with a fire pit in the middle. The Apalachee met, danced, and made big decisions here."
+   },
+   {
+    "id": "chief",
+    "ico": "🏠",
+    "t": "The chief’s house",
+    "short": "Chief’s house",
+    "side": "ap",
+    "shape": "hut",
+    "x": 4,
+    "y": 158,
+    "w": 52,
+    "h": 52,
+    "tells": "A smaller round house near the Council House. The Apalachee chief lived here."
+   },
+   {
+    "id": "plaza",
+    "ico": "☀️",
+    "t": "The plaza",
+    "short": "Plaza",
+    "side": "both",
+    "shape": "plaza",
+    "x": 128,
+    "y": 70,
+    "w": 100,
+    "h": 110,
+    "tells": "An open square with almost nothing buried in it. People from both sides crossed it every day."
+   },
+   {
+    "id": "church",
+    "ico": "⛪",
+    "t": "The church",
+    "short": "Church",
+    "side": "sp",
+    "shape": "church",
+    "x": 246,
+    "y": 66,
+    "w": 100,
+    "h": 52,
+    "tells": "A big building. Under its floor, archaeologists found the graves of hundreds of mission people."
+   },
+   {
+    "id": "friary",
+    "ico": "📿",
+    "t": "The friary",
+    "short": "Friary",
+    "side": "sp",
+    "shape": "friary",
+    "x": 250,
+    "y": 134,
+    "w": 46,
+    "h": 42,
+    "tells": "The house where the Franciscan friars lived."
+   },
+   {
+    "id": "houses",
+    "ico": "🏘️",
+    "t": "Spanish homes",
+    "short": "Homes",
+    "side": "sp",
+    "shape": "houses",
+    "x": 306,
+    "y": 130,
+    "w": 50,
+    "h": 100,
+    "tells": "Spanish families lived in houses like these, near the church."
+   },
+   {
+    "id": "fort",
+    "ico": "🛡️",
+    "t": "The fort",
+    "short": "Fort",
+    "side": "sp",
+    "shape": "fort",
+    "x": 248,
+    "y": 4,
+    "w": 104,
+    "h": 52,
+    "tells": "Post holes for a wooden wall, and a dry ditch called a moat. Spanish soldiers stayed here."
+   }
+  ],
+  "tellsK": "Field notes: what each find tells a historian",
+  "startT": "Start anywhere. Each square you brush shows a little more of what’s buried.",
+  "countT": "finds uncovered. Keep brushing.",
+  "win": "🖌️ <b>Site uncovered!</b> The Apalachee side, the Spanish side, and the plaza they shared, all in one town.",
+  "why": {
+   "icon": "🖌️",
+   "q": "Why dig?",
+   "t": "Nobody alive today ever saw San Luis. In 1704 the town was burned and left behind. Archaeologists (scientists who dig up clues from the past) found where the buildings stood by digging slowly, one square at a time. The rebuilt Council House you’ll see in tab 2 was built from what they found. That’s why you dig."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "plazawalk",
+   "activity": "Two Buildings, One Plaza",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^Most Spanish missions"
+    },
+    {
+     "id": "p1",
+     "match": "^Where it was"
+    },
+    {
+     "id": "p2",
+     "match": "^Why historians call"
+    },
+    {
+     "id": "p3",
+     "match": "^The Apalachee Council House"
+    },
+    {
+     "id": "p4",
+     "match": "^The Spanish church"
+    },
+    {
+     "id": "p5",
+     "match": "^Holding both stories"
+    }
+   ],
+   "stops": [
+    {
+     "id": "s0",
+     "ico": "🚩",
+     "t": "Mission San Luis",
+     "short": "Start here",
+     "x": 186,
+     "y": 176,
+     "ly": -17,
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "s1",
+     "ico": "🛤️",
+     "t": "The road",
+     "short": "The road",
+     "x": 330,
+     "y": 186,
+     "ly": -17,
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "s2",
+     "ico": "☀️",
+     "t": "The plaza",
+     "short": "The plaza",
+     "x": 186,
+     "y": 108,
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "s3",
+     "ico": "🔥",
+     "t": "The Council House",
+     "short": "Council House",
+     "x": 82,
+     "y": 102,
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "s4",
+     "ico": "⛪",
+     "t": "The church",
+     "short": "Church",
+     "x": 294,
+     "y": 88,
+     "ly": -16,
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "s5",
+     "ico": "💨",
+     "t": "1704",
+     "short": "1704",
+     "x": 186,
+     "y": 32,
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "smokeAt": 5,
+   "roadT": "200 miles to St. Augustine →",
+   "alt": "A plan of Mission San Luis: the round Council House on the left, the plaza in the middle, the church, friary, homes and fort on the right",
+   "startT": "Tap the glowing flag to start your walk.",
+   "countT": "stops. Read this part, then tap the next glowing stop.",
+   "allT": "You walked the whole town, from the road to 1704.",
+   "orderT": "Walk in order: tap the stop that is glowing.",
+   "why": {
+    "icon": "👣",
+    "q": "Why walk?",
+    "t": "At San Luis, the Council House and the church faced each other across the plaza, so people passed both buildings every day. Walking the town stop by stop lets you see it the way the people who lived there did. That’s why you walk it."
+   }
+  },
+  "evidence": {
+   "type": "halfpic",
+   "kicker": "Half the Picture",
+   "h": "What can half a picture hide?",
+   "voice": "Half of this picture is covered up. Make a guess from the half you can see. Then lift the paper.",
+   "alt": "A drawing of the plaza at San Luis: the round thatched Council House on the left, the church and a small house on the right",
+   "guessQ": "This is the only half you can see. Who do you think ran San Luis?",
+   "guesses": [
+    {
+     "id": "sp",
+     "t": "The Spanish",
+     "r": "That makes sense from this half. All you can see is a Spanish church and a Spanish house."
+    },
+    {
+     "id": "ap",
+     "t": "The Apalachee",
+     "r": "Nothing in this half shows the Apalachee yet. Let’s see what’s under the paper."
+    },
+    {
+     "id": "both",
+     "t": "Both groups",
+     "r": "Good thinking, but this half can’t prove it. All you can see are Spanish buildings."
+    }
+   ],
+   "liftT": "Lift the paper",
+   "step2": "Now lift the paper. Tap it, or drag it to the side.",
+   "afterT": "The biggest building in the whole plaza was hiding under the paper: the Apalachee Council House. Half a picture can fool you.",
+   "step3": "True or not true? Look at the whole plaza.",
+   "checks": [
+    {
+     "t": "The Spanish ran San Luis all by themselves.",
+     "ok": false,
+     "why": "Right, that’s not true. The Apalachee chief was a leader at San Luis too. That’s why it was a joint settlement.",
+     "miss": "Look at the left side again. Who met in that giant building? Reread the walk stop called The plaza."
+    },
+    {
+     "t": "The biggest building in town was built by the Apalachee.",
+     "ok": true,
+     "why": "True. The Council House was the biggest building at San Luis.",
+     "miss": "Compare the two buildings. Which one is bigger?"
+    },
+    {
+     "t": "The Spanish church was tiny.",
+     "ok": false,
+     "why": "Right, that’s not true. The church was big, as big as the main church in St. Augustine. The Council House was just bigger.",
+     "miss": "Reread the walk stop called The church. How big was it?"
+    },
+    {
+     "t": "A historian should look at both sides of the plaza before deciding who had power.",
+     "ok": true,
+     "why": "True. One building tells only half the story.",
+     "miss": "Think about your first guess. Did half the picture tell you the whole story?"
+    }
+   ],
+   "hotT": "Last step: tap every gold number on the photo above.",
+   "readT": "Last step: finish Walk the Plaza at the top of this tab.",
+   "win": "✓ You looked at the whole plaza before deciding. That’s what a careful historian does.",
+   "why": {
+    "icon": "📷",
+    "q": "Why half a picture?",
+    "t": "Historians often have only part of the evidence: one letter, one map, or one photo. If you only ever saw a picture of the church, you might think the Spanish ran everything. That’s why you start with half the picture."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the photo.",
+    "Read the three questions under the photo.",
+    "Do Half the Picture: guess, lift the paper, then check each sentence."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "Now try Half the Picture below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 35.0,
+    "y": 34.8,
+    "title": "The roof.",
+    "t": "It is thatch: dried plants packed in thick layers. A Spanish bishop who visited in 1675 wrote that council houses were “covered with straw.”"
+   },
+   {
+    "n": "2",
+    "x": 61.25,
+    "y": 20.03,
+    "title": "The opening at the top.",
+    "t": "A big fire burned in the middle of the floor. The smoke went out through this hole."
+   },
+   {
+    "n": "3",
+    "x": 57.5,
+    "y": 59.76,
+    "title": "The door.",
+    "t": "A grown-up fits through it. Use it to judge how big the whole building is."
+   },
+   {
+    "n": "4",
+    "x": 43.33,
+    "y": 53.99,
+    "title": "A wooden cross.",
+    "t": "It stands in front today. It reminds visitors that the Spanish church was just across the plaza."
+   },
+   {
+    "n": "5",
+    "x": 33.33,
+    "y": 81.15,
+    "title": "The plaza.",
+    "t": "The big open square in the middle of town. The Council House was on one side, and the Spanish church faced it from the other side."
+   }
+  ]
+ },
+ "planner": {
+  "type": "plazaplan",
+  "voice": "Pick one detail for each door, something both sides shared, and why it matters. These are just notes. You’ll write your own sentences in Step 3.",
+  "whyLab": "because…",
+  "parts": [
+   {
+    "id": "ap",
+    "part": "ch",
+    "lab": "Apalachee side",
+    "ico": "🔥",
+    "q": "The Council House door: pick one detail about the Apalachee",
+    "opts": [
+     {
+      "id": "a1",
+      "t": "The Council House held more than a thousand people"
+     },
+     {
+      "id": "a2",
+      "t": "The Apalachee chief met with his people in the Council House"
+     },
+     {
+      "id": "a3",
+      "t": "Apalachee farmers grew food that fed St. Augustine"
+     },
+     {
+      "id": "a4",
+      "t": "Dances and meetings happened in the Apalachee language"
+     }
+    ]
+   },
+   {
+    "id": "sp",
+    "part": "sp",
+    "lab": "Spanish side",
+    "ico": "⛪",
+    "q": "The church door: pick one detail about the Spanish",
+    "opts": [
+     {
+      "id": "s1",
+      "t": "Franciscan friars taught, baptized, and learned Apalachee"
+     },
+     {
+      "id": "s2",
+      "t": "A Spanish deputy governor lived at San Luis"
+     },
+     {
+      "id": "s3",
+      "t": "A large wooden church faced the plaza"
+     },
+     {
+      "id": "s4",
+      "t": "Spanish soldiers kept a fort nearby"
+     }
+    ]
+   },
+   {
+    "id": "both",
+    "part": "plz",
+    "lab": "Shared",
+    "ico": "☀️",
+    "q": "The plaza: pick something both sides shared",
+    "opts": [
+     {
+      "id": "b1",
+      "t": "One plaza, with both buildings facing it"
+     },
+     {
+      "id": "b2",
+      "t": "One town of about 1,500 people"
+     },
+     {
+      "id": "b3",
+      "t": "Almost 50 years together, from 1656 to 1704"
+     },
+     {
+      "id": "b4",
+      "t": "The same ending: in 1704 they burned the town and left"
+     }
+    ]
+   },
+   {
+    "id": "why",
+    "part": "why",
+    "lab": "This matters because",
+    "ico": "💡",
+    "q": "This matters because: pick one",
+    "opts": [
+     {
+      "id": "w1",
+      "t": "It was a rare town that two peoples ran together"
+     },
+     {
+      "id": "w2",
+      "t": "One building alone tells only half the story"
+     },
+     {
+      "id": "w3",
+      "t": "The Apalachee paid a high price: lost ceremonies, forced work, and a burned town"
+     }
+    ]
+   }
+  ],
+  "doneT": "Both doors are open. Now write your entry in Step 3.",
+  "why": {
+   "icon": "🚪",
+   "q": "Why two doors?",
+   "t": "At San Luis, the Council House door and the church door faced each other across the plaza. Your entry needs a detail from each side, so you plan it the same way: one door, then the other, then the plaza in between."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what San Luis was",
+    "rx": "mission|san luis|town|capital|joint|settlement|shared|both"
+   },
+   {
+    "t": "an Apalachee detail",
+    "rx": "apalachee|council house|council|chief|corn|farm|dance|thatch|fire"
+   },
+   {
+    "t": "a Spanish detail",
+    "rx": "spanish|spain|church|friar|franciscan|priest|mass|baptiz|fort|soldier|governor"
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|matters|important|so\\b|shows|that.?s why|both sides|half"
+   }
+  ],
+  "lines": [
+   "Start with what Mission San Luis was.",
+   "Good. Now add a detail from each side of the plaza.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the dig site, the walk, and the photo."
+  },
+  {
+   "t": "Plan",
+   "w": "Pick a detail for each door, something shared, and why it matters."
+  },
+  {
+   "t": "Write",
+   "w": "Write 5 to 7 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Historian’s Notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "roofrings",
+  "kicker": "Raise the Roof",
+  "h": "cap = head",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each one adds a ring of thatch, all the way to the top.",
+  "words": [
+   {
+    "w": "capital",
+    "root": "cap",
+    "m": "the city where a government is run, the “head” city",
+    "miss": "This meaning is about a city. Which word names the “head” city, like Tallahassee?",
+    "say": "Capital. The city where a government is run, the head city."
+   },
+   {
+    "w": "captain",
+    "root": "cap",
+    "m": "the leader, or “head,” of a ship or a team",
+    "miss": "Think of a ship. Who’s in charge of it?",
+    "say": "Captain. The leader, or head, of a ship or a team."
+   },
+   {
+    "w": "cape",
+    "root": "cap",
+    "m": "a point of land that sticks out into the sea, like a head",
+    "miss": "This meaning is about land and sea, like Cape Canaveral.",
+    "say": "Cape. A point of land that sticks out into the sea, like a head."
+   },
+   {
+    "w": "chief",
+    "m": "the leader, or “head,” of a group of people",
+    "miss": "This word doesn’t show cap, but it still comes from caput. Who led the Apalachee at San Luis?",
+    "say": "Chief. The leader, or head, of a group of people."
+   }
+  ],
+  "win": "🌾 The roof is up, all the way to its head. <b>cap</b> = head",
+  "why": {
+   "icon": "🌾",
+   "q": "Why raise a roof?",
+   "t": "<em>Caput</em> is Latin for “head,” and the head of something is its top. The Council House roof rose in rings of thatch (dried plants packed in thick layers) to an opening at the very top. So each word you match adds a ring, until the roof reaches its head."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Clues in the dirt",
+   "at": "scene1",
+   "script": "When I cleaned out my garage, I found clues about who used it. A box of crayons meant kids played there. A wrench meant someone fixed things. As you dig, ask yourself: who used this place, and what did they do here?"
+  },
+  {
+   "slot": "guide2",
+   "label": "The biggest find",
+   "at": "s1done",
+   "script": "Look at your finished dig. Pause me and find the biggest thing you uncovered. Whose was it? Now look at the plaza in the middle. Both sides crossed it every day. Keep that in mind on the Explore tab."
+  },
+  {
+   "label": "A bishop who was there",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "Here’s a Spanish bishop named Gabriel Díaz Vara Calderón. In 1675 he visited the Apalachee missions, and then he wrote a long letter to the queen of Spain. Listen for how big he says the council houses were."
+    },
+    {
+     "slot": "source-2",
+     "who": "Bishop Gabriel Díaz Vara Calderón, 1675 (English translation by Lucy L. Wenhold, 1936)",
+     "script": "Each village has a council house called the great bujío, constructed of wood and covered with straw, round, and with a very large opening in the top. Most of them can accommodate from 2,000 to 3,000 persons. They are furnished all around the interior with niches called barbacoas, which serve as beds and as seats for the caciques and chiefs, and as lodgings for soldiers and transients. Dances and festivals are held in them around a great fire in the center."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you hear it? Two thousand to three thousand people! A cacique is a chief. The barbacoas were benches built all around the inside wall. Pause me and think: what does a building that big tell you about the people who built it?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "Half a photo fooled me",
+   "at": "evidence",
+   "script": "Once a friend sent me a photo of her house, and it looked tiny. Then she sent the whole picture. The first photo only showed her garage! Half a picture can fool you. Make your guess from the half you can see, then lift the paper."
+  },
+  {
+   "slot": "guide5",
+   "label": "Planning my two doors",
+   "at": "plan",
+   "script": "Here’s how I’d plan if I were writing about my school. One door: the gym, where we play. The other door: the library, where we read. And the hallway in the middle, where everybody walks. Now pick a detail for each door at San Luis."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "Mission San Luis de Talimali, in what is now Tallahassee, was the capital of Spanish Florida’s western province from 1656 to 1704.",
+   "It was a JOINT settlement: the Apalachee chief and a Spanish deputy governor both lived and led there. About 1,500 people lived at San Luis by the late 1600s, most of them Apalachee.",
+   "The Apalachee Council House was more than 120 feet across and held more than a thousand people. It was bigger than the large Spanish church across the plaza.",
+   "Franciscan friars led Mass, baptized people, taught reading and writing, and learned the Apalachee language.",
+   "The Apalachee lost some of their ceremonies and language, and men were forced to work for the Spanish. In 1704, as English and Creek attackers came near, the people of San Luis burned their town and left."
+  ],
+  "vocab": [
+   [
+    "mission",
+    "a town where Spanish priests taught their Catholic religion to Native people"
+   ],
+   [
+    "friar",
+    "a kind of Catholic priest or brother; the friars at San Luis were Franciscans"
+   ],
+   [
+    "capital",
+    "the main town, where a government is run"
+   ],
+   [
+    "province",
+    "a region, a big part of a country or colony"
+   ],
+   [
+    "joint settlement",
+    "a town that two groups share"
+   ],
+   [
+    "deputy governor",
+    "the governor’s helper in charge of one region"
+   ],
+   [
+    "plaza",
+    "an open square in the middle of a town"
+   ],
+   [
+    "thatch",
+    "a roof made of dried plants packed in thick layers"
+   ],
+   [
+    "Mass",
+    "a Catholic church service"
+   ],
+   [
+    "baptize",
+    "to welcome a person into the church with a ceremony that uses water"
+   ],
+   [
+    "archaeologist",
+    "a scientist who digs up clues from the past"
+   ],
+   [
+    "reconstruction",
+    "a copy of an old building, built in our time"
+   ],
+   [
+    "Creek",
+    "a Native nation; Creek warriors joined the English attacks in 1704"
+   ],
+   [
+    "captain",
+    "the leader, or “head,” of a ship or a team"
+   ],
+   [
+    "cape",
+    "a point of land that sticks out into the sea, like a head"
+   ],
+   [
+    "chief",
+    "the leader, or “head,” of a group of people"
+   ]
+  ],
+  "wordParts": "The Latin root cap (from caput) means “head.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "the Council House",
+    "rx": "council|counsel|counsil|round|circle|circular|thatch|apalachee|apalache",
+    "n": 1
+   },
+   {
+    "t": "the church",
+    "rx": "church|chapel|chaple|cross|friar|mass|bell|catholic|spanish",
+    "n": 1
+   },
+   {
+    "t": "a describing word",
+    "rx": "big|huge|giant|large|enormous|round|circle|circular|thatch|straw|wood|wooden|tall|small|fire|hold|people|thousand|120|cross|bell",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "where it was",
+    "rx": "tallahassee|talahassee|tallahasee|tallahasse|apalachee|apalache|west|inland|north florida|panhandle|200|augustine|florida",
+    "n": 1
+   },
+   {
+    "t": "two groups",
+    "rx": "apalachee|apalache|spanish|spain|native|chief|friars?|governor|both|two|together|shared?|joint",
+    "n": 2
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a person",
+    "rx": "chief|friar|priest|farmer|soldier|governor|apalachee|spanish|franciscan|leader",
+    "n": 1
+   },
+   {
+    "t": "whom they served",
+    "rx": "serv|help|people|village|town|faith|god|church|family|families|king|spain|tribe|everyone|kids",
+    "n": 1
+   },
+   {
+    "t": "how they served",
+    "rx": "by |teach|taught|baptiz|farm|grow|grew|food|corn|lead|led|protect|guard|fight|talk|deal|learn|pray|work|build|built|met|meet|keep|kept|cook",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your dig site in tab 1, or Half the Picture in tab 2.",
+   "One building was Apalachee and one was Spanish. What did each one look like?",
+   "Try this shape: “The ___ was a huge ___ building. Across the plaza was the ___.”"
+  ],
+  "journal-q2": [
+   "Reread the walk stops called The road and The plaza in the Explore tab (tab 2).",
+   "Where is San Luis today? Which two groups both had leaders there?",
+   "Try this shape: “Mission San Luis was near ___. It was a joint settlement because the ___ and the ___ both ___.”"
+  ],
+  "journal-q3": [
+   "Look at the Historian Lens near the top of tab 1.",
+   "Pick one person: the chief, a friar, a farmer, or a soldier. Whom did they help?",
+   "Try this shape: “I picked ___. This person served ___ by ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: Bishop Calderón wrote that council houses held 2,000 to 3,000 people. How could a historian check that?",
+  "journal-q2": "Go further: why do you think the Spanish put their western capital in Apalachee land?",
+  "journal-q3": "Go further: did the person you picked serve by choice, or because they had to? How can you tell?"
+ },
+ "quizMiss": [
+  {
+   "a": "St. Augustine is on the Atlantic coast. San Luis was about 200 miles west of it. Look at the walk stop called The road.",
+   "c": "The Keys are far to the south. San Luis was in Apalachee land, away from the coast. Where is Tallahassee?"
+  },
+  {
+   "a": "The stone fort is in St. Augustine. San Luis was special because of who lived there. Reread the walk stop called The plaza.",
+   "b": "About 1,500 people lived at San Luis, and most of them were Apalachee. Reread the walk stop called The plaza."
+  },
+  {
+   "b": "That’s the Spanish side of the plaza, and the church was big, too. Which building was round and thatched?",
+   "c": "The fort was Spanish. Reread the walk stop called The Council House."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2002,197 +2900,94 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Mission San Luis de Talimali ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the plaza at dawn, 1704 — smoke on the horizon (4.06.03 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawn over the plaza at Mission San Luis. The huge round thatched Apalachee Council House stands on the left and the Spanish church with its cross stands on the right, across an empty plaza. Thin lines of smoke rise from the far horizon." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b603sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFE0A8"/>
-      <stop offset="55%" stop-color="#F2B070"/>
-      <stop offset="100%" stop-color="#A8C0D8"/>
-    </linearGradient>
-    <linearGradient id="b603thatch" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#D8A058"/>
-      <stop offset="100%" stop-color="#8A6028"/>
-    </linearGradient>
-    <linearGradient id="b603church" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F2DCB0"/>
-      <stop offset="100%" stop-color="#C8A878"/>
-    </linearGradient>
-    <linearGradient id="b603ground" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A88858"/>
-      <stop offset="100%" stop-color="#6A4818"/>
+    <linearGradient id="b603sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8E95A8"/>
+      <stop offset=".45" stop-color="#D9B8A4"/>
+      <stop offset=".8" stop-color="#F2D7A8"/>
+      <stop offset="1" stop-color="#F6E3BC"/>
     </linearGradient>
     <radialGradient id="b603sun" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
+      <stop offset="0" stop-color="#FFF1C8" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#FBD99A" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#F6CF90" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="b603ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9AE7E"/>
+      <stop offset="1" stop-color="#8E8558"/>
+    </linearGradient>
+    <linearGradient id="b603thatch" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5E4E34"/>
+      <stop offset=".55" stop-color="#8A7650"/>
+      <stop offset="1" stop-color="#6E5E40"/>
+    </linearGradient>
+    <linearGradient id="b603wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#CDBB98"/>
+      <stop offset="1" stop-color="#A8967A"/>
+    </linearGradient>
     <style>
-      .b603sway { animation: b603sway 5s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b603sway { 0%,100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
-      .b603smoke { animation: b603smoke 6s ease-in-out infinite; }
-      @keyframes b603smoke { 0% { transform: translateY(0); opacity: 0.55; } 100% { transform: translateY(-30px); opacity: 0; } }
-      .b603sun { animation: b603sun 5s ease-in-out infinite; }
-      @keyframes b603sun { 0%,100% { opacity: 0.75; } 50% { opacity: 1; } }
-      .b603bird { animation: b603bird 8s ease-in-out infinite; }
-      @keyframes b603bird { 0%,100% { transform: translate(0,0); } 50% { transform: translate(10px,-5px); } }
+      .b603smoke { animation: b603rise 9s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      .b603smoke.s2 { animation-delay: -3s; } .b603smoke.s3 { animation-delay: -6s; }
+      @keyframes b603rise { 0%,100% { transform: translateY(0) scaleX(1); opacity: .5; } 50% { transform: translateY(-6px) scaleX(1.12); opacity: .75; } }
+      .b603glow { animation: b603glow 7s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+      @keyframes b603glow { 50% { transform: scale(1.08); opacity: .85; } }
+      .b603bird { animation: b603glide 16s linear infinite; }
+      @keyframes b603glide { from { transform: translateX(0); } to { transform: translateX(-160px); } }
+      .b603moss { animation: b603sway 6s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes b603sway { 50% { transform: rotate(2deg); } }
+      @media (prefers-reduced-motion: reduce) { .b603smoke, .b603glow, .b603bird, .b603moss { animation: none; } }
     </style>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="180" fill="url(#b603sky)"/>
-
-  <!-- Sun (opacity-only animation, safe without nesting) -->
-  <g class="b603sun">
-    <circle cx="180" cy="65" r="55" fill="url(#b603sun)"/>
-    <circle cx="180" cy="65" r="26" fill="#FFE5A0" opacity="0.85"/>
+  <rect width="920" height="200" fill="url(#b603sky)"/>
+  <!-- hazy sun low over the plaza -->
+  <circle class="b603glow" cx="470" cy="122" r="90" fill="url(#b603sun)"/>
+  <circle cx="470" cy="122" r="16" fill="#FFF0C8" opacity=".9"/>
+  <!-- faint smoke on the far horizon: the missions burning in 1704 -->
+  <g fill="none" stroke="#6E6A70" stroke-linecap="round">
+    <path class="b603smoke" d="M600,128 C596,108 612,96 604,78 C598,62 612,50 606,32" stroke-width="7" opacity=".55"/>
+    <path class="b603smoke s2" d="M676,130 C672,114 686,104 680,88 C676,76 688,66 684,52" stroke-width="5" opacity=".45"/>
+    <path class="b603smoke s3" d="M548,130 C544,118 556,110 551,98 C547,88 556,80 553,70" stroke-width="4" opacity=".4"/>
   </g>
-
-  <!-- Distant pine tree line -->
-  <g fill="#2A5A3A" opacity="0.6">
-    <path d="M 0 175 L 30 145 L 50 175 L 70 150 L 90 175 L 120 148 L 145 175 L 180 152 L 210 175 L 250 145 L 280 175 L 320 150 L 355 175 L 395 148 L 430 175 L 470 152 L 510 175 L 560 148 L 600 175 L 640 152 L 680 175 L 730 150 L 770 175 L 810 148 L 850 175 L 890 152 L 920 175 L 920 180 L 0 180 Z"/>
+  <!-- distant tree line -->
+  <path d="M0,132 C40,120 70,126 110,118 C150,112 180,124 230,118 C290,110 330,124 380,120 C430,116 470,126 520,122 C580,118 620,128 680,121 C740,114 790,126 850,119 C880,116 900,120 920,118 L920,140 L0,140 Z" fill="#7C8468" opacity=".75"/>
+  <!-- birds far off -->
+  <g class="b603bird" fill="none" stroke="#4A4652" stroke-width="1.4" stroke-linecap="round">
+    <path d="M760,58 q5,-4 9,0 q4,-4 9,0"/><path d="M790,48 q4,-3 7,0 q3,-3 7,0"/><path d="M812,64 q4,-3 7,0 q3,-3 7,0"/>
   </g>
-
-  <!-- Birds (translate animation OK without nested g) -->
-  <g class="b603bird" fill="none" stroke="#3A2510" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
-    <path d="M 280 55 Q 286 50 292 55 Q 298 50 304 55"/>
-    <path d="M 340 40 Q 345 36 350 40 Q 355 36 360 40"/>
-  </g>
-
-  <!-- Ground / mission plaza -->
-  <rect y="180" width="920" height="80" fill="url(#b603ground)"/>
-  <!-- Plaza ground texture (dirt patches) -->
-  <g fill="#7A5818" opacity="0.4">
-    <circle cx="80" cy="220" r="3"/><circle cx="160" cy="240" r="2"/>
-    <circle cx="280" cy="225" r="2.5"/><circle cx="420" cy="235" r="2"/>
-    <circle cx="560" cy="220" r="2.5"/><circle cx="700" cy="240" r="3"/>
-    <circle cx="820" cy="228" r="2"/>
-  </g>
-
-  <!-- ═══ LEFT: APALACHEE COUNCIL HOUSE ═══
-       Large circular thatched structure (the actual Council House was ~120 ft diameter,
-       largest known indigenous structure in colonial SE). No interior detail visible. -->
-  <g transform="translate(245 180)">
-    <!-- Conical thatched roof -->
-    <path d="M -85 0 L 0 -110 L 85 0 Z" fill="url(#b603thatch)" stroke="#5A3818" stroke-width="2"/>
-    <!-- Roof thatch texture lines -->
-    <g stroke="#5A3818" stroke-width="0.6" opacity="0.45" fill="none">
-      <path d="M -70 -10 L 0 -100"/>
-      <path d="M -50 -20 L 5 -100"/>
-      <path d="M -30 -30 L 0 -100"/>
-      <path d="M -10 -40 L 0 -100"/>
-      <path d="M 10 -40 L 0 -100"/>
-      <path d="M 30 -30 L 0 -100"/>
-      <path d="M 50 -20 L -5 -100"/>
-      <path d="M 70 -10 L 0 -100"/>
+  <!-- the ground and the empty plaza -->
+  <rect y="136" width="920" height="64" fill="url(#b603ground)"/>
+  <ellipse cx="470" cy="168" rx="260" ry="22" fill="#D8CDA0" opacity=".85"/>
+  <ellipse cx="470" cy="168" rx="200" ry="14" fill="#E4DAB0" opacity=".6"/>
+  <!-- APALACHEE COUNCIL HOUSE: giant round thatched cone with an opening at the top -->
+  <g>
+    <path d="M96,158 L196,46 Q218,38 240,46 L340,158 Z" fill="url(#b603thatch)"/>
+    <path d="M196,46 Q218,38 240,46" fill="none" stroke="#3E3220" stroke-width="4"/>
+    <g fill="none" stroke="#4E4028" stroke-width="1.1" opacity=".55">
+      <path d="M178,66 Q218,74 258,66"/><path d="M160,86 Q218,96 276,86"/><path d="M142,106 Q218,118 294,106"/><path d="M124,126 Q218,140 312,126"/><path d="M108,146 Q218,160 328,146"/>
     </g>
-    <!-- Wall band (woven palmetto / cane) -->
-    <rect x="-85" y="0" width="170" height="6" fill="#7A5028" stroke="#3A2010" stroke-width="0.5"/>
-    <!-- Doorway -->
-    <path d="M -12 -2 L -12 0 L -12 0 Q -12 -22 0 -22 Q 12 -22 12 0 L 12 -2" fill="#1A0A05"/>
-    <rect x="-12" y="-22" width="24" height="2" fill="#3A2010"/>
-    <!-- Wisp of smoke from central fire (escaping through roof) -->
-    <g class="b603smoke" opacity="0.5">
-      <ellipse cx="0" cy="-115" rx="10" ry="5" fill="#D8D0C8"/>
-      <ellipse cx="-4" cy="-122" rx="7" ry="4" fill="#E0D8D0"/>
-    </g>
+    <path d="M206,158 v-17 q12,-8 24,0 v17 Z" fill="#2A2014"/>
+    <path d="M211,158 v-14 q7,-5 14,0 v14 Z" fill="#F2B866" opacity=".55"/>
   </g>
-
-  <!-- Council house identifier marker (turtle motif at entrance — Apalachee clan symbol, no text) -->
-  <g transform="translate(245 188)" opacity="0.7">
-    <ellipse cx="0" cy="0" rx="9" ry="6" fill="#5A3818" stroke="#2A1808" stroke-width="0.5"/>
-    <circle cx="0" cy="0" r="4" fill="#7A5028"/>
-    <!-- Tiny limbs and head -->
-    <circle cx="-8" cy="-3" r="1.5" fill="#5A3818"/>
-    <circle cx="8" cy="-3" r="1.5" fill="#5A3818"/>
-    <circle cx="-7" cy="3" r="1.5" fill="#5A3818"/>
-    <circle cx="7" cy="3" r="1.5" fill="#5A3818"/>
-    <circle cx="0" cy="-7" r="2" fill="#5A3818"/>
+  <!-- SPANISH CHURCH, friary and a house across the plaza -->
+  <g>
+    <rect x="642" y="98" width="180" height="62" fill="url(#b603wall)" stroke="#6E5E44" stroke-width="1.2"/>
+    <path d="M636,100 L732,56 L828,100 Z" fill="#7A5A36" stroke="#4A3418" stroke-width="1.2"/>
+    <path d="M732,30 v26 M723,39 h18" stroke="#3E2612" stroke-width="3.2" stroke-linecap="round"/>
+    <rect x="720" y="126" width="24" height="34" fill="#4A3418"/>
+    <rect x="664" y="112" width="10" height="16" fill="#6E5E44" opacity=".6"/><rect x="790" y="112" width="10" height="16" fill="#6E5E44" opacity=".6"/>
+    <rect x="836" y="124" width="64" height="36" fill="#C2B090" stroke="#6E5E44"/><path d="M832,126 L868,108 L904,126 Z" fill="#7A5A36"/>
+    <rect x="596" y="130" width="40" height="30" fill="#C8B698" stroke="#6E5E44"/><path d="M592,132 L616,118 L640,132 Z" fill="#7A5A36"/>
   </g>
-
-  <!-- ═══ RIGHT: SPANISH MISSION CHURCH (small wooden chapel, not stone — accurate for SLT) ═══ -->
-  <g transform="translate(645 180)">
-    <!-- Body of the church -->
-    <rect x="-55" y="-65" width="110" height="65" fill="url(#b603church)" stroke="#6A4520" stroke-width="2"/>
-    <!-- Steep thatched/wood-shingle roof -->
-    <path d="M -62 -65 L 0 -110 L 62 -65 Z" fill="#8A6028" stroke="#3A2010" stroke-width="2"/>
-    <!-- Vertical wood plank lines -->
-    <g stroke="#8A6028" stroke-width="0.8" opacity="0.55">
-      <line x1="-40" y1="-65" x2="-40" y2="0"/>
-      <line x1="-25" y1="-65" x2="-25" y2="0"/>
-      <line x1="25" y1="-65" x2="25" y2="0"/>
-      <line x1="40" y1="-65" x2="40" y2="0"/>
-    </g>
-    <!-- Bell tower / small spire -->
-    <rect x="-8" y="-130" width="16" height="22" fill="url(#b603church)" stroke="#6A4520" stroke-width="1.5"/>
-    <path d="M -10 -130 L 0 -148 L 10 -130 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-158" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-152" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Small bell -->
-    <path d="M -4 -127 Q -4 -118 0 -118 Q 4 -118 4 -127 Z" fill="#A88858" stroke="#5A3818" stroke-width="0.5"/>
-    <!-- Door -->
-    <path d="M -10 0 L -10 -20 Q -10 -28 0 -28 Q 10 -28 10 -20 L 10 0 Z" fill="#3A2010"/>
-    <path d="M -8 0 L -8 -20 Q -8 -26 0 -26 Q 8 -26 8 -20 L 8 0 Z" fill="#5A3818"/>
-    <!-- Small round window above door -->
-    <circle cx="0" cy="-40" r="4" fill="#3A2010"/>
-    <circle cx="0" cy="-40" r="3" fill="#8A6028"/>
-    <line x1="-3" y1="-40" x2="3" y2="-40" stroke="#3A2010" stroke-width="0.5"/>
-    <line x1="0" y1="-43" x2="0" y2="-37" stroke="#3A2010" stroke-width="0.5"/>
+  <!-- live oaks with moss at the edges -->
+  <g fill="#3E4A32">
+    <path d="M0,0 L0,150 L18,150 L22,96 C40,92 64,74 70,52 C78,28 54,6 30,0 Z" opacity=".92"/>
+    <path d="M920,0 L920,150 L902,150 L898,100 C882,96 862,80 858,58 C852,32 874,8 896,0 Z" opacity=".92"/>
   </g>
-
-  <!-- ═══ CENTER: Plaza marker / shared central pole ═══
-       The Council House had a central fire; the Spanish mission had a plaza cross.
-       In Mission San Luis the two structures stood across the same plaza. -->
-  <g transform="translate(445 175)">
-    <rect x="-1.5" y="-22" width="3" height="22" fill="#5A3818"/>
-    <rect x="-7" y="-15" width="14" height="3" fill="#5A3818"/>
-    <!-- A few baskets / trade goods at base hinting at shared marketplace -->
-    <ellipse cx="-12" cy="3" rx="6" ry="2.5" fill="#8A6028" stroke="#3A2010" stroke-width="0.5"/>
-    <ellipse cx="14" cy="3" rx="5" ry="2.5" fill="#A07028" stroke="#3A2010" stroke-width="0.5"/>
-    <!-- Tiny corn stalks -->
-    <line x1="0" y1="3" x2="0" y2="-6" stroke="#4A6A20" stroke-width="0.8"/>
-    <ellipse cx="0" cy="-3" rx="1.5" ry="3" fill="#7A8A30" opacity="0.8"/>
-  </g>
-
-  <!-- ═══ FOREGROUND: corn rows + palmetto (Apalachee + Florida) ═══ -->
-  <!-- Cornfield (a few stalks, swaying with sway animation via nested g) -->
-  <g transform="translate(120 235)">
-    <g class="b603sway">
-      <line x1="0" y1="0" x2="0" y2="-22" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-12" rx="2" ry="6" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-15" rx="2" ry="6" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-22" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(150 232)">
-    <g class="b603sway" style="animation-delay:0.7s;">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-10" rx="2" ry="5" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-13" rx="2" ry="5" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-20" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(870 235)">
-    <g class="b603sway" style="animation-delay:1.2s;">
-      <line x1="0" y1="0" x2="0" y2="-24" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-14" rx="2" ry="7" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-17" rx="2" ry="7" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-24" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- Palmetto frond foreground left -->
-  <g fill="#1A4A3A">
-    <path d="M 40 252 Q 35 222 25 212 Q 38 222 46 217 Q 35 207 44 195 Q 52 212 54 222 Q 62 202 72 202 Q 62 217 56 227 Q 72 217 82 222 Q 66 232 54 240 L 50 255 Z"/>
-    <rect x="48" y="240" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-
-  <!-- hero detail -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
+  <g fill="#7E8A6E" opacity=".7">
+    <path class="b603moss" d="M40,40 q4,18 0,34 q-3,-14 -6,0 q-2,-18 6,-34 Z"/><path class="b603moss" d="M60,30 q3,14 0,26 q-3,-10 -5,0 q-1,-14 5,-26 Z"/>
+    <path class="b603moss" d="M878,42 q4,18 0,32 q-3,-12 -6,0 q-2,-16 6,-32 Z"/><path class="b603moss" d="M896,28 q3,14 0,24 q-3,-9 -5,0 q-1,-12 5,-24 Z"/>
   </g>
 </svg>
 
@@ -3724,5 +4519,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
