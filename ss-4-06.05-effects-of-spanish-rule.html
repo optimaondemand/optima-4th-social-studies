@@ -1766,6 +1766,882 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.05",
+ "title": "Effects of Spanish Rule in Florida",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🏰",
+   "🕯️",
+   "🖼️"
+  ]
+ },
+ "prevFile": "Daily Life on Florida Missions",
+ "connector": "Last time we followed one day at a mission, from the first bell to the last. Today we step back and look at all 200 years of Spanish rule, and what it changed.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Castillo",
+   "t": "Build the fort",
+   "why": "Put each effect of Spanish rule on one of the fort’s four corners: religion, trade, defense, or Native peoples."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Burn the candle",
+   "why": "Burn a candle through 200 years of Spanish rule. Then compare the fort in 1740 with today."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Mail a postcard",
+   "why": "Answer two questions. Then write 3 to 5 sentences: two effects of Spanish rule, with evidence and a because."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I can see the door at the end of this wing!",
+  "opening": [
+   "This file is about the effects of Spanish rule: what about 200 years of Spain in charge changed in Florida.",
+   "Start in the Castillo tab (tab 1). Scroll down to the fort under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the fort",
+      "go": true,
+      "reply": "Tap a block, then tap the corner of the fort where it belongs. Or drag it there."
+     },
+     {
+      "t": "What’s an effect?",
+      "reply": "Something that happens because of something else. If it rains, the ground gets wet. The wet ground is the effect."
+     },
+     {
+      "t": "Where are you now?",
+      "reply": "Near the end of the wing. There’s a big door down here, and I think your work will open it."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Light the candle and burn through 200 years of Spanish rule."
+     },
+     {
+      "t": "What’s coquina?",
+      "reply": "A stone made of tiny seashells pressed together. It’s soft enough to cut, and it soaks up cannonballs."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Is the fort still there?",
+      "reply": "Yes! You can still visit it in St. Augustine. It’s the oldest stone fort still standing in the continental United States."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about how colonization changed life for Florida’s Native tribes."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! All four corners of the fort are built: defense, religion, trade, and Native peoples. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! You burned through 200 years and compared the fort in 1740 with today. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer two questions. Then write 3 to 5 sentences about two effects of Spanish rule, with evidence and a because. Make your postcard first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Self-governance means being in charge of your own thinking. Slow down, ask why something happened and what it led to, and tell both the good and the hard parts.",
+ "scene1": {
+  "type": "castlebuild",
+  "kicker": "Build the Castillo",
+  "h": "Which corner does each effect hold up?",
+  "voice": "Tap a block, then tap the corner of the fort where it belongs. Or drag it. Each corner is one kind of effect.",
+  "alt": "A plan of the Castillo de San Marcos seen from above: a square courtyard with a pointed bastion at each corner, and the moat and bay around it",
+  "bastions": [
+   {
+    "id": "rel",
+    "ico": "⛪",
+    "t": "Religion",
+    "name": "Bastion San Pedro",
+    "pos": "nw"
+   },
+   {
+    "id": "eco",
+    "ico": "🐄",
+    "t": "Economy & Trade",
+    "name": "Bastion San Carlos",
+    "pos": "ne"
+   },
+   {
+    "id": "gov",
+    "ico": "🏰",
+    "t": "Government & Defense",
+    "name": "Bastion San Pablo",
+    "pos": "sw"
+   },
+   {
+    "id": "nat",
+    "ico": "🪶",
+    "t": "Effects on Native peoples",
+    "name": "Bastion San Agustín",
+    "pos": "se"
+   }
+  ],
+  "blocks": [
+   {
+    "id": "b1",
+    "b": "gov",
+    "t": "Spain built a stone fort to guard St. Augustine.",
+    "tells": "The Castillo took 23 years to build, from 1672 to 1695.",
+    "miss": "This one is about keeping the town safe. Which corner is about who was in charge and how they protected the colony?"
+   },
+   {
+    "id": "b2",
+    "b": "gov",
+    "t": "Soldiers lived in St. Augustine to protect the colony.",
+    "tells": "St. Augustine was a presidio, a fort town with soldiers.",
+    "miss": "Soldiers protect a place. Which corner is about defense?"
+   },
+   {
+    "id": "b3",
+    "b": "rel",
+    "t": "Friars (Spanish priests) built a chain of missions, Native towns with a church, across north Florida.",
+    "tells": "By the 1630s, the missions reached all the way west to the Apalachee.",
+    "miss": "Missions were built around a church. Which corner is about religion?"
+   },
+   {
+    "id": "b4",
+    "b": "rel",
+    "t": "Many Native people were taught the Catholic faith, Spain’s religion.",
+    "tells": "Friars taught the Catholic faith and the Spanish language.",
+    "miss": "This one is about beliefs and church. Which corner is about religion?"
+   },
+   {
+    "id": "b5",
+    "b": "eco",
+    "t": "Spanish ranchers raised cattle on ranches, big farms for raising animals.",
+    "tells": "The first ranches started in the 1620s.",
+    "miss": "Raising cattle to sell is a way to make money. Which corner is about the economy?"
+   },
+   {
+    "id": "b6",
+    "b": "eco",
+    "t": "Ships carried cowhides, dried beef, and tallow (cattle fat for candles) to Cuba.",
+    "tells": "Ranchers shipped these goods to Havana, in Cuba.",
+    "miss": "Shipping goods to sell is trade. Which corner is about the economy and trade?"
+   },
+   {
+    "id": "b7",
+    "b": "nat",
+    "t": "New diseases, like smallpox, killed many thousands of Native people.",
+    "tells": "Native peoples had never faced these diseases before.",
+    "miss": "This one is about what happened to the people who already lived here. Which corner is about Native peoples?"
+   },
+   {
+    "id": "b8",
+    "b": "nat",
+    "t": "Native men were made to work for the Spanish, even helping build the fort.",
+    "tells": "Under the labor draft, Native workers carried loads and built for the Spanish.",
+    "miss": "Think about who was forced to do this work. Which corner is about Native peoples?"
+   }
+  ],
+  "countT": "blocks in place.",
+  "win": "🏰 <b>The Castillo stands!</b> All four corners hold up the story of Spanish rule: defense, religion, trade, and the Native peoples who paid the highest price.",
+  "why": {
+   "icon": "🏰",
+   "q": "Why build a fort?",
+   "t": "The Castillo de San Marcos has a bastion at each of its four corners. A bastion is a pointed corner that sticks out from the walls, so soldiers could see and fire along them. Your effects chart has four columns too. That’s why each bastion holds one kind of effect."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "candle",
+   "activity": "The Effects of Spanish Rule in Florida",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^In 1565"
+    },
+    {
+     "id": "p1",
+     "match": "^1\\. Religion"
+    },
+    {
+     "id": "p2",
+     "match": "^2\\. Economy"
+    },
+    {
+     "id": "p3",
+     "match": "^3\\. Government"
+    },
+    {
+     "id": "p4",
+     "match": "^4\\. Effects"
+    }
+   ],
+   "marks": [
+    {
+     "id": "m0",
+     "year": "1565",
+     "t": "St. Augustine is founded",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "m1",
+     "year": "1580s",
+     "t": "Religion · The missions",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "m2",
+     "year": "1620s",
+     "t": "Economy · Cattle ranches",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "m3",
+     "year": "1672",
+     "t": "Defense · The Castillo",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "m4",
+     "year": "1702",
+     "t": "Native peoples · Disease and raids",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "m5",
+     "year": "1763",
+     "t": "The candle burns out",
+     "note": "In 1763, Spain gave Florida to Britain in a peace treaty, and Spain got back the city of Havana in Cuba. The first 200 years of Spanish rule were over. (Spain got Florida back 20 years later, in 1783.)"
+    }
+   ],
+   "alt": "A tall candle marked with years, from 1565 at the top to 1763 near the bottom",
+   "startT": "Tap the glowing year, 1565, to light the candle.",
+   "countT": "years burned. Read this part, then tap the next glowing year.",
+   "allT": "The candle burned all the way through 200 years of Spanish rule.",
+   "orderT": "Burn the years in order: tap the year that is glowing.",
+   "why": {
+    "icon": "🕯️",
+    "q": "Why a candle?",
+    "t": "In the 1600s, people lit their homes at night with candles, and many candles were made from tallow, the cattle fat that Florida’s ranches shipped to Cuba. A candle also burns down slowly, like time passing. That’s why you burn a candle through 200 years."
+   }
+  },
+  "evidence": {
+   "type": "thennow",
+   "kicker": "Then and Now",
+   "h": "The same fort, 1740 and today",
+   "voice": "Slide all the way to 1740, then all the way to today. Then sort each card: did it stay the same, or did it change?",
+   "then": {
+    "img": "source-4-06-05-st-augustine-1740.jpg",
+    "year": "1740",
+    "alt": "An old drawing of St. Augustine from 1740: the town and the castle beside the water, with dashed lines showing cannon shells flying, and a close-up of the castle",
+    "cap": "<b>1740.</b> Part of “A View of the Town and Castle of St. Augustine,” drawn by Thomas Silver during the English attack. The dashed lines show the paths of English cannon shells. The box is a close-up of the castle."
+   },
+   "now": {
+    "img": "source-4-06-05-castillo-seawall.jpg",
+    "year": "Today",
+    "alt": "A photo of the Castillo de San Marcos today: thick stone walls, a pointed corner with a lookout tower, a grassy moat, and the bay",
+    "cap": "<b>Today.</b> The same fort’s walls beside the bay. National Park Service photo, 2003."
+   },
+   "step2": "Sort each card: did it stay the same, or did it change?",
+   "trays": [
+    {
+     "id": "same",
+     "ico": "🧱",
+     "t": "Stayed the same"
+    },
+    {
+     "id": "chg",
+     "ico": "🔄",
+     "t": "Changed"
+    }
+   ],
+   "cards": [
+    {
+     "id": "c1",
+     "ico": "🌊",
+     "t": "The fort stands in the same spot, at the edge of the water.",
+     "tray": "same",
+     "why": "In both pictures, the water comes right up near the fort.",
+     "miss": "Look at where the fort sits in both pictures. Is it still beside the water?"
+    },
+    {
+     "id": "c2",
+     "ico": "🧱",
+     "t": "The fort’s walls are made of stone.",
+     "tray": "same",
+     "why": "The coquina walls built from 1672 to 1695 are the walls you see today.",
+     "miss": "The coquina walls were finished in 1695. Are they still there in the photo?"
+    },
+    {
+     "id": "c3",
+     "ico": "💥",
+     "t": "No enemy army is attacking the fort.",
+     "tray": "chg",
+     "why": "In 1740, English soldiers fired shells at the town. The dashed lines show where they flew.",
+     "miss": "Look at the dashed lines in the 1740 drawing. Is anyone firing at the fort in the photo?"
+    },
+    {
+     "id": "c4",
+     "ico": "🎟️",
+     "t": "The fort is a park where visitors walk on the walls.",
+     "tray": "chg",
+     "why": "Today the Castillo is a national monument that anyone can visit.",
+     "miss": "In 1740, soldiers guarded the fort. Who walks on it today?"
+    },
+    {
+     "id": "c5",
+     "ico": "🚩",
+     "t": "Florida is ruled by a different country.",
+     "tray": "chg",
+     "why": "In 1740, Spain ruled Florida. Today Florida is part of the United States.",
+     "miss": "Who ruled Florida in 1740? Who does Florida belong to now?"
+    }
+   ],
+   "seeT": "Slide all the way to each end to see both pictures.",
+   "countT": "cards sorted.",
+   "hotT": "Last step: tap every gold number on the photo above.",
+   "readT": "Last step: burn the candle in Learn the Story at the top of this tab.",
+   "win": "✓ You compared the fort in 1740 with the fort today. Some things lasted, and some things changed. That’s how a historian reads a place.",
+   "why": {
+    "icon": "🖼️",
+    "q": "Why then and now?",
+    "t": "Historians compare old pictures with new ones to see what lasted and what changed. Thomas Silver drew his view during the English attack of 1740, when Spain still ruled Florida. That’s why you slide between 1740 and today."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the photo.",
+    "Read the three questions under the photo.",
+    "Do Then and Now: slide between 1740 and today, then sort the cards."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "Now try Then and Now below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 18.52,
+    "y": 56.8,
+    "title": "Coquina walls.",
+    "t": "Thick walls made of coquina, a stone made of tiny seashells pressed together. Workers cut it on Anastasia Island, across the bay."
+   },
+   {
+    "n": "2",
+    "x": 51.05,
+    "y": 39.26,
+    "title": "A bastion.",
+    "t": "A pointed corner that sticks out from the walls. Soldiers on a bastion could see and fire along the walls, so no enemy could hide at their foot."
+   },
+   {
+    "n": "3",
+    "x": 55.57,
+    "y": 19.3,
+    "title": "The sentry box.",
+    "t": "A small lookout tower. A guard stood inside to watch the water for enemy ships."
+   },
+   {
+    "n": "4",
+    "x": 36.64,
+    "y": 72.53,
+    "title": "The moat.",
+    "t": "A wide ditch all the way around the fort. It was usually dry, but it could be flooded with seawater to slow down attackers."
+   },
+   {
+    "n": "5",
+    "x": 92.62,
+    "y": 45.31,
+    "title": "Matanzas Bay.",
+    "t": "The water that leads to St. Augustine’s harbor. Enemy ships came from the sea, so the fort faces the water."
+   }
+  ]
+ },
+ "planner": {
+  "type": "postcard",
+  "pick": 2,
+  "greet": "Greetings from Spanish Florida",
+  "voice": "Pick two effects for the front of your postcard. Then flip it and pick the evidence for each one, and add a because stamp. These are just notes. You’ll write your own sentences in Step 3.",
+  "q1": "Front: pick two effects of Spanish rule",
+  "q2": "Back: pick the evidence for each effect",
+  "effLab": "Effect",
+  "evLab": "My evidence is",
+  "evWait": "Evidence: pick it below.",
+  "effects": [
+   {
+    "id": "f1",
+    "ico": "🏰",
+    "t": "Spain built the Castillo de San Marcos to guard St. Augustine",
+    "ev": [
+     {
+      "id": "f1a",
+      "t": "The photo shows thick coquina walls, a moat, and a lookout tower"
+     },
+     {
+      "id": "f1b",
+      "t": "It took 23 years to build, from 1672 to 1695"
+     },
+     {
+      "id": "f1c",
+      "t": "English armies attacked in 1702 and 1740, but they never captured it"
+     }
+    ]
+   },
+   {
+    "id": "f2",
+    "ico": "⛪",
+    "t": "Friars built a chain of missions across north Florida",
+    "ev": [
+     {
+      "id": "f2a",
+      "t": "By the 1630s, the missions reached all the way west to the Apalachee"
+     },
+     {
+      "id": "f2b",
+      "t": "Friars taught the Catholic faith and the Spanish language"
+     },
+     {
+      "id": "f2c",
+      "t": "Mission San Luis had a large church next to the Apalachee Council House"
+     }
+    ]
+   },
+   {
+    "id": "f3",
+    "ico": "🐄",
+    "t": "The Spanish brought cattle and started ranches",
+    "ev": [
+     {
+      "id": "f3a",
+      "t": "Ranchers shipped cowhides, dried beef, and tallow to Havana"
+     },
+     {
+      "id": "f3b",
+      "t": "By the late 1600s, there were large ranches across north Florida"
+     },
+     {
+      "id": "f3c",
+      "t": "Cattle sometimes trampled Native farmers’ fields"
+     }
+    ]
+   },
+   {
+    "id": "f4",
+    "ico": "🪶",
+    "t": "New diseases killed many thousands of Native people",
+    "ev": [
+     {
+      "id": "f4a",
+      "t": "Smallpox and measles were diseases Native peoples had never faced"
+     },
+     {
+      "id": "f4b",
+      "t": "Many mission towns lost most of their people"
+     }
+    ]
+   },
+   {
+    "id": "f5",
+    "ico": "🔥",
+    "t": "Most missions were destroyed in raids in 1702 and 1704",
+    "ev": [
+     {
+      "id": "f5a",
+      "t": "English soldiers and Creek warriors from Carolina attacked the missions"
+     },
+     {
+      "id": "f5b",
+      "t": "In 1704, the people of San Luis burned their own town and left"
+     }
+    ]
+   }
+  ],
+  "stamp": {
+   "lab": "Because",
+   "q": "Add a because stamp",
+   "opts": [
+    {
+     "id": "s1",
+     "t": "Because Spain feared attacks, it built a strong stone fort"
+    },
+    {
+     "id": "s2",
+     "t": "Because friars built missions, many Native people learned the Catholic faith"
+    },
+    {
+     "id": "s3",
+     "t": "Because the Spanish brought new diseases, many Native people died"
+    },
+    {
+     "id": "s4",
+     "t": "Because ranchers raised cattle, Florida had hides and beef to trade"
+    }
+   ]
+  },
+  "flipT": "↻ Flip the postcard",
+  "doneT": "Your postcard is ready to mail. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "📮",
+   "q": "Why a postcard?",
+   "t": "People mail postcards home to tell what they saw on a trip. The front shows the place, and the back tells the story. Your postcard holds two effects of Spanish rule and the evidence for each, just like your notebook entry. That’s why you plan it as a postcard."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "two effects",
+    "rx": "effect|fort|castillo|castle|mission|church|cattle|ranch|disease|smallpox|religion|catholic|trade|soldier|raid"
+   },
+   {
+    "t": "evidence",
+    "rx": "evidence|because|photo|picture|show|see|saw|label|number|1565|1580|1620|1630|1668|1672|1695|1702|1704|1740|1763|23 years|thick|never|captur|taken|read|story|candle|drawing|ship|hide|tallow|beef|cuba|havana|smallpox|measles|moat|bastion|tower|coquina|wall"
+   },
+   {
+    "t": "a because",
+    "rx": "because|led to|as a result|caused|cause|so\\b|since|that.?s why"
+   }
+  ],
+  "lines": [
+   "Start with one effect of Spanish rule.",
+   "Good. Now add your evidence: what shows it really happened?",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong notebook entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Two questions. Use the fort, the candle, and Then and Now."
+  },
+  {
+   "t": "Plan",
+   "w": "Make the postcard: two effects, the evidence for each, and a because."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "wallstack",
+  "kicker": "Stack the Wall",
+  "h": "struct = build",
+  "root": "struct",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match builds one row of the wall.",
+  "words": [
+   {
+    "w": "structure",
+    "root": "struct",
+    "m": "something that is built, like a building, a bridge, or a fort",
+    "miss": "This meaning names a thing that was built. Which word ends in -ure, like a noun?",
+    "say": "Structure. Something that is built, like a building, a bridge, or a fort."
+   },
+   {
+    "w": "construct",
+    "root": "struct",
+    "m": "to build something",
+    "miss": "This meaning is an action word. Which word means doing the building?",
+    "say": "Construct. To build something."
+   },
+   {
+    "w": "destruction",
+    "root": "struct",
+    "m": "wrecking something so that it falls apart",
+    "miss": "De- can mean “undo.” Which word means un-building something?",
+    "say": "Destruction. Wrecking something so that it falls apart."
+   },
+   {
+    "w": "instruct",
+    "root": "struct",
+    "m": "to teach someone how to do something",
+    "miss": "To teach is to build up what someone knows. Which word sounds like what a teacher gives you?",
+    "say": "Instruct. To teach someone how to do something."
+   }
+  ],
+  "win": "🧱 The wall is built, row by row. <b>struct</b> = build",
+  "why": {
+   "icon": "🧱",
+   "q": "Why a wall?",
+   "t": "<em>Struere</em> is the Latin word for “to build” or “to pile up.” Workers built the Castillo by piling up blocks of coquina, a stone made of seashells, row by row. Each word you match lays one more row of your wall."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Every part has a job",
+   "at": "scene1",
+   "script": "When my family built a treehouse, every part had a job. The floor held us up, the roof kept off the rain, and the ladder got us in. Spanish rule had parts too. Each block you place is one effect. Ask yourself: which corner of the fort does this one hold up?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Say it out loud",
+   "at": "s1done",
+   "script": "Look at your four corners. Pause me and pick one block. Now say it out loud as a cause and effect: “Because Spain did this, that happened.” Then go to the Explore tab and light the candle."
+  },
+  {
+   "label": "A letter from the attack of 1740",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "In 1740, an English army surrounded St. Augustine. An English officer on one of the warships wrote about it, and a London magazine printed his letter. Listen for what the Spanish governor said when the English told him to give up."
+    },
+    {
+     "slot": "source-2",
+     "who": "An English officer aboard HMS Hector, 1740 (printed in The Gentleman’s Magazine, November 1740)",
+     "script": "The 27th, the General summon’d the Governour to surrender, who sent word he should be glad to shake hands with him in his Castle. … Hereupon the siege was raised."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you hear it? The governor was saying, “Come and get me!” He trusted his coquina walls. A siege is when an army surrounds a place to make it give up. In the end, the English gave up and went home. Pause me and think: what effect did the stone fort have?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "Grandma’s school photo",
+   "at": "evidence",
+   "script": "My grandma has a photo of my school from when she was a girl. Same brick walls, same front steps. But the playground is new, and the old bell is gone. When you slide between 1740 and today, look for both: what stayed the same, and what changed."
+  },
+  {
+   "slot": "guide5",
+   "label": "My postcard",
+   "at": "plan",
+   "script": "If I mailed a postcard from the beach, I’d pick the two best things I saw, and then tell what proved it. The water was so clear I could see my toes! Your postcard works the same way. Pick two effects, then the evidence that proves each one."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "Spain ruled Florida for about 200 years, from 1565 to 1763. Historians call the changes it brought effects.",
+   "Religion: starting in the 1580s, friars built a chain of missions across north Florida and taught the Catholic faith.",
+   "Economy and trade: Spanish ranchers raised cattle and shipped cowhides, dried beef, and tallow to Havana, in Cuba.",
+   "Government and defense: after pirates burned St. Augustine in 1668, Spain built the Castillo de San Marcos (1672–1695). English armies attacked in 1702 and 1740, but they never captured it.",
+   "Native peoples: new diseases like smallpox killed many thousands of Native people, and raids in 1702 and 1704 destroyed most of the missions."
+  ],
+  "vocab": [
+   [
+    "colony",
+    "land that is ruled by a faraway country"
+   ],
+   [
+    "effect",
+    "something that happens because of something else"
+   ],
+   [
+    "Catholic",
+    "a Christian church led by the Pope; Spain was a Catholic kingdom"
+   ],
+   [
+    "mission",
+    "a Native town with a church, where friars lived and taught"
+   ],
+   [
+    "friar",
+    "a Spanish priest who lived at a mission"
+   ],
+   [
+    "ranch",
+    "a big farm for raising animals, like cattle"
+   ],
+   [
+    "tallow",
+    "cattle fat, used to make candles and soap"
+   ],
+   [
+    "presidio",
+    "a Spanish fort town with soldiers to protect it"
+   ],
+   [
+    "coquina",
+    "a stone made of tiny seashells pressed together"
+   ],
+   [
+    "bastion",
+    "a pointed corner that sticks out from a fort’s walls"
+   ],
+   [
+    "moat",
+    "a wide ditch around a fort"
+   ],
+   [
+    "sentry box",
+    "a small lookout tower where a guard stood"
+   ],
+   [
+    "siege",
+    "when an army surrounds a place to make it give up"
+   ],
+   [
+    "self-governance",
+    "being in charge of your own thinking and actions"
+   ],
+   [
+    "structure",
+    "something that is built, like a building, a bridge, or a fort"
+   ],
+   [
+    "construct",
+    "to build something"
+   ],
+   [
+    "destruction",
+    "wrecking something so that it falls apart"
+   ],
+   [
+    "instruct",
+    "to teach someone how to do something"
+   ]
+  ],
+  "wordParts": "The Latin root struct (from struere) means “to build” or “to pile up.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "an effect on land, buildings, or defense",
+    "rx": "fort|castillo|castle|wall|coquina|bastion|moat|defen|protect|guard|safe|built|build|church|mission|ranch|cattle|cow|town|augustine|presidio|stone|soldier|attack|tower|land",
+    "n": 1
+   },
+   {
+    "t": "your evidence",
+    "rx": "evidence|because|photo|picture|show|see|saw|label|number|1565|1580|1620|1630|1668|1672|1695|1702|1704|1740|1763|23 years|thick|never|captur|taken|read|story|candle|drawing|ship|hide|tallow|beef|cuba|havana|smallpox|measles|moat|bastion|tower|coquina|wall",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "an effect on people",
+    "rx": "native|indian|timucua|apalachee|calusa|people|person|disease|smallpox|measles|sick|died|die|dead|death|catholic|religion|church|mission|friar|priest|missionar|language|spanish|work|raid|destroy|lost|loss|famil|taught|teach|learn|forced",
+    "n": 1
+   },
+   {
+    "t": "your evidence",
+    "rx": "evidence|because|photo|picture|show|see|saw|label|number|1565|1580|1620|1630|1668|1672|1695|1702|1704|1740|1763|23 years|thick|never|captur|taken|read|story|candle|drawing|ship|hide|tallow|beef|cuba|havana|smallpox|measles|moat|bastion|tower|coquina|wall",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your fort in the Castillo tab (tab 1), or the photo in the Explore tab (tab 2).",
+   "Pick one thing Spain built or changed in Florida. What shows it really happened?",
+   "Try this shape: “One effect was ___. My evidence is ___.”"
+  ],
+  "journal-q2": [
+   "Look at the corners of your fort: Religion, or Effects on Native peoples.",
+   "Pick one group of people. How did Spanish rule change their lives? What shows it?",
+   "Try this shape: “One effect on people was ___. My evidence is ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: the Castillo was never captured. Was that good for everyone in Florida? Who might see it differently?",
+  "journal-q2": "Go further: which effect of Spanish rule do you think lasted the longest? Why?"
+ },
+ "quizMiss": [
+  {
+   "a": "Oranges grew in Spanish Florida, but you don’t need thick stone walls to grow fruit. Reread the part about 1668.",
+   "c": "A fort isn’t a school. Reread “3. Government and defense.”",
+   "d": "France isn’t part of this story. Who attacked St. Augustine in 1668, 1702, and 1740?"
+  },
+  {
+   "a": "The missions didn’t make Florida part of England. Reread “1. Religion.”",
+   "c": "Lots of people lived in Florida. Who was already here before 1565?",
+   "d": "The Spanish stayed about 200 years. Look at the years on the candle."
+  },
+  {
+   "b": "Dates help, but they aren’t the only thing that matters. Effects show how the past shaped what came next.",
+   "c": "Effects are what this whole file is about. Reread the first part of Learn the Story.",
+   "d": "Historians can learn a lot from evidence, like the fort photo and the 1740 drawing."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2003,200 +2879,87 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Spanish Rule in Florida — Castillo + Mission ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the fort that held — the Castillo de San Marcos at dusk across Matanzas Bay (4.06.05 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Castillo de San Marcos at dusk, seen across the bay: low stone walls with a pointed corner and lookout towers, a Spanish flag lifting in the wind, gentle waves, and a small sailing ship at anchor." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b605sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFE0A8"/>
-      <stop offset="55%" stop-color="#F2B070"/>
-      <stop offset="100%" stop-color="#A8C0D8"/>
+    <linearGradient id="b605sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B3A6B"/>
+      <stop offset=".45" stop-color="#8A6A9E"/>
+      <stop offset=".78" stop-color="#F0A878"/>
+      <stop offset="1" stop-color="#F7D49A"/>
     </linearGradient>
-    <linearGradient id="b605stone" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8D8B8"/>
-      <stop offset="100%" stop-color="#B89868"/>
+    <linearGradient id="b605sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E7FA8"/>
+      <stop offset="1" stop-color="#2E3E66"/>
     </linearGradient>
-    <linearGradient id="b605church" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F2DCB0"/>
-      <stop offset="100%" stop-color="#C8A878"/>
+    <linearGradient id="b605wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9B994"/>
+      <stop offset="1" stop-color="#8E7E62"/>
     </linearGradient>
-    <linearGradient id="b605ground" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A88858"/>
-      <stop offset="100%" stop-color="#6A4818"/>
-    </linearGradient>
-    <radialGradient id="b605sun" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="b605glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFE2A8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE2A8" stop-opacity="0"/></radialGradient>
     <style>
-      .b605sway { animation: b605sway 5s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b605sway { 0%,100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
-      .b605flag { animation: b605flag 4s ease-in-out infinite; transform-origin: left center; transform-box: fill-box; }
-      @keyframes b605flag { 0%,100% { transform: skewX(0deg); } 50% { transform: skewX(-8deg); } }
-      .b605sun { animation: b605sun 5s ease-in-out infinite; }
-      @keyframes b605sun { 0%,100% { opacity: 0.75; } 50% { opacity: 1; } }
-      .b605bird { animation: b605bird 8s ease-in-out infinite; }
-      @keyframes b605bird { 0%,100% { transform: translate(0,0); } 50% { transform: translate(10px,-5px); } }
+      .b605flag { animation: b605wave 4s ease-in-out infinite; transform-box: fill-box; transform-origin: 0 50%; }
+      @keyframes b605wave { 50% { transform: skewY(-4deg) scaleX(.94); } }
+      .b605ship { animation: b605rock 6s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b605rock { 50% { transform: rotate(1.6deg) translateY(1px); } }
+      .b605shim { animation: b605shim 5s ease-in-out infinite; }
+      .b605shim.s2 { animation-delay: 1.6s; } .b605shim.s3 { animation-delay: 3.2s; }
+      @keyframes b605shim { 50% { opacity: .25; transform: translateX(10px); } }
+      .b605star { animation: b605tw 5s ease-in-out infinite; } .b605star.t2 { animation-delay: 2s; } .b605star.t3 { animation-delay: 3.5s; }
+      @keyframes b605tw { 50% { opacity: .3; } }
+      @media (prefers-reduced-motion: reduce) { .b605flag, .b605ship, .b605shim, .b605star { animation: none; } }
     </style>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="180" fill="url(#b605sky)"/>
-
-  <!-- Sun (opacity-only animation, safe without nesting) -->
-  <g class="b605sun">
-    <circle cx="180" cy="65" r="55" fill="url(#b605sun)"/>
-    <circle cx="180" cy="65" r="26" fill="#FFE5A0" opacity="0.85"/>
+  <rect width="920" height="200" fill="url(#b605sky)"/>
+  <!-- stars and the low sun glow -->
+  <circle class="b605star" cx="90" cy="26" r="1.6" fill="#FFF6D8"/><circle class="b605star t2" cx="210" cy="14" r="1.2" fill="#FFF6D8"/><circle class="b605star t3" cx="760" cy="22" r="1.5" fill="#FFF6D8"/><circle class="b605star t2" cx="860" cy="40" r="1.1" fill="#FFF6D8"/><circle class="b605star" cx="560" cy="12" r="1.2" fill="#FFF6D8"/>
+  <ellipse cx="700" cy="122" rx="190" ry="44" fill="url(#b605glow)"/>
+  <!-- far shore (Anastasia Island) -->
+  <path d="M0,124 C120,118 230,122 330,119 C470,115 560,121 700,118 C800,116 870,120 920,118 L920,128 L0,128 Z" fill="#4A4A6A" opacity=".75"/>
+  <!-- the bay -->
+  <rect y="126" width="920" height="74" fill="url(#b605sea)"/>
+  <g fill="none" stroke="#C9D3EE" stroke-width="1.4" stroke-linecap="round" opacity=".5">
+    <path class="b605shim" d="M60,150 h46 M150,166 h30 M620,146 h40 M720,160 h56"/>
+    <path class="b605shim s2" d="M240,180 h50 M520,174 h34 M820,178 h44"/>
+    <path class="b605shim s3" d="M380,190 h40 M660,188 h30 M100,186 h36"/>
   </g>
-
-  <!-- Distant pine tree line -->
-  <g fill="#2A5A3A" opacity="0.6">
-    <path d="M 0 175 L 30 145 L 50 175 L 70 150 L 90 175 L 120 148 L 145 175 L 180 152 L 210 175 L 250 145 L 280 175 L 320 150 L 355 175 L 395 148 L 430 175 L 470 152 L 510 175 L 560 148 L 600 175 L 640 152 L 680 175 L 730 150 L 770 175 L 810 148 L 850 175 L 890 152 L 920 175 L 920 180 L 0 180 Z"/>
-  </g>
-
-  <!-- Birds (translate animation OK without nested g) -->
-  <g class="b605bird" fill="none" stroke="#3A2510" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
-    <path d="M 280 55 Q 286 50 292 55 Q 298 50 304 55"/>
-    <path d="M 340 40 Q 345 36 350 40 Q 355 36 360 40"/>
-  </g>
-
-  <!-- Ground / colonial plaza -->
-  <rect y="180" width="920" height="80" fill="url(#b605ground)"/>
-  <!-- Plaza ground texture (dirt patches) -->
-  <g fill="#7A5818" opacity="0.4">
-    <circle cx="80" cy="220" r="3"/><circle cx="160" cy="240" r="2"/>
-    <circle cx="280" cy="225" r="2.5"/><circle cx="420" cy="235" r="2"/>
-    <circle cx="560" cy="220" r="2.5"/><circle cx="700" cy="240" r="3"/>
-    <circle cx="820" cy="228" r="2"/>
-  </g>
-
-  <!-- ═══ LEFT: CASTILLO DE SAN MARCOS (Spanish stone fort) ═══
-       Low, broad coquina-stone fortress with corner bastion and Spanish flag. -->
-  <g transform="translate(245 180)">
-    <!-- Main fort wall body -->
-    <rect x="-95" y="-70" width="190" height="70" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="2"/>
-    <!-- Crenellations (battlements) along the top -->
-    <g fill="url(#b605stone)" stroke="#7A5A28" stroke-width="1.5">
-      <rect x="-95" y="-82" width="18" height="14"/>
-      <rect x="-65" y="-82" width="18" height="14"/>
-      <rect x="-35" y="-82" width="18" height="14"/>
-      <rect x="-5" y="-82" width="18" height="14"/>
-      <rect x="25" y="-82" width="18" height="14"/>
-      <rect x="55" y="-82" width="18" height="14"/>
+  <!-- the fort: low coquina walls with a pointed bastion toward us -->
+  <g transform="translate(405,128) scale(1.45) translate(-405,-128)">
+    <path d="M250,128 L250,104 L330,98 L390,82 L450,98 L560,98 L560,128 Z" fill="url(#b605wall)" stroke="#5E5040" stroke-width="1.5"/>
+    <path d="M330,98 L390,82 L450,98 L390,112 Z" fill="#B8A884" opacity=".6"/>
+    <g stroke="#7A6A50" stroke-width="1" opacity=".55">
+      <path d="M252,112 L556,112 M252,120 L556,120"/>
+      <path d="M280,104 v24 M310,101 v27 M420,98 v30 M480,98 v30 M520,98 v30"/>
     </g>
-    <!-- Angled corner bastion (diamond point) -->
-    <path d="M 95 0 L 95 -70 L 128 -52 L 128 0 Z" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="2"/>
-    <rect x="100" y="-82" width="16" height="14" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="1.5"/>
-    <!-- Coquina stone block lines -->
-    <g stroke="#9A7848" stroke-width="0.7" opacity="0.5">
-      <line x1="-95" y1="-48" x2="95" y2="-48"/>
-      <line x1="-95" y1="-26" x2="95" y2="-26"/>
-      <line x1="-60" y1="-70" x2="-60" y2="0"/>
-      <line x1="-20" y1="-70" x2="-20" y2="0"/>
-      <line x1="20" y1="-70" x2="20" y2="0"/>
-      <line x1="60" y1="-70" x2="60" y2="0"/>
+    <!-- embrasures (gun openings) along the top -->
+    <g fill="#4A3E30"><rect x="266" y="100" width="7" height="5"/><rect x="300" y="98" width="7" height="5"/><rect x="470" y="94" width="7" height="5"/><rect x="510" y="94" width="7" height="5"/></g>
+    <!-- sentry boxes -->
+    <g fill="#D8CBA6" stroke="#5E5040" stroke-width="1.2">
+      <rect x="384" y="66" width="12" height="18" rx="2"/><path d="M382,67 q8,-12 16,0 z"/>
+      <rect x="548" y="82" width="11" height="17" rx="2"/><path d="M546,83 q7.5,-11 15,0 z"/>
+      <rect x="246" y="88" width="11" height="17" rx="2"/><path d="M244,89 q7.5,-11 15,0 z"/>
     </g>
-    <!-- Fort gateway -->
-    <path d="M -14 0 L -14 -22 Q -14 -32 0 -32 Q 14 -32 14 -22 L 14 0 Z" fill="#3A2810"/>
-    <!-- Flagpole + Spanish (Burgundy-cross style) flag -->
-    <line x1="0" y1="-82" x2="0" y2="-128" stroke="#5A3818" stroke-width="2.5"/>
+    <g fill="#3E2E14"><rect x="388" y="72" width="4" height="7" rx="2"/><rect x="551" y="88" width="4" height="7" rx="2"/><rect x="249" y="94" width="4" height="7" rx="2"/></g>
+    <!-- flagpole and the Spanish flag of the time (red ragged cross on white) -->
+    <line x1="470" y1="98" x2="470" y2="48" stroke="#3E2612" stroke-width="2"/>
     <g class="b605flag">
-      <rect x="0" y="-128" width="40" height="26" fill="#E8C84A" stroke="#B89030" stroke-width="0.8"/>
-      <line x1="2" y1="-126" x2="38" y2="-104" stroke="#C0392B" stroke-width="2.2"/>
-      <line x1="38" y1="-126" x2="2" y2="-104" stroke="#C0392B" stroke-width="2.2"/>
+      <rect x="471" y="49" width="34" height="22" fill="#F6F1E4" stroke="#C9BFA8" stroke-width=".8"/>
+      <path d="M474,52 L502,68 M502,52 L474,68" stroke="#B3261E" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="4 1.5"/>
     </g>
+    <!-- warm windows of the town beyond -->
+    <g fill="#FFD98A" opacity=".85"><rect x="600" y="114" width="4" height="4"/><rect x="616" y="112" width="4" height="5"/><rect x="636" y="115" width="4" height="4"/><rect x="200" y="116" width="4" height="4"/><rect x="214" y="113" width="4" height="5"/></g>
+    <path d="M590,128 L590,116 L606,108 L622,116 L622,108 L650,108 L650,128 Z M180,128 L180,114 L196,106 L212,114 L228,114 L228,128 Z" fill="#5A4A5E" opacity=".7"/>
   </g>
-
-  <!-- Fort plaza marker (small cannon hint at base, no text) -->
-  <g transform="translate(245 184)" opacity="0.7">
-    <ellipse cx="0" cy="0" rx="11" ry="4" fill="#3A2810"/>
-    <rect x="-13" y="-5" width="26" height="5" rx="2.5" fill="#2A1808"/>
-    <circle cx="-13" cy="0" r="3" fill="#3A2810"/>
-    <circle cx="13" cy="0" r="3" fill="#3A2810"/>
-  </g>
-
-  <!-- ═══ RIGHT: SPANISH MISSION CHURCH (small wooden chapel + bell tower) ═══ -->
-  <g transform="translate(645 180)">
-    <!-- Body of the church -->
-    <rect x="-55" y="-65" width="110" height="65" fill="url(#b605church)" stroke="#6A4520" stroke-width="2"/>
-    <!-- Steep thatched/wood-shingle roof -->
-    <path d="M -62 -65 L 0 -110 L 62 -65 Z" fill="#8A6028" stroke="#3A2010" stroke-width="2"/>
-    <!-- Vertical wood plank lines -->
-    <g stroke="#8A6028" stroke-width="0.8" opacity="0.55">
-      <line x1="-40" y1="-65" x2="-40" y2="0"/>
-      <line x1="-25" y1="-65" x2="-25" y2="0"/>
-      <line x1="25" y1="-65" x2="25" y2="0"/>
-      <line x1="40" y1="-65" x2="40" y2="0"/>
-    </g>
-    <!-- Bell tower / small spire -->
-    <rect x="-8" y="-130" width="16" height="22" fill="url(#b605church)" stroke="#6A4520" stroke-width="1.5"/>
-    <path d="M -10 -130 L 0 -148 L 10 -130 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-158" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-152" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Small bell -->
-    <path d="M -4 -127 Q -4 -118 0 -118 Q 4 -118 4 -127 Z" fill="#A88858" stroke="#5A3818" stroke-width="0.5"/>
-    <!-- Door -->
-    <path d="M -10 0 L -10 -20 Q -10 -28 0 -28 Q 10 -28 10 -20 L 10 0 Z" fill="#3A2010"/>
-    <path d="M -8 0 L -8 -20 Q -8 -26 0 -26 Q 8 -26 8 -20 L 8 0 Z" fill="#5A3818"/>
-    <!-- Small round window above door -->
-    <circle cx="0" cy="-40" r="4" fill="#3A2010"/>
-    <circle cx="0" cy="-40" r="3" fill="#8A6028"/>
-    <line x1="-3" y1="-40" x2="3" y2="-40" stroke="#3A2010" stroke-width="0.5"/>
-    <line x1="0" y1="-43" x2="0" y2="-37" stroke="#3A2010" stroke-width="0.5"/>
-  </g>
-
-  <!-- ═══ CENTER: Plaza marker / trade goods ═══
-       The fort and the mission church both stood in Spanish Florida,
-       with markets and trade goods between them. -->
-  <g transform="translate(445 175)">
-    <rect x="-1.5" y="-22" width="3" height="22" fill="#5A3818"/>
-    <rect x="-7" y="-15" width="14" height="3" fill="#5A3818"/>
-    <!-- A few baskets / trade goods at base hinting at shared marketplace -->
-    <ellipse cx="-12" cy="3" rx="6" ry="2.5" fill="#8A6028" stroke="#3A2010" stroke-width="0.5"/>
-    <ellipse cx="14" cy="3" rx="5" ry="2.5" fill="#A07028" stroke="#3A2010" stroke-width="0.5"/>
-    <!-- Tiny corn stalks -->
-    <line x1="0" y1="3" x2="0" y2="-6" stroke="#4A6A20" stroke-width="0.8"/>
-    <ellipse cx="0" cy="-3" rx="1.5" ry="3" fill="#7A8A30" opacity="0.8"/>
-  </g>
-
-  <!-- ═══ FOREGROUND: corn rows + palmetto (colonial Florida) ═══ -->
-  <!-- Cornfield (a few stalks, swaying with sway animation via nested g) -->
-  <g transform="translate(120 235)">
-    <g class="b605sway">
-      <line x1="0" y1="0" x2="0" y2="-22" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-12" rx="2" ry="6" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-15" rx="2" ry="6" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-22" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(150 232)">
-    <g class="b605sway" style="animation-delay:0.7s;">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-10" rx="2" ry="5" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-13" rx="2" ry="5" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-20" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(870 235)">
-    <g class="b605sway" style="animation-delay:1.2s;">
-      <line x1="0" y1="0" x2="0" y2="-24" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-14" rx="2" ry="7" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-17" rx="2" ry="7" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-24" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- Palmetto frond foreground left -->
-  <g fill="#1A4A3A">
-    <path d="M 40 252 Q 35 222 25 212 Q 38 222 46 217 Q 35 207 44 195 Q 52 212 54 222 Q 62 202 72 202 Q 62 217 56 227 Q 72 217 82 222 Q 66 232 54 240 L 50 255 Z"/>
-    <rect x="48" y="240" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-
-  <!-- hero detail -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
+  <!-- reflection of the fort -->
+  <path d="M172,128 L172,150 L286,156 L376,172 L460,156 L638,156 L638,128 Z" fill="#C9B994" opacity=".16"/>
+  <!-- a small ship at anchor -->
+  <g class="b605ship">
+    <path d="M736,150 L800,150 L792,160 L744,160 Z" fill="#3E2E20"/>
+    <line x1="758" y1="150" x2="758" y2="112" stroke="#2B1A0A" stroke-width="1.6"/>
+    <line x1="780" y1="150" x2="780" y2="118" stroke="#2B1A0A" stroke-width="1.6"/>
+    <path d="M758,116 L758,140 L742,140 Z" fill="#EDE2C8" opacity=".9"/>
+    <path d="M780,122 L780,142 L794,142 Z" fill="#EDE2C8" opacity=".9"/>
+    <line x1="744" y1="160" x2="732" y2="174" stroke="#2B1A0A" stroke-width="1" stroke-dasharray="2 2"/>
   </g>
 </svg>
 
@@ -3756,5 +4519,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
