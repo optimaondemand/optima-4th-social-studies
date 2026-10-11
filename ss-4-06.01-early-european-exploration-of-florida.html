@@ -1779,6 +1779,934 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.06.01",
+ "title": "Early European Exploration of Florida",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🗺️",
+   "🌬️",
+   "🪙"
+  ]
+ },
+ "prevFile": "Council Chamber: What Changed After Contact?",
+ "connector": "Last time we passed the checkpoint by telling both halves of the story. Today we go back to the start: why did Europeans sail to Florida at all?",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Source Card",
+   "t": "Build the card",
+   "why": "Put six pieces on an old map card. Each piece tells a historian something."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read and investigate",
+   "why": "Catch three winds and read both sides of the story. Then hunt for Native names on a real map from 1591."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Two sides of the coin",
+   "why": "Answer three questions. Then write 3 to 5 sentences: why Europeans came, and what happened to the people already here."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I made it past the checkpoint! This new hallway is covered in old maps.",
+  "opening": [
+   "The first file in here is about why Europeans sailed to Florida, and who was already living here when they came.",
+   "Start in the Source Card tab (tab 1). Scroll down to the old map card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the card",
+      "go": true,
+      "reply": "Tap a piece, then tap its faint outline on the card. Or drag it. Put the coastline on first."
+     },
+     {
+      "t": "What’s a source card?",
+      "reply": "It’s a card that shows evidence from the past. Old maps are one kind of source. They show what the mapmaker knew, and what they didn’t."
+     },
+     {
+      "t": "Are you okay in there?",
+      "reply": "I’m okay! It’s dusty in here, but the maps are beautiful. Let’s keep going."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Raise the sail and catch three winds. Each wind is one reason Europeans sailed here."
+     },
+     {
+      "t": "Why a Native town?",
+      "reply": "Because Florida wasn’t empty. People already lived here, in towns along the coasts and rivers."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who wrote those names?",
+      "reply": "Europeans wrote every name on that map. Some names came from Native people, but they were spelled the way Europeans heard them."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about St. Augustine. Spain started it in 1565, and people still live there today."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! Your source card is finished. Look at what it shows about the explorers, and what it shows about the people already here. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! You read both sides of the story and sorted every name. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 3 to 5 sentences about why Europeans came, and what happened to the people already here. Fill both sides of the coin first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, a door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Explorers needed courage to sail into the unknown, and the people already living here needed courage to protect their homes. A careful historian tells both stories.",
+ "scene1": {
+  "type": "mapdesk",
+  "kicker": "Mapmaker’s Desk",
+  "h": "Build a source card from the 1500s",
+  "voice": "Tap a piece, then tap its faint outline on the card. Or drag the piece onto the card. The coastline goes on first.",
+  "countT": "pieces on the card.",
+  "alt": "An old map card of Florida",
+  "pieces": [
+   {
+    "id": "coast",
+    "kind": "coast",
+    "ico": "🏝️",
+    "t": "Florida’s coastline",
+    "tells": "The shape of the land the sailors saw from their ships.",
+    "miss": "That outline is for a different piece. The coastline is the big shape of Florida."
+   },
+   {
+    "id": "route",
+    "kind": "route",
+    "ico": "〰️",
+    "t": "The route it sailed",
+    "tells": "The path a ship took across the water to reach Florida.",
+    "miss": "A route is a long path across the water. Look for the long dashed line.",
+    "pts": [
+     [
+      -79.95,
+      26.4
+     ],
+     [
+      -80.0,
+      27.6
+     ],
+     [
+      -80.12,
+      28.7
+     ]
+    ]
+   },
+   {
+    "id": "ship",
+    "kind": "ship",
+    "ico": "⛵",
+    "t": "A Spanish ship",
+    "tells": "Who came, and how: Spanish sailors, by ship across the ocean.",
+    "miss": "A ship goes on the water, near the coast it sailed to.",
+    "lon": -80.12,
+    "lat": 29.25
+   },
+   {
+    "id": "compass",
+    "kind": "compass",
+    "ico": "🧭",
+    "t": "A compass rose",
+    "tells": "Which way is north, so a reader can find the way.",
+    "miss": "A compass rose is round. Look for the round outline out in the water.",
+    "lon": -86.0,
+    "lat": 27.0
+   },
+   {
+    "id": "label",
+    "kind": "label",
+    "ico": "🏷️",
+    "t": "The name La Florida",
+    "tells": "What the Spanish called the land. Ponce de León named it in 1513.",
+    "miss": "A name goes in the long box-shaped outline across the land.",
+    "x": 130,
+    "y": 74,
+    "text": "La Florida"
+   },
+   {
+    "id": "town",
+    "kind": "town",
+    "ico": "🏘️",
+    "t": "A Calusa town",
+    "tells": "People already lived here. The Calusa lived on Florida’s southwest coast.",
+    "miss": "A town goes on the land. Look for the small outline near the southwest coast.",
+    "lon": -81.86,
+    "lat": 26.42,
+    "text": "Calusa"
+   }
+  ],
+  "win": "🗺️ Your source card is finished. It shows a coast, a ship, its route, a compass rose, a name for the land, and a Native town.",
+  "why": {
+   "icon": "🗺️",
+   "q": "Why make a map card?",
+   "t": "In the 1500s, maps were one of the main ways Europeans shared what they learned about new lands. Mapmakers drew coastlines, ships, and routes, and sometimes Native towns. Every piece is evidence a historian can study. That’s why you build one here."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "threewinds",
+   "activity": "Why Europeans Sailed for Florida",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^In the early 1500s"
+    },
+    {
+     "id": "p1",
+     "match": "^1\\. Gold"
+    },
+    {
+     "id": "p2",
+     "match": "^2\\. Land"
+    },
+    {
+     "id": "p3",
+     "match": "^3\\. Spreading"
+    },
+    {
+     "id": "p4",
+     "match": "^The first three"
+    },
+    {
+     "id": "p5",
+     "match": "^The other side"
+    }
+   ],
+   "steps": [
+    {
+     "kind": "sail",
+     "label": "Raise the sail",
+     "paras": [
+      "p0"
+     ],
+     "hint": "Tap the sail on the ship to raise it."
+    },
+    {
+     "kind": "wind",
+     "ico": "🪙",
+     "label": "Gold",
+     "paras": [
+      "p1"
+     ],
+     "hint": "Now tap the glowing wind: Gold. Each wind is one reason they sailed."
+    },
+    {
+     "kind": "wind",
+     "ico": "🚩",
+     "label": "Land",
+     "paras": [
+      "p2"
+     ],
+     "hint": "Tap the next wind: Land."
+    },
+    {
+     "kind": "wind",
+     "ico": "✝️",
+     "label": "Faith",
+     "paras": [
+      "p3"
+     ],
+     "hint": "Tap the last wind: Faith."
+    },
+    {
+     "kind": "rope",
+     "paras": [
+      "p4"
+     ],
+     "hint": "The sail is full. Tap each year on the rope to see who came.",
+     "knots": [
+      {
+       "y": "1513",
+       "t": "Ponce de León names La Florida"
+      },
+      {
+       "y": "1528",
+       "t": "Narváez lands with hundreds of men"
+      },
+      {
+       "y": "1539",
+       "t": "de Soto marches far inland"
+      }
+     ]
+    },
+    {
+     "kind": "flip",
+     "paras": [
+      "p5"
+     ],
+     "btn": "Turn to the shore side",
+     "hint": "That’s the ship’s side of the story. Now turn the picture around."
+    }
+   ],
+   "allT": "You read both sides: why they sailed, and who was already here.",
+   "sailFirstT": "Raise the sail first. Tap the sail on the ship.",
+   "orderT": "Tap the wind that is glowing. The reasons go in order.",
+   "why": {
+    "icon": "🌬️",
+    "q": "Why winds?",
+    "t": "Ships in the 1500s had no engines. Wind filled their sails and pushed them across the ocean. The three reasons Europeans came worked the same way: they pushed the ships toward Florida. That’s why each reason is a wind."
+   }
+  },
+  "evidence": {
+   "type": "namehunt",
+   "kicker": "Name Hunt",
+   "h": "Who gave each name?",
+   "voice": "Tap a magnified name from the map. Then tap the tray it belongs in: a name from Native people, or a name Europeans gave. Or drag it.",
+   "countT": "names sorted.",
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: finish Learn the Story above.",
+   "trays": [
+    {
+     "id": "native",
+     "ico": "🏘️",
+     "label": "From Native people",
+     "sub": "A name the people who lived here used",
+     "color": "#B5484C"
+    },
+    {
+     "id": "euro",
+     "ico": "⛵",
+     "label": "From Europeans",
+     "sub": "A name Europeans gave",
+     "color": "#2F86B0"
+    }
+   ],
+   "cards": [
+    {
+     "id": "calos",
+     "nm": "Calos",
+     "plain": "the Calusa",
+     "where": "Southwest coast",
+     "tray": "native",
+     "fact": "The name of the Calusa, the people of the southwest coast. Spanish writers spelled it Calos or Carlos.",
+     "miss": "Calos is on the southwest coast, where label 7 is. Whose name is it?",
+     "x": 33.75,
+     "y": 65.05,
+     "span": 5.73
+    },
+    {
+     "id": "apal",
+     "nm": "Apalatci",
+     "plain": "the Apalachee",
+     "where": "North, by the mountains",
+     "tray": "native",
+     "fact": "The name of the Apalachee people of the Panhandle. Later, the Appalachian Mountains were named after them.",
+     "miss": "Apalatci sounds like a people you studied: the Apalachee. Who used that name first?",
+     "x": 40.89,
+     "y": 12.79,
+     "span": 5.21
+    },
+    {
+     "id": "utina",
+     "nm": "Vtina",
+     "plain": "Utina",
+     "where": "By a big lake",
+     "tray": "native",
+     "fact": "Utina was a Timucua leader. The French met him in 1564.",
+     "miss": "Vtina is the old way of writing Utina, a Timucua leader. Whose name is that?",
+     "x": 41.67,
+     "y": 31.45,
+     "span": 5.21
+    },
+    {
+     "id": "mocoso",
+     "nm": "Mocoso",
+     "plain": "",
+     "where": "Inland, in the middle",
+     "tray": "native",
+     "fact": "Mocoso was a Timucua town and its leader, near Tampa Bay. De Soto’s men met him in 1539.",
+     "miss": "Mocoso isn’t a Spanish or French word. It’s the name of a Timucua town.",
+     "x": 38.39,
+     "y": 37.71,
+     "span": 4.69
+    },
+    {
+     "id": "satur",
+     "nm": "Saturiwa",
+     "plain": "",
+     "where": "East coast, by a river mouth",
+     "tray": "native",
+     "fact": "Saturiwa was a Timucua leader near the mouth of the St. Johns River. He met the French in 1564.",
+     "miss": "Saturiwa was a Timucua leader. Whose name is that?",
+     "x": 50.42,
+     "y": 41.55,
+     "span": 5.21
+    },
+    {
+     "id": "ponce",
+     "nm": "Sinus Ioannis Ponce",
+     "plain": "Juan Ponce’s Bay",
+     "where": "West coast",
+     "tray": "euro",
+     "fact": "Latin for Juan Ponce’s Bay, named for the Spanish explorer Ponce de León.",
+     "miss": "This is label 4: Juan Ponce’s Bay. Ponce de León was a Spanish explorer.",
+     "x": 25.89,
+     "y": 52.05,
+     "span": 6.77
+    },
+    {
+     "id": "gall",
+     "nm": "Prom. Gallicum",
+     "plain": "French Cape",
+     "where": "East coast",
+     "tray": "euro",
+     "fact": "Latin for French Cape. A cape is a point of land that sticks out into the sea. The French named it.",
+     "miss": "Gallicum is Latin for French. Who named it?",
+     "x": 51.3,
+     "y": 44.44,
+     "span": 6.25
+    },
+    {
+     "id": "carol",
+     "nm": "Carolina",
+     "plain": "Fort Caroline",
+     "where": "East coast, by a river",
+     "tray": "euro",
+     "fact": "The French fort, la Caroline, named for France’s king, Charles IX.",
+     "miss": "Carolina was a French fort, named for the king of France.",
+     "x": 50.94,
+     "y": 38.65,
+     "span": 4.69
+    }
+   ],
+   "win": "✨ Five of these eight names came from Native people. Their names are on the map, but they didn’t draw it. Europeans wrote the names down the way they heard them. To learn about Native peoples from their side, historians also study archaeology: the things people left behind, like shell mounds and tools.",
+   "why": {
+    "icon": "🔎",
+    "q": "Why hunt for names?",
+    "t": "Every name on a map tells you who was there, and who did the writing. This map was made by a European, but some of its names came from the people who already lived in Florida. That’s why you hunt for them with a magnifying glass."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each gold number on the map to read its label.",
+    "Read the three questions under the map.",
+    "Then sort the magnified names below: did each name come from Native people or from Europeans?"
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now read the three questions below the map.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 78.91,
+    "y": 36.9,
+    "title": "The title box.",
+    "t": "It’s in Latin. It says Jacques Le Moyne, a French artist, made this map. He sailed to Florida with the French in 1564 and showed the map to the king of France."
+   },
+   {
+    "n": "2",
+    "x": 15.0,
+    "y": 4.85,
+    "title": "Spain’s coat of arms.",
+    "t": "A coat of arms is a royal symbol, like a badge for a country’s king. This one belongs to the king of Spain."
+   },
+   {
+    "n": "3",
+    "x": 89.38,
+    "y": 4.85,
+    "title": "France’s coat of arms.",
+    "t": "This is the French king’s symbol. Two countries put their symbols on one map, because both wanted Florida."
+   },
+   {
+    "n": "4",
+    "x": 21.77,
+    "y": 52.39,
+    "title": "Juan Ponce’s Bay.",
+    "t": "“Sinus Ioannis Ponce” is Latin for Juan Ponce’s Bay. It’s named for Juan Ponce de León, who sailed along this coast in 1513."
+   },
+   {
+    "n": "5",
+    "x": 19.38,
+    "y": 36.9,
+    "title": "Here Narváez landed.",
+    "t": "“Hic descendit Pamphilus Narvaez” means “Here Narváez landed.” But historians today think Narváez landed near Tampa Bay, far to the south. This label is a mistake."
+   },
+   {
+    "n": "6",
+    "x": 36.98,
+    "y": 9.97,
+    "title": "Mountains of gold.",
+    "t": "The words say these mountains have gold, silver, and copper. Explorers never found mountains of gold in Florida."
+   },
+   {
+    "n": "7",
+    "x": 31.15,
+    "y": 68.01,
+    "title": "Calos.",
+    "t": "This is the Calusa, the people who lived on Florida’s southwest coast. Their name is on the map, but they didn’t make it."
+   }
+  ]
+ },
+ "planner": {
+  "type": "coin",
+  "heads": {
+   "label": "Why they came",
+   "ico": "🪙"
+  },
+  "tails": {
+   "label": "Who was already here",
+   "ico": "🌴"
+  },
+  "voice": "Fill the heads side first: why they came. Then the coin flips over. Fill the tails side: who was already here, and what happened to them. These are just notes. You’ll write your own sentences in Step 3.",
+  "rows": [
+   {
+    "id": "h1",
+    "side": "h",
+    "lab": "Reason",
+    "q": "Heads: pick one reason they sailed",
+    "opts": [
+     {
+      "id": "a",
+      "t": "Gold and riches"
+     },
+     {
+      "id": "b",
+      "t": "Land to claim for Spain"
+     },
+     {
+      "id": "c",
+      "t": "Spreading the Catholic faith"
+     }
+    ]
+   },
+   {
+    "id": "h2",
+    "side": "h",
+    "lab": "Name and date",
+    "q": "Heads: pick an explorer and a date",
+    "opts": [
+     {
+      "id": "a",
+      "t": "Ponce de León, 1513"
+     },
+     {
+      "id": "b",
+      "t": "Narváez, 1528"
+     },
+     {
+      "id": "c",
+      "t": "de Soto, 1539"
+     }
+    ]
+   },
+   {
+    "id": "t1",
+    "side": "t",
+    "lab": "People",
+    "q": "Tails: pick a group who already lived here",
+    "opts": [
+     {
+      "id": "a",
+      "t": "The Calusa"
+     },
+     {
+      "id": "b",
+      "t": "The Tequesta"
+     },
+     {
+      "id": "c",
+      "t": "The Apalachee"
+     },
+     {
+      "id": "d",
+      "t": "The Timucua"
+     }
+    ]
+   },
+   {
+    "id": "t2",
+    "side": "t",
+    "lab": "What happened",
+    "q": "Tails: pick what happened to them",
+    "opts": [
+     {
+      "id": "a",
+      "t": "New diseases like smallpox made whole villages sick"
+     },
+     {
+      "id": "b",
+      "t": "Fighting broke out"
+     },
+     {
+      "id": "c",
+      "t": "Their land was claimed for Spain"
+     },
+     {
+      "id": "d",
+      "t": "Some were forced to change their religion"
+     }
+    ]
+   }
+  ],
+  "doneT": "Both sides of the coin are full. Now write your notebook entry in Step 3.",
+  "why": {
+   "icon": "🪙",
+   "q": "Why a coin?",
+   "t": "A coin has two sides, and you can’t have one without the other. This story is the same. One side is why Europeans came. The other side is what happened to the people already living here. Spain made gold and silver coins, too. That’s why you fill both sides of a coin."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "why they came",
+    "rx": "gold|rich|treasure|silver|money|wealth|land|claim|territor|faith|religio|catholic|christian|church|\\bgod\\b|priest|convert|glory|spread|explor|discover|new world"
+   },
+   {
+    "t": "a name, date, or group",
+    "rx": "ponce|le[oó]n|narv|soto|1513|1528|1539|calusa|tequesta|apalachee|timucua|puerto rico|tampa"
+   },
+   {
+    "t": "what happened to them",
+    "rx": "disease|sick|smallpox|ill\\b|illness|died|\\bdie|death|dead|kill|fight|war|violen|hurt|harm|forced|force|lost|lose|took|taken|claimed|chang|village|attack"
+   },
+   {
+    "t": "both sides",
+    "rx": "both|also|but\\b|however|other side|while|already|even though|at the same time"
+   }
+  ],
+  "lines": [
+   "Start with heads: why did Europeans sail to Florida?",
+   "Good. Now flip the coin: who already lived here, and what happened to them?",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s both sides of the coin. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use details from the lesson."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill both sides of the coin: why they came, and who was already here."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "bloom",
+  "kicker": "Bloom the Garden",
+  "h": "flor = flower",
+  "root": "flor",
+  "voice": "Tap each bud to hear its word. Then put each meaning on its bud: tap the meaning, then the bud, or drag it. Watch it bloom.",
+  "words": [
+   {
+    "w": "florist",
+    "root": "flor",
+    "m": "a person whose job is selling and arranging flowers",
+    "miss": "This meaning is a person. -ist means a person who does something, like artist. Find the word that ends in -ist.",
+    "say": "Florist. A person whose job is selling and arranging flowers."
+   },
+   {
+    "w": "floral",
+    "root": "flor",
+    "m": "made of flowers, or covered with flower designs",
+    "miss": "This meaning describes a thing. Words that end in -al often describe, like natural. Find the word that ends in -al.",
+    "say": "Floral. Made of flowers, or covered with flower designs."
+   },
+   {
+    "w": "flora",
+    "root": "flor",
+    "m": "all the plants that grow in one place",
+    "miss": "This meaning is about every plant in a place. Find the short word that ends in -a.",
+    "say": "Flora. All the plants that grow in one place."
+   },
+   {
+    "w": "Florida",
+    "root": "Flor",
+    "m": "Spanish for “flowery,” the name Ponce de León gave the land in 1513",
+    "miss": "This meaning is a name for a place. Which word is the name of our state?",
+    "say": "Florida. Spanish for flowery. It is the name Ponce de León gave the land in 1513."
+   }
+  ],
+  "win": "🌸 The garden is in bloom. <b>flor</b> = flower",
+  "why": {
+   "icon": "🌸",
+   "q": "Why a garden?",
+   "t": "The root flor means flower. Ponce de León saw green land full of plants in the Easter season, which Spaniards called Pascua Florida, so he named it La Florida, the flowery land. Every word here grows from the same root as our state’s name. That’s why you grow a garden."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Pieces on my own map",
+   "at": "scene1",
+   "script": "When I drew a map for my cousin to find my house, I put on the street, the big oak tree on the corner, and an arrow pointing north. Every piece told her something. Old mapmakers did the same thing. As you place each piece, ask yourself: what does this piece tell a historian?"
+  },
+  {
+   "slot": "guide2",
+   "label": "What the card leaves out",
+   "at": "s1done",
+   "script": "Look at your finished card. It has a ship, a route, and a name for the land. Now pause me and count. How many pieces show the people who already lived here? Just one. Keep that question with you on the Explore tab: whose story does a map tell?"
+  },
+  {
+   "label": "A Spanish historian, in his own words",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "Here’s Antonio de Herrera. He was a Spanish historian, and in 1601 he wrote about Ponce de León’s voyage, using old records of the trip. Listen for the two reasons Ponce chose the name La Florida."
+    },
+    {
+     "slot": "source-2",
+     "who": "Antonio de Herrera, 1601 (English translation by T. Frederick Davis, 1935)",
+     "script": "And believing that this land was an island, they named it La Florida, because it had a very beautiful view of many and cool woodlands, and it was level and uniform; and because, moreover, they discovered it in the time of the Feast of Flowers, Juan Ponce wished to conform in the name to these two reasons. He went ashore to get information, and take possession."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you catch both reasons? The land was green and full of trees, and it was the Easter season, the Feast of Flowers. Now listen to the last words again: take possession. That means he claimed the land for Spain. Pause me and think: which of the three winds was that?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "Names all over Florida",
+   "at": "evidence",
+   "script": "Florida is full of names from different people. Okeechobee comes from a Native language. It means big water. St. Augustine is a Spanish name, for a saint. Every name tells you who was there, and who did the naming. Now look at the old map. For each name, ask: who used it first?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Flipping my own coin",
+   "at": "plan",
+   "script": "Here’s a coin from my own school. Heads: why did we build a new playground? Kids needed more room to play. Tails: what happened to what was already there? A big old tree was cut down, and the birds that lived in it had to find a new home. Both sides are true. Now fill your coin, heads first."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "Europeans sailed to Florida for three big reasons: gold and riches, land to claim for Spain, and spreading the Catholic faith.",
+   "Juan Ponce de León reached Florida’s east coast in 1513 and named it La Florida, the flowery land.",
+   "Pánfilo de Narváez came in 1528, and Hernando de Soto landed near Tampa Bay in 1539.",
+   "Florida was already home to the Calusa, Tequesta, Apalachee, and Timucua. New diseases like smallpox made whole villages sick.",
+   "The 1591 map was made by a French artist. Some of its names came from Native people, but Europeans wrote them down."
+  ],
+  "vocab": [
+   [
+    "claim",
+    "when a country says, “This land is ours”"
+   ],
+   [
+    "convert",
+    "a person who changes to a new religion"
+   ],
+   [
+    "expedition",
+    "a big trip to explore new places"
+   ],
+   [
+    "kingdom",
+    "a country ruled by a king or queen"
+   ],
+   [
+    "Catholic",
+    "one kind of Christian religion"
+   ],
+   [
+    "trade route",
+    "a path people used to trade goods"
+   ],
+   [
+    "coat of arms",
+    "a royal symbol, like a badge for a country’s king"
+   ],
+   [
+    "source",
+    "something from the past that gives us evidence, like an old map"
+   ],
+   [
+    "florist",
+    "a person whose job is selling and arranging flowers"
+   ],
+   [
+    "floral",
+    "made of flowers, or covered with flower designs"
+   ],
+   [
+    "flora",
+    "all the plants that grow in one place"
+   ],
+   [
+    "Florida",
+    "Spanish for “flowery,” the name Ponce de León gave the land in 1513"
+   ]
+  ],
+  "wordParts": "The Latin root flor means “flower.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "two reasons",
+    "groups": [
+     "gold|rich|treasure|silver|money|wealth|cities",
+     "land|claim|territor|empire|own it|ownership|colon|new world|bigger",
+     "faith|religio|catholic|christian|church|god|priest|convert|jesus|bible|spread",
+     "glory|fame|famous|power|explor|adventur|discover"
+    ],
+    "n": 2
+   },
+   {
+    "t": "a detail",
+    "rx": "spain|spanish|florida|explorer|mexico|peru|priest|king|ship|sail|1500|ocean|atlantic|native|people",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "who",
+    "rx": "ponce|le[oó]n|\\bjuan\\b|ponse",
+    "n": 1
+   },
+   {
+    "t": "the name",
+    "rx": "la florida|florida|flowery|flower",
+    "n": 1
+   },
+   {
+    "t": "where he sailed from",
+    "rx": "puerto rico|puerto|rico|porto|caribbean|island",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a Native group",
+    "rx": "calusa|tequesta|apalachee|timucua|caloosa|calousa|native|tribe",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|already|first|home|lived here|live here|were here|before|story|stories|both|forget|matter|important|left out|remember|history|thousands|deserve|fair|true",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Think about the three winds that pushed the ships.",
+   "Look back at Learn the Story in the Explore tab (tab 2). The reasons are numbered 1, 2, and 3.",
+   "Try this shape: “One reason was ___. Another reason was ___.”"
+  ],
+  "journal-q2": [
+   "Think about the first knot on the rope: 1513.",
+   "Reread the part called The first three expeditions. It tells who came, what he named the land, and where he sailed from.",
+   "Try this shape: “___ reached Florida in 1513. He named it ___, and he sailed from ___.”"
+  ],
+  "journal-q3": [
+   "Remember the shore side of the picture.",
+   "Pick one group: the Calusa, Tequesta, Apalachee, or Timucua. Then think: what happens to their story if we forget them?",
+   "Try this shape: “The ___ already lived in Florida. Historians should remember them because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which reason do you think mattered most to the explorers? Why?",
+  "journal-q2": "Go further: the 1591 map has a bay named for Ponce. Which label is it?",
+  "journal-q3": "Go further: which names on the 1591 map came from Native people?"
+ },
+ "quizMiss": [
+  {
+   "a": "De Soto came later, in 1539. Look for the 1513 knot on the rope.",
+   "b": "Narváez came in 1528. Who came first, in 1513?"
+  },
+  {
+   "a": "Gold was a real reason. The question asks which one was NOT a reason.",
+   "c": "Claiming land and spreading the faith were real reasons. Which choice names something that didn’t exist in the 1500s?"
+  },
+  {
+   "b": "Florida was not empty. Remember the shore side of the picture in the Explore tab.",
+   "c": "The Pilgrims landed far to the north, in Massachusetts, in 1620. Who lived in Florida?"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2015,149 +2943,98 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Spanish Exploration of Florida ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the spyglass view (4.06.01 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The view from a ship's deck at sea. Far off, a thin line of land sits on the horizon. A spyglass circle brings it close: a flowering green coast with palm trees, a white heron, a shell mound, a dugout canoe pulled up on the sand, and smoke rising from a village fire behind the dunes." style="width:100%;height:auto;display:block;">
+  <style>
+    .s601-wv{animation:s601wv 7s linear infinite}
+    .s601-w2{animation-duration:10s}
+    .s601-pm{animation:s601pm 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .s601-p2{animation-delay:-2.2s}
+    .s601-fl{animation:s601fl 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .s601-f2{animation-delay:-1.4s}
+    .s601-sm{animation:s601sm 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .s601-gl{animation:s601gl 8s ease-in-out infinite}
+    .s601-rk{animation:s601rk 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    @keyframes s601wv{to{transform:translateX(-60px)}}
+    @keyframes s601pm{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2.5deg)}}
+    @keyframes s601fl{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+    @keyframes s601sm{0%{opacity:0;transform:translateY(6px) scaleX(.8)}35%{opacity:.5}100%{opacity:0;transform:translateY(-22px) scaleX(1.5)}}
+    @keyframes s601gl{0%,60%{transform:translateX(-200px);opacity:0}70%{opacity:.55}85%,100%{transform:translateX(200px);opacity:0}}
+    @keyframes s601rk{0%,100%{transform:rotate(0)}50%{transform:rotate(.6deg) translateY(1px)}}
+    @media (prefers-reduced-motion: reduce){.s601-wv,.s601-pm,.s601-fl,.s601-sm,.s601-gl,.s601-rk{animation:none}}
+  </style>
   <defs>
-    <linearGradient id="b601sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F2C26A"/>
-      <stop offset="40%" stop-color="#E89A55"/>
-      <stop offset="100%" stop-color="#7AB5D8"/>
-    </linearGradient>
-    <linearGradient id="b601ocean" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4A92C8"/>
-      <stop offset="100%" stop-color="#1F4E78"/>
-    </linearGradient>
-    <linearGradient id="b601sail" x1="0" y1="0" x2="0" y2="90" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFF8E8"/>
-      <stop offset="100%" stop-color="#E8D0A0"/>
-    </linearGradient>
-    <radialGradient id="b601sunGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
-    </radialGradient>
-    <style>
-      .b601bob { animation: b601bob 4s ease-in-out infinite; transform-origin: center; }
-      @keyframes b601bob { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-4px) rotate(1deg); } }
-      .b601wave { animation: b601wave 6s linear infinite; }
-      @keyframes b601wave { 0% { transform: translateX(0); } 100% { transform: translateX(-30px); } }
-      .b601spin { animation: b601spin 18s linear infinite; transform-origin: center; transform-box: fill-box; }
-      @keyframes b601spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-      .b601gull { animation: b601gull 7s ease-in-out infinite; }
-      @keyframes b601gull { 0%,100% { transform: translate(0,0); } 50% { transform: translate(8px,-4px); } }
-      .b601sun { animation: b601sun 5s ease-in-out infinite; }
-      @keyframes b601sun { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
-    </style>
+    <linearGradient id="s601sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FB6D6"/><stop offset=".7" stop-color="#CFE6EE"/><stop offset="1" stop-color="#F3E3C2"/></linearGradient>
+    <linearGradient id="s601sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3F8FB0"/><stop offset="1" stop-color="#1E5D7E"/></linearGradient>
+    <linearGradient id="s601lsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ED3EE"/><stop offset=".75" stop-color="#E4F4F8"/><stop offset="1" stop-color="#FFF4D6"/></linearGradient>
+    <linearGradient id="s601lsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DB8C8"/><stop offset="1" stop-color="#2E8AA6"/></linearGradient>
+    <linearGradient id="s601brass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D27A"/><stop offset=".45" stop-color="#B8862E"/><stop offset="1" stop-color="#6E4A12"/></linearGradient>
+    <linearGradient id="s601glint" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".7"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <radialGradient id="s601vig" cx="0.64" cy="0.5" r="0.75"><stop offset=".25" stop-color="#0E1C42" stop-opacity="0"/><stop offset="1" stop-color="#0E1C42" stop-opacity=".55"/></radialGradient>
+    <clipPath id="s601lens"><circle cx="610" cy="96" r="84"/></clipPath>
   </defs>
 
-  <!-- Sky -->
-  <rect width="920" height="180" fill="url(#b601sky)"/>
+  <!-- the open sea, seen from the deck -->
+  <rect width="920" height="200" fill="url(#s601sky)"/>
+  <rect y="112" width="920" height="88" fill="url(#s601sea)"/>
+  <path d="M520,112 q40,-5 90,-3 q60,-4 120,1 q50,-3 90,2 L820,112Z" fill="#5E7F55" opacity=".55"/>
+  <g class="s601-wv" opacity=".35" stroke="#E4F4F8" stroke-width="1.4" fill="none">
+    <path d="M0,130 q15,-4 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0"/>
+    <path d="M10,152 q15,-4 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0"/>
+  </g>
+  <rect width="920" height="200" fill="url(#s601vig)"/>
+  <g fill="none" stroke="#2A3A4A" stroke-width="1.6" stroke-linecap="round" opacity=".6"><path d="M300,48 q6,-5 11,0 q5,-5 11,0"/><path d="M336,62 q5,-4 9,0 q4,-4 9,0"/><path d="M268,70 q4,-3 8,0 q4,-3 8,0"/></g>
 
-  <!-- Sun (opacity-only animation; safe without nesting) -->
-  <g class="b601sun">
-    <circle cx="170" cy="70" r="60" fill="url(#b601sunGlow)"/>
-    <circle cx="170" cy="70" r="28" fill="#FFE5A0" opacity="0.85"/>
+  <!-- the ship: bow, rail and a furled sail on the left -->
+  <g class="s601-rk">
+    <path d="M0,40 L58,38 L64,150 L0,152Z" fill="#E9DDBE" opacity=".9"/>
+    <path d="M0,40 L58,38 M8,70 L60,68 M10,100 L62,98 M12,128 L63,126" stroke="#B49C6C" stroke-width="1.5" fill="none"/>
+    <line x1="62" y1="0" x2="66" y2="200" stroke="#4A2E14" stroke-width="7"/>
+    <path d="M66,22 L180,58" stroke="#5A3A1C" stroke-width="2"/>
+    <path d="M66,60 L240,96" stroke="#5A3A1C" stroke-width="1.5"/>
+    <path d="M-30,177 L950,165 L950,230 L-30,230Z" fill="#6B4423"/>
+    <path d="M-30,177 L950,165 L950,171 L-30,183Z" fill="#8B5A2B"/>
+    <g fill="#4A2E14"><rect x="120" y="150" width="8" height="26"/><rect x="300" y="148" width="8" height="26"/><rect x="480" y="146" width="8" height="26"/><rect x="760" y="144" width="8" height="25"/></g>
+    <path d="M-30,150 L950,140" stroke="#4A2E14" stroke-width="6"/>
+    <ellipse cx="200" cy="184" rx="34" ry="9" fill="none" stroke="#C9A877" stroke-width="3"/><ellipse cx="200" cy="184" rx="22" ry="5" fill="none" stroke="#C9A877" stroke-width="3"/>
   </g>
 
-  <!-- Distant coastline silhouette -->
-  <g fill="#3A6B5A" opacity="0.55">
-    <path d="M 0 165 L 80 158 L 150 162 L 230 155 L 310 160 L 380 152 L 460 158 L 540 154 L 620 160 L 700 156 L 780 162 L 850 158 L 920 162 L 920 180 L 0 180 Z"/>
+  <!-- the spyglass view: the coast, close up -->
+  <g clip-path="url(#s601lens)">
+    <rect x="520" y="10" width="180" height="180" fill="url(#s601lsky)"/>
+    <path d="M520,128 Q560,118 600,122 T700,118 L700,190 L520,190Z" fill="#F1DDAA"/>
+    <path d="M520,100 Q548,82 576,96 Q600,80 626,94 Q656,78 700,92 L700,124 Q650,118 600,124 Q560,120 520,126Z" fill="#4E8A3E"/>
+    <path d="M520,112 Q560,100 600,110 T700,104 L700,124 Q650,118 600,124 Q560,120 520,126Z" fill="#6FA552"/>
+    <!-- shell mound -->
+    <path d="M532,124 Q548,104 566,124Z" fill="#E8E0CC" stroke="#B8AE94" stroke-width="1"/>
+    <g fill="#FFFFFF" opacity=".8"><circle cx="544" cy="118" r="1.4"/><circle cx="551" cy="114" r="1.2"/><circle cx="556" cy="120" r="1.3"/></g>
+    <!-- village smoke behind the dunes -->
+    <path class="s601-sm" d="M640,88 q-6,-10 0,-20 q6,-10 0,-20" stroke="#B8B0A4" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- palms -->
+    <g class="s601-pm"><path d="M590,120 Q594,92 588,64" stroke="#7A5530" stroke-width="4" fill="none"/><path d="M588,64 q-20,-2 -28,10 M588,64 q20,-6 28,6 M588,64 q-10,-16 -24,-14 M588,64 q12,-14 24,-10 M588,64 q2,-14 -2,-20" stroke="#2F7A3E" stroke-width="4.5" fill="none" stroke-linecap="round"/></g>
+    <g class="s601-pm s601-p2"><path d="M672,116 Q676,94 670,72" stroke="#7A5530" stroke-width="3.5" fill="none"/><path d="M670,72 q-18,-2 -24,8 M670,72 q18,-6 24,4 M670,72 q-8,-14 -20,-12 M670,72 q10,-12 20,-8" stroke="#2F7A3E" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+    <!-- flowering shrubs -->
+    <g class="s601-fl"><path d="M612,124 q-4,-14 4,-22 q8,8 4,22z" fill="#3E7A34"/><g fill="#E86A8A"><circle cx="612" cy="106" r="3.4"/><circle cx="619" cy="110" r="3"/><circle cx="609" cy="114" r="2.6"/></g></g>
+    <g class="s601-fl s601-f2"><path d="M638,124 q-6,-12 2,-20 q8,6 6,20z" fill="#3E7A34"/><g fill="#F7D046"><circle cx="639" cy="106" r="3"/><circle cx="645" cy="111" r="2.6"/><circle cx="634" cy="112" r="2.4"/></g></g>
+    <g class="s601-fl"><path d="M568,126 q-4,-10 2,-16 q6,5 4,16z" fill="#3E7A34"/><g fill="#FFFFFF"><circle cx="569" cy="111" r="2.6"/><circle cx="574" cy="115" r="2.2"/></g></g>
+    <g class="s601-fl s601-f2"><path d="M690,122 q-4,-12 2,-18 q6,5 4,18z" fill="#3E7A34"/><g fill="#B57BD8"><circle cx="691" cy="106" r="2.8"/><circle cx="696" cy="110" r="2.4"/></g></g>
+    <!-- heron on the sand -->
+    <g transform="translate(560,134)"><path d="M0,0 q-2,-10 4,-14 q6,-2 6,4 q0,6 -8,8z" fill="#FFFFFF" stroke="#9AA4A8" stroke-width=".8"/><path d="M6,-10 q4,-8 2,-14 q4,0 8,2" fill="none" stroke="#FFFFFF" stroke-width="2"/><path d="M16,-22 l7,1" stroke="#E0A030" stroke-width="1.4"/><path d="M2,0 l-1,10 M5,0 l1,10" stroke="#5A4A3A" stroke-width="1"/></g>
+    <!-- dugout canoe pulled up on the beach -->
+    <path d="M594,144 q34,10 70,0 l-6,7 q-28,7 -58,0z" fill="#7A4A26" stroke="#4A2E14" stroke-width="1"/>
+    <path d="M600,146 q28,6 58,0" stroke="#A0693A" stroke-width="1" fill="none"/>
+    <path d="M664,140 l14,-12" stroke="#7A4A26" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- the lens sea -->
+    <path d="M520,158 Q560,150 600,156 T700,152 L700,190 L520,190Z" fill="url(#s601lsea)"/>
+    <g class="s601-wv s601-w2" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="1.4" fill="none"><path d="M500,162 q10,-3 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0"/><path d="M510,174 q10,-3 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0"/></g>
+    <!-- a glint sweeps across the glass -->
+    <g transform="skewX(-20)"><rect class="s601-gl" x="600" y="10" width="60" height="180" fill="url(#s601glint)"/></g>
   </g>
-
-  <!-- Ocean -->
-  <rect y="180" width="920" height="80" fill="url(#b601ocean)"/>
-
-  <!-- Ocean wave lines (translate animation OK on outer g — no positional transform needed) -->
-  <g class="b601wave" opacity="0.5" stroke="#FFFFFF" stroke-width="1" fill="none">
-    <path d="M 0 200 Q 30 196 60 200 T 120 200 T 180 200 T 240 200 T 300 200 T 360 200 T 420 200 T 480 200 T 540 200 T 600 200 T 660 200 T 720 200 T 780 200 T 840 200 T 900 200 T 960 200"/>
-    <path d="M 0 215 Q 30 211 60 215 T 120 215 T 180 215 T 240 215 T 300 215 T 360 215 T 420 215 T 480 215 T 540 215 T 600 215 T 660 215 T 720 215 T 780 215 T 840 215 T 900 215 T 960 215" opacity="0.7"/>
-    <path d="M 0 232 Q 30 228 60 232 T 120 232 T 180 232 T 240 232 T 300 232 T 360 232 T 420 232 T 480 232 T 540 232 T 600 232 T 660 232 T 720 232 T 780 232 T 840 232 T 900 232 T 960 232" opacity="0.5"/>
-  </g>
-
-  <!-- Seagulls (left) — translate animation OK -->
-  <g class="b601gull" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.85">
-    <path d="M 60 50 Q 68 44 75 50 Q 82 44 90 50"/>
-    <path d="M 110 35 Q 116 30 122 35 Q 128 30 134 35"/>
-  </g>
-
-  <!-- ═══ CENTRAL: Spanish caravel ═══
-       FIX: outer g handles position via translate; inner g handles bob animation.
-       Without nesting, the CSS animation's `transform` overrides the inline translate,
-       snapping the ship to (0,0). -->
-  <g transform="translate(370 100)">
-    <g class="b601bob">
-    <!-- Hull -->
-    <path d="M -90 75 Q -75 110 0 115 Q 75 110 90 75 L 75 75 L -75 75 Z" fill="#6A4520" stroke="#3A2510" stroke-width="2"/>
-    <path d="M -78 88 Q 0 95 78 88" stroke="#3A2510" stroke-width="1" fill="none" opacity="0.5"/>
-    <path d="M -82 100 Q 0 108 82 100" stroke="#3A2510" stroke-width="1" fill="none" opacity="0.5"/>
-    <line x1="-75" y1="75" x2="75" y2="75" stroke="#FFE5A0" stroke-width="2"/>
-    <!-- Masts -->
-    <line x1="0" y1="75" x2="0" y2="-55" stroke="#3A2510" stroke-width="4"/>
-    <line x1="-45" y1="75" x2="-45" y2="-15" stroke="#3A2510" stroke-width="3"/>
-    <line x1="45" y1="75" x2="45" y2="-5" stroke="#3A2510" stroke-width="3"/>
-    <line x1="-75" y1="78" x2="-115" y2="60" stroke="#3A2510" stroke-width="3"/>
-    <!-- Main sail with Spanish red cross -->
-    <path d="M -38 -50 Q 0 -55 38 -50 L 42 35 Q 0 45 -42 35 Z" fill="url(#b601sail)" stroke="#A07B4A" stroke-width="1.5"/>
-    <g fill="#B83030" opacity="0.75">
-      <rect x="-3" y="-40" width="6" height="60"/>
-      <rect x="-18" y="-12" width="36" height="6"/>
-    </g>
-    <!-- Fore sail -->
-    <path d="M -65 -12 Q -45 -18 -25 -12 L -22 35 Q -45 42 -68 35 Z" fill="url(#b601sail)" stroke="#A07B4A" stroke-width="1.5"/>
-    <!-- Mizzen sail -->
-    <path d="M 25 -2 L 65 -2 L 60 40 L 30 40 Z" fill="url(#b601sail)" stroke="#A07B4A" stroke-width="1.5"/>
-    <!-- Flag -->
-    <path d="M 0 -55 L 30 -50 L 24 -42 L 30 -34 L 0 -38 Z" fill="#E8C040" stroke="#A0801A" stroke-width="1"/>
-    </g>
-  </g>
-
-  <!-- ═══ RIGHT: Compass rose ═══
-       FIX: outer g positions the compass; inner g spins. Use transform-box: fill-box
-       so transform-origin: center rotates around the spinning g's own center, not the SVG root. -->
-  <g transform="translate(800 90)">
-    <!-- Static outer rings (no animation, no nesting needed) -->
-    <circle cx="0" cy="0" r="55" fill="rgba(255,248,224,0.95)" stroke="#6A4520" stroke-width="3"/>
-    <circle cx="0" cy="0" r="46" fill="none" stroke="#8A6A40" stroke-width="1.2"/>
-    <circle cx="0" cy="0" r="38" fill="none" stroke="#A07B4A" stroke-width="0.8" opacity="0.6"/>
-    <!-- Spinning needles: wrap in another g and use a circle background to define bbox -->
-    <g class="b601spin">
-      <!-- Invisible bbox-defining circle so transform-box: fill-box has something to anchor on -->
-      <circle cx="0" cy="0" r="44" fill="none" stroke="none"/>
-      <polygon points="0,-44 -5,0 5,0" fill="#C03020"/>
-      <polygon points="0,44 -5,0 5,0" fill="#3A2510"/>
-      <polygon points="44,0 0,-4 0,4" fill="#8A6A40"/>
-      <polygon points="-44,0 0,-4 0,4" fill="#8A6A40"/>
-      <polygon points="31,-31 0,-3 3,0" fill="#A07B4A" opacity="0.75"/>
-      <polygon points="-31,31 0,3 -3,0" fill="#A07B4A" opacity="0.75"/>
-      <polygon points="31,31 3,0 0,3" fill="#A07B4A" opacity="0.75"/>
-      <polygon points="-31,-31 -3,0 0,-3" fill="#A07B4A" opacity="0.75"/>
-    </g>
-    <!-- Hub on top of needles -->
-    <circle cx="0" cy="0" r="5" fill="#3A2510"/>
-    <circle cx="0" cy="0" r="2" fill="#FFE5A0"/>
-  </g>
-
-  <!-- LEFT FOREGROUND: Palmetto fronds -->
-  <g fill="#1A4A3A">
-    <path d="M 30 245 Q 25 215 15 205 Q 28 215 35 210 Q 25 200 32 188 Q 40 205 42 215 Q 50 195 60 195 Q 50 210 45 220 Q 60 210 70 215 Q 55 225 42 232 L 38 250 Z"/>
-    <rect x="36" y="232" width="4" height="20" fill="#2A1A0A"/>
-  </g>
-
-  <!-- RIGHT FOREGROUND: Treasure chest hint -->
-  <g transform="translate(880 215)">
-    <rect x="-22" y="0" width="40" height="22" rx="2" fill="#8A6A40" stroke="#3A2510" stroke-width="1.5"/>
-    <path d="M -22 0 Q -2 -12 18 0" fill="#A07B4A" stroke="#3A2510" stroke-width="1.5"/>
-    <circle cx="-2" cy="10" r="2.5" fill="#E8C040"/>
-    <circle cx="-30" cy="20" r="3" fill="#E8C040" stroke="#A0801A" stroke-width="0.6"/>
-    <circle cx="-36" cy="22" r="2.5" fill="#E8C040" stroke="#A0801A" stroke-width="0.6"/>
-  </g>
-
-  <!-- Subtle HUD corner marks -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
-  </g>
+  <!-- the brass rim of the spyglass -->
+  <circle cx="610" cy="96" r="86" fill="none" stroke="url(#s601brass)" stroke-width="9"/>
+  <circle cx="610" cy="96" r="91" fill="none" stroke="#4A3010" stroke-width="1.5" opacity=".6"/>
+  <circle cx="610" cy="96" r="80.5" fill="none" stroke="#3A2408" stroke-width="1.5" opacity=".5"/>
+  <path d="M547,38 a86,86 0 0 1 40,-24" stroke="#FFF3C4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3705,5 +4582,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
