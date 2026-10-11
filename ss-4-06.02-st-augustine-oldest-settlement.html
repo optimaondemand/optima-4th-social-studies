@@ -1636,6 +1636,858 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.02",
+ "title": "St. Augustine: Oldest Permanent European Settlement",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🏘️",
+   "📅",
+   "🚂"
+  ]
+ },
+ "prevFile": "Early European Exploration of Florida",
+ "connector": "Last time we learned why Europeans sailed to Florida. Today we find out how one Spanish town managed to stay.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Town Plan",
+   "t": "Build the town",
+   "why": "Put each part of St. Augustine on the plan. Each part shows it was meant to stay."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read and investigate",
+   "why": "Tear the calendar pages to read the story. Then hang five events on the line in order and tie one because string."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "The story train",
+   "why": "Answer three questions. Then write 3 to 5 sentences: the events in order, and one cause and effect."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Next door down this hallway is a whole town!",
+  "opening": [
+   "This file is about St. Augustine. Spain started it in 1565, and people still live there today. That makes it a very special town.",
+   "Start in the Town Plan tab (tab 1). Scroll down to the town plan under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the plan",
+      "go": true,
+      "reply": "Tap a part of the town, then tap its faint outline on the plan. Or drag it there."
+     },
+     {
+      "t": "What’s a settlement?",
+      "reply": "A settlement is a place where people come to live, not just visit. Houses, a church, and farm fields are clues that people plan to stay."
+     },
+     {
+      "t": "Is the exit in this town?",
+      "reply": "I hope so! But I think the way out is at the end of this hallway. Let’s keep opening files."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Tear the calendar pages one at a time. Each page is one part of the story."
+     },
+     {
+      "t": "Who lived there first?",
+      "reply": "The Timucua. Their town, Seloy, was right there when the Spanish ships came. That’s why it’s on the plan."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Why does order matter?",
+      "reply": "A cause always comes before what it causes. If you know the order, you can find the because."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about the Spanish missions, like Mission San Luis in Tallahassee, and the Apalachee people who lived there."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! Your town is built. Fort, fields, church, and houses all say the same thing: we’re staying. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! Your events are in order, and your because string is tied. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 3 to 5 sentences that tell the story in order and name one cause and effect. Build your story train first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Spanish settlers faced storms and hunger, the French faced attack, and the Timucua faced strangers in their homeland. Notice whose courage shows up at each step, not just the people in charge.",
+ "scene1": {
+  "type": "buildtown",
+  "kicker": "Build the Town",
+  "h": "Build St. Augustine on its harbor",
+  "voice": "Tap a part of the town, then tap its faint outline on the plan. Or drag the part onto the plan.",
+  "countT": "parts of the town built.",
+  "alt": "A plan of St. Augustine by Matanzas Bay",
+  "bayT": "Matanzas Bay",
+  "islandT": "Anastasia Island",
+  "fixed": [
+   {
+    "t": "Seloy (Timucua town)",
+    "x": 78,
+    "y": 34
+   }
+  ],
+  "parts": [
+   {
+    "id": "fort",
+    "shape": "fort",
+    "ico": "🏰",
+    "t": "The fort",
+    "why": "A fort protected the town from attack. The first forts were wood. The stone Castillo was started in 1672.",
+    "miss": "A fort guards the way in by water. Look for the outline at the north end, right by the bay.",
+    "x": 205,
+    "y": 16,
+    "w": 44,
+    "h": 42
+   },
+   {
+    "id": "gate",
+    "shape": "gate",
+    "ico": "🚪",
+    "t": "The town gate",
+    "why": "A wall and gate kept the town safe on the land side. The stone City Gate you can visit today was finished in 1808.",
+    "miss": "A gate goes in the wall on the north side of town, between the town and the fort.",
+    "x": 120,
+    "y": 70,
+    "w": 70,
+    "h": 16
+   },
+   {
+    "id": "plaza",
+    "shape": "plaza",
+    "ico": "⛲",
+    "t": "The plaza",
+    "why": "Spanish towns were planned around a plaza, an open square for markets and meetings. Planning a center means planning to stay.",
+    "miss": "The plaza is the open square in the middle of town.",
+    "x": 150,
+    "y": 118,
+    "w": 50,
+    "h": 36
+   },
+   {
+    "id": "church",
+    "shape": "church",
+    "ico": "⛪",
+    "t": "The church",
+    "why": "A church showed that families planned to live and worship here for years.",
+    "miss": "The church stands right next to the plaza, on the side by the bay.",
+    "x": 210,
+    "y": 122,
+    "w": 30,
+    "h": 32
+   },
+   {
+    "id": "houses",
+    "shape": "houses",
+    "ico": "🏠",
+    "t": "The houses",
+    "why": "Families built houses, not tents. Houses mean people plan to stay.",
+    "miss": "Houses go in the rows of blocks south of the plaza.",
+    "x": 130,
+    "y": 170,
+    "w": 90,
+    "h": 44
+   },
+   {
+    "id": "fields",
+    "shape": "fields",
+    "ico": "🌽",
+    "t": "The fields",
+    "why": "Settlers planted corn and gardens. Food was often short, so supply ships helped too.",
+    "miss": "Fields need open land. Look for the big outline on the west side, away from the water.",
+    "x": 30,
+    "y": 98,
+    "w": 70,
+    "h": 80
+   }
+  ],
+  "win": "🏘️ Your town is built: fort, gate, plaza, church, houses, and fields. Every part says the same thing: this town is here to stay.",
+  "why": {
+   "icon": "🏘️",
+   "q": "Why build a town?",
+   "t": "A camp is for visiting. A town is for staying. Explorers before 1565 came and left, but St. Augustine had a fort, a church, houses, and fields. Those are the clues that it was built to last. That’s why you build the town."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "calendar",
+   "activity": "The Founding of St. Augustine, 1565",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^By the mid-1500s"
+    },
+    {
+     "id": "p1",
+     "match": "^Event 1"
+    },
+    {
+     "id": "p2",
+     "match": "^Event 2"
+    },
+    {
+     "id": "p3",
+     "match": "^Event 3"
+    },
+    {
+     "id": "p4",
+     "match": "^Event 4"
+    },
+    {
+     "id": "p5",
+     "match": "^Event 5"
+    },
+    {
+     "id": "p6",
+     "match": "^Why this matters"
+    }
+   ],
+   "pages": [
+    {
+     "top": "Florida",
+     "d": "Before 1565",
+     "sub": "No Spanish town has lasted",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "top": "Event 1",
+     "d": "1564",
+     "sub": "The French arrive first",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "top": "Event 2",
+     "d": "Spring 1565",
+     "sub": "Spain responds",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "top": "Event 3",
+     "d": "Sept. 8, 1565",
+     "sub": "St. Augustine is founded",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "top": "Event 4",
+     "d": "Late Sept. 1565",
+     "sub": "Fort Caroline is captured",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "top": "Event 5",
+     "d": "The years after",
+     "sub": "A town that lasts",
+     "paras": [
+      "p5"
+     ]
+    },
+    {
+     "top": "Today",
+     "d": "Today",
+     "sub": "Why this matters",
+     "paras": [
+      "p6"
+     ]
+    }
+   ],
+   "endT": "St. Augustine is still here.",
+   "startT": "Tap the calendar page to tear it off. Each page is one part of the story.",
+   "countT": "pages torn. Read this part, then tear the next page.",
+   "allT": "Every page is torn. You read the whole story, in order.",
+   "why": {
+    "icon": "📅",
+    "q": "Why a calendar?",
+    "t": "History happens in order, one date after another. Tearing a calendar page is how people mark that a day is done. Each page here is one step in how St. Augustine began. That’s why you read it on a calendar."
+   }
+  },
+  "evidence": {
+   "type": "clothesline",
+   "kicker": "Clothesline",
+   "h": "Hang the events in order",
+   "voice": "Tap an event card, then tap its spot on the line, earliest first. Or drag it. Then tie a because string: tap a cause, then the event it caused.",
+   "slotLabels": [
+    "1st",
+    "2nd",
+    "3rd",
+    "4th",
+    "5th"
+   ],
+   "cards": [
+    {
+     "id": "B",
+     "o": 1,
+     "y": "1564",
+     "ico": "🏰",
+     "t": "French settlers build Fort Caroline",
+     "miss": "The French came first, before Spain did anything. This card goes first."
+    },
+    {
+     "id": "D",
+     "o": 2,
+     "y": "Spring 1565",
+     "ico": "📜",
+     "t": "King Philip II orders Menéndez to Florida",
+     "miss": "The king gave his order after the French built their fort, but before anyone sailed."
+    },
+    {
+     "id": "C",
+     "o": 3,
+     "y": "Sept. 8, 1565",
+     "ico": "⛪",
+     "t": "St. Augustine is founded",
+     "miss": "Menéndez founded St. Augustine after the king sent him, and before he marched north."
+    },
+    {
+     "id": "A",
+     "o": 4,
+     "y": "Late Sept. 1565",
+     "ico": "⚔️",
+     "t": "Spanish forces capture Fort Caroline",
+     "miss": "Menéndez marched north to Fort Caroline after he founded St. Augustine."
+    },
+    {
+     "id": "E",
+     "o": 5,
+     "y": "1672",
+     "ico": "🧱",
+     "t": "Building of the Castillo de San Marcos begins",
+     "miss": "The stone Castillo came more than 100 years later. It goes last."
+    }
+   ],
+   "pairs": [
+    [
+     "B",
+     "D",
+     "King Philip II sent Menéndez to Florida because the French built Fort Caroline."
+    ],
+    [
+     "D",
+     "C",
+     "St. Augustine was founded because King Philip II ordered Menéndez to start a Spanish settlement."
+    ],
+    [
+     "D",
+     "A",
+     "Spanish forces captured Fort Caroline because King Philip II ordered Menéndez to remove the French."
+    ],
+    [
+     "B",
+     "A",
+     "Spanish forces captured Fort Caroline because the French had built it on land Spain claimed."
+    ],
+    [
+     "C",
+     "A",
+     "Spanish forces captured Fort Caroline because Menéndez now had a base at St. Augustine to march from."
+    ]
+   ],
+   "countT": "cards on the line.",
+   "becauseK": "Because:",
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: tear every page of the calendar in Learn the Story.",
+   "win": "✨ Five events, in order, and one because string tied. That’s a Timeline Thread: first the order, then the cause and effect.",
+   "why": {
+    "icon": "🧺",
+    "q": "Why a clothesline?",
+    "t": "A clothesline holds things in a row, one after another, the way a timeline holds events. Once the cards hang in order, you can see which event came first and made the next one happen. That’s why you hang them on a line."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each gold number on the map to read its label.",
+    "Hang the five event cards on the line, earliest first.",
+    "Tie one because string: tap a cause, then the event it caused."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now hang the events on the line below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 39.74,
+    "y": 89.32,
+    "title": "The title and the key.",
+    "t": "This map was printed in England in 1589. It shows Sir Francis Drake’s English attack on St. Augustine in 1586, about 20 years after the town began. The letters in the key tell what each part shows."
+   },
+   {
+    "n": "2",
+    "x": 19.54,
+    "y": 11.67,
+    "title": "The town.",
+    "t": "Rows of houses with gardens. The key says about 150 Spanish soldiers lived here. Drake’s men burned the town, and the Spanish rebuilt it. It didn’t give up."
+   },
+   {
+    "n": "3",
+    "x": 57.12,
+    "y": 14.84,
+    "title": "The fort.",
+    "t": "The Spanish fort in 1586 was made of wood. The stone Castillo de San Marcos came later, starting in 1672."
+   },
+   {
+    "n": "4",
+    "x": 47.35,
+    "y": 32.64,
+    "title": "Drake’s soldiers.",
+    "t": "English soldiers marching to attack. The red cross on their flags is England’s flag."
+   },
+   {
+    "n": "5",
+    "x": 52.98,
+    "y": 70.43,
+    "title": "Drake’s fleet.",
+    "t": "Drake’s English ships. A fleet is a big group of ships sailing together."
+   },
+   {
+    "n": "6",
+    "x": 16.97,
+    "y": 70.43,
+    "title": "A dolphin fish.",
+    "t": "A dolphin fish, also called a mahi-mahi. It’s a fish, not the dolphin you might know. Sailors caught them at sea."
+   }
+  ]
+ },
+ "planner": {
+  "type": "train",
+  "voice": "Load each car with an event, in time order: first, then, after that. Then couple the cars with a because. These are just notes. You’ll write your own sentences in Step 3.",
+  "cars": [
+   {
+    "id": "c1",
+    "lab": "First",
+    "q": "Car 1 · First: pick the earliest event"
+   },
+   {
+    "id": "c2",
+    "lab": "Then",
+    "q": "Car 2 · Then: pick what happened next"
+   },
+   {
+    "id": "c3",
+    "lab": "After that",
+    "q": "Car 3 · After that: pick a later event"
+   }
+  ],
+  "events": [
+   {
+    "id": "e1",
+    "o": 1,
+    "t": "1564: the French build Fort Caroline"
+   },
+   {
+    "id": "e2",
+    "o": 2,
+    "t": "Spring 1565: King Philip II sends Menéndez"
+   },
+   {
+    "id": "e3",
+    "o": 3,
+    "t": "Sept. 8, 1565: Menéndez founds St. Augustine"
+   },
+   {
+    "id": "e4",
+    "o": 4,
+    "t": "Late Sept. 1565: Spain captures Fort Caroline"
+   },
+   {
+    "id": "e5",
+    "o": 5,
+    "t": "1672: building of the Castillo begins"
+   }
+  ],
+  "couple": {
+   "lab": "Because",
+   "q": "Couple the cars: pick one because",
+   "opts": [
+    {
+     "id": "k1",
+     "t": "Spain sent Menéndez because the French built Fort Caroline"
+    },
+    {
+     "id": "k2",
+     "t": "St. Augustine was founded because the king ordered it"
+    },
+    {
+     "id": "k3",
+     "t": "Fort Caroline fell because Menéndez marched north from St. Augustine"
+    }
+   ]
+  },
+  "orderT": "Check the dates: each car should happen after the one in front of it.",
+  "doneT": "All aboard! Your train is in order and coupled. Now write your Timeline Thread in Step 3.",
+  "why": {
+   "icon": "🚂",
+   "q": "Why a train?",
+   "t": "Train cars only work in a line, one hooked to the next, and the coupling is what pulls them together. A story about history works the same way: events in order, and a because that connects them. That’s why you build a train."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "events in order",
+    "rx": "first|then|next|after|later|finally|1564|1565|1672"
+   },
+   {
+    "t": "a because",
+    "rx": "because|led to|as a result|caused|cause|so\\b|since|that.?s why"
+   },
+   {
+    "t": "a name, year, or group",
+    "rx": "men[eé]ndez|philip|king|timucua|french|huguenot|1564|1565|1672|caroline|castillo|augustine|spain|spanish"
+   },
+   {
+    "t": "the people already here",
+    "rx": "timucua|native|seloy|already lived|already here|first people"
+   }
+  ],
+  "lines": [
+   "Start with the first event: what happened in 1564?",
+   "Good. Now add a because: which event caused another?",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong Timeline Thread. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the calendar and the clothesline."
+  },
+  {
+   "t": "Plan",
+   "w": "Build the story train: three events in order, and a because."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Timeline Thread response"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Timeline Thread and check off the whole list.",
+ "vocab": {
+  "type": "raisefort",
+  "kicker": "Raise the Fort",
+  "h": "fort = strong",
+  "root": "fort",
+  "voice": "Tap each corner of the fort to hear its word. Then put each meaning on its corner: tap the meaning, then the corner, or drag it. Watch the fort rise.",
+  "words": [
+   {
+    "w": "fort",
+    "root": "fort",
+    "name": "San Pedro",
+    "m": "a strong building made to protect people from attack",
+    "miss": "This meaning is about a building that keeps people safe. Find the shortest word.",
+    "say": "Fort. A strong building made to protect people from attack."
+   },
+   {
+    "w": "fortress",
+    "root": "fort",
+    "name": "San Carlos",
+    "m": "a very large fort, or a town with strong walls all around",
+    "miss": "This meaning is about something bigger than a fort. Find the longer word that starts with fort.",
+    "say": "Fortress. A very large fort, or a town with strong walls all around."
+   },
+   {
+    "w": "fortify",
+    "root": "fort",
+    "name": "San Agustín",
+    "m": "to make a place stronger so it can stand up to an attack",
+    "miss": "This meaning is an action, something you do. Words that end in -ify are actions, like simplify.",
+    "say": "Fortify. To make a place stronger so it can stand up to an attack."
+   },
+   {
+    "w": "effort",
+    "root": "fort",
+    "name": "San Pablo",
+    "m": "hard, strong work to get something done",
+    "miss": "This meaning is about hard work, not a building. Find the word where fort is at the end.",
+    "say": "Effort. Hard, strong work to get something done."
+   }
+  ],
+  "win": "🏰 The fort is raised, and the flag is up. <b>fort<\/b> = strong",
+  "why": {
+   "icon": "🏰",
+   "q": "Why raise a fort?",
+   "t": "The Castillo de San Marcos in St. Augustine has four pointed corners, called bastions. Each one has a saint’s name: San Pedro, San Carlos, San Agustín, and San Pablo. On this map, each name sits in its real corner, with north at the top. Forts are built to be strong, and the root fort means strong. That’s why you raise a fort here."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Visiting or staying?",
+   "at": "scene1",
+   "script": "When my family goes camping, we bring a tent and we pack it up when we leave. But when we moved into our house, we planted a garden and hung pictures on the wall. Those are clues that we were staying. As you build the town, ask yourself: does this part say, we’re staying?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Who was already there?",
+   "at": "s1done",
+   "script": "Look at your finished town. Now find the little Timucua town on the plan, Seloy. It was there first. Pause me and think: what would it be like to watch a new town being built right next to your home? Keep that question with you on the Explore tab."
+  },
+  {
+   "label": "A priest who was there",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "Here’s Father Francisco López de Mendoza Grajales. He was a priest who sailed with Menéndez, and he wrote down what he saw on September 8, 1565, the day St. Augustine was founded. Listen for who was watching."
+    },
+    {
+     "slot": "source-2",
+     "who": "Francisco López de Mendoza Grajales, 1565 (English translation, Old South Leaflets)",
+     "script": "On Saturday, the 8th, the general landed with many banners spread, to the sound of trumpets and salutes of artillery. As I had gone ashore the evening before, I took a cross and went to meet him, singing the hymn Te Deum laudamus. The general marched up to the cross, followed by all who accompanied him, and there they kneeled and embraced the cross. A large number of Indians watched these proceedings and imitated all they saw done."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you hear who was watching? He says a large number of Indians. They were Timucua people from the town of Seloy. St. Augustine was founded on their land, right in front of them. Pause me and think: what do you think they made of the trumpets and the cross?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "My own clothesline",
+   "at": "evidence",
+   "script": "Here’s my morning, in order. My alarm rang. I made toast. I burned the toast. The smoke alarm went off. Now the because: the smoke alarm went off because I burned the toast. Order first, then the because. Now hang your cards on the line."
+  },
+  {
+   "slot": "guide5",
+   "label": "Coupling my train",
+   "at": "plan",
+   "script": "Here’s my story train. First, I signed up for a race. Then, I practiced every day. After that, I ran the race and finished it. And my coupling: I finished the race because I practiced every day. Now load your cars, in order, and pick your because."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "In 1564, French settlers built Fort Caroline near today’s Jacksonville. Spain saw it as a threat.",
+   "In 1565, King Philip II sent Pedro Menéndez de Avilés to remove the French and start a Spanish settlement.",
+   "Menéndez founded St. Augustine on September 8, 1565, on Timucua land, near the town of Seloy. Later that month, Spanish forces captured Fort Caroline.",
+   "St. Augustine survived storms, hunger, and attacks, like Drake’s English raid in 1586. Building of the stone Castillo de San Marcos began in 1672.",
+   "St. Augustine is the oldest European-founded city in the 50 states where people have lived ever since."
+  ],
+  "vocab": [
+   [
+    "settlement",
+    "a place where people come to live"
+   ],
+   [
+    "claim",
+    "when a country says, “This land is ours”"
+   ],
+   [
+    "Protestant",
+    "a Christian who broke away from the Catholic Church"
+   ],
+   [
+    "Huguenot",
+    "a French Protestant"
+   ],
+   [
+    "threat",
+    "a danger"
+   ],
+   [
+    "feast day",
+    "a day the Catholic Church sets aside to remember a saint"
+   ],
+   [
+    "coquina",
+    "a stone made of tiny shells"
+   ],
+   [
+    "fleet",
+    "a big group of ships sailing together"
+   ],
+   [
+    "fort",
+    "a strong building made to protect people from attack"
+   ],
+   [
+    "fortress",
+    "a very large fort, or a town with strong walls all around"
+   ],
+   [
+    "fortify",
+    "to make a place stronger so it can stand up to an attack"
+   ],
+   [
+    "effort",
+    "hard, strong work to get something done"
+   ]
+  ],
+  "wordParts": "The Latin root fort means “strong.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "Fort Caroline",
+    "rx": "fort caroline|caroline|carolina|french",
+    "n": 1
+   },
+   {
+    "t": "St. Augustine",
+    "rx": "augustine|agustin|augustin|founded",
+    "n": 1
+   },
+   {
+    "t": "the Castillo",
+    "rx": "castillo|castle|san marcos|stone fort|1672",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a because",
+    "rx": "because|since|led to|caused|cause|so\\b|due to|that.?s why",
+    "n": 1
+   },
+   {
+    "t": "two events",
+    "rx": "fort caroline|caroline|french|philip|king|men[eé]ndez|augustine|founded|castillo|captur|took|attack|spain|spanish|sent|order",
+    "n": 2
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "the Timucua",
+    "rx": "timucua|timuca|timicua|timucuan|native|seloy|tribe|first people",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|already|first|home|lived here|live here|were here|before|story|both|forget|matter|important|left out|remember|history|their land|fair|true",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the clothesline in the Explore tab (tab 2).",
+   "Which of the three has the earliest year? Which is more than 100 years later?",
+   "Try this shape: “1. ___ (1564) 2. ___ (1565) 3. ___ (1672)”"
+  ],
+  "journal-q2": [
+   "Look at the because string you tied on the clothesline.",
+   "Pick two events where one made the other happen. The cause always comes first.",
+   "Try this shape: “King Philip II sent Menéndez to Florida because ___.”"
+  ],
+  "journal-q3": [
+   "Remember the little town on your town plan, Seloy.",
+   "The people who lived there were the Timucua. What happens to their story if no one names them?",
+   "Try this shape: “St. Augustine was built on the land of the ___. Historians should name them because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: about how many years passed between the founding and the start of the Castillo?",
+  "journal-q2": "Go further: can you find a chain of three events, where each one caused the next?",
+  "journal-q3": "Go further: what clue on the 1586 map shows the town was attacked, and survived?"
+ },
+ "quizMiss": [
+  {
+   "a": "Ponce de León named Florida in 1513, but he didn’t start a town that lasted. Look at Event 3 on the calendar.",
+   "c": "De Soto marched inland in 1539. Who landed on September 8, 1565?"
+  },
+  {
+   "b": "The Castillo was started in 1672, more than 100 years later. Which event came first of all?",
+   "c": "Fort Mose began in 1738, much later. Look at the first calendar page with a year: 1564."
+  },
+  {
+   "a": "Electric lights came hundreds of years later. What makes St. Augustine special?",
+   "c": "Florida’s capital is Tallahassee. Reread the last calendar page, Why this matters."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1872,192 +2724,87 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Castillo de San Marcos · St. Augustine ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the harbor at first light, 1565 (4.06.02 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawn over the St. Augustine harbor in 1565. Three Spanish ships ride at anchor in the inlet. On the shore at left, round thatched houses of a Timucua town stand among palm trees with cooking smoke rising. On the point of land at right, a faint dotted outline of a stone fort waits where the Castillo de San Marcos will be built more than 100 years later. The sun is rising over the ocean." style="width:100%;height:auto;display:block;">
+  <style>
+    .h602-wv{animation:h602wv 9s linear infinite}
+    .h602-w2{animation-duration:13s}
+    .h602-rk{animation:h602rk 5s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .h602-r2{animation-delay:-1.7s}.h602-r3{animation-delay:-3.1s}
+    .h602-sm{animation:h602sm 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    .h602-s2{animation-delay:-3s}
+    .h602-gh{animation:h602gh 6s ease-in-out infinite}
+    .h602-sun{animation:h602sun 8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 50%}
+    .h602-pm{animation:h602pm 6s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+    @keyframes h602wv{to{transform:translateX(-80px)}}
+    @keyframes h602rk{0%,100%{transform:rotate(-.8deg)}50%{transform:rotate(1deg) translateY(1px)}}
+    @keyframes h602sm{0%{opacity:0;transform:translateY(4px) scaleX(.8)}35%{opacity:.5}100%{opacity:0;transform:translateY(-26px) scaleX(1.6)}}
+    @keyframes h602gh{0%,100%{opacity:.35}50%{opacity:.8}}
+    @keyframes h602sun{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+    @keyframes h602pm{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(2deg)}}
+    @media (prefers-reduced-motion: reduce){.h602-wv,.h602-rk,.h602-sm,.h602-gh,.h602-sun,.h602-pm{animation:none}}
+  </style>
   <defs>
-    <linearGradient id="b602sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFD49A"/>
-      <stop offset="55%" stop-color="#E89060"/>
-      <stop offset="100%" stop-color="#5A8AB8"/>
-    </linearGradient>
-    <linearGradient id="b602stone" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#D8B888"/>
-      <stop offset="100%" stop-color="#A88858"/>
-    </linearGradient>
-    <linearGradient id="b602bay" x1="0" y1="0" x2="0" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#6AAACE"/>
-      <stop offset="100%" stop-color="#2E5A82"/>
-    </linearGradient>
-    <radialGradient id="b602glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
-    </radialGradient>
-    <style>
-      .b602flag { animation: b602flag 3s ease-in-out infinite; transform-origin: left center; transform-box: fill-box; }
-      @keyframes b602flag { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(0.9); } }
-      .b602ripple { animation: b602ripple 5s linear infinite; }
-      @keyframes b602ripple { 0% { transform: translateX(0); } 100% { transform: translateX(-25px); } }
-      .b602flick { animation: b602flick 1.2s ease-in-out infinite; transform-origin: center bottom; transform-box: fill-box; }
-      @keyframes b602flick { 0%,100% { transform: scale(1) rotate(-2deg); opacity: 0.95; } 50% { transform: scale(1.1) rotate(2deg); opacity: 0.7; } }
-      .b602glow { animation: b602glow 4s ease-in-out infinite; }
-      @keyframes b602glow { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-    </style>
+    <linearGradient id="h602sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3F6E"/><stop offset=".45" stop-color="#C98A8A"/><stop offset=".8" stop-color="#F6C98A"/><stop offset="1" stop-color="#FFE3B0"/></linearGradient>
+    <linearGradient id="h602sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9B788"/><stop offset=".25" stop-color="#7FA3B8"/><stop offset="1" stop-color="#3B6E8A"/></linearGradient>
+    <radialGradient id="h602glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4C8" stop-opacity=".95"/><stop offset=".4" stop-color="#FFD27A" stop-opacity=".55"/><stop offset="1" stop-color="#FFB85A" stop-opacity="0"/></radialGradient>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="180" fill="url(#b602sky)"/>
-
-  <!-- Sunset glow (opacity-only — safe) -->
-  <g class="b602glow">
-    <circle cx="460" cy="105" r="100" fill="url(#b602glow)"/>
+  <rect width="920" height="200" fill="url(#h602sky)"/>
+  <!-- sun rising over the ocean -->
+  <circle cx="790" cy="112" r="120" fill="url(#h602glow)"/>
+  <g class="h602-sun"><circle cx="790" cy="114" r="26" fill="#FFF1C2"/></g>
+  <rect y="112" width="920" height="88" fill="url(#h602sea)"/>
+  <path d="M760,116 L820,116 L806,200 L774,200Z" fill="#FFE8A8" opacity=".18"/>
+  <g class="h602-wv" stroke="#FFF1D0" stroke-opacity=".55" stroke-width="1.4" fill="none">
+    <path d="M0,134 q14,-4 28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0"/>
   </g>
-
-  <!-- Distant ship in bay -->
-  <g transform="translate(120 130)" opacity="0.7">
-    <rect x="0" y="20" width="36" height="6" rx="2" fill="#3A2510"/>
-    <line x1="6" y1="20" x2="6" y2="0" stroke="#3A2510" stroke-width="1.5"/>
-    <path d="M 4 0 L 4 18 L 16 18 Z" fill="#FFF8E8" stroke="#8A6A40" stroke-width="0.6"/>
-    <line x1="22" y1="20" x2="22" y2="3" stroke="#3A2510" stroke-width="1.5"/>
-    <path d="M 20 3 L 20 18 L 32 18 Z" fill="#FFF8E8" stroke="#8A6A40" stroke-width="0.6"/>
+  <g class="h602-wv h602-w2" stroke="#FFF1D0" stroke-opacity=".35" stroke-width="1.2" fill="none">
+    <path d="M10,162 q14,-4 28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0 t28,0"/>
   </g>
-
-  <!-- Distant gulls -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
-    <path d="M 220 60 Q 226 54 232 60 Q 238 54 244 60"/>
-    <path d="M 280 80 Q 285 76 290 80 Q 295 76 300 80"/>
+  <!-- the shore at left with a Timucua town -->
+  <path d="M0,96 Q90,88 180,100 Q240,108 300,124 Q330,132 360,150 L360,200 L0,200Z" fill="#5E7F55"/>
+  <path d="M0,108 Q120,104 220,114 Q290,124 340,150 L360,200 L0,200Z" fill="#3E6438"/>
+  <path d="M0,170 Q160,160 300,176 L330,200 L0,200Z" fill="#E4C98E" opacity=".9"/>
+  <g class="h602-sm"><path d="M128,88 q-6,-12 0,-24 q6,-12 0,-24" stroke="#B8B0A4" stroke-width="5" fill="none" stroke-linecap="round" opacity=".6"/></g>
+  <g class="h602-sm h602-s2"><path d="M206,96 q-6,-10 0,-20 q6,-10 0,-20" stroke="#B8B0A4" stroke-width="4" fill="none" stroke-linecap="round" opacity=".55"/></g>
+  <g fill="#B88A4E" stroke="#6B4423" stroke-width="1.5">
+    <path d="M96,118 L96,104 Q114,80 132,104 L132,118Z"/>
+    <path d="M140,120 L140,108 Q155,88 170,108 L170,120Z"/>
+    <path d="M180,124 L180,110 Q198,88 216,110 L216,124Z"/>
+    <path d="M60,120 L60,110 Q72,94 84,110 L84,120Z"/>
   </g>
-
-  <!-- Bay water -->
-  <rect y="180" width="920" height="35" fill="url(#b602bay)"/>
-  <g class="b602ripple" opacity="0.5" stroke="#FFFFFF" stroke-width="0.8" fill="none">
-    <path d="M 0 192 Q 25 189 50 192 T 100 192 T 150 192 T 200 192 T 250 192 T 300 192 T 350 192 T 400 192 T 450 192 T 500 192 T 550 192 T 600 192 T 650 192 T 700 192 T 750 192 T 800 192 T 850 192 T 900 192 T 950 192"/>
-    <path d="M 0 205 Q 25 202 50 205 T 100 205 T 150 205 T 200 205 T 250 205 T 300 205 T 350 205 T 400 205 T 450 205 T 500 205 T 550 205 T 600 205 T 650 205 T 700 205 T 750 205 T 800 205 T 850 205 T 900 205 T 950 205" opacity="0.7"/>
-  </g>
-
-  <!-- Stone causeway -->
-  <rect y="215" width="920" height="45" fill="#C8A878"/>
-  <g stroke="#8A6A40" stroke-width="0.6" opacity="0.4">
-    <line x1="0" y1="225" x2="920" y2="225"/>
-    <line x1="40" y1="215" x2="40" y2="260"/>
-    <line x1="110" y1="215" x2="110" y2="260"/>
-    <line x1="180" y1="215" x2="180" y2="260"/>
-    <line x1="250" y1="215" x2="250" y2="260"/>
-    <line x1="320" y1="215" x2="320" y2="260"/>
-    <line x1="390" y1="215" x2="390" y2="260"/>
-    <line x1="600" y1="215" x2="600" y2="260"/>
-    <line x1="670" y1="215" x2="670" y2="260"/>
-    <line x1="740" y1="215" x2="740" y2="260"/>
-    <line x1="810" y1="215" x2="810" y2="260"/>
-    <line x1="880" y1="215" x2="880" y2="260"/>
-  </g>
-
-  <!-- ═══ CENTRAL: Castillo de San Marcos ═══ -->
-  <g transform="translate(460 215)">
-    <!-- Star bastion -->
-    <path d="M -150 0 L -150 -50 L -110 -65 L -110 -50 L -70 -50 L -50 -80 L -30 -50 L 30 -50 L 50 -80 L 70 -50 L 110 -50 L 110 -65 L 150 -50 L 150 0 Z"
-          fill="url(#b602stone)" stroke="#6A4520" stroke-width="2"/>
-    <line x1="-110" y1="-50" x2="110" y2="-50" stroke="#6A4520" stroke-width="1" opacity="0.6"/>
-    <!-- Crenellations -->
-    <g fill="url(#b602stone)" stroke="#6A4520" stroke-width="1">
-      <rect x="-148" y="-58" width="10" height="8"/>
-      <rect x="-130" y="-58" width="10" height="8"/>
-      <rect x="-100" y="-58" width="10" height="8"/>
-      <rect x="-85" y="-58" width="10" height="8"/>
-      <rect x="-30" y="-72" width="10" height="22"/>
-      <rect x="-12" y="-72" width="10" height="22"/>
-      <rect x="2" y="-72" width="10" height="22"/>
-      <rect x="20" y="-72" width="10" height="22"/>
-      <rect x="75" y="-58" width="10" height="8"/>
-      <rect x="90" y="-58" width="10" height="8"/>
-      <rect x="120" y="-58" width="10" height="8"/>
-      <rect x="138" y="-58" width="10" height="8"/>
-    </g>
-    <!-- Coquina texture -->
-    <g fill="#8A6A40" opacity="0.4">
-      <circle cx="-120" cy="-30" r="1.2"/><circle cx="-90" cy="-20" r="1"/><circle cx="-60" cy="-35" r="1.2"/>
-      <circle cx="-20" cy="-25" r="1"/><circle cx="20" cy="-30" r="1.2"/><circle cx="60" cy="-20" r="1"/>
-      <circle cx="100" cy="-35" r="1.2"/><circle cx="130" cy="-25" r="1"/><circle cx="-100" cy="-10" r="1"/>
-      <circle cx="-40" cy="-12" r="1.2"/><circle cx="40" cy="-15" r="1"/><circle cx="110" cy="-10" r="1.2"/>
-    </g>
-    <g stroke="#8A6A40" stroke-width="0.5" opacity="0.5">
-      <line x1="-140" y1="-40" x2="-130" y2="-40"/>
-      <line x1="-80" y1="-25" x2="-70" y2="-25"/>
-      <line x1="-10" y1="-35" x2="0" y2="-35"/>
-      <line x1="50" y1="-30" x2="60" y2="-30"/>
-      <line x1="120" y1="-40" x2="130" y2="-40"/>
-    </g>
-    <!-- Gate -->
-    <path d="M -8 0 L -8 -28 Q -8 -40 0 -40 Q 8 -40 8 -28 L 8 0 Z" fill="#3A2510"/>
-    <path d="M -6 0 L -6 -28 Q -6 -38 0 -38 Q 6 -38 6 -28 L 6 0 Z" fill="#5A4530"/>
-    <!-- Embrasures -->
-    <g fill="#3A2510">
-      <rect x="-95" y="-40" width="5" height="10"/>
-      <rect x="-50" y="-40" width="5" height="10"/>
-      <rect x="45" y="-40" width="5" height="10"/>
-      <rect x="90" y="-40" width="5" height="10"/>
-    </g>
-    <!-- Cannon -->
-    <g transform="translate(-115 -60)">
-      <rect x="0" y="0" width="14" height="4" fill="#3A2510"/>
-      <circle cx="2" cy="4" r="3" fill="#3A2510"/>
-      <circle cx="12" cy="4" r="3" fill="#3A2510"/>
-    </g>
-    <!-- Flagpole -->
-    <line x1="0" y1="-72" x2="0" y2="-110" stroke="#3A2510" stroke-width="2"/>
-    <!-- FIX: flag wraps in nested g so scaleX has a bbox to anchor on -->
-    <g transform="translate(0 0)">
-      <g class="b602flag">
-        <rect x="0" y="-108" width="30" height="18" fill="#B83030"/>
-        <rect x="0" y="-100" width="30" height="6" fill="#E8C040"/>
-        <circle cx="15" cy="-97" r="3" fill="#B83030" opacity="0.85"/>
-      </g>
-    </g>
-    <!-- Torches: FIX — nested g pattern. Outer translates, inner flickers -->
-    <g transform="translate(-15 -8)">
-      <rect x="0" y="0" width="2" height="10" fill="#3A2510"/>
-      <g transform="translate(1 -2)">
-        <g class="b602flick">
-          <ellipse cx="0" cy="0" rx="3" ry="6" fill="#FFB060"/>
-        </g>
-      </g>
-      <g transform="translate(1 -2)">
-        <g class="b602flick" style="animation-delay:0.4s;">
-          <ellipse cx="0" cy="0" rx="1.5" ry="3.5" fill="#FFE5A0"/>
-        </g>
-      </g>
-    </g>
-    <g transform="translate(15 -8)">
-      <rect x="0" y="0" width="2" height="10" fill="#3A2510"/>
-      <g transform="translate(1 -2)">
-        <g class="b602flick" style="animation-delay:0.6s;">
-          <ellipse cx="0" cy="0" rx="3" ry="6" fill="#FFB060"/>
-        </g>
-      </g>
-      <g transform="translate(1 -2)">
-        <g class="b602flick" style="animation-delay:1s;">
-          <ellipse cx="0" cy="0" rx="1.5" ry="3.5" fill="#FFE5A0"/>
-        </g>
-      </g>
-    </g>
-  </g>
-
-  <!-- Palmettos -->
-  <g fill="#1A4A3A">
-    <path d="M 220 252 Q 215 220 205 210 Q 218 220 226 215 Q 215 205 224 192 Q 232 210 234 220 Q 242 200 252 200 Q 242 215 236 225 Q 252 215 262 220 Q 246 230 234 238 L 230 255 Z"/>
-    <rect x="228" y="238" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A4A3A">
-    <path d="M 700 252 Q 705 220 715 210 Q 702 220 694 215 Q 705 205 696 192 Q 688 210 686 220 Q 678 200 668 200 Q 678 215 684 225 Q 668 215 658 220 Q 674 230 686 238 L 690 255 Z"/>
-    <rect x="688" y="238" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-
-  <!-- HUD corners -->
-  <g opacity="0.5" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
-  </g>
+  <g fill="#8A5A2E"><rect x="110" y="110" width="8" height="8"/><rect x="151" y="112" width="7" height="8"/><rect x="194" y="114" width="8" height="10"/></g>
+  <g class="h602-pm"><path d="M30,124 Q34,96 28,70" stroke="#5A3A1C" stroke-width="4" fill="none"/><path d="M28,70 q-20,-2 -28,10 M28,70 q20,-6 28,6 M28,70 q-10,-16 -24,-14 M28,70 q12,-14 24,-10" stroke="#24502A" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+  <g class="h602-pm" style="animation-delay:-2s"><path d="M248,128 Q252,104 246,82" stroke="#5A3A1C" stroke-width="3.5" fill="none"/><path d="M246,82 q-18,-2 -24,8 M246,82 q18,-6 24,4 M246,82 q-8,-14 -20,-12 M246,82 q10,-12 20,-8" stroke="#24502A" stroke-width="4.5" fill="none" stroke-linecap="round"/></g>
+  <!-- the point of land at right, with the fort that isn't built yet -->
+  <path d="M560,128 Q620,110 700,116 Q730,120 740,130 Q700,138 640,140 Q590,140 560,128Z" fill="#6E8A5A"/>
+  <path d="M570,132 Q640,124 732,130 Q700,140 640,142 Q596,142 570,132Z" fill="#E4C98E"/>
+  <g transform="translate(657,121) scale(1.25) translate(-657,-121)"><g class="h602-gh" fill="none" stroke="#FFF6D8" stroke-width="1.6" stroke-dasharray="5 4">
+    <path d="M600,126 L616,112 L632,124 L682,124 L698,112 L714,126 L698,132 L616,132Z"/>
+    <path d="M632,124 L632,106 L682,106 L682,124 M616,112 L616,100 L628,94 M698,112 L698,100 L686,94 M628,94 L686,94"/>
+  </g></g>
+  <!-- three Spanish ships at anchor in the inlet -->
+  <g transform="translate(372,112)"><g class="h602-rk">
+    <path d="M0,22 L96,22 L84,40 L12,40Z" fill="#5A3418" stroke="#2E1A08" stroke-width="1.5"/>
+    <rect x="62" y="12" width="30" height="10" fill="#6B4423" stroke="#2E1A08"/>
+    <line x1="34" y1="22" x2="34" y2="-40" stroke="#2E1A08" stroke-width="3"/><line x1="64" y1="12" x2="64" y2="-30" stroke="#2E1A08" stroke-width="2.5"/><line x1="10" y1="22" x2="10" y2="-14" stroke="#2E1A08" stroke-width="2"/>
+    <path d="M22,-34 h24 M22,-14 h24 M54,-24 h20 M54,-6 h20" stroke="#2E1A08" stroke-width="1.5"/>
+    <path d="M24,-33 Q34,-28 44,-33 L44,-16 Q34,-12 24,-16Z" fill="#F1E2C2" opacity=".85"/><path d="M36,-28 h6 M39,-31 v8" stroke="#B3261E" stroke-width="2"/>
+    <path d="M34,-40 l14,4 l-14,4z" fill="#B3261E"/><path d="M98,24 l12,18" stroke="#2E1A08" stroke-width="1.2"/>
+    <circle cx="88" cy="8" r="2.5" fill="#FFD27A"/>
+  </g></g>
+  <g transform="translate(500,122)"><g class="h602-rk h602-r2">
+    <path d="M0,14 L60,14 L52,26 L8,26Z" fill="#5A3418" stroke="#2E1A08" stroke-width="1.2"/>
+    <line x1="24" y1="14" x2="24" y2="-26" stroke="#2E1A08" stroke-width="2.4"/><line x1="44" y1="14" x2="44" y2="-16" stroke="#2E1A08" stroke-width="2"/>
+    <path d="M16,-22 h18 M16,-8 h18" stroke="#2E1A08" stroke-width="1.3"/>
+    <path d="M24,-26 l10,3 l-10,3z" fill="#B3261E"/>
+  </g></g>
+  <g transform="translate(300,128)"><g class="h602-rk h602-r3">
+    <path d="M0,10 L40,10 L34,18 L6,18Z" fill="#5A3418" stroke="#2E1A08" stroke-width="1"/>
+    <line x1="18" y1="10" x2="18" y2="-18" stroke="#2E1A08" stroke-width="2"/><path d="M12,-12 h12" stroke="#2E1A08" stroke-width="1.2"/>
+  </g></g>
+  <!-- birds -->
+  <g fill="none" stroke="#2B2B3A" stroke-width="1.6" stroke-linecap="round" opacity=".6"><path d="M420,40 q6,-5 11,0 q5,-5 11,0"/><path d="M452,54 q5,-4 9,0 q4,-4 9,0"/><path d="M640,46 q5,-4 9,0 q4,-4 9,0"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3599,5 +4346,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
