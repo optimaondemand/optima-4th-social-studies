@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -841,6 +841,7 @@
       else if(kind==='slide') noise(.4,500,.7,.16,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.7+.3*Math.random()); });
       else if(kind==='brush') noise(.22,3400,.5,.1,function(p){ return Math.max(0,Math.sin(p*Math.PI))*(.6+.4*Math.random()); });
       else if(kind==='door'){ tone(196,.5,.07,'triangle',150); noise(.35,700,1.4,.08,function(p){ return Math.max(0,Math.sin(p*Math.PI)); }); }
+      else if(kind==='bell'){ [392,392*2.01,392*3.02].forEach(function(f,i){ tone(f,1.6-i*.35,.12/(i+1),'sine'); }); }
       else if(kind==='paper') noise(.3,2600,.6,.14,function(p){ return Math.max(0,1-p)*(.4+.6*Math.random()); });
       else if(kind==='win') [523,659,784].forEach(function(f,i){ setTimeout(function(){ chime(f); },i*180); });
     }catch(e){} }
@@ -2262,6 +2263,216 @@
     paint(); return {done:done};
   };
 
+  /* ---- Scene 1 · Mission storehouse (4.06.04): two baskets. Put each food or animal in the basket it belongs in
+     (tap it, then a basket, or drag). Each landing adds a line saying where it came from.
+     DATA: baskets [{id,ico,t}], items [{id,ico,t,b,tells,miss}] ---- */
+  MOD.storehouse=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var BK=cfg.baskets||[], IT=cfg.items||[]; S.store=S.store||[];
+    var done=function(){ return IT.length>0&&IT.every(function(x){ return S.store.indexOf(x.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-store');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Mission Storehouse')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-chips spk-sttray"></div><p class="spk-miss"></p>'
+      +'<div class="spk-stbaskets">'+BK.map(function(b){ return '<div class="bk" data-b="'+esc(b.id)+'" role="button" tabindex="0" aria-label="'+esc(b.t)+'"><div class="lab"><span aria-hidden="true">'+(b.ico||'🧺')+'</span> '+esc(b.t)+'</div><svg class="wv" viewBox="0 0 200 70" aria-hidden="true"><path d="M8,8 L192,8 L176,66 L24,66 Z" class="body"/>'+[20,34,48].map(function(y){ return '<path d="M14,'+y+' L186,'+y+'" class="weave"/>'; }).join('')+'<path d="M8,8 L192,8" class="rim"/></svg><div class="in"></div></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-st-ct"></p><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var tray=g.querySelector('.spk-sttray'), miss=g.querySelector('.spk-miss'), sel=null, was=done();
+    shuffle(IT).forEach(function(x){ var c=el('div','spk-chip noimg spk-stitem','<span class="ico">'+(x.ico||'🌽')+'</span><span><b>'+esc(x.t)+'</b></span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.i=x.id; tray.appendChild(c); });
+    function paint(drop){ IT.forEach(function(x){ var on=S.store.indexOf(x.id)>=0, c=tray.querySelector('[data-i="'+x.id+'"]'); c.classList.toggle('spk-hide',on); c.draggable=!on; });
+      BK.forEach(function(b){ var box=g.querySelector('.bk[data-b="'+b.id+'"] .in'), L=IT.filter(function(x){ return x.b===b.id&&S.store.indexOf(x.id)>=0; });
+        box.innerHTML=L.map(function(x){ return '<div class="it'+(drop===x.id?' new':'')+'"><span class="ico" aria-hidden="true">'+(x.ico||'')+'</span><b>'+esc(x.t)+'.</b> '+esc(x.tells||'')+'</div>'; }).join('');
+        if(drop&&L.some(function(x){ return x.id===drop; })){ var bk=g.querySelector('.bk[data-b="'+b.id+'"]'); bk.classList.remove('bump'); void bk.offsetWidth; bk.classList.add('bump'); } });
+      var d=done(); g.querySelector('.spk-st-ct').innerHTML=d?'':'<b>'+S.store.length+' of '+IT.length+'</b> '+esc(cfg.countT||'in the baskets.');
+      if(d&&!was) setTimeout(function(){ sfx('win'); },500); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    function arm(on){ g.querySelectorAll('.bk').forEach(function(b){ b.classList.toggle('armed',on); b.classList.remove('over'); }); }
+    function attempt(chip,bk){ if(!chip||!bk) return; var x=find(IT,chip.dataset.i); if(!x||S.store.indexOf(x.id)>=0) return; arm(false);
+      if(x.b===bk.dataset.b){ S.store.push(x.id); save(); sel=null; miss.textContent=''; sfx(x.sound||'plant'); paint(x.id); refreshFile(); refreshVoice(); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=x.miss||''; miss.textContent=m; missBeat(m); } }
+    tray.addEventListener('click',function(e){ var c=e.target.closest('.spk-stitem'); if(!c) return; ack('open'); tray.querySelectorAll('.spk-stitem').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    tray.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-stitem'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    tray.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-stitem'); if(!c||!c.draggable){ e.preventDefault(); return; } ack('open'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    tray.addEventListener('dragend',function(){ arm(false); });
+    var bks=g.querySelector('.spk-stbaskets');
+    bks.addEventListener('click',function(e){ var b=e.target.closest('.bk'); if(!b) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a food or animal first, then tap its basket.'; return; } attempt(sel,b); });
+    bks.addEventListener('keydown',function(e){ var b=e.target.closest('.bk'); if(b&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); b.click(); } });
+    bks.addEventListener('dragover',function(e){ var b=e.target.closest('.bk'); g.querySelectorAll('.bk').forEach(function(x){ x.classList.toggle('over',x===b); }); if(b){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    bks.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.bk')); });
+    paint();
+    return {done:done, journal:function(e,NA){ var L=BK.map(function(b){ var it=IT.filter(function(x){ return x.b===b.id&&S.store.indexOf(x.id)>=0; }); return it.length?'<p class="a"><b>'+e(b.t)+':</b> '+e(it.map(function(x){ return x.t; }).join(', '))+'</p>':''; }).join(''); return L||NA; }};
+  };
+
+  /* ---- Explore reading · Move the sun (4.06.04): a sky over a mission with an arc of stops. Tap the next glowing
+     stop (or drag the sun along the arc) and the sun moves there; the sky changes and that part of the reading
+     opens. A stop with bell:true rings the bell. A stop with away:true sits off the arc, on the road.
+     DATA: paras [{id,match}], stops [{id,t,short,at (0..1 along the arc) | away:true, sky, bell, paras:[]}] ---- */
+  MOD.sunpath=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var ST=cfg.stops||[]; if(S.sun==null) S.sun=0;
+    var done=function(){ return ST.length>0&&S.sun>=ST.length; };
+    var CX=200, CY=150, RX=165, RY=118;
+    function pt(at){ var a=Math.PI*(1-at); return [CX+RX*Math.cos(a), CY-RY*Math.sin(a)]; }
+    ST.forEach(function(s){ var p=s.away?[300,186]:pt(s.at); s._x=p[0]; s._y=p[1]; });
+    var w=el('div','spk spk-sun');
+    w.innerHTML='<div class="spk-sunsky"><svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'The sky over a mission, from sunrise to sunset')+'">'
+      +'<rect width="400" height="200" class="sky"/><path d="M'+(CX-RX)+','+CY+' A'+RX+','+RY+' 0 0 1 '+(CX+RX)+','+CY+'" class="arc"/>'
+      +'<g class="ground"><rect y="150" width="400" height="50" fill="#9DAE6C"/><g fill="none" stroke="#7E8F4E" stroke-width="1.4">'+[160,170,180,190].map(function(y){ return '<path d="M0,'+y+' Q100,'+(y-4)+' 200,'+y+' T400,'+y+'"/>'; }).join('')+'</g>'
+      +'<path d="M120,150 L150,112 Q160,106 170,112 L200,150 Z" fill="#A8956A" stroke="#6E5E3E"/><rect x="236" y="120" width="56" height="30" fill="#EDE4CE" stroke="#7A6A4A"/><path d="M232,122 L264,104 L296,122 Z" fill="#8E6A3E"/><g class="belltower"><rect x="300" y="104" width="14" height="46" fill="#D8CBA8" stroke="#7A6A4A"/><path class="bell" d="M303,112 q4,-6 8,0 l1,6 h-10 z" fill="#B8862E"/></g>'
+      +'<path class="road" d="M262,151 C276,164 284,180 300,200" fill="none" stroke="#C9B07A" stroke-width="6" stroke-linecap="round"/></g>'
+      +'<g class="stops">'+ST.map(function(s,i){ return '<g class="stop'+(s.away?' away':'')+'" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc((i+1)+'. '+s.t)+'"><circle cx="'+s._x.toFixed(1)+'" cy="'+s._y.toFixed(1)+'" r="9" class="dot"/><text x="'+s._x.toFixed(1)+'" y="'+(s._y+(s.away?4:22)).toFixed(1)+'" text-anchor="middle" class="lab">'+esc(s.short||s.t)+'</text></g>'; }).join('')+'</g>'
+      +'<g class="sunw"><g class="sun"><circle r="15" class="glow"/><circle r="9" class="core"/></g></g>'
+      +'<g class="rings" aria-hidden="true"><circle cx="307" cy="112" r="8"/><circle cx="307" cy="112" r="8"/></g>'
+      +'</svg></div><p class="spk-ys-ct spk-sunct"></p><div class="spk-sunread"></div>';
+    before(first,w);
+    var list=w.querySelector('.spk-sunread'), boxes={}, svg=w.querySelector('svg'), sun=svg.querySelector('.sunw');
+    ST.forEach(function(s,i){ var b=el('div','spk-sunp'); b.innerHTML='<div class="tab"><b>'+esc(s.t)+'</b></div>'; list.appendChild(b); (s.paras||[]).forEach(function(pid){ var p=found[pid]; if(p) move(p,function(n){ b.appendChild(n); }); }); boxes[i]=b; });
+    function place(n){ var at=n===0?-1:n-1; var s=at<0?null:ST[at]; var x,y; if(!s){ var p=pt(0); x=p[0]; y=p[1]+26; } else if(s.away){ var q=pt(cfg.awayAt||0.72); x=q[0]; y=q[1]; } else { x=s._x; y=s._y; }
+      sun.setAttribute('transform','translate('+x.toFixed(1)+','+y.toFixed(1)+')'); var sky=s&&s.sky?s.sky:(cfg.nightSky||'#2F3B5C'); svg.querySelector('.sky').style.fill=sky; w.classList.toggle('night',!s); w.classList.toggle('road',!!(s&&s.away)); }
+    function paint(anim){ var n=S.sun;
+      svg.querySelectorAll('.stop').forEach(function(g2){ var i=+g2.dataset.i; g2.classList.toggle('been',i<n); g2.classList.toggle('next',i===n); });
+      ST.forEach(function(s,i){ var b=boxes[i]; b.classList.toggle('on',i<n); if(anim&&i===n-1){ b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop'); } });
+      place(n); w.classList.toggle('all',done());
+      w.querySelector('.spk-sunct').innerHTML=done()?'<b>'+esc(cfg.allT||'You followed the whole day.')+'</b>':(n===0?esc(cfg.startT||'Tap the glowing spot to move the sun.'):'<b>'+n+' of '+ST.length+'</b> '+esc(cfg.countT||'parts of the day. Read this part, then move the sun again.'));
+      var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function go(i){ if(i!==S.sun||done()) return; ack('explore'); S.sun++; save(); var s=ST[i]; if(s.bell){ sfx('bell'); w.classList.remove('ring'); void w.offsetWidth; w.classList.add('ring'); } else sfx(s.away?'paper':'click'); paint(true); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },700);
+      var nb=boxes[i]; if(nb&&nb.scrollIntoView&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ setTimeout(function(){ try{ nb.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },200); } }
+    svg.addEventListener('click',function(e){ var s=e.target.closest('.stop'); if(!s) return; var i=+s.dataset.i; if(i<S.sun){ try{ boxes[i].scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(err){} return; } if(i>S.sun){ w.querySelector('.spk-sunct').innerHTML=esc(cfg.orderT||'Follow the day in order: tap the spot that is glowing.'); return; } go(i); });
+    svg.addEventListener('keydown',function(e){ var s=e.target.closest('.stop'); if(s&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); s.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
+    /* drag the sun: press on the sun and pull it toward the next spot */
+    var drag=false; sun.addEventListener('pointerdown',function(e){ drag=true; e.preventDefault(); });
+    window.addEventListener('pointerup',function(e){ if(!drag) return; drag=false; if(done()) return; var r=svg.getBoundingClientRect(), x=(e.clientX-r.left)/r.width*400, y=(e.clientY-r.top)/r.height*200, s=ST[S.sun]; if(Math.abs(x-s._x)<40&&Math.abs(y-s._y)<40) go(S.sun); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(){ return '<p class="a">Parts of the day followed: '+Math.min(S.sun,ST.length)+' of '+ST.length+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · Shadow clock (4.06.04): a pole in the plaza. Put each event where the pole's shadow
+     would be at that time (tap the event, then a shadow spot, or drag). Then pick the "because" sentences that
+     are real causes. Also needs the source labels and the reading. DATA: spots [{id,t,len,dir:'w'|'e',sun}],
+     events [{id,t,ico,spot,miss}], checks [{t,ok,why,miss}], need (true picks needed) ---- */
+  MOD.shadowclock=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var SP=cfg.spots||[], EV=cfg.events||[], CK=cfg.checks||[], NEED=cfg.need||2; S.shadow=S.shadow||{put:[],pick:[]};
+    var placed=function(){ return EV.length>0&&EV.every(function(x){ return S.shadow.put.indexOf(x.id)>=0; }); };
+    var picked=function(){ var t=S.shadow.pick.filter(function(i){ return CK[i]&&CK[i].ok; }).length, f=S.shadow.pick.filter(function(i){ return CK[i]&&!CK[i].ok; }).length; return t>=NEED&&f===0; };
+    var done=function(){ return placed()&&picked()&&(!R.source||R.source.done())&&(!R.reading||R.reading.done()); };
+    var PX=200, PY=150;
+    SP.forEach(function(s){ var L=s.len, dx=s.dir==='w'?-L:L; s._x2=PX+dx; s._y2=PY+L*.18; });
+    var svg='<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A pole in the plaza and its shadow')+'">'
+      +'<rect width="400" height="200" class="sky"/><rect y="118" width="400" height="82" fill="#E8DDB2"/><ellipse cx="200" cy="158" rx="190" ry="34" fill="#F1E8C8" stroke="#C9B486" stroke-dasharray="4 3"/>'
+      +'<text x="18" y="112" class="cmp">W</text><text x="376" y="112" class="cmp">E</text>'
+      +'<g class="sunv"><circle r="12" class="core"/></g>'
+      +'<rect x="197" y="70" width="6" height="80" rx="2" fill="#5A3A18"/><circle cx="200" cy="68" r="5" fill="#8A6A3A"/>'
+      +'<g class="shadows">'+SP.map(function(s){ return '<g class="sh" data-s="'+esc(s.id)+'" role="button" tabindex="0" aria-label="'+esc(s.t)+'"><line x1="'+PX+'" y1="'+PY+'" x2="'+s._x2.toFixed(1)+'" y2="'+s._y2.toFixed(1)+'" class="ghost"/><line x1="'+PX+'" y1="'+PY+'" x2="'+s._x2.toFixed(1)+'" y2="'+s._y2.toFixed(1)+'" class="real"/><circle cx="'+s._x2.toFixed(1)+'" cy="'+s._y2.toFixed(1)+'" r="14" class="tip"/><text x="'+s._x2.toFixed(1)+'" y="'+(s._y2+4).toFixed(1)+'" text-anchor="middle" class="tl"></text></g>'; }).join('')+'</g>'
+      +'</svg>';
+    var g=el('div','spk spk-game spk-shadow');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Shadow Clock')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-shwrap">'+svg+'</div>'
+      +'<div class="spk-chips spk-shevents"></div><p class="spk-miss"></p>'
+      +'<ol class="spk-shorder"></ol>'
+      +'<div class="spk-step sh2 locked"><div class="lab">2 · '+esc(cfg.step2||'Which of these are real causes? Tap each sentence that is true.')+'</div><div class="spk-shchecks">'+CK.map(function(c,i){ return '<button type="button" class="row" data-i="'+i+'"><span class="box" aria-hidden="true"></span><span class="t">'+esc(c.t)+'</span><span class="res"></span></button>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-sh-ct"></p><p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var chips=g.querySelector('.spk-shevents'), miss=g.querySelector('.spk-miss'), sel=null, was=done(), S2=g.querySelector('svg');
+    shuffle(EV).forEach(function(x){ var c=el('div','spk-chip noimg spk-shev','<span class="ico">'+(x.ico||'🔔')+'</span><span>'+esc(x.t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.e=x.id; chips.appendChild(c); });
+    function sunAt(s){ var x=s.dir==='w'?PX+(s.len*1.1):PX-(s.len*1.1); var y=Math.max(18,104-(150-s.len)*0.55); return [Math.max(16,Math.min(384,x)),y]; }
+    function paint(drop){ var P=S.shadow.put;
+      SP.forEach(function(s){ var ev=EV.filter(function(x){ return x.spot===s.id&&P.indexOf(x.id)>=0; })[0], gEl=S2.querySelector('.sh[data-s="'+s.id+'"]'); gEl.classList.toggle('full',!!ev); gEl.querySelector('.tl').textContent=ev?(ev.ico||'✓'):''; if(drop&&ev&&ev.id===drop){ gEl.classList.remove('cast'); void gEl.getBoundingClientRect(); gEl.classList.add('cast'); var p=sunAt(s); S2.querySelector('.sunv').setAttribute('transform','translate('+p[0].toFixed(1)+','+p[1].toFixed(1)+')'); S2.querySelector('.sunv').classList.add('on'); } });
+      chips.querySelectorAll('.spk-shev').forEach(function(c){ var on=P.indexOf(c.dataset.e)>=0; c.classList.toggle('spk-hide',on); c.draggable=!on; });
+      var ord=SP.slice().sort(function(a,b){ return a.order-b.order; }).map(function(s){ var ev=EV.filter(function(x){ return x.spot===s.id&&P.indexOf(x.id)>=0; })[0]; return ev?'<li><b>'+esc(s.t)+':</b> '+esc(ev.t)+'</li>':''; }).join('');
+      g.querySelector('.spk-shorder').innerHTML=ord; g.querySelector('.spk-shorder').classList.toggle('spk-hide',!ord);
+      g.querySelector('.sh2').classList.toggle('locked',!placed());
+      g.querySelectorAll('.spk-shchecks .row').forEach(function(r){ var i=+r.dataset.i, on=S.shadow.pick.indexOf(i)>=0, c=CK[i]; r.classList.toggle('on',on); r.classList.toggle('good',on&&c.ok); r.classList.toggle('bad',on&&!c.ok); r.querySelector('.res').textContent=on?(c.ok?(c.why||'✓'):(c.miss||'')):''; });
+      var gate=''; if(placed()&&picked()&&R.source&&!R.source.done()) gate=cfg.hotT||'Last step: tap every gold number on the drawing above.'; else if(placed()&&picked()&&R.reading&&!R.reading.done()) gate=cfg.readT||'Last step: finish Learn the Story above.';
+      g.querySelector('.spk-si-gate').textContent=gate;
+      var tn=S.shadow.pick.filter(function(i){ return CK[i].ok; }).length;
+      g.querySelector('.spk-sh-ct').innerHTML=!placed()?'<b>'+P.length+' of '+EV.length+'</b> '+esc(cfg.countT||'events on the shadow clock.'):(picked()?'':'<b>'+tn+' of '+NEED+'</b> '+esc(cfg.pickT||'true causes found. Tap a wrong one again to take it back.'));
+      var d=done(); if(d&&!was) setTimeout(function(){ sfx('win'); },400); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    function arm(on){ S2.querySelectorAll('.sh').forEach(function(x){ x.classList.toggle('armed',on&&!x.classList.contains('full')); x.classList.remove('over'); }); }
+    function attempt(chip,sh){ if(!chip||!sh) return; var x=find(EV,chip.dataset.e); if(!x||S.shadow.put.indexOf(x.id)>=0) return; arm(false);
+      if(x.spot===sh.dataset.s){ S.shadow.put.push(x.id); save(); sel=null; miss.textContent=''; sfx('slide'); paint(x.id); refreshFile(); refreshVoice(); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=x.miss||cfg.missT||''; miss.textContent=m; missBeat(m); } }
+    chips.addEventListener('click',function(e){ var c=e.target.closest('.spk-shev'); if(!c) return; ack('explore'); chips.querySelectorAll('.spk-shev').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    chips.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-shev'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    chips.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-shev'); if(!c||!c.draggable){ e.preventDefault(); return; } ack('explore'); sel=c; e.dataTransfer.setData('text/plain',c.dataset.e); e.dataTransfer.effectAllowed='move'; arm(true); });
+    chips.addEventListener('dragend',function(){ arm(false); });
+    S2.addEventListener('click',function(e){ var sh=e.target.closest('.sh'); if(!sh||sh.classList.contains('full')) return; if(!sel){ miss.textContent=cfg.firstT||'Tap an event first, then tap the shadow that matches its time.'; return; } attempt(sel,sh); });
+    S2.addEventListener('keydown',function(e){ var sh=e.target.closest('.sh'); if(sh&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); sh.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
+    S2.addEventListener('dragover',function(e){ var sh=e.target.closest('.sh'); S2.querySelectorAll('.sh').forEach(function(x){ x.classList.toggle('over',x===sh); }); if(sh&&!sh.classList.contains('full')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    S2.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.sh')); });
+    g.querySelector('.spk-shchecks').addEventListener('click',function(e){ var r=e.target.closest('.row'); if(!r||!placed()) return; ack('explore'); var i=+r.dataset.i, k=S.shadow.pick.indexOf(i); if(k>=0) S.shadow.pick.splice(k,1); else { S.shadow.pick.push(i); if(CK[i].ok) sfx('clink'); else { sfx('click'); r.classList.add('shake'); setTimeout(function(){ r.classList.remove('shake'); },450); missBeat(CK[i].miss||''); } } save(); paint(); refreshFile(); refreshVoice(); });
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, journal:function(e,NA){ var P=SP.slice().sort(function(a,b){ return a.order-b.order; }).map(function(s){ var ev=EV.filter(function(x){ return x.spot===s.id&&S.shadow.put.indexOf(x.id)>=0; })[0]; return ev?s.t+': '+ev.t:null; }).filter(Boolean); var C=S.shadow.pick.filter(function(i){ return CK[i].ok; }).map(function(i){ return CK[i].t; }); return P.length?'<p class="a"><b>In time order:</b> '+e(P.join(' → '))+'</p>'+(C.length?'<p class="a"><b>Real causes:</b> '+e(C.join(' · '))+'</p>':''):NA; }};
+  };
+
+  /* ---- Planner · Comic strip (4.06.04): three panels (morning / midday / evening). Pick a detail for each and
+     the panel draws itself; then pick a "because" that links two panels. Notes only — the student writes.
+     DATA: panels [{id,lab,q,sky,ico,opts:[{id,t}]}], link {lab,q,opts:[{id,t}]} ---- */
+  MOD.comicstrip=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var PN=cfg.panels||[], LK=cfg.link||{opts:[]}; S.comic=S.comic||{}; var was=null;
+    var done=function(){ return PN.length>0&&PN.every(function(p){ return !!S.comic[p.id]; })&&!!S.comic.link; };
+    var val=function(id){ if(id==='link'){ var o=find(LK.opts,S.comic.link); return o?o.t:''; } var p=find(PN,id), o2=p&&find(p.opts,S.comic[id]); return o2?o2.t:''; };
+    var b=el('div','spk spk-builder spk-comic');
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-cmstrip">'+PN.map(function(p,i){ return '<div class="panel" data-p="'+esc(p.id)+'" style="--sky:'+esc(p.sky||'#CFE6F0')+'"><span class="n">'+(i+1)+'</span><span class="pl">'+esc(p.lab)+'</span><span class="ico" aria-hidden="true">'+(p.ico||'')+'</span><span class="cap"></span></div>'+(i<PN.length-1?'<span class="arrow" data-a="'+i+'" aria-hidden="true">→</span>':''); }).join('')+'</div>'
+      +PN.map(function(p,i){ return '<div class="spk-step" data-r="'+esc(p.id)+'"><div class="lab">🖼️ '+(i+1)+' · '+esc(p.q||p.lab)+'</div><div class="spk-opts">'+(p.opts||[]).map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'; }).join('')
+      +'<div class="spk-step" data-r="link"><div class="lab">🔗 '+(PN.length+1)+' · '+esc(LK.q||LK.lab||'Pick a because')+'</div><div class="spk-opts">'+(LK.opts||[]).map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'
+      +'<p class="spk-chain-done">'+esc(cfg.doneT||'Your comic strip is done. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ return PN.filter(function(p){ return S.comic[p.id]; }).map(function(p){ return [p.lab,val(p.id)]; }).concat(S.comic.link?[[LK.lab||'Because',val('link')]]:[]); }
+    function paint(newp){ PN.concat([{id:'link'}]).forEach(function(r){ b.querySelectorAll('.spk-step[data-r="'+r.id+'"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===S.comic[r.id]); }); });
+      PN.forEach(function(p){ var pe=b.querySelector('.panel[data-p="'+p.id+'"]'); pe.classList.toggle('full',!!S.comic[p.id]); pe.querySelector('.cap').textContent=val(p.id); if(newp===p.id){ pe.classList.remove('draw'); void pe.offsetWidth; pe.classList.add('draw'); } });
+      b.querySelector('.spk-cmstrip').classList.toggle('linked',!!S.comic.link);
+      var all=done(); if(all&&was===false){ sfx('paper'); setTimeout(function(){ sfx('win'); },300); } was=all; b.classList.toggle('done',all);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var r=o.closest('.spk-step').dataset.r; S.comic[r]=o.dataset.v; save(); sfx('click'); paint(r); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Wind the clock (4.06.04, chron = time): a clock face with a word at 12, 3, 6 and 9. Tap each
+     word to hear it (g4ss-<lesson>-chron-<n>.mp3 when it exists). Then put each meaning on its word; the hand
+     sweeps to that hour with a tick, and when all are set the clock chimes. ---- */
+  MOD.windclock=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[]; S.wc=S.wc||{heard:[],up:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&S.wc.up.length===W.length; };
+    var POS=[[50,10],[90,50],[50,90],[10,50]];
+    var ticks=''; for(var t=0;t<12;t++){ var a=t/12*Math.PI*2; ticks+='<line x1="'+(100+70*Math.sin(a)).toFixed(1)+'" y1="'+(100-70*Math.cos(a)).toFixed(1)+'" x2="'+(100+78*Math.sin(a)).toFixed(1)+'" y2="'+(100-78*Math.cos(a)).toFixed(1)+'" class="tk'+(t%3===0?' big':'')+'"/>'; }
+    var g=el('div','spk spk-wclock');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Wind the Clock')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-wcwrap"><svg class="face" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="86" class="rim"/><circle cx="100" cy="100" r="80" class="dial"/>'+ticks+'<g class="hand"><line x1="100" y1="100" x2="100" y2="38" class="h"/></g><circle cx="100" cy="100" r="5" class="pin"/></svg>'
+      +W.map(function(x,i){ var p=POS[i%4]; return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" style="left:'+p[0]+'%;top:'+p[1]+'%" aria-label="'+esc(x.w)+'"><span class="w">'+(x.root?esc(x.w).replace(new RegExp(esc(x.root),'i'),function(m){ return '<b>'+m+'</b>'; }):esc(x.w))+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-wc-ct"></p><div class="spk-chips spk-wcmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-wcmeans'), miss=g.querySelector('.spk-miss'), wrap=g.querySelector('.spk-wcwrap'), hand=g.querySelector('.hand'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-chron-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-wcmean','<span class="ico">⏱️</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.wc.heard.length===W.length, n=S.wc.up.length;
+      wrap.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.wc.heard.indexOf(i)>=0, u=S.wc.up.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      hand.style.transform='rotate('+(n*90)+'deg)';
+      g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-wcmean').forEach(function(t){ var f=S.wc.up.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-wc-ct').innerHTML=!allH?'<b>'+S.wc.heard.length+' of '+W.length+'</b> '+esc(cfg.hearT||'words heard. Tap each word on the clock to hear it.'):(done()?'':'<b>'+n+' of '+W.length+'</b> '+esc(cfg.upT||'hours set. Put each meaning on its word.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wrap.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.wc.up.indexOf(i)>=0||S.wc.heard.length<W.length) return; arm(false);
+      if(+c.dataset.i===i){ S.wc.up.push(i); save(); sel=null; miss.textContent=''; sfx('clink'); paint(i); if(done()) setTimeout(function(){ sfx('bell'); setTimeout(function(){ sfx('win'); },600); },500); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wrap.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.wc.heard.length===W.length){ attempt(sel,c); return; }
+      if(S.wc.heard.indexOf(i)<0){ S.wc.heard.push(i); save(); sfx('click'); } say(i); paint(i); });
+    wrap.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-wcmean'); if(!t) return; if(S.wc.heard.length<W.length){ miss.textContent=cfg.hearFirstT||'Tap every word on the clock first, so you hear each one.'; return; } means.querySelectorAll('.spk-wcmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-wcmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-wcmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wrap.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wrap.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wrap.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -2354,7 +2565,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow'); return d&&[d,'before']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };

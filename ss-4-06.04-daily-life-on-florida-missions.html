@@ -1875,6 +1875,922 @@ body.tx-active .tx-toggle-label {
 .tx-blurb strong { color: #BF3F3F; }
 
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.04",
+ "title": "Daily Life on Florida Missions",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🧺",
+   "☀️",
+   "🖼️"
+  ]
+ },
+ "prevFile": "Mission San Luis de Talimali",
+ "connector": "Last time we explored Mission San Luis, the town two peoples shared. Today we follow one ordinary day there, from the first bell to the last.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Storehouse",
+   "t": "Fill the storehouse",
+   "why": "Sort foods and animals into two baskets: grown here first, or brought by the Spanish."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Follow the sun",
+   "why": "Move the sun through one mission day. Then use a shadow clock to put the day in sequence (time order) and find a cause and effect: one thing that made another thing happen."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Draw the day",
+   "why": "Answer three questions. Then write 3 to 5 sentences: one mission day in order, with one cause and effect."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This room is full of baskets and bells!",
+  "opening": [
+   "This file is about daily life at a Florida mission: what one ordinary day looked like, from the morning bell to the evening bell.",
+   "Start in the Storehouse tab (tab 1). Scroll down to the storehouse under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the storehouse",
+      "go": true,
+      "reply": "Tap a food or animal, then tap its basket. Or drag it there."
+     },
+     {
+      "t": "What’s a storehouse?",
+      "reply": "A building where a town keeps its food, so there’s enough to eat later."
+     },
+     {
+      "t": "Where are you now?",
+      "reply": "Still in the mission wing. The rooms are getting brighter, so I think we’re close."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Move the sun across the sky to follow one mission day."
+     },
+     {
+      "t": "Why bring animals?",
+      "reply": "Cattle, pigs, and chickens gave the Spanish the meat, milk, and eggs they were used to back home."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Can shadows tell time?",
+      "reply": "Yes! People have used shadows to tell time for thousands of years. A sundial is a shadow clock."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about what changed in Florida after about 200 years of Spanish rule."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You did it! Both baskets are full: foods grown here first, and foods the Spanish brought. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Nice work! You followed the sun through a whole mission day and matched every event to its shadow. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then write 3 to 5 sentences that tell one mission day in order and name one cause and effect. Make your comic strip first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "You did it! This file is finished.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Perseverance means keeping going through hard work, day after day. Look for it in the farmers, the mothers, the friars (Spanish priests), and the men sent to carry loads.",
+ "scene1": {
+  "type": "storehouse",
+  "kicker": "Mission Storehouse",
+  "h": "Which foods were here first?",
+  "voice": "Tap a food or animal, then tap its basket. Or drag it. One basket is for foods grown here before the Spanish came. The other is for what the Spanish brought.",
+  "baskets": [
+   {
+    "id": "ap",
+    "ico": "🌽",
+    "t": "Grown here before the Spanish"
+   },
+   {
+    "id": "sp",
+    "ico": "⛵",
+    "t": "Brought by the Spanish"
+   }
+  ],
+  "items": [
+   {
+    "id": "corn",
+    "ico": "🌽",
+    "t": "Corn",
+    "b": "ap",
+    "tells": "Apalachee farmers had grown corn here for hundreds of years.",
+    "miss": "Corn grew here long before the Spanish came. It’s one of the “three sisters.”"
+   },
+   {
+    "id": "beans",
+    "ico": "🫘",
+    "t": "Beans",
+    "b": "ap",
+    "tells": "Beans climbed up the corn stalks as they grew.",
+    "miss": "Beans are one of the “three sisters,” grown here for hundreds of years."
+   },
+   {
+    "id": "squash",
+    "ico": "🎃",
+    "t": "Squash",
+    "b": "ap",
+    "tells": "Squash spread its big leaves over the ground and kept weeds down.",
+    "miss": "Squash is one of the “three sisters,” grown here for hundreds of years."
+   },
+   {
+    "id": "deer",
+    "ico": "🦌",
+    "t": "Deer",
+    "b": "ap",
+    "tells": "Apalachee hunters hunted deer for meat and skins.",
+    "miss": "Deer lived in Florida’s woods long before any ship came. Hunters used them for meat and skins."
+   },
+   {
+    "id": "turkey",
+    "ico": "🦃",
+    "t": "Wild turkey",
+    "b": "ap",
+    "tells": "Wild turkeys lived in Florida’s forests long before any ship came.",
+    "miss": "Wild turkeys are from North America. They were here first."
+   },
+   {
+    "id": "wheat",
+    "ico": "🌾",
+    "t": "Wheat",
+    "b": "sp",
+    "tells": "Wheat came from Europe. Bishop Calderón saw Apalachee farmers growing it in 1675.",
+    "miss": "Wheat came from Europe on Spanish ships. The Apalachee had never grown it before."
+   },
+   {
+    "id": "melon",
+    "ico": "🍉",
+    "t": "Watermelon",
+    "b": "sp",
+    "tells": "Watermelon seeds came over on Spanish ships.",
+    "miss": "Watermelon is a new food in this story. It came with the Spanish."
+   },
+   {
+    "id": "peach",
+    "ico": "🍑",
+    "t": "Peaches",
+    "b": "sp",
+    "tells": "Peach pits came with the Spanish, and peach trees spread fast.",
+    "miss": "Peaches came with the Spanish. Then Native farmers spread them far and wide."
+   },
+   {
+    "id": "cow",
+    "ico": "🐄",
+    "t": "Cattle",
+    "b": "sp",
+    "sound": "thud",
+    "tells": "Spanish cattle grazed near the missions. Sometimes they trampled Apalachee fields.",
+    "miss": "There were no cattle here before the Spanish. They came on ships."
+   },
+   {
+    "id": "pig",
+    "ico": "🐖",
+    "t": "Pigs",
+    "b": "sp",
+    "sound": "thud",
+    "tells": "Pigs gave the Spanish the pork they were used to back home.",
+    "miss": "Pigs came on Spanish ships. There were none here before."
+   },
+   {
+    "id": "hen",
+    "ico": "🐔",
+    "t": "Chickens",
+    "b": "sp",
+    "tells": "Chickens came on Spanish ships and gave eggs and meat.",
+    "miss": "Chickens came on Spanish ships. There were none here before."
+   }
+  ],
+  "countT": "in the baskets.",
+  "win": "🧺 <b>The storehouse is full!</b> A mission meal could hold both histories: old Apalachee foods and new Spanish ones.",
+  "why": {
+   "icon": "🧺",
+   "q": "Why a storehouse?",
+   "t": "A mission had to feed hundreds of people every day, so the harvest was kept in a storehouse. In 1675, Bishop Calderón wrote that Apalachee towns had a granary (a storehouse for grain) where they kept their wheat, corn, and other crops. That’s why you fill a storehouse."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "sunpath",
+   "activity": "A Wednesday Morning at a Florida Mission",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^Start with the sound"
+    },
+    {
+     "id": "p1",
+     "match": "^Morning · The fields"
+    },
+    {
+     "id": "p2",
+     "match": "^Morning · Around"
+    },
+    {
+     "id": "p3",
+     "match": "^Midday"
+    },
+    {
+     "id": "p4",
+     "match": "^Some weeks"
+    },
+    {
+     "id": "p5",
+     "match": "^Sunset"
+    }
+   ],
+   "stops": [
+    {
+     "id": "s0",
+     "t": "Before sunrise · The bell",
+     "short": "Dawn",
+     "at": 0.03,
+     "bell": true,
+     "sky": "#E9A97A",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "s1",
+     "t": "Morning · The fields",
+     "short": "Morning",
+     "at": 0.22,
+     "sky": "#F2D49A",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "s2",
+     "t": "Morning · Around the houses",
+     "short": "Later",
+     "at": 0.37,
+     "sky": "#BFE0EE",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "s3",
+     "t": "Midday · The plaza",
+     "short": "Midday",
+     "at": 0.5,
+     "bell": true,
+     "sky": "#9FD3EC",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "s4",
+     "t": "Meanwhile, far away · Some weeks",
+     "short": "Far away",
+     "away": true,
+     "sky": "#C9B9A2",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "s5",
+     "t": "Sunset · The bell again",
+     "short": "Sunset",
+     "at": 0.97,
+     "bell": true,
+     "sky": "#D9876A",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "alt": "The sky over a mission, with the sun's path from sunrise to sunset, a Council House, a church, a bell tower, and a road",
+   "startT": "Tap the glowing spot to bring the sun up.",
+   "countT": "parts of the day. Read this part, then tap the next glowing spot.",
+   "allT": "You followed the whole day, from the first bell to the last.",
+   "orderT": "Follow the day in order: tap the spot that is glowing.",
+   "why": {
+    "icon": "☀️",
+    "q": "Why move the sun?",
+    "t": "There were almost no clocks at the mission. People knew the time from the sun and from the church bell, which rang at sunrise, midday, and sunset. That’s why you move the sun to move through the day."
+   }
+  },
+  "evidence": {
+   "type": "shadowclock",
+   "kicker": "Shadow Clock",
+   "h": "Put the day in order with a shadow",
+   "voice": "Tap an event, then tap the shadow that matches its time of day. Or drag it. Then find the real causes.",
+   "alt": "A pole in the plaza with four faint shadows: long to the west, medium to the west, very short, and long to the east",
+   "spots": [
+    {
+     "id": "dawn",
+     "t": "Sunrise",
+     "len": 150,
+     "dir": "w",
+     "order": 1
+    },
+    {
+     "id": "morn",
+     "t": "Morning",
+     "len": 82,
+     "dir": "w",
+     "order": 2
+    },
+    {
+     "id": "noon",
+     "t": "Midday",
+     "len": 30,
+     "dir": "e",
+     "order": 3
+    },
+    {
+     "id": "dusk",
+     "t": "Sunset",
+     "len": 150,
+     "dir": "e",
+     "order": 4
+    }
+   ],
+   "events": [
+    {
+     "id": "e1",
+     "ico": "🔔",
+     "t": "The bell rings, and everyone gathers for morning prayer.",
+     "spot": "dawn",
+     "miss": "This happened at the very start of the day, when the sun was just coming up in the east. Shadows are longest then, and they point west."
+    },
+    {
+     "id": "e2",
+     "ico": "🌽",
+     "t": "Farmers walk out to the cornfields with hoes.",
+     "spot": "morn",
+     "miss": "This happened after morning prayer, when the sun was higher. The shadow is shorter, but it still points west."
+    },
+    {
+     "id": "e3",
+     "ico": "🍲",
+     "t": "The bell rings, and people share the midday meal.",
+     "spot": "noon",
+     "miss": "At midday the sun is high overhead, so the shadow is very short."
+    },
+    {
+     "id": "e4",
+     "ico": "🌅",
+     "t": "The bell rings for evening prayer.",
+     "spot": "dusk",
+     "miss": "This happened at the end of the day, when the sun was setting in the west. Shadows point the other way, to the east."
+    }
+   ],
+   "step2": "Which of these are real causes? Tap each sentence that is true.",
+   "need": 3,
+   "checks": [
+    {
+     "t": "The village gathered for morning prayer because the bell rang before sunrise.",
+     "ok": true,
+     "why": "True. The bell called everyone at the same time."
+    },
+    {
+     "t": "The sun came up because the bell rang.",
+     "ok": false,
+     "miss": "The bell can’t move the sun! It’s the other way around: the friars rang the bell because the sun was coming up."
+    },
+    {
+     "t": "The pole’s shadow got shorter because the sun climbed higher in the sky.",
+     "ok": true,
+     "why": "True. The higher the sun, the shorter the shadow."
+    },
+    {
+     "t": "Farmers came in from the fields because the bell rang at sunset.",
+     "ok": true,
+     "why": "True. The sunset bell called people back for evening prayer."
+    },
+    {
+     "t": "The shadow pointed east at sunset because people were praying.",
+     "ok": false,
+     "miss": "Praying doesn’t move shadows. Where was the sun at sunset? Shadows always point away from the sun."
+    }
+   ],
+   "pickT": "true causes found. Tap a wrong one again to take it back.",
+   "hotT": "Last step: tap every gold number on the drawing above.",
+   "readT": "Last step: finish Learn the Story at the top of this tab.",
+   "win": "✓ Your day is in order, and you found the real causes. That’s a Timeline Thread.",
+   "why": {
+    "icon": "🕰️",
+    "q": "Why a shadow?",
+    "t": "Before clocks, a shadow could tell the time. In the morning the sun is low in the east, so shadows are long and point west. At midday the sun is high, so shadows are short. At sunset they’re long again and point east. That’s why you use a shadow clock."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the drawing.",
+    "Read the three questions under the drawing.",
+    "Do the Shadow Clock: match each event to its shadow, then find the real causes."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the drawing to see what it shows.",
+  "allT": "Now try the Shadow Clock below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 15.83,
+    "y": 80.25,
+    "title": "The fort.",
+    "t": "A wooden fort where Spanish soldiers stayed."
+   },
+   {
+    "n": "2",
+    "x": 84.17,
+    "y": 34.29,
+    "title": "The church and friary.",
+    "t": "The large church, and the friary where the friars lived. The bell that started each day rang here."
+   },
+   {
+    "n": "3",
+    "x": 60.83,
+    "y": 17.15,
+    "title": "The plaza.",
+    "t": "The open square in the middle of town. People met and shared meals here."
+   },
+   {
+    "n": "4",
+    "x": 26.67,
+    "y": 41.15,
+    "title": "Farm fields.",
+    "t": "Apalachee farmers grew corn, beans, and squash in rows like these."
+   },
+   {
+    "n": "5",
+    "x": 88.33,
+    "y": 10.29,
+    "title": "Apalachee houses.",
+    "t": "Round houses around the edge of the plaza. Women cooked, wove, and made pottery near them."
+   }
+  ]
+ },
+ "planner": {
+  "type": "comicstrip",
+  "voice": "Pick one thing for each panel: morning, midday, and evening. Then pick a because that links two of them. These are just notes. You’ll write your own sentences in Step 3.",
+  "panels": [
+   {
+    "id": "m",
+    "lab": "Morning",
+    "q": "Panel 1 · Morning: pick what happens",
+    "sky": "#F8D9A8",
+    "ico": "🌅",
+    "opts": [
+     {
+      "id": "m1",
+      "t": "The bell rings, and everyone gathers for prayer"
+     },
+     {
+      "id": "m2",
+      "t": "Farmers walk to the cornfields with hoes"
+     },
+     {
+      "id": "m3",
+      "t": "Women grind corn and cook near the houses"
+     }
+    ]
+   },
+   {
+    "id": "d",
+    "lab": "Midday",
+    "q": "Panel 2 · Midday: pick what happens",
+    "sky": "#BFE3F2",
+    "ico": "☀️",
+    "opts": [
+     {
+      "id": "d1",
+      "t": "The bell rings, and people share the midday meal"
+     },
+     {
+      "id": "d2",
+      "t": "The chief meets his people in the Council House"
+     },
+     {
+      "id": "d3",
+      "t": "Friars teach reading in the church"
+     }
+    ]
+   },
+   {
+    "id": "e",
+    "lab": "Evening",
+    "q": "Panel 3 · Evening: pick what happens",
+    "sky": "#E2B7A8",
+    "ico": "🔔",
+    "opts": [
+     {
+      "id": "e1",
+      "t": "The bell rings for evening prayer"
+     },
+     {
+      "id": "e2",
+      "t": "Farmers come in from the fields"
+     },
+     {
+      "id": "e3",
+      "t": "The mission goes quiet for the night"
+     }
+    ]
+   }
+  ],
+  "link": {
+   "lab": "Because",
+   "q": "Link two panels: pick a because",
+   "opts": [
+    {
+     "id": "k1",
+     "t": "Everyone gathered at the same time because the bell called them"
+    },
+    {
+     "id": "k2",
+     "t": "The village had food because farmers and cooks worked all day"
+    },
+    {
+     "id": "k3",
+     "t": "Families missed help at home because men were sent away to carry loads"
+    }
+   ]
+  },
+  "doneT": "Your comic strip is done. Now write your Timeline Thread in Step 3.",
+  "why": {
+   "icon": "🖼️",
+   "q": "Why a comic strip?",
+   "t": "A comic strip tells a story one panel at a time, in order. Your Timeline Thread does the same thing: first, then, last, and a because that connects them. That’s why you plan it as a comic strip."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "events in order",
+    "rx": "first|then|next|after|later|finally|morning|midday|noon|sunrise|sunset|evening|dawn"
+   },
+   {
+    "t": "a because",
+    "rx": "because|led to|as a result|caused|cause|so\\b|since|that.?s why"
+   },
+   {
+    "t": "a job, group, or place",
+    "rx": "farmer|friar|priest|chief|women|mother|apalachee|spanish|church|council|plaza|field|augustine|san luis|mission|cook|carr"
+   }
+  ],
+  "lines": [
+   "Start with the first part of the day: the morning bell.",
+   "Good. Now add a because: what made something else happen?",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong Timeline Thread. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the storehouse, the sun, and the shadow clock."
+  },
+  {
+   "t": "Plan",
+   "w": "Make the comic strip: morning, midday, evening, and a because."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Timeline Thread response"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Timeline Thread and check off the whole list.",
+ "vocab": {
+  "type": "windclock",
+  "kicker": "Wind the Clock",
+  "h": "chron = time",
+  "root": "chron",
+  "voice": "Tap each word on the clock to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Watch the hand move.",
+  "words": [
+   {
+    "w": "chronology",
+    "root": "chron",
+    "m": "the order in which events happened",
+    "miss": "This meaning is about the order of events. Which word ends in -ology, like a whole study of time?",
+    "say": "Chronology. The order in which events happened."
+   },
+   {
+    "w": "chronological",
+    "root": "chron",
+    "m": "arranged in time order, from first to last",
+    "miss": "This meaning describes how something is arranged. Words that end in -al often describe things.",
+    "say": "Chronological. Arranged in time order, from first to last."
+   },
+   {
+    "w": "chronicle",
+    "root": "chron",
+    "m": "a written record of events in the order they happened",
+    "miss": "This meaning is about something written down. Which word sounds like a book of events?",
+    "say": "Chronicle. A written record of events in the order they happened."
+   },
+   {
+    "w": "chronometer",
+    "root": "chron",
+    "m": "a very exact clock, like the ones sailors used at sea",
+    "miss": "This meaning is about a clock. A meter measures things. Which word measures time?",
+    "say": "Chronometer. A very exact clock, like the ones sailors used at sea."
+   }
+  ],
+  "win": "🕰️ The clock is wound, all the way around. <b>chron</b> = time",
+  "why": {
+   "icon": "🕰️",
+   "q": "Why a clock?",
+   "t": "<em>Chronos</em> is the Greek word for time, and a clock measures time. Each word you match moves the clock’s hand one more step around the day."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Two kinds of food",
+   "at": "scene1",
+   "script": "Open my kitchen cabinet and you’d find two kinds of food: some grown on farms near my house, and some that traveled a long way to get here. A mission storehouse was like that too. As you sort, ask yourself: was this here first, or did a ship bring it?"
+  },
+  {
+   "slot": "guide2",
+   "label": "New foods, new work",
+   "at": "s1done",
+   "script": "Look at your two baskets. Pause me and think: the new animals, like cattle and pigs, needed someone to take care of them. Who do you think did that work? Keep that question with you on the Explore tab."
+  },
+  {
+   "label": "A bishop who watched them farm",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "Remember Bishop Calderón from the last file? In 1675 he also wrote about how the Apalachee farmed. Listen for who did which job, and when."
+    },
+    {
+     "slot": "source-2",
+     "who": "Bishop Gabriel Díaz Vara Calderón, 1675 (English translation by Lucy L. Wenhold, 1936)",
+     "script": "In April they commence to sow, and as the man goes along opening the trench, the woman follows sowing. All in common cultivate and sow the lands of the caciques. As alms for the missionaries and the needy widows, they sow wheat in October and harvest it in June."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Did you catch it? Men dug the rows, and women planted the seeds right behind them. A cacique is a chief. And they grew wheat, a Spanish crop, to give to the friars and to widows, women whose husbands had died. Pause me and think: whose fields did everyone work together?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "My tree’s shadow",
+   "at": "evidence",
+   "script": "There’s a tall tree by my house. In the morning, its shadow stretches way out across the yard. At lunchtime, it’s tiny. By dinnertime, it stretches the other way. That’s because the sun moves across the sky. Use that to match each event to its shadow."
+  },
+  {
+   "slot": "guide5",
+   "label": "My Saturday comic",
+   "at": "plan",
+   "script": "If I drew my Saturday as a comic: Panel one, morning, I walk the dog. Panel two, midday, I eat lunch with my sister. Panel three, evening, I read a book. And my because: I read in the evening because the house finally gets quiet. Now pick one thing for each of your panels."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "At a Florida mission like San Luis, the church bell organized the day. It rang before sunrise, at midday, and at sunset.",
+   "The Apalachee had grown corn, beans, and squash (the “three sisters”) for hundreds of years. The Spanish brought wheat, watermelon, peaches, cattle, pigs, and chickens.",
+   "Apalachee men farmed, Apalachee women cooked, wove, made pottery, and raised children, and the friars taught and led church services.",
+   "Under the repartimiento labor draft, some Apalachee men were forced to carry loads on foot to St. Augustine, more than 200 miles, for weeks at a time and for little pay.",
+   "The Apalachee ball game had been played for hundreds of years, but Spanish leaders banned it by 1684."
+  ],
+  "vocab": [
+   [
+    "three sisters",
+    "corn, beans, and squash, three crops that grow well together"
+   ],
+   [
+    "livestock",
+    "farm animals, like cattle, pigs, and chickens"
+   ],
+   [
+    "thatched",
+    "having a roof made of dried plants"
+   ],
+   [
+    "plaza",
+    "an open square in the middle of a town"
+   ],
+   [
+    "Mass",
+    "a Catholic church service"
+   ],
+   [
+    "clan",
+    "a family group"
+   ],
+   [
+    "labor draft",
+    "when people are ordered to work, whether they want to or not"
+   ],
+   [
+    "repartimiento",
+    "the Spanish labor draft that forced Native men to work for the Spanish"
+   ],
+   [
+    "granary",
+    "a storehouse for grain"
+   ],
+   [
+    "perseverance",
+    "keeping going through hard work, day after day"
+   ],
+   [
+    "chronology",
+    "the order in which events happened"
+   ],
+   [
+    "chronological",
+    "arranged in time order, from first to last"
+   ],
+   [
+    "chronicle",
+    "a written record of events in the order they happened"
+   ],
+   [
+    "chronometer",
+    "a very exact clock, like the ones sailors used at sea"
+   ]
+  ],
+  "wordParts": "The Greek root chron (from chronos) means “time.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "three Spanish foods or animals",
+    "groups": [
+     "wheat|weat",
+     "watermel|water mel|melon",
+     "peach",
+     "cattle|cow|cows|bull|beef|oxen|ox",
+     "pig|pigs|hog|pork",
+     "chicken|chiken|hen|egg"
+    ],
+    "n": 3
+   },
+   {
+    "t": "who brought them",
+    "rx": "spanish|spain|brought|introduc|new|ship|came",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "what the bell signaled",
+    "groups": [
+     "pray|prayer|church|mass|god",
+     "meal|lunch|eat|food|dinner|breakfast",
+     "work|field|farm|job",
+     "sunrise|morning|dawn|wake|day start|start",
+     "midday|noon|middle of the day",
+     "sunset|evening|night|rest|bed|end of the day|go home"
+    ],
+    "n": 2
+   },
+   {
+    "t": "a because",
+    "rx": "because|so\\b|since|caused|led to|that.?s why|when the bell|after the bell",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a person",
+    "rx": "farmer|friar|priest|mother|mom|woman|women|\\bman\\b|\\bmen\\b|carrier|chief|apalachee|spanish|worker",
+    "n": 1
+   },
+   {
+    "t": "what they did",
+    "rx": "farm|work|carr|walk|cook|grind|weav|teach|taught|pray|plant|hoe|kept|keep|took care|raise|learn|baptiz|hunt|herd|every day|each day|didn.?t give up|did not give up|kept going",
+    "n": 1
+   },
+   {
+    "t": "the cost",
+    "rx": "cost|tired|hurt|away|family|families|home|weeks|lost|miss|hard|pain|sore|feet|back|time|sleep|pay|paid|freedom|sad|alone|far|heavy",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your storehouse in the Storehouse tab (tab 1).",
+   "Find foods and animals the Apalachee had never grown or raised.",
+   "Try this shape: “The Spanish brought ___, ___, and ___.”"
+  ],
+  "journal-q2": [
+   "Look at the shadow clock in the Explore tab (tab 2).",
+   "The bell rang at three times of day. What did it call people to do each time?",
+   "Try this shape: “At sunrise the bell called people to ___. Everyone ___ because the bell rang.”"
+  ],
+  "journal-q3": [
+   "Look at the Historian Lens near the top of tab 1.",
+   "Pick one person. What hard thing did they keep doing, day after day? What did it cost them?",
+   "Try this shape: “I picked ___. Perseverance for them meant ___. It cost them ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which new food or animal do you think changed Apalachee life the most? Why?",
+  "journal-q2": "Go further: what could people use to tell time on a cloudy day, when there was no shadow?",
+  "journal-q3": "Go further: is it still perseverance if someone is forced to do the work? What do you think?"
+ },
+ "quizMiss": [
+  {
+   "a": "The bell wasn’t mainly an alarm. Reread the dawn part of the story: what did the bell call people to do?",
+   "c": "The ball game had been banned by 1684. What did the bell call people to do every day?"
+  },
+  {
+   "a": "Wheat, watermelon, and peaches were new. The Spanish brought them. Look at your storehouse baskets.",
+   "b": "Those animals came on Spanish ships. Which basket held the foods grown here first?"
+  },
+  {
+   "b": "The ball game was a game, not work. Reread the part called “Some weeks.”",
+   "c": "Morning prayer was at the church. Reread the part called “Some weeks.”"
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2111,204 +3027,74 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Daily Life on Florida Missions ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: bell to bell — one mission field from dawn to dusk (4.06.04 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="One long mission cornfield under a sky that turns from dawn on the left to dusk on the right. In the middle a bell tower rings, with sound rings spreading out. Hoes lean in the corn rows and smoke rises from a cooking fire by a thatched house." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b604sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFEEC8"/>
-      <stop offset="45%" stop-color="#FFC890"/>
-      <stop offset="100%" stop-color="#A0B8D4"/>
+    <linearGradient id="b604sky" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F3B98A"/>
+      <stop offset=".22" stop-color="#F7DDB0"/>
+      <stop offset=".5" stop-color="#BFE2F0"/>
+      <stop offset=".78" stop-color="#F2C9A0"/>
+      <stop offset="1" stop-color="#8E6A9A"/>
     </linearGradient>
-    <linearGradient id="b604field" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A0B048"/>
-      <stop offset="100%" stop-color="#5A6A28"/>
+    <linearGradient id="b604field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A9B86A"/>
+      <stop offset="1" stop-color="#6E8240"/>
     </linearGradient>
-    <linearGradient id="b604tower" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8D0A0"/>
-      <stop offset="100%" stop-color="#A88858"/>
-    </linearGradient>
-    <radialGradient id="b604glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="b604sunA" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFE6B0"/><stop offset="1" stop-color="#FFE6B0" stop-opacity="0"/></radialGradient>
     <style>
-      .b604bell { animation: b604bell 2.4s ease-in-out infinite; transform-origin: top center; transform-box: fill-box; }
-      @keyframes b604bell { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-      .b604wave { animation: b604wave 6s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b604wave { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-      .b604smoke { animation: b604smoke 7s ease-in-out infinite; }
-      @keyframes b604smoke { 0% { transform: translateY(0); opacity: 0.5; } 100% { transform: translateY(-35px); opacity: 0; } }
-      .b604sun { animation: b604sun 5s ease-in-out infinite; }
-      @keyframes b604sun { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+      .b604ring { fill: none; stroke: #8A5A1E; stroke-width: 2; opacity: 0; animation: b604ring 4.5s ease-out infinite; transform-box: fill-box; transform-origin: 50% 50%; }
+      .b604ring.r2 { animation-delay: 1.5s; } .b604ring.r3 { animation-delay: 3s; }
+      @keyframes b604ring { 0% { opacity: .7; transform: scale(.6); } 100% { opacity: 0; transform: scale(2.6); } }
+      .b604bell { animation: b604swing 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes b604swing { 0%,60%,100% { transform: rotate(0); } 10% { transform: rotate(12deg); } 20% { transform: rotate(-10deg); } 30% { transform: rotate(6deg); } 40% { transform: rotate(-3deg); } }
+      .b604smoke { animation: b604smoke 7s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b604smoke { 50% { transform: translateY(-5px) scaleX(1.15); opacity: .55; } }
+      .b604sway { animation: b604sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b604sway { 50% { transform: rotate(2.5deg); } }
+      @media (prefers-reduced-motion: reduce) { .b604ring, .b604bell, .b604smoke, .b604sway { animation: none; } .b604ring { opacity: .3; } }
     </style>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="170" fill="url(#b604sky)"/>
-
-  <!-- Morning sun -->
-  <g class="b604sun">
-    <circle cx="170" cy="60" r="50" fill="url(#b604glow)"/>
-    <circle cx="170" cy="60" r="22" fill="#FFE5A0" opacity="0.9"/>
+  <rect width="920" height="200" fill="url(#b604sky)"/>
+  <!-- rising sun at left, setting sun at right -->
+  <circle cx="70" cy="128" r="70" fill="url(#b604sunA)"/><circle cx="70" cy="128" r="18" fill="#FFD27A"/>
+  <circle cx="860" cy="134" r="60" fill="url(#b604sunA)" opacity=".7"/><circle cx="860" cy="134" r="15" fill="#F59A5A"/>
+  <!-- evening star -->
+  <circle cx="880" cy="34" r="2" fill="#FFF6D8"/><circle cx="836" cy="22" r="1.4" fill="#FFF6D8" opacity=".8"/>
+  <!-- tree line -->
+  <path d="M0,132 C60,122 110,128 170,121 C240,113 300,126 360,120 C420,114 480,124 540,119 C610,113 670,126 740,120 C800,115 860,124 920,119 L920,140 L0,140 Z" fill="#6E7E58" opacity=".8"/>
+  <!-- the field -->
+  <rect y="136" width="920" height="64" fill="url(#b604field)"/>
+  <g stroke="#5E7034" stroke-width="1.3" fill="none" opacity=".7">
+    <path d="M0,150 Q460,144 920,150"/><path d="M0,162 Q460,156 920,162"/><path d="M0,175 Q460,169 920,175"/><path d="M0,189 Q460,183 920,189"/>
   </g>
-
-  <!-- Distant pine treeline -->
-  <g fill="#2A5A3A" opacity="0.55">
-    <path d="M 0 165 L 35 142 L 60 165 L 100 148 L 135 165 L 175 145 L 215 165 L 260 148 L 300 165 L 350 145 L 390 165 L 440 148 L 480 165 L 530 145 L 575 165 L 620 148 L 665 165 L 715 145 L 755 165 L 800 148 L 845 165 L 890 145 L 920 165 L 920 170 L 0 170 Z"/>
-  </g>
-
-  <!-- Mission cornfield foreground band -->
-  <rect y="170" width="920" height="90" fill="url(#b604field)"/>
-  <!-- Field furrow lines -->
-  <g stroke="#3A4818" stroke-width="0.6" opacity="0.45">
-    <line x1="0" y1="180" x2="920" y2="180"/>
-    <line x1="0" y1="190" x2="920" y2="192"/>
-    <line x1="0" y1="200" x2="920" y2="202"/>
-    <line x1="0" y1="212" x2="920" y2="214"/>
-    <line x1="0" y1="224" x2="920" y2="226"/>
-    <line x1="0" y1="236" x2="920" y2="238"/>
-    <line x1="0" y1="248" x2="920" y2="250"/>
-  </g>
-
-  <!-- ═══ LEFT: BELL TOWER (church bell calling daily rhythm) ═══ -->
-  <g transform="translate(165 175)">
-    <!-- Tower base -->
-    <rect x="-18" y="-95" width="36" height="95" fill="url(#b604tower)" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Stone texture -->
-    <g stroke="#8A6A40" stroke-width="0.5" opacity="0.5">
-      <line x1="-18" y1="-75" x2="18" y2="-75"/>
-      <line x1="-18" y1="-55" x2="18" y2="-55"/>
-      <line x1="-18" y1="-35" x2="18" y2="-35"/>
-      <line x1="-18" y1="-15" x2="18" y2="-15"/>
-      <line x1="0" y1="-95" x2="0" y2="0"/>
+  <!-- corn rows -->
+  <g class="b604sway">
+    <g fill="#5E7A2E">
+      <path d="M150,150 l4,-26 l4,26 z"/><path d="M175,150 l4,-30 l4,30 z"/><path d="M200,150 l4,-24 l4,24 z"/><path d="M225,150 l4,-28 l4,28 z"/>
+      <path d="M560,150 l4,-26 l4,26 z"/><path d="M585,150 l4,-30 l4,30 z"/><path d="M610,150 l4,-24 l4,24 z"/><path d="M635,150 l4,-28 l4,28 z"/><path d="M660,150 l4,-25 l4,25 z"/>
     </g>
-    <!-- Top: open belfry -->
-    <rect x="-22" y="-115" width="44" height="22" fill="#D8B888" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Belfry archway opening (visible through) -->
-    <path d="M -16 -94 L -16 -106 Q -16 -112 -10 -112 L 10 -112 Q 16 -112 16 -106 L 16 -94 Z" fill="#3A2510"/>
-    <!-- BELL — animated swing via nested g (outer translate, inner rotates) -->
-    <g transform="translate(0 -110)">
-      <g class="b604bell">
-        <!-- Bell rope/hanger -->
-        <line x1="0" y1="0" x2="0" y2="2" stroke="#3A2510" stroke-width="0.8"/>
-        <!-- Bell body -->
-        <path d="M -6 2 Q -7 12 -5 15 L 5 15 Q 7 12 6 2 L 4 2 Q 4 -1 0 -1 Q -4 -1 -4 2 Z" fill="#C8A858" stroke="#6A4520" stroke-width="1"/>
-        <!-- Highlight -->
-        <path d="M -3 6 Q -3 10 -2 13" stroke="#FFE5A0" stroke-width="0.6" fill="none" opacity="0.7"/>
-        <!-- Clapper -->
-        <circle cx="0" cy="14" r="1.2" fill="#3A2510"/>
-      </g>
-    </g>
-    <!-- Roof -->
-    <path d="M -28 -115 L 0 -138 L 28 -115 Z" fill="#7A4828" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-150" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-144" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Door at base -->
-    <path d="M -7 0 L -7 -22 Q -7 -28 0 -28 Q 7 -28 7 -22 L 7 0 Z" fill="#3A2010"/>
+    <g stroke="#7E9A3E" stroke-width="2" fill="none"><path d="M158,136 q8,-4 12,2"/><path d="M183,132 q-8,-3 -12,3"/><path d="M593,132 q8,-4 12,2"/><path d="M618,138 q-8,-3 -12,3"/></g>
   </g>
-
-  <!-- ═══ CENTER-LEFT: Friar's small smoke from chimney (cooking fire) ═══ -->
-  <g transform="translate(220 100)">
-    <g class="b604smoke">
-      <ellipse cx="0" cy="0" rx="6" ry="3" fill="#D8D0C8"/>
-      <ellipse cx="-3" cy="-5" rx="4" ry="2.5" fill="#E0D8D0"/>
-      <ellipse cx="2" cy="-9" rx="3" ry="2" fill="#E8E0D8"/>
-    </g>
+  <!-- hoes leaning in the rows -->
+  <g stroke="#5A3A18" stroke-width="2.4" stroke-linecap="round"><path d="M250,166 L272,128"/><path d="M688,168 L706,130"/></g>
+  <g fill="#6E6A66"><path d="M246,166 l10,2 l-2,5 l-10,-2 z"/><path d="M684,168 l10,2 l-2,5 l-10,-2 z"/></g>
+  <!-- thatched house with cooking smoke -->
+  <path d="M320,152 L340,120 Q350,114 360,120 L380,152 Z" fill="#A8956A" stroke="#6E5E3E" stroke-width="1.2"/>
+  <rect x="345" y="140" width="10" height="12" fill="#3A2A14"/>
+  <path class="b604smoke" d="M396,150 C392,138 402,130 397,118 C393,108 401,100 398,90" fill="none" stroke="#8A8682" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+  <ellipse cx="396" cy="152" rx="7" ry="2.5" fill="#C2541E"/>
+  <!-- bell tower in the middle -->
+  <g>
+    <rect x="446" y="70" width="28" height="82" fill="#E6DAB8" stroke="#7A6A4A" stroke-width="1.4"/>
+    <path d="M440,72 L460,52 L480,72 Z" fill="#8E6A3E" stroke="#5A3A18"/>
+    <path d="M460,38 v14 M454,44 h12" stroke="#3E2612" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="451" y="80" width="18" height="22" fill="#5A4A2E"/>
+    <g class="b604bell"><path d="M455,84 q5,-6 10,0 l1.5,10 h-13 z" fill="#C8963A" stroke="#7A5A1E"/><circle cx="460" cy="96" r="1.6" fill="#7A5A1E"/></g>
+    <circle class="b604ring" cx="460" cy="90" r="16"/><circle class="b604ring r2" cx="460" cy="90" r="16"/><circle class="b604ring r3" cx="460" cy="90" r="16"/>
   </g>
-
-  <!-- ═══ CENTER: CORN STALKS (the staple Apalachee + mission crop) ═══ -->
-  <g transform="translate(380 215)">
-    <g class="b604wave">
-      <line x1="0" y1="20" x2="0" y2="-32" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-15" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-20" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="0" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-5" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <!-- Corn ear -->
-      <ellipse cx="2" cy="-22" rx="2.5" ry="6" fill="#D8B040"/>
-      <line x1="2" y1="-30" x2="4" y2="-36" stroke="#A88030" stroke-width="0.6"/>
-    </g>
-  </g>
-  <g transform="translate(420 215)">
-    <g class="b604wave" style="animation-delay:0.6s;">
-      <line x1="0" y1="20" x2="0" y2="-30" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-13" rx="3" ry="9" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-18" rx="3" ry="9" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-30" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(460 215)">
-    <g class="b604wave" style="animation-delay:1.2s;">
-      <line x1="0" y1="20" x2="0" y2="-34" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-17" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-22" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="-2" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-7" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <ellipse cx="2" cy="-24" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- ═══ RIGHT-CENTER: Spanish cattle (new species introduced by missions) ═══
-       Just a silhouette of a long-backed cow. -->
-  <g transform="translate(620 230)" opacity="0.85">
-    <!-- Body -->
-    <ellipse cx="0" cy="0" rx="32" ry="11" fill="#5A3818"/>
-    <!-- Legs -->
-    <rect x="-22" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="-12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="22" y="6" width="4" height="14" fill="#3A2010"/>
-    <!-- Head -->
-    <ellipse cx="-32" cy="-5" rx="10" ry="7" fill="#6A4820"/>
-    <!-- Horns -->
-    <path d="M -38 -10 Q -42 -16 -38 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <path d="M -30 -10 Q -26 -16 -30 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <!-- Eye -->
-    <circle cx="-36" cy="-5" r="0.8" fill="#1A0A05"/>
-    <!-- Tail -->
-    <path d="M 32 -3 Q 38 -2 36 6" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-  </g>
-
-  <!-- Second small cow farther back -->
-  <g transform="translate(720 220)" opacity="0.6">
-    <ellipse cx="0" cy="0" rx="20" ry="7" fill="#5A3818"/>
-    <rect x="-14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="-6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <ellipse cx="-20" cy="-3" rx="6" ry="4" fill="#6A4820"/>
-  </g>
-
-  <!-- ═══ RIGHT FOREGROUND: woven basket of harvest (corn, beans, squash) ═══ -->
-  <g transform="translate(840 235)">
-    <!-- Basket -->
-    <path d="M -22 -5 L -16 18 L 16 18 L 22 -5 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Weave texture -->
-    <g stroke="#5A3818" stroke-width="0.6" opacity="0.55" fill="none">
-      <path d="M -22 -5 Q 0 0 22 -5"/>
-      <path d="M -20 2 Q 0 7 20 2"/>
-      <path d="M -18 9 Q 0 14 18 9"/>
-    </g>
-    <!-- Contents: corn ears, beans, squash poking out -->
-    <ellipse cx="-8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(-15)"/>
-    <ellipse cx="0" cy="-9" rx="3" ry="6" fill="#E8C040"/>
-    <ellipse cx="8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(15)"/>
-    <!-- Beans -->
-    <ellipse cx="-12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <ellipse cx="12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <!-- Squash -->
-    <circle cx="-4" cy="-3" r="4" fill="#E89040" stroke="#7A4818" stroke-width="0.5"/>
-    <line x1="-4" y1="-7" x2="-2" y2="-9" stroke="#3A4818" stroke-width="0.6"/>
-  </g>
-
-  <!-- Corner accent marks -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
-  </g>
+  <!-- path to the far road -->
+  <path d="M760,200 C780,176 800,160 840,146" fill="none" stroke="#C9B07A" stroke-width="7" stroke-linecap="round" opacity=".85"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3826,5 +4612,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
