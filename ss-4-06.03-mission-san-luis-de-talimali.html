@@ -2664,6 +2664,11 @@ body.tx-active .tx-toggle-label {
   }
  ]
 }</script>
+<style id="oao-hide-empty-video">
+/* OAO-HIDE-EMPTY-VIDEO v1: a video slot with no recorded video keeps its placeholder, so hide the whole card.
+   When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
+.video-wrap:has(.video-placeholder-id) { display: none !important; }
+</style>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -3745,7 +3750,7 @@ The word <strong>chief</strong> doesn't look like it has <strong>cap</strong> in
         <div class="video-placeholder-text">
           <strong>Teacher recording notes (~1–2 min):</strong> Open with this beat (~30 sec): <em>"Mission San Luis is back in focus — a place where Spanish and Apalachee lives met, with work, faith, and community all tangled together. The corridor's brighter than when we started. Not free yet, but closer."</em> Then recap the evidence about life at the mission.
                 </div>
-        <!-- slot: 4-06-03-closing -->
+        <div class="video-placeholder-id"><!-- slot: 4-06-03-closing --></div>
       </div>
     </div>
   </div>

@@ -2642,6 +2642,11 @@ body.tx-active .tx-toggle-label {
   }
  ]
 }</script>
+<style id="oao-hide-empty-video">
+/* OAO-HIDE-EMPTY-VIDEO v1: a video slot with no recorded video keeps its placeholder, so hide the whole card.
+   When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
+.video-wrap:has(.video-placeholder-id) { display: none !important; }
+</style>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -3745,7 +3750,7 @@ The Castillo de San Marcos is the oldest stone fort still standing in the contin
         <div class="video-placeholder-text">
           <strong>Teacher recording notes (~1–2 min):</strong> Open with this beat (~30 sec): <em>"The causes and effects snapped back together — Spanish rule reshaped settlement, defense, religion, trade, and Florida's place in the world. The far door is unlocking. A few more files in this wing."</em> Then recap two clear effects and remind students to connect cause and effect with evidence.
                 </div>
-        <!-- slot: 4-06-05-closing -->
+        <div class="video-placeholder-id"><!-- slot: 4-06-05-closing --></div>
       </div>
     </div>
   </div>
