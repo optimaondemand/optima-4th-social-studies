@@ -1771,6 +1771,910 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.07",
+ "title": "Architecture and Artifacts of Early Florida",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🏛️",
+   "🔍",
+   "🏺"
+  ]
+ },
+ "prevFile": "Effects of Colonization on Native Tribes",
+ "connector": "Last time we looked carefully at what colonization did to Native peoples. Today we look at the buildings and objects people left behind, and what they can and can’t tell us.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Museum Shelf",
+   "t": "Label the museum shelf",
+   "why": "Hang a name tag on each object. Then match each one to what it reveals."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Dig, then spot the details",
+   "why": "Brush five layers of dirt to read the story. Then find six details in the photo of the fort."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Look closely, then write",
+   "why": "Answer two questions. Plan with the magnifier, then write 3 to 5 sentences about one building or object."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Two files left in this wing, and this one is full of very old things.",
+  "opening": [
+   "Canvas saved four buildings and objects from early Florida, but it took off every label. Without labels, they’re just old things. Let’s turn them back into evidence.",
+   "Start in the Learn tab (tab 1). Scroll down to the museum shelf under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the shelf",
+      "go": true,
+      "reply": "Tap a name tag, then tap the object it belongs to. Or drag it there."
+     },
+     {
+      "t": "What’s an artifact?",
+      "reply": "An object made or used by people in the past, like a pot or a tool. Historians read artifacts like clues."
+     },
+     {
+      "t": "Why a museum?",
+      "reply": "Museums keep old objects safe and give each one a label. A label tells you what you’re looking at and why it matters."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Brush away one layer of dirt at a time and read each part."
+     },
+     {
+      "t": "Who made these things?",
+      "reply": "Many people. Native people were the biggest group of workers on the fort, and many were forced to work there. Soldiers, stonecutters, and free and enslaved Africans worked on it too."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Is that cannon from Spanish times?",
+      "reply": "The photo can’t tell us that. Cannons like it sat in openings like that one. An honest historian says what a photo shows and what it doesn’t."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The last file in this wing is a source notebook. You’ll put the best evidence from this whole unit in one place."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every object has its label and its story. The museum lights are on! Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You brushed every layer and spotted every detail, even the one that isn’t old. That’s honest history. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer two questions. Then pick one building or object, look closely with the magnifier, and write 3 to 5 sentences about what it reveals."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! The labels are back, and the objects are evidence again. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Today you’re a field historian. Honesty means saying what a building or object really shows, and also saying what it can’t tell us.",
+ "scene1": {
+  "type": "museumshelf",
+  "kicker": "The Museum Shelf",
+  "h": "Put the labels back",
+  "voice": "Canvas took the labels off four objects. First hang each name tag on its object. Then put each card on the object it tells about. Tap a tag, then the object, or drag it there.",
+  "alt": "A dark museum shelf with four objects: a stone wall, a small church with a bell, a clay jar, and two tools",
+  "items": [
+   {
+    "id": "wall",
+    "art": "wall",
+    "name": "Fort wall",
+    "where": "The stone wall with tiny shells in it",
+    "miss": "Look for stone blocks with tiny shells in them, and gaps along the top."
+   },
+   {
+    "id": "mission",
+    "art": "mission",
+    "name": "Mission",
+    "where": "The church with a bell and a cross",
+    "miss": "A mission had a church. Look for a bell and a cross."
+   },
+   {
+    "id": "pot",
+    "art": "pot",
+    "name": "Pottery",
+    "where": "The clay jar and a broken piece",
+    "miss": "Pottery is made of baked clay. Which object is a jar?"
+   },
+   {
+    "id": "tools",
+    "art": "tools",
+    "name": "Tools",
+    "where": "The hoe and the axe",
+    "miss": "Tools are for working with your hands. Which objects have handles?"
+   }
+  ],
+  "cards": [
+   {
+    "id": "c1",
+    "item": "wall",
+    "ico": "🛡️",
+    "t": "People defended (protected) the town from attacks.",
+    "miss": "Which object was built to keep enemies out?"
+   },
+   {
+    "id": "c2",
+    "item": "wall",
+    "ico": "🐚",
+    "t": "Builders used a stone made of shells, found close by.",
+    "miss": "Which object is made of shell-stone?"
+   },
+   {
+    "id": "c3",
+    "item": "mission",
+    "ico": "⛪",
+    "t": "Religion was at the center of daily life.",
+    "miss": "Where would people go to pray together?"
+   },
+   {
+    "id": "c4",
+    "item": "mission",
+    "ico": "🔔",
+    "t": "A bell called people to church and to work.",
+    "miss": "Which object has a bell in its tower?"
+   },
+   {
+    "id": "c5",
+    "item": "pot",
+    "ico": "🍲",
+    "t": "People cooked, carried water, and stored food.",
+    "miss": "What would you use to cook or store food?"
+   },
+   {
+    "id": "c6",
+    "item": "tools",
+    "ico": "⛏️",
+    "t": "People farmed, chopped wood, and built things by hand.",
+    "miss": "Which objects would you use to dig or chop?"
+   }
+  ],
+  "nameT": "Hang each name tag on its object.",
+  "revealT": "Now put each card on the object it tells about.",
+  "namesCt": "labels hung.",
+  "cardsCt": "cards placed.",
+  "win": "🏛️ <b>The museum lights are on.</b> Every object has its label and its story.",
+  "why": {
+   "icon": "🏛️",
+   "q": "Why a museum?",
+   "t": "A museum keeps artifacts (objects people made or used long ago) safe. Each one gets a label that says what it is and what it shows. Without a label, an old jar is just a jar. That’s why you’ll put the labels back on this shelf."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "trench",
+   "activity": "Architecture and Artifacts of Early Florida",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^Not every clue"
+    },
+    {
+     "id": "p1",
+     "match": "^The fort"
+    },
+    {
+     "id": "p2",
+     "match": "^Mission buildings"
+    },
+    {
+     "id": "p3",
+     "match": "^Pottery and tools"
+    },
+    {
+     "id": "p4",
+     "match": "^Reading the clues"
+    }
+   ],
+   "layers": [
+    {
+     "id": "l1",
+     "t": "Clues without words",
+     "obj": "book",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "l2",
+     "t": "The fort",
+     "obj": "block",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "l3",
+     "t": "Mission buildings",
+     "obj": "bell",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "l4",
+     "t": "Pottery and tools",
+     "obj": "shard",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "l5",
+     "t": "Reading the clues honestly",
+     "obj": "unknown",
+     "paras": [
+      "p4"
+     ]
+    }
+   ],
+   "alt": "A cut-away dig under a stone fort, with five layers of soil",
+   "startT": "Tap the glowing layer to brush the dirt away.",
+   "countT": "layers brushed. Read this part, then brush the next one.",
+   "allT": "Every layer is brushed. You read the whole dig.",
+   "orderT": "Dig from the top down: brush the glowing layer first.",
+   "nextT": "Brush layer {n}",
+   "why": {
+    "icon": "🖌️",
+    "q": "Why dig?",
+    "t": "An archaeologist is a scientist who digs up and studies things people left behind. Archaeologists dig slowly, one layer of dirt at a time, and brush the soil away so nothing breaks. That’s why you’ll brush away one layer at a time to read this story."
+   }
+  },
+  "evidence": {
+   "type": "spotpic",
+   "kicker": "Spot the Detail",
+   "h": "Read the fort like a historian",
+   "voice": "Tap a clue card, then tap the gold number on the photo where you spot it. A magnifying glass will land there. Six clues, six numbers.",
+   "img": "source-4-06-07-castillo-wall.jpg",
+   "alt": "The top of the Castillo de San Marcos wall: thick coquina blocks, a cannon in an opening, a bridge over the moat, the bay, a long bridge far away, and a close-up of coquina shells",
+   "spots": [
+    {
+     "n": "1",
+     "x": 58.95,
+     "y": 59.6
+    },
+    {
+     "n": "2",
+     "x": 32.95,
+     "y": 71.3
+    },
+    {
+     "n": "3",
+     "x": 29.8,
+     "y": 44.4
+    },
+    {
+     "n": "4",
+     "x": 17.25,
+     "y": 29.8
+    },
+    {
+     "n": "5",
+     "x": 8.75,
+     "y": 22.6
+    },
+    {
+     "n": "6",
+     "x": 77.35,
+     "y": 28.0
+    }
+   ],
+   "kinds": {
+    "built": {
+     "t": "How they built",
+     "ico": "🧱"
+    },
+    "defend": {
+     "t": "Built to defend",
+     "ico": "🛡️"
+    },
+    "place": {
+     "t": "Why here",
+     "ico": "📍"
+    },
+    "later": {
+     "t": "Not from then",
+     "ico": "🕰️"
+    }
+   },
+   "clues": [
+    {
+     "id": "k1",
+     "ico": "🐚",
+     "t": "What the stone is made of",
+     "n": "6",
+     "kind": "built",
+     "reveal": "Coquina is made of broken shells. The builders used stone from nature, found close by.",
+     "miss": "Look for the close-up circle. What is packed inside that stone?"
+    },
+    {
+     "id": "k2",
+     "ico": "🧱",
+     "t": "Walls made to stop cannonballs",
+     "n": "1",
+     "kind": "defend",
+     "reveal": "The wall is a huge, thick block. People stayed safe behind it.",
+     "miss": "Find the biggest, thickest block of stone in the photo."
+    },
+    {
+     "id": "k3",
+     "ico": "💥",
+     "t": "A way for soldiers to fight back",
+     "n": "2",
+     "kind": "defend",
+     "reveal": "Openings in the wall let cannons fire out while soldiers stayed behind the stone.",
+     "miss": "Where in the wall is there a gap for a cannon?"
+    },
+    {
+     "id": "k4",
+     "ico": "🌉",
+     "t": "Something that made the way in hard to reach",
+     "n": "3",
+     "kind": "defend",
+     "reveal": "A moat (a deep ditch) circles the fort. Enemies couldn’t just walk up to the gate.",
+     "miss": "Find the ditch and the little bridge across it."
+    },
+    {
+     "id": "k5",
+     "ico": "🌊",
+     "t": "A clue about why they built the fort right here",
+     "n": "4",
+     "kind": "place",
+     "reveal": "The fort sits right on the bay. Soldiers could watch for enemy ships and guard the town.",
+     "miss": "Look for the water. Why would a fort stand right next to it?"
+    },
+    {
+     "id": "k6",
+     "ico": "🕰️",
+     "t": "Something that is NOT from Spanish times",
+     "n": "5",
+     "kind": "later",
+     "reveal": "That long bridge was built in the 1900s, more than 200 years after the fort. Not everything in a photo of an old place is old.",
+     "miss": "Look far away. What was built for cars, long after the Spanish?"
+    }
+   ],
+   "countT": "details spotted.",
+   "hotT": "Last step: tap every gold number on the photo above to read its label.",
+   "readT": "Last step: brush every layer in Learn the Story at the top of this tab.",
+   "win": "🔍 You spotted all six details, even the one that isn’t old. That’s careful, honest looking.",
+   "why": {
+    "icon": "🔍",
+    "q": "Why spot details?",
+    "t": "You can’t ask a wall questions. So historians look very closely for small details and ask what each one tells us. Some details in a photo aren’t old at all, so a careful historian checks those too."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 6 gold numbers on the photo to read its label.",
+    "Read the three questions under the photo.",
+    "Do Spot the Detail: find each clue on the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "Now try Spot the Detail below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 58.95,
+    "y": 59.6,
+    "title": "A thick coquina wall.",
+    "t": "This part of the wall is one huge block, taller than the cannon. When enemy cannonballs hit coquina, the soft stone squeezed together and soaked up the hit instead of cracking."
+   },
+   {
+    "n": "2",
+    "x": 32.95,
+    "y": 71.3,
+    "title": "An opening for a cannon.",
+    "t": "The wall has gaps like this one, so cannons could fire out at enemies while soldiers stayed behind the stone. Cannons like this one sat in openings like this."
+   },
+   {
+    "n": "3",
+    "x": 29.8,
+    "y": 44.4,
+    "title": "A bridge over the moat.",
+    "t": "A moat is a deep ditch dug around a fort. The bridge crosses it toward the fort’s one entrance, so the way in was easy to guard."
+   },
+   {
+    "n": "4",
+    "x": 17.25,
+    "y": 29.8,
+    "title": "The bay.",
+    "t": "The fort stands right on the water of Matanzas Bay. From here, soldiers could watch for enemy ships and guard the town and its harbor (a safe place for ships to stop)."
+   },
+   {
+    "n": "5",
+    "x": 8.75,
+    "y": 22.6,
+    "title": "A bridge for cars, far away.",
+    "t": "This long bridge was built in the 1900s, more than 200 years after the fort was finished. Not everything in a photo of an old place is old."
+   },
+   {
+    "n": "6",
+    "x": 77.35,
+    "y": 28.0,
+    "title": "Coquina up close.",
+    "t": "This is a piece of Florida coquina seen up close. It is not from the fort. Look at all the broken shells, pressed together into stone. The whole circle is only about one inch across."
+   }
+  ]
+ },
+ "planner": {
+  "type": "magnifier",
+  "voice": "Pick one building or object. Then drag the magnifying glass over the picture, or tap a faint ring, to find at least two details. Last, pick what it reveals and one thing it can’t tell us. These are just notes. You’ll write your own sentences in Step 3.",
+  "q1": "Pick your building or object",
+  "q2": "Slide the magnifier over the picture to find details",
+  "q3": "It reveals…",
+  "q4": "What can it NOT tell us?",
+  "objects": [
+   {
+    "id": "wall",
+    "art": "wall",
+    "t": "The fort wall",
+    "ico": "🧱",
+    "spots": [
+     {
+      "x": 55,
+      "y": 49,
+      "t": "Tiny shells in the stone (coquina)"
+     },
+     {
+      "x": 36,
+      "y": 33,
+      "t": "Gaps along the top for cannons"
+     },
+     {
+      "x": 50,
+      "y": 79,
+      "t": "Big, thick blocks of stone"
+     }
+    ],
+    "unknowns": [
+     "the names of the people who cut each block",
+     "how the workers felt",
+     "exactly how long each block took to cut"
+    ]
+   },
+   {
+    "id": "mission",
+    "art": "mission",
+    "t": "A mission church",
+    "ico": "⛪",
+    "spots": [
+     {
+      "x": 75,
+      "y": 59,
+      "t": "A bell in the tower"
+     },
+     {
+      "x": 75,
+      "y": 32,
+      "t": "A cross on top"
+     },
+     {
+      "x": 22,
+      "y": 92,
+      "t": "Plants growing beside the church"
+     }
+    ],
+    "unknowns": [
+     "who rang the bell each day",
+     "what every person there believed",
+     "what each family ate for dinner"
+    ]
+   },
+   {
+    "id": "pot",
+    "art": "pot",
+    "t": "A clay pot",
+    "ico": "🏺",
+    "spots": [
+     {
+      "x": 50,
+      "y": 56,
+      "t": "A pattern pressed into the clay"
+     },
+     {
+      "x": 50,
+      "y": 83,
+      "t": "Dark marks from a fire on the bottom"
+     },
+     {
+      "x": 85,
+      "y": 77,
+      "t": "A broken piece"
+     }
+    ],
+    "unknowns": [
+     "the name of the person who made it",
+     "the last meal cooked in it",
+     "how many years it was used"
+    ]
+   },
+   {
+    "id": "tools",
+    "art": "tools",
+    "t": "Two tools",
+    "ico": "⛏️",
+    "spots": [
+     {
+      "x": 62,
+      "y": 22,
+      "t": "An iron axe head"
+     },
+     {
+      "x": 52,
+      "y": 43,
+      "t": "A worn hoe blade"
+     },
+     {
+      "x": 36,
+      "y": 67,
+      "t": "A wooden handle"
+     }
+    ],
+    "unknowns": [
+     "who used them",
+     "how many years they were used",
+     "which fields they worked in"
+    ]
+   }
+  ],
+  "reveals": [
+   "how people lived",
+   "how people defended themselves",
+   "how people worshiped",
+   "how people worked"
+  ],
+  "objLab": "I chose",
+  "detLab": "Detail",
+  "rvLab": "It reveals",
+  "unLab": "Still unknown",
+  "doneT": "Your notes are ready. Now write your own sentences in Step 3.",
+  "why": {
+   "icon": "🔍",
+   "q": "Why a magnifier?",
+   "t": "Historians look at an object up close before they decide what it means. Small details, like tiny shells or a worn edge, are the evidence. Your notes here help you write your own sentences."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "your building or object",
+    "rx": "fort|wall|castillo|coquina|mission|church|bell|cross|pot|pottery|jar|clay|shard|tool|hoe|axe|building|artifact|object|stone|block"
+   },
+   {
+    "t": "what it reveals",
+    "rx": "reveal|show|tell|mean|learn|prove|defend|protect|safe|fight|attack|enem|cannon|worship|pray|god|religio|cook|food|water|store|work|farm|build|built|made|lived|live|life"
+   },
+   {
+    "t": "your evidence",
+    "rx": "evidence|because|shell|thick|block|cannon|gap|opening|moat|bridge|bay|water|bell|cross|field|pattern|fire|soot|burn|broken|piece|worn|iron|handle|photo|picture|label|number|1672|1695|quarry|anastasia"
+   },
+   {
+    "t": "what is unknown",
+    "rx": "unknown|can.?t|cannot|don.?t know|do not know|not know|doesn.?t|does not|no way|not sure|wonder|mystery|still"
+   }
+  ],
+  "lines": [
+   "Start by naming your building or object.",
+   "Good. Now say what it reveals, and your evidence.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Two questions. Use the museum shelf, the dig, and Spot the Detail."
+  },
+  {
+   "t": "Plan",
+   "w": "Use the magnifier: pick one object, find details, and pick what it reveals."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about your building or object. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "clayhands",
+  "kicker": "Handprints in Clay",
+  "h": "manu = hand",
+  "root": "manu",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match presses a handprint into the clay.",
+  "words": [
+   {
+    "w": "manual",
+    "root": "manu",
+    "m": "done with your hands, not by a machine",
+    "miss": "This meaning is about how a job gets done. Which short word means “by hand”?",
+    "say": "Manual. Done with your hands, not by a machine."
+   },
+   {
+    "w": "manufacture",
+    "root": "manu",
+    "m": "to make things, often many at a time",
+    "miss": "This meaning is about making things. Which long word ends in -facture, like factory?",
+    "say": "Manufacture. To make things, often many at a time."
+   },
+   {
+    "w": "manuscript",
+    "root": "manu",
+    "m": "a book or paper written by hand",
+    "miss": "Script means writing. Which word is about writing by hand?",
+    "say": "Manuscript. A book or paper written by hand."
+   },
+   {
+    "w": "manicure",
+    "root": "mani",
+    "m": "care for the hands and fingernails",
+    "miss": "Cure means care. Which word is about caring for your hands?",
+    "say": "Manicure. Care for the hands and fingernails."
+   }
+  ],
+  "win": "✋ All four handprints are pressed and fired. <b>manu</b> = hand",
+  "why": {
+   "icon": "✋",
+   "q": "Why clay handprints?",
+   "t": "<em>Manus</em> is the Latin word for “hand.” Long ago, potters in Florida shaped clay pots by hand. Archaeologists sometimes find a potter’s fingerprints still pressed into old clay. That’s why each word you match presses a handprint into clay."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "How I read an object",
+   "at": "scene1",
+   "script": "Here’s how I read an object. In my kitchen there’s an old wooden spoon with a burned tip. It shows that someone cooked with it, over and over. But it can’t tell me who carved it. Now it’s your turn. Look at each object on the shelf and ask, what does it show?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Your own artifact",
+   "at": "s1done",
+   "script": "Pause me, and look around the room you’re in. Pick one object. If a historian found it three hundred years from now, what would it tell them about your life? Say one sentence out loud. Then head to the Explore tab."
+  },
+  {
+   "slot": "guide3",
+   "label": "Dig slowly",
+   "at": "explore",
+   "script": "Archaeologists never rush. One brush stroke at a time, one layer at a time. Reading works the same way. Brush one layer, read that part, then stop and ask yourself, what did that object tell me? Then brush the next layer."
+  },
+  {
+   "slot": "guide4",
+   "label": "Shows, and can’t show",
+   "at": "evidence",
+   "script": "When I look at an old photo, I sort what I see into two piles: what it really shows, and what it can’t tell me. A photo of my grandma’s house shows the porch, but not who built it. Use that same honest thinking as you spot each detail on the fort."
+  },
+  {
+   "slot": "guide5",
+   "label": "Look before you write",
+   "at": "plan",
+   "script": "Before you write, look closely. Pick your object, then slide the magnifier slowly over the picture. Each detail you find is a piece of evidence. Find at least two. Then ask yourself one honest question: what can this object not tell me?"
+  },
+  {
+   "slot": "guide6",
+   "label": "An honest sentence",
+   "at": "write",
+   "script": "Here’s a sentence shape that sounds like a real historian. This shows that something, but it can’t tell us something else. Using both parts is what makes your writing honest. Try it once in your entry, in your own words."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "Architecture (the design of buildings) and artifacts (objects people made or used) are evidence, just like written sources.",
+   "Spain built the Castillo de San Marcos from 1672 to 1695 out of coquina, a shell-stone cut by hand from a quarry on Anastasia Island.",
+   "The Castillo’s thick walls, cannon openings, moat, and spot on the bay show it was built to defend St. Augustine. It was never captured in battle.",
+   "Mission churches show that religion was at the center of daily life. Pottery and tools show how people cooked, stored food, and worked.",
+   "Native people were the largest group of workers on the Castillo. An honest historian says what the evidence shows and what is still unknown."
+  ],
+  "vocab": [
+   [
+    "architecture",
+    "the style and design of buildings"
+   ],
+   [
+    "artifact",
+    "an object made or used by people in the past"
+   ],
+   [
+    "coquina",
+    "a soft stone made of tiny shells pressed together"
+   ],
+   [
+    "evidence",
+    "facts or clues used to support an idea"
+   ],
+   [
+    "quarry",
+    "a place where stone is dug out of the ground"
+   ],
+   [
+    "natural resources",
+    "things from nature that people use, like stone, wood, and water"
+   ],
+   [
+    "defend",
+    "to protect from an attack"
+   ],
+   [
+    "worship",
+    "to pray and honor God together"
+   ],
+   [
+    "mission",
+    "a church town run by Catholic priests called friars"
+   ],
+   [
+    "moat",
+    "a deep ditch dug around a fort"
+   ],
+   [
+    "archaeologist",
+    "a scientist who digs up and studies things people left behind"
+   ],
+   [
+    "honesty",
+    "telling the truth, including what you don’t know"
+   ],
+   [
+    "manual",
+    "done with your hands, not by a machine"
+   ],
+   [
+    "manufacture",
+    "to make things, often many at a time"
+   ],
+   [
+    "manuscript",
+    "a book or paper written by hand"
+   ],
+   [
+    "manicure",
+    "care for the hands and fingernails"
+   ]
+  ],
+  "wordParts": "The Latin root manu means “hand.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a building or object",
+    "rx": "fort|wall|castillo|castle|coquina|mission|church|bell|cross|pot|pottery|jar|bowl|clay|shard|tool|hoe|axe|ax\\b|building|artifact|object|stone|rock|block|cannon|moat",
+    "n": 1
+   },
+   {
+    "t": "what it reveals",
+    "rx": "reveal|show|tell|mean|learn|prove|defend|protect|safe|fight|attack|enem|war|battle|worship|pray|god|relig|church|cook|food|eat|water|store|work|farm|build|built|made|make|lived|live|life|strong",
+    "n": 1
+   },
+   {
+    "t": "your evidence",
+    "rx": "evidence|because|my evidence|shell|thick|big|huge|block|cannon|gap|hole|opening|moat|ditch|bridge|bay|water|ocean|sea|bell|cross|field|pattern|fire|black|burn|broken|piece|worn|iron|metal|handle|photo|picture|label|number|1672|1695|quarry|anastasia|see|saw|look",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "something unknown",
+    "rx": "name|who|feel|felt|think|thought|how long|how many|why|what they|believ|story|life|lives|exact|each|every|worker|people|person|made it|built it|cut|old|age|year",
+    "n": 1
+   },
+   {
+    "t": "an honest reason",
+    "rx": "can.?t|cannot|don.?t|do not|doesn.?t|does not|no way|not|only|just|because|written|record|unknown|know|tell",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the museum shelf, the dig, or Spot the Detail.",
+   "Pick one: the fort wall, a mission, pottery, or tools. What does it show about how people lived, defended themselves, worshiped, or worked?",
+   "Try this shape: “The ___ reveals that ___. My evidence is ___.”"
+  ],
+  "journal-q2": [
+   "Think about today’s virtue, honesty: saying what we don’t know.",
+   "Look at the fort wall again. Does the stone tell you who cut it, or how they felt?",
+   "Try this shape: “An artifact can’t tell us ___ by itself, because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: what other source, like a letter or a record, could help you learn more about your object?",
+  "journal-q2": "Go further: written records tell us Native people were the biggest group of workers on the fort. Why do historians need both objects and written records?"
+ },
+ "quizMiss": [
+  {
+   "a": "Shipping heavy stone across the ocean was hard. Reread layer 2 about where the coquina came from.",
+   "c": "The fort is a building! Reread layer 2.",
+   "d": "The fort is made of stone, not wood. Reread layer 2 about coquina."
+  },
+  {
+   "b": "Most artifacts have no writing on them at all. Reread layer 4 about pottery and tools.",
+   "c": "Artifacts tell us a lot. Reread layer 4.",
+   "d": "Old objects are exactly what historians study. Reread layer 1."
+  },
+  {
+   "a": "An honest historian doesn’t make things up. Reread layer 5.",
+   "c": "Ignoring evidence isn’t honest. Reread layer 5.",
+   "d": "The most dramatic answer isn’t always the true one. Reread layer 5."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2008,200 +2912,130 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Spanish Rule in Florida — Castillo + Mission ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A cut-away dig under a coquina fort at sunset: layers of soil hold a coquina block, a mission bell, a broken clay pot, a tool, and shells, waiting to be found." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b605sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFE0A8"/>
-      <stop offset="55%" stop-color="#F2B070"/>
-      <stop offset="100%" stop-color="#A8C0D8"/>
+    <linearGradient id="b607sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3E5A86"/>
+      <stop offset=".6" stop-color="#E9A66A"/>
+      <stop offset="1" stop-color="#F6D49A"/>
     </linearGradient>
-    <linearGradient id="b605stone" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8D8B8"/>
-      <stop offset="100%" stop-color="#B89868"/>
+    <linearGradient id="b607soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9C7A4E"/>
+      <stop offset="1" stop-color="#4E3824"/>
     </linearGradient>
-    <linearGradient id="b605church" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F2DCB0"/>
-      <stop offset="100%" stop-color="#C8A878"/>
+    <linearGradient id="b607beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE7B0" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#FFE7B0" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#FFE7B0" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="b605ground" x1="0" y1="0" x2="0" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A88858"/>
-      <stop offset="100%" stop-color="#6A4818"/>
-    </linearGradient>
-    <radialGradient id="b605sun" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFE5A0" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#FFE5A0" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="b607sun"><stop offset="0" stop-color="#FFF1C8" stop-opacity="1"/><stop offset=".35" stop-color="#FFD98A" stop-opacity=".8"/><stop offset="1" stop-color="#FFD98A" stop-opacity="0"/></radialGradient>
+    <radialGradient id="b607glow"><stop offset="0" stop-color="#FFE7A0" stop-opacity=".55"/><stop offset="1" stop-color="#FFE7A0" stop-opacity="0"/></radialGradient>
+    <pattern id="b607shell" width="14" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="#F3E7C6" opacity=".8"/><circle cx="10" cy="7" r="1" fill="#F3E7C6" opacity=".6"/></pattern>
+    <clipPath id="b607pit"><path d="M150,74 L770,74 L742,200 L178,200 Z"/></clipPath>
     <style>
-      .b605sway { animation: b605sway 5s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b605sway { 0%,100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
-      .b605flag { animation: b605flag 4s ease-in-out infinite; transform-origin: left center; transform-box: fill-box; }
-      @keyframes b605flag { 0%,100% { transform: skewX(0deg); } 50% { transform: skewX(-8deg); } }
-      .b605sun { animation: b605sun 5s ease-in-out infinite; }
-      @keyframes b605sun { 0%,100% { opacity: 0.75; } 50% { opacity: 1; } }
-      .b605bird { animation: b605bird 8s ease-in-out infinite; }
-      @keyframes b605bird { 0%,100% { transform: translate(0,0); } 50% { transform: translate(10px,-5px); } }
+      .b607beam { animation: b607sweep 14s ease-in-out infinite; }
+      @keyframes b607sweep { 0%,100% { transform: translateX(-120px); } 50% { transform: translateX(160px); } }
+      .b607dust circle { animation: b607rise 9s linear infinite; }
+      .b607dust circle:nth-child(2) { animation-delay: -3s; } .b607dust circle:nth-child(3) { animation-delay: -6s; } .b607dust circle:nth-child(4) { animation-delay: -1.5s; } .b607dust circle:nth-child(5) { animation-delay: -4.5s; }
+      @keyframes b607rise { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translateY(-46px); opacity: 0; } }
+      .b607glint { animation: b607glint 5s ease-in-out infinite; }
+      @keyframes b607glint { 0%,70%,100% { opacity: 0; } 80% { opacity: 1; } }
+      .b607flag { animation: b607flag 3.2s ease-in-out infinite; transform-origin: 641px 18px; }
+      @keyframes b607flag { 50% { transform: skewY(-4deg) scaleX(.94); } }
+      @media (prefers-reduced-motion: reduce) { .b607beam, .b607dust circle, .b607glint, .b607flag { animation: none; } .b607dust circle { opacity: .5; } }
     </style>
   </defs>
 
-  <!-- Sky -->
-  <rect width="920" height="180" fill="url(#b605sky)"/>
+  <!-- sky and sunset -->
+  <rect width="920" height="80" fill="url(#b607sky)"/>
+  <circle cx="820" cy="64" r="60" fill="url(#b607sun)"/>
+  <circle cx="820" cy="66" r="14" fill="#FFF1C8"/>
+  <!-- the bay at the horizon -->
+  <rect x="0" y="60" width="920" height="16" fill="#6F9CB4"/>
+  <path d="M700,66 h40 M770,70 h30 M840,66 h44 M600,71 h28" stroke="#FFE7B0" stroke-width="1.6" opacity=".7"/>
 
-  <!-- Sun (opacity-only animation, safe without nesting) -->
-  <g class="b605sun">
-    <circle cx="180" cy="65" r="55" fill="url(#b605sun)"/>
-    <circle cx="180" cy="65" r="26" fill="#FFE5A0" opacity="0.85"/>
+  <!-- the coquina fort on the ground line -->
+  <g>
+    <path d="M440,76 V38 L458,30 V24 H466 V30 H560 V24 H568 V30 L586,38 V76 Z" fill="#D9C8A0" stroke="#8A7448" stroke-width="1.5"/>
+    <rect x="440" y="38" width="146" height="38" fill="url(#b607shell)"/>
+    <path d="M586,76 V44 L612,36 V30 H620 V36 H660 V76 Z" fill="#CDBB92" stroke="#8A7448" stroke-width="1.5"/>
+    <path d="M603,36 V22 Q609,15 615,22 V36" fill="#D9C8A0" stroke="#8A7448" stroke-width="1.3"/>
+    <path d="M476,30 h10 v6 h-10 Z M510,30 h10 v6 h-10 Z M540,30 h10 v6 h-10 Z" fill="#8A7448"/>
+    <line x1="641" y1="36" x2="641" y2="12" stroke="#5A4A2A" stroke-width="1.5"/>
+    <path class="b607flag" d="M641,12 L661,16 L641,21 Z" fill="#B3261E"/>
   </g>
-
-  <!-- Distant pine tree line -->
-  <g fill="#2A5A3A" opacity="0.6">
-    <path d="M 0 175 L 30 145 L 50 175 L 70 150 L 90 175 L 120 148 L 145 175 L 180 152 L 210 175 L 250 145 L 280 175 L 320 150 L 355 175 L 395 148 L 430 175 L 470 152 L 510 175 L 560 148 L 600 175 L 640 152 L 680 175 L 730 150 L 770 175 L 810 148 L 850 175 L 890 152 L 920 175 L 920 180 L 0 180 Z"/>
+  <!-- palms -->
+  <g fill="#3E5A2A">
+    <path d="M330,76 C332,58 334,44 338,32" stroke="#5A4426" stroke-width="3" fill="none"/>
+    <path d="M338,32 q-18,-4 -26,6 q14,-2 26,-6 Z M338,32 q14,-10 28,-4 q-14,0 -28,4 Z M338,32 q-6,-14 -20,-14 q10,6 20,14 Z M338,32 q8,-14 22,-14 q-12,6 -22,14 Z"/>
+    <path d="M720,76 C719,62 717,52 714,44" stroke="#5A4426" stroke-width="2.5" fill="none"/>
+    <path d="M714,44 q-14,-3 -20,5 q11,-2 20,-5 Z M714,44 q11,-8 22,-3 q-11,0 -22,3 Z M714,44 q-5,-11 -16,-11 q8,5 16,11 Z"/>
   </g>
+  <!-- grass line -->
+  <rect x="0" y="74" width="920" height="6" fill="#6E8A3A"/>
 
-  <!-- Birds (translate animation OK without nested g) -->
-  <g class="b605bird" fill="none" stroke="#3A2510" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
-    <path d="M 280 55 Q 286 50 292 55 Q 298 50 304 55"/>
-    <path d="M 340 40 Q 345 36 350 40 Q 355 36 360 40"/>
-  </g>
+  <!-- ground on both sides of the dig -->
+  <rect x="0" y="80" width="920" height="120" fill="url(#b607soil)"/>
+  <!-- the cut-away pit, with layers -->
+  <g clip-path="url(#b607pit)">
+    <rect x="140" y="74" width="640" height="126" fill="#5A4430"/>
+    <path d="M140,80 H780 V104 H140 Z" fill="#B8976A"/>
+    <path d="M140,104 C300,100 600,110 780,103 V130 C600,136 300,126 140,131 Z" fill="#A3845A"/>
+    <path d="M140,131 C320,127 560,137 780,130 V158 C560,163 320,154 140,160 Z" fill="#8C6E48"/>
+    <path d="M140,160 C330,156 560,165 780,158 V200 H140 Z" fill="#6E5236"/>
+    <!-- layer lines -->
+    <path d="M140,104 C300,100 600,110 780,103 M140,131 C320,127 560,137 780,130 M140,160 C330,156 560,165 780,158" fill="none" stroke="#4E3824" stroke-width="1.2" opacity=".6"/>
+    <!-- pebbles -->
+    <g fill="#4E3824" opacity=".5"><circle cx="200" cy="92" r="2"/><circle cx="260" cy="118" r="2.5"/><circle cx="380" cy="146" r="2"/><circle cx="520" cy="96" r="1.8"/><circle cx="620" cy="122" r="2.4"/><circle cx="700" cy="176" r="2.2"/><circle cx="300" cy="182" r="2"/><circle cx="470" cy="188" r="1.8"/></g>
+    <!-- shells in the top layer -->
+    <g fill="#F3E7C6" stroke="#B8A27A" stroke-width=".6"><path d="M230,96 q6,-8 12,0 Z"/><path d="M560,92 q5,-7 10,0 Z"/><path d="M660,98 q6,-8 12,0 Z"/></g>
 
-  <!-- Ground / colonial plaza -->
-  <rect y="180" width="920" height="80" fill="url(#b605ground)"/>
-  <!-- Plaza ground texture (dirt patches) -->
-  <g fill="#7A5818" opacity="0.4">
-    <circle cx="80" cy="220" r="3"/><circle cx="160" cy="240" r="2"/>
-    <circle cx="280" cy="225" r="2.5"/><circle cx="420" cy="235" r="2"/>
-    <circle cx="560" cy="220" r="2.5"/><circle cx="700" cy="240" r="3"/>
-    <circle cx="820" cy="228" r="2"/>
-  </g>
-
-  <!-- ═══ LEFT: CASTILLO DE SAN MARCOS (Spanish stone fort) ═══
-       Low, broad coquina-stone fortress with corner bastion and Spanish flag. -->
-  <g transform="translate(245 180)">
-    <!-- Main fort wall body -->
-    <rect x="-95" y="-70" width="190" height="70" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="2"/>
-    <!-- Crenellations (battlements) along the top -->
-    <g fill="url(#b605stone)" stroke="#7A5A28" stroke-width="1.5">
-      <rect x="-95" y="-82" width="18" height="14"/>
-      <rect x="-65" y="-82" width="18" height="14"/>
-      <rect x="-35" y="-82" width="18" height="14"/>
-      <rect x="-5" y="-82" width="18" height="14"/>
-      <rect x="25" y="-82" width="18" height="14"/>
-      <rect x="55" y="-82" width="18" height="14"/>
+    <!-- buried things: a coquina block -->
+    <g transform="translate(260,112) rotate(-6)">
+      <rect x="-30" y="-12" width="60" height="26" fill="#D9C8A0" stroke="#8A7448" stroke-width="1.4"/>
+      <rect x="-30" y="-12" width="60" height="26" fill="url(#b607shell)"/>
     </g>
-    <!-- Angled corner bastion (diamond point) -->
-    <path d="M 95 0 L 95 -70 L 128 -52 L 128 0 Z" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="2"/>
-    <rect x="100" y="-82" width="16" height="14" fill="url(#b605stone)" stroke="#7A5A28" stroke-width="1.5"/>
-    <!-- Coquina stone block lines -->
-    <g stroke="#9A7848" stroke-width="0.7" opacity="0.5">
-      <line x1="-95" y1="-48" x2="95" y2="-48"/>
-      <line x1="-95" y1="-26" x2="95" y2="-26"/>
-      <line x1="-60" y1="-70" x2="-60" y2="0"/>
-      <line x1="-20" y1="-70" x2="-20" y2="0"/>
-      <line x1="20" y1="-70" x2="20" y2="0"/>
-      <line x1="60" y1="-70" x2="60" y2="0"/>
+    <!-- a mission bell -->
+    <g transform="translate(430,140) rotate(18)">
+      <circle r="30" fill="url(#b607glow)"/>
+      <path d="M-15,12 Q-15,-14 0,-16 Q15,-14 15,12 L19,16 H-19 Z" fill="#C9A24A" stroke="#7A5A1A" stroke-width="1.5"/>
+      <circle cx="0" cy="19" r="3" fill="#7A5A1A"/>
+      <path d="M-6,-16 Q0,-24 6,-16" fill="none" stroke="#7A5A1A" stroke-width="2"/>
+      <path class="b607glint" d="M-6,-8 l3,-6 l3,6 l-3,6 Z" fill="#FFF8DC"/>
     </g>
-    <!-- Fort gateway -->
-    <path d="M -14 0 L -14 -22 Q -14 -32 0 -32 Q 14 -32 14 -22 L 14 0 Z" fill="#3A2810"/>
-    <!-- Flagpole + Spanish (Burgundy-cross style) flag -->
-    <line x1="0" y1="-82" x2="0" y2="-128" stroke="#5A3818" stroke-width="2.5"/>
-    <g class="b605flag">
-      <rect x="0" y="-128" width="40" height="26" fill="#E8C84A" stroke="#B89030" stroke-width="0.8"/>
-      <line x1="2" y1="-126" x2="38" y2="-104" stroke="#C0392B" stroke-width="2.2"/>
-      <line x1="38" y1="-126" x2="2" y2="-104" stroke="#C0392B" stroke-width="2.2"/>
+    <!-- a broken clay pot -->
+    <g transform="translate(600,140)">
+      <path d="M-26,-6 Q-30,14 -12,20 L4,4 L-6,-12 Z" fill="#B8693A" stroke="#6E3414" stroke-width="1.4"/>
+      <path d="M8,2 L-6,18 Q14,22 24,8 Q28,-6 18,-12 Z" fill="#B8693A" stroke="#6E3414" stroke-width="1.4"/>
+      <path d="M-22,2 Q-8,8 4,4 M10,6 Q18,6 22,0" stroke="#7A3A12" stroke-width="1.2" fill="none" stroke-dasharray="2 3"/>
     </g>
-  </g>
-
-  <!-- Fort plaza marker (small cannon hint at base, no text) -->
-  <g transform="translate(245 184)" opacity="0.7">
-    <ellipse cx="0" cy="0" rx="11" ry="4" fill="#3A2810"/>
-    <rect x="-13" y="-5" width="26" height="5" rx="2.5" fill="#2A1808"/>
-    <circle cx="-13" cy="0" r="3" fill="#3A2810"/>
-    <circle cx="13" cy="0" r="3" fill="#3A2810"/>
-  </g>
-
-  <!-- ═══ RIGHT: SPANISH MISSION CHURCH (small wooden chapel + bell tower) ═══ -->
-  <g transform="translate(645 180)">
-    <!-- Body of the church -->
-    <rect x="-55" y="-65" width="110" height="65" fill="url(#b605church)" stroke="#6A4520" stroke-width="2"/>
-    <!-- Steep thatched/wood-shingle roof -->
-    <path d="M -62 -65 L 0 -110 L 62 -65 Z" fill="#8A6028" stroke="#3A2010" stroke-width="2"/>
-    <!-- Vertical wood plank lines -->
-    <g stroke="#8A6028" stroke-width="0.8" opacity="0.55">
-      <line x1="-40" y1="-65" x2="-40" y2="0"/>
-      <line x1="-25" y1="-65" x2="-25" y2="0"/>
-      <line x1="25" y1="-65" x2="25" y2="0"/>
-      <line x1="40" y1="-65" x2="40" y2="0"/>
+    <!-- a hoe blade and handle -->
+    <g transform="translate(350,182) rotate(-8)">
+      <path d="M-40,0 H24" stroke="#7A5230" stroke-width="5" stroke-linecap="round"/>
+      <path d="M22,-10 L40,-12 L42,6 L24,8 Z" fill="#8E949C" stroke="#3E434A" stroke-width="1.2"/>
     </g>
-    <!-- Bell tower / small spire -->
-    <rect x="-8" y="-130" width="16" height="22" fill="url(#b605church)" stroke="#6A4520" stroke-width="1.5"/>
-    <path d="M -10 -130 L 0 -148 L 10 -130 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-158" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-152" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Small bell -->
-    <path d="M -4 -127 Q -4 -118 0 -118 Q 4 -118 4 -127 Z" fill="#A88858" stroke="#5A3818" stroke-width="0.5"/>
-    <!-- Door -->
-    <path d="M -10 0 L -10 -20 Q -10 -28 0 -28 Q 10 -28 10 -20 L 10 0 Z" fill="#3A2010"/>
-    <path d="M -8 0 L -8 -20 Q -8 -26 0 -26 Q 8 -26 8 -20 L 8 0 Z" fill="#5A3818"/>
-    <!-- Small round window above door -->
-    <circle cx="0" cy="-40" r="4" fill="#3A2010"/>
-    <circle cx="0" cy="-40" r="3" fill="#8A6028"/>
-    <line x1="-3" y1="-40" x2="3" y2="-40" stroke="#3A2010" stroke-width="0.5"/>
-    <line x1="0" y1="-43" x2="0" y2="-37" stroke="#3A2010" stroke-width="0.5"/>
+    <!-- a stone point -->
+    <path d="M690,186 L702,170 L712,188 Z" fill="#9AA0A8" stroke="#4A4F55" stroke-width="1"/>
   </g>
-
-  <!-- ═══ CENTER: Plaza marker / trade goods ═══
-       The fort and the mission church both stood in Spanish Florida,
-       with markets and trade goods between them. -->
-  <g transform="translate(445 175)">
-    <rect x="-1.5" y="-22" width="3" height="22" fill="#5A3818"/>
-    <rect x="-7" y="-15" width="14" height="3" fill="#5A3818"/>
-    <!-- A few baskets / trade goods at base hinting at shared marketplace -->
-    <ellipse cx="-12" cy="3" rx="6" ry="2.5" fill="#8A6028" stroke="#3A2010" stroke-width="0.5"/>
-    <ellipse cx="14" cy="3" rx="5" ry="2.5" fill="#A07028" stroke="#3A2010" stroke-width="0.5"/>
-    <!-- Tiny corn stalks -->
-    <line x1="0" y1="3" x2="0" y2="-6" stroke="#4A6A20" stroke-width="0.8"/>
-    <ellipse cx="0" cy="-3" rx="1.5" ry="3" fill="#7A8A30" opacity="0.8"/>
+  <!-- the edge of the pit -->
+  <path d="M150,74 L178,200 M770,74 L742,200" stroke="#3A2A1A" stroke-width="2.5"/>
+  <!-- grid string over the dig -->
+  <path d="M150,78 H770" stroke="#F3E7C6" stroke-width="1" stroke-dasharray="6 5" opacity=".7"/>
+  <g stroke="#F3E7C6" stroke-width="1.5"><line x1="150" y1="70" x2="150" y2="84"/><line x1="770" y1="70" x2="770" y2="84"/></g>
+  <!-- a slow beam of light across the layers -->
+  <rect class="b607beam" x="300" y="74" width="220" height="126" fill="url(#b607beam)" clip-path="url(#b607pit)"/>
+  <!-- dust rising -->
+  <g class="b607dust" fill="#FFE7B0">
+    <circle cx="300" cy="120" r="1.6"/><circle cx="420" cy="150" r="1.3"/><circle cx="520" cy="110" r="1.8"/><circle cx="610" cy="160" r="1.4"/><circle cx="360" cy="170" r="1.2"/>
   </g>
-
-  <!-- ═══ FOREGROUND: corn rows + palmetto (colonial Florida) ═══ -->
-  <!-- Cornfield (a few stalks, swaying with sway animation via nested g) -->
-  <g transform="translate(120 235)">
-    <g class="b605sway">
-      <line x1="0" y1="0" x2="0" y2="-22" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-12" rx="2" ry="6" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-15" rx="2" ry="6" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-22" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
+  <!-- a brush and a trowel resting on the edge -->
+  <g transform="translate(96,70) rotate(-20)">
+    <rect x="0" y="-3" width="34" height="6" rx="2" fill="#9A6A34"/>
+    <path d="M34,-6 h16 v12 h-16 Z" fill="#E8D9B0" stroke="#8A7448" stroke-width="1"/>
   </g>
-  <g transform="translate(150 232)">
-    <g class="b605sway" style="animation-delay:0.7s;">
-      <line x1="0" y1="0" x2="0" y2="-20" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-10" rx="2" ry="5" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-13" rx="2" ry="5" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-20" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(870 235)">
-    <g class="b605sway" style="animation-delay:1.2s;">
-      <line x1="0" y1="0" x2="0" y2="-24" stroke="#4A6A20" stroke-width="1.2"/>
-      <ellipse cx="-3" cy="-14" rx="2" ry="7" fill="#5A8A30" transform="rotate(-25)"/>
-      <ellipse cx="3" cy="-17" rx="2" ry="7" fill="#5A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-24" rx="1.5" ry="3" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- Palmetto frond foreground left -->
-  <g fill="#1A4A3A">
-    <path d="M 40 252 Q 35 222 25 212 Q 38 222 46 217 Q 35 207 44 195 Q 52 212 54 222 Q 62 202 72 202 Q 62 217 56 227 Q 72 217 82 222 Q 66 232 54 240 L 50 255 Z"/>
-    <rect x="48" y="240" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-
-  <!-- hero detail -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
+  <g transform="translate(812,72) rotate(24)">
+    <rect x="-30" y="-3" width="22" height="6" rx="2" fill="#7A5230"/>
+    <path d="M-8,-8 L20,0 L-8,8 Z" fill="#9AA0A8" stroke="#4A4F55" stroke-width="1"/>
   </g>
 </svg>
 
@@ -3781,5 +4615,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

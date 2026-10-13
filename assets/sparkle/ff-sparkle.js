@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -2924,6 +2924,274 @@
     paint(); return {done:done};
   };
 
+  /* ---- shared drawings for 4.06.07 (museum shelf, magnifier planner): four early-Florida objects, drawn plainly,
+     each in its own 100×100 box. No words in the pictures. ---- */
+  function objArt(k){
+    if(k==='wall') return '<g class="oa"><rect x="14" y="40" width="72" height="46" fill="#D9C8A0" stroke="#8A7448" stroke-width="2"/>'
+      +'<rect x="14" y="28" width="16" height="12" fill="#D9C8A0" stroke="#8A7448" stroke-width="2"/><rect x="42" y="28" width="16" height="12" fill="#D9C8A0" stroke="#8A7448" stroke-width="2"/><rect x="70" y="28" width="16" height="12" fill="#D9C8A0" stroke="#8A7448" stroke-width="2"/>'
+      +'<path d="M14,55 H86 M14,70 H86 M38,40 V55 M62,40 V55 M26,55 V70 M50,55 V70 M74,55 V70 M38,70 V86 M62,70 V86" stroke="#A8916A" stroke-width="1.3" fill="none"/>'
+      +[[20,46],[31,49],[47,45],[55,49],[68,46],[79,50],[20,62],[34,60],[44,64],[58,61],[66,64],[80,60],[22,78],[30,76],[47,79],[54,75],[70,79],[82,76]].map(function(p){ return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.4" fill="#F6EEDA" stroke="#A8916A" stroke-width=".5"/>'; }).join('')+'</g>';
+    if(k==='mission') return '<g class="oa"><path d="M20,86 V52 L44,34 L68,52 V86 Z" fill="#E6D3A6" stroke="#7A5A2A" stroke-width="2"/><path d="M14,54 L44,30 L74,54" fill="none" stroke="#8A4A22" stroke-width="5" stroke-linejoin="round"/>'
+      +'<path d="M38,86 V68 Q44,60 50,68 V86 Z" fill="#7A5A2A"/><rect x="66" y="40" width="18" height="46" fill="#E6D3A6" stroke="#7A5A2A" stroke-width="2"/><path d="M69,56 Q75,46 81,56 Z" fill="#5A4220"/>'
+      +'<path d="M71,58 Q75,50 79,58 L80,62 H70 Z" fill="#C9A24A" stroke="#7A5A1A" stroke-width="1"/><circle cx="75" cy="63" r="1.4" fill="#7A5A1A"/><path d="M75,40 V26 M70,31 H80" stroke="#5A3818" stroke-width="2.4" stroke-linecap="round"/>'
+      +'<path d="M6,90 H94" stroke="#8A7448" stroke-width="2"/><path d="M8,94 Q20,88 30,94 M60,94 Q72,88 84,94" stroke="#6E8A3A" stroke-width="2" fill="none"/></g>';
+    if(k==='pot') return '<g class="oa"><path d="M36,26 H64 L62,34 Q84,44 80,64 Q76,86 50,88 Q24,86 20,64 Q16,44 38,34 Z" fill="#B8693A" stroke="#6E3414" stroke-width="2"/>'
+      +'<path d="M27,50 Q50,58 73,50 M25,60 Q50,68 75,60" stroke="#7A3A12" stroke-width="1.4" fill="none" stroke-dasharray="2 3"/><path d="M30,76 Q50,92 70,76 Q66,88 50,88 Q34,88 30,76 Z" fill="#3A2A20" opacity=".55"/>'
+      +'<path d="M78,74 L90,70 L92,82 L80,84 Z" fill="#B8693A" stroke="#6E3414" stroke-width="1.6"/></g>';
+    if(k==='tools') return '<g class="oa"><path d="M24,88 L58,20" stroke="#8A5A2A" stroke-width="5" stroke-linecap="round"/><path d="M50,16 L72,14 L74,26 L56,30 Z" fill="#8E949C" stroke="#3E434A" stroke-width="1.6"/><path d="M72,14 L74,26" stroke="#C9CDD2" stroke-width="1.4"/>'
+      +'<path d="M70,88 L52,46" stroke="#9A6A34" stroke-width="5" stroke-linecap="round"/><path d="M40,40 Q52,30 64,42 L58,52 Q52,46 46,50 Z" fill="#8E949C" stroke="#3E434A" stroke-width="1.6"/><path d="M41,41 L44,44 M47,38 L49,42" stroke="#5A5F66" stroke-width="1.2"/></g>';
+    return '';
+  }
+
+  /* ---- Scene 1 · The museum shelf (4.06.07): four early-Florida objects stand on a dark museum shelf with no labels.
+     Round 1: hang each name tag on its object (tap a tag, then the object, or drag). Its spotlight comes on.
+     Round 2: put each "what it reveals" card on its object; the cards collect on the plaques under the shelf.
+     When every object is labeled and explained, the whole case lights up. DATA: items [{id,art,name,where,miss}],
+     cards [{id,item,ico,t,miss}] ---- */
+  MOD.museumshelf=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var IT=cfg.items||[], CD=cfg.cards||[], n=IT.length||1, W=400, gap=W/n;
+    S.mus=S.mus||{named:[],put:[]};
+    var named=function(){ return IT.length>0&&IT.every(function(i){ return S.mus.named.indexOf(i.id)>=0; }); };
+    var done=function(){ return named()&&CD.every(function(c){ return S.mus.put.indexOf(c.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var shelf='<svg class="musv" viewBox="0 0 '+W+' 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A dark museum shelf with four objects and no labels')+'">'
+      +'<defs><linearGradient id="spkMusCone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF1C8" stop-opacity=".75"/><stop offset="1" stop-color="#FFF1C8" stop-opacity="0"/></linearGradient></defs>'
+      +'<rect width="'+W+'" height="190" class="wall"/><rect x="0" y="150" width="'+W+'" height="12" class="ledge"/><rect x="0" y="162" width="'+W+'" height="28" class="base"/>'
+      +IT.map(function(it,i){ var cx=gap*i+gap/2, x=cx-45; return '<g class="ob" data-o="'+esc(it.id)+'" role="button" tabindex="0" aria-label="'+esc(it.where||it.name)+'">'
+        +'<path class="cone" d="M'+(cx-8)+',0 L'+(cx+8)+',0 L'+(cx+44)+',150 L'+(cx-44)+',150 Z" fill="url(#spkMusCone)"/><rect class="lamp" x="'+(cx-9)+'" y="0" width="18" height="6" rx="2"/>'
+        +'<rect class="hit" x="'+(cx-gap/2+3)+'" y="10" width="'+(gap-6)+'" height="150" rx="8"/>'
+        +'<g transform="translate('+x.toFixed(1)+',52) scale(.9)">'+objArt(it.art)+'</g>'
+        +'<path class="string" d="M'+(cx+30)+',138 Q'+(cx+36)+',150 '+(cx+38)+',158"/><g class="tag"><rect x="'+(cx-40)+'" y="156" width="80" height="22" rx="4"/><text x="'+cx+'" y="171" text-anchor="middle">'+esc(it.name)+'</text></g><g class="blank"><rect x="'+(cx-22)+'" y="156" width="44" height="22" rx="4"/><text x="'+cx+'" y="171" text-anchor="middle">?</text></g></g>'; }).join('')+'</svg>';
+    var g=el('div','spk spk-game spk-mus');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'The Museum Shelf')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<p class="spk-hlstep spk-musstep"></p><div class="spk-chips spk-hltray spk-mustray"></div><p class="spk-miss"></p>'
+      +'<div class="spk-musw">'+shelf+'</div><div class="spk-musplaques">'+IT.map(function(it){ return '<div class="pq" data-o="'+esc(it.id)+'" role="button" tabindex="0" aria-label="'+esc(it.where||it.name)+'"><div class="lab"><b class="nmx">?</b></div><div class="in"></div></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-mus-ct"></p><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var tray=g.querySelector('.spk-mustray'), miss=g.querySelector('.spk-miss'), svg=g.querySelector('.musv'), sel=null, was=done();
+    function fill(){ tray.innerHTML=''; sel=null;
+      if(!named()) shuffle(IT.filter(function(i){ return S.mus.named.indexOf(i.id)<0; })).forEach(function(i){ var c=el('div','spk-chip noimg spk-hltag','<span class="ico">🏷️</span><span><b>'+esc(i.name)+'</b></span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.k='n'; c.dataset.i=i.id; tray.appendChild(c); });
+      else shuffle(CD.filter(function(c){ return S.mus.put.indexOf(c.id)<0; })).forEach(function(x){ var c=el('div','spk-chip noimg spk-hlcard','<span class="ico">'+(x.ico||'🔎')+'</span><span>'+esc(x.t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.k='c'; c.dataset.i=x.id; tray.appendChild(c); }); }
+    function paint(drop){ var nm=named();
+      IT.forEach(function(it){ var on=S.mus.named.indexOf(it.id)>=0, o=svg.querySelector('.ob[data-o="'+it.id+'"]'), p=g.querySelector('.pq[data-o="'+it.id+'"]');
+        var mine=CD.filter(function(c){ return c.item===it.id&&S.mus.put.indexOf(c.id)>=0; });
+        o.classList.toggle('named',on); o.classList.toggle('full',on&&mine.length>0); if(drop===it.id&&on){ o.classList.remove('lit'); void o.getBoundingClientRect(); o.classList.add('lit'); }
+        p.classList.toggle('named',on); p.querySelector('.nmx').textContent=on?it.name:'?';
+        p.querySelector('.in').innerHTML=mine.map(function(c){ return '<div class="it'+(drop===c.id?' new':'')+'">'+(c.ico?'<span aria-hidden="true">'+c.ico+'</span> ':'')+esc(c.t)+'</div>'; }).join(''); });
+      g.querySelector('.spk-musstep').innerHTML=!nm?'<b>1 ·</b> '+esc(cfg.nameT||'Hang each name tag on its object.'):(done()?'':'<b>2 ·</b> '+esc(cfg.revealT||'Now put each card on the object it tells about.'));
+      var k=nm?S.mus.put.length:S.mus.named.length, of=nm?CD.length:IT.length;
+      g.querySelector('.spk-mus-ct').innerHTML=done()?'':'<b>'+k+' of '+of+'</b> '+esc(nm?(cfg.cardsCt||'cards placed.'):(cfg.namesCt||'labels hung.'));
+      var d=done(); if(d&&!was&&drop) setTimeout(function(){ sfx('win'); },350); was=d;
+      g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); g.classList.toggle('round2',nm); }
+    function arm(on){ g.querySelectorAll('.ob,.pq').forEach(function(z){ z.classList.toggle('armed',on); z.classList.remove('over'); }); }
+    function attempt(chip,oid){ if(!chip||!oid) return; var k=chip.dataset.k, id=chip.dataset.i; arm(false);
+      if(k==='n'){ var it=find(IT,id); if(!it||S.mus.named.indexOf(id)>=0) return;
+        if(id===oid){ S.mus.named.push(id); save(); miss.textContent=''; sfx('clink'); if(named()) fill(); else chip.remove(); sel=null; paint(oid); refreshFile(); refreshVoice(); }
+        else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=it.miss||''; miss.textContent=m; missBeat(m); } }
+      else { var c=find(CD,id); if(!c||S.mus.put.indexOf(id)>=0) return;
+        if(S.mus.named.indexOf(oid)<0){ miss.textContent=cfg.nameFirstT||'Hang a name tag on that object first.'; return; }
+        if(c.item===oid){ S.mus.put.push(id); save(); miss.textContent=''; sfx('paper'); chip.remove(); sel=null; paint(id); refreshFile(); refreshVoice(); }
+        else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m2=c.miss||''; miss.textContent=m2; missBeat(m2); } } }
+    tray.addEventListener('click',function(e){ var c=e.target.closest('.spk-chip'); if(!c) return; ack('open'); tray.querySelectorAll('.spk-chip').forEach(function(x){ x.classList.remove('sel'); }); c.classList.add('sel'); sel=c; miss.textContent=''; arm(true); });
+    tray.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-chip'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    /* no ack() on dragstart: it folds the opening text and shifts the page mid-drag; the drop acks instead */
+    tray.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-chip'); if(!c){ e.preventDefault(); return; } sel=c; e.dataTransfer.setData('text/plain',c.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    tray.addEventListener('dragend',function(){ arm(false); setTimeout(function(){ ack('open'); },0); });
+    function target(e){ var z=e.target.closest('.ob')||e.target.closest('.pq'); return z?z.dataset.o:null; }
+    [svg,g.querySelector('.spk-musplaques')].forEach(function(zone){
+      zone.addEventListener('click',function(e){ var o=target(e); if(!o) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a tag or card first, then tap the object it goes with.'; return; } attempt(sel,o); });
+      zone.addEventListener('keydown',function(e){ var z=e.target.closest('.ob')||e.target.closest('.pq'); if(z&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); z.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
+      zone.addEventListener('dragover',function(e){ var o=target(e); g.querySelectorAll('.ob,.pq').forEach(function(x){ x.classList.toggle('over',x.dataset.o===o); }); if(o){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+      zone.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,target(e)); }); });
+    fill(); paint();
+    return {done:done, journal:function(e,NA){ var L=IT.map(function(it){ var c=CD.filter(function(x){ return x.item===it.id&&S.mus.put.indexOf(x.id)>=0; }); return c.length?'<p class="a"><b>'+e(it.name)+':</b> '+e(c.map(function(x){ return x.t; }).join(' · '))+'</p>':''; }).join(''); return L||NA; }};
+  };
+
+  /* ---- Explore reading · Dig the trench (4.06.07): a cut-away dig under the ground, five soil layers. Brush the
+     glowing layer (tap it, or the "Brush layer N" button at the end of a part): the dirt sweeps away, the object
+     buried there shows, and that part of the reading opens below. DATA: paras [{id,match}], layers [{id,t,obj,paras:[]}]
+     obj: book | block | bell | shard | unknown ---- */
+  function trenchObj(k,x,y){
+    if(k==='book') return '<g transform="translate('+x+','+y+')"><rect x="-13" y="-7" width="26" height="15" rx="2" fill="#F3E7C6" stroke="#6E5A3A" stroke-width="1.2"/><path d="M0,-7 V8 M-9,-3 H-3 M-9,1 H-3 M3,-3 H9 M3,1 H9" stroke="#8A7448" stroke-width="1"/><path d="M14,4 L26,-6 L29,-3 L17,7 Z" fill="#9A6A34" stroke="#5A3818" stroke-width="1"/><path d="M26,-6 L31,-11 L34,-8 L29,-3 Z" fill="#8E949C"/></g>';
+    if(k==='block') return '<g transform="translate('+x+','+y+')"><rect x="-17" y="-9" width="34" height="18" fill="#D9C8A0" stroke="#8A7448" stroke-width="1.3"/>'+[[-11,-4],[-4,2],[3,-3],[10,3],[-12,5],[6,-6],[13,-2]].map(function(p){ return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.3" fill="#F6EEDA" stroke="#A8916A" stroke-width=".5"/>'; }).join('')+'</g>';
+    if(k==='bell') return '<g transform="translate('+x+','+y+') rotate(-14)"><path d="M-10,8 Q-10,-10 0,-11 Q10,-10 10,8 L13,11 H-13 Z" fill="#C9A24A" stroke="#7A5A1A" stroke-width="1.3"/><circle cx="0" cy="13" r="2.2" fill="#7A5A1A"/><path d="M-4,-11 Q0,-17 4,-11" fill="none" stroke="#7A5A1A" stroke-width="1.6"/></g>';
+    if(k==='shard') return '<g transform="translate('+x+','+y+')"><path d="M-22,-4 L-6,-10 L2,0 L-10,8 L-20,6 Z" fill="#B8693A" stroke="#6E3414" stroke-width="1.2"/><path d="M-18,0 L-6,-4" stroke="#7A3A12" stroke-width="1" stroke-dasharray="2 2"/><path d="M6,8 L22,-8" stroke="#8A5A2A" stroke-width="3" stroke-linecap="round"/><path d="M17,-12 L27,-12 L26,-4 L19,-3 Z" fill="#8E949C" stroke="#3E434A" stroke-width="1"/></g>';
+    if(k==='unknown') return '<g transform="translate('+x+','+y+')"><ellipse cx="0" cy="0" rx="18" ry="9" fill="none" stroke="#F3E7C6" stroke-width="1.4" stroke-dasharray="3 3"/><text x="0" y="5" text-anchor="middle" style="font:800 14px Nunito,sans-serif;fill:#F3E7C6">?</text></g>';
+    return '';
+  }
+  MOD.trench=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var LA=cfg.layers||[], n=LA.length; if(S.tch==null) S.tch=0;
+    var done=function(){ return n>0&&S.tch>=n; };
+    var W=340, top=38, bh=(150-top)/Math.max(n,1), COL=['#B89A6A','#A88458','#97744C','#866642','#73573A'];
+    var w=el('div','spk spk-tch');
+    w.innerHTML='<div class="spk-tchbar"><svg viewBox="0 0 '+W+' 154" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A cut-away dig with five soil layers under a stone fort')+'">'
+      +'<rect width="'+W+'" height="'+top+'" class="sky"/>'
+      +'<path class="fort" d="M196,'+top+' V22 H206 V17 H212 V22 H244 V20 L252,13 L260,20 V22 H292 V17 H298 V22 H306 V'+top+' Z"/><path class="grass" d="M0,'+(top-2)+' H'+W+' V'+(top+2)+' H0 Z"/>'
+      +LA.map(function(l,i){ var y=top+i*bh, cy=(y+bh/2).toFixed(1); return '<g class="ly" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc('Layer '+(i+1)+'. '+l.t)+'">'
+        +'<rect class="soil" x="0" y="'+y.toFixed(1)+'" width="'+W+'" height="'+(bh+.5).toFixed(1)+'" fill="'+COL[i%COL.length]+'"/>'
+        +'<g class="obj">'+trenchObj(l.obj,W/2-20+(i%2?40:-30),cy)+'</g>'
+        +'<rect class="dirt" x="0" y="'+y.toFixed(1)+'" width="'+W+'" height="'+(bh+.5).toFixed(1)+'"/>'
+        +'<path class="crumbs" d="M20,'+(y+bh*.35).toFixed(1)+' h3 M70,'+(y+bh*.7).toFixed(1)+' h4 M140,'+(y+bh*.4).toFixed(1)+' h3 M230,'+(y+bh*.65).toFixed(1)+' h4 M300,'+(y+bh*.3).toFixed(1)+' h3"/>'
+        +'<rect class="edge" x="1.5" y="'+(y+1).toFixed(1)+'" width="'+(W-3)+'" height="'+(bh-2).toFixed(1)+'" rx="4"/>'
+        +'<text class="num" x="14" y="'+(+cy+4)+'" text-anchor="middle">'+(i+1)+'</text></g>'; }).join('')
+      +'<g class="brushg"><path d="M0,0 L18,-6 L20,-1 L2,5 Z" class="bh"/><path d="M18,-6 L28,-9 L30,-3 L20,-1 Z" class="bb"/></g>'
+      +'</svg><p class="spk-ys-ct spk-tchct"></p></div><div class="spk-lanread spk-tchread"></div>';
+    before(first,w);
+    var list=w.querySelector('.spk-tchread'), boxes={}, svg=w.querySelector('svg');
+    LA.forEach(function(l,i){ var b=el('div','spk-lanp spk-tchp'); b.innerHTML='<div class="tab"><span class="y">'+(i+1)+'</span><b>'+esc(l.t)+'</b></div>'; list.appendChild(b); (l.paras||[]).forEach(function(pid){ var p=found[pid]; if(p) move(p,function(nd){ b.appendChild(nd); }); });
+      if(i<n-1){ var nx=el('button','spk-lannext spk-tchnext','🖌️ '+esc((cfg.nextT||'Brush layer {n}').replace('{n}',i+2))); nx.type='button'; nx.addEventListener('click',function(){ go(i+1); }); b.appendChild(nx); }
+      boxes[i]=b; });
+    function paint(anim){ var k=S.tch;
+      svg.querySelectorAll('.ly').forEach(function(g2){ var i=+g2.dataset.i; g2.classList.toggle('open',i<k); g2.classList.toggle('next',i===k); if(anim&&i===k-1){ g2.classList.remove('sweep'); void g2.getBoundingClientRect(); g2.classList.add('sweep'); } });
+      var br=svg.querySelector('.brushg'); if(anim&&k>0){ var yy=top+(k-1)*bh+bh/2; br.setAttribute('transform','translate(0,'+yy.toFixed(1)+')'); br.classList.remove('go'); void br.getBoundingClientRect(); br.classList.add('go'); }
+      LA.forEach(function(l,i){ var b=boxes[i]; b.classList.toggle('on',i<k); b.classList.toggle('cur',i===k-1); });
+      w.classList.toggle('all',done());
+      w.querySelector('.spk-tchct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every layer is brushed. You read the whole dig.')+'</b>':(k===0?esc(cfg.startT||'Tap the glowing layer to brush it.'):'<b>'+k+' of '+n+'</b> '+esc(cfg.countT||'layers brushed. Read this part, then brush the next one.'));
+      var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function go(i){ if(i!==S.tch||done()) return; ack('explore'); S.tch++; save(); sfx('brush'); setTimeout(function(){ sfx('brush'); },180); paint(true); refreshFile(); refreshVoice();
+      var nb=boxes[i]; if(nb&&nb.scrollIntoView&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ setTimeout(function(){ try{ nb.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },350); } }
+    svg.addEventListener('click',function(e){ var m=e.target.closest('.ly'); if(!m) return; var i=+m.dataset.i; if(i<S.tch){ try{ boxes[i].scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(err){} return; } if(i>S.tch){ w.querySelector('.spk-tchct').innerHTML=esc(cfg.orderT||'Dig from the top down: brush the glowing layer first.'); return; } go(i); });
+    svg.addEventListener('keydown',function(e){ var m=e.target.closest('.ly'); if(m&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); m.dispatchEvent(new MouseEvent('click',{bubbles:true})); } });
+    paint();
+    return {act:act, done:done, journal:function(){ return '<p class="a">Layers brushed: '+Math.min(S.tch,n)+' of '+n+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · Spot the detail (4.06.07): a clue card says what to look for ("a way for soldiers to fight
+     back"). Tap the card, then the gold number on the photo where you spot it. A magnifying lens settles on that spot,
+     and the detail goes in the found list with what it tells us. One clue is honest-historian work: find something in
+     the photo that is NOT from Spanish times. Also needs the photo labels and the reading.
+     DATA: img, alt, spots [{n,x,y}] (x,y in % of the picture), clues [{id,ico,t,n,kind,reveal,miss}], kinds {k:{t,ico}} ---- */
+  MOD.spotpic=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var SP=cfg.spots||[], CL=cfg.clues||[], KD=cfg.kinds||{}; S.spy=S.spy||[];
+    var found=function(){ return CL.length>0&&CL.every(function(c){ return S.spy.indexOf(c.id)>=0; }); };
+    var done=function(){ return found()&&(!R.source||R.source.done())&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-spy');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Spot the Detail')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-chips spk-spyclues"></div><p class="spk-miss"></p>'
+      +'<div class="spk-spypic"><img alt="'+esc(cfg.alt||'')+'">'+SP.map(function(p){ return '<button type="button" class="pt" data-n="'+esc(p.n)+'" style="left:'+p.x+'%;top:'+p.y+'%" aria-label="'+esc('Number '+p.n)+'"></button>'; }).join('')+'<div class="lenses"></div></div>'
+      +'<div class="spk-spyfound"></div><p class="spk-bell-ct spk-spy-ct"></p><p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var clues=g.querySelector('.spk-spyclues'), miss=g.querySelector('.spk-miss'), pic=g.querySelector('.spk-spypic'), img=pic.querySelector('img'), sel=null, was=done(), SRC=IMG+cfg.img;
+    img.src=SRC;
+    CL.forEach(function(c){ var x=el('div','spk-chip noimg spk-spyclue','<span class="ico">'+(c.ico||'🔎')+'</span><span>'+esc(c.t)+'</span>'); x.setAttribute('role','button'); x.tabIndex=0; x.draggable=true; x.dataset.c=c.id; clues.appendChild(x); });
+    function lens(c,anim){ var p=find(SP,c.n,'n'); if(!p) return ''; var Z=4; return '<span class="lens'+(anim?' new':' kept')+'" style="left:'+p.x+'%;top:'+p.y+'%;background-image:url(\''+SRC+'\');background-size:'+(Z*100)+'% auto;background-position:'+p.x+'% '+p.y+'%"><i>'+esc(p.n)+'</i></span>'; }
+    function paint(drop){
+      CL.forEach(function(c){ var x=clues.querySelector('[data-c="'+c.id+'"]'), on=S.spy.indexOf(c.id)>=0; x.classList.toggle('spk-hide',on); x.draggable=!on; });
+      pic.querySelector('.lenses').innerHTML=CL.filter(function(c){ return S.spy.indexOf(c.id)>=0; }).map(function(c){ return lens(c,drop===c.id); }).join('');
+      SP.forEach(function(p){ pic.querySelector('.pt[data-n="'+p.n+'"]').classList.toggle('hit',CL.some(function(c){ return c.n===p.n&&S.spy.indexOf(c.id)>=0; })); });
+      g.querySelector('.spk-spyfound').innerHTML=S.spy.map(function(id){ var c=find(CL,id), k=KD[c.kind]||{}; return '<div class="it'+(drop===id?' new':'')+'"><span class="n">'+esc(c.n)+'</span><div><span class="kd kd-'+esc(c.kind||'')+'">'+(k.ico?k.ico+' ':'')+esc(k.t||'')+'</span><b>'+esc(c.t)+'.</b> '+esc(c.reveal||'')+'</div></div>'; }).join('');
+      var gate=''; if(found()&&R.source&&!R.source.done()) gate=cfg.hotT||'Last step: tap every gold number on the photo above to read its label.'; else if(found()&&R.reading&&!R.reading.done()) gate=cfg.readT||'Last step: brush every layer in Learn the Story at the top of this tab.';
+      g.querySelector('.spk-si-gate').textContent=gate;
+      g.querySelector('.spk-spy-ct').innerHTML=found()?'':'<b>'+S.spy.length+' of '+CL.length+'</b> '+esc(cfg.countT||'details spotted.');
+      var d=done(); if(d&&!was&&drop) setTimeout(function(){ sfx('win'); },300); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    function arm(on){ pic.querySelectorAll('.pt').forEach(function(t){ t.classList.toggle('armed',on); t.classList.remove('over'); }); }
+    function attempt(chip,num){ if(!chip||num==null) return; var c=find(CL,chip.dataset.c); if(!c||S.spy.indexOf(c.id)>=0) return; arm(false);
+      if(String(c.n)===String(num)){ S.spy.push(c.id); save(); sel=null; miss.textContent=''; sfx('clink'); paint(c.id); refreshFile(); refreshVoice(); }
+      else { chip.classList.add('shake'); setTimeout(function(){ chip.classList.remove('shake'); },450); var m=c.miss||''; miss.textContent=m; missBeat(m); } }
+    clues.addEventListener('click',function(e){ var x=e.target.closest('.spk-spyclue'); if(!x) return; ack('explore'); clues.querySelectorAll('.spk-spyclue').forEach(function(y){ y.classList.remove('sel'); }); x.classList.add('sel'); sel=x; miss.textContent=''; arm(true); });
+    clues.addEventListener('keydown',function(e){ var x=e.target.closest('.spk-spyclue'); if(x&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); x.click(); } });
+    clues.addEventListener('dragstart',function(e){ var x=e.target.closest('.spk-spyclue'); if(!x||!x.draggable){ e.preventDefault(); return; } sel=x; e.dataTransfer.setData('text/plain',x.dataset.c); e.dataTransfer.effectAllowed='move'; arm(true); });
+    clues.addEventListener('dragend',function(){ arm(false); });
+    pic.addEventListener('click',function(e){ var t=e.target.closest('.pt'); if(!t) return; if(!sel){ miss.textContent=cfg.firstT||'Tap a clue card first, then tap the number where you spot it.'; return; } attempt(sel,t.dataset.n); });
+    pic.addEventListener('dragover',function(e){ var t=e.target.closest('.pt'); pic.querySelectorAll('.pt').forEach(function(x){ x.classList.toggle('over',x===t); }); if(t){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    pic.addEventListener('drop',function(e){ e.preventDefault(); var t=e.target.closest('.pt'); if(t) attempt(sel,t.dataset.n); });
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, journal:function(e,NA){ var L=S.spy.map(function(id){ var c=find(CL,id); return '<p class="a"><b>'+e(c.n)+' · '+e(c.t)+':</b> '+e(c.reveal||'')+'</p>'; }).join(''); return L||NA; }};
+  };
+
+  /* ---- Planner · The magnifier (4.06.07): pick one building or object, then slide the magnifying glass over its
+     picture (drag it, or tap a faint ring and it glides there). Each detail it passes over is found and kept as a note.
+     Then pick what it reveals and one thing it can't tell us. Notes only — the student writes the sentences.
+     DATA: objects [{id,art,t,ico,spots:[{x,y,t}],unknowns:[…]}] (x,y on the 100×100 drawing), reveals [...] ---- */
+  MOD.magnifier=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var OB=cfg.objects||[], RV=cfg.reveals||[], NEED=cfg.need||2; S.mag=S.mag||{o:null,seen:[],rv:null,un:null}; var M=S.mag;
+    var cur=function(){ return find(OB,M.o); };
+    var done=function(){ var o=cur(); return !!(o&&M.seen.length>=Math.min(NEED,o.spots.length)&&M.rv!=null&&M.un!=null); };
+    var b=el('div','spk spk-builder spk-mag');
+    b.innerHTML=voice(cfg.voice,cfg)
+      +'<div class="spk-step" data-r="o"><div class="lab">🏛️ 1 · '+esc(cfg.q1||'Pick your building or object')+'</div><div class="spk-opts">'+OB.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+(o.ico?o.ico+' ':'')+esc(o.t)+'</button>'; }).join('')+'</div></div>'
+      +'<div class="spk-step locked" data-r="look"><div class="lab">🔍 2 · '+esc(cfg.q2||'Slide the magnifier over the picture to find details')+'</div><div class="spk-magpic"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="100" height="100" rx="8" class="bg"/><g class="art"></g><g class="rings"></g></svg><div class="glass" role="button" tabindex="0" aria-label="'+esc(cfg.glassT||'Magnifying glass. Drag it, or tap a faint ring.')+'"><span class="rim"></span><span class="hd"></span></div></div><p class="spk-magct"></p><div class="spk-magfound"></div></div>'
+      +'<div class="spk-step locked" data-r="rv"><div class="lab">💡 3 · '+esc(cfg.q3||'What does it reveal?')+'</div><div class="spk-opts">'+RV.map(function(t,i){ return '<button type="button" class="spk-opt" data-v="'+i+'">'+esc(t)+'</button>'; }).join('')+'</div></div>'
+      +'<div class="spk-step locked" data-r="un"><div class="lab">⚖️ 4 · '+esc(cfg.q4||'What can it NOT tell us?')+'</div><div class="spk-opts spk-magun"></div></div>'
+      +'<p class="spk-chain-done">'+esc(cfg.doneT||'Your notes are ready. Now write your own sentences in Step 3.')+'</p><div class="spk-plan"></div>';
+    var pic=b.querySelector('.spk-magpic'), glass=pic.querySelector('.glass'), art=pic.querySelector('.art'), rings=pic.querySelector('.rings');
+    function lines(){ var o=cur(), L=[]; if(!o) return L; L.push([cfg.objLab||'I chose',o.t]); M.seen.forEach(function(i){ L.push([cfg.detLab||'Detail',o.spots[i].t]); }); if(M.rv!=null) L.push([cfg.rvLab||'It reveals',RV[M.rv]]); if(M.un!=null) L.push([cfg.unLab||'Still unknown',o.unknowns[M.un]]); return L; }
+    function place(x,y,anim){ glass.classList.toggle('glide',!!anim); glass.style.left=x+'%'; glass.style.top=y+'%'; }
+    function check(x,y,fromDrop){ var o=cur(); if(!o) return; var hit=-1; o.spots.forEach(function(s,i){ if(Math.hypot(s.x-x,s.y-y)<13) hit=i; });
+      rings.querySelectorAll('.rg').forEach(function(r){ r.classList.toggle('under',+r.dataset.i===hit); });
+      if(hit>=0&&M.seen.indexOf(hit)<0){ M.seen.push(hit); save(); sfx('clink'); paint(hit); } }
+    function drawObj(){ var o=cur(); art.innerHTML=o?objArt(o.art):''; rings.innerHTML=o?o.spots.map(function(s,i){ return '<g class="rg" data-i="'+i+'"><circle cx="'+s.x+'" cy="'+s.y+'" r="9"/></g>'; }).join(''):''; place(50,92); }
+    function paint(newI){ var o=cur();
+      b.querySelectorAll('.spk-step[data-r="o"] .spk-opt').forEach(function(x){ x.classList.toggle('on',x.dataset.v===M.o); });
+      ['look','rv','un'].forEach(function(r,i){ var st=b.querySelector('.spk-step[data-r="'+r+'"]'); st.classList.toggle('locked',!o||(i>0&&M.seen.length<Math.min(NEED,o.spots.length))); });
+      rings.querySelectorAll('.rg').forEach(function(r){ r.classList.toggle('seen',M.seen.indexOf(+r.dataset.i)>=0); });
+      b.querySelector('.spk-magct').innerHTML=o?(M.seen.length>=Math.min(NEED,o.spots.length)?'<b>'+M.seen.length+' of '+o.spots.length+'</b> '+esc(cfg.enoughT||'details found. That is enough evidence. Find the last one too if you want.'):'<b>'+M.seen.length+' of '+o.spots.length+'</b> '+esc(cfg.findT||'details found. Find at least 2.')):'';
+      b.querySelector('.spk-magfound').innerHTML=o?M.seen.map(function(i){ return '<div class="it'+(newI===i?' new':'')+'">🔍 '+esc(o.spots[i].t)+'</div>'; }).join(''):'';
+      b.querySelector('.spk-magun').innerHTML=o?(o.unknowns||[]).map(function(t,i){ return '<button type="button" class="spk-opt'+(M.un===i?' on':'')+'" data-v="'+i+'">'+esc(t)+'</button>'; }).join(''):'';
+      b.querySelectorAll('.spk-step[data-r="rv"] .spk-opt').forEach(function(x){ x.classList.toggle('on',+x.dataset.v===M.rv); });
+      b.classList.toggle('done',done());
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your notes will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var x=e.target.closest('.spk-opt'); if(!x) return; var st=x.closest('.spk-step'); if(!st||st.classList.contains('locked')) return; var r=st.dataset.r;
+      if(r==='o'){ if(M.o!==x.dataset.v){ M.o=x.dataset.v; M.seen=[]; M.un=null; save(); drawObj(); } sfx('click'); paint(); return; }
+      if(r==='rv'){ M.rv=+x.dataset.v; } else if(r==='un'){ M.un=+x.dataset.v; } save(); sfx('click'); paint(); });
+    rings.addEventListener('click',function(e){ var r=e.target.closest('.rg'); if(!r) return; var s=cur().spots[+r.dataset.i]; place(s.x,s.y,true); setTimeout(function(){ check(s.x,s.y); },matchMedia('(prefers-reduced-motion: reduce)').matches?0:420); });
+    var drag=null;
+    function pos(e){ var rc=pic.getBoundingClientRect(); return [Math.max(0,Math.min(100,(e.clientX-rc.left)/rc.width*100)),Math.max(0,Math.min(100,(e.clientY-rc.top)/rc.height*100))]; }
+    glass.addEventListener('pointerdown',function(e){ if(!cur()) return; drag=true; try{ glass.setPointerCapture(e.pointerId); }catch(err){} glass.classList.add('held'); e.preventDefault(); });
+    glass.addEventListener('pointermove',function(e){ if(!drag) return; var p=pos(e); place(p[0],p[1]); check(p[0],p[1]); });
+    glass.addEventListener('pointerup',function(e){ if(!drag) return; drag=null; glass.classList.remove('held'); var p=pos(e); check(p[0],p[1]); });
+    glass.addEventListener('keydown',function(e){ var o=cur(); if(!o) return; if(e.key==='Enter'||e.key===' '){ e.preventDefault(); var nx=o.spots.map(function(s,i){ return i; }).filter(function(i){ return M.seen.indexOf(i)<0; })[0]; if(nx==null) nx=0; var s=o.spots[nx]; place(s.x,s.y,true); check(s.x,s.y); } });
+    before(partB,b); drawObj(); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Handprints in clay (4.06.07, manu = hand): four soft clay tiles, a word under each. Tap each word
+     to hear it (g4ss-<lesson>-manu-<n>.mp3 when it exists). Then put each meaning on its word: each match presses a
+     handprint into that tile. When all four are pressed, the tiles are fired in the kiln and turn warm terracotta. ---- */
+  MOD.clayhands=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'manu'; S.clay=S.clay||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&S.clay.set.length===W.length; };
+    var hand='<g class="hand"><ellipse cx="50" cy="60" rx="17" ry="19"/><ellipse cx="33" cy="47" rx="5" ry="11" transform="rotate(-38 33 47)"/><ellipse cx="41" cy="33" rx="4.6" ry="12" transform="rotate(-10 41 33)"/><ellipse cx="51" cy="30" rx="4.6" ry="13"/><ellipse cx="60" cy="33" rx="4.4" ry="12" transform="rotate(10 60 33)"/><ellipse cx="68" cy="40" rx="4" ry="10" transform="rotate(22 68 40)"/></g>';
+    var g=el('div','spk spk-clay');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Handprints in Clay')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-claywrap"><div class="wds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="6" y="6" width="88" height="88" rx="14" class="tile"/>'+hand+'</svg><span class="w">'+(x.root?esc(x.w).replace(new RegExp(esc(x.root),'i'),function(m){ return '<b>'+m+'</b>'; }):esc(x.w))+'</span><span class="m"></span></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-clay-ct"></p><div class="spk-chips spk-claymeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-claymeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.wds'), sel=null, AU={}, was=done();
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-claymean','<span class="ico">✋</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.clay.heard.length===W.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.clay.heard.indexOf(i)>=0, u=S.clay.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('press'); void c.offsetWidth; c.classList.add('press'); } });
+      var d=done(); g.classList.toggle('done',d); if(d&&!was&&anim!=null) setTimeout(function(){ sfx('win'); },500); was=d;
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-claymean').forEach(function(t){ var f=S.clay.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-clay-ct').innerHTML=!allH?'<b>'+S.clay.heard.length+' of '+W.length+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(d?'':'<b>'+S.clay.set.length+' of '+W.length+'</b> '+esc(cfg.upT||'handprints pressed. Put each meaning on its word.'));
+      if(d) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.clay.set.indexOf(i)>=0||S.clay.heard.length<W.length) return; arm(false);
+      if(+c.dataset.i===i){ S.clay.set.push(i); save(); sel=null; miss.textContent=''; sfx('plop'); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.clay.heard.length===W.length){ attempt(sel,c); return; }
+      if(S.clay.heard.indexOf(i)<0){ S.clay.heard.push(i); save(); sfx('click'); } say(i); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-claymean'); if(!t) return; if(S.clay.heard.length<W.length){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-claymean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-claymean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-claymean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -3016,7 +3284,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy'); return d&&[d,'before']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
