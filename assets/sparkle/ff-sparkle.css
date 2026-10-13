@@ -1997,8 +1997,8 @@ html.spk-quiet .spk-farm .sun { animation: none; }
 .spk-whcrow { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.6fr); gap: 14px; align-items: start; }
 @media (max-width: 640px) { .spk-whcrow { grid-template-columns: 1fr; } .spk-wccards { grid-template-columns: 1fr 1fr; } }
 .spk-whc.done .spk-whcrow { grid-template-columns: 1fr; } .spk-whc.done .spk-whcside { display: none; }
-.spk-wcpic { position: relative; width: 100%; max-width: 480px; margin: 8px auto 6px; aspect-ratio: 1304 / 1217; border-radius: 10px; overflow: hidden; background: #EEE8DA; box-shadow: 0 3px 0 #C9B486; }
-.spk-wcpic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.spk-wcpic { position: relative; width: 100%; max-width: 560px; margin: 8px auto 6px; border-radius: 10px; overflow: hidden; background: #EEE8DA; box-shadow: 0 3px 0 #C9B486; }
+.spk-wcpic img { display: block; width: 100%; height: auto; min-height: 120px; }
 .spk-wcpic .tag { position: absolute; top: 8px; right: 8px; font: 800 12px 'Nunito', sans-serif; background: rgba(14,28,66,.82); color: #fff; border-radius: 999px; padding: 2px 10px; }
 .spk-wcpic .pt { position: absolute; transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; border: 3px dashed #FFE7A0; background: rgba(30,36,64,.25); color: transparent; font: 800 0 'Nunito'; cursor: pointer; transition: background .5s, border-color .5s; }
 .spk-wcpic .pt.armed { border-color: #C9A24A; border-style: solid; background: rgba(255,231,160,.35); }
