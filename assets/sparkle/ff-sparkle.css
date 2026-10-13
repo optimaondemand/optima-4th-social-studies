@@ -1936,3 +1936,118 @@ html.spk-quiet .spk-farm .sun { animation: none; }
 .spk-wall.done .spk-flag-win2 { display: block; animation: spk-in .35s ease-out; }
 
 @media (prefers-reduced-motion: reduce) { .spk-cbnote.pop, .spk-cb .plan .bas.armed .bp, .spk-cb .plan .flag, .spk-cbgrid .ba .stack .blk.new, .spk-cbgrid .ba.armed, .spk-cbgrid .ba.bump, .spk-cbgrid .ba .it.new, .spk-candle .wax, .spk-candle .flamew, .spk-candle .drip, .spk-candle .flame, .spk-candle.out .smoke path, .spk-candle .mk.next .dot, .spk-cdread .spk-cdp.pop, .spk-tnframe img.then, .spk-tntrays .tr.armed, .spk-tntrays .tr .it.new, .spk-pccard.flip, .spk-pccard .stamp.on, .spk-pccard .front .sl.on, .spk-wswrap .course.lay, .spk-wswrap .garita, .spk-wswrap .wd.tap, .spk-wswrap .wd.armed { animation: none !important; transition: none !important; } }
+
+/* ---------- 4.06.06 · Homelands map (Scene 1) — quiet mode: soft colors, no bounce ---------- */
+.spk-hlstep { font: 600 14px 'Nunito', sans-serif; color: #22304A; margin: 4px 0 2px; }
+.spk-hltray { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 6px 0 4px; }
+.spk-hl.round2 .spk-hltray { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.spk-hlwrap { display: grid; grid-template-columns: minmax(240px, 1fr) 1fr; gap: 14px; align-items: start; margin: 8px 0 4px; }
+@media (max-width: 640px) { .spk-hlwrap { grid-template-columns: 1fr; } }
+.spk-hlmapw { max-width: 380px; width: 100%; margin: 0 auto; }
+.spk-hlmapw svg { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 3px 0 #C9B486; }
+.spk-hl .hz { cursor: pointer; outline: none; }
+.spk-hl .hz .area { fill: #8A6A3A; fill-opacity: .08; stroke: none; transition: fill-opacity .6s; }
+.spk-hl .hz .ring { fill: #FFFDF5; fill-opacity: .7; stroke: #6E5A3A; stroke-width: 2; stroke-dasharray: 4 3; transition: all .4s; }
+.spk-hl .hz .ic { font-size: 15px; opacity: .35; pointer-events: none; transition: opacity .5s; }
+.spk-hl .hz .nm { opacity: 0; transition: opacity .6s; pointer-events: none; }
+.spk-hl .hz .nm rect { fill: #FFFDF5; stroke: #6E5A3A; stroke-width: 1.2; } .spk-hl .hz .nm text { font: 800 10.5px 'Nunito', sans-serif; fill: #3E2E14; }
+.spk-hl .hz.named .ring { fill: #F3E7C6; fill-opacity: .95; stroke-dasharray: none; } .spk-hl .hz.named .ic { opacity: 1; } .spk-hl .hz.named .nm { opacity: 1; }
+.spk-hl .hz.named .area { fill-opacity: .16; } .spk-hl .hz.full .ring { stroke: #8A6A1E; stroke-width: 2.6; }
+.spk-hl .hz.armed .ring { stroke: #C9A24A; stroke-width: 3; }
+.spk-hl .hz.over .ring, .spk-hl .hz:focus-visible .ring { fill: #FFF3C4; stroke-width: 3.4; }
+.spk-hl .hz.lit .area { animation: spk-hlbreathe 1.6s ease-out; }
+@keyframes spk-hlbreathe { 0% { fill-opacity: .32; } 100% { fill-opacity: .16; } }
+.spk-hlboxes { display: grid; gap: 10px; }
+.spk-hlboxes .hb { background: #FBF7EC; border: 2px dashed #A8987A; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; min-height: 60px; transition: background .3s; }
+.spk-hlboxes .hb .lab { display: flex; gap: 8px; align-items: center; font: 800 13.5px 'Nunito', sans-serif; color: #3E2E14; }
+.spk-hlboxes .hb .lab .ico { font-size: 20px; opacity: .45; } .spk-hlboxes .hb .lab small { display: block; font: 600 11.5px 'Nunito', sans-serif; color: #7A6A4A; }
+.spk-hlboxes .hb.named { border-style: solid; border-color: #A8987A; } .spk-hlboxes .hb.named .lab .ico { opacity: 1; }
+.spk-hlboxes .hb.armed { border-color: #C9A24A; } .spk-hlboxes .hb.over, .spk-hlboxes .hb:focus-visible { background: #FFF3C4; }
+.spk-hlboxes .hb .in { display: grid; gap: 4px; margin-top: 6px; } .spk-hlboxes .hb .in:empty { display: none; }
+.spk-hlboxes .hb .it { font: 500 13px/1.4 'Nunito', sans-serif; color: var(--ffi); background: #fff; border: 1px solid #E5DAC0; border-radius: 8px; padding: 4px 8px; }
+.spk-hlboxes .hb .it.new { animation: spk-qfade .6s ease-out; }
+@keyframes spk-qfade { from { opacity: 0; } to { opacity: 1; } }
+.spk-hl.done .spk-hltray, .spk-hl.done .spk-hlstep { display: none; }
+
+/* ---------- 4.06.06 · Light the lanterns (Explore reading) ---------- */
+.spk-lan { margin: 4px 0 16px; }
+.spk-lanbar { position: sticky; top: 96px; z-index: 3; background: #1E2440; border-radius: 12px; padding: 6px 6px 2px; box-shadow: 0 3px 0 #C9B486; margin-bottom: 10px; }
+.spk-lanbar svg { display: block; width: 100%; max-height: 120px; height: auto; margin: 0 auto; max-width: 560px; }
+@media (max-width: 600px) { .spk-lanbar { top: 88px; } }
+.spk-lanbar .spk-lanct { color: #E9E2CC; text-align: center; margin: 2px 0 4px; font: 600 13px 'Nunito', sans-serif; } .spk-lanbar .spk-lanct b { color: #FFE7A0; }
+.spk-lan .sky { fill: #1E2440; } .spk-lan .path { fill: #2E3556; } .spk-lan .cord { fill: none; stroke: #6A6A8A; stroke-width: 1.2; }
+.spk-lan .ln { cursor: default; outline: none; }
+.spk-lan .ln .glow { opacity: 0; transition: opacity 1.4s ease; }
+.spk-lan .ln .hang { stroke: #6A6A8A; stroke-width: 1.2; } .spk-lan .ln .cap { fill: #3A3A52; }
+.spk-lan .ln .paper { fill: #4A4A66; stroke: #6A6A8A; stroke-width: 1; transition: fill 1.4s ease; } .spk-lan .ln .rib { stroke: #3A3A52; stroke-width: 1; fill: none; }
+.spk-lan .ln .num { font: 800 12px 'Nunito', sans-serif; fill: #8A8AA6; }
+.spk-lan .ln.next { cursor: pointer; } .spk-lan .ln.next .paper { stroke: #FFE7A0; stroke-width: 2; } .spk-lan .ln.next .num { fill: #FFE7A0; }
+.spk-lan .ln.lit { cursor: pointer; } .spk-lan .ln.lit .glow { opacity: 1; } .spk-lan .ln.lit .paper { fill: #F2B95A; stroke: #FFE7A0; } .spk-lan .ln.lit .num { fill: #FFE7A0; }
+.spk-lan .ln:focus-visible .paper { stroke: #FF8A80; stroke-width: 2.4; }
+.spk-lanread .spk-lanp { display: none; margin: 0 0 10px; padding: 10px 14px; background: #fff; border: 1px solid #EADFC4; border-left: 4px solid #F2B95A; border-radius: 6px; }
+.spk-lanread .spk-lanp.on { display: block; animation: spk-qfade .8s ease-out; }
+.spk-lanread .spk-lanp .tab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 4px; }
+.spk-lanread .spk-lanp .tab .y { display: inline-block; background: #1E2440; color: #FFE7A0; border-radius: 6px; padding: 1px 7px; margin-right: 6px; letter-spacing: 0; }
+.spk-lanread .spk-lanp p { margin: 0 0 6px; }
+.spk-lannext { display: none; margin: 6px 0 0; font: 800 13.5px 'Nunito', sans-serif; background: #1E2440; color: #FFE7A0; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.spk-lanread .spk-lanp.cur .spk-lannext { display: inline-block; } .spk-lannext:hover, .spk-lannext:focus-visible { background: #343C66; }
+
+/* ---------- 4.06.06 · What did it change? (Explore evidence) ---------- */
+.spk-wccards { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 6px 0 4px; }
+.spk-whcrow { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(260px, 1.6fr); gap: 14px; align-items: start; }
+@media (max-width: 640px) { .spk-whcrow { grid-template-columns: 1fr; } .spk-wccards { grid-template-columns: 1fr 1fr; } }
+.spk-whc.done .spk-whcrow { grid-template-columns: 1fr; } .spk-whc.done .spk-whcside { display: none; }
+.spk-wcpic { position: relative; width: 100%; max-width: 480px; margin: 8px auto 6px; aspect-ratio: 1304 / 1217; border-radius: 10px; overflow: hidden; background: #EEE8DA; box-shadow: 0 3px 0 #C9B486; }
+.spk-wcpic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.spk-wcpic .tag { position: absolute; top: 8px; right: 8px; font: 800 12px 'Nunito', sans-serif; background: rgba(14,28,66,.82); color: #fff; border-radius: 999px; padding: 2px 10px; }
+.spk-wcpic .pt { position: absolute; transform: translate(-50%,-50%); width: 46px; height: 46px; border-radius: 50%; border: 3px dashed #FFE7A0; background: rgba(30,36,64,.25); color: transparent; font: 800 0 'Nunito'; cursor: pointer; transition: background .5s, border-color .5s; }
+.spk-wcpic .pt.armed { border-color: #C9A24A; border-style: solid; background: rgba(255,231,160,.35); }
+.spk-wcpic .pt.over, .spk-wcpic .pt:focus-visible { background: rgba(255,243,196,.75); border-style: solid; outline: none; }
+.spk-wcpic .pt.hit { background: rgba(30,36,64,.45); border: 3px solid #E9E2CC; }
+.spk-wclist { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 4px; }
+@media (max-width: 560px) { .spk-wclist { grid-template-columns: 1fr; } }
+.spk-wclist .pr { background: #FBF7EC; border: 2px dashed #A8987A; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; }
+.spk-wclist .pr .lab { display: flex; gap: 8px; align-items: center; font: 800 13.5px 'Nunito', sans-serif; color: #3E2E14; }
+.spk-wclist .pr .lab .n { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: #B3261E; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }
+.spk-wclist .pr.armed { border-color: #C9A24A; } .spk-wclist .pr.over, .spk-wclist .pr:focus-visible { background: #FFF3C4; }
+.spk-wclist .pr.hit { border-style: solid; background: #F2EEE6; }
+.spk-wclist .pr .in { display: grid; gap: 4px; margin-top: 6px; } .spk-wclist .pr .in:empty { display: none; }
+.spk-wclist .pr .it { font: 500 13px/1.4 'Nunito', sans-serif; color: var(--ffi); background: #fff; border: 1px solid #E5DAC0; border-radius: 8px; padding: 4px 8px; }
+.spk-wclist .pr .it.new { animation: spk-qfade .6s ease-out; }
+.spk-whc.done .spk-wccards { display: none; }
+
+/* ---------- 4.06.06 · Steps on a path (planner) ---------- */
+.spk-stpath { max-width: 520px; margin: 6px auto 4px; }
+.spk-stpath svg { display: block; width: 100%; height: auto; border-radius: 12px; }
+.spk-stones .gr { fill: #DCE7C6; } .spk-stones .rv { fill: #BFDCE6; }
+.spk-stones .sn .sb { fill: none; stroke: #8A8A7A; stroke-width: 1.6; stroke-dasharray: 5 4; transition: fill .8s; }
+.spk-stones .sn .si { font-size: 15px; } .spk-stones .sn .sk { font: 800 11px 'Nunito', sans-serif; fill: #6A6A5A; }
+.spk-stones .sn.next .sb { stroke: #C9A24A; stroke-width: 2.4; }
+.spk-stones .sn.on .sb { fill: #C9C2B0; stroke: #7A7262; stroke-dasharray: none; }
+.spk-stones .sn.set .sb { animation: spk-qfade .8s ease-out; }
+.spk-stones .plank line { stroke: #8A6A3A; stroke-width: 7; stroke-linecap: round; opacity: 0; transition: opacity .8s; } .spk-stones .plank.on line { opacity: .9; }
+.spk-stlaid { display: grid; gap: 4px; max-width: 520px; margin: 4px auto 8px; }
+.spk-stlaid .it { font: 600 13px/1.35 'Nunito', sans-serif; color: var(--ffi); background: #fff; border: 1px solid #E5DAC0; border-radius: 8px; padding: 4px 8px; display: flex; gap: 8px; align-items: center; }
+.spk-stlaid .it .n { flex: 0 0 auto; width: 20px; height: 20px; border-radius: 50%; background: #7A7262; color: #fff; display: inline-flex; align-items: center; justify-content: center; font: 800 11px 'Nunito', sans-serif; }
+.spk-stones .spk-step.locked { opacity: .45; pointer-events: none; }
+.spk-stones.done .spk-chain-done { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ---------- 4.06.06 · The memory path (vocab, memor) ---------- */
+.spk-mpwrap { max-width: 620px; margin: 8px auto; }
+.spk-mpwrap .mpv { display: block; width: 100%; height: auto; border-radius: 12px; }
+.spk-mpath .gr { fill: #E4EBD6; } .spk-mpath .pa { fill: none; stroke: #CDBF9E; stroke-width: 12; stroke-linecap: round; }
+.spk-mpath .mk .lt { opacity: 0; transition: opacity 1.2s; } .spk-mpath .mk .lc { fill: #C9C2B0; stroke: #9A927E; stroke-width: 1; transition: fill 1.2s; }
+.spk-mpath .mk.on .lt { opacity: 1; } .spk-mpath .mk.on .lc { fill: #EFE2BE; stroke: #B8962E; }
+.spk-mpath .memo { opacity: 0; transition: opacity 1.4s .3s; } .spk-mpath .memo .ms { fill: #C9C2B0; stroke: #7A7262; stroke-width: 1.4; } .spk-mpath .memo .ml { stroke: #7A7262; stroke-width: 1.2; }
+.spk-mpath.done .memo { opacity: 1; }
+.spk-mpwrap .wds { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 6px; }
+@media (max-width: 560px) { .spk-mpwrap .wds { grid-template-columns: 1fr 1fr; } }
+.spk-mpwrap .wd { display: flex; flex-direction: column; gap: 2px; background: #F4F1E8; border: 2px dashed #8A8270; border-radius: 40% 40% 12px 12px / 22px 22px 12px 12px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-mpwrap .wd .w { font: 800 15px 'Lora', Georgia, serif; color: #2B1A0A; } .spk-mpwrap .wd .w b { color: #8A4A1E; }
+.spk-mpwrap .wd .m { font: 600 12px/1.3 'Nunito', sans-serif; color: #22304A; }
+.spk-mpwrap .wd.heard { border-style: solid; } .spk-mpwrap .wd.up { background: #E9E4D4; border-color: #7A7262; }
+.spk-mpwrap .wd.tap { animation: spk-qfade .5s ease-out; } .spk-mpwrap .wd.armed { border-color: #C9A24A; } .spk-mpwrap .wd.over, .spk-mpwrap .wd:focus-visible { background: #FFF3C4; border-color: #C9A24A; }
+.spk-mpmeans { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; } .spk-mpmeans.wait { opacity: .55; }
+.spk-mpath.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+@media (prefers-reduced-motion: reduce) { .spk-hl .hz .ring, .spk-hl .hz .nm, .spk-hl .hz.lit .area, .spk-hlboxes .hb .it.new, .spk-lan .ln .glow, .spk-lan .ln .paper, .spk-lanread .spk-lanp.on, .spk-wcpic .pt, .spk-wclist .pr .it.new, .spk-stones .sn .sb, .spk-stones .sn.set .sb, .spk-stones .plank line, .spk-mpath .mk .lt, .spk-mpath .mk .lc, .spk-mpath .memo, .spk-mpwrap .wd.tap, .spk-mpath.done .spk-flag-win2, .spk-stones.done .spk-chain-done { animation: none !important; transition: none !important; } }

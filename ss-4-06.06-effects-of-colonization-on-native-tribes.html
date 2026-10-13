@@ -1880,6 +1880,769 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.06",
+ "title": "Effects of Colonization on Native Tribes",
+ "quiet": true,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "🗺️",
+   "🏮",
+   "🪨"
+  ]
+ },
+ "prevFile": "Effects of Spanish Rule in Florida",
+ "connector": "Last time we looked at all 200 years of Spanish rule. Today we slow down and look closely at what colonization did to the Native peoples who were already here.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Homelands",
+   "t": "Map the homelands",
+   "why": "Put each people’s name on their homeland. Then match each way of life to its people."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Light the lanterns",
+   "why": "Light five lanterns to read what changed. Then match each effect to the part of farming life it disrupted."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Lay the path",
+   "why": "Answer two questions. Then put four events in order and write 2 to 3 sentences about how one led to another."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is a serious one, so we’re going to go slowly together.",
+  "opening": [
+   "This file is about what colonization did to the Native peoples who already lived in Florida. It’s a hard part of history, so we’ll go slowly and use careful words.",
+   "Start in the Homelands tab (tab 1). Scroll down to the map under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the map",
+      "go": true,
+      "reply": "Tap a name, then tap the homeland where those people lived. Or drag it there."
+     },
+     {
+      "t": "What’s colonization?",
+      "reply": "When one group comes, settles, and takes control of land where other people already live."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this happened to real people and real families. Going slowly is how we show respect."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Light the lanterns one at a time and read each part."
+     },
+     {
+      "t": "Are these peoples still here?",
+      "reply": "Some Apalachee families live in Louisiana today, as the Talimali Band of Apalachee. Many of Florida’s first peoples did not survive as tribes. That’s why we remember them carefully."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who made the engraving?",
+      "reply": "Theodor de Bry, a European engraver, in 1591. He worked from drawings Jacques Le Moyne made in Florida in 1564."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in here?",
+      "reply": "The next file is about the buildings and objects people left behind, and what they tell historians."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Thank you. Every homeland has its name and its way of life. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You read every part, and you matched each effect to what it changed. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer two questions. Then put four events in order and write 2 to 3 sentences about how one led to another. Lay the stepping stones first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for handling it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courtesy means treating people with care and respect. Here it means telling their story honestly, with careful words, and never making light of real losses.",
+ "scene1": {
+  "type": "homelands",
+  "kicker": "Homelands",
+  "h": "Whose homeland was this?",
+  "voice": "Every homeland on this map had towns, families, and a language of its own. First put each name on its homeland. Then match each way of life to its people. Tap a card, then tap a homeland, or drag it there.",
+  "alt": "A map of Florida with a circle on three homelands: the panhandle, north and central Florida, and the southwest coast",
+  "homes": [
+   {
+    "id": "apa",
+    "name": "Apalachee",
+    "lon": -84.28,
+    "lat": 30.45,
+    "where": "The red clay hills of the panhandle",
+    "ico": "🌽",
+    "dy": 36,
+    "miss": "The Apalachee lived in the west, in the hills of the panhandle near today’s Tallahassee."
+   },
+   {
+    "id": "tim",
+    "name": "Timucua",
+    "lon": -82.3,
+    "lat": 29.7,
+    "where": "North and central Florida",
+    "ico": "🏡",
+    "dy": 36,
+    "miss": "The Timucua lived across north and central Florida."
+   },
+   {
+    "id": "cal",
+    "name": "Calusa",
+    "lon": -81.8,
+    "lat": 26.55,
+    "where": "The southwest coast",
+    "ico": "🐚",
+    "dy": 36,
+    "miss": "The Calusa lived on the southwest coast, near today’s Fort Myers."
+   }
+  ],
+  "cards": [
+   {
+    "id": "a1",
+    "home": "apa",
+    "ico": "🌽",
+    "t": "Grew so much corn that their storehouses fed a whole Spanish army through the winter of 1539.",
+    "miss": "Big corn harvests need rich farmland. Which homeland had red clay hills?"
+   },
+   {
+    "id": "a2",
+    "home": "apa",
+    "ico": "🥅",
+    "t": "Played a ball game: two teams kicked a small ball at one tall goal post.",
+    "miss": "The famous ball game was played in the hills of the panhandle. Which people lived there?"
+   },
+   {
+    "id": "t1",
+    "home": "tim",
+    "ico": "🏡",
+    "t": "Lived in round houses with roofs made of palm leaves.",
+    "miss": "These round houses stood in towns across north and central Florida. Whose homeland is that?"
+   },
+   {
+    "id": "t2",
+    "home": "tim",
+    "ico": "📖",
+    "t": "Friars printed books in their language in the 1600s, so we still know many of its words.",
+    "miss": "The first missions were in north and central Florida. Which people lived there?"
+   },
+   {
+    "id": "c1",
+    "home": "cal",
+    "ico": "🎣",
+    "t": "Did not farm. They fished and gathered shellfish in the bays.",
+    "miss": "Fishing in warm bays happened along the southwest coast. Whose homeland is that?"
+   },
+   {
+    "id": "c2",
+    "home": "cal",
+    "ico": "🐚",
+    "t": "Built islands out of shells and dug canals for their canoes.",
+    "miss": "Shell islands and canoe canals were built along the southwest coast. Which people lived there?"
+   }
+  ],
+  "nameT": "Put each name on its homeland.",
+  "lifeT": "Now put each way-of-life card on the homeland it describes.",
+  "namesCt": "names placed.",
+  "cardsCt": "cards placed.",
+  "win": "🗺️ <b>Every homeland has its name and its way of life.</b> Keep these people in mind as you read what changed.",
+  "why": {
+   "icon": "🗺️",
+   "q": "Why start with homelands?",
+   "t": "Before we look at what changed, we need to know what was here. The Timucua, Apalachee, and Calusa lived in different parts of Florida and in different ways. Knowing their homelands helps us understand what each people lost."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "lanterns",
+   "activity": "What Colonization Changed",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^Long before Europeans"
+    },
+    {
+     "id": "p1",
+     "match": "^Effect 1"
+    },
+    {
+     "id": "p2",
+     "match": "^Effect 2"
+    },
+    {
+     "id": "p3",
+     "match": "^Effect 3"
+    },
+    {
+     "id": "p4",
+     "match": "^Effect 4"
+    },
+    {
+     "id": "p5",
+     "match": "^The long result"
+    },
+    {
+     "id": "p6",
+     "match": "^Why we study"
+    }
+   ],
+   "lamps": [
+    {
+     "id": "l1",
+     "t": "Before: Florida’s first peoples",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "l2",
+     "t": "New diseases",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "l3",
+     "t": "Missions and the labor draft",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "l4",
+     "t": "Raids",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "l5",
+     "t": "Forced to move, and the long result",
+     "paras": [
+      "p4",
+      "p5",
+      "p6"
+     ]
+    }
+   ],
+   "alt": "A string of five paper lanterns hanging over a dark path",
+   "startT": "Tap the first lantern to light it.",
+   "countT": "lanterns lit. Read this part, then light the next one.",
+   "allT": "All five lanterns are lit. You read the whole story.",
+   "orderT": "Light the lanterns in order: tap the one with the soft outline.",
+   "nextT": "Light lantern {n}",
+   "why": {
+    "icon": "🏮",
+    "q": "Why lanterns?",
+    "t": "A lantern gives a small, steady light, just enough to see the next step on a dark path. This part of history is hard, so we read it one small light at a time. People also light lanterns and candles to remember those who are gone."
+   }
+  },
+  "evidence": {
+   "type": "whatchanged",
+   "kicker": "What did it change?",
+   "h": "Before the changes: a day of planting",
+   "voice": "This engraving shows a day of planting before the big changes. Tap an effect card, then tap the number on the picture for the part of farming life it disrupted.",
+   "img": "source-4-06-06-timucua-planting.jpg",
+   "tag": "Before",
+   "alt": "The labeled engraving of Timucua farmers: a man breaking up the soil with a hoe, a woman dropping seeds into rows of holes, and a basket of seed",
+   "parts": [
+    {
+     "id": "p1",
+     "n": "1",
+     "x": 39.88,
+     "y": 46.01,
+     "t": "Breaking up the soil"
+    },
+    {
+     "id": "p3",
+     "n": "3",
+     "x": 6.5,
+     "y": 38.62,
+     "t": "Dropping in the seeds"
+    },
+    {
+     "id": "p4",
+     "n": "4",
+     "x": 7,
+     "y": 78.88,
+     "t": "The planted fields"
+    },
+    {
+     "id": "p5",
+     "n": "5",
+     "x": 26.07,
+     "y": 91.21,
+     "t": "Seed for next year"
+    }
+   ],
+   "cards": [
+    {
+     "id": "w1",
+     "ico": "🤒",
+     "t": "New diseases",
+     "part": "p3",
+     "why": "So many people got sick and died that far fewer were left to plant.",
+     "miss": "Disease took people from every family. Which number shows people planting the seeds?"
+    },
+    {
+     "id": "w2",
+     "ico": "⛏️",
+     "t": "The labor draft",
+     "part": "p1",
+     "why": "Men were sent away to work for the Spanish, so fewer were home to break up the soil.",
+     "miss": "The labor draft took men away from their towns. Which number shows a man’s job in the field?"
+    },
+    {
+     "id": "w3",
+     "ico": "🔥",
+     "t": "Slave raids",
+     "part": "p4",
+     "why": "Raiders burned mission towns and captured the people who worked these fields.",
+     "miss": "Raiders burned towns and took people away. Which number shows the fields those towns lived on?"
+    },
+    {
+     "id": "w4",
+     "ico": "🧭",
+     "t": "Being forced to move",
+     "part": "p5",
+     "why": "Families who had to leave their homelands could not plant their seed in their home fields again.",
+     "miss": "Think about next year’s planting. Which number holds the seed a family would plant again at home?"
+    }
+   ],
+   "countT": "effects placed.",
+   "hotT": "Last step: tap every gold number on the picture above.",
+   "readT": "Last step: light every lantern in Learn the Story at the top of this tab.",
+   "win": "You matched each effect to the part of daily life it broke apart. That is what an effect means for real people.",
+   "why": {
+    "icon": "🌱",
+    "q": "Why use a farming picture?",
+    "t": "Farming fed every Timucua town. To see what colonization changed, historians first look at what life was like before. This engraving shows a normal day of planting, so you can see which parts of that life each effect broke apart."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the picture.",
+    "Read the questions under the picture.",
+    "Do What did it change?: match each effect to the part of farming life it disrupted."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the picture to see what it shows.",
+  "allT": "Now try What did it change? below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 39.88,
+    "y": 46.01,
+    "title": "Breaking up the soil.",
+    "t": "A man breaks up the soil with a hoe. The words printed with this picture say the hoes were made of fish bone fitted to wooden handles."
+   },
+   {
+    "n": "2",
+    "x": 38.73,
+    "y": 28.35,
+    "title": "Making holes.",
+    "t": "Someone walks ahead and makes holes in the ground with a stick."
+   },
+   {
+    "n": "3",
+    "x": 4.98,
+    "y": 38.62,
+    "title": "Dropping in seeds.",
+    "t": "Women follow and drop beans or corn seeds into the holes from a basket."
+   },
+   {
+    "n": "4",
+    "x": 6.13,
+    "y": 78.88,
+    "title": "Rows of holes.",
+    "t": "The holes are planted in long, even rows across the field."
+   },
+   {
+    "n": "5",
+    "x": 26.07,
+    "y": 91.21,
+    "title": "A basket of seed.",
+    "t": "A big basket holds seed for planting. Saving seed from one harvest to plant the next year was part of farming life."
+   }
+  ]
+ },
+ "planner": {
+  "type": "stones",
+  "voice": "Lay the four stepping stones in order: tap the event that comes next. Then pick a because that joins two stones. These are just notes. You’ll write your own sentences in Step 3.",
+  "q1": "Tap the event that comes next",
+  "q2": "Pick a because that joins two stones",
+  "stoneLab": "Stone",
+  "bcLab": "Because",
+  "events": [
+   {
+    "id": "e1",
+    "ico": "⛵",
+    "t": "Europeans arrive in Florida",
+    "miss": "Not yet. Start at the beginning: who had to arrive before anything else could change?"
+   },
+   {
+    "id": "e2",
+    "ico": "⛪",
+    "t": "Spanish missions are set up in Native towns",
+    "miss": "Not yet. What did the Spanish set up in Native towns after they arrived?"
+   },
+   {
+    "id": "e3",
+    "ico": "🔥",
+    "t": "New diseases and conflict spread",
+    "miss": "Not yet. What spread through the mission towns next?"
+   },
+   {
+    "id": "e4",
+    "ico": "🧭",
+    "t": "Many Native communities shrink or are forced to move",
+    "miss": "Not yet. The last stone is the result of all the others."
+   }
+  ],
+  "becauses": [
+   {
+    "id": "b1",
+    "at": 0,
+    "t": "Because Europeans came to Florida, Spain set up missions in Native towns"
+   },
+   {
+    "id": "b2",
+    "at": 1,
+    "t": "Because the missions brought many people together, new diseases spread more easily"
+   },
+   {
+    "id": "b3",
+    "at": 2,
+    "t": "Because disease and raids took so many lives, many communities could not stay in their homelands"
+   }
+  ],
+  "doneT": "Your path is laid. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "🪨",
+   "q": "Why stepping stones?",
+   "t": "When you cross a creek on stepping stones, you can’t skip to the last one. Each step depends on the one before it. Cause and effect works the same way, so you lay the events like stones on a path."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "the events",
+    "rx": "arriv|came|mission|disease|sick|conflict|raid|war|move|displac|declin|shrink|left|leave"
+   },
+   {
+    "t": "a because",
+    "rx": "because|led to|as a result|caused|cause|so\\b|since|that.?s why"
+   },
+   {
+    "t": "a real detail",
+    "rx": "evidence|because|picture|engraving|label|number|1591|1564|1702|1704|1706|1711|1,?000|thousand|smallpox|measles|mission|labor|draft|raid|carolina|creek|yamasee|mobile|louisiana|cuba|talimali|hoe|seed|field|farm|corn|bean|lantern|map|homeland|read|story"
+   }
+  ],
+  "lines": [
+   "Start with the first event.",
+   "Good. Now explain how one event led to the next.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Two questions. Use the map, the lanterns, and What did it change?"
+  },
+  {
+   "t": "Plan",
+   "w": "Lay the path: four events in order, and a because."
+  },
+  {
+   "t": "Write",
+   "w": "Write the four events in order, then 2 to 3 sentences about how one led to another. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Timeline Thread"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Timeline Thread and check off the whole list.",
+ "vocab": {
+  "type": "memorypath",
+  "kicker": "The Memory Path",
+  "h": "memor = remember",
+  "root": "memor",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match sets one stone on the path.",
+  "words": [
+   {
+    "w": "memory",
+    "root": "memor",
+    "m": "something you keep in your mind from the past",
+    "miss": "This meaning names something inside your mind. Which word ends in -y?",
+    "say": "Memory. Something you keep in your mind from the past."
+   },
+   {
+    "w": "memorial",
+    "root": "memor",
+    "m": "a place or object made to help people remember someone or something",
+    "miss": "This meaning names a place or an object. Which word is a thing you can visit?",
+    "say": "Memorial. A place or object made to help people remember someone or something."
+   },
+   {
+    "w": "remember",
+    "root": "mem",
+    "m": "to bring something back to mind",
+    "miss": "This is something you do in your head. Which word do you say when a thought comes back?",
+    "say": "Remember. To bring something back to mind."
+   },
+   {
+    "w": "commemorate",
+    "root": "memor",
+    "m": "to honor and remember a person or event in a special way",
+    "miss": "Com- means “together.” Which long word means honoring a memory, often together?",
+    "say": "Commemorate. To honor and remember a person or event in a special way."
+   }
+  ],
+  "win": "🪨 Every stone on the path is set. <b>memor</b> = remember",
+  "why": {
+   "icon": "🪨",
+   "q": "Why a path of stones?",
+   "t": "<em>Memor</em> is a Latin word for “remembering.” People often set stones along a path or at a special place to help them remember. Each word you match sets one stone on your memory path."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Meet the people first",
+   "at": "scene1",
+   "script": "Before we talk about what changed, let’s meet the people who were here. The Timucua, the Apalachee, and the Calusa each had towns, families, and their own language. As you place each name, say it out loud. Saying someone’s name is one way to show respect."
+  },
+  {
+   "slot": "guide2",
+   "label": "Say what you noticed",
+   "at": "s1done",
+   "script": "Look back at your map. Pause me, and pick one people. Tell me one thing about how they lived, in a full sentence. Then go to the Explore tab and light the first lantern."
+  },
+  {
+   "slot": "guide3",
+   "label": "Why we go slowly",
+   "at": "afterread",
+   "script": "When something sad happens in a family, we don’t rush past it. We slow down and tell the story carefully. That’s what you just did with these lanterns. Pause me and think: which part was the hardest to read, and why?"
+  },
+  {
+   "slot": "guide4",
+   "label": "Before and after",
+   "at": "evidence",
+   "script": "This engraving shows a day of planting, before the big changes. Now think about each effect from the lanterns. If many people got sick, who would do this work? Match each effect to the part of the picture it would break apart."
+  },
+  {
+   "slot": "guide5",
+   "label": "One step leads to the next",
+   "at": "plan",
+   "script": "Think about crossing a creek on stepping stones. You can’t jump to the last stone. Each step depends on the one before it. History works that way too. Lay your four stones in order, then pick a because that connects two of them."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "Before Europeans came, the Timucua, Apalachee, and Calusa each had their own homeland, language, and way of life.",
+   "New diseases, like smallpox and measles, caused the greatest loss of life.",
+   "The missions changed religion, work, and daily life. Under the labor draft, Native men were sent away to work for the Spanish.",
+   "From 1702 to 1706, English soldiers from Carolina and their Creek and Yamasee allies burned mission towns and captured thousands of Native people. In 1704 alone, more than 1,000 Apalachee were taken.",
+   "Many Native people were displaced. Some Apalachee families moved west, and their descendants, the Talimali Band of Apalachee, live in Louisiana today."
+  ],
+  "vocab": [
+   [
+    "colonization",
+    "when one group settles and takes control of land where other people already live"
+   ],
+   [
+    "disease",
+    "a sickness"
+   ],
+   [
+    "consequence",
+    "something that happens because of something else"
+   ],
+   [
+    "culture",
+    "a people’s way of life: their language, beliefs, foods, and customs"
+   ],
+   [
+    "mission",
+    "a church town run by Catholic priests called friars"
+   ],
+   [
+    "labor draft",
+    "a rule that made each mission town send men to work for the Spanish"
+   ],
+   [
+    "slave raid",
+    "an attack to capture people and sell them into slavery"
+   ],
+   [
+    "displaced",
+    "forced to leave your home"
+   ],
+   [
+    "descendant",
+    "a person who comes later in a family, like a grandchild"
+   ],
+   [
+    "courtesy",
+    "treating people with care and respect"
+   ],
+   [
+    "memory",
+    "something you keep in your mind from the past"
+   ],
+   [
+    "memorial",
+    "a place or object made to help people remember someone or something"
+   ],
+   [
+    "remember",
+    "to bring something back to mind"
+   ],
+   [
+    "commemorate",
+    "to honor and remember a person or event in a special way"
+   ]
+  ],
+  "wordParts": "The Latin root memor means “remembering” or “mindful.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "one effect",
+    "rx": "disease|sick|smallpox|measles|mission|labor|work|raid|slave|captur|conflict|war|fight|attack|move|displac|left|leave|lost|loss|died|die|death|culture|religion|burn",
+    "n": 1
+   },
+   {
+    "t": "your evidence",
+    "rx": "evidence|because|picture|engraving|label|number|1591|1564|1702|1704|1706|1711|1,?000|thousand|smallpox|measles|mission|labor|draft|raid|carolina|creek|yamasee|mobile|louisiana|cuba|talimali|hoe|seed|field|farm|corn|bean|lantern|map|homeland|read|story",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "why it matters",
+    "rx": "honest|true|truth|respect|care|real|remember|honor|learn|forget|matter|important|fair|people|famil",
+    "n": 1
+   },
+   {
+    "t": "a reason",
+    "rx": "because|so\\b|that way|if we|otherwise|so that|since|help",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the lanterns in the Explore tab (tab 2), or at What did it change?",
+   "Pick one effect: disease, the missions, raids, or being forced to move. What detail shows it really happened?",
+   "Try this shape: “One effect was ___. My evidence is ___.”"
+  ],
+  "journal-q2": [
+   "Think about courtesy: treating people with care and respect.",
+   "What would be lost if we skipped this part of history, or told it carelessly?",
+   "Try this shape: “We should study this honestly because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: the engraving was made by a European, not a Timucua artist. How might that change what it shows?",
+  "journal-q2": "Go further: descendants of some of these peoples are alive today. How might they want this history told?"
+ },
+ "quizMiss": [
+  {
+   "a": "Some people did have to move, but that isn’t what caused most deaths. Reread lantern 2.",
+   "c": "People kept farming when they could. Reread lantern 2 about new diseases.",
+   "d": "The weather didn’t change because Europeans came. What did Europeans bring that Native peoples had never faced?"
+  },
+  {
+   "a": "Reread lantern 3. Did the missions leave daily life the same?",
+   "c": "Native peoples did not rule Spain. Reread lantern 3.",
+   "d": "The missions had a big effect. Reread lantern 3 about the labor draft."
+  },
+  {
+   "b": "These were real people with real losses, so we study this with care.",
+   "c": "Skipping the hard parts leaves out the truth. Historians tell the whole story.",
+   "d": "Historians never make up details. They use evidence."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2116,204 +2879,73 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Effects of Colonization on Florida's Native Peoples ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: empty canoe landing — a dugout canoe pulled up on a quiet riverbank at dawn, cypress trees and mist (4.06.06 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawn on a quiet Florida river: tall cypress trees with mist drifting between them, and an empty dugout canoe resting on the riverbank." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b604sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8E0D0"/>
-      <stop offset="45%" stop-color="#C8C0B8"/>
-      <stop offset="100%" stop-color="#9AA4B4"/>
+    <linearGradient id="b606sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5D6E8C"/>
+      <stop offset=".5" stop-color="#B9A6B4"/>
+      <stop offset=".85" stop-color="#EBC9A6"/>
+      <stop offset="1" stop-color="#F3DDB8"/>
     </linearGradient>
-    <linearGradient id="b604field" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A0B048"/>
-      <stop offset="100%" stop-color="#5A6A28"/>
+    <linearGradient id="b606water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9B8B4"/>
+      <stop offset="1" stop-color="#6E7C8E"/>
     </linearGradient>
-    <linearGradient id="b604tower" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8D0A0"/>
-      <stop offset="100%" stop-color="#A88858"/>
+    <linearGradient id="b606mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF6EA" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#FFF6EA" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#FFF6EA" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="b604glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#E8DCC0" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#E8DCC0" stop-opacity="0"/>
-    </radialGradient>
+    <radialGradient id="b606sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFE9C0" stop-opacity=".95"/><stop offset="1" stop-color="#FFE9C0" stop-opacity="0"/></radialGradient>
     <style>
-      .b604bell { animation: b604bell 2.4s ease-in-out infinite; transform-origin: top center; transform-box: fill-box; }
-      @keyframes b604bell { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-      .b604wave { animation: b604wave 6s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b604wave { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-      .b604smoke { animation: b604smoke 7s ease-in-out infinite; }
-      @keyframes b604smoke { 0% { transform: translateY(0); opacity: 0.5; } 100% { transform: translateY(-35px); opacity: 0; } }
-      .b604sun { animation: b604sun 5s ease-in-out infinite; }
-      @keyframes b604sun { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+      .b606mist { animation: b606drift 18s ease-in-out infinite; }
+      .b606mist.m2 { animation-duration: 24s; animation-delay: -8s; }
+      @keyframes b606drift { 50% { transform: translateX(26px); opacity: .7; } }
+      .b606rip { animation: b606rip 7s ease-in-out infinite; } .b606rip.r2 { animation-delay: 2.4s; } .b606rip.r3 { animation-delay: 4.8s; }
+      @keyframes b606rip { 50% { opacity: .2; } }
+      @media (prefers-reduced-motion: reduce) { .b606mist, .b606rip { animation: none; } }
     </style>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="170" fill="url(#b604sky)"/>
-
-  <!-- Morning sun -->
-  <g class="b604sun">
-    <circle cx="170" cy="60" r="50" fill="url(#b604glow)"/>
-    <circle cx="170" cy="60" r="22" fill="#E8DCC0" opacity="0.75"/>
+  <rect width="920" height="200" fill="url(#b606sky)"/>
+  <!-- the low dawn sun behind the trees -->
+  <ellipse cx="610" cy="112" rx="170" ry="60" fill="url(#b606sun)"/>
+  <circle cx="610" cy="114" r="15" fill="#FFF0D2" opacity=".85"/>
+  <!-- far shore of cypress, pale in the mist -->
+  <g fill="#8E8A9C" opacity=".5">
+    <path d="M0,118 L0,102 Q10,90 20,99 Q26,89 33,94 Q42,87 51,99 Q61,93 70,98 Q80,91 89,97 Q99,91 109,101 Q116,92 124,99 Q133,87 142,96 Q150,91 159,102 Q165,99 172,102 Q181,96 190,102 Q197,92 204,95 Q214,92 224,102 Q231,87 239,95 Q245,91 251,100 Q258,93 265,104 Q274,91 282,96 Q291,87 300,98 Q311,89 321,103 Q329,97 337,100 Q346,96 356,102 Q367,86 377,94 Q385,88 392,100 Q399,94 405,100 Q411,92 416,103 Q425,87 433,95 Q442,89 451,97 Q457,91 463,99 Q469,92 475,96 Q485,91 495,101 Q500,97 505,102 Q510,91 515,97 Q526,91 536,100 Q543,94 550,98 Q557,89 565,95 Q576,91 587,95 Q594,91 602,101 Q609,95 616,104 Q623,98 629,104 Q640,92 650,101 Q660,92 671,98 Q681,91 691,102 Q699,95 707,99 Q716,90 725,98 Q731,95 736,101 Q743,92 750,99 Q759,87 769,96 Q774,87 779,95 Q788,87 796,98 Q803,92 809,99 Q820,89 831,97 Q838,89 846,103 Q854,93 863,97 Q871,88 879,99 Q884,89 890,98 Q897,92 904,102 Q911,93 918,101 L920,118 Z"/>
   </g>
-
-  <!-- Distant pine treeline -->
-  <g fill="#2A5A3A" opacity="0.55">
-    <path d="M 0 165 L 35 142 L 60 165 L 100 148 L 135 165 L 175 145 L 215 165 L 260 148 L 300 165 L 350 145 L 390 165 L 440 148 L 480 165 L 530 145 L 575 165 L 620 148 L 665 165 L 715 145 L 755 165 L 800 148 L 845 165 L 890 145 L 920 165 L 920 170 L 0 170 Z"/>
+  <!-- the river -->
+  <rect y="116" width="920" height="84" fill="url(#b606water)"/>
+  <g stroke="#F6E6D2" stroke-width="1.3" stroke-linecap="round" opacity=".5" fill="none">
+    <path class="b606rip" d="M420,140 h60 M560,132 h44 M690,148 h52"/>
+    <path class="b606rip r2" d="M330,160 h40 M600,166 h70 M790,158 h40"/>
+    <path class="b606rip r3" d="M480,182 h50 M720,186 h36"/>
   </g>
-
-  <!-- Mission cornfield foreground band -->
-  <rect y="170" width="920" height="90" fill="url(#b604field)"/>
-  <!-- Field furrow lines -->
-  <g stroke="#3A4818" stroke-width="0.6" opacity="0.45">
-    <line x1="0" y1="180" x2="920" y2="180"/>
-    <line x1="0" y1="190" x2="920" y2="192"/>
-    <line x1="0" y1="200" x2="920" y2="202"/>
-    <line x1="0" y1="212" x2="920" y2="214"/>
-    <line x1="0" y1="224" x2="920" y2="226"/>
-    <line x1="0" y1="236" x2="920" y2="238"/>
-    <line x1="0" y1="248" x2="920" y2="250"/>
+  <!-- near cypress trees on the left bank, with knees at the water -->
+  <g fill="#3E3A44">
+    <path d="M63.6,172 Q72.6,162 73.95,142 L76.38,40 L79.62,40 L82.05,142 Q83.4,162 92.4,172 Z"/><ellipse cx="58" cy="34" rx="14" ry="6"/><ellipse cx="96" cy="30" rx="15" ry="6"/><ellipse cx="78" cy="26" rx="22" ry="8"/><ellipse cx="67" cy="48" rx="14" ry="5"/><ellipse cx="91" cy="52" rx="13" ry="5"/><ellipse cx="78" cy="66" rx="11" ry="4"/><path d="M146.8,168 Q153.8,158 154.85,138 L156.74,66 L159.26,66 L161.15,138 Q162.2,158 169.2,168 Z"/><ellipse cx="143" cy="60" rx="11" ry="5"/><ellipse cx="172" cy="56" rx="12" ry="5"/><ellipse cx="158" cy="52" rx="17" ry="6"/><ellipse cx="150" cy="74" rx="10" ry="4"/><ellipse cx="168" cy="78" rx="10" ry="4"/><ellipse cx="158" cy="92" rx="8" ry="4"/><path d="M20.4,174 Q26.4,164 27.3,144 L28.92,78 L31.08,78 L32.7,144 Q33.6,164 39.6,174 Z"/><ellipse cx="17" cy="72" rx="10" ry="4"/><ellipse cx="42" cy="68" rx="10" ry="4"/><ellipse cx="30" cy="64" rx="14" ry="5"/><ellipse cx="23" cy="86" rx="9" ry="4"/><ellipse cx="38" cy="90" rx="8" ry="4"/><ellipse cx="30" cy="104" rx="7" ry="3"/>
+    <path d="M110,174 q4,-12 8,0 Z M128,176 q3,-9 6,0 Z M188,172 q4,-11 8,0 Z"/>
   </g>
-
-  <!-- ═══ LEFT: BELL TOWER (church bell calling daily rhythm) ═══ -->
-  <g transform="translate(165 175)">
-    <!-- Tower base -->
-    <rect x="-18" y="-95" width="36" height="95" fill="url(#b604tower)" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Stone texture -->
-    <g stroke="#8A6A40" stroke-width="0.5" opacity="0.5">
-      <line x1="-18" y1="-75" x2="18" y2="-75"/>
-      <line x1="-18" y1="-55" x2="18" y2="-55"/>
-      <line x1="-18" y1="-35" x2="18" y2="-35"/>
-      <line x1="-18" y1="-15" x2="18" y2="-15"/>
-      <line x1="0" y1="-95" x2="0" y2="0"/>
-    </g>
-    <!-- Top: open belfry -->
-    <rect x="-22" y="-115" width="44" height="22" fill="#D8B888" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Belfry archway opening (visible through) -->
-    <path d="M -16 -94 L -16 -106 Q -16 -112 -10 -112 L 10 -112 Q 16 -112 16 -106 L 16 -94 Z" fill="#3A2510"/>
-    <!-- BELL — animated swing via nested g (outer translate, inner rotates) -->
-    <g transform="translate(0 -110)">
-      <g class="b604bell">
-        <!-- Bell rope/hanger -->
-        <line x1="0" y1="0" x2="0" y2="2" stroke="#3A2510" stroke-width="0.8"/>
-        <!-- Bell body -->
-        <path d="M -6 2 Q -7 12 -5 15 L 5 15 Q 7 12 6 2 L 4 2 Q 4 -1 0 -1 Q -4 -1 -4 2 Z" fill="#C8A858" stroke="#6A4520" stroke-width="1"/>
-        <!-- Highlight -->
-        <path d="M -3 6 Q -3 10 -2 13" stroke="#FFE5A0" stroke-width="0.6" fill="none" opacity="0.7"/>
-        <!-- Clapper -->
-        <circle cx="0" cy="14" r="1.2" fill="#3A2510"/>
-      </g>
-    </g>
-    <!-- Roof -->
-    <path d="M -28 -115 L 0 -138 L 28 -115 Z" fill="#7A4828" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-150" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-144" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Door at base -->
-    <path d="M -7 0 L -7 -22 Q -7 -28 0 -28 Q 7 -28 7 -22 L 7 0 Z" fill="#3A2010"/>
+  <!-- Spanish moss -->
+  <g stroke="#9A9AA0" stroke-width="1.4" fill="none" opacity=".75">
+    <path d="M60,34 q-2,10 1,18 q-2,6 0,12"/><path d="M98,32 q2,10 -1,16 q2,6 0,10"/><path d="M146,58 q-2,8 1,14"/><path d="M80,52 q-2,8 1,12"/>
   </g>
-
-  <!-- ═══ CENTER-LEFT: Friar's small smoke from chimney (cooking fire) ═══ -->
-  <g transform="translate(220 100)">
-    <g class="b604smoke">
-      <ellipse cx="0" cy="0" rx="6" ry="3" fill="#D8D0C8"/>
-      <ellipse cx="-3" cy="-5" rx="4" ry="2.5" fill="#E0D8D0"/>
-      <ellipse cx="2" cy="-9" rx="3" ry="2" fill="#E8E0D8"/>
-    </g>
+  <!-- the bank -->
+  <path d="M0,176 C80,166 170,170 240,164 C300,160 340,166 380,172 L380,200 L0,200 Z" fill="#5E5644"/>
+  <path d="M0,182 C90,174 180,178 250,172 C310,168 340,174 370,180" fill="none" stroke="#7A6E54" stroke-width="2" opacity=".6"/>
+  <!-- the empty dugout canoe, pulled up on the bank with its bow toward the water -->
+  <g>
+    <path d="M196,172 C230,180 300,182 362,174 C368,172 372,168 370,166 C330,170 250,170 200,164 C194,164 192,170 196,172 Z" fill="#6A4A2E" stroke="#3E2A18" stroke-width="1.4"/>
+    <path d="M206,167 C250,172 320,172 362,168" fill="none" stroke="#8E6A44" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M214,168 C260,174 320,174 352,170" fill="none" stroke="#3E2A18" stroke-width="1" opacity=".5"/>
   </g>
-
-  <!-- ═══ CENTER: CORN STALKS (the staple Apalachee + mission crop) ═══ -->
-  <g transform="translate(380 215)">
-    <g class="b604wave">
-      <line x1="0" y1="20" x2="0" y2="-32" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-15" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-20" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="0" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-5" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <!-- Corn ear -->
-      <ellipse cx="2" cy="-22" rx="2.5" ry="6" fill="#D8B040"/>
-      <line x1="2" y1="-30" x2="4" y2="-36" stroke="#A88030" stroke-width="0.6"/>
-    </g>
-  </g>
-  <g transform="translate(420 215)">
-    <g class="b604wave" style="animation-delay:0.6s;">
-      <line x1="0" y1="20" x2="0" y2="-30" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-13" rx="3" ry="9" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-18" rx="3" ry="9" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-30" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(460 215)">
-    <g class="b604wave" style="animation-delay:1.2s;">
-      <line x1="0" y1="20" x2="0" y2="-34" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-17" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-22" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="-2" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-7" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <ellipse cx="2" cy="-24" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- ═══ RIGHT-CENTER: Spanish cattle (new species introduced by missions) ═══
-       Just a silhouette of a long-backed cow. -->
-  <g transform="translate(620 230)" opacity="0.85">
-    <!-- Body -->
-    <ellipse cx="0" cy="0" rx="32" ry="11" fill="#5A3818"/>
-    <!-- Legs -->
-    <rect x="-22" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="-12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="22" y="6" width="4" height="14" fill="#3A2010"/>
-    <!-- Head -->
-    <ellipse cx="-32" cy="-5" rx="10" ry="7" fill="#6A4820"/>
-    <!-- Horns -->
-    <path d="M -38 -10 Q -42 -16 -38 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <path d="M -30 -10 Q -26 -16 -30 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <!-- Eye -->
-    <circle cx="-36" cy="-5" r="0.8" fill="#1A0A05"/>
-    <!-- Tail -->
-    <path d="M 32 -3 Q 38 -2 36 6" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-  </g>
-
-  <!-- Second small cow farther back -->
-  <g transform="translate(720 220)" opacity="0.6">
-    <ellipse cx="0" cy="0" rx="20" ry="7" fill="#5A3818"/>
-    <rect x="-14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="-6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <ellipse cx="-20" cy="-3" rx="6" ry="4" fill="#6A4820"/>
-  </g>
-
-  <!-- ═══ RIGHT FOREGROUND: woven basket of harvest (corn, beans, squash) ═══ -->
-  <g transform="translate(840 235)">
-    <!-- Basket -->
-    <path d="M -22 -5 L -16 18 L 16 18 L 22 -5 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Weave texture -->
-    <g stroke="#5A3818" stroke-width="0.6" opacity="0.55" fill="none">
-      <path d="M -22 -5 Q 0 0 22 -5"/>
-      <path d="M -20 2 Q 0 7 20 2"/>
-      <path d="M -18 9 Q 0 14 18 9"/>
-    </g>
-    <!-- Contents: corn ears, beans, squash poking out -->
-    <ellipse cx="-8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(-15)"/>
-    <ellipse cx="0" cy="-9" rx="3" ry="6" fill="#E8C040"/>
-    <ellipse cx="8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(15)"/>
-    <!-- Beans -->
-    <ellipse cx="-12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <ellipse cx="12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <!-- Squash -->
-    <circle cx="-4" cy="-3" r="4" fill="#E89040" stroke="#7A4818" stroke-width="0.5"/>
-    <line x1="-4" y1="-7" x2="-2" y2="-9" stroke="#3A4818" stroke-width="0.6"/>
-  </g>
-
-  <!-- Corner accent marks -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
-  </g>
+  <!-- a paddle laid across the bank -->
+  <path d="M252,186 L322,178" stroke="#7A5A3A" stroke-width="2.4" stroke-linecap="round"/>
+  <ellipse cx="330" cy="177" rx="10" ry="3.6" transform="rotate(-7 330 177)" fill="#7A5A3A"/>
+  <!-- low mist -->
+  <rect class="b606mist" x="120" y="102" width="520" height="22" rx="11" fill="url(#b606mist)"/>
+  <rect class="b606mist m2" x="420" y="126" width="460" height="16" rx="8" fill="url(#b606mist)"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3896,5 +4528,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
