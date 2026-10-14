@@ -1880,6 +1880,900 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.06.08",
+ "title": "Early Florida Source Notebook",
+ "quiet": false,
+ "file": {
+  "n": 6,
+  "title": "Spanish Florida",
+  "label": "Spanish Florida",
+  "seals": [
+   "📄",
+   "🖍️",
+   "🎀"
+  ]
+ },
+ "prevFile": "Architecture and Artifacts",
+ "connector": "Last time we read buildings and objects as evidence. Today we gather every source from this wing into one notebook, and then the door at the end opens.",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Scattered Pages",
+   "t": "Gather the pages",
+   "why": "Put the wing’s notebook pages back in time order. Each page shows a source from an earlier file."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Highlight, then fill a page",
+   "why": "Highlight a sample notebook entry line by line to read the story. Then build one entry from a 1783 map of St. Augustine."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Bookmark, then write",
+   "why": "Answer two questions. Then list three events in order, write one Source / Detail / Explanation, and explain one cause and effect."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This is the last file in the wing, and I can see the door from here!",
+  "opening": [
+   "This file is about keeping evidence organized. For each source, a historian writes three lines: where it comes from, one thing it shows, and what that means.",
+   "Start in the Scattered Pages tab (tab 1). Scroll down to the pages on the floor, under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the pages",
+      "go": true,
+      "reply": "Find the page with the earliest year and tap it, or drag it into the notebook. Then find the next one."
+     },
+     {
+      "t": "What’s a source?",
+      "reply": "Anything that tells us about the past: a map, a picture, a letter, a building. It’s where the information comes from."
+     },
+     {
+      "t": "Why is the door locked?",
+      "reply": "Canvas wants all our early-Florida evidence organized before it lets us out of this wing."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Highlight the notebook entry one line at a time, and each line opens part of the story."
+     },
+     {
+      "t": "Why does the order matter?",
+      "reply": "Because one thing leads to the next. You can’t explain the missions until you know St. Augustine came first."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who made the map?",
+      "reply": "Tomás López, the Spanish king’s mapmaker. It was printed in Madrid in 1783."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next?",
+      "reply": "A new wing! The next file is about Fort Mose, a town near St. Augustine where people escaping slavery found freedom."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next wing."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every page is back in the notebook, in time order. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You highlighted every line and built a whole notebook entry from the 1783 map. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer two questions. Then list three events in order, write one Source / Detail / Explanation, and explain one cause and effect. Slip in the bookmarks first."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! The door at the end of the wing just swung open.",
+     "quiet": true
+    },
+    {
+     "t": "Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page. The settlements-and-missions wing is finished.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Honesty means your notebook tells what the sources really show, including the hard parts and what a source leaves out.",
+ "scene1": {
+  "type": "scatterpages",
+  "kicker": "Scattered pages",
+  "h": "Put the wing’s pages back in time order",
+  "voice": "A gust blew our notebook pages across the floor. Each page shows a source from an earlier file. Find the page with the earliest year and tap it, or drag it into the notebook. Then find the next one.",
+  "pages": [
+   {
+    "id": "p1",
+    "img": "source-4-06-06-timucua-planting.jpg",
+    "year": "Before 1513",
+    "t": "Native peoples farm and fish across Florida",
+    "file": "From file 4.06.06: a 1591 engraving of Timucua farmers",
+    "note": "Native peoples lived in Florida for thousands of years before Europeans came."
+   },
+   {
+    "id": "p2",
+    "img": "source-4-06-01-early-florida-map.jpg",
+    "year": "1513",
+    "t": "Juan Ponce de León reaches Florida",
+    "file": "From file 4.06.01: a 1591 map of Florida",
+    "note": "Explorers came first. Their maps show what Europeans were learning about Florida."
+   },
+   {
+    "id": "p3",
+    "img": "source-4-06-02-st-augustine-engraving.png",
+    "year": "1565",
+    "t": "Pedro Menéndez founds St. Augustine",
+    "file": "From file 4.06.02: an English map of the 1586 attack on St. Augustine",
+    "note": "St. Augustine is the oldest city in the United States that Europeans founded and people have lived in ever since."
+   },
+   {
+    "id": "p4",
+    "img": "source-4-06-03-apalachee-council-house.jpg",
+    "year": "1656",
+    "t": "Mission San Luis is built in Apalachee land",
+    "file": "From file 4.06.03: the rebuilt Apalachee Council House",
+    "note": "By then, Spanish missions stretched across north Florida."
+   },
+   {
+    "id": "p5",
+    "img": "source-4-06-07-castillo-wall.jpg",
+    "year": "1672–1695",
+    "t": "Workers build the Castillo de San Marcos from coquina, a shell stone",
+    "file": "From file 4.06.07: the Castillo’s coquina wall",
+    "note": "Native workers did much of the building."
+   },
+   {
+    "id": "p6",
+    "img": "source-4-06-05-castillo-seawall.jpg",
+    "year": "1740",
+    "t": "The English attack St. Augustine, and the Castillo holds",
+    "file": "From file 4.06.05: the Castillo’s walls by the bay",
+    "note": "The stone walls held, and the English gave up and left."
+   }
+  ],
+  "missT": "Not yet. Look at the years: which page comes next in time?",
+  "countT": "pages back in the notebook. Find the next one in time.",
+  "win": "📓 <b>The notebook is whole again.</b> Every page is back, in the order things happened.",
+  "why": {
+   "icon": "📓",
+   "q": "Why a notebook?",
+   "t": "Historians keep notes so they don’t lose track of their evidence. Writing down each source in time order shows how one event led to the next. These pages hold the sources you studied in this wing, so you’re putting the whole unit back together."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "highlighter",
+   "activity": "Building an Early Florida Source Notebook",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^This is the last file in the wing"
+    },
+    {
+     "id": "p1",
+     "match": "^SOURCE"
+    },
+    {
+     "id": "p2",
+     "match": "^DETAIL"
+    },
+    {
+     "id": "p3",
+     "match": "^EXPLANATION"
+    },
+    {
+     "id": "p4",
+     "match": "^Then put the events"
+    },
+    {
+     "id": "p5",
+     "match": "^And explain one cause"
+    },
+    {
+     "id": "p6",
+     "match": "^Why honesty matters"
+    }
+   ],
+   "intro": [
+    "p0"
+   ],
+   "cardT": "A notebook entry about the 1783 map",
+   "lines": [
+    {
+     "id": "l1",
+     "lab": "Source:",
+     "t": "A 1783 map of St. Augustine by Tomás López",
+     "c": "#FFE58A",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "l2",
+     "lab": "Detail:",
+     "t": "It shows stone quarries (places where stone is dug out) on Anastasia Island.",
+     "c": "#A9D8F5",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "l3",
+     "lab": "Explanation:",
+     "t": "Workers cut coquina there to build the Castillo.",
+     "c": "#B8E6B0",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "l4",
+     "lab": "When:",
+     "t": "1513 explorers → 1565 St. Augustine → 1656 San Luis",
+     "c": "#F8C9A0",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "l5",
+     "lab": "Because:",
+     "t": "Spain wanted to keep Florida, so it built a stone fort.",
+     "c": "#E6C6F2",
+     "paras": [
+      "p5"
+     ]
+    },
+    {
+     "id": "l6",
+     "lab": "Honest check:",
+     "t": "A Spanish mapmaker drew this map.",
+     "c": "#F5B5B5",
+     "paras": [
+      "p6"
+     ]
+    }
+   ],
+   "startT": "Swipe the highlighter across the first line, or tap it.",
+   "countT": "lines highlighted. Read this part, then highlight the next line.",
+   "allT": "Every line is highlighted. You read the whole story.",
+   "orderT": "Highlight the lines in order, starting with the one that glows.",
+   "nextT": "Highlight the next line: {l}",
+   "why": {
+    "icon": "🖍️",
+    "q": "Why a highlighter?",
+    "t": "When historians study a source, they often mark the parts that matter so they can find them again. Each line of this sample entry is one part of a good note. That’s why you highlight it line by line."
+   }
+  },
+  "evidence": {
+   "type": "fillentry",
+   "kicker": "Fill the notebook entry",
+   "h": "Build one entry from the 1783 map",
+   "voice": "Use the numbered labels on the map. First pick the line that names the source. Then pick one detail you can really see. Then pick the explanation that fits your detail.",
+   "src": [
+    {
+     "id": "s1",
+     "t": "A map of St. Augustine drawn by Tomás López, printed in Madrid in 1783",
+     "ok": true
+    },
+    {
+     "id": "s2",
+     "t": "A photo of St. Augustine taken last year",
+     "ok": false,
+     "miss": "Look at the box in the top left corner of the map. Does it say it’s a photo?"
+    },
+    {
+     "id": "s3",
+     "t": "Something I remember from a movie",
+     "ok": false,
+     "miss": "A source tells where the information really comes from. What does the box in the top left corner say?"
+    }
+   ],
+   "det": [
+    {
+     "id": "d1",
+     "n": "1",
+     "t": "A town with a wall around its square blocks",
+     "ok": true
+    },
+    {
+     "id": "d2",
+     "n": "2",
+     "t": "A star-shaped stone fort by the harbor",
+     "ok": true
+    },
+    {
+     "id": "d3",
+     "n": "3",
+     "t": "A Native town next to St. Augustine",
+     "ok": true
+    },
+    {
+     "id": "d4",
+     "n": "4",
+     "t": "Stone quarries on Anastasia Island",
+     "ok": true
+    },
+    {
+     "id": "d5",
+     "n": "5",
+     "t": "A note about the English attack of 1740",
+     "ok": true
+    },
+    {
+     "id": "d6",
+     "t": "The Spanish soldiers were brave and happy",
+     "ok": false,
+     "miss": "Can you see bravery or happiness on a map? A detail is something you can really see. Pick one of the numbered labels."
+    }
+   ],
+   "exp": {
+    "d1": [
+     {
+      "id": "x1",
+      "t": "St. Augustine was a planned town that needed protection.",
+      "ok": true
+     },
+     {
+      "id": "x2",
+      "t": "St. Augustine was a small farm with no buildings.",
+      "ok": false,
+      "miss": "Look again at label 1. Is it a farm, or a town with many blocks?"
+     }
+    ],
+    "d2": [
+     {
+      "id": "x3",
+      "t": "Spain built a strong fort to guard the town and the harbor.",
+      "ok": true
+     },
+     {
+      "id": "x4",
+      "t": "The fort was built to store food for the winter.",
+      "ok": false,
+      "miss": "Think about what you learned about the Castillo. What was a stone fort for?"
+     }
+    ],
+    "d3": [
+     {
+      "id": "x5",
+      "t": "Native people lived right next to the Spanish town.",
+      "ok": true
+     },
+     {
+      "id": "x6",
+      "t": "No Native people lived anywhere near St. Augustine.",
+      "ok": false,
+      "miss": "Label 3 says “Villa de Indios,” a Native town. Does that fit “no Native people”?"
+     }
+    ],
+    "d4": [
+     {
+      "id": "x7",
+      "t": "Workers cut coquina there to build the Castillo.",
+      "ok": true
+     },
+     {
+      "id": "x8",
+      "t": "People went there to buy shoes.",
+      "ok": false,
+      "miss": "Quarries are places where stone is dug out. What was the stone used for?"
+     }
+    ],
+    "d5": [
+     {
+      "id": "x9",
+      "t": "The Spanish fought off the English attack in 1740.",
+      "ok": true
+     },
+     {
+      "id": "x10",
+      "t": "The English took over St. Augustine in 1740.",
+      "ok": false,
+      "miss": "Read the note in the label key again. Who made whom flee?"
+     }
+    ]
+   },
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: highlight every line in Learn the Story at the top of this tab.",
+   "win": "✓ You built a whole notebook entry: where it comes from, one thing you can see, and what it means.",
+   "why": {
+    "icon": "🗺️",
+    "q": "Why this map?",
+    "t": "Tomás López was the Spanish king’s mapmaker. His 1783 map of St. Augustine shows many things from this unit in one place: the town, the Castillo, a Native town, and the quarries where the fort’s stone came from. That’s why it makes a good source for one notebook entry."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the map.",
+    "Read the questions under the map.",
+    "Do Fill the notebook entry: pick the source, a detail, and the explanation that fits."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now try Fill the notebook entry below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 54.67,
+    "y": 30.26,
+    "title": "The walled town.",
+    "t": "St. Augustine, with a wall around its square blocks."
+   },
+   {
+    "n": "2",
+    "x": 62.67,
+    "y": 39.84,
+    "title": "The Castillo de San Marcos.",
+    "t": "The star-shaped stone fort beside the harbor. Its pointed corners are bastions."
+   },
+   {
+    "n": "3",
+    "x": 77.0,
+    "y": 35.55,
+    "title": "A Native town.",
+    "t": "The map calls it “Villa de Indios,” a town of Native people living next to St. Augustine. Another one sits west of the town."
+   },
+   {
+    "n": "4",
+    "x": 43.33,
+    "y": 60.01,
+    "title": "The quarries.",
+    "t": "“Canteras” means quarries, places where stone is dug out. Workers cut coquina here, on Anastasia Island, for the Castillo."
+   },
+   {
+    "n": "5",
+    "x": 25.33,
+    "y": 80.69,
+    "title": "A note about 1740.",
+    "t": "In Spanish it says: “Here General Oglethorpe came ashore in the year 1740. Governor Don Manuel Montiano fought back hard and made him flee.”"
+   }
+  ]
+ },
+ "planner": {
+  "type": "ribbons",
+  "pick": 3,
+  "voice": "Slip a ribbon into the notebook at three events, earliest first. Then open one bookmarked page and plan its three lines, and pick a because. These are just notes. You’ll write your own sentences in Step 3.",
+  "q1": "Slip a ribbon in at three events, in time order",
+  "q2": "Open one bookmarked page and plan its three lines",
+  "q3": "Pick a because that connects two events",
+  "evLab": "Event",
+  "bcLab": "Because",
+  "orderT": "{a} came before {b}. Put the ribbons in time order: tap the earliest event first.",
+  "events": [
+   {
+    "id": "e1",
+    "y": 1513,
+    "year": "1513",
+    "t": "Juan Ponce de León reaches Florida",
+    "plan": {
+     "src": [
+      "The 1591 map of Florida by Le Moyne and de Bry"
+     ],
+     "det": [
+      "It shows Florida’s coast with many rivers and Native towns",
+      "It shows the names Europeans gave to rivers and places"
+     ],
+     "exp": [
+      "Europeans were learning what Florida looked like",
+      "Many Native peoples already lived in Florida"
+     ]
+    }
+   },
+   {
+    "id": "e2",
+    "y": 1565,
+    "year": "1565",
+    "t": "Pedro Menéndez founds St. Augustine",
+    "plan": {
+     "src": [
+      "The English map of the 1586 attack on St. Augustine"
+     ],
+     "det": [
+      "It shows ships, soldiers, and a wooden fort by the water",
+      "It shows the town by the harbor"
+     ],
+     "exp": [
+      "St. Augustine needed protection from attacks by sea",
+      "The Spanish built their town where ships could land"
+     ]
+    }
+   },
+   {
+    "id": "e3",
+    "y": 1656,
+    "year": "1656",
+    "t": "Mission San Luis is built in Apalachee land",
+    "plan": {
+     "src": [
+      "The photo of the rebuilt Apalachee Council House"
+     ],
+     "det": [
+      "It shows a huge round building with a tall roof",
+      "It shows a building big enough for hundreds of people"
+     ],
+     "exp": [
+      "The Apalachee were a large, organized nation",
+      "The Spanish built the mission next to an important Apalachee town"
+     ]
+    }
+   },
+   {
+    "id": "e4",
+    "y": 1672,
+    "year": "1672–1695",
+    "t": "Workers build the Castillo from coquina",
+    "plan": {
+     "src": [
+      "The photo of the Castillo’s coquina wall",
+      "The 1783 map of St. Augustine by Tomás López"
+     ],
+     "det": [
+      "The walls are thick blocks of shell stone",
+      "The map shows stone quarries on Anastasia Island"
+     ],
+     "exp": [
+      "Spain built a stone fort so St. Augustine could survive attacks",
+      "Workers carried coquina across the bay to build the fort"
+     ]
+    }
+   },
+   {
+    "id": "e5",
+    "y": 1740,
+    "year": "1740",
+    "t": "The English attack, and the Castillo holds",
+    "plan": {
+     "src": [
+      "The 1783 map of St. Augustine by Tomás López",
+      "The photo of the Castillo’s walls by the bay"
+     ],
+     "det": [
+      "A note on the map says the governor made General Oglethorpe flee",
+      "The thick walls still stand by the bay"
+     ],
+     "exp": [
+      "The stone fort kept St. Augustine Spanish",
+      "The coquina walls were strong enough to stop cannonballs"
+     ]
+    }
+   }
+  ],
+  "becauses": [
+   {
+    "id": "b1",
+    "t": "Because Spain founded St. Augustine, it later built missions across north Florida"
+   },
+   {
+    "id": "b2",
+    "t": "Because pirates and the English attacked, Spain built the stone Castillo"
+   },
+   {
+    "id": "b3",
+    "t": "Because the Castillo was so strong, the English attack of 1740 failed"
+   },
+   {
+    "id": "b4",
+    "t": "Because Europeans came, the lives of Native peoples changed forever"
+   }
+  ],
+  "doneT": "Your bookmarks are in. Now write your notebook entry in Step 3.",
+  "why": {
+   "icon": "🎀",
+   "q": "Why bookmarks?",
+   "t": "A ribbon bookmark marks a page you want to come back to. Your notebook needs three events in order, and one page you look at closely. That’s why you slip in three ribbons and open one."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "events in order",
+    "rx": "1513|1565|1656|1672|1695|1740|1763|first|then|next|after|before|later|last|finally|explorer|ponce|founded|mission|san luis|castillo|fort|attack"
+   },
+   {
+    "t": "source · detail · explanation",
+    "rx": "source|detail|explanation|map|photo|picture|engraving|drawing|shows|see|means"
+   },
+   {
+    "t": "a because",
+    "rx": "because|led to|as a result|caused|cause|so\\b|since|that.?s why"
+   }
+  ],
+  "lines": [
+   "Start with the first event, earliest first.",
+   "Good. Now add one Source, Detail, and Explanation.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong notebook entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Two questions. Use the pages, the highlighted entry, and the 1783 map."
+  },
+  {
+   "t": "Plan",
+   "w": "Slip in the bookmarks: three events in order, one page planned, and a because."
+  },
+  {
+   "t": "Write",
+   "w": "List three events in order, write one Source / Detail / Explanation, and explain one cause and effect. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Source Notebook and Timeline"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "focusglass",
+  "kicker": "The Focus Glass",
+  "h": "vid / vis = see",
+  "root": "vid",
+  "voice": "Slide the magnifying glass over each blurry word, or tap it, to bring it into focus and hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it.",
+  "words": [
+   {
+    "w": "evidence",
+    "root": "vid",
+    "m": "facts or things you can see that show something is true",
+    "miss": "This meaning is about proof you can see. Which word does a historian look for in a source?",
+    "say": "Evidence. Facts or things you can see that show something is true."
+   },
+   {
+    "w": "visible",
+    "root": "vis",
+    "m": "able to be seen",
+    "miss": "-ible means “able to be.” Which word means able to be seen?",
+    "say": "Visible. Able to be seen."
+   },
+   {
+    "w": "vision",
+    "root": "vis",
+    "m": "the ability to see",
+    "miss": "This meaning is about your eyes working. Which word ends in -ion?",
+    "say": "Vision. The ability to see."
+   },
+   {
+    "w": "video",
+    "root": "vid",
+    "m": "moving pictures you watch on a screen",
+    "miss": "In Latin, video means “I see.” Which word do you watch on a screen?",
+    "say": "Video. Moving pictures you watch on a screen."
+   }
+  ],
+  "win": "🔎 Every word is in focus. <b>vid / vis</b> = see",
+  "why": {
+   "icon": "🔎",
+   "q": "Why a magnifying glass?",
+   "t": "<em>Videre</em> is the Latin word for “to see.” Historians use magnifying glasses to see small details in old maps and papers, like the labels on the 1783 map. Each word you bring into focus has the root that means see."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "My backpack in June",
+   "at": "scene1",
+   "script": "At the end of every school year, I dump out my backpack, and papers go everywhere. To make sense of my year, I put them in order by date. These pages are from our whole wing. Look at the year on each one, and start with the earliest."
+  },
+  {
+   "slot": "guide2",
+   "label": "Say three lines",
+   "at": "s1done",
+   "script": "Pause me and pick one page in the notebook. Say three lines out loud: where it comes from, one thing you can see, and what it means. Then go to the Explore tab and pick up the highlighter."
+  },
+  {
+   "label": "A note on the map",
+   "at": "afterread",
+   "parts": [
+    {
+     "slot": "source-1",
+     "who": "Teacher",
+     "script": "The map you’re about to study was printed in Madrid in 1783. In the bottom left corner, the mapmaker wrote a short note in Spanish about the English attack of 1740. Here it is, read in English."
+    },
+    {
+     "slot": "source-2",
+     "who": "The note on Tomás López’s map, Madrid, 1783 (read in English)",
+     "script": "Here General Oglethorpe came ashore in the year 1740. Governor Don Manuel Montiano fought back hard and made him flee."
+    },
+    {
+     "slot": "source-3",
+     "who": "Teacher",
+     "script": "Notice whose side the note tells. A Spanish mapmaker wrote it, so it praises the Spanish governor. That’s honest history: name your source. Pause me and think: how might an English soldier have told the same story?"
+    }
+   ]
+  },
+  {
+   "slot": "guide4",
+   "label": "Grandpa’s photo album",
+   "at": "evidence",
+   "script": "Here’s a notebook entry from my own life. Source: my grandpa’s old photo album. Detail: in one picture, his street is a dirt road. Explanation: his town was much smaller back then. Now you build one from the map."
+  },
+  {
+   "slot": "guide5",
+   "label": "Bookmarks",
+   "at": "plan",
+   "script": "When I read a long book, I use bookmarks so I can find the good parts again. Slip your ribbons in at three events, earliest first. Then open one page and plan its three lines before you write."
+  }
+ ],
+ "cabinet": {
+  "n": 6
+ },
+ "notes": {
+  "learned": [
+   "A source notebook writes three lines for each piece of evidence: the Source (where it comes from), a Detail (one thing it shows), and an Explanation (what that detail means).",
+   "Early Florida in order: Native peoples first, then Juan Ponce de León in 1513, St. Augustine in 1565, Mission San Luis in 1656, the Castillo (1672–1695), and the English attack of 1740.",
+   "Tomás López’s 1783 map of St. Augustine shows the walled town, the Castillo, a Native town, and the coquina quarries on Anastasia Island.",
+   "Honest notes say what a source really shows, and who made it. A Spanish mapmaker tells the Spanish side of the story."
+  ],
+  "vocab": [
+   [
+    "source",
+    "where information about the past comes from"
+   ],
+   [
+    "detail",
+    "one specific fact a source shows"
+   ],
+   [
+    "explanation",
+    "what a detail means and how it connects"
+   ],
+   [
+    "chronology",
+    "the order of events in time"
+   ],
+   [
+    "mission record",
+    "a book the friars kept"
+   ],
+   [
+    "quarry",
+    "a place where stone is dug out"
+   ],
+   [
+    "honesty",
+    "telling what is true, even the hard parts"
+   ],
+   [
+    "evidence",
+    "facts or things you can see that show something is true"
+   ],
+   [
+    "visible",
+    "able to be seen"
+   ],
+   [
+    "vision",
+    "the ability to see"
+   ],
+   [
+    "video",
+    "moving pictures you watch on a screen"
+   ]
+  ],
+  "wordParts": "The Latin root vid / vis (from videre) means “to see.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a source",
+    "rx": "source|map|photo|picture|engraving|drawing|record|lopez|lópez|1783|1591|1589|council|castillo|fort|wall|letter|book",
+    "n": 1
+   },
+   {
+    "t": "a detail",
+    "rx": "detail|show|see|wall|town|fort|quarr|stone|coquina|native|indio|1740|label|number|river|ship|roof|block|tower|harbor|bay",
+    "n": 1
+   },
+   {
+    "t": "an explanation",
+    "rx": "explain|explanation|means|mean|because|so\\b|tells|shows that|needed|protect|built|lived|which|that.?s why",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "truth or honesty",
+    "rx": "truth|true|honest|real|really|fact|accurate|right|correct|lie|made up|make up|fake",
+    "n": 1
+   },
+   {
+    "t": "a reason",
+    "rx": "because|so\\b|that way|if we|otherwise|so that|since|help|keep|organiz|order|clear|remember|track|find",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the 1783 map in the Explore tab (tab 2), or at a page in the notebook (tab 1).",
+   "Name the source. Then pick one thing you can see. Then say what it means.",
+   "Try this shape: “Source: ___. Detail: ___. Explanation: ___.”"
+  ],
+  "journal-q2": [
+   "Think about today’s virtue: honesty.",
+   "What could go wrong if your notes were messy, or if you left out the parts you didn’t like?",
+   "Try this shape: “Organizing evidence helps tell the truth because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: who made your source? How might that change what it shows or leaves out?",
+  "journal-q2": "Go further: the 1783 map tells the Spanish side of 1740. Where could a historian look for the English side?"
+ },
+ "quizMiss": [
+  {
+   "a": "Copying the source word for word isn’t explaining it. What does the detail mean?",
+   "c": "A drawing can help, but the explanation is written in words. Reread the EXPLANATION part.",
+   "d": "A date tells when, not what it means. Reread the EXPLANATION part."
+  },
+  {
+   "a": "Explorers had to come before anyone could found a city. Who came first?",
+   "c": "The missions came after St. Augustine. Look at the When line you highlighted.",
+   "d": "St. Augustine (1565) came before the missions like San Luis (1656)."
+  },
+  {
+   "b": "Keeping only the happy parts leaves out the truth. Honest notes tell the whole story.",
+   "c": "Historians never make up details. They use evidence.",
+   "d": "Confusing sources still count. Historians look at them closely instead of skipping them."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2116,203 +3010,81 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Early Florida Source Notebook (mission settlement scene) ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: map table at dusk — the 1783 St. Augustine map unrolled on a table with a spyglass, a compass and a candle (4.06.08 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An old map of St. Augustine unrolled on a wooden table at dusk, held down by a brass spyglass, a compass and a burning candle, with an evening sky in the window." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="b604sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8E0D0"/>
-      <stop offset="45%" stop-color="#C8C0B8"/>
-      <stop offset="100%" stop-color="#9AA4B4"/>
-    </linearGradient>
-    <linearGradient id="b604field" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#A0B048"/>
-      <stop offset="100%" stop-color="#5A6A28"/>
-    </linearGradient>
-    <linearGradient id="b604tower" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8D0A0"/>
-      <stop offset="100%" stop-color="#A88858"/>
-    </linearGradient>
-    <radialGradient id="b604glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#E8DCC0" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#E8DCC0" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="b608sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E3A64"/><stop offset=".55" stop-color="#9A6E8E"/><stop offset="1" stop-color="#F2A970"/></linearGradient>
+    <linearGradient id="b608wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2A2A"/><stop offset="1" stop-color="#5A3E30"/></linearGradient>
+    <linearGradient id="b608wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A4A26"/><stop offset="1" stop-color="#4A2A14"/></linearGradient>
+    <linearGradient id="b608paper" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9D8AE"/><stop offset=".5" stop-color="#F6EACB"/><stop offset="1" stop-color="#E3CF9F"/></linearGradient>
+    <linearGradient id="b608brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2D27A"/><stop offset=".5" stop-color="#C79A3A"/><stop offset="1" stop-color="#8A6420"/></linearGradient>
+    <radialGradient id="b608glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFD98A" stop-opacity=".55"/><stop offset="1" stop-color="#FFD98A" stop-opacity="0"/></radialGradient>
     <style>
-      .b604bell { animation: b604bell 2.4s ease-in-out infinite; transform-origin: top center; transform-box: fill-box; }
-      @keyframes b604bell { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-      .b604wave { animation: b604wave 6s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes b604wave { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-      .b604smoke { animation: b604smoke 7s ease-in-out infinite; }
-      @keyframes b604smoke { 0% { transform: translateY(0); opacity: 0.5; } 100% { transform: translateY(-35px); opacity: 0; } }
-      .b604sun { animation: b604sun 5s ease-in-out infinite; }
-      @keyframes b604sun { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+      .b608flame { animation: b608flick 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b608flick { 30% { transform: scale(.94,1.06) rotate(-2deg); } 65% { transform: scale(1.04,.95) rotate(2deg); } }
+      .b608glowc { animation: b608pulse 3.2s ease-in-out infinite; }
+      @keyframes b608pulse { 50% { opacity: .75; } }
+      .b608star { animation: b608tw 5s ease-in-out infinite; } .b608star.t2 { animation-delay: 2.2s; }
+      @keyframes b608tw { 50% { opacity: .25; } }
+      @media (prefers-reduced-motion: reduce) { .b608flame, .b608glowc, .b608star { animation: none; } }
     </style>
   </defs>
-
-  <!-- Sky -->
-  <rect width="920" height="170" fill="url(#b604sky)"/>
-
-  <!-- Morning sun -->
-  <g class="b604sun">
-    <circle cx="170" cy="60" r="50" fill="url(#b604glow)"/>
-    <circle cx="170" cy="60" r="22" fill="#E8DCC0" opacity="0.75"/>
+  <!-- the room wall and a window at dusk -->
+  <rect width="920" height="200" fill="url(#b608wall)"/>
+  <g transform="translate(40,10)">
+    <rect width="190" height="104" rx="4" fill="url(#b608sky)"/>
+    <circle class="b608star" cx="40" cy="22" r="1.6" fill="#FFF6D8"/><circle class="b608star t2" cx="132" cy="14" r="1.3" fill="#FFF6D8"/>
+    <path d="M0,86 C30,80 60,84 92,80 C120,77 160,82 190,79 L190,104 L0,104 Z" fill="#3E3450" opacity=".8"/>
+    <path d="M60,82 l4,-12 l4,12 Z M150,80 l5,-16 l5,16 Z" fill="#2A2238"/>
+    <rect width="190" height="104" rx="4" fill="none" stroke="#2A1A12" stroke-width="7"/>
+    <line x1="95" y1="0" x2="95" y2="104" stroke="#2A1A12" stroke-width="5"/><line x1="0" y1="52" x2="190" y2="52" stroke="#2A1A12" stroke-width="5"/>
   </g>
-
-  <!-- Distant pine treeline -->
-  <g fill="#2A5A3A" opacity="0.55">
-    <path d="M 0 165 L 35 142 L 60 165 L 100 148 L 135 165 L 175 145 L 215 165 L 260 148 L 300 165 L 350 145 L 390 165 L 440 148 L 480 165 L 530 145 L 575 165 L 620 148 L 665 165 L 715 145 L 755 165 L 800 148 L 845 165 L 890 145 L 920 165 L 920 170 L 0 170 Z"/>
-  </g>
-
-  <!-- Mission cornfield foreground band -->
-  <rect y="170" width="920" height="90" fill="url(#b604field)"/>
-  <!-- Field furrow lines -->
-  <g stroke="#3A4818" stroke-width="0.6" opacity="0.45">
-    <line x1="0" y1="180" x2="920" y2="180"/>
-    <line x1="0" y1="190" x2="920" y2="192"/>
-    <line x1="0" y1="200" x2="920" y2="202"/>
-    <line x1="0" y1="212" x2="920" y2="214"/>
-    <line x1="0" y1="224" x2="920" y2="226"/>
-    <line x1="0" y1="236" x2="920" y2="238"/>
-    <line x1="0" y1="248" x2="920" y2="250"/>
-  </g>
-
-  <!-- ═══ LEFT: BELL TOWER (church bell calling daily rhythm) ═══ -->
-  <g transform="translate(165 175)">
-    <!-- Tower base -->
-    <rect x="-18" y="-95" width="36" height="95" fill="url(#b604tower)" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Stone texture -->
-    <g stroke="#8A6A40" stroke-width="0.5" opacity="0.5">
-      <line x1="-18" y1="-75" x2="18" y2="-75"/>
-      <line x1="-18" y1="-55" x2="18" y2="-55"/>
-      <line x1="-18" y1="-35" x2="18" y2="-35"/>
-      <line x1="-18" y1="-15" x2="18" y2="-15"/>
-      <line x1="0" y1="-95" x2="0" y2="0"/>
+  <!-- candle glow on the wall -->
+  <circle class="b608glowc" cx="808" cy="96" r="120" fill="url(#b608glow)"/>
+  <!-- the table -->
+  <rect y="118" width="920" height="82" fill="url(#b608wood)"/>
+  <g stroke="#3A200E" stroke-width="1" opacity=".45"><path d="M0,140 C200,136 420,144 920,138 M0,166 C260,160 520,170 920,164 M0,188 C300,184 600,192 920,186"/></g>
+  <!-- the map, unrolled, with curled ends -->
+  <g transform="translate(222,100) scale(1.22)">
+    <path d="M0,10 L380,4 L386,76 L6,82 Z" fill="url(#b608paper)" stroke="#B89A62" stroke-width="1"/>
+    <ellipse cx="2" cy="46" rx="10" ry="38" fill="#D9C38F" stroke="#B89A62" stroke-width="1"/>
+    <ellipse cx="384" cy="40" rx="9" ry="37" fill="#D9C38F" stroke="#B89A62" stroke-width="1"/>
+    <!-- coast and rivers in soft green bands -->
+    <path d="M20,30 C80,24 120,38 170,30 C220,22 260,34 300,26 C330,20 352,26 372,22" fill="none" stroke="#9DBB7E" stroke-width="7" opacity=".8"/>
+    <path d="M24,62 C90,58 160,66 230,58 C290,52 330,60 374,52" fill="none" stroke="#9DBB7E" stroke-width="9" opacity=".75"/>
+    <path d="M210,40 C230,48 250,46 270,56" fill="none" stroke="#9DBB7E" stroke-width="4" opacity=".7"/>
+    <!-- the walled town and the star fort -->
+    <g transform="translate(160,32)">
+      <path d="M0,4 L34,0 L40,10 L38,18 L2,20 Z" fill="#E9D8AE" stroke="#6A4A2A" stroke-width="1.2"/>
+      <g stroke="#6A4A2A" stroke-width=".8"><path d="M10,2 V19 M20,1 V19 M30,1 V19 M2,10 H39"/></g>
+      <path d="M48,6 l5,2 l2,-5 l4,6 l5,0 l-3,5 l4,4 l-6,1 l-1,5 l-5,-4 l-5,3 l0,-5 l-5,-3 l5,-3 Z" fill="#D9C38F" stroke="#6A4A2A" stroke-width="1.2"/>
     </g>
-    <!-- Top: open belfry -->
-    <rect x="-22" y="-115" width="44" height="22" fill="#D8B888" stroke="#6A4520" stroke-width="1.5"/>
-    <!-- Belfry archway opening (visible through) -->
-    <path d="M -16 -94 L -16 -106 Q -16 -112 -10 -112 L 10 -112 Q 16 -112 16 -106 L 16 -94 Z" fill="#3A2510"/>
-    <!-- BELL — animated swing via nested g (outer translate, inner rotates) -->
-    <g transform="translate(0 -110)">
-      <g class="b604bell">
-        <!-- Bell rope/hanger -->
-        <line x1="0" y1="0" x2="0" y2="2" stroke="#3A2510" stroke-width="0.8"/>
-        <!-- Bell body -->
-        <path d="M -6 2 Q -7 12 -5 15 L 5 15 Q 7 12 6 2 L 4 2 Q 4 -1 0 -1 Q -4 -1 -4 2 Z" fill="#C8A858" stroke="#6A4520" stroke-width="1"/>
-        <!-- Highlight -->
-        <path d="M -3 6 Q -3 10 -2 13" stroke="#FFE5A0" stroke-width="0.6" fill="none" opacity="0.7"/>
-        <!-- Clapper -->
-        <circle cx="0" cy="14" r="1.2" fill="#3A2510"/>
-      </g>
-    </g>
-    <!-- Roof -->
-    <path d="M -28 -115 L 0 -138 L 28 -115 Z" fill="#7A4828" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Cross on top -->
-    <rect x="-1" y="-150" width="2" height="14" fill="#3A2010"/>
-    <rect x="-5" y="-144" width="10" height="2.5" fill="#3A2010"/>
-    <!-- Door at base -->
-    <path d="M -7 0 L -7 -22 Q -7 -28 0 -28 Q 7 -28 7 -22 L 7 0 Z" fill="#3A2010"/>
+    <!-- a compass rose -->
+    <g transform="translate(330,64)" stroke="#8A6A3A" stroke-width=".8" fill="none" opacity=".8"><circle r="8"/><path d="M0,-11 V11 M-11,0 H11 M-7,-7 L7,7 M7,-7 L-7,7"/></g>
+    <!-- dotted sounding marks in the harbor -->
+    <g fill="#8A6A3A" opacity=".6"><circle cx="240" cy="66" r="1"/><circle cx="252" cy="70" r="1"/><circle cx="264" cy="64" r="1"/><circle cx="120" cy="70" r="1"/><circle cx="134" cy="66" r="1"/></g>
   </g>
-
-  <!-- ═══ CENTER-LEFT: Friar's small smoke from chimney (cooking fire) ═══ -->
-  <g transform="translate(220 100)">
-    <g class="b604smoke">
-      <ellipse cx="0" cy="0" rx="6" ry="3" fill="#D8D0C8"/>
-      <ellipse cx="-3" cy="-5" rx="4" ry="2.5" fill="#E0D8D0"/>
-      <ellipse cx="2" cy="-9" rx="3" ry="2" fill="#E8E0D8"/>
-    </g>
+  <!-- the brass spyglass lying across the map -->
+  <g transform="translate(170,178) rotate(-8)">
+    <rect x="0" y="-7" width="70" height="14" rx="3" fill="#5A3A1E"/>
+    <rect x="68" y="-6" width="56" height="12" rx="2" fill="url(#b608brass)"/>
+    <rect x="122" y="-5" width="40" height="10" rx="2" fill="url(#b608brass)"/>
+    <rect x="-6" y="-9" width="8" height="18" rx="2" fill="url(#b608brass)"/>
+    <rect x="160" y="-4" width="6" height="8" rx="1.5" fill="#8A6420"/>
   </g>
-
-  <!-- ═══ CENTER: CORN STALKS (the staple Apalachee + mission crop) ═══ -->
-  <g transform="translate(380 215)">
-    <g class="b604wave">
-      <line x1="0" y1="20" x2="0" y2="-32" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-15" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-20" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="0" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-5" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <!-- Corn ear -->
-      <ellipse cx="2" cy="-22" rx="2.5" ry="6" fill="#D8B040"/>
-      <line x1="2" y1="-30" x2="4" y2="-36" stroke="#A88030" stroke-width="0.6"/>
-    </g>
+  <!-- a brass compass -->
+  <g transform="translate(728,170)">
+    <ellipse cx="0" cy="6" rx="26" ry="8" fill="#2A160A" opacity=".5"/>
+    <circle r="22" fill="url(#b608brass)"/><circle r="17" fill="#F4EBD2"/>
+    <path d="M0,-14 L3,0 L0,14 L-3,0 Z" fill="#A3312B"/><circle r="2" fill="#5C4A2A"/>
   </g>
-  <g transform="translate(420 215)">
-    <g class="b604wave" style="animation-delay:0.6s;">
-      <line x1="0" y1="20" x2="0" y2="-30" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-13" rx="3" ry="9" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-18" rx="3" ry="9" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="0" cy="-30" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-  <g transform="translate(460 215)">
-    <g class="b604wave" style="animation-delay:1.2s;">
-      <line x1="0" y1="20" x2="0" y2="-34" stroke="#3A4818" stroke-width="1.5"/>
-      <ellipse cx="-5" cy="-17" rx="3" ry="10" fill="#7A8A30" transform="rotate(-25)"/>
-      <ellipse cx="5" cy="-22" rx="3" ry="10" fill="#7A8A30" transform="rotate(25)"/>
-      <ellipse cx="-4" cy="-2" rx="3" ry="9" fill="#5A7A28" transform="rotate(-30)"/>
-      <ellipse cx="4" cy="-7" rx="3" ry="9" fill="#5A7A28" transform="rotate(30)"/>
-      <ellipse cx="2" cy="-24" rx="2.5" ry="6" fill="#D8B040"/>
-    </g>
-  </g>
-
-  <!-- ═══ RIGHT-CENTER: Spanish cattle (new species introduced by missions) ═══
-       Just a silhouette of a long-backed cow. -->
-  <g transform="translate(620 230)" opacity="0.85">
-    <!-- Body -->
-    <ellipse cx="0" cy="0" rx="32" ry="11" fill="#5A3818"/>
-    <!-- Legs -->
-    <rect x="-22" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="-12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="12" y="6" width="4" height="14" fill="#3A2010"/>
-    <rect x="22" y="6" width="4" height="14" fill="#3A2010"/>
-    <!-- Head -->
-    <ellipse cx="-32" cy="-5" rx="10" ry="7" fill="#6A4820"/>
-    <!-- Horns -->
-    <path d="M -38 -10 Q -42 -16 -38 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <path d="M -30 -10 Q -26 -16 -30 -18" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-    <!-- Eye -->
-    <circle cx="-36" cy="-5" r="0.8" fill="#1A0A05"/>
-    <!-- Tail -->
-    <path d="M 32 -3 Q 38 -2 36 6" stroke="#3A2010" stroke-width="1.5" fill="none"/>
-  </g>
-
-  <!-- Second small cow farther back -->
-  <g transform="translate(720 220)" opacity="0.6">
-    <ellipse cx="0" cy="0" rx="20" ry="7" fill="#5A3818"/>
-    <rect x="-14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="-6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="6" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <rect x="14" y="4" width="2.5" height="9" fill="#3A2010"/>
-    <ellipse cx="-20" cy="-3" rx="6" ry="4" fill="#6A4820"/>
-  </g>
-
-  <!-- ═══ RIGHT FOREGROUND: woven basket of harvest (corn, beans, squash) ═══ -->
-  <g transform="translate(840 235)">
-    <!-- Basket -->
-    <path d="M -22 -5 L -16 18 L 16 18 L 22 -5 Z" fill="#8A6028" stroke="#3A2010" stroke-width="1.5"/>
-    <!-- Weave texture -->
-    <g stroke="#5A3818" stroke-width="0.6" opacity="0.55" fill="none">
-      <path d="M -22 -5 Q 0 0 22 -5"/>
-      <path d="M -20 2 Q 0 7 20 2"/>
-      <path d="M -18 9 Q 0 14 18 9"/>
-    </g>
-    <!-- Contents: corn ears, beans, squash poking out -->
-    <ellipse cx="-8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(-15)"/>
-    <ellipse cx="0" cy="-9" rx="3" ry="6" fill="#E8C040"/>
-    <ellipse cx="8" cy="-7" rx="3" ry="6" fill="#D8B040" transform="rotate(15)"/>
-    <!-- Beans -->
-    <ellipse cx="-12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <ellipse cx="12" cy="-2" rx="2" ry="3" fill="#5A3818"/>
-    <!-- Squash -->
-    <circle cx="-4" cy="-3" r="4" fill="#E89040" stroke="#7A4818" stroke-width="0.5"/>
-    <line x1="-4" y1="-7" x2="-2" y2="-9" stroke="#3A4818" stroke-width="0.6"/>
-  </g>
-
-  <!-- Corner accent marks -->
-  <g opacity="0.45" stroke="#1F4E78" stroke-width="1" fill="none">
-    <line x1="0" y1="20" x2="30" y2="20"/>
-    <line x1="20" y1="0" x2="20" y2="30"/>
-    <line x1="920" y1="20" x2="890" y2="20"/>
-    <line x1="900" y1="0" x2="900" y2="30"/>
+  <!-- the candle -->
+  <g transform="translate(808,118)">
+    <ellipse cx="0" cy="56" rx="26" ry="7" fill="#8A6A3A"/>
+    <rect x="-10" y="6" width="20" height="50" rx="3" fill="#F3E7CC"/>
+    <path d="M-8,8 q2,10 0,16" stroke="#E2D2AE" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <line x1="0" y1="6" x2="0" y2="0" stroke="#2B1A0A" stroke-width="1.6"/>
+    <g class="b608flame"><path d="M0,-18 C7,-10 6,-3 0,0 C-6,-3 -7,-10 0,-18 Z" fill="#FFB347"/><path d="M0,-11 C3,-7 3,-3 0,-1 C-3,-3 -3,-7 0,-11 Z" fill="#FFF2B0"/></g>
   </g>
 </svg>
 
@@ -3894,5 +4666,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
