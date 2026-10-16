@@ -1784,6 +1784,878 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.07.01",
+ "title": "Fort Mose and Freedom in Spanish Florida",
+ "quiet": true,
+ "file": {
+  "n": 7,
+  "title": "Fort Mose & Pioneers",
+  "label": "Fort Mose & Pioneers",
+  "seals": [
+   "🗂️",
+   "🏰",
+   "🚪"
+  ]
+ },
+ "prevFile": "Early Florida Source Notebook",
+ "connector": "Last time we finished the Spanish Florida wing with a notebook of sources. Today a new file opens: a town where people who escaped slavery found freedom.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Two Pockets",
+   "t": "Fill both pockets",
+   "why": "Sort each fact into one of two pockets: what Spain wanted, and what freedom meant for the people of Fort Mose."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Build, then turn the map",
+   "why": "Add each piece of Fort Mose to the picture to read its story. Then turn an old map so north is up, and measure it."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Two cards, then write",
+   "why": "Answer three questions. Then write 3 to 5 sentences about what Fort Mose was and what it tells us about freedom and courage."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is a serious one, so we’ll take it slowly and with care.",
+  "opening": [
+   "This file is about Fort Mose, a town built by people who escaped slavery and found freedom in Spanish Florida. It’s a hard part of history, so we’ll go slowly and use careful words.",
+   "Start in the Two Pockets tab (tab 1). Scroll down to the file folder under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the folder",
+      "go": true,
+      "reply": "Tap a fact card, then tap the pocket it belongs in. Or drag it there."
+     },
+     {
+      "t": "How do you say Mose?",
+      "reply": "MOH-say. Its full Spanish name was Gracia Real de Santa Teresa de Mose."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this happened to real people and real families. Going slowly is how we show respect."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Tap the button to add each piece of Fort Mose to the picture, and read each part."
+     },
+     {
+      "t": "Was Spain being kind?",
+      "reply": "Mostly, Spain had a plan to hurt Britain. But the freedom was real for the people who reached Florida. That’s why we need both pockets."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who drew the old map?",
+      "reply": "Samuel Roworth, a British mapmaker, in the 1760s. By then Britain ruled Florida, and the people of Fort Mose had already left for Cuba."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we follow Florida as it changes hands: from Spain to Britain in 1763, and back to Spain in 1783."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Both pockets are full. Spain had its reasons, and the freedom was still real. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You built the picture, read the whole story, and measured the old map. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill the two cards and write 3 to 5 sentences about what Fort Mose was and what it tells us about freedom and courage."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for handling it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means doing something hard or dangerous because it matters. In this story it shows up many ways: people who were enslaved (owned by another person and forced to work without pay) walked hundreds of miles to be free, kept asking for the freedom they were promised, and defended the town they built.",
+ "scene1": {
+  "type": "pockets",
+  "kicker": "Two pockets",
+  "h": "One promise, two true sides",
+  "label": "Fort Mose · 1738",
+  "voice": "Tap a fact card, then tap the pocket it belongs in, or drag it there. Some cards are about what Spain wanted. Some are about what freedom meant for the people of Fort Mose.",
+  "pockets": [
+   {
+    "id": "sp",
+    "ico": "👑",
+    "t": "What Spain wanted",
+    "sub": "Spain’s own reasons"
+   },
+   {
+    "id": "fr",
+    "ico": "🕊️",
+    "t": "What freedom meant at Mose",
+    "sub": "For the people who lived there"
+   }
+  ],
+  "cards": [
+   {
+    "id": "s1",
+    "pocket": "sp",
+    "ico": "⚔️",
+    "t": "To weaken the British colonies by taking away people they forced to work",
+    "miss": "This card is about a plan to hurt Britain. Whose plan was that?"
+   },
+   {
+    "id": "s2",
+    "pocket": "sp",
+    "ico": "🛡️",
+    "t": "More people to help defend Spanish Florida",
+    "miss": "This is something Spain needed for its colony. Which pocket holds Spain’s reasons?"
+   },
+   {
+    "id": "s3",
+    "pocket": "sp",
+    "ico": "✝️",
+    "t": "New members for the Catholic Church, Spain’s church",
+    "miss": "The king’s promise was only for people who became Catholic. Whose wish was that?"
+   },
+   {
+    "id": "s4",
+    "pocket": "sp",
+    "ico": "👑",
+    "t": "To win its contest with Britain for land and power",
+    "miss": "Spain and Britain were rivals. Which pocket holds what Spain wanted?"
+   },
+   {
+    "id": "f1",
+    "pocket": "fr",
+    "ico": "📜",
+    "t": "Being free by law: no one could own you",
+    "miss": "This card is about life for the people of Mose. Which pocket holds what freedom meant?"
+   },
+   {
+    "id": "f2",
+    "pocket": "fr",
+    "ico": "🌱",
+    "t": "Homes and fields of your own to farm",
+    "miss": "Who built the homes and farmed the fields at Mose? Put it in their pocket."
+   },
+   {
+    "id": "f3",
+    "pocket": "fr",
+    "ico": "👪",
+    "t": "Families living together in their own town",
+    "miss": "This card is about the families who lived at Mose. Which pocket is about them?"
+   },
+   {
+    "id": "f4",
+    "pocket": "fr",
+    "ico": "🛡️",
+    "t": "A militia of their own (a group of townspeople trained to defend it), led by Captain Francisco Menéndez",
+    "miss": "The militia belonged to the people of Mose, led by one of their own. Which pocket fits?"
+   }
+  ],
+  "countT": "facts filed.",
+  "win": "🗂️ <b>Both pockets are full.<\/b> Spain had its reasons, and the freedom was still real. Both are true.",
+  "why": {
+   "icon": "🗂️",
+   "q": "Why two pockets?",
+   "t": "In the 1700s, Britain had colonies (lands it ruled) just north of Spanish Florida. Historians often find that two things are true at the same time. Spain made its promise for its own reasons, to win against Britain. For the people who reached Florida, the same promise meant real freedom. One file, two pockets, both true."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "raisewalls",
+   "activity": "Fort Mose: Freedom in Spanish Florida",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^In the late 1600s"
+    },
+    {
+     "id": "p1",
+     "match": "^Why Spain offered"
+    },
+    {
+     "id": "p2",
+     "match": "^The journey south"
+    },
+    {
+     "id": "p3",
+     "match": "^Fort Mose\\."
+    },
+    {
+     "id": "p4",
+     "match": "^Captain Francisco"
+    },
+    {
+     "id": "p5",
+     "match": "^Why Fort Mose matters"
+    }
+   ],
+   "pieces": [
+    {
+     "id": "r1",
+     "t": "The road south",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "r2",
+     "t": "Spain’s promise, 1693",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "r3",
+     "t": "The long walk",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "r4",
+     "t": "Fort Mose, 1738",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "r5",
+     "t": "Captain Menéndez and the militia",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "r6",
+     "t": "Why it matters",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "alt": "A quiet salt marsh north of St. Augustine. As you read, a trail, a Spanish flag, footprints, the earth-walled fort with its homes and church, a lookout and gate, and sunrise over the fields appear one at a time.",
+   "startT": "Tap the button to add the first piece and open the story.",
+   "countT": "pieces added. Read this part, then add the next one.",
+   "allT": "Fort Mose stands at sunrise. You read the whole story.",
+   "nextT": "Add piece {n}: {t}",
+   "why": {
+    "icon": "🏗️",
+    "q": "Why build the town as you read?",
+    "t": "Fort Mose was something people built: walls of earth and logs, homes with palm-leaf roofs, a church, and fields. As you read, you add each piece to the picture, the same way the story builds. That’s why the town grows while you read."
+   }
+  },
+  "evidence": {
+   "type": "turnmap",
+   "kicker": "Turn the map",
+   "h": "Which way is north? How far is it?",
+   "voice": "First turn the map until the dark N arrow points to the N at the top. Then answer which way Fort Mose is from the town. Then lay the map’s own scale bar from the town gate to Fort Mose.",
+   "img": "source-4-07-01-fort-mose-plan.jpg",
+   "iw": 1266,
+   "ih": 1008,
+   "northDeg": 90,
+   "alt": "The labeled 1760s map of the land between St. Augustine and Fort Mose, with a dark arrow showing which way north is",
+   "from": {
+    "x": 281,
+    "y": 688,
+    "t": "Gold ring: St. Augustine’s town gate (label 3)"
+   },
+   "to": {
+    "x": 1160,
+    "y": 605,
+    "t": "Green ring: Fort Mose (label 4)"
+   },
+   "bar": {
+    "px": 377,
+    "miles": 0.75
+   },
+   "leftT": "Turn left",
+   "rightT": "Turn right",
+   "turnT": "Turn the map (or tap it) until the dark arrow points up to the N.",
+   "upT": "North is up now. This is how most maps today are drawn.",
+   "dirQ": "Which way is Fort Mose from St. Augustine?",
+   "dirOpts": [
+    {
+     "id": "n",
+     "t": "North",
+     "ok": true
+    },
+    {
+     "id": "s",
+     "t": "South",
+     "ok": false,
+     "miss": "Find the green ring (Fort Mose). Is it near the top or the bottom of the map now?"
+    },
+    {
+     "id": "e",
+     "t": "East",
+     "ok": false,
+     "miss": "On the turned map, east is to the right. Is the green ring to the right of the gold ring, or above it?"
+    },
+    {
+     "id": "w",
+     "t": "West",
+     "ok": false,
+     "miss": "On the turned map, west is to the left. Is the green ring to the left of the gold ring, or above it?"
+    }
+   ],
+   "layQ": "Measure with the map’s own scale bar (label 5)",
+   "layT": "Lay the scale bar from the town gate to Fort Mose",
+   "barsT": "The scale bar fits about {n} times. Each one stands for three-quarters of a mile, so that’s about {m} miles.",
+   "distQ": "About how far is Fort Mose from the town gate?",
+   "distOpts": [
+    {
+     "id": "d1",
+     "t": "About half a mile",
+     "ok": false,
+     "miss": "Half a mile is less than one scale bar. How many scale bars fit?"
+    },
+    {
+     "id": "d2",
+     "t": "Almost 2 miles",
+     "ok": true
+    },
+    {
+     "id": "d3",
+     "t": "About 10 miles",
+     "ok": false,
+     "miss": "Ten miles would take more than 13 scale bars. How many fit?"
+    }
+   ],
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: add every piece in Learn the Story at the top of this tab.",
+   "win": "That matches the reading: Fort Mose stood about two miles north of St. Augustine. Now think about the question above the game: why would Spain put a free town there?",
+   "why": {
+    "icon": "🧭",
+    "q": "Why turn the map?",
+    "t": "Most maps today put north at the top. Old mapmakers didn’t always. This map was drawn with north to the right, so Fort Mose looks like it is east of the town. It isn’t. Turning the map lets you read it the way you read maps today. That’s why you turn it before you measure."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 5 gold numbers on the map.",
+    "Read the three questions under the map.",
+    "Do Turn the map: turn it until north is up, then measure from the town to Fort Mose."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now try Turn the map below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 60.03,
+    "y": 9.92,
+    "title": "The title.",
+    "t": "It says: “A Plan of the Land Between Fort Mossy and St. Augustine in the Province of East Florida.” “Mossy” is how this British mapmaker spelled Mose. A plan is a careful map of a small area."
+   },
+   {
+    "n": "2",
+    "x": 25.12,
+    "y": 16.87,
+    "title": "The mapmaker’s compass.",
+    "t": "Careful: it points up, but the real land shows that north on this map is to the right. Historians check old maps against the real land."
+   },
+   {
+    "n": "3",
+    "x": 16.19,
+    "y": 63.49,
+    "title": "The edge of St. Augustine.",
+    "t": "The town’s wall and its gate. The star-shaped fort at the bottom corner is the Castillo de San Marcos."
+   },
+   {
+    "n": "4",
+    "x": 87.28,
+    "y": 54.07,
+    "title": "Fort Mose.",
+    "t": "The mapmaker wrote “Mossy Fort.” It sits at the edge of a wide salt marsh (wet, grassy land by the sea). A note nearby says, “Here the marshes are very extensive” (very big)."
+   },
+   {
+    "n": "5",
+    "x": 60.82,
+    "y": 86.31,
+    "title": "The scale bar.",
+    "t": "The whole bar stands for three-quarters of a mile. You can use it to measure distances on the map."
+   }
+  ]
+ },
+ "planner": {
+  "type": "factcard",
+  "voice": "Fill the fact card first: when, where, and who. Then fill the meaning card: one big idea, a detail that proves it, and a name, date, or group. These are just notes. You’ll write your own sentences in Step 3.",
+  "cardA": {
+   "t": "What Fort Mose was",
+   "rows": [
+    {
+     "id": "when",
+     "lab": "When did it start?",
+     "short": "When",
+     "opts": [
+      {
+       "t": "1693",
+       "ok": false,
+       "miss": "1693 is the year of the king’s promise. Fort Mose came later."
+      },
+      {
+       "t": "1738",
+       "ok": true
+      },
+      {
+       "t": "1763",
+       "ok": false,
+       "miss": "1763 is when the people of Mose left for Cuba. It started earlier."
+      }
+     ]
+    },
+    {
+     "id": "where",
+     "lab": "Where was it?",
+     "short": "Where",
+     "opts": [
+      {
+       "t": "About two miles north of St. Augustine",
+       "ok": true
+      },
+      {
+       "t": "In the Florida Keys",
+       "ok": false,
+       "miss": "Look back at your measured map. Fort Mose was close to St. Augustine."
+      },
+      {
+       "t": "In Carolina",
+       "ok": false,
+       "miss": "Carolina is where many people escaped from. Fort Mose was in Spanish Florida."
+      }
+     ]
+    },
+    {
+     "id": "who",
+     "lab": "Who lived there?",
+     "short": "Who",
+     "opts": [
+      {
+       "t": "British soldiers",
+       "ok": false,
+       "miss": "British forces attacked Fort Mose in 1740. Who lived there?"
+      },
+      {
+       "t": "About 100 free Black men, women, and children",
+       "ok": true
+      },
+      {
+       "t": "Only Spanish priests",
+       "ok": false,
+       "miss": "Reread piece 4, Fort Mose, 1738. Who built homes there?"
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "What it tells us",
+   "rows": [
+    {
+     "id": "idea",
+     "lab": "Pick one big idea",
+     "short": "Big idea",
+     "opts": [
+      {
+       "t": "Freedom in America is an older story than many people know"
+      },
+      {
+       "t": "People showed great courage to be free"
+      },
+      {
+       "t": "Spain’s reasons and real freedom were both true"
+      }
+     ]
+    },
+    {
+     "id": "proof",
+     "lab": "Pick a detail that proves it",
+     "short": "Detail",
+     "opts": [
+      {
+       "t": "People walked hundreds of miles through swamps to get there"
+      },
+      {
+       "t": "Francisco Menéndez kept asking for his freedom until he got it in 1738"
+      },
+      {
+       "t": "The militia fought to take Fort Mose back in 1740"
+      },
+      {
+       "t": "Families built homes, farms, and a church"
+      }
+     ]
+    },
+    {
+     "id": "ngd",
+     "lab": "Pick a name, date, or group to use",
+     "short": "Name, date, or group",
+     "opts": [
+      {
+       "t": "Francisco Menéndez"
+      },
+      {
+       "t": "1738"
+      },
+      {
+       "t": "the Fort Mose militia"
+      },
+      {
+       "t": "Governor Manuel de Montiano"
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "Both cards are pinned together. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "📇",
+   "q": "Why two cards?",
+   "t": "Your notebook entry has two jobs: tell what Fort Mose was, and tell what it means. Historians often keep facts and meaning on separate cards, then pin them together. That’s why you fill a fact card first, then a meaning card."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what Fort Mose was",
+    "rx": "town|settlement|fort|communit|place|village|home|free black|free people|first|1738|militia|lived"
+   },
+   {
+    "t": "freedom or courage",
+    "rx": "free|freedom|liberty|courage|brave|risk|danger|hard|scar|fear|strong|escap|fought|fight"
+   },
+   {
+    "t": "a name, date, or group",
+    "rx": "menendez|menéndez|francisco|montiano|1693|1738|1740|1763|militia|spain|spanish|britain|british|carolina|georgia|augustine|famil|enslaved|king|cuba|black|people"
+   }
+  ],
+  "lines": [
+   "Start with what Fort Mose was.",
+   "Good. Now say what it tells us about freedom or courage.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the two pockets, the reading, and the turned map."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the fact card, then the meaning card."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences: what Fort Mose was and what it tells us about freedom and courage. Use a name, date, or group. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "opengate",
+  "kicker": "Open the gate",
+  "h": "liber = free",
+  "root": "liber",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match lifts one bar off the gate.",
+  "words": [
+   {
+    "w": "liberty",
+    "root": "liber",
+    "m": "freedom",
+    "miss": "This meaning is just one word. Which word names the thing itself?",
+    "say": "Liberty. Freedom."
+   },
+   {
+    "w": "liberate",
+    "root": "liber",
+    "m": "to set someone free",
+    "miss": "This meaning is an action. Which word ends in -ate, like an action word?",
+    "say": "Liberate. To set someone free."
+   },
+   {
+    "w": "liberation",
+    "root": "liber",
+    "m": "the act of setting people free",
+    "miss": "-tion makes a word that names an act. Which word ends in -tion?",
+    "say": "Liberation. The act of setting people free."
+   },
+   {
+    "w": "liberator",
+    "root": "liber",
+    "m": "a person who sets others free",
+    "miss": "-or names a person, like actor or sailor. Which word ends in -or?",
+    "say": "Liberator. A person who sets others free."
+   }
+  ],
+  "win": "🚪 The gate is open. <b>liber<\/b> = free",
+  "why": {
+   "icon": "🚪",
+   "q": "Why a gate?",
+   "t": "<em>Liber<\/em> is the Latin word for “free.” A gate that is barred shut keeps people in. A gate that opens lets them go. Each word you match lifts one bar off this gate, until it opens."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Two things can be true",
+   "at": "scene1",
+   "script": "Sometimes one choice has two reasons behind it. When my school started free breakfast, the school had its own reason: hungry kids have a hard time learning. For a lot of families, it was simply a good breakfast. Both were true. As you sort, ask: is this card about what Spain wanted, or about what freedom meant for the people of Mose?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Say both pockets out loud",
+   "at": "s1done",
+   "script": "Pause me, and say one sentence out loud that uses both pockets. Try it like this: Spain wanted something, and for the people of Mose, freedom meant something. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Read this part with care",
+   "at": "explore",
+   "script": "This part of the story is about people who were enslaved, and what they did to be free. We’ll read it one piece at a time, with care. Each piece you add to the picture opens one part of the story. Read each part before you add the next."
+  },
+  {
+   "slot": "guide4",
+   "label": "He kept asking",
+   "at": "afterread",
+   "script": "Here’s something I keep thinking about. Francisco Menéndez escaped once. Then, in St. Augustine, he was made a slave again. He didn’t give up. He kept asking for the freedom the king had promised, and in 1738 he got it. That’s a quieter kind of courage. Pause me and think: what kept him going?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Turn it first",
+   "at": "evidence",
+   "script": "When I use a map on my phone, sometimes it spins, and the street I want is suddenly on the wrong side. So I turn it until north is at the top, and it makes sense again. This old map was drawn with north to the right. Turn it first. Then measure it with its own scale bar."
+  },
+  {
+   "slot": "guide6",
+   "label": "Facts first, then meaning",
+   "at": "plan",
+   "script": "When I tell someone about a trip, I start with the facts: when we went, where, and who came. Then I tell them what it meant to me. Your notebook entry works the same way. Fill the fact card, then the meaning card. Then write it in your own words."
+  }
+ ],
+ "cabinet": {
+  "n": 7,
+  "img": "source-4-07-01-fort-mose-plan-original.jpg"
+ },
+ "notes": {
+  "learned": [
+   "In 1693, the Spanish king promised freedom to enslaved people who escaped the British colonies, reached Spanish Florida, and became Catholic. It was a plan to weaken Britain, and it also changed real lives.",
+   "People walked hundreds of miles through swamps, rivers, and forests, often at night, to reach St. Augustine.",
+   "Some newcomers, including Francisco Menéndez, were made slaves again in St. Augustine. In 1738, Governor Manuel de Montiano declared them free and set up Fort Mose two miles north of the town.",
+   "Fort Mose was the first legally sanctioned free Black settlement in what is now the United States. About 100 free Black men, women, and children lived there. Captain Francisco Menéndez led its militia, which fought to take the fort back in 1740.",
+   "A British map from the 1760s shows Fort Mose (“Mossy Fort”) by a wide marsh, almost 2 miles from St. Augustine’s town gate. On that map, north points to the right."
+  ],
+  "vocab": [
+   [
+    "colony",
+    "land ruled by a faraway country"
+   ],
+   [
+    "enslaved",
+    "forced to work without pay or freedom, and owned by another person"
+   ],
+   [
+    "Catholic",
+    "a member of the Catholic Church, a Christian church"
+   ],
+   [
+    "rival",
+    "a country or person that wants the same thing you do"
+   ],
+   [
+    "royal decree",
+    "an official order from a king or queen"
+   ],
+   [
+    "strategy",
+    "a plan to win"
+   ],
+   [
+    "legally sanctioned",
+    "allowed by the law"
+   ],
+   [
+    "settlement",
+    "a place where people build homes and live"
+   ],
+   [
+    "militia",
+    "ordinary people trained to defend their town"
+   ],
+   [
+    "courage",
+    "doing something hard or dangerous because it matters"
+   ],
+   [
+    "liberty",
+    "freedom"
+   ],
+   [
+    "liberate",
+    "to set someone free"
+   ],
+   [
+    "liberation",
+    "the act of setting people free"
+   ],
+   [
+    "liberator",
+    "a person who sets others free"
+   ]
+  ],
+  "wordParts": "The Latin root liber means “free.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a reason to leave",
+    "rx": "slave|enslav|forc|work|pay|owner|own |owned|cruel|hard|treat|beat|plantation|colon|british|britain|carolina|georgia|right|chain|escape|free|freedom|life",
+    "n": 1
+   },
+   {
+    "t": "Spain’s promise",
+    "rx": "spain|spanish|promis|1693|king|decree|law|free|freedom|liberty|catholic|church|florida|augustine|offer",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "what it was",
+    "rx": "town|settlement|fort|communit|place|village|home|free black|free people|black|militia|lived|people",
+    "n": 1
+   },
+   {
+    "t": "when",
+    "rx": "1738|17\\d\\d",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "first|matter|important|because|freedom|free|show|prove|history|courage|brave|old|before|america|united states|u\\.?s",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a person or group",
+    "rx": "menendez|menéndez|francisco|captain|militia|people|famil|enslav|they|group|soldier|men|women|children|resident|mose|montiano|he |she ",
+    "n": 1
+   },
+   {
+    "t": "what they did",
+    "rx": "escap|ran|run|walk|travel|journey|fought|fight|defend|built|build|protect|lead|led|left|leave|risk|swamp|ask|kept|went|came|came|reach|got",
+    "n": 1
+   },
+   {
+    "t": "what it cost them",
+    "rx": "cost|risk|danger|lose|lost|leav|left|famil|home|life|lives|die|died|death|caught|captur|hung|hungry|tired|exhaust|fear|scar|hard|everything|safe|hurt|snake|alligator|swamp",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at Learn the Story in the Explore tab (tab 2): pieces 1, 2, and 3.",
+   "One reason is about life in the British colonies. One reason is about what Spain promised.",
+   "Try this shape: “1. They were forced to ___. 2. Spain promised ___.”"
+  ],
+  "journal-q2": [
+   "Look at piece 4, Fort Mose, 1738, in the Explore tab (tab 2).",
+   "Say what it was, the year it started, and why historians care about it.",
+   "Try this shape: “Fort Mose was ___. It started in ___. It matters because ___.”"
+  ],
+  "journal-q3": [
+   "Think about today’s virtue: courage means doing something hard or dangerous because it matters.",
+   "Pick one: the people who walked south, Francisco Menéndez, or the Fort Mose militia. What did they do? What did it cost them?",
+   "Try this shape: “___ showed courage when they ___. It cost them ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: Spain only freed people who became Catholic. What does that tell you about Spain’s reasons?",
+  "journal-q2": "Go further: the map in tab 2 was drawn by a British mapmaker after the people of Mose had left. What can’t it tell us about life there?",
+  "journal-q3": "Go further: in 1763 the people of Mose had to leave for Cuba. How might that have taken courage too?"
+ },
+ "quizMiss": [
+  {
+   "a": "A prison holds people who are not free. Fort Mose was the opposite. Reread piece 4.",
+   "c": "Fort Mose was Spanish, not British, and it was a town where people lived. Reread piece 4."
+  },
+  {
+   "a": "Spain still allowed slavery in its own colonies. Reread piece 2 about Spain’s reasons.",
+   "c": "Spain’s rival here was Britain, not France. Reread piece 2."
+  },
+  {
+   "a": "Juan Ponce de León was an explorer who came in 1513, long before Fort Mose.",
+   "b": "Pedro Menéndez de Avilés founded St. Augustine in 1565. The militia captain was a different Menéndez. Reread piece 5."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2020,90 +2892,123 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Fort Mose and Freedom ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: Mose at first light — the earth-walled fort with palm-thatch homes and a small church on the salt marsh at dawn, Mose Creek winding out to sea, a heron in the shallows, the Castillo faint on the southern horizon (4.07.01 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawn over a salt marsh. A small fort with low earth walls, palm-thatched homes and a little church stands beside a winding creek, cooking smoke rising. A heron wades in the shallows, and a stone fort is faint on the far horizon." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h701sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#5A8AB8"/>
-      <stop offset="40%" stop-color="#7AAAD0"/>
-      <stop offset="100%" stop-color="#A0C8E0"/>
+    <linearGradient id="b701sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E3A66"/>
+      <stop offset=".42" stop-color="#8E7FA6"/>
+      <stop offset=".72" stop-color="#E9A87A"/>
+      <stop offset="1" stop-color="#F8DDB0"/>
     </linearGradient>
-    <linearGradient id="h701marsh" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4A7A5A"/>
-      <stop offset="100%" stop-color="#2A5A3A"/>
+    <radialGradient id="b701sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF4C8" stop-opacity="1"/>
+      <stop offset=".35" stop-color="#FFD58A" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#FFC27A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b701water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3C99A"/>
+      <stop offset="1" stop-color="#7E8FAE"/>
+    </linearGradient>
+    <linearGradient id="b701marsh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8A9A5E"/>
+      <stop offset="1" stop-color="#4E6638"/>
+    </linearGradient>
+    <linearGradient id="b701mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF6E6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#FFF6E6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FFF6E6" stop-opacity="0"/>
     </linearGradient>
     <style>
-      .h701drift { animation: h701drift 6s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h701drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-      .h701glow { animation: h701glow 4s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h701glow { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-      .h701wave { animation: h701wave 7s linear infinite; transform-box: fill-box; }
-      @keyframes h701wave { 0% { transform: translateX(0); } 100% { transform: translateX(-25px); } }
+      .b701glow { animation: b701glow 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b701glow { 50% { opacity: .8; transform: scale(1.06); } }
+      .b701mist { animation: b701mist 26s linear infinite; }
+      @keyframes b701mist { from { transform: translateX(-120px); } to { transform: translateX(120px); } }
+      .b701smoke { animation: b701smoke 7s ease-in-out infinite; }
+      @keyframes b701smoke { 50% { transform: translateX(5px); opacity: .45; } }
+      .b701ripple { animation: b701ripple 6s ease-in-out infinite; }
+      @keyframes b701ripple { 50% { opacity: .25; } }
+      @media (prefers-reduced-motion: reduce) { .b701glow, .b701mist, .b701smoke, .b701ripple { animation: none; } }
     </style>
   </defs>
-  <rect width="920" height="180" fill="url(#h701sky)"/>
-  <g opacity="0.4" fill="#FFFFFF">
-    <ellipse cx="150" cy="50" rx="60" ry="20"/>
-    <ellipse cx="180" cy="45" rx="40" ry="15"/>
-    <ellipse cx="650" cy="60" rx="55" ry="18"/>
-    <ellipse cx="680" cy="55" rx="35" ry="14"/>
+  <!-- sky and rising sun -->
+  <rect width="920" height="200" fill="url(#b701sky)"/>
+  <circle class="b701glow" cx="690" cy="112" r="110" fill="url(#b701sun)"/>
+  <circle cx="690" cy="112" r="20" fill="#FFF1C4"/>
+  <!-- thin clouds -->
+  <path d="M520,40 q40,-8 90,0 q30,5 70,0" stroke="#F4C7A6" stroke-width="3" fill="none" opacity=".55" stroke-linecap="round"/>
+  <path d="M760,58 q30,-6 70,0" stroke="#F4C7A6" stroke-width="2.5" fill="none" opacity=".5" stroke-linecap="round"/>
+  <!-- far shore: the Castillo faint on the southern horizon (left), low tree line -->
+  <path d="M0,118 Q40,108 80,114 Q120,106 170,113 L170,124 L0,124 Z" fill="#6D6E8E" opacity=".55"/>
+  <g opacity=".5" fill="#7A7896">
+    <path d="M58,116 L64,104 L96,104 L102,116 Z"/>
+    <path d="M60,104 L56,98 L66,98 Z M94,104 L90,98 L100,98 Z"/>
+    <rect x="77" y="94" width="6" height="10"/>
   </g>
-  <path d="M 0 170 L 40 162 L 80 168 L 120 158 L 160 164 L 200 155 L 240 162 L 280 152 L 320 160 L 360 150 L 400 158 L 440 148 L 480 156 L 520 150 L 560 158 L 600 152 L 640 160 L 680 155 L 720 162 L 760 158 L 800 164 L 840 160 L 880 166 L 920 162 L 920 180 L 0 180 Z" fill="#3A6A4A" opacity="0.5"/>
-  <rect y="180" width="920" height="80" fill="url(#h701marsh)"/>
-  <g opacity="0.3" stroke="#A0D0B0" stroke-width="1" fill="none">
-    <g class="h701wave">
-      <path d="M 0 200 Q 30 196 60 200 T 120 200 T 180 200 T 240 200 T 300 200 T 360 200 T 420 200 T 480 200 T 540 200 T 600 200 T 660 200 T 720 200 T 780 200 T 840 200 T 900 200 T 960 200"/>
+  <path d="M170,116 Q230,104 290,112 Q340,104 400,114 Q470,106 540,116 L540,126 L170,126 Z" fill="#5E6A6E" opacity=".6"/>
+  <!-- open water toward the sea, with sunlit path -->
+  <rect y="120" width="920" height="80" fill="url(#b701water)"/>
+  <path d="M640,124 L740,124 L790,200 L590,200 Z" fill="#FFE2AE" opacity=".35"/>
+  <g class="b701ripple" stroke="#FFF0D0" stroke-width="2" stroke-linecap="round" opacity=".6">
+    <path d="M660,132 h40 M676,140 h30 M650,150 h56 M684,162 h44"/>
+  </g>
+  <!-- the marsh, foreground -->
+  <path d="M0,150 C80,138 160,142 240,136 C330,130 400,136 470,132 C520,130 560,138 600,146 L600,200 L0,200 Z" fill="url(#b701marsh)"/>
+  <path d="M760,160 C820,150 880,154 920,148 L920,200 L740,200 Z" fill="url(#b701marsh)"/>
+  <!-- Mose Creek winding out to the sea -->
+  <path d="M420,200 C440,180 500,176 520,166 C548,152 590,156 616,150 L640,148 C600,160 568,164 540,176 C512,188 480,190 470,200 Z" fill="#9FB4C8" opacity=".9"/>
+  <path d="M470,190 q20,-6 40,-10" stroke="#E8EEF2" stroke-width="1.6" fill="none" opacity=".7"/>
+  <!-- marsh grass -->
+  <g stroke="#3E5428" stroke-width="1.6" stroke-linecap="round" opacity=".8">
+    <path d="M20,196 l3,-14 M28,196 l-2,-12 M60,194 l4,-16 M68,194 l-1,-11 M120,192 l3,-13 M300,196 l3,-15 M310,196 l-2,-10 M380,190 l4,-14 M390,190 l-1,-10 M780,196 l3,-14 M790,196 l-2,-11 M860,194 l4,-15 M870,194 l-1,-10"/>
+  </g>
+  <!-- Fort Mose: low earth walls of a square fort, palm-thatch homes, a small church -->
+  <g>
+    <path d="M216,140 L392,140 L404,160 L204,160 Z" fill="#8A7246"/>
+    <path d="M204,160 L404,160 L398,151 L210,151 Z" fill="#6E5A34"/>
+    <path d="M216,140 L392,140 L388,134 L220,134 Z" fill="#7A6640"/>
+    <!-- log palisade on top of the earth wall -->
+    <g stroke="#4A3820" stroke-width="2.2" stroke-linecap="round">
+      <path d="M212,152 v-7 M222,152 v-7 M232,152 v-7 M242,152 v-7 M252,152 v-7 M262,152 v-7 M272,152 v-7 M282,152 v-7 M326,152 v-7 M336,152 v-7 M346,152 v-7 M356,152 v-7 M366,152 v-7 M376,152 v-7 M386,152 v-7 M396,152 v-7"/>
     </g>
-  </g>
-  <g transform="translate(380,100)">
-    <g class="h701drift">
-      <rect x="-80" y="20" width="160" height="55" rx="2" fill="none" stroke="#5A3A1A" stroke-width="2.5"/>
-      <line x1="-80" y1="20" x2="-80" y2="10" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="-50" y1="20" x2="-50" y2="12" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="-20" y1="20" x2="-20" y2="10" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="10" y1="20" x2="10" y2="12" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="40" y1="20" x2="40" y2="10" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="70" y1="20" x2="70" y2="12" stroke="#5A3A1A" stroke-width="3.5"/>
-      <line x1="80" y1="20" x2="80" y2="10" stroke="#5A3A1A" stroke-width="3.5"/>
-      <rect x="-12" y="55" width="24" height="20" fill="#4A7A5A"/>
-      <rect x="-65" y="38" width="22" height="15" rx="1" fill="#C8A87A" stroke="#8A6A40" stroke-width="1"/>
-      <polygon points="-65,38 -54,30 -43,38" fill="#8A6A40"/>
-      <rect x="-28" y="40" width="18" height="13" rx="1" fill="#C8A87A" stroke="#8A6A40" stroke-width="1"/>
-      <polygon points="-28,40 -19,33 -10,40" fill="#8A6A40"/>
-      <rect x="18" y="38" width="22" height="15" rx="1" fill="#C8A87A" stroke="#8A6A40" stroke-width="1"/>
-      <polygon points="18,38 29,30 40,38" fill="#8A6A40"/>
-      <line x1="-19" y1="33" x2="-19" y2="24" stroke="#5A3A1A" stroke-width="1.5"/>
-      <line x1="-23" y1="27" x2="-15" y2="27" stroke="#5A3A1A" stroke-width="1.5"/>
+    <!-- gate gap -->
+    <rect x="294" y="148" width="22" height="12" fill="#4A3820"/>
+    <!-- homes: palm thatch -->
+    <g>
+      <rect x="236" y="124" width="24" height="12" fill="#D9C08A" stroke="#6A5230" stroke-width=".8"/>
+      <path d="M231,125 L248,110 L265,125 Z" fill="#A9853E" stroke="#6A5230" stroke-width=".8"/>
+      <rect x="268" y="126" width="22" height="10" fill="#D9C08A" stroke="#6A5230" stroke-width=".8"/>
+      <path d="M264,127 L279,114 L294,127 Z" fill="#A9853E" stroke="#6A5230" stroke-width=".8"/>
+      <rect x="346" y="125" width="24" height="11" fill="#D9C08A" stroke="#6A5230" stroke-width=".8"/>
+      <path d="M341,126 L358,112 L375,126 Z" fill="#A9853E" stroke="#6A5230" stroke-width=".8"/>
     </g>
-  </g>
-  <g transform="translate(600,85)">
-    <g class="h701glow">
-      <polygon points="0,-28 7,-10 26,-10 11,2 17,20 0,10 -17,20 -11,2 -26,-10 -7,-10" fill="#D4943A" opacity="0.7"/>
+    <!-- small church -->
+    <g>
+      <rect x="312" y="116" width="22" height="20" fill="#E6D2A2" stroke="#6A5230" stroke-width=".9"/>
+      <path d="M308,117 L323,103 L338,117 Z" fill="#9A7834" stroke="#6A5230" stroke-width=".9"/>
+      <path d="M323,103 V91 M318,96 H328" stroke="#4A3820" stroke-width="2" stroke-linecap="round"/>
+      <rect x="319" y="126" width="8" height="10" fill="#6A5230"/>
     </g>
+    <!-- cooking smoke -->
+    <g class="b701smoke" stroke="#F6EEE0" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+      <path d="M248,110 q-6,-10 0,-18 q6,-8 0,-18"/>
+      <path d="M358,112 q-6,-10 0,-18 q6,-8 0,-16"/>
+    </g>
+    <!-- Spanish flag on a pole at the corner -->
+    <path d="M392,138 V100" stroke="#4A3820" stroke-width="2"/>
+    <rect x="392" y="101" width="22" height="15" fill="#FBF6EA"/>
+    <path d="M394,103 L412,114 M412,103 L394,114" stroke="#B3261E" stroke-width="2.4" stroke-linecap="round"/>
   </g>
-  <g transform="translate(620,140)" stroke="#5A3A1A" stroke-width="2.5" fill="none">
-    <ellipse cx="-15" cy="0" rx="12" ry="7"/>
-    <ellipse cx="15" cy="0" rx="12" ry="7"/>
-    <line x1="-3" y1="-4" x2="3" y2="4" stroke="#C03020" stroke-width="3"/>
+  <!-- a heron in the shallows -->
+  <g transform="translate(560,166)">
+    <path d="M0,0 C-6,-4 -8,-14 -2,-20 C2,-24 6,-22 6,-18 C6,-14 2,-12 2,-8 C2,-4 8,-2 12,2 C8,4 2,4 0,0 Z" fill="#E9ECEF" stroke="#7A8590" stroke-width=".8"/>
+    <path d="M6,-19 L16,-17" stroke="#C9A24A" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M3,2 L2,14 M7,2 L8,14" stroke="#5A5A5A" stroke-width="1.2"/>
   </g>
-  <g transform="translate(780,130)">
-    <rect x="-20" y="0" width="40" height="35" rx="2" fill="#C8B8A0" stroke="#8A7A60" stroke-width="1.5"/>
-    <polygon points="-22,0 0,-15 22,0" fill="#A08060"/>
-    <rect x="8" y="-20" width="12" height="20" fill="#C8B8A0" stroke="#8A7A60" stroke-width="1"/>
-    <path d="M 8,-20 L 14,-28 L 20,-20" fill="#A08060"/>
-    <circle cx="14" cy="-12" r="3" fill="#D4943A"/>
-  </g>
-  <g fill="#1A5A3A">
-    <path d="M 50 250 Q 45 220 35 210 Q 48 220 55 215 Q 45 205 52 193 Q 58 210 60 220 Q 68 200 78 200 Q 68 215 63 225 Q 78 215 88 220 Q 73 230 60 237 L 56 255 Z"/>
-    <rect x="54" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A5A3A" transform="translate(880,0)">
-    <path d="M 20 248 Q 15 218 5 208 Q 18 218 25 213 Q 15 203 22 191 Q 28 208 30 218 Q 38 198 48 198 Q 38 213 33 223 Q 48 213 58 218 Q 43 228 30 235 L 26 253 Z"/>
-    <rect x="24" y="235" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
-    <path d="M 250 45 Q 256 40 262 45 Q 268 40 274 45"/>
-    <path d="M 300 55 Q 305 51 310 55 Q 315 51 320 55"/>
+  <!-- morning mist drifting over the marsh -->
+  <g class="b701mist">
+    <rect x="80" y="146" width="420" height="14" rx="7" fill="url(#b701mist)"/>
+    <rect x="520" y="170" width="300" height="10" rx="5" fill="url(#b701mist)"/>
   </g>
 </svg>
 
@@ -3637,5 +4542,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
