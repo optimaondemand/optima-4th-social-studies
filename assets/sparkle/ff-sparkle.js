@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
      explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -3616,17 +3616,17 @@
     var aDone=function(){ return A.rows.every(function(r){ return S.fm[r.id]!=null; }); };
     var done=function(){ return all.length>0&&all.every(function(r){ return S.fm[r.id]!=null; }); };
     function row(r,k){ return '<div class="fr" data-r="'+esc(r.id)+'"><div class="lab">'+esc(r.lab)+'</div><div class="spk-opts">'+r.opts.map(function(o,i){ return '<button type="button" class="spk-opt" data-i="'+i+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="pick"></p></div>'; }
-    var b=el('div','spk spk-builder spk-fm');
+    var b=el('div','spk spk-builder spk-fm'+(cfg.cls?' '+cfg.cls:''));
     b.innerHTML=voice(cfg.voice,cfg)
       +'<div class="spk-fmcards"><div class="fc a"><div class="hd">📇 '+esc(A.t||'What it was')+'</div>'+A.rows.map(row).join('')+'</div>'
-      +'<div class="pin" aria-hidden="true"><svg viewBox="0 0 30 30"><circle cx="15" cy="10" r="7"/><path d="M15,17 V28"/></svg></div>'
+      +(cfg.mid?'<div class="pin mid" aria-hidden="true">'+cfg.mid+'</div>':'<div class="pin" aria-hidden="true"><svg viewBox="0 0 30 30"><circle cx="15" cy="10" r="7"/><path d="M15,17 V28"/></svg></div>')
       +'<div class="fc b"><div class="hd">💡 '+esc(B.t||'What it tells us')+'</div>'+B.rows.map(row).join('')+'</div></div>'
       +'<p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Both cards are pinned together. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
     function lines(){ return all.filter(function(r){ return S.fm[r.id]!=null; }).map(function(r){ return [r.short||r.lab, r.opts[S.fm[r.id]].t]; }); }
     function paint(){ var ad=aDone();
       all.forEach(function(r){ var fr=b.querySelector('.fr[data-r="'+r.id+'"]'), v=S.fm[r.id]; fr.classList.toggle('set',v!=null); fr.querySelector('.pick').textContent=v!=null?r.opts[v].t:'';
         fr.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',+o.dataset.i===v); }); });
-      b.querySelector('.fc.b').classList.toggle('locked',!ad); b.querySelector('.fc.a').classList.toggle('filled',ad);
+      b.querySelector('.fc.b').classList.toggle('locked',!ad); b.querySelector('.fc.a').classList.toggle('filled',ad); b.classList.toggle('topdone',ad);
       var d=done(); b.classList.toggle('done',d);
       var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
     b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var fr=o.closest('.fr'), card=o.closest('.fc'); if(!fr||card.classList.contains('locked')) return;
@@ -3638,6 +3638,126 @@
     return {done:done, lines:lines};
   };
 
+
+  /* ---- 4.07.02 · the U.S. flag of 1821 (13 stripes, a blue corner of stars), for the flagpole ---- */
+  FLAGART.us='<rect width="40" height="28" fill="#FFFDF5"/>'+[0,2,4,6,8,10,12].map(function(i){ return '<rect y="'+(i*28/13).toFixed(2)+'" width="40" height="'+(28/13).toFixed(2)+'" fill="#B3261E"/>'; }).join('')+'<rect width="17" height="15.1" fill="#1F3A7A"/>'+[[3,3],[8,3],[13,3],[5.5,7.5],[10.5,7.5],[3,12],[8,12],[13,12]].map(function(p){ return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="1.1" fill="#fff"/>'; }).join('');
+  function flagSvg(k,cls){ return '<svg class="'+(cls||'')+'" viewBox="0 0 40 28" aria-hidden="true">'+(FLAGART[k]||'')+'</svg>'; }
+
+  /* ---- Scene 1 · Change the flag (4.07.02): a flagpole over St. Augustine. For each year card, in order, pick the flag
+     that went up. The old flag comes down, the new one rises, and the card shows who decided and who had to leave.
+     DATA: flags [{id,name}] (ids from FLAGART), stops [{year,flag,who,what,miss}] ---- */
+  MOD.flagpole=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var FL=cfg.flags||[], ST=cfg.stops||[]; if(S.fp==null) S.fp=0;
+    var done=function(){ return ST.length>0&&S.fp>=ST.length; };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-fp');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Change the flag')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-fprow"><div class="spk-fpscene"><svg viewBox="0 0 220 200" aria-hidden="true"><defs><linearGradient id="spkFpSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB7D4"/><stop offset="1" stop-color="#F3E3C6"/></linearGradient></defs>'
+      +'<rect width="220" height="200" fill="url(#spkFpSky)"/><rect y="168" width="220" height="32" class="bay"/><path d="M20,170 L36,140 L184,140 L200,170 Z" class="fort"/><path d="M36,140 L30,130 L48,130 Z M184,140 L172,130 L190,130 Z" class="fort"/><rect x="60" y="148" width="100" height="22" class="fortf"/>'
+      +'<line x1="110" y1="24" x2="110" y2="140" class="pole"/><circle cx="110" cy="22" r="3" class="knob"/></svg>'
+      +'<div class="flagbox"></div></div>'
+      +'<div class="spk-fpside"><div class="spk-fpyears">'+ST.map(function(s,i){ return '<div class="yr" data-i="'+i+'"><b>'+esc(s.year)+'</b><span class="mini"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-fpask"></p><div class="spk-fpflags">'+FL.map(function(f){ return '<button type="button" class="fl" data-f="'+esc(f.id)+'">'+flagSvg(f.id)+'<span>'+esc(f.name)+'</span></button>'; }).join('')+'</div><p class="spk-miss"></p></div></div>'
+      +'<div class="spk-fplog"></div><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var box=g.querySelector('.flagbox'), log=g.querySelector('.spk-fplog'), miss=g.querySelector('.spk-miss');
+    function paint(anim){ var k=S.fp, cur=k>0?ST[k-1].flag:null;
+      box.innerHTML=cur?'<div class="fly'+(anim?' up':'')+'">'+flagSvg(cur)+'</div>':'';
+      g.querySelectorAll('.yr').forEach(function(y){ var i=+y.dataset.i; y.classList.toggle('on',i<k); y.classList.toggle('next',i===k); y.querySelector('.mini').innerHTML=i<k?flagSvg(ST[i].flag):''; });
+      g.querySelector('.spk-fpask').innerHTML=done()?'':(cfg.askT||'Which flag went up over St. Augustine in {y}?').replace('{y}','<b>'+esc(ST[k].year)+'</b>');
+      g.querySelector('.spk-fpflags').classList.toggle('spk-hide',done());
+      log.innerHTML=ST.slice(0,k).map(function(s,i){ return '<div class="it'+(anim&&i===k-1?' new':'')+'"><div class="hd">'+flagSvg(s.flag)+'<b>'+esc(s.year)+'</b></div><p><span class="lab">'+esc(cfg.whoLab||'Who decided:')+'</span> '+esc(s.who)+'</p><p><span class="lab">'+esc(cfg.whatLab||'What it meant:')+'</span> '+esc(s.what)+'</p></div>'; }).reverse().join('');
+      g.querySelector('.spk-win').classList.toggle('show',done()); g.classList.toggle('done',done()); }
+    g.querySelector('.spk-fpflags').addEventListener('click',function(e){ var b=e.target.closest('.fl'); if(!b||done()) return; ack('open'); var s=ST[S.fp];
+      if(b.dataset.f===s.flag){ S.fp++; save(); miss.textContent=''; sfx('click'); paint(true); refreshFile(); refreshVoice(); }
+      else { b.classList.add('shake'); setTimeout(function(){ b.classList.remove('shake'); },450); miss.textContent=s.miss||''; missBeat(s.miss||''); } });
+    paint();
+    return {done:done, journal:function(e,NA){ return S.fp?ST.slice(0,S.fp).map(function(s){ return '<p class="a"><b>'+e(s.year)+':</b> '+e(s.what)+'</p>'; }).join(''):NA; }};
+  };
+
+  /* ---- Explore reading · The treaty book (4.07.02): a row of folded documents, each closed with a wax seal. Tap the
+     next seal to break it; that part of the reading opens below. DATA: paras [{id,match}], pages [{id,t,year,paras:[]}] ---- */
+  MOD.treatybook=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var PG=cfg.pages||[], n=PG.length; if(S.tb==null) S.tb=0;
+    var done=function(){ return n>0&&S.tb>=n; };
+    var w=el('div','spk spk-tb');
+    w.innerHTML=whyCard(cfg.why)+'<div class="spk-tbbar"><div class="docs">'+PG.map(function(p,i){ return '<button type="button" class="doc" data-i="'+i+'" aria-label="'+esc('Break seal '+(i+1)+': '+p.t)+'"><span class="yr">'+esc(p.year||'')+'</span><span class="seal" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M20,3 C27,4 34,8 36,15 C39,22 36,31 29,35 C22,39 13,38 8,32 C3,26 3,16 8,10 C11,6 15,3 20,3 Z" class="wax"/><circle cx="20" cy="20" r="9" class="ring"/><path d="M15,20 H25 M20,15 V25" class="mk"/><path d="M8,12 L18,20 L9,30" class="crack"/></svg></span><span class="t">'+esc(p.t)+'</span></button>'; }).join('')+'</div><p class="spk-ys-ct spk-tbct"></p></div><div class="spk-tbread"></div>';
+    before(first,w);
+    var list=w.querySelector('.spk-tbread'), boxes={};
+    PG.forEach(function(p,i){ var b=el('div','spk-tbp'); b.innerHTML='<div class="tab"><span class="y">'+esc(p.year||String(i+1))+'</span><b>'+esc(p.t)+'</b></div>'; list.appendChild(b); (p.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.appendChild(nd); }); });
+      if(i<n-1){ var nx=el('button','spk-tbnext',esc((cfg.nextT||'Break the next seal: {t}').replace('{t}',PG[i+1].t))); nx.type='button'; nx.addEventListener('click',function(){ go(i+1); }); b.appendChild(nx); }
+      boxes[i]=b; });
+    function paint(anim){ var k=S.tb;
+      w.querySelectorAll('.doc').forEach(function(d){ var i=+d.dataset.i; d.classList.toggle('open',i<k); d.classList.toggle('next',i===k); if(anim&&i===k-1){ d.classList.remove('crk'); void d.offsetWidth; d.classList.add('crk'); } });
+      PG.forEach(function(p,i){ boxes[i].classList.toggle('on',i<k); boxes[i].classList.toggle('cur',i===k-1); });
+      w.classList.toggle('all',done());
+      w.querySelector('.spk-tbct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every seal is broken. You read the whole story.')+'</b>':(k===0?esc(cfg.startT||'Tap the first seal to break it.'):'<b>'+k+' of '+n+'</b> '+esc(cfg.countT||'seals broken. Read this part, then break the next one.'));
+      var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function go(i){ if(i!==S.tb||done()) return; ack('explore'); S.tb++; save(); sfx('click'); paint(true); refreshFile(); refreshVoice();
+      var nb=boxes[i]; if(nb&&nb.scrollIntoView&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ setTimeout(function(){ try{ nb.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },250); } }
+    w.querySelector('.docs').addEventListener('click',function(e){ var d=e.target.closest('.doc'); if(!d) return; var i=+d.dataset.i; if(i<S.tb){ try{ boxes[i].scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(err){} return; } if(i>S.tb){ w.querySelector('.spk-tbct').innerHTML=esc(cfg.orderT||'Break the seals in order: tap the one that glows.'); return; } go(i); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, journal:function(){ return '<p class="a">Seals broken: '+Math.min(S.tb,n)+' of '+n+'.</p>'; }};
+  };
+
+  /* ---- Vocabulary · Carry it across (4.07.02, trans = across): a small boat waits on one shore of a strait. Tap each
+     word to hear it (g4ss-<lesson>-<root>-<n>.mp3 when it exists). Then put each meaning on its word; each match
+     sends the boat across with one crate, which lands on the far shore. ---- */
+  MOD.ferry=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'trans'; S.fy=S.fy||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return W.length>0&&S.fy.set.length===W.length; };
+    var g=el('div','spk spk-fy');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Carry it across')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-fywrap"><svg class="fyv" viewBox="0 0 340 110" aria-hidden="true"><rect width="340" height="110" class="sky"/><rect y="60" width="340" height="50" class="sea"/><path d="M0,58 L70,58 L82,72 L0,72 Z" class="shore"/><path d="M340,58 L270,58 L258,72 L340,72 Z" class="shore"/>'
+      +'<path d="M90,80 q8,-4 16,0 t16,0 M150,92 q8,-4 16,0 t16,0 M210,82 q8,-4 16,0 t16,0" class="wave"/>'
+      +W.map(function(x,i){ return '<rect class="landed" data-i="'+i+'" x="'+(282+(i%2)*22)+'" y="'+(i<2?40:22)+'" width="18" height="16" rx="1.5"/>'; }).join('')
+      +'<g class="boatw"><g class="boat"><path d="M60,66 L104,66 L98,78 L66,78 Z" class="hull"/><line x1="82" y1="66" x2="82" y2="38" class="mast"/><path d="M83,40 L100,62 L83,62 Z" class="sail"/><rect x="66" y="54" width="14" height="12" rx="1.5" class="crate"/></g></g></svg>'
+      +'<div class="wds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+(x.root?esc(x.w).replace(new RegExp(esc(x.root),'i'),function(m){ return '<b>'+m+'</b>'; }):esc(x.w))+'</span><span class="m"></span></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-fy-ct"></p><div class="spk-chips spk-fymeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-fymeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.wds'), svg=g.querySelector('.fyv'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-fymean','<span class="ico">📦</span><span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.fy.heard.length===W.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.fy.heard.indexOf(i)>=0, u=S.fy.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      var k=S.fy.set.length; svg.querySelectorAll('.landed').forEach(function(b){ b.classList.toggle('on',+b.dataset.i<k); });
+      if(typeof anim==='number'){ var bw=svg.querySelector('.boatw'); bw.classList.remove('go'); void bw.getBoundingClientRect(); bw.classList.add('go'); }
+      svg.classList.toggle('empty',done());
+      g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-fymean').forEach(function(t){ var f=S.fy.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-fy-ct').innerHTML=!allH?'<b>'+S.fy.heard.length+' of '+W.length+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+S.fy.set.length+' of '+W.length+'</b> '+esc(cfg.upT||'crates carried across. Put each meaning on its word.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.fy.set.indexOf(i)>=0||S.fy.heard.length<W.length) return; arm(false);
+      if(+c.dataset.i===i){ S.fy.set.push(i); save(); sel=null; miss.textContent=''; sfx('click'); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.fy.heard.length===W.length){ attempt(sel,c); return; }
+      if(S.fy.heard.indexOf(i)<0){ S.fy.heard.push(i); save(); sfx('click'); } say(i); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-fymean'); if(!t) return; if(S.fy.heard.length<W.length){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-fymean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-fymean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-fymean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+  /* ---- Planner · The hourglass (4.07.02): the fact card + meaning card planner drawn as an hourglass. The top bulb is
+     the change (when and who decided); the bottom bulb is what it meant for the people. Sand runs once the top is
+     filled; the bottom fills when everything is chosen. Same DATA as factcard (cardA = top, cardB = bottom). ---- */
+  MOD.hourglass=function(cfg){
+    var mid='<svg viewBox="0 0 60 120" class="hg"><path d="M8,6 H52 M8,114 H52" class="frame"/><path d="M12,8 C12,40 28,52 28,60 C28,68 12,80 12,112 H48 C48,80 32,68 32,60 C32,52 48,40 48,8 Z" class="glass"/><path d="M15,12 C16,36 28,48 30,56 C32,48 44,36 45,12 Z" class="sandT"/><path d="M30,64 L30,108" class="stream"/><path d="M15,111 C20,96 26,90 30,88 C34,90 40,96 45,111 Z" class="sandB"/></svg>';
+    return MOD.factcard(Object.assign({},cfg,{mid:mid,cls:'spk-hgp'}));
+  };
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }

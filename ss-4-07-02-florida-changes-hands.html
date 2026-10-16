@@ -1683,6 +1683,798 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.07.02",
+ "title": "Florida Changes Hands",
+ "quiet": true,
+ "file": {
+  "n": 7,
+  "title": "Fort Mose & Pioneers",
+  "label": "Fort Mose & Pioneers",
+  "seals": [
+   "🚩",
+   "🔏",
+   "⏳"
+  ]
+ },
+ "prevFile": "Fort Mose and Freedom in Spanish Florida",
+ "connector": "Last time we studied Fort Mose. Today we follow the flag over St. Augustine as Florida changes hands, and we ask who got a say.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Change the Flag",
+   "t": "Raise each flag",
+   "why": "For each year, raise the flag that went up over St. Augustine. Each change shows who decided and who had to leave."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Break the seals, read the map",
+   "why": "Break each treaty seal to read the story. Then sort what a 1763 map shows and what it doesn't tell us."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill the hourglass, then write",
+   "why": "Answer three questions. Then write 3 to 5 sentences about how Florida changed hands and what it meant for the people here."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about a flag that kept changing. Let’s take it slowly.",
+  "opening": [
+   "This file is about how Florida changed hands. Countries far away signed papers, and the people who lived here had to live with what those papers said.",
+   "Start in the Change the Flag tab (tab 1). Scroll down to the flagpole under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the flagpole",
+      "go": true,
+      "reply": "Look at the year. Then tap the flag that went up over St. Augustine that year."
+     },
+     {
+      "t": "What’s a treaty?",
+      "reply": "A written agreement between countries. Florida changed hands because of treaties signed far away."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this happened to real people and real families. Going slowly is how we show respect."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Break each wax seal in order, and read what each treaty changed."
+     },
+     {
+      "t": "Did anyone in Florida vote?",
+      "reply": "No. Kings and governments far away made the choice. The people living here had little or no say."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who made the 1763 map?",
+      "reply": "John Gibson engraved it for a London magazine in November 1763, the year Britain took Florida."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next is the Adams-Onís Treaty, the agreement that made Florida part of the United States."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Four flags, three changes of rulers. Each one was decided far away. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You read every treaty and sorted what the map can and can’t tell us. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill the hourglass and write 3 to 5 sentences about how Florida changed hands and what it meant for the people here."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for handling it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means standing firm when the world shifts around you. Here it means the families who had to leave, start over, or live under new rules every time the flag changed.",
+ "scene1": {
+  "type": "flagpole",
+  "kicker": "Change the flag",
+  "h": "Which flag flew over St. Augustine?",
+  "voice": "Look at the year. Tap the flag that went up over St. Augustine that year. The old flag comes down, the new one goes up, and you’ll see who decided.",
+  "flags": [
+   {
+    "id": "es",
+    "name": "Spain"
+   },
+   {
+    "id": "gb",
+    "name": "Britain"
+   },
+   {
+    "id": "us",
+    "name": "United States"
+   }
+  ],
+  "stops": [
+   {
+    "year": "1565",
+    "flag": "es",
+    "who": "Spain’s king sent soldiers and settlers across the ocean.",
+    "what": "St. Augustine was founded next to the Timucua town of Seloy. Spain ruled Florida for about 200 years.",
+    "miss": "In 1565 Spain founded St. Augustine. Which flag is Spain’s?"
+   },
+   {
+    "year": "1763",
+    "flag": "gb",
+    "who": "A treaty signed in Paris after the Seven Years’ War. Spain traded Florida to get Havana back.",
+    "what": "About 3,000 people sailed to Cuba, including the free Black families of Fort Mose. Britain split Florida into East and West Florida.",
+    "miss": "In 1763 Spain traded Florida away. Who got it? Look for the British flag."
+   },
+   {
+    "year": "1783",
+    "flag": "es",
+    "who": "The peace treaties that ended the American Revolution.",
+    "what": "Britain gave Florida back to Spain. Most British settlers packed up and left.",
+    "miss": "In 1783 Florida went back to the country that had it first. Which one?"
+   },
+   {
+    "year": "1821",
+    "flag": "us",
+    "who": "The Adams-Onís Treaty, signed in 1819 by Spain and the United States.",
+    "what": "The United States flag went up over St. Augustine, and Florida became a U.S. territory.",
+    "miss": "By 1821 a new country owned Florida. It isn’t in Europe. Which flag?"
+   }
+  ],
+  "askT": "Which flag went up over St. Augustine in {y}?",
+  "whoLab": "Who decided:",
+  "whatLab": "What it meant:",
+  "win": "🚩 <b>Four flags, three changes of rulers.<\/b> Every change was decided far away, and the people here lived with it.",
+  "why": {
+   "icon": "🚩",
+   "q": "Why a flagpole?",
+   "t": "A flag on a pole shows which country rules a place. In St. Augustine, the flag over the fort changed when faraway countries signed a treaty (a written agreement between countries). That’s why you raise each new flag."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "treatybook",
+   "activity": "Florida Changes Hands",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^From the time"
+    },
+    {
+     "id": "p1",
+     "match": "^Spanish Florida \\(1513"
+    },
+    {
+     "id": "p2",
+     "match": "^British Florida"
+    },
+    {
+     "id": "p3",
+     "match": "^Spanish Florida again"
+    },
+    {
+     "id": "p4",
+     "match": "^Who was affected"
+    }
+   ],
+   "pages": [
+    {
+     "id": "t1",
+     "year": "1513–1821",
+     "t": "Three changes",
+     "paras": [
+      "p0"
+     ]
+    },
+    {
+     "id": "t2",
+     "year": "1513–1763",
+     "t": "Spanish Florida",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "t3",
+     "year": "1763",
+     "t": "Florida for Havana",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "t4",
+     "year": "1783",
+     "t": "Back to Spain",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "t5",
+     "year": "Every time",
+     "t": "Who was affected?",
+     "paras": [
+      "p4"
+     ]
+    }
+   ],
+   "startT": "Tap the first wax seal to break it and open the story.",
+   "countT": "seals broken. Read this part, then break the next one.",
+   "allT": "Every seal is broken. You read the whole story.",
+   "nextT": "Break the next seal: {t}",
+   "orderT": "Break the seals in order: tap the one that glows.",
+   "why": {
+    "icon": "🔏",
+    "q": "Why wax seals?",
+    "t": "Long ago, important papers like treaties were folded and closed with a blob of hot wax pressed with a stamp. Breaking the seal meant opening the paper to read it. Florida changed hands because of papers like these, so each part of the story is behind a seal."
+   }
+  },
+  "evidence": {
+   "type": "sayinfer",
+   "kicker": "Shows / doesn’t tell",
+   "h": "What can this map tell us?",
+   "voice": "Tap a card, then tap the tray it belongs in, or drag it there. If you can point to it on the map, it goes in Shows. If you would need another source, it goes in Doesn’t tell us.",
+   "bins": [
+    {
+     "id": "show",
+     "ico": "👁️",
+     "t": "The map shows",
+     "sub": "You can point to it",
+     "ink": "SHOWS"
+    },
+    {
+     "id": "tell",
+     "ico": "❓",
+     "t": "The map doesn’t tell us",
+     "sub": "You’d need another source",
+     "ink": "NOT ON THE MAP"
+    }
+   ],
+   "cards": [
+    {
+     "t": "Britain split Florida into two colonies, East and West.",
+     "bin": "show",
+     "why": "Labels 1, 2 and 3.",
+     "miss": "Look at the title (1) and labels 2 and 3. Can you point to it?"
+    },
+    {
+     "t": "Pensacola had a harbor and a town.",
+     "bin": "show",
+     "why": "The small map, label 5.",
+     "miss": "Find label 5, the small map in the corner. Can you point to it?"
+    },
+    {
+     "t": "St. Augustine is on the east coast.",
+     "bin": "show",
+     "why": "Label 4.",
+     "miss": "Find label 4. Can you point to it?"
+    },
+    {
+     "t": "Havana, Cuba, is just across the water from Florida.",
+     "bin": "show",
+     "why": "Label 6.",
+     "miss": "Find label 6 at the bottom. Can you point to it?"
+    },
+    {
+     "t": "Who had to leave Florida when Britain took over.",
+     "bin": "tell",
+     "why": "The map shows places, not the 3,000 people who sailed to Cuba.",
+     "miss": "Can you point to a person leaving on this map? Maps show places, not who left."
+    },
+    {
+     "t": "Why Spain gave Florida away.",
+     "bin": "tell",
+     "why": "The reading tells us about the trade for Havana. The map doesn’t.",
+     "miss": "Is the reason written anywhere on the map? You learned it from the reading."
+    },
+    {
+     "t": "What the Native peoples living here thought of their new rulers.",
+     "bin": "tell",
+     "why": "A map can’t show what people thought.",
+     "miss": "Can a map show what people think? You would need their own words."
+    },
+    {
+     "t": "How daily life changed for families in St. Augustine.",
+     "bin": "tell",
+     "why": "You’d need letters, records or other sources.",
+     "miss": "Can you point to daily life on this map? You’d need another source."
+    }
+   ],
+   "countT": "cards sorted.",
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: break every seal in Learn the Story at the top of this tab.",
+   "win": "A map is good evidence for places. To learn about people, historians need other sources too. Now look at the question above the game: what did these empires overlook?",
+   "why": {
+    "icon": "🗺️",
+    "q": "Why sort it this way?",
+    "t": "Every source can tell us some things and not others. This map was made in London for British readers. It shows the new colonies and their towns, but not the people who had to leave. That’s why historians ask what a source shows, and what it leaves out."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 6 gold numbers on the map.",
+    "Read the three questions under the map.",
+    "Do Shows / doesn’t tell: sort each card into the right tray."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now try Shows / doesn’t tell below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 77.18,
+    "y": 6.93,
+    "title": "The title.",
+    "t": "It says: “A Map of the New Governments of East & West Florida.” They were new because Britain had just taken Florida in 1763 and split it into two colonies."
+   },
+   {
+    "n": "2",
+    "x": 29.26,
+    "y": 15.68,
+    "title": "West Florida.",
+    "t": "The new British colony along the Gulf of Mexico. Its capital was Pensacola."
+   },
+   {
+    "n": "3",
+    "x": 60.78,
+    "y": 30.03,
+    "title": "East Florida.",
+    "t": "The letters E-A-S-T run down the peninsula. Its capital was St. Augustine."
+   },
+   {
+    "n": "4",
+    "x": 76.54,
+    "y": 29.7,
+    "title": "St. Augustine.",
+    "t": "The oldest town in Florida, on the east coast. In 1763 almost all of its Spanish families left for Cuba."
+   },
+   {
+    "n": "5",
+    "x": 4.54,
+    "y": 75.58,
+    "title": "Pensacola.",
+    "t": "The small map in the corner shows Pensacola’s harbor and town, the capital of West Florida."
+   },
+   {
+    "n": "6",
+    "x": 63.68,
+    "y": 84.49,
+    "title": "Havana, Cuba.",
+    "t": "Britain had captured Havana in 1762. Spain traded Florida to get it back."
+   }
+  ]
+ },
+ "planner": {
+  "type": "hourglass",
+  "voice": "Fill the top of the hourglass first: which change, and who decided. Then fill the bottom: what it meant for the people here. These are just notes. You’ll write your own sentences in Step 3.",
+  "cardA": {
+   "t": "Top: the change",
+   "rows": [
+    {
+     "id": "chg",
+     "lab": "Pick one change",
+     "short": "The change",
+     "opts": [
+      {
+       "t": "1763: Spain gave Florida to Britain"
+      },
+      {
+       "t": "1783: Britain gave Florida back to Spain"
+      }
+     ]
+    },
+    {
+     "id": "who",
+     "lab": "Who decided?",
+     "short": "Who decided",
+     "opts": [
+      {
+       "t": "The people who lived in Florida",
+       "ok": false,
+       "miss": "Did families in St. Augustine get a vote? Reread seal 3."
+      },
+      {
+       "t": "Kings and governments far away, in a treaty",
+       "ok": true
+      },
+      {
+       "t": "Everyone in St. Augustine voted",
+       "ok": false,
+       "miss": "There was no vote. Reread seal 3 or 4: who signed the treaty?"
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "Bottom: what it meant",
+   "rows": [
+    {
+     "id": "grp",
+     "lab": "Pick a group of people",
+     "short": "Group",
+     "opts": [
+      {
+       "t": "Spanish families in St. Augustine"
+      },
+      {
+       "t": "the free Black families of Fort Mose"
+      },
+      {
+       "t": "British settlers"
+      },
+      {
+       "t": "Native peoples"
+      }
+     ]
+    },
+    {
+     "id": "meant",
+     "lab": "What it meant for them",
+     "short": "What it meant",
+     "opts": [
+      {
+       "t": "many had to leave their homes and start over somewhere else"
+      },
+      {
+       "t": "they had to live under new rulers and new laws"
+      },
+      {
+       "t": "they had little or no say in the decision"
+      }
+     ]
+    },
+    {
+     "id": "ngd",
+     "lab": "Pick a name, date, or place to use",
+     "short": "Name, date, or place",
+     "opts": [
+      {
+       "t": "1763"
+      },
+      {
+       "t": "1783"
+      },
+      {
+       "t": "Havana, Cuba"
+      },
+      {
+       "t": "East and West Florida"
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "The sand has run through. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "⏳",
+   "q": "Why an hourglass?",
+   "t": "Sand in an hourglass falls one way, from top to bottom. A cause comes first, and its effects follow. The top of your hourglass is the change, and the bottom is what it meant for people. That’s why you fill the top first."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "how Florida changed hands",
+    "rx": "spain|britain|british|spanish|england|1763|1783|treaty|trade|traded|gave|handed|changed|back|took"
+   },
+   {
+    "t": "what it meant for people",
+    "rx": "people|famil|left|leave|cuba|moved|lost|law|rules|settler|native|fort mose|black|enslav|slave|plantation|home|say|start over"
+   },
+   {
+    "t": "a name, date, or group",
+    "rx": "1763|1783|1821|1819|havana|cuba|fort mose|pensacola|augustine|seven years|adams|native|seminole|calusa|apalachee|timucua|black|spain|britain|east florida|west florida"
+   }
+  ],
+  "lines": [
+   "Start with how Florida changed hands.",
+   "Good. Now say what it meant for the people here.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the flagpole, the treaty seals, and the 1763 map."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the hourglass: the change on top, what it meant on the bottom."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences: how Florida changed hands and what it meant for the people here. Use a name, date, or group. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "ferry",
+  "kicker": "Carry it across",
+  "h": "trans = across",
+  "root": "trans",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match carries one crate across the water.",
+  "words": [
+   {
+    "w": "transfer",
+    "root": "trans",
+    "m": "to move something from one person, place, or country to another",
+    "miss": "This one is about passing something from one owner to another, the way Florida was passed to Britain.",
+    "say": "Transfer. To move something from one person, place, or country to another."
+   },
+   {
+    "w": "transport",
+    "root": "trans",
+    "m": "to carry people or things from one place to another",
+    "miss": "Port is about carrying. Which word means carrying across?",
+    "say": "Transport. To carry people or things from one place to another."
+   },
+   {
+    "w": "transatlantic",
+    "root": "trans",
+    "m": "across the Atlantic Ocean",
+    "miss": "Look inside the word: which one has the name of an ocean in it?",
+    "say": "Transatlantic. Across the Atlantic Ocean."
+   },
+   {
+    "w": "translate",
+    "root": "trans",
+    "m": "to change words from one language into another",
+    "miss": "This one carries words across from one language to another. Which word is it?",
+    "say": "Translate. To change words from one language into another."
+   }
+  ],
+  "win": "⛵ Every crate is across. <b>trans<\/b> = across",
+  "why": {
+   "icon": "⛵",
+   "q": "Why a boat?",
+   "t": "<em>Trans<\/em> is the Latin word for “across.” In 1763 Spanish ships carried about 3,000 people across the water from St. Augustine to Cuba. Each word you match carries one crate across the strait."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Who gets a say?",
+   "at": "scene1",
+   "script": "When I was a kid, my family moved because of my dad’s job. The grown-ups decided, and I packed up my room. Nobody asked me. As you raise each flag, notice two things: who decided, and who had to pack."
+  },
+  {
+   "slot": "guide2",
+   "label": "Say one change out loud",
+   "at": "s1done",
+   "script": "Pause me, and look at the flags you raised. Pick one year when the flag changed. Say out loud who decided, and who had to leave. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Seals and treaties",
+   "at": "explore",
+   "script": "Each seal stands for a treaty, a written agreement signed far away. Break the seals in order, and read what each one changed. As you read, keep one question in your head: who got a say?"
+  },
+  {
+   "slot": "guide4",
+   "label": "Signed far away",
+   "at": "afterread",
+   "script": "Think about the families of Fort Mose. In 1763 they left the town they built and started over in Cuba. They didn’t sign the treaty, but they lived with what it said. Pause me and think: who signed it, and who lived with it?"
+  },
+  {
+   "slot": "guide5",
+   "label": "What a map can’t say",
+   "at": "evidence",
+   "script": "A map of my town shows the streets and the school. It doesn’t tell me who lives on each street, or how they feel. Old maps work the same way. For each card, ask: can I point to it on the map, or would I need another source?"
+  },
+  {
+   "slot": "guide6",
+   "label": "Top, then bottom",
+   "at": "plan",
+   "script": "An hourglass has a top and a bottom, and the sand only falls one way. Fill the top first: the change, and who decided. Then the bottom: what it meant for the people. Then write it in your own words."
+  }
+ ],
+ "cabinet": {
+  "n": 7
+ },
+ "notes": {
+  "learned": [
+   "Florida changed hands three times: Spain to Britain in 1763, Britain back to Spain in 1783, and Spain to the United States in 1821.",
+   "In 1763 Spain traded Florida to Britain to get back Havana, Cuba, which Britain had captured in the Seven Years’ War.",
+   "About 3,000 people left St. Augustine for Cuba in 1763, including the free Black families of Fort Mose.",
+   "Britain split Florida into East Florida (capital St. Augustine) and West Florida (capital Pensacola). Plantations and slavery grew.",
+   "Each change was decided far away, in a treaty. The people living in Florida had little or no say."
+  ],
+  "vocab": [
+   [
+    "treaty",
+    "a written agreement between countries"
+   ],
+   [
+    "European powers",
+    "strong countries in Europe"
+   ],
+   [
+    "consequences",
+    "results"
+   ],
+   [
+    "colony",
+    "land ruled by a faraway country"
+   ],
+   [
+    "plantation",
+    "a large farm worked by enslaved people"
+   ],
+   [
+    "territory",
+    "land owned by the United States that is not yet a state"
+   ],
+   [
+    "courage",
+    "standing firm when the world shifts around you"
+   ],
+   [
+    "transfer",
+    "to move something from one person, place, or country to another"
+   ],
+   [
+    "transport",
+    "to carry people or things from one place to another"
+   ],
+   [
+    "transatlantic",
+    "across the Atlantic Ocean"
+   ],
+   [
+    "translate",
+    "to change words from one language into another"
+   ]
+  ],
+  "wordParts": "The Latin root trans means “across.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what happened",
+    "rx": "trade|traded|gave|give|handed|took|take|got|went|became|changed|ruled|control|own|switch",
+    "n": 1
+   },
+   {
+    "t": "both countries",
+    "groups": [
+     "spain|spanish",
+     "brit|england|english"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a group of people",
+    "rx": "people|famil|native|black|fort mose|mose|spanish|settler|resident|enslav|slave|british|calusa|apalachee|timucua|seminole|they|everyone|person",
+    "n": 1
+   },
+   {
+    "t": "what happened to them",
+    "rx": "left|leave|moved|move|sail|cuba|lost|lose|had to|law|rules|start over|forced|fled|went|packed|gone",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a detail from the map",
+    "rx": "map|east|west|two|pensacola|augustine|havana|cuba|title|label|number|new government|colon|split|divid|line|half",
+    "n": 1
+   },
+   {
+    "t": "what it tells you",
+    "rx": "show|tell|mean|because|so\\b|traded|treat|cared|didn.?t|did not|ignor|left out|people|land|power|own|wanted|just",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the flagpole in tab 1, or break seal 3 in the Explore tab (tab 2).",
+   "Which country gave Florida away in 1763, and which country got it?",
+   "Try this shape: “In 1763, ___ traded Florida to ___ to get back ___.”"
+  ],
+  "journal-q2": [
+   "Look at seal 5, Who was affected?, in the Explore tab (tab 2).",
+   "Pick one group: the Spanish families of St. Augustine, the people of Fort Mose, British settlers, or Native peoples. What happened to them?",
+   "Try this shape: “When Florida changed hands, ___ had to ___.”"
+  ],
+  "journal-q3": [
+   "Look at the 1763 map and its gold numbers in the Explore tab (tab 2).",
+   "Pick one thing you can point to, like the line between East and West Florida. Then think about what the map leaves out.",
+   "Try this shape: “The map shows ___. This tells me ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why would Spain trade a whole colony for one city? What made Havana so important?",
+  "journal-q2": "Go further: some Native peoples, like the Creek, moved into Florida during these years. How might a new ruler change their lives?",
+  "journal-q3": "Go further: the map was made in London for British readers. What might a Spanish family leaving St. Augustine have drawn instead?"
+ },
+ "quizMiss": [
+  {
+   "a": "Spain wanted Florida, but it wanted Havana more. Reread seal 3.",
+   "c": "The American colonies didn’t decide this. Reread seal 3 about the treaty after the Seven Years’ War."
+  },
+  {
+   "a": "Britain didn’t grow Fort Mose. Its people left. Reread seal 3.",
+   "c": "Fort Mose didn’t become a British base. Reread seal 5 about who was affected."
+  },
+  {
+   "b": "Count the changes, not the rulers: 1763 and 1783. The flagpole in tab 1 can help.",
+   "c": "Count only the changes between European countries: 1763 and 1783."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1915,73 +2707,99 @@ body {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Florida Changes Hands ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: empty harbor, 1763 — dawn over St. Augustine's harbor, the Castillo and quiet empty houses, sails heading out to sea toward Cuba, a new flag going up the pole (4.07.02 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dawn over an old harbor town. A star-shaped stone fort and quiet houses with no smoke stand by the water while sailing ships head out to sea. On the fort, a new flag is going up the pole." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h702sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E8A04A"/>
-      <stop offset="35%" stop-color="#C88040"/>
-      <stop offset="100%" stop-color="#6A9AC0"/>
+    <linearGradient id="b702sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C4A72"/>
+      <stop offset=".5" stop-color="#B08AA0"/>
+      <stop offset="1" stop-color="#F2CFA4"/>
     </linearGradient>
+    <linearGradient id="b702sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E7BE96"/>
+      <stop offset="1" stop-color="#5E7894"/>
+    </linearGradient>
+    <radialGradient id="b702sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF1C8"/>
+      <stop offset=".4" stop-color="#FFD08A" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#FFC27A" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .h702flag { animation: h702flag 3s ease-in-out infinite; transform-origin: left center; transform-box: fill-box; }
-      @keyframes h702flag { 0%,100% { transform: skewY(0deg); } 50% { transform: skewY(-2deg); } }
-      .h702drift { animation: h702drift 5s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h702drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      .b702sail1 { animation: b702sail 40s linear infinite; }
+      .b702sail2 { animation: b702sail 55s linear infinite; animation-delay: -20s; }
+      @keyframes b702sail { from { transform: translateX(0); opacity: 1; } 85% { opacity: .9; } to { transform: translateX(260px); opacity: 0; } }
+      .b702flag { animation: b702wave 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 0 50%; }
+      @keyframes b702wave { 50% { transform: skewY(4deg) scaleX(.94); } }
+      .b702glow { animation: b702glow 10s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b702glow { 50% { opacity: .75; transform: scale(1.05); } }
+      .b702rip { animation: b702rip 7s ease-in-out infinite; }
+      @keyframes b702rip { 50% { opacity: .3; } }
+      @media (prefers-reduced-motion: reduce) { .b702sail1, .b702sail2, .b702flag, .b702glow, .b702rip { animation: none; } }
     </style>
   </defs>
-  <rect width="920" height="180" fill="url(#h702sky)"/>
-  <g opacity="0.35" fill="#FFFFFF">
-    <ellipse cx="200" cy="45" rx="65" ry="18"/>
-    <ellipse cx="700" cy="55" rx="50" ry="15"/>
-  </g>
-  <rect y="180" width="920" height="80" fill="#3A6A4A"/>
-  <g transform="translate(200,50)">
-    <line x1="0" y1="0" x2="0" y2="130" stroke="#5A4A3A" stroke-width="4"/>
-    <circle cx="0" cy="0" r="5" fill="#D4943A"/>
-    <g class="h702flag">
-      <rect x="4" y="8" width="80" height="50" rx="2" fill="#E8C040"/>
-      <rect x="4" y="8" width="80" height="10" fill="#C03020"/>
-      <rect x="4" y="48" width="80" height="10" fill="#C03020"/>
+  <rect width="920" height="200" fill="url(#b702sky)"/>
+  <circle class="b702glow" cx="760" cy="118" r="110" fill="url(#b702sun)"/>
+  <circle cx="760" cy="118" r="18" fill="#FFF1C4"/>
+  <path d="M480,46 q50,-8 110,0 q40,6 90,0" stroke="#E9B9A0" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round"/>
+  <!-- sea -->
+  <rect y="120" width="920" height="80" fill="url(#b702sea)"/>
+  <path d="M700,122 L820,122 L880,200 L640,200 Z" fill="#FFE2AE" opacity=".3"/>
+  <g class="b702rip" stroke="#FFF0D0" stroke-width="2" stroke-linecap="round" opacity=".55"><path d="M720,132 h40 M736,142 h30 M712,156 h54 M744,170 h40"/></g>
+  <!-- ships heading out to sea (east) -->
+  <g class="b702sail1">
+    <g transform="translate(560,112)">
+      <path d="M-26,8 L26,8 L18,18 L-18,18 Z" fill="#3E2E20"/>
+      <path d="M0,8 V-36 M-12,8 V-24" stroke="#3E2E20" stroke-width="1.6"/>
+      <path d="M2,-34 L22,-12 L2,-10 Z M2,-8 L20,4 L2,5 Z" fill="#F4ECDC"/>
+      <path d="M-10,-22 L4,-6 L-10,-4 Z" fill="#EDE2CC"/>
     </g>
   </g>
-  <g transform="translate(460,50)">
-    <line x1="0" y1="0" x2="0" y2="130" stroke="#5A4A3A" stroke-width="4"/>
-    <circle cx="0" cy="0" r="5" fill="#D4943A"/>
-    <g class="h702flag">
-      <rect x="4" y="8" width="80" height="50" rx="2" fill="#1A3A8A" opacity="0.7"/>
-      <rect x="38" y="8" width="12" height="50" fill="#C03020" opacity="0.8"/>
-      <rect x="4" y="28" width="80" height="10" fill="#C03020" opacity="0.8"/>
-      <rect x="40" y="8" width="8" height="50" fill="#FFFFFF" opacity="0.5"/>
-      <rect x="4" y="30" width="80" height="6" fill="#FFFFFF" opacity="0.5"/>
+  <g class="b702sail2">
+    <g transform="translate(470,118) scale(.7)">
+      <path d="M-26,8 L26,8 L18,18 L-18,18 Z" fill="#3E2E20"/>
+      <path d="M0,8 V-36" stroke="#3E2E20" stroke-width="1.6"/>
+      <path d="M2,-34 L22,-12 L2,-10 Z M2,-8 L20,4 L2,5 Z" fill="#F4ECDC"/>
     </g>
   </g>
-  <g transform="translate(720,50)">
-    <line x1="0" y1="0" x2="0" y2="130" stroke="#5A4A3A" stroke-width="4"/>
-    <circle cx="0" cy="0" r="5" fill="#D4943A"/>
-    <g class="h702flag">
-      <rect x="4" y="8" width="80" height="50" rx="2" fill="#E8C040"/>
-      <rect x="4" y="8" width="80" height="10" fill="#C03020"/>
-      <rect x="4" y="48" width="80" height="10" fill="#C03020"/>
+  <!-- the shore and the town: quiet houses, no smoke -->
+  <path d="M0,128 C80,122 180,124 260,126 C320,128 370,132 420,140 L420,200 L0,200 Z" fill="#B8A07A"/>
+  <path d="M0,150 C100,144 220,148 320,150 C360,152 390,156 420,162 L420,200 L0,200 Z" fill="#9C8562"/>
+  <g fill="#E8D8B8" stroke="#7A6440" stroke-width=".8">
+    <rect x="30" y="110" width="26" height="18"/><rect x="62" y="114" width="22" height="14"/><rect x="92" y="108" width="28" height="20"/><rect x="128" y="113" width="22" height="15"/>
+  </g>
+  <g fill="#A27A4A" stroke="#7A6440" stroke-width=".8">
+    <path d="M27,111 L43,100 L59,111 Z"/><path d="M59,115 L73,105 L87,115 Z"/><path d="M89,109 L106,97 L123,109 Z"/><path d="M125,114 L139,104 L153,114 Z"/>
+  </g>
+  <g fill="#4A3B2C">
+    <rect x="40" y="118" width="5" height="10"/><rect x="72" y="120" width="4" height="8"/><rect x="104" y="117" width="5" height="11"/><rect x="137" y="120" width="4" height="8"/>
+  </g>
+  <!-- a church bell tower -->
+  <rect x="170" y="88" width="16" height="40" fill="#E2D2AE" stroke="#7A6440" stroke-width=".8"/>
+  <path d="M168,89 L178,78 L188,89 Z" fill="#A27A4A"/>
+  <path d="M178,78 V70 M175,73 H181" stroke="#4A3B2C" stroke-width="1.4"/>
+  <!-- the Castillo -->
+  <g>
+    <path d="M230,140 L250,112 L370,112 L392,140 Z" fill="#D2BE95" stroke="#8A7448" stroke-width="1.2"/>
+    <path d="M250,112 L240,104 L262,104 Z M370,112 L358,104 L382,104 Z" fill="#C6B088" stroke="#8A7448" stroke-width="1"/>
+    <rect x="262" y="118" width="96" height="22" fill="#C2AB80"/>
+    <g fill="#8A7448"><rect x="276" y="124" width="6" height="5"/><rect x="306" y="124" width="6" height="5"/><rect x="336" y="124" width="6" height="5"/></g>
+    <!-- flagpole with a new flag partway up -->
+    <path d="M312,112 V52" stroke="#4A3B2C" stroke-width="2"/>
+    <circle cx="312" cy="51" r="2" fill="#C9A24A"/>
+    <g class="b702flag">
+      <g transform="translate(313,66)">
+        <rect width="32" height="22" fill="#1F3A7A"/>
+        <path d="M0,0 L32,22 M32,0 L0,22" stroke="#fff" stroke-width="4"/>
+        <rect x="12" width="8" height="22" fill="#fff"/><rect y="7" width="32" height="8" fill="#fff"/>
+        <rect x="13.5" width="5" height="22" fill="#C8352E"/><rect y="8.5" width="32" height="5" fill="#C8352E"/>
+      </g>
     </g>
   </g>
-  <g transform="translate(460,180)">
-    <g class="h702drift">
-      <path d="M -40 -15 L -20 -18 L 10 -14 L 30 -8 L 40 5 L 42 20 L 38 35 L 30 42 L 20 45 L 15 40 L 13 30 L 16 18 L 12 8 L 0 4 L -20 5 L -35 2 L -42 -8 Z" fill="#2E7D5B" opacity="0.5" stroke="#1A5A3A" stroke-width="1.5"/>
-    </g>
-  </g>
-  <line x1="290" y1="100" x2="440" y2="100" stroke="#5A3A1A" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
-  <polygon points="440,100 430,95 430,105" fill="#5A3A1A" opacity="0.6"/>
-  <line x1="550" y1="100" x2="700" y2="100" stroke="#5A3A1A" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
-  <polygon points="700,100 690,95 690,105" fill="#5A3A1A" opacity="0.6"/>
-  <g fill="#1A5A3A">
-    <path d="M 40 250 Q 35 220 25 210 Q 38 220 45 215 Q 35 205 42 193 Q 48 210 50 220 Q 58 200 68 200 Q 58 215 53 225 Q 68 215 78 220 Q 63 230 50 237 L 46 255 Z"/>
-    <rect x="44" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
-    <path d="M 100 40 Q 106 35 112 40 Q 118 35 124 40"/>
-    <path d="M 830 45 Q 835 41 840 45 Q 845 41 850 45"/>
-  </g>
+  <!-- a lone dock with no boats -->
+  <path d="M400,146 H460" stroke="#5A4630" stroke-width="3"/>
+  <path d="M410,146 V158 M430,146 V158 M450,146 V158" stroke="#5A4630" stroke-width="2"/>
+  <!-- a few gulls far out -->
+  <path d="M600,70 q5,-5 10,0 q5,-5 10,0 M640,58 q4,-4 8,0 q4,-4 8,0" stroke="#3C4A72" stroke-width="1.4" fill="none" opacity=".7"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3504,5 +4322,8 @@ updateProgress();
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

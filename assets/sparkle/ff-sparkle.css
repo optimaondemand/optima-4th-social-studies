@@ -2407,3 +2407,100 @@ html.spk-quiet .spk-farm .sun { animation: none; }
   .spk-pkfolder .pkt .it.new, .spk-pkfolder .pkt.bump .lip, .spk-rw .pc.next, .spk-rw .pc.rise, .spk-rw .pc.on .cloth, .spk-rw .pc.rise .fp, .spk-rw .pc.on .smoke, .spk-tm.turned .pin, .spk-tm.laid .meas .sg, .spk-fm .pin.press { animation: none !important; }
   .spk-rw .sun, .spk-rw .warm, .spk-tmrot, .spk-gt .door, .spk-gt .bar { transition: none !important; }
 }
+
+/* ═══ 4.07.02 · Change the flag (scene 1) ═══ */
+.spk-fprow { display: grid; grid-template-columns: minmax(170px, 240px) 1fr; gap: 16px; align-items: start; margin: 8px 0; }
+@media (max-width: 640px) { .spk-fprow { grid-template-columns: 1fr; } .spk-fpscene { max-width: 240px; margin: 0 auto; } }
+.spk-fpscene { position: relative; }
+.spk-fpscene svg { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 3px 0 #C9B486; }
+.spk-fp .bay { fill: #7FAFC2; } .spk-fp .fort { fill: #CDBB94; stroke: #8A7448; stroke-width: 1; } .spk-fp .fortf { fill: #BFAA7E; }
+.spk-fp .pole { stroke: #5A4024; stroke-width: 2.6; } .spk-fp .knob { fill: #C9A24A; }
+.spk-fpscene .flagbox { position: absolute; left: 50.9%; top: 11%; width: 22%; }
+.spk-fpscene .fly svg { display: block; width: 100%; height: auto; box-shadow: 1px 1px 2px rgba(0,0,0,.25); transform-origin: 0 50%; animation: spk-fpwave 4s ease-in-out infinite; }
+.spk-fpscene .fly.up { animation: spk-fprise 1.1s ease-out; }
+@keyframes spk-fprise { from { transform: translateY(260%); opacity: .3; } to { transform: none; opacity: 1; } }
+@keyframes spk-fpwave { 50% { transform: skewY(3deg) scaleX(.96); } }
+.spk-fpyears { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.spk-fpyears .yr { display: flex; align-items: center; gap: 6px; padding: 6px 10px; border: 2px dashed #B79A5C; border-radius: 10px; background: #FBF7EC; font: 800 14px 'Nunito', sans-serif; color: #3E2E14; }
+.spk-fpyears .yr.next { border-style: solid; border-color: #C9A24A; background: #FFF3C4; }
+.spk-fpyears .yr.on { border-style: solid; border-color: #8A7448; }
+.spk-fpyears .yr .mini svg { width: 22px; height: auto; display: block; }
+.spk-fpask { font: 600 15px 'Nunito', sans-serif; color: #22304A; margin: 4px 0 8px; }
+.spk-fpflags { display: flex; gap: 10px; flex-wrap: wrap; }
+.spk-fpflags .fl { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 10px; border: 1.5px solid var(--ffl); border-radius: 10px; background: #fff; cursor: pointer; font: 700 12.5px 'Nunito', sans-serif; color: #22304A; }
+.spk-fpflags .fl svg { width: 52px; height: auto; display: block; box-shadow: 0 1px 2px rgba(0,0,0,.2); }
+.spk-fpflags .fl:hover, .spk-fpflags .fl:focus-visible { border-color: #C9A24A; background: #FFF8DF; }
+.spk-fpflags .fl.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-fplog { display: grid; gap: 8px; margin-top: 8px; }
+.spk-fplog .it { background: #FBF7EC; border: 1px solid #E5DAC0; border-left: 4px solid #8A7448; border-radius: 8px; padding: 8px 12px; }
+.spk-fplog .it.new { animation: spk-qfade .7s ease-out; }
+.spk-fplog .it .hd { display: flex; align-items: center; gap: 8px; font: 800 15px 'Nunito', sans-serif; color: #3E2E14; margin-bottom: 4px; }
+.spk-fplog .it .hd svg { width: 30px; height: auto; display: block; }
+.spk-fplog .it p { margin: 2px 0; font: 500 14px/1.45 'Nunito', sans-serif; color: var(--ffi); }
+.spk-fplog .it .lab { font-weight: 800; color: #6B4E1A; }
+
+/* ═══ 4.07.02 · The treaty book (reading) ═══ */
+.spk-tb { margin: 4px 0 16px; }
+.spk-tbbar { position: sticky; top: 96px; z-index: 3; background: #F3E6C8; border: 1px solid #D8C29A; border-radius: 12px; padding: 8px 8px 4px; box-shadow: 0 3px 0 #C9B486; margin-bottom: 10px; }
+@media (max-width: 640px) { .spk-tbbar { position: static; } }
+.spk-tbbar .docs { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
+.spk-tb .doc { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 6px 6px; background: #FFFBF0; border: 1px solid #D9C9A4; border-radius: 4px; cursor: default; font: 700 12px/1.25 'Nunito', sans-serif; color: #3E2E14; box-shadow: 0 2px 0 #D8C29A; }
+.spk-tb .doc .yr { font: 800 13px 'Nunito', sans-serif; color: #6B4E1A; }
+.spk-tb .doc .t { text-align: center; }
+.spk-tb .doc .seal svg { width: 34px; height: 34px; display: block; }
+.spk-tb .doc .wax { fill: #A3312B; } .spk-tb .doc .ring { fill: none; stroke: #7A1E1A; stroke-width: 1.6; } .spk-tb .doc .mk { stroke: #7A1E1A; stroke-width: 2; }
+.spk-tb .doc .crack { fill: none; stroke: #FBF7EC; stroke-width: 1.6; opacity: 0; }
+.spk-tb .doc.next { cursor: pointer; border-color: #C9A24A; box-shadow: 0 0 0 3px rgba(201,162,74,.35); animation: spk-tbglow 1.8s ease-in-out infinite; }
+@keyframes spk-tbglow { 50% { box-shadow: 0 0 0 6px rgba(201,162,74,.15); } }
+.spk-tb .doc.open { cursor: pointer; background: #FFFDF6; } .spk-tb .doc.open .crack { opacity: 1; } .spk-tb .doc.open .wax { fill: #B9564F; }
+.spk-tb .doc.crk .seal { animation: spk-tbcrk .6s ease-out; }
+@keyframes spk-tbcrk { 30% { transform: scale(1.15) rotate(-8deg); } 60% { transform: scale(.95) rotate(4deg); } }
+.spk-tb .doc:focus-visible { outline: 2px solid #C9A24A; outline-offset: 2px; }
+.spk-tbbar .spk-tbct { text-align: center; margin: 6px 0 2px; font: 600 13px 'Nunito', sans-serif; color: #3E2E14; } .spk-tbbar .spk-tbct b { color: #7A1E1A; }
+.spk-tbread .spk-tbp { display: none; margin: 0 0 10px; padding: 10px 14px; background: #fff; border: 1px solid #EADFC4; border-left: 4px solid #A3312B; border-radius: 6px; }
+.spk-tbread .spk-tbp.on { display: block; animation: spk-qfade .8s ease-out; }
+.spk-tbread .spk-tbp .tab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 4px; }
+.spk-tbread .spk-tbp .tab .y { display: inline-block; background: #A3312B; color: #FFF3E0; border-radius: 6px; padding: 1px 7px; margin-right: 6px; letter-spacing: 0; }
+.spk-tbread .spk-tbp p { margin: 0 0 6px; }
+.spk-tbnext { display: none; margin: 6px 0 0; font: 800 13.5px 'Nunito', sans-serif; background: #A3312B; color: #FFF3E0; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.spk-tbread .spk-tbp.cur .spk-tbnext { display: inline-block; }
+
+/* ═══ 4.07.02 · two-tray sort (Shows / doesn't tell) ═══ */
+.spk-trays:has(> .spk-tray:nth-child(2):last-child) { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 640px) { .spk-trays:has(> .spk-tray:nth-child(2):last-child) { grid-template-columns: 1fr; } }
+
+/* ═══ 4.07.02 · Carry it across (vocabulary, trans = across) ═══ */
+.spk-fywrap svg.fyv { display: block; width: 100%; max-width: 440px; height: auto; margin: 6px auto 8px; border-radius: 10px; }
+.spk-fy .sky { fill: #DCE9F2; } .spk-fy .sea { fill: #7FAFC2; } .spk-fy .shore { fill: #CDBB94; } .spk-fy .wave { fill: none; stroke: #E8F3F8; stroke-width: 1.4; }
+.spk-fy .hull { fill: #8E6A3A; } .spk-fy .mast { stroke: #5A4024; stroke-width: 1.6; } .spk-fy .sail { fill: #FBF7EC; stroke: #B8A88A; stroke-width: .6; } .spk-fy .crate { fill: #C99A55; stroke: #7A5A2A; stroke-width: 1; }
+.spk-fy .landed { fill: #C99A55; stroke: #7A5A2A; stroke-width: 1; opacity: 0; transition: opacity .4s 1.5s; } .spk-fy .landed.on { opacity: 1; }
+.spk-fy .boatw.go .boat { animation: spk-fyferry 2.2s ease-in-out; }
+.spk-fy .fyv.empty .crate { opacity: 0; }
+@keyframes spk-fyferry { 0% { transform: none; } 45% { transform: translateX(180px); } 55% { transform: translateX(180px); } 100% { transform: none; } }
+.spk-fy .wds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.spk-fy .wd { background: #FFFDF6; border: 2px solid #D8C7A2; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-fy .wd .w { display: block; font: 800 16px 'Nunito', sans-serif; color: #22304A; } .spk-fy .wd .w b { color: #8B6FC0; }
+.spk-fy .wd .m { display: block; font: 500 12.5px/1.35 'Nunito', sans-serif; color: #5B667A; margin-top: 3px; } .spk-fy .wd .m:empty { display: none; }
+.spk-fy .wd.heard { border-color: #B8A2E0; } .spk-fy .wd.up { background: #F2EDFB; border-color: #8B6FC0; }
+.spk-fy .wd.armed { border-color: #C9A24A; border-style: dashed; } .spk-fy .wd.over, .spk-fy .wd:focus-visible { background: #FFF3C4; }
+.spk-fy .wd.tap { animation: spk-qfade .5s ease-out; }
+.spk-fymeans { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .spk-fymeans.wait { opacity: .5; }
+.spk-fy.done .spk-fymeans { display: none; }
+.spk-fy.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.07.02 · The hourglass planner (factcard with an hourglass in the middle) ═══ */
+.spk-hgp .spk-fmcards { grid-template-columns: 1fr 64px 1fr; }
+@media (max-width: 720px) { .spk-hgp .spk-fmcards { grid-template-columns: 1fr; } .spk-hgp .pin.mid { transform: none; } }
+.spk-hgp .pin.mid { width: 60px; opacity: 1; } .spk-hgp .pin.mid svg.hg { width: 56px; height: auto; display: block; }
+.spk-hgp .hg .frame { stroke: #6A4E2A; stroke-width: 5; stroke-linecap: round; } .spk-hgp .hg .glass { fill: #F4F8FA; stroke: #8AA3B0; stroke-width: 1.4; }
+.spk-hgp .hg .sandT { fill: #E2C27A; transition: opacity 1.2s; } .spk-hgp .hg .sandB { fill: #E2C27A; opacity: 0; transition: opacity 1.4s; }
+.spk-hgp .hg .stream { stroke: #E2C27A; stroke-width: 2; stroke-dasharray: 3 3; opacity: 0; }
+.spk-hgp.topdone .hg .stream { opacity: 1; animation: spk-hgflow .6s linear infinite; }
+.spk-hgp.topdone .hg .sandB { opacity: .55; }
+.spk-hgp.done .hg .sandT { opacity: .15; } .spk-hgp.done .hg .sandB { opacity: 1; } .spk-hgp.done .hg .stream { opacity: 0; animation: none; }
+@keyframes spk-hgflow { to { stroke-dashoffset: -6; } }
+.spk-hgp .fc.a { border-top-color: #A3312B; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spk-fpscene .fly svg, .spk-fpscene .fly.up, .spk-fplog .it.new, .spk-tb .doc.next, .spk-tb .doc.crk .seal, .spk-fy .boatw.go .boat, .spk-hgp.topdone .hg .stream { animation: none !important; }
+}
