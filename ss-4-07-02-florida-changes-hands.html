@@ -2430,16 +2430,64 @@ In 1763 Florida was <strong>transferred</strong> to Britain on paper. Then, in 1
   </div>
 
       <!-- QUESTION 3 -->
-      <div class="quiz-q" data-answer="b">
+      <div class="quiz-q" data-answer="a">
         <div class="quiz-q-text">3. How many times did Florida change hands between European powers before becoming a U.S. territory?</div>
         <div class="quiz-options">
           <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Two times</div>
           <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Three times</div>
           <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Four times</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Spain → Britain → Spain again = three transfers before the U.S. took over.</div>
-        <div class="quiz-feedback fb-wrong">Count again: Spain held it first, then Britain, then Spain again.</div>
+        <div class="quiz-feedback fb-correct">Yes! Two changes between European powers: Spain to Britain in 1763, and Britain back to Spain in 1783. In 1821 Florida went to the United States, which is not a European power.</div>
+        <div class="quiz-feedback fb-wrong">Count the changes, not the rulers: Spain to Britain in 1763, then Britain back to Spain in 1783.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. The team knows why Spain traded Florida for Havana, what happened to Fort Mose's people, and that Florida changed hands between European powers twice (1763 and 1783). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-02-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: Spain traded Florida to Britain to get Havana back; the people of Fort Mose left with the Spanish for Cuba; count the changes, not the rulers (1763 and 1783 = two). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-02-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
   </div>
 
