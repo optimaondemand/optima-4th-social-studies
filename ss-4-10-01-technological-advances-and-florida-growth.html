@@ -2500,6 +2500,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Yes! Railroads connected isolated areas to markets, bringing people, goods, and growth.</div>
         <div class="quiz-feedback fb-wrong">Think about what railroads made possible — they opened new areas to settlement and trade.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. Name what the team got right: Who built the Florida East Coast Railway? (Henry Flagler); What did the Dixie Highway do for Florida? (Brought railroad service to Key West); Why were railroads the most important technology for Florida's growth? (They brought settlers, tourists, and trade to previously unreachable places). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-01-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: Who built the Florida East Coast Railway? (Henry Flagler); What did the Dixie Highway do for Florida? (Brought railroad service to Key West); Why were railroads the most important technology for Florida's growth? (They brought settlers, tourists, and trade to previously unreachable places). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-01-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>

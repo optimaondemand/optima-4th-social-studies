@@ -2505,6 +2505,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Exactly. Puerto Rico is a U.S. territory, so people born there are U.S. citizens — they don't need to immigrate.</div>
         <div class="quiz-feedback fb-wrong">Puerto Rico is a U.S. territory, which means Puerto Ricans are U.S. citizens by birth.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. Name what the team got right: Which Miami neighborhood is known as a center of Cuban American culture? (Little Havana); How do immigrants contribute to Florida's economy? (They don't contribute because they just arrived.); Why are Puerto Ricans described as U.S. citizens rather than immigrants? (Because Puerto Rico is a U.S. territory, so Puerto Ricans are already American citizens.). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-11-03-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: Which Miami neighborhood is known as a center of Cuban American culture? (Little Havana); How do immigrants contribute to Florida's economy? (They don't contribute because they just arrived.); Why are Puerto Ricans described as U.S. citizens rather than immigrants? (Because Puerto Rico is a U.S. territory, so Puerto Ricans are already American citizens.). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-11-03-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>

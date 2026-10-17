@@ -2680,6 +2680,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Exactly. Multiple perspectives give us a fuller, more honest understanding of history.</div>
         <div class="quiz-feedback fb-wrong">Historians tell both sides because multiple perspectives create a more complete and honest story.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score! Name what the team got right: What does it mean to be a Florida historian-citizen? (Someone who uses evidence to understand Florida's story and serves the community); Which of these is a primary source? (A letter written by a soldier during the Seminole Wars); Why is it important for historians to tell both sides of a story? (Because understanding multiple perspectives leads to a more complete and honest account). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-13-02-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: What does it mean to be a Florida historian-citizen? (Someone who uses evidence to understand Florida's story and serves the community); Which of these is a primary source? (A letter written by a soldier during the Seminole Wars); Why is it important for historians to tell both sides of a story? (Because understanding multiple perspectives leads to a more complete and honest account). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-13-02-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>

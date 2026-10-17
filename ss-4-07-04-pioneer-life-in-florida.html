@@ -2419,6 +2419,54 @@ body {
         <div class="quiz-feedback fb-correct">Yes. Seminole and other Native peoples were already on this land, and more settlers meant more conflict.</div>
         <div class="quiz-feedback fb-wrong">Review the last paragraph — whose land were pioneers settling on?</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. Name what the team got right: What kind of shelter did most pioneers build in territorial Florida? (Log cabins or lean-tos made from local timber and palm fronds); What were two major hardships pioneers faced in Florida? (Extreme heat and mosquito-borne diseases); Why is it important to remember that the land pioneers settled was not empty? (Because Seminole and other Native peoples were already living there, and settlement led to growing conflict). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-04-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: What kind of shelter did most pioneers build in territorial Florida? (Log cabins or lean-tos made from local timber and palm fronds); What were two major hardships pioneers faced in Florida? (Extreme heat and mosquito-borne diseases); Why is it important to remember that the land pioneers settled was not empty? (Because Seminole and other Native peoples were already living there, and settlement led to growing conflict). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-04-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
   </div>
 

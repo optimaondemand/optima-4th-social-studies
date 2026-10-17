@@ -2539,6 +2539,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Correct. Attending meetings and speaking up is a direct way to participate in local government.</div>
         <div class="quiz-feedback fb-wrong">Citizens participate in local government by attending meetings, writing letters, and speaking up.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score! Name what the team got right: Which level of government is responsible for fixing a pothole on your street? (The federal government); Who sets statewide education standards in Florida? (State government (the legislature and Department of Education)); What is one way citizens can participate in local government? (Attending a city council meeting and speaking about a neighborhood problem). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-12-03-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: Which level of government is responsible for fixing a pothole on your street? (The federal government); Who sets statewide education standards in Florida? (State government (the legislature and Department of Education)); What is one way citizens can participate in local government? (Attending a city council meeting and speaking about a neighborhood problem). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-12-03-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>

@@ -2505,6 +2505,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Exactly. Florida’s warm weather and flat terrain made it ideal for military training all year long.</div>
         <div class="quiz-feedback fb-wrong">Florida’s warm climate and flat land made it perfect for year-round military training — that’s why so many bases were built there.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. Name what the team got right: What happened to Florida’s tourism industry during the Great Depression? (It collapsed as visitors stopped coming and hotels emptied.); Which New Deal program put young men to work building state parks and roads in Florida? (The National Guard); Why did the military build so many bases in Florida during World War II? (Florida’s warm climate and flat land allowed year-round training.). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-07-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: What happened to Florida’s tourism industry during the Great Depression? (It collapsed as visitors stopped coming and hotels emptied.); Which New Deal program put young men to work building state parks and roads in Florida? (The National Guard); Why did the military build so many bases in Florida during World War II? (Florida’s warm climate and flat land allowed year-round training.). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-07-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>

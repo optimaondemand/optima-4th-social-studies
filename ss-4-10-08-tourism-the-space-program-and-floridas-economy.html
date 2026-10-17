@@ -2533,6 +2533,54 @@ body.tx-active .tx-toggle-label {
         <div class="quiz-feedback fb-correct">Exactly. Tourism and space moved Florida’s economy toward hospitality, technology, and innovation.</div>
         <div class="quiz-feedback fb-wrong">Tourism and the space program moved Florida beyond agriculture into hospitality, technology, and innovation.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. Name what the team got right: What year did Walt Disney World open in Florida? (1971); Why was Cape Canaveral chosen as a launch site for the space program? (Its location on Florida’s east coast allowed rockets to launch over the ocean.); How did tourism and the space program change Florida’s economy? (They moved Florida’s economy beyond agriculture toward hospitality, technology, and innovation.). Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-08-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: What year did Walt Disney World open in Florida? (1971); Why was Cape Canaveral chosen as a launch site for the space program? (Its location on Florida’s east coast allowed rockets to launch over the ocean.); How did tourism and the space program change Florida’s economy? (They moved Florida’s economy beyond agriculture toward hospitality, technology, and innovation.). Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-10-08-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
     </div>
