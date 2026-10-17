@@ -1683,6 +1683,901 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.07.03",
+ "title": "The Adams-Onís Treaty and U.S. Territory",
+ "quiet": true,
+ "file": {
+  "n": 7,
+  "title": "Fort Mose & Pioneers",
+  "label": "Fort Mose & Pioneers",
+  "seals": [
+   "🪢",
+   "👣",
+   "🎀"
+  ]
+ },
+ "prevFile": "Florida Changes Hands",
+ "connector": "Last time we followed the flag over St. Augustine. Today we open the treaty that made Florida part of the United States, and we find out why Spain let go.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Why Spain Let Go",
+   "t": "Untie the knots",
+   "why": "Find the real reasons Spain let go of Florida. Each one unties a knot."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Walk the years, trace the border",
+   "why": "Walk the stepping stones to read the story. Then trace the treaty’s border on an 1819 map."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill the treaty card, then write",
+   "why": "Answer three questions. Then write 3 to 5 sentences about what the treaty was and what changed for the people here."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about a treaty that changed who ruled Florida. Let’s take it slowly.",
+  "opening": [
+   "This file is about the Adams-Onís Treaty. Spain agreed to give Florida to the United States, and the people here had to live with new laws.",
+   "Start in the Why Spain Let Go tab (tab 1). Scroll down to the treaty file under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the rope",
+      "go": true,
+      "reply": "Tap a reason card, then tap the rope. A real reason unties a knot."
+     },
+     {
+      "t": "Who was Onís?",
+      "reply": "Luis de Onís was Spain’s minister, its top representative, in Washington. He signed the treaty with John Quincy Adams."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this happened to real people and real families. Going slowly is how we show respect."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Tap the stepping stones in order, and read what happened each year."
+     },
+     {
+      "t": "Did the Seminole get a say?",
+      "reply": "No. The Seminole and other Native peoples had no part in the talks. Two governments signed it without them."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who made the map?",
+      "reply": "John Melish, a mapmaker in Philadelphia. The treaty used his map to describe the new border."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we meet the pioneer families who moved into Florida, on land that was already Seminole land."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Four knots, four reasons. Spain was stretched too thin to hold Florida. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You walked the years and traced the border from the Gulf of Mexico to the Pacific. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill the treaty card and write 3 to 5 sentences about what the treaty was and what changed for the people here."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for handling it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage can mean facing hard facts. Here it means the people of Florida, who had to live with a treaty (a written agreement between countries) they did not choose, once Florida became a U.S. territory (land owned by the United States that is not yet a state).",
+ "scene1": {
+  "type": "letgo",
+  "kicker": "Why Spain let go",
+  "h": "What loosened Spain’s hold on Florida?",
+  "voice": "Tap a reason card, then tap the rope, or drag the card onto the rope. A real reason unties a knot. A card that isn’t a reason bounces back.",
+  "reasons": [
+   {
+    "id": "r1",
+    "ico": "⚔️",
+    "ok": true,
+    "t": "Spain was fighting costly wars in Europe."
+   },
+   {
+    "id": "r2",
+    "ico": "🌎",
+    "ok": true,
+    "t": "Spain’s colonies (lands it ruled far away) in Mexico and South America were fighting to break free."
+   },
+   {
+    "id": "r3",
+    "ico": "🪙",
+    "ok": true,
+    "t": "Spain had little money and few soldiers to send to Florida."
+   },
+   {
+    "id": "r4",
+    "ico": "🏰",
+    "ok": true,
+    "t": "In 1818, Andrew Jackson’s troops took Spanish forts, and Spain couldn’t stop them."
+   },
+   {
+    "id": "x1",
+    "ico": "🗳️",
+    "ok": false,
+    "t": "The people of Florida voted to join the United States.",
+    "miss": "There was no vote in Florida. Look for a problem Spain had."
+   },
+   {
+    "id": "x2",
+    "ico": "🌀",
+    "ok": false,
+    "t": "A hurricane wiped out St. Augustine.",
+    "miss": "The lesson doesn’t say that. Look for a reason about Spain’s wars, money, or soldiers."
+   }
+  ],
+  "ropeT": "Spain’s rope. Tap here after you pick a reason card.",
+  "firstT": "Tap a reason card first, then tap the rope.",
+  "countT": "knots untied. Find the next real reason.",
+  "jT": "Why Spain let go:",
+  "win": "🪢 <b>The last knot slips.<\/b> Spain was stretched too thin to hold Florida, so in 1819 it agreed to give Florida to the United States.",
+  "why": {
+   "icon": "🪢",
+   "q": "Why a rope?",
+   "t": "A rope with knots holds a boat to a dock. Spain’s hold on Florida was like that rope, and each problem Spain had loosened one knot. That’s why each real reason unties a knot."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "yearwalk",
+   "activity": "The Adams-Onís Treaty and U.S. Territory",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^By the early 1800s"
+    },
+    {
+     "id": "p2",
+     "match": "^Andrew Jackson's raids"
+    },
+    {
+     "id": "p3",
+     "match": "^The Adams-Onís Treaty \\(1819\\)"
+    },
+    {
+     "id": "p4",
+     "match": "^Florida becomes"
+    },
+    {
+     "id": "p5",
+     "match": "^What changed for people"
+    }
+   ],
+   "stones": [
+    {
+     "id": "s1",
+     "year": "1810s",
+     "t": "Spain’s weak hold",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "s2",
+     "year": "1818",
+     "t": "Jackson’s raids",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "s3",
+     "year": "1819",
+     "t": "The treaty",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "s4",
+     "year": "1821",
+     "t": "A U.S. territory",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "s5",
+     "year": "After",
+     "t": "What changed for people",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "startT": "Tap the first stepping stone to start walking.",
+   "countT": "stones reached. Read this part, then step to the next one.",
+   "allT": "You walked the whole path. You read the whole story.",
+   "nextT": "Step to {y}: {t}",
+   "orderT": "Walk the stones in order: tap the one that glows.",
+   "alt": "Stepping stones across a meadow, one for each year of the story",
+   "why": {
+    "icon": "👣",
+    "q": "Why stepping stones?",
+    "t": "History happens one step at a time. Each stone is a year, and each year led to the next one: Spain grew weak, Jackson’s raids (attacks into Florida) showed it, then came the treaty and the new territory. That’s why you walk the stones in order."
+   }
+  },
+  "evidence": {
+   "type": "traceborder",
+   "kicker": "Trace the border",
+   "h": "Follow the treaty’s line",
+   "voice": "Tap the rings in order, starting at the Gulf of Mexico. Each tap draws the next stretch of the border. Then answer two questions about what the line meant.",
+   "img": "source-4-07-03-melish-map-1819.jpg",
+   "iw": 2400,
+   "ih": 1530,
+   "alt": "John Melish’s 1819 map of the United States with six numbered labels",
+   "legs": [
+    {
+     "t": "Start where the border meets the Gulf of Mexico, at the mouth of the Sabine River (label 3). Tap the ring that glows.",
+     "pts": [
+      [
+       1121,
+       1149
+      ]
+     ]
+    },
+    {
+     "t": "Go north up the Sabine River to the Red River.",
+     "pts": [
+      [
+       1116,
+       1080
+      ],
+      [
+       1113,
+       1009
+      ]
+     ]
+    },
+    {
+     "t": "Follow the Red River west (label 4).",
+     "pts": [
+      [
+       1060,
+       1000
+      ],
+      [
+       1000,
+       1005
+      ],
+      [
+       950,
+       987
+      ],
+      [
+       888,
+       958
+      ]
+     ]
+    },
+    {
+     "t": "Jump north to the Arkansas River.",
+     "pts": [
+      [
+       860,
+       900
+      ],
+      [
+       800,
+       790
+      ]
+     ]
+    },
+    {
+     "t": "Follow the Arkansas River toward the mountains (label 5).",
+     "pts": [
+      [
+       713,
+       713
+      ],
+      [
+       631,
+       647
+      ],
+      [
+       548,
+       581
+      ]
+     ]
+    },
+    {
+     "t": "Run the straight line along the 42nd parallel all the way to the Pacific Ocean (label 6).",
+     "pts": [
+      [
+       129,
+       582
+      ]
+     ]
+    }
+   ],
+   "tracedT": "You traced the whole border, from the Gulf of Mexico to the Pacific Ocean.",
+   "orderT": "Follow the border in order. Look for the ring that glows.",
+   "qs": [
+    {
+     "id": "side",
+     "q": "Which side of the border stayed Spanish?",
+     "opts": [
+      {
+       "id": "sw",
+       "t": "The land south and west of the line",
+       "ok": true
+      },
+      {
+       "id": "ne",
+       "t": "The land north and east of the line, with Florida",
+       "ok": false,
+       "miss": "Florida went to the United States. Which side is Florida on?"
+      },
+      {
+       "id": "no",
+       "t": "Neither side",
+       "ok": false,
+       "miss": "Look at label 6 again: the land south and west of the line stayed Spanish."
+      }
+     ]
+    },
+    {
+     "id": "why",
+     "q": "Why did both countries want a clear border?",
+     "opts": [
+      {
+       "id": "know",
+       "t": "So everyone knew where U.S. land ended and Spanish land began",
+       "ok": true
+      },
+      {
+       "id": "vote",
+       "t": "So Native nations could vote on it",
+       "ok": false,
+       "miss": "Native nations had no part in the talks. Think about what a border line tells you."
+      },
+      {
+       "id": "ship",
+       "t": "So ships could sail across it",
+       "ok": false,
+       "miss": "This border is on land. What does a border line tell you?"
+      }
+     ]
+    }
+   ],
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: walk every stepping stone in Learn the Story at the top of this tab.",
+   "win": "One line on a map changed who ruled land across a whole continent, from Florida to the Pacific. The people living on that land were not asked.",
+   "why": {
+    "icon": "✏️",
+    "q": "Why trace it?",
+    "t": "A boundary is a border line. The treaty described its new border by following rivers on John Melish’s map, then a straight line to the Pacific. Tracing it is the best way to see how far one treaty reached."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Tap each of the 6 gold numbers on the map.",
+    "Read the three questions under the map.",
+    "Do Trace the border: tap the rings in order from the Gulf of Mexico to the Pacific, then answer two questions."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now try Trace the border below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 77.7,
+    "y": 57.3,
+    "title": "The title.",
+    "t": "It says: “Map of the United States, with the contiguous British & Spanish Possessions.” Contiguous means touching, so these are the lands of Britain and Spain next to the United States. John Melish made it in Philadelphia."
+   },
+   {
+    "n": "2",
+    "x": 72.0,
+    "y": 88.9,
+    "title": "Florida.",
+    "t": "In 1819 Spain agreed to give Florida to the United States. The treaty took effect in 1821."
+   },
+   {
+    "n": "3",
+    "x": 49.3,
+    "y": 83.5,
+    "title": "The Sabine River.",
+    "t": "The new border started here, where the Sabine River meets the Gulf of Mexico. Today this river is part of the line between Louisiana and Texas."
+   },
+   {
+    "n": "4",
+    "x": 41.8,
+    "y": 73.1,
+    "title": "The Red River.",
+    "t": "The border followed the Red River west. Look for the river with a thin pink edge."
+   },
+   {
+    "n": "5",
+    "x": 27.0,
+    "y": 52.0,
+    "title": "The Arkansas River.",
+    "t": "The border followed the Arkansas River toward the Rocky Mountains, along the green edge."
+   },
+   {
+    "n": "6",
+    "x": 13.7,
+    "y": 45.2,
+    "title": "The 42nd parallel.",
+    "t": "A straight line west along the 42nd parallel, an imaginary line around the globe, all the way to the Pacific Ocean. Land south of it, like California, stayed Spanish."
+   }
+  ]
+ },
+ "planner": {
+  "type": "treatycard",
+  "voice": "Fill the left side first: what the treaty said. Then the right side: what changed for people. These are just notes. You’ll write your own sentences in Step 3.",
+  "cardA": {
+   "t": "What the treaty said",
+   "rows": [
+    {
+     "id": "who",
+     "lab": "Who signed it?",
+     "short": "Who signed",
+     "opts": [
+      {
+       "t": "John Quincy Adams and Luis de Onís",
+       "ok": true
+      },
+      {
+       "t": "Andrew Jackson and the Seminole",
+       "ok": false,
+       "miss": "Jackson led the raids, but he didn’t sign the treaty. Reread stone 1819."
+      },
+      {
+       "t": "The people of St. Augustine",
+       "ok": false,
+       "miss": "The people of Florida didn’t sign it. Reread stone 1819."
+      }
+     ]
+    },
+    {
+     "id": "yr",
+     "lab": "When was it signed?",
+     "short": "Signed",
+     "opts": [
+      {
+       "t": "1819",
+       "ok": true
+      },
+      {
+       "t": "1821",
+       "ok": false,
+       "miss": "1821 is when it took effect. When was it signed? Reread stone 1819."
+      },
+      {
+       "t": "1763",
+       "ok": false,
+       "miss": "1763 was the trade with Britain, from the last file. Reread stone 1819."
+      }
+     ]
+    },
+    {
+     "id": "term",
+     "lab": "Pick one thing it said",
+     "short": "It said",
+     "opts": [
+      {
+       "t": "Spain gave Florida to the United States",
+       "ok": true
+      },
+      {
+       "t": "the U.S. would pay Americans up to $5 million that Spain owed them",
+       "ok": true
+      },
+      {
+       "t": "a new border line ran across North America",
+       "ok": true
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "What changed for people",
+   "rows": [
+    {
+     "id": "grp",
+     "lab": "Pick a group",
+     "short": "Group",
+     "opts": [
+      {
+       "t": "Spanish residents"
+      },
+      {
+       "t": "free Black families"
+      },
+      {
+       "t": "the Seminole and other Native peoples"
+      }
+     ]
+    },
+    {
+     "id": "how",
+     "lab": "What changed for them",
+     "short": "What changed",
+     "opts": [
+      {
+       "t": "they had to choose: stay and become U.S. citizens, or leave"
+      },
+      {
+       "t": "U.S. law was far harsher on them than Spanish law had been"
+      },
+      {
+       "t": "they faced growing pressure to give up their land"
+      }
+     ]
+    },
+    {
+     "id": "ngd",
+     "lab": "Pick a name, date, or place to use",
+     "short": "Name, date, or place",
+     "opts": [
+      {
+       "t": "1821"
+      },
+      {
+       "t": "Andrew Jackson"
+      },
+      {
+       "t": "William Pope DuVal"
+      },
+      {
+       "t": "Tallahassee"
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "The ribbon ties the treaty to its people. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "🎀",
+   "q": "Why a treaty card?",
+   "t": "A treaty is two things at once: what the papers said, and what changed for the people who lived there. The left side of your card is the treaty, and the right side is the people. That’s why a ribbon ties them together."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what the treaty was",
+    "rx": "treaty|agree|spain|gave|give|sold|handed|cede|transfer|deal|sign|adams|on[ií]s|united states|u\\.s|america"
+   },
+   {
+    "t": "what changed for people",
+    "rx": "chang|law|harsh|citizen|leave|left|land|pressure|move|seminole|native|black|free|lost|territor|govern|new|rules"
+   },
+   {
+    "t": "a name, date, or group",
+    "rx": "1819|1821|1818|1822|1824|adams|on[ií]s|jackson|duval|seminole|native|black|spanish|spain|tallahassee|pensacola|augustine|st\\.? marks"
+   }
+  ],
+  "lines": [
+   "Start with what the treaty was.",
+   "Good. Now say what changed for the people here.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the rope, the stepping stones, and the 1819 map."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the treaty card: what the treaty said on the left, what changed for people on the right."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences: what the treaty was and what changed for the people here. Use a name, date, or group. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "keypass",
+  "kicker": "Hand over the key",
+  "h": "cede = to go, to give way",
+  "root": "cede",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match slides the key one step along the table.",
+  "words": [
+   {
+    "w": "cede",
+    "root": "cede",
+    "m": "to give up land or power to someone else",
+    "miss": "Spain did this with Florida. Which word means giving up land?",
+    "say": "Cede. To give up land or power to someone else."
+   },
+   {
+    "w": "concede",
+    "root": "cede",
+    "m": "to give in, or to admit that something is true",
+    "miss": "When you give way in an argument, you do this. Which word is it?",
+    "say": "Concede. To give in, or to admit that something is true."
+   },
+   {
+    "w": "recede",
+    "root": "cede",
+    "m": "to move back or go away",
+    "miss": "Re- means back. Which word means going back?",
+    "say": "Recede. To move back or go away."
+   },
+   {
+    "w": "precede",
+    "root": "cede",
+    "m": "to come before something",
+    "miss": "Pre- means before. Which word means going before?",
+    "say": "Precede. To come before something."
+   }
+  ],
+  "win": "🗝️ The key is across. <b>cede<\/b> = to go, to give way",
+  "why": {
+   "icon": "🗝️",
+   "q": "Why a key?",
+   "t": "Handing someone the key means giving them control of a place. When Spain ceded Florida, it gave up control and the United States took over. Each word you match slides the key one step closer to the United States."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Too much to hold",
+   "at": "scene1",
+   "script": "I once had a garden I loved, but I couldn’t keep up with it. Too little time, too many weeds. In the end, I gave it to a neighbor. Spain had the same kind of problem with Florida, only much bigger. As you untie each knot, ask: what made it too hard for Spain to hold on?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Say it with because",
+   "at": "s1done",
+   "script": "Pause me, and pick the reason you think mattered most. Say it out loud with a because: Spain let go of Florida because, and then your reason. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One year at a time",
+   "at": "explore",
+   "script": "Each stone on this path is a year. Walk them in order, and notice how one year leads to the next. Spain grew weak, Jackson’s raids made that plain, and then came the treaty. Read each part before you step to the next stone."
+  },
+  {
+   "slot": "guide4",
+   "label": "Not at the table",
+   "at": "afterread",
+   "script": "Two men signed this treaty: John Quincy Adams and Luis de Onís. The Seminole lived on this land, and nobody asked them. Free Black families lived here too. Pause me and think: what changed for the people who weren’t at the table?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Follow the line",
+   "at": "evidence",
+   "script": "When I drive somewhere new, I trace the route on the map with my finger first. That’s what you’ll do here. Start at the Gulf of Mexico and follow the new border, river by river, all the way to the Pacific. Watch how far one line on paper reached."
+  },
+  {
+   "slot": "guide6",
+   "label": "Paper and people",
+   "at": "plan",
+   "script": "This card has two sides. On the left, what the treaty said. On the right, what changed for the people who lived here. A good notebook entry needs both sides. Fill the left first, then the right, then write it in your own words."
+  }
+ ],
+ "cabinet": {
+  "n": 7
+ },
+ "notes": {
+  "learned": [
+   "In 1819 John Quincy Adams and Luis de Onís signed the Adams-Onís Treaty. Spain agreed to give Florida to the United States.",
+   "Spain let go because it was fighting wars in Europe, its colonies were breaking free, and it had little money and few soldiers for Florida.",
+   "In 1818 Andrew Jackson went further than his orders and took the Spanish forts at St. Marks and Pensacola.",
+   "The treaty also drew a border between U.S. land and Spanish land all the way to the Pacific Ocean.",
+   "Florida became a U.S. territory in 1821. U.S. law was far harsher on free Black people, and the Seminole faced growing pressure to give up their land."
+  ],
+  "vocab": [
+   [
+    "treaty",
+    "a written agreement between countries"
+   ],
+   [
+    "territory",
+    "land owned by the United States that is not yet a state"
+   ],
+   [
+    "consequences",
+    "results"
+   ],
+   [
+    "Secretary of State",
+    "the U.S. leader in charge of dealing with other countries"
+   ],
+   [
+    "minister",
+    "a country’s top representative in another country"
+   ],
+   [
+    "boundary",
+    "a border line"
+   ],
+   [
+    "claim",
+    "a country’s right to say a land is its own"
+   ],
+   [
+    "contiguous",
+    "touching"
+   ],
+   [
+    "courage",
+    "facing hard facts and standing firm"
+   ],
+   [
+    "cede",
+    "to give up land or power to someone else"
+   ],
+   [
+    "concede",
+    "to give in, or to admit that something is true"
+   ],
+   [
+    "recede",
+    "to move back or go away"
+   ],
+   [
+    "precede",
+    "to come before something"
+   ]
+  ],
+  "wordParts": "The Latin root cede (from cedere) means “to go, to give way.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a reason",
+    "rx": "war|europe|fight|colon|break free|independen|revolt|revolution|mexico|money|poor|soldier|army|defend|protect|guard|weak|hold|thin|jackson|raid|fort|attack|invad|couldn.?t|could not|settler",
+    "n": 1
+   },
+   {
+    "t": "a second reason",
+    "groups": [
+     "war|europe|fight",
+     "colon|break free|independen|revolt|revolution|mexico|south america",
+     "money|poor|soldier|army|defend|protect|guard|weak|thin|afford",
+     "jackson|raid|fort|attack|st\\.? marks|pensacola|invad|settler"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a group of people",
+    "rx": "seminole|native|indian|black|free|spanish|spain|settler|resident|famil|people|citizen|they|everyone|creek",
+    "n": 1
+   },
+   {
+    "t": "how it changed for them",
+    "rx": "law|harsh|citizen|leave|left|land|pressure|move|lost|lose|freedom|rights|chang|new|forced|west|worse|hard|rules|slave|enslav",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a group",
+    "rx": "seminole|native|indian|black|free|spanish|spain|settler|resident|famil|people|creek|timucua|calusa|apalachee",
+    "n": 1
+   },
+   {
+    "t": "why their story matters",
+    "rx": "because|story|matter|important|remember|forgot|left out|never asked|no say|not asked|were here|lived|first|history|part|so we|lost|harm|hurt|fair|truth|learn",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the rope in tab 1, or the first two stepping stones in the Explore tab (tab 2).",
+   "What problems did Spain have far away, and what happened in Florida in 1818?",
+   "Try this shape: “Spain agreed because ___. Also, ___.”"
+  ],
+  "journal-q2": [
+   "Look at the last stepping stone, What changed for people, in the Explore tab (tab 2).",
+   "Pick one or two groups: Spanish residents, free Black families, or the Seminole. What changed for each one?",
+   "Try this shape: “___ were affected because ___.”"
+  ],
+  "journal-q3": [
+   "Look at the last stepping stone, or the Key Concept in the Explore tab (tab 2).",
+   "Pick one group who lived here in 1821. Did anyone ask them about the treaty?",
+   "Try this shape: “The ___ lived in Florida. Historians should remember them because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which reason do you think mattered most to Spain? Why?",
+  "journal-q2": "Go further: the treaty let Spanish residents choose to stay as U.S. citizens. Why might a family choose to leave instead?",
+  "journal-q3": "Go further: the treaty was written by two governments. What story might a Seminole family have told about 1821?"
+ },
+ "quizMiss": [
+  {
+   "a": "Native peoples weren’t part of this treaty at all. Reread stone 1819.",
+   "c": "Britain wasn’t part of this treaty. Reread stone 1819: which two countries signed it?"
+  },
+  {
+   "a": "Jackson captured forts. He didn’t build one. Reread stone 1818.",
+   "c": "Jackson didn’t sign the treaty. Adams and Onís did. Reread stone 1818."
+  },
+  {
+   "a": "It was the other way around. Reread the last stone, What changed for people.",
+   "b": "A lot changed for them. Reread the last stone, What changed for people."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1915,68 +2810,85 @@ body {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Adams-Onis Treaty ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: a line across a continent — an old map on a writing desk, the treaty's border drawing itself in red ink from the Gulf of Mexico to the Pacific, a quill, an inkwell and a wax seal (4.07.03 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An old map of North America lies on a wooden writing desk. A red ink line draws itself from the Gulf of Mexico across the continent to the Pacific Ocean. A quill pen, an inkwell and a red wax seal sit beside the map." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h703sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#5A7AA8"/>
-      <stop offset="50%" stop-color="#8AB0D0"/>
-      <stop offset="100%" stop-color="#A8C8E0"/>
+    <linearGradient id="b703desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A3B22"/>
+      <stop offset="1" stop-color="#3E2816"/>
     </linearGradient>
+    <linearGradient id="b703paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3E5C3"/>
+      <stop offset=".6" stop-color="#E9D6A8"/>
+      <stop offset="1" stop-color="#D9C08A"/>
+    </linearGradient>
+    <radialGradient id="b703glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFD98A" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#FFD98A" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .h703float { animation: h703float 5s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h703float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-      .h703pulse { animation: h703pulse 3s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h703pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 0.9; } }
+      .b703line { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: b703draw 9s ease-in-out infinite; }
+      @keyframes b703draw { 0% { stroke-dashoffset: 1000; } 55% { stroke-dashoffset: 0; } 90% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+      .b703quill { animation: b703bob 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: 90% 90%; }
+      @keyframes b703bob { 50% { transform: rotate(-3deg) translateY(-2px); } }
+      .b703flame { animation: b703flick 2.2s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b703flick { 50% { transform: scaleY(.86) scaleX(1.06); } }
+      .b703glow { animation: b703glo 3s ease-in-out infinite; }
+      @keyframes b703glo { 50% { opacity: .7; } }
+      @media (prefers-reduced-motion: reduce) { .b703line { animation: none; stroke-dashoffset: 0; } .b703quill, .b703flame, .b703glow { animation: none; } }
     </style>
   </defs>
-  <rect width="920" height="180" fill="url(#h703sky)"/>
-  <g opacity="0.3" fill="#FFFFFF">
-    <ellipse cx="250" cy="45" rx="70" ry="22"/>
-    <ellipse cx="700" cy="55" rx="55" ry="16"/>
+  <rect width="920" height="200" fill="url(#b703desk)"/>
+  <path d="M0,40 H920 M0,96 H920 M0,150 H920" stroke="#6B4A2C" stroke-width="2" opacity=".35"/>
+  <path d="M0,68 C200,64 420,72 920,66 M0,124 C260,120 520,130 920,122 M0,178 C300,174 600,182 920,176" stroke="#2E1C0E" stroke-width="1.2" fill="none" opacity=".3"/>
+  <!-- the map -->
+  <g transform="rotate(-2 420 100)">
+    <rect x="150" y="14" width="540" height="176" fill="#2A1A0C" opacity=".35" transform="translate(6,6)"/>
+    <rect x="150" y="14" width="540" height="176" fill="url(#b703paper)"/>
+    <rect x="160" y="22" width="520" height="160" fill="none" stroke="#9C7A46" stroke-width="1.4"/>
+    <path d="M160,62 H680 M160,102 H680 M160,142 H680 M290,22 V182 M420,22 V182 M550,22 V182" stroke="#B89A66" stroke-width=".8" opacity=".5"/>
+    <!-- land: a loose North America, Pacific to the left, Gulf at the bottom, Florida at the lower right -->
+    <path d="M196,30 C186,52 178,80 186,104 C192,126 206,142 222,154 C238,166 256,170 270,176 L370,176 C380,166 396,158 412,156 C432,154 448,160 466,158 C486,156 500,150 514,150 C532,150 548,156 560,156 L572,150 C578,160 582,170 590,178 L604,178 C600,166 596,152 600,142 C608,126 624,112 640,98 C656,84 668,64 672,40 L672,30 Z" fill="#D9C792" stroke="#8A6A3A" stroke-width="1.2"/>
+    <path d="M440,158 C446,166 452,172 462,174 M520,152 C526,162 530,170 538,174" fill="none" stroke="#9C7A46" stroke-width="1"/>
+    <!-- rivers -->
+    <path d="M500,150 C498,130 494,110 500,86 C506,64 520,46 528,30" fill="none" stroke="#6F98AE" stroke-width="1.4" opacity=".8"/>
+    <path d="M466,158 C452,146 432,140 412,138 C396,136 382,128 374,118" fill="none" stroke="#6F98AE" stroke-width="1.2" opacity=".8"/>
+    <path d="M372,110 C352,98 332,86 314,72" fill="none" stroke="#6F98AE" stroke-width="1.2" opacity=".8"/>
+    <!-- mountains -->
+    <g fill="none" stroke="#8A6A3A" stroke-width="1" opacity=".7"><path d="M286,58 l6,-8 l6,8 M298,70 l6,-8 l6,8 M276,80 l6,-8 l6,8 M306,92 l6,-8 l6,8 M290,104 l6,-8 l6,8"/></g>
+    <!-- the treaty line: from the Gulf, up the Sabine, west along the Red, north, along the Arkansas, then straight to the Pacific -->
+    <path class="b703line" d="M470,158 L468,140 L440,138 L412,136 L392,126 L380,118 L374,104 L356,94 L334,82 L314,70 L196,70" fill="none" stroke="#A3231B" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- compass rose -->
+    <g transform="translate(640,150)" opacity=".75"><circle r="13" fill="none" stroke="#8A6A3A" stroke-width="1"/><path d="M0,-12 L3,0 L0,12 L-3,0 Z" fill="#8A3A2A"/><path d="M-12,0 L0,3 L12,0 L0,-3 Z" fill="#6B5A3A"/></g>
   </g>
-  <rect y="180" width="920" height="80" fill="#3A6850"/>
-  <g transform="translate(460,55)">
-    <g class="h703float">
-      <rect x="-70" y="0" width="140" height="110" rx="4" fill="#FFFCF0" stroke="#B89860" stroke-width="2"/>
-      <line x1="-55" y1="20" x2="55" y2="20" stroke="#D0C8B0" stroke-width="1.2"/>
-      <line x1="-55" y1="35" x2="55" y2="35" stroke="#D0C8B0" stroke-width="1.2"/>
-      <line x1="-55" y1="50" x2="55" y2="50" stroke="#D0C8B0" stroke-width="1.2"/>
-      <line x1="-55" y1="65" x2="35" y2="65" stroke="#D0C8B0" stroke-width="1.2"/>
-      <circle cx="0" cy="90" r="14" fill="#C03020" opacity="0.4" stroke="#8A2020" stroke-width="1.5"/>
-      <circle cx="0" cy="90" r="7" fill="none" stroke="#8A2020" stroke-width="0.8"/>
-      <path d="M -30 78 Q -15 72 0 80 Q 15 86 30 76" fill="none" stroke="#3A2510" stroke-width="1" opacity="0.5"/>
-      <g transform="translate(85,-5)">
-        <path d="M 0 0 L -5 55 L -3 55 L 2 0 Z" fill="#3A2510"/>
-        <path d="M 0 0 Q 8 -10 18 -5 Q 12 0 0 0" fill="#FFFFFF" stroke="#A0A0A0" stroke-width="0.5"/>
-      </g>
-    </g>
+  <!-- inkwell and quill -->
+  <g transform="translate(726,110)">
+    <ellipse cx="0" cy="58" rx="30" ry="7" fill="#1E120A" opacity=".5"/>
+    <path d="M-22,56 L-18,22 L18,22 L22,56 Z" fill="#1F2A3A"/>
+    <rect x="-12" y="14" width="24" height="10" rx="2" fill="#2E3B4E"/>
+    <ellipse cx="0" cy="15" rx="10" ry="3" fill="#0B0F16"/>
   </g>
-  <g transform="translate(720,80)">
-    <path d="M -35 -15 L -15 -18 L 15 -14 L 35 -5 L 42 12 L 40 30 L 33 45 L 22 52 L 12 55 L 8 48 L 6 35 L 10 22 L 6 12 L -8 6 L -25 8 L -38 0 Z" fill="#2E7D5B" opacity="0.5" stroke="#1A5A3A" stroke-width="1.5"/>
-    <g class="h703pulse">
-      <rect x="-5" y="10" width="20" height="3" fill="#B83030" rx="1"/>
-      <rect x="-5" y="16" width="20" height="3" fill="#1A3A8A" rx="1"/>
-    </g>
+  <g class="b703quill">
+    <path d="M770,40 C744,58 728,84 716,118" stroke="#E9E2D0" stroke-width="2" fill="none"/>
+    <path d="M770,40 C790,26 806,22 818,24 C806,34 792,46 780,58 C764,74 748,94 734,110 C746,86 756,64 770,40 Z" fill="#F4EEDC" stroke="#C9BC9C" stroke-width="1"/>
+    <path d="M790,34 L778,54 M800,30 L786,48 M808,27 L796,40" stroke="#C9BC9C" stroke-width="1"/>
   </g>
-  <line x1="535" y1="120" x2="675" y2="105" stroke="#5A3A1A" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
-  <polygon points="675,105 665,100 668,110" fill="#5A3A1A" opacity="0.5"/>
-  <g transform="translate(180,100)">
-    <rect x="-40" y="0" width="80" height="60" rx="2" fill="#C8B8A0" stroke="#8A7A60" stroke-width="1.5"/>
-    <rect x="-32" y="5" width="8" height="55" fill="#D8C8B0" stroke="#A89880" stroke-width="0.8"/>
-    <rect x="-14" y="5" width="8" height="55" fill="#D8C8B0" stroke="#A89880" stroke-width="0.8"/>
-    <rect x="6" y="5" width="8" height="55" fill="#D8C8B0" stroke="#A89880" stroke-width="0.8"/>
-    <rect x="24" y="5" width="8" height="55" fill="#D8C8B0" stroke="#A89880" stroke-width="0.8"/>
-    <polygon points="-45,0 0,-20 45,0" fill="#A89880" stroke="#8A7A60" stroke-width="1.5"/>
-    <rect x="-8" y="35" width="16" height="25" fill="#4A3A2A"/>
+  <!-- wax seal -->
+  <g transform="translate(110,150)">
+    <ellipse cx="2" cy="6" rx="26" ry="9" fill="#1E120A" opacity=".45"/>
+    <path d="M0,-22 C12,-22 24,-14 25,-2 C26,10 16,20 2,21 C-12,22 -24,14 -25,0 C-26,-12 -14,-22 0,-22 Z" fill="#8E2A22"/>
+    <circle r="12" fill="none" stroke="#5E1A14" stroke-width="2"/>
+    <path d="M-6,0 H6 M0,-6 V6" stroke="#5E1A14" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M-10,-24 C-4,-34 4,-34 10,-24" fill="none" stroke="#B3261E" stroke-width="3" stroke-linecap="round"/>
   </g>
-  <g fill="#1A5A3A" transform="translate(60,0)">
-    <path d="M 20 248 Q 15 218 5 208 Q 18 218 25 213 Q 15 203 22 191 Q 28 208 30 218 Q 38 198 48 198 Q 38 213 33 223 Q 48 213 58 218 Q 43 228 30 235 L 26 253 Z"/>
-    <rect x="24" y="235" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
-    <path d="M 380 30 Q 386 25 392 30 Q 398 25 404 30"/>
-    <path d="M 850 40 Q 855 36 860 40 Q 865 36 870 40"/>
+  <!-- candle -->
+  <g transform="translate(850,60)">
+    <circle class="b703glow" cx="0" cy="8" r="46" fill="url(#b703glow)"/>
+    <ellipse cx="0" cy="118" rx="26" ry="7" fill="#1E120A" opacity=".5"/>
+    <rect x="-22" y="108" width="44" height="8" rx="3" fill="#8A6A3A"/>
+    <rect x="-9" y="36" width="18" height="74" rx="3" fill="#F1E7CF"/>
+    <path d="M0,36 V28" stroke="#3A2A1A" stroke-width="1.6"/>
+    <path class="b703flame" d="M0,8 C6,16 6,24 0,30 C-6,24 -6,16 0,8 Z" fill="#FFC861"/>
   </g>
 </svg>
 
@@ -3485,5 +4397,8 @@ updateProgress();
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

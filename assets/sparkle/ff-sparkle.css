@@ -2504,3 +2504,98 @@ html.spk-quiet .spk-farm .sun { animation: none; }
 @media (prefers-reduced-motion: reduce) {
   .spk-fpscene .fly svg, .spk-fpscene .fly.up, .spk-fplog .it.new, .spk-tb .doc.next, .spk-tb .doc.crk .seal, .spk-fy .boatw.go .boat, .spk-hgp.topdone .hg .stream { animation: none !important; }
 }
+
+/* ═══ 4.07.03 · Why Spain let go (scene 1) ═══ */
+.spk-lgwrap { position: relative; max-width: 460px; margin: 6px auto 8px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; outline: none; transition: border-color .2s; }
+.spk-lgwrap > svg { display: block; width: 100%; height: auto; border-radius: 8px; }
+.spk-lgwrap.armed { border-color: #C9A24A; border-style: dashed; } .spk-lgwrap.over, .spk-lgwrap:focus-visible { border-color: #1E8C7C; }
+.spk-lg .sea { fill: #8DB4C6; } .spk-lg .dock { fill: #B39B6C; } .spk-lg .post { fill: #6A4E2A; } .spk-lg .cap { fill: #4E3A1E; }
+.spk-lg .pole { stroke: #5A4024; stroke-width: 2; }
+.spk-lg .land { fill: #D8E6AE; stroke: #6E8A3A; stroke-width: 3; stroke-linejoin: round; }
+.spk-lg .rope { fill: none; stroke: #A8834A; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 6 2; transition: opacity 1s .6s, transform 1.4s .6s; }
+.spk-lg .knot circle { fill: #8A6534; stroke: #5A4024; stroke-width: 1.2; } .spk-lg .knot path { fill: none; stroke: #E7D3A8; stroke-width: 1.4; }
+.spk-lg .knot { transition: opacity .7s; transform-box: fill-box; transform-origin: center; }
+.spk-lg .knot.off { opacity: 0; } .spk-lg .knot.slip { animation: spk-lgslip .7s ease-in; }
+@keyframes spk-lgslip { from { opacity: 1; transform: scale(1.2) rotate(0); } to { opacity: 0; transform: scale(.4) rotate(140deg); } }
+.spk-lg .es { transition: transform 1.6s ease .4s; } .spk-lg .us { opacity: 0; transition: opacity 1.2s ease 1.6s; }
+.spk-lg .fl { transition: transform 2s ease 1s; }
+.spk-lg.done .rope { opacity: 0; transform: translateY(16px); } .spk-lg.done .es { transform: translateY(74px); } .spk-lg.done .us { opacity: 1; } .spk-lg.done .fl { transform: translateX(8px); }
+.spk-lgtray { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.spk-lgcard.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-lglog { display: grid; gap: 6px; margin: 4px 0 8px; }
+.spk-lglog .it { font: 600 13.5px/1.4 'Nunito', sans-serif; color: #22304A; background: #FFFDF6; border: 1px solid #E2D6B8; border-left: 4px solid #8A6534; border-radius: 6px; padding: 6px 10px; animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.07.03 · Walk the years (explore reading) ═══ */
+.spk-yw { margin: 4px 0 16px; }
+.spk-ywbar { position: sticky; top: 96px; z-index: 3; background: #3E4A2C; border-radius: 12px; padding: 6px 6px 4px; box-shadow: 0 3px 0 #C9B486; margin-bottom: 10px; }
+.spk-ywbar svg { display: block; width: 100%; max-width: 560px; max-height: 190px; height: auto; margin: 0 auto; border-radius: 8px; }
+.spk-ywrow { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: center; margin: 4px 0 2px; }
+.spk-ywbar .spk-ywct { color: #ECE6CF; margin: 0; font: 600 13px 'Nunito', sans-serif; text-align: center; } .spk-ywbar .spk-ywct b { color: #FFE7A0; }
+.spk-ywgo { font: 800 13.5px 'Nunito', sans-serif; background: #FFE7A0; color: #2B3556; border: 0; border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.spk-ywgo:hover, .spk-ywgo:focus-visible { background: #FFF1C8; }
+@media (max-width: 640px) { .spk-ywbar { position: static; } }
+.spk-yw .hills { fill: #9DB07A; } .spk-yw .meadow { fill: #B7C68D; } .spk-yw .grass { stroke: #7E9152; stroke-width: 1.4; fill: none; }
+.spk-yw .trail { fill: none; stroke: #D8C79E; stroke-width: 3; stroke-dasharray: 2 6; stroke-linecap: round; }
+.spk-yw .stone .st { fill: #A9A396; stroke: #6F695C; stroke-width: 1.2; transition: fill .4s; }
+.spk-yw .stone .yr { font: 800 10.5px 'Nunito', sans-serif; fill: #3A372F; pointer-events: none; }
+.spk-yw .stone { opacity: .55; }
+.spk-yw .stone.next { opacity: 1; cursor: pointer; } .spk-yw .stone.next .st { fill: #F2DE9E; stroke: #B48A2C; animation: spk-ywglow 1.8s ease-in-out infinite; }
+.spk-yw .stone.on { opacity: 1; cursor: pointer; } .spk-yw .stone.on .st { fill: #CFC6AE; } .spk-yw .stone.here .st { fill: #E7D9B0; stroke: #8A6A1E; stroke-width: 2; }
+@keyframes spk-ywglow { 50% { fill: #FFF1C8; } }
+.spk-yw .ft ellipse { fill: #5A4024; opacity: 0; } .spk-yw .ft.on ellipse { opacity: .75; }
+.spk-yw .ft.walk ellipse { animation: spk-ywstep .45s ease-out both; animation-delay: var(--d); }
+@keyframes spk-ywstep { from { opacity: 0; } to { opacity: .75; } }
+.spk-ywread .spk-ywp { display: none; margin: 0 0 10px; padding: 10px 14px; background: #fff; border: 1px solid #EADFC4; border-left: 4px solid #7E9152; border-radius: 6px; }
+.spk-ywread .spk-ywp.on { display: block; animation: spk-qfade .8s ease-out; }
+.spk-ywread .spk-ywp .tab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 4px; }
+.spk-ywread .spk-ywp .tab .y { display: inline-block; background: #3E4A2C; color: #FFE7A0; border-radius: 6px; padding: 1px 7px; margin-right: 6px; letter-spacing: 0; }
+.spk-ywread .spk-ywp p { margin: 0 0 6px; }
+
+/* ═══ 4.07.03 · Trace the border (explore evidence) ═══ */
+.spk-tbdmap { position: relative; width: 100%; margin: 6px 0 6px; border: 1px solid #D8C7A2; border-radius: 10px; overflow: hidden; background: #E9DDC3; }
+.spk-tbdmap img { display: block; width: 100%; height: 100%; }
+.spk-tbdmap svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.spk-tbd .seg { fill: none; stroke: #B3261E; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 100; opacity: .9; }
+.spk-tbd .seg.on { stroke-dashoffset: 0; } .spk-tbd .seg.draw { animation: spk-tbddraw 1.2s ease-out; }
+@keyframes spk-tbddraw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+.spk-tbd .pt .hit { fill: transparent; } .spk-tbd .pt { cursor: pointer; }
+.spk-tbd .pt .ring { fill: rgba(255,248,225,.55); stroke: #0E1C42; stroke-width: 4; }
+.spk-tbd .pt.next .ring { stroke: #C9A24A; stroke-width: 6; animation: spk-tbdring 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.spk-tbd .pt.on .ring { fill: #B3261E; stroke: #FFF8E1; }
+@keyframes spk-tbdring { 50% { transform: scale(1.35); } }
+.spk-tbd .spk-tbdsay { font: 600 14px/1.45 'Nunito', sans-serif; color: var(--ffi); margin: 4px 0; } .spk-tbd .spk-tbdsay b { color: #22304A; }
+.spk-tbd .spk-step.locked { opacity: .4; pointer-events: none; }
+.spk-tbd .spk-opt.shake { animation: spk-shake .4s; border-color: #E8636B; }
+
+/* ═══ 4.07.03 · Hand over the key (vocab, cede) ═══ */
+.spk-kpwrap svg.kpv { display: block; width: 100%; max-width: 420px; height: auto; margin: 6px auto 8px; border-radius: 10px; }
+.spk-kp .wall { fill: #EFE4CC; } .spk-kp .floor { fill: #B39B6C; } .spk-kp .top { fill: #8E6A3A; } .spk-kp .leg { fill: #6A4E2A; } .spk-kp .pole { stroke: #5A4024; stroke-width: 2; }
+.spk-kp .lb { fill: #6F6A5E; stroke: #3E3A30; stroke-width: 1.2; } .spk-kp .kh { fill: #2A2720; } .spk-kp .shk { fill: none; stroke: #4E4A40; stroke-width: 3.4; }
+.spk-kp .lock .shk { transition: transform 1s ease 1.2s; } .spk-kp.done .lock .shk { transform: translateY(-7px); }
+.spk-kp .kb { fill: #8A7E66; stroke: #4E4632; stroke-width: 1.4; } .spk-kp .kho { fill: #EFE4CC; } .spk-kp .ks, .spk-kp .kt { fill: #8A7E66; stroke: #4E4632; stroke-width: .8; }
+.spk-kp .keyw { transition: transform 1.1s cubic-bezier(.3,.9,.4,1); }
+.spk-kp .wds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.spk-kp .wd { background: #FFFDF6; border: 2px solid #D8C7A2; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-kp .wd .w { display: block; font: 800 16px 'Nunito', sans-serif; color: #22304A; } .spk-kp .wd .w b { color: #8B6FC0; }
+.spk-kp .wd .m { display: block; font: 500 12.5px/1.35 'Nunito', sans-serif; color: #5B667A; margin-top: 3px; } .spk-kp .wd .m:empty { display: none; }
+.spk-kp .wd.heard { border-color: #B8A2E0; } .spk-kp .wd.up { background: #F2EDFB; border-color: #8B6FC0; }
+.spk-kp .wd.armed { border-color: #C9A24A; border-style: dashed; } .spk-kp .wd.over, .spk-kp .wd:focus-visible { background: #FFF3C4; }
+.spk-kp .wd.tap { animation: spk-qfade .5s ease-out; }
+.spk-kpmeans { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .spk-kpmeans.wait { opacity: .5; }
+.spk-kp.done .spk-kpmeans { display: none; }
+.spk-kp.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.07.03 · The treaty card (planner) ═══ */
+.spk-tcp .spk-fmcards { grid-template-columns: 1fr 64px 1fr; }
+@media (max-width: 720px) { .spk-tcp .spk-fmcards { grid-template-columns: 1fr; } .spk-tcp .pin.mid { transform: rotate(90deg); } }
+.spk-tcp .pin.mid { width: 60px; opacity: .35; } .spk-tcp .pin.mid svg.rb { width: 56px; height: auto; display: block; }
+.spk-tcp .rb .rbl { stroke: #B3261E; stroke-width: 6; stroke-linecap: round; stroke-dasharray: 120; stroke-dashoffset: 120; transition: stroke-dashoffset 1.2s ease; }
+.spk-tcp .rb .seal { fill: #8E2A22; stroke: #5E1A14; stroke-width: 1.4; opacity: 0; transition: opacity .6s 1s; } .spk-tcp .rb .sm { stroke: #F3D9B0; stroke-width: 2; opacity: 0; transition: opacity .6s 1s; }
+.spk-tcp.topdone .rb .rbl:not(.h) { stroke-dashoffset: 0; }
+.spk-tcp.done .pin.mid { opacity: 1; } .spk-tcp.done .rb .rbl { stroke-dashoffset: 0; } .spk-tcp.done .rb .seal, .spk-tcp.done .rb .sm { opacity: 1; }
+.spk-tcp .fc.a { border-top-color: #8E2A22; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spk-lg .knot.slip, .spk-yw .stone.next .st, .spk-yw .ft.walk ellipse, .spk-tbd .seg.draw, .spk-tbd .pt.next .ring { animation: none !important; }
+  .spk-lg .rope, .spk-lg .es, .spk-lg .us, .spk-lg .fl, .spk-kp .keyw, .spk-kp .lock .shk, .spk-tcp .rb .rbl { transition: none !important; }
+}
