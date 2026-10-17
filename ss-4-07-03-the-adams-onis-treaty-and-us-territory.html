@@ -2382,6 +2382,54 @@ body {
         <div class="quiz-feedback fb-correct">Yes. U.S. territorial law was much harsher — the freedoms that had existed under Spanish law were often lost.</div>
         <div class="quiz-feedback fb-wrong">Think about how U.S. laws about race differed from Spanish laws at this time.</div>
   </div>
+
+      <!-- Score Box (restored Oct 2026: the quiz script fills it after question 3, and threw an error without it) -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect score (3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate a perfect score, calmly. The team knows the Adams-Onís Treaty gave Florida to the United States, that Jackson went further than his orders and took Spanish forts in 1818, and that U.S. law was far harsher on free Black people than Spanish law had been. Under 30 seconds. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-03-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: needs review (<3/3) -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers without judgment: the treaty was between Spain and the United States; Jackson's 1818 raid showed Spain could not defend Florida; under U.S. law, free Black people lost freedoms they had under Spain. Encouraging. Under 1 minute. </div>
+              <div class="video-placeholder-id"><!-- slot: 4-07-03-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
   </div>
 
