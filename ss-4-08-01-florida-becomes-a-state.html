@@ -1683,6 +1683,861 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.08.01",
+ "title": "Florida Becomes a State",
+ "quiet": true,
+ "file": {
+  "n": 8,
+  "title": "Statehood & War",
+  "label": "Statehood & War",
+  "seals": [
+   "⭐",
+   "📜",
+   "📍"
+  ]
+ },
+ "prevFile": "Pioneer Life in Florida",
+ "connector": "Last time we met the pioneer families in territorial Florida. Today Florida stops being a territory and becomes a state, and we look at who got a voice and who didn’t.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Sew the Star",
+   "t": "Territory or state?",
+   "why": "Sort what changed when Florida went from a territory to a state. Each right answer sews part of the 27th star."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Unroll the scroll, pin the towns",
+   "why": "Unroll the scroll to read the story. Then pin the towns on an 1846 map of the new state."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill the certificate, then write",
+   "why": "Answer three questions. Then write 3 to 5 sentences about how Florida became a state and what statehood changed."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about how Florida became a state. Let’s take it slowly.",
+  "opening": [
+   "This file is about how Florida became the 27th state in 1845. Statehood gave some people a bigger voice, and it left others out.",
+   "Start in the Sew the Star tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the star",
+      "go": true,
+      "reply": "Tap a card, then tap the right side: As a territory, or As a state. Each right answer sews part of the 27th star."
+     },
+     {
+      "t": "What’s a state?",
+      "reply": "A state is a part of the United States with its own government and a vote in Congress. A territory has much less say."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this file includes slavery and people who were left out. Going slowly is how we show respect."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Unroll the scroll one part at a time, and read each part."
+     },
+     {
+      "t": "Why a 27th star?",
+      "reply": "Each star on the U.S. flag stands for one state. Florida was the 27th, so a 27th star was added to the flag on July 4, 1845."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who made the map?",
+      "reply": "U.S. Army mapmakers, in 1846. They drew the new State of Florida one year after it joined the Union."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we look at life in Florida before the Civil War, including the lives of enslaved people."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "The 27th star is sewn on. Florida went from a territory to a state. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You unrolled the scroll and pinned the towns on the 1846 map. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill the statehood certificate and write 3 to 5 sentences about how Florida became a state and what statehood changed."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for studying it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage can mean making a hard choice when you can’t know how it will turn out. Florida was a territory, land owned by the United States but not yet a state. Statehood means becoming a state. Florida’s leaders wrote a constitution (a written plan for a government) and asked Congress to let Florida in as a state. As a Florida historian, you’ll study what statehood created and who it left out.",
+ "scene1": {
+  "type": "starsew",
+  "kicker": "Sew the 27th star",
+  "h": "What changed when Florida became a state?",
+  "voice": "Tap a card, then tap where it belongs: As a territory, or As a state. You can drag it, too. Each right answer sews more of the 27th star.",
+  "pockets": [
+   {
+    "id": "terr",
+    "t": "As a territory",
+    "sub": "1821 to 1845"
+   },
+   {
+    "id": "state",
+    "t": "As a state",
+    "sub": "1845 on"
+   }
+  ],
+  "cards": [
+   {
+    "id": "t1",
+    "p": "terr",
+    "t": "The president of the United States chose Florida’s governor.",
+    "miss": "Did Floridians choose? Before 1845, someone in Washington, D.C. did."
+   },
+   {
+    "id": "t2",
+    "p": "terr",
+    "t": "Florida’s delegate (the one person it sent to Congress) could speak but not vote.",
+    "miss": "A speaker with no vote. That was before statehood."
+   },
+   {
+    "id": "t3",
+    "p": "terr",
+    "t": "Floridians could not vote for president.",
+    "miss": "That changed when Florida became a state. Which side was it before?"
+   },
+   {
+    "id": "t4",
+    "p": "terr",
+    "t": "The federal government (the national government) in Washington was in charge.",
+    "miss": "Being run from far away was territory life."
+   },
+   {
+    "id": "s1",
+    "p": "state",
+    "t": "Voters in Florida elected their own governor.",
+    "miss": "Choosing your own governor came with statehood."
+   },
+   {
+    "id": "s2",
+    "p": "state",
+    "t": "Florida sent voting members to Congress.",
+    "miss": "A real vote in Congress came with statehood."
+   },
+   {
+    "id": "s3",
+    "p": "state",
+    "t": "Voters in Florida could vote for president.",
+    "miss": "Voting for president came with statehood."
+   },
+   {
+    "id": "s4",
+    "p": "state",
+    "t": "Florida’s star was added to the U.S. flag.",
+    "miss": "Each star stands for a state. When did Florida get one?"
+   }
+  ],
+  "firstT": "Tap a card first, then tap where it belongs.",
+  "countT": "sorted. Each right answer sews more of the 27th star.",
+  "win": "⭐ <b>The 27th star is sewn on.<\/b> In 1845 Florida became a state, and its voters got a real say in their government. But in 1845 only white men could vote. Women, enslaved people, and free Black people could not.",
+  "why": {
+   "icon": "⭐",
+   "q": "Why a star?",
+   "t": "Each star on the U.S. flag stands for one state. When Florida became the 27th state in 1845, a 27th star was added to the flag on July 4, 1845. That’s why each right answer sews the 27th star."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "scroll",
+   "activity": "Florida Becomes the 27th State",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^After Spain gave Florida"
+    },
+    {
+     "id": "p2",
+     "match": "^The push for statehood"
+    },
+    {
+     "id": "p3",
+     "match": "^The 1838 Constitution"
+    },
+    {
+     "id": "p4",
+     "match": "^Admission Day"
+    },
+    {
+     "id": "p5",
+     "match": "^What statehood changed"
+    }
+   ],
+   "parts": [
+    {
+     "id": "a",
+     "year": "1821",
+     "t": "A U.S. territory",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "b",
+     "year": "1830s",
+     "t": "The push for statehood",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "c",
+     "year": "1838",
+     "t": "The 1838 Constitution",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "d",
+     "year": "1845",
+     "t": "Admission Day",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "e",
+     "year": "After",
+     "t": "What statehood changed",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "startT": "Pull the scroll to start reading.",
+   "countT": "parts unrolled. Read this part, then pull again.",
+   "allT": "The whole scroll is open. You read the whole story.",
+   "nextT": "Unroll {y}: {t}",
+   "why": {
+    "icon": "📜",
+    "q": "Why a scroll?",
+    "t": "Long ago, important papers like constitutions were written by hand on big sheets of paper and rolled up. Florida’s story of becoming a state is written in papers like these. That’s why you unroll the story one part at a time."
+   }
+  },
+  "evidence": {
+   "type": "pintowns",
+   "kicker": "Pin the towns",
+   "h": "Where were Florida’s towns in 1846?",
+   "voice": "Tap a town’s pin, then tap its ring on the map, or drag the pin onto it. Use the numbered labels above to help. Then answer one question.",
+   "img": "source-4-08-01-state-of-florida-1846-original.jpg",
+   "iw": 2400,
+   "ih": 2629,
+   "alt": "The 1846 map of the State of Florida with four empty rings where towns are",
+   "towns": [
+    {
+     "id": "tal",
+     "t": "Tallahassee",
+     "x": 44.3,
+     "y": 12.7,
+     "miss": "Tallahassee is label 2, in the middle of north Florida."
+    },
+    {
+     "id": "sta",
+     "t": "St. Augustine",
+     "x": 80.5,
+     "y": 19.9,
+     "miss": "St. Augustine is label 3, on the Atlantic coast."
+    },
+    {
+     "id": "pen",
+     "t": "Pensacola",
+     "x": 6.4,
+     "y": 13.0,
+     "miss": "Pensacola is label 4, in the far west on the Gulf of Mexico."
+    },
+    {
+     "id": "kw",
+     "t": "Key West (inset map)",
+     "x": 12.9,
+     "y": 44.1,
+     "miss": "Key West is in the small inset map, label 5."
+    }
+   ],
+   "q": {
+    "q": "Look at where your pins are. Why do you think the capital was in Tallahassee?",
+    "opts": [
+     {
+      "id": "mid",
+      "t": "It was about halfway between St. Augustine and Pensacola",
+      "ok": true
+     },
+     {
+      "id": "port",
+      "t": "It was the biggest port on the coast",
+      "ok": false,
+      "miss": "Look at your pin. Is Tallahassee on the coast?"
+     },
+     {
+      "id": "fort",
+      "t": "Spain built its big stone fort there",
+      "ok": false,
+      "miss": "Spain’s big fort was in St. Augustine. Look at where Tallahassee sits between the other towns."
+     }
+    ]
+   },
+   "countT": "towns pinned. Tap a pin, then tap its ring on the map.",
+   "firstT": "Tap a pin first, then tap its ring on the map.",
+   "hotT": "Last step: tap every gold number on the map above.",
+   "readT": "Last step: unroll the whole scroll in Learn the Story at the top of this tab.",
+   "win": "Florida’s leaders picked Tallahassee in 1824 because it sat about halfway between Florida’s two oldest towns. Travel between St. Augustine and Pensacola could take weeks.",
+   "why": {
+    "icon": "📍",
+    "q": "Why pins?",
+    "t": "Travelers and mapmakers marked towns to find their way. In 1846 Florida had only a few towns, far apart. Pinning them shows you where people lived, and where the capital sat. That’s why you pin the towns."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Unroll the scroll in Learn the Story and read each part.",
+    "Tap each of the 6 gold numbers on the map.",
+    "Read the three questions under the map.",
+    "Do Pin the towns: pin each town on the map, then answer one question."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the map to see what it shows.",
+  "allT": "Now try Pin the towns below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 23.9,
+    "y": 19.5,
+    "title": "The title.",
+    "t": "It says “The State of Florida,” made in 1846 by U.S. Army mapmakers, one year after Florida became a state."
+   },
+   {
+    "n": "2",
+    "x": 46.8,
+    "y": 19.5,
+    "title": "Tallahassee.",
+    "t": "The capital. It sits in the middle of north Florida."
+   },
+   {
+    "n": "3",
+    "x": 93.1,
+    "y": 27.3,
+    "title": "St. Augustine.",
+    "t": "The oldest town, on the Atlantic coast."
+   },
+   {
+    "n": "4",
+    "x": 11.0,
+    "y": 18.2,
+    "title": "Pensacola.",
+    "t": "A port town on the Gulf of Mexico, in the far west."
+   },
+   {
+    "n": "5",
+    "x": 26.9,
+    "y": 42.7,
+    "title": "Key West.",
+    "t": "A small inset map (a little map inside the big one) shows the island town of Key West."
+   },
+   {
+    "n": "6",
+    "x": 75.7,
+    "y": 80.0,
+    "title": "The Everglades.",
+    "t": "Wetlands in the far south. Very few settlers lived down here in 1846."
+   }
+  ]
+ },
+ "planner": {
+  "type": "certificate",
+  "voice": "Fill the left half first: how Florida became a state. Then the right half: what changed, and who was left out. These are just notes. You’ll write your own sentences in Step 3.",
+  "cardA": {
+   "t": "How it happened",
+   "rows": [
+    {
+     "id": "yr",
+     "lab": "When did Florida become a state?",
+     "short": "Year",
+     "opts": [
+      {
+       "t": "1845",
+       "ok": true
+      },
+      {
+       "t": "1821",
+       "ok": false,
+       "miss": "1821 is when Florida became a territory. Reread part 1845."
+      },
+      {
+       "t": "1861",
+       "ok": false,
+       "miss": "1861 is when the Civil War began. Reread part 1845."
+      }
+     ]
+    },
+    {
+     "id": "step",
+     "lab": "One step on the way",
+     "short": "Step",
+     "opts": [
+      {
+       "t": "1838: a convention wrote a state constitution",
+       "ok": true
+      },
+      {
+       "t": "March 3, 1845: President Tyler signed the law",
+       "ok": true
+      },
+      {
+       "t": "the population grew fast in the 1830s",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "how",
+     "lab": "How it came in",
+     "short": "Came in",
+     "opts": [
+      {
+       "t": "as a slave state, paired with Iowa, a free state",
+       "ok": true
+      },
+      {
+       "t": "as a free state",
+       "ok": false,
+       "miss": "Reread Admission Day: Florida came in as a slave state."
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "What changed",
+   "rows": [
+    {
+     "id": "gain",
+     "lab": "One thing statehood gave voters",
+     "short": "Gave",
+     "opts": [
+      {
+       "t": "a vote for president"
+      },
+      {
+       "t": "voting members in Congress"
+      },
+      {
+       "t": "an elected governor and legislature"
+      }
+     ]
+    },
+    {
+     "id": "left",
+     "lab": "Who was left out",
+     "short": "Left out",
+     "opts": [
+      {
+       "t": "enslaved people",
+       "ok": true
+      },
+      {
+       "t": "women",
+       "ok": true
+      },
+      {
+       "t": "free Black people",
+       "ok": true
+      },
+      {
+       "t": "nobody",
+       "ok": false,
+       "miss": "Reread part 1838. Who could not vote?"
+      }
+     ]
+    },
+    {
+     "id": "det",
+     "lab": "A detail to use",
+     "short": "Detail",
+     "opts": [
+      {
+       "t": "March 3, 1845"
+      },
+      {
+       "t": "the 27th state"
+      },
+      {
+       "t": "the 1838 convention at St. Joseph"
+      },
+      {
+       "t": "the 1846 map"
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "The gold seal is on. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "🏅",
+   "q": "Why a certificate?",
+   "t": "A certificate is an official paper that proves something happened. Florida’s statehood has two sides: how it happened, and what it changed. That’s why your plan is a certificate with two halves and a seal."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "how Florida became a state",
+    "rx": "1845|constitution|convention|1838|congress|tyler|law|admit|became a state|27|step|sign|joined|union|territory"
+   },
+   {
+    "t": "what statehood changed",
+    "rx": "vote|president|congress|governor|legislature|govern|chang|road|port|town|slave|slavery|left out|say|voice|star"
+   },
+   {
+    "t": "a date, detail, or fact",
+    "rx": "1821|1838|1845|1861|27|tyler|iowa|st\\.? joseph|tallahassee|march|white men|women|enslaved"
+   }
+  ],
+  "lines": [
+   "Start with how Florida became a state.",
+   "Good. Now say what statehood changed.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the star, the scroll, and the 1846 map."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the certificate: how it happened on the left, what changed and who was left out on the right."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences: how Florida became a state and what statehood changed. Use one date, detail, or fact. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "standup",
+  "kicker": "Make it stand",
+  "h": "stat = to stand, to set up",
+  "root": "stat",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match raises one column of the capitol.",
+  "words": [
+   {
+    "w": "state",
+    "root": "stat",
+    "m": "a part of a country with its own government",
+    "miss": "Florida became one in 1845. Which word is it?",
+    "say": "State. A part of a country with its own government."
+   },
+   {
+    "w": "constitution",
+    "root": "stit",
+    "m": "a written plan that sets up a government",
+    "miss": "Florida wrote one in 1838. Which word is a plan for a government?",
+    "say": "Constitution. A written plan that sets up a government."
+   },
+   {
+    "w": "statue",
+    "root": "stat",
+    "m": "a figure of a person or animal made to stand in one place",
+    "miss": "It stands still in a park or a museum. Which word is it?",
+    "say": "Statue. A figure of a person or animal made to stand in one place."
+   },
+   {
+    "w": "stable",
+    "root": "stab",
+    "m": "steady and not likely to fall or change",
+    "miss": "A table that doesn’t wobble is this. Which word means steady?",
+    "say": "Stable. Steady and not likely to fall or change."
+   }
+  ],
+  "win": "🏛️ The capitol stands. <b>stat<\/b> = to stand, to set up",
+  "why": {
+   "icon": "🏛️",
+   "q": "Why columns?",
+   "t": "Stat means to stand, or to set up. A capitol is the building where a state’s leaders meet, and its columns stand tall to hold up the roof, the way a constitution holds up a state’s government. That’s why each word you match raises a column."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Who decides?",
+   "at": "scene1",
+   "script": "When I got my first apartment, I finally got to choose things for myself. Before that, someone else made the rules. Florida’s change from a territory to a state was a little like that. As you sort each card, ask: who decides here, leaders in Washington, or Florida’s own voters?"
+  },
+  {
+   "slot": "guide2",
+   "label": "The biggest change",
+   "at": "s1done",
+   "script": "Pause me and look at your two lists. Pick the change you think mattered most in 1845. Say it out loud with a because. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One part at a time",
+   "at": "explore",
+   "script": "This scroll tells the story in order: the territory, the push for statehood, the constitution, Admission Day, and what changed. Unroll one part at a time, and read it before you pull again. Watch the years in the margin."
+  },
+  {
+   "slot": "guide4",
+   "label": "A voice for some",
+   "at": "afterread",
+   "script": "Statehood gave some Floridians a bigger voice. But only white men could vote, and the constitution protected slavery. Pause me and think: who gained a voice in 1845, and who still had none?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Where things are",
+   "at": "evidence",
+   "script": "When I visit a new city, I find the big places on the map first. Then I look at how far apart they are. Do that here. Pin each town, then look at where Tallahassee sits compared to the others. That’s your clue for the question."
+  },
+  {
+   "slot": "guide6",
+   "label": "Two halves",
+   "at": "plan",
+   "script": "Your certificate has two halves. On the left, how Florida became a state. On the right, what changed, and who was left out. Fill both halves. These are just notes. You’ll write the sentences yourself in Step 3."
+  }
+ ],
+ "cabinet": {
+  "n": 8
+ },
+ "notes": {
+  "learned": [
+   "In 1821 Florida became a U.S. territory. Floridians could not vote for president, and their delegate in Congress could not vote.",
+   "In 1838 a convention at St. Joseph wrote Florida’s first constitution. It protected slavery and let only white men vote.",
+   "On March 3, 1845, President John Tyler signed the law that made Florida the 27th state, as a slave state. The same law named Iowa, a free state.",
+   "Statehood let Florida’s voters choose a governor, vote for president, and send voting members to Congress.",
+   "Tallahassee became the capital in 1824 because it was about halfway between St. Augustine and Pensacola."
+  ],
+  "vocab": [
+   [
+    "territory",
+    "land that belongs to the United States but is not yet a state"
+   ],
+   [
+    "federal government",
+    "the national government in Washington, D.C."
+   ],
+   [
+    "Congress",
+    "the group that makes the nation’s laws"
+   ],
+   [
+    "delegate",
+    "a person sent to speak for a group"
+   ],
+   [
+    "plantation",
+    "a large farm worked by enslaved people"
+   ],
+   [
+    "constitutional convention",
+    "a meeting to write a constitution"
+   ],
+   [
+    "legislature",
+    "the group that makes a state’s laws"
+   ],
+   [
+    "admit",
+    "to let in"
+   ],
+   [
+    "Union",
+    "the United States"
+   ],
+   [
+    "slave state",
+    "a state where slavery was allowed"
+   ],
+   [
+    "free state",
+    "a state where slavery was not allowed"
+   ],
+   [
+    "self-government",
+    "the power to run your own state"
+   ],
+   [
+    "inset map",
+    "a little map inside a bigger one"
+   ],
+   [
+    "state",
+    "a part of a country with its own government"
+   ],
+   [
+    "constitution",
+    "a written plan that sets up a government"
+   ],
+   [
+    "statue",
+    "a figure of a person or animal made to stand in one place"
+   ],
+   [
+    "stable",
+    "steady and not likely to fall or change"
+   ]
+  ],
+  "wordParts": "The Latin roots stat and stit (from stare and statuere) mean “to stand” and “to set up.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a change",
+    "rx": "vote|president|congress|governor|legislature|elect|govern|own|road|port|town|slave|slavery|star|flag|state|say|voice|rule|law|member",
+    "n": 1
+   },
+   {
+    "t": "a second change",
+    "groups": [
+     "vote for president|president",
+     "congress|member|representative",
+     "governor|legislature|elect|own government|govern|rule|run",
+     "road|port|town|grow",
+     "slave|slavery|fight|debate|war",
+     "star|flag"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "why a slave state",
+    "rx": "balance|even|equal|same number|iowa|pair|plantation|enslav|slave|south|congress|vote|wanted|allowed",
+    "n": 1
+   },
+   {
+    "t": "what it shows about 1845",
+    "rx": "divid|split|argu|fight|tension|disagree|war|civil|country|nation|half|both sides|apart|not agree|problem",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "who it left out",
+    "rx": "left out|women|wom[ae]n|enslaved|slave|black|not vote|couldn.?t vote|could not vote|only white|white men|excluded|everyone|nobody|people|unfair|not fair",
+    "n": 1
+   },
+   {
+    "t": "why that matters",
+    "rx": "because|so |truth|true|whole|both|full|fair|honest|learn|understand|remember|matter|important|story|history|know",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your sorted cards in tab 1, or the last part of the scroll in the Explore tab (tab 2).",
+   "What could Florida’s voters do after 1845 that they couldn’t do before?",
+   "Try this shape: “One change was ___. Another change was ___.”"
+  ],
+  "journal-q2": [
+   "Look at the Admission Day part of the scroll in the Explore tab (tab 2).",
+   "Why was Iowa part of the same law? What were slave states and free states trying to keep even?",
+   "Try this shape: “Florida came in as a slave state because ___. This shows that in 1845 the country ___.”"
+  ],
+  "journal-q3": [
+   "Look at the 1838 Constitution part of the scroll in the Explore tab (tab 2).",
+   "Who could vote? Who could not?",
+   "Try this shape: “The constitution set up ___, but it left out ___. Historians should study both because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which change do you think mattered most to Floridians in 1845? Why?",
+  "journal-q2": "Go further: the balance between slave states and free states broke down 16 years later. What happened in 1861?",
+  "journal-q3": "Go further: how might an enslaved person in Florida have felt about statehood in 1845?"
+ },
+ "quizMiss": [
+  {
+   "a": "1821 is when Florida became a territory. Reread part 1845.",
+   "c": "1861 is when the Civil War began. Reread part 1845."
+  },
+  {
+   "a": "Size had nothing to do with it. Reread part 1845, Admission Day.",
+   "c": "They didn’t share a governor. Reread part 1845: think about slave states and free states."
+  },
+  {
+   "a": "Not all adults could vote. Reread part 1838.",
+   "b": "The constitution protected slavery. Reread part 1838."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1915,90 +2770,84 @@ body {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Florida Becomes a State ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: the capitol at dawn — Florida's brick capitol in Tallahassee, finished in 1845 (no dome then), on a hill of live oaks hung with Spanish moss; a flag rises on its pole and a new 27th star twinkles in (4.08.01 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sunrise over a red-brick capitol building with white columns on a hill in Tallahassee, framed by live oak trees with hanging Spanish moss. A flag rises on a pole beside it, and a new star twinkles into place." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h801sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4A7898"/>
-      <stop offset="40%" stop-color="#6A98B8"/>
-      <stop offset="100%" stop-color="#D4A860"/>
+    <linearGradient id="b801sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5E7BA8"/>
+      <stop offset=".45" stop-color="#E9A98A"/>
+      <stop offset=".8" stop-color="#F8D8A2"/>
+      <stop offset="1" stop-color="#FBE9C4"/>
     </linearGradient>
-    <linearGradient id="h801ground" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3A6A4A"/>
-      <stop offset="100%" stop-color="#2A4A32"/>
+    <radialGradient id="b801sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF4D2"/>
+      <stop offset=".5" stop-color="#FFDFA0" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#FFDFA0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b801hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E8A4A"/>
+      <stop offset="1" stop-color="#3F5530"/>
     </linearGradient>
     <style>
-      .h801glow { animation: h801glow 4s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h801glow { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-      .h801drift { animation: h801drift 6s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h801drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      .b801sun { animation: b801glow 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b801glow { 50% { transform: scale(1.06); opacity: .85; } }
+      .b801flag { animation: b801raise 8s ease-in-out infinite; }
+      @keyframes b801raise { 0% { transform: translateY(46px); } 45% { transform: translateY(0); } 100% { transform: translateY(0); } }
+      .b801wave { animation: b801wav 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 0 50%; }
+      @keyframes b801wav { 50% { transform: skewY(-4deg) scaleX(.96); } }
+      .b801star { animation: b801tw 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b801tw { 0%,45% { opacity: 0; transform: scale(.2); } 60% { opacity: 1; transform: scale(1.5); } 75%,100% { opacity: 1; transform: scale(1); } }
+      .b801moss { animation: b801sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes b801sway { 50% { transform: rotate(2.5deg); } }
+      @media (prefers-reduced-motion: reduce) { .b801sun, .b801flag, .b801wave, .b801star, .b801moss { animation: none; } .b801star { opacity: 1; } }
     </style>
   </defs>
-  <rect width="920" height="180" fill="url(#h801sky)"/>
-  <g opacity="0.35" fill="#FFFFFF">
-    <ellipse cx="200" cy="50" rx="55" ry="18"/>
-    <ellipse cx="230" cy="46" rx="35" ry="13"/>
-    <ellipse cx="700" cy="55" rx="50" ry="16"/>
-  </g>
-  <!-- Sunrise glow -->
-  <ellipse cx="460" cy="180" rx="200" ry="60" fill="#D4A860" opacity="0.2"/>
-  <rect y="180" width="920" height="80" fill="url(#h801ground)"/>
-  <!-- Capitol dome -->
-  <g transform="translate(460,80)">
-    <g class="h801drift">
-      <rect x="-70" y="50" width="140" height="65" fill="#C8B8A0" stroke="#8A7A60" stroke-width="2"/>
-      <rect x="-80" y="48" width="160" height="8" fill="#A08A70" stroke="#8A7A60" stroke-width="1"/>
-      <!-- Columns -->
-      <rect x="-60" y="55" width="8" height="58" rx="2" fill="#B8A888"/>
-      <rect x="-35" y="55" width="8" height="58" rx="2" fill="#B8A888"/>
-      <rect x="27" y="55" width="8" height="58" rx="2" fill="#B8A888"/>
-      <rect x="52" y="55" width="8" height="58" rx="2" fill="#B8A888"/>
-      <!-- Door -->
-      <rect x="-10" y="80" width="20" height="33" rx="2" fill="#5A4A30"/>
-      <!-- Dome -->
-      <ellipse cx="0" cy="48" rx="55" ry="25" fill="#C8B8A0" stroke="#8A7A60" stroke-width="1.5"/>
-      <ellipse cx="0" cy="38" rx="30" ry="16" fill="#B8A888" stroke="#8A7A60" stroke-width="1"/>
-      <!-- Cupola -->
-      <rect x="-8" y="18" width="16" height="14" fill="#B8A888" stroke="#8A7A60" stroke-width="1"/>
-      <polygon points="0,8 -10,18 10,18" fill="#A08A70"/>
+  <rect width="920" height="200" fill="url(#b801sky)"/>
+  <circle class="b801sun" cx="640" cy="118" r="70" fill="url(#b801sun)"/>
+  <circle cx="640" cy="118" r="22" fill="#FFF1C8"/>
+  <path d="M0,138 C120,128 230,140 340,134 C450,128 560,138 680,132 C780,128 860,134 920,130 L920,200 L0,200 Z" fill="#7C8F62" opacity=".55"/>
+  <!-- the hill -->
+  <path d="M0,170 C160,154 300,120 460,118 C620,116 760,150 920,164 L920,200 L0,200 Z" fill="url(#b801hill)"/>
+  <!-- the capitol: two-story brick, white portico of six columns, low roof -->
+  <g transform="translate(386,62)">
+    <rect x="-6" y="56" width="160" height="6" fill="#C8BFA8"/>
+    <rect x="0" y="18" width="148" height="40" fill="#A44A32"/>
+    <g fill="#F4E9CE" opacity=".9">
+      <rect x="10" y="24" width="8" height="11"/><rect x="26" y="24" width="8" height="11"/><rect x="114" y="24" width="8" height="11"/><rect x="130" y="24" width="8" height="11"/>
+      <rect x="10" y="42" width="8" height="11"/><rect x="26" y="42" width="8" height="11"/><rect x="114" y="42" width="8" height="11"/><rect x="130" y="42" width="8" height="11"/>
     </g>
-  </g>
-  <!-- Star (27th state) -->
-  <g transform="translate(460,50)">
-    <g class="h801glow">
-      <polygon points="0,-18 5,-7 17,-7 7,1 11,13 0,6 -11,13 -7,1 -17,-7 -5,-7" fill="#D4943A" opacity="0.8"/>
+    <path d="M-4,18 L152,18 L146,12 L2,12 Z" fill="#6E3424"/>
+    <path d="M40,14 L74,0 L108,14 Z" fill="#F7F1E2" stroke="#C9BC9C" stroke-width="1"/>
+    <rect x="40" y="14" width="68" height="5" fill="#EFE6D0"/>
+    <g fill="#FFFBF0" stroke="#CDBD94" stroke-width=".8">
+      <rect x="43" y="19" width="5" height="37"/><rect x="54" y="19" width="5" height="37"/><rect x="65" y="19" width="5" height="37"/>
+      <rect x="78" y="19" width="5" height="37"/><rect x="89" y="19" width="5" height="37"/><rect x="100" y="19" width="5" height="37"/>
     </g>
+    <rect x="66" y="40" width="16" height="16" fill="#4A2A1C"/>
+    <rect x="36" y="56" width="76" height="4" fill="#E2D6B8"/>
   </g>
-  <!-- Flag on pole -->
-  <g transform="translate(680,100)">
-    <line x1="0" y1="0" x2="0" y2="75" stroke="#5A3A1A" stroke-width="3"/>
-    <rect x="3" y="5" width="45" height="28" rx="1" fill="#E8E0D0" stroke="#8A7A60" stroke-width="1"/>
-    <line x1="3" y1="12" x2="48" y2="12" stroke="#C04040" stroke-width="0.8" opacity="0.5"/>
-    <line x1="3" y1="19" x2="48" y2="19" stroke="#C04040" stroke-width="0.8" opacity="0.5"/>
-    <line x1="3" y1="26" x2="48" y2="26" stroke="#C04040" stroke-width="0.8" opacity="0.5"/>
-    <circle cx="12" cy="18" r="4" fill="#2A5A8A" opacity="0.4"/>
+  <!-- flagpole and the rising flag -->
+  <line x1="574" y1="120" x2="574" y2="44" stroke="#4A3A28" stroke-width="2.4"/>
+  <circle cx="574" cy="43" r="2.4" fill="#C9A24A"/>
+  <g class="b801flag"><g class="b801wave">
+    <rect x="576" y="48" width="44" height="26" fill="#FFFDF5"/>
+    <g fill="#B3261E"><rect x="576" y="48" width="44" height="2"/><rect x="576" y="52" width="44" height="2"/><rect x="576" y="56" width="44" height="2"/><rect x="576" y="60" width="44" height="2"/><rect x="576" y="64" width="44" height="2"/><rect x="576" y="68" width="44" height="2"/><rect x="576" y="72" width="44" height="2"/></g>
+    <rect x="576" y="48" width="19" height="14" fill="#1F3A7A"/>
+    <g fill="#FFFDF5"><circle cx="579" cy="51" r=".8"/><circle cx="583" cy="51" r=".8"/><circle cx="587" cy="51" r=".8"/><circle cx="591" cy="51" r=".8"/><circle cx="581" cy="55" r=".8"/><circle cx="585" cy="55" r=".8"/><circle cx="589" cy="55" r=".8"/><circle cx="579" cy="59" r=".8"/><circle cx="583" cy="59" r=".8"/><circle cx="587" cy="59" r=".8"/></g>
+    <path class="b801star" d="M591,57 l.9,1.9 2.1,.2 -1.6,1.3 .5,2 -1.9,-1.1 -1.9,1.1 .5,-2 -1.6,-1.3 2.1,-.2 Z" fill="#FFE7A0"/>
+  </g></g>
+  <!-- live oaks with Spanish moss, left and right -->
+  <g fill="#2F4224">
+    <ellipse cx="90" cy="96" rx="96" ry="34"/><ellipse cx="40" cy="80" rx="52" ry="24"/><ellipse cx="150" cy="82" rx="54" ry="22"/>
+    <path d="M86,168 C84,140 92,118 76,104 M88,140 C110,124 130,118 150,104 M86,150 C60,132 40,124 20,112" stroke="#2A2014" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="830" cy="98" rx="100" ry="32"/><ellipse cx="880" cy="82" rx="54" ry="22"/><ellipse cx="770" cy="86" rx="50" ry="20"/>
+    <path d="M832,172 C834,144 826,122 842,106 M832,142 C808,126 790,120 770,108 M834,152 C860,134 880,126 904,114" stroke="#2A2014" stroke-width="7" fill="none" stroke-linecap="round"/>
   </g>
-  <!-- Scroll / document -->
-  <g transform="translate(240,130)">
-    <rect x="-25" y="0" width="50" height="40" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.5"/>
-    <line x1="-15" y1="10" x2="15" y2="10" stroke="#8A7A60" stroke-width="1" opacity="0.5"/>
-    <line x1="-15" y1="17" x2="15" y2="17" stroke="#8A7A60" stroke-width="1" opacity="0.5"/>
-    <line x1="-15" y1="24" x2="15" y2="24" stroke="#8A7A60" stroke-width="1" opacity="0.5"/>
-    <line x1="-15" y1="31" x2="10" y2="31" stroke="#8A7A60" stroke-width="1" opacity="0.5"/>
-  </g>
-  <!-- Palm trees -->
-  <g fill="#1A5A3A">
-    <path d="M 80 250 Q 75 220 65 210 Q 78 220 85 215 Q 75 205 82 193 Q 88 210 90 220 Q 98 200 108 200 Q 98 215 93 225 Q 108 215 118 220 Q 103 230 90 237 L 86 255 Z"/>
-    <rect x="84" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A5A3A" transform="translate(810,0)">
-    <path d="M 20 248 Q 15 218 5 208 Q 18 218 25 213 Q 15 203 22 191 Q 28 208 30 218 Q 38 198 48 198 Q 38 213 33 223 Q 48 213 58 218 Q 43 228 30 235 L 26 253 Z"/>
-    <rect x="24" y="235" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <!-- Birds -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
-    <path d="M 320 40 Q 326 35 332 40 Q 338 35 344 40"/>
-    <path d="M 560 50 Q 565 46 570 50 Q 575 46 580 50"/>
+  <g fill="#A3A68E" opacity=".85">
+    <path class="b801moss" d="M40,104 q-3,14 1,24 q2,-10 4,-22 Z"/><path class="b801moss" d="M120,110 q-2,18 2,28 q2,-12 3,-26 Z" style="animation-delay:-1.5s"/>
+    <path class="b801moss" d="M168,98 q-3,12 1,20 q2,-8 3,-18 Z" style="animation-delay:-3s"/><path class="b801moss" d="M76,112 q-2,12 1,18 q2,-8 3,-16 Z" style="animation-delay:-2.2s"/>
+    <path class="b801moss" d="M790,110 q-3,16 1,26 q2,-12 4,-24 Z" style="animation-delay:-.8s"/><path class="b801moss" d="M860,112 q-2,14 2,22 q2,-10 3,-20 Z" style="animation-delay:-2.6s"/>
+    <path class="b801moss" d="M900,100 q-3,12 1,20 q2,-8 3,-18 Z" style="animation-delay:-4s"/>
   </g>
 </svg>
 
@@ -3493,5 +4342,8 @@ updateProgress();
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
