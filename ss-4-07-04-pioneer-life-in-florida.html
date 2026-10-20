@@ -1683,6 +1683,895 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.07.04",
+ "title": "Pioneer Life in Florida",
+ "quiet": true,
+ "file": {
+  "n": 7,
+  "title": "Fort Mose & Pioneers",
+  "label": "Fort Mose & Pioneers",
+  "seals": [
+   "🛞",
+   "🧺",
+   "👝"
+  ]
+ },
+ "prevFile": "The Adams-Onís Treaty",
+ "connector": "Last time we read the treaty that made Florida a U.S. territory. Today we meet the families who moved in after it, and we remember whose land it already was.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Load the Wagon",
+   "t": "Pack what they needed",
+   "why": "Pack a pioneer family’s wagon. Only the things they really needed will fit."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Follow the trail, sort the photo",
+   "why": "Follow the wagon trail to read the story. Then sort the parts of an 1891 pioneer home: grew right here, or brought in?"
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Pack the saddlebags, then write",
+   "why": "Answer three questions. Then write 3 to 5 sentences about pioneer daily life, what it took to survive, and whose land it already was."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about pioneer families in Florida. Let’s take it slowly.",
+  "opening": [
+   "This file is about the pioneer families who moved to Florida after it became a U.S. territory. Life was hard for them, and the land was already home to the Seminole.",
+   "Start in the Load the Wagon tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the wagon",
+      "go": true,
+      "reply": "Tap a supply card, then tap the wagon. Only the things a family really needed will fit."
+     },
+     {
+      "t": "What’s a pioneer?",
+      "reply": "A pioneer is one of the first people from somewhere else to settle (make a home in) a new place."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because the land these families settled was already someone’s home. We tell both halves of the story."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Follow the trail one stop at a time, and read each part."
+     },
+     {
+      "t": "Where did they come from?",
+      "reply": "Mostly from Georgia, Alabama, and the Carolinas. Some trips took weeks, because there were almost no roads."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "When was the photo taken?",
+      "reply": "In 1891, about 70 years after Florida became a territory. Photography wasn’t invented until 1839, so there are no photos of the very first pioneers."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we open a new file: Florida becomes a state in 1845."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "The wagon is packed. Every one of those things helped a family survive. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You followed the trail and sorted the photo: what grew right there, and what was brought in. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then pack the saddlebags and write 3 to 5 sentences: pioneer daily life, what it took to survive, and whose land it already was."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for telling both halves of the story.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means pressing on when life is hard. Pioneers (the first people from somewhere else to settle a new place) showed it as they built homes far from help in territorial Florida, when Florida was a U.S. territory: land owned by the United States but not yet a state. Today you’re a Source Scholar, a historian who studies sources carefully, and you’ll remember whose land this already was.",
+ "scene1": {
+  "type": "loadwagon",
+  "kicker": "Load the wagon",
+  "h": "What did a pioneer family really need?",
+  "voice": "Tap a supply card, then tap the wagon, or drag the card onto it. A real need goes in the wagon. A card that won’t help bounces back.",
+  "items": [
+   {
+    "id": "axe",
+    "ico": "🪓",
+    "ok": true,
+    "t": "An axe",
+    "why": "To cut down trees for the cabin and clear land for fields."
+   },
+   {
+    "id": "seed",
+    "ico": "🌽",
+    "ok": true,
+    "t": "Seed corn",
+    "why": "To plant the first crop, so the family would have food."
+   },
+   {
+    "id": "pot",
+    "ico": "🍲",
+    "ok": true,
+    "t": "An iron cooking pot",
+    "why": "To cook meals over an open fire."
+   },
+   {
+    "id": "salt",
+    "ico": "🧂",
+    "ok": true,
+    "t": "A sack of salt",
+    "why": "To keep meat from spoiling. There were no refrigerators."
+   },
+   {
+    "id": "hoe",
+    "ico": "🌱",
+    "ok": true,
+    "t": "A hoe",
+    "why": "To break up the soil and pull weeds from the crops."
+   },
+   {
+    "id": "quilt",
+    "ico": "🛏️",
+    "ok": true,
+    "t": "Quilts and blankets",
+    "why": "To sleep under, on a dirt floor or a homemade bed."
+   },
+   {
+    "id": "ice",
+    "ico": "🧊",
+    "ok": false,
+    "t": "A box of ice",
+    "miss": "Ice would melt long before a weeks-long trip was over. Pick something that lasts."
+   },
+   {
+    "id": "glass",
+    "ico": "🪟",
+    "ok": false,
+    "t": "Glass windows for the cabin",
+    "miss": "Glass was heavy, breaks easily, and cost a lot. Most cabins had wooden shutters instead."
+   },
+   {
+    "id": "sofa",
+    "ico": "🛋️",
+    "ok": false,
+    "t": "A big, soft sofa",
+    "miss": "Wagon space was tight. Pick tools and supplies a family needed to survive."
+   }
+  ],
+  "wagonT": "The pioneer wagon. Tap here after you pick a supply card.",
+  "firstT": "Tap a supply card first, then tap the wagon.",
+  "countT": "spots filled. Pick the next thing the family really needs.",
+  "jT": "In the wagon:",
+  "win": "🛞 <b>The wagon is packed.<\/b> An axe, seed, a pot, salt, a hoe, and quilts. With these, a family could build a cabin, grow food, and cook it.",
+  "why": {
+   "icon": "🛞",
+   "q": "Why a wagon?",
+   "t": "There were almost no roads in territorial Florida. Families packed what they could into a wagon or onto pack animals. Anything they left behind, they had to make or do without. That’s why the wagon has only a few spots."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "trail",
+   "activity": "Pioneer Life in Florida",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^After the Adams-Onís Treaty"
+    },
+    {
+     "id": "p2",
+     "match": "^Getting there"
+    },
+    {
+     "id": "p3",
+     "match": "^Shelter"
+    },
+    {
+     "id": "p4",
+     "match": "^Daily life"
+    },
+    {
+     "id": "p5",
+     "match": "^Hardships"
+    },
+    {
+     "id": "p6",
+     "match": "^The land was not empty"
+    }
+   ],
+   "stops": [
+    {
+     "id": "s1",
+     "lab": "Leaving home",
+     "t": "Why they came",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "s2",
+     "lab": "On the trail",
+     "t": "Getting there",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "s3",
+     "lab": "Building",
+     "t": "Shelter",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "s4",
+     "lab": "Every day",
+     "t": "Daily life",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "s5",
+     "lab": "Hard times",
+     "t": "Hardships",
+     "paras": [
+      "p5"
+     ]
+    },
+    {
+     "id": "s6",
+     "lab": "Whose land?",
+     "t": "The land was not empty",
+     "paras": [
+      "p6"
+     ]
+    }
+   ],
+   "fromT": "Georgia",
+   "toT": "Florida",
+   "startT": "Tap stop 1 to start the trip.",
+   "countT": "stops reached. Read this part, then roll on.",
+   "allT": "You followed the whole trail. You read the whole story.",
+   "nextT": "Roll on to stop {n}: {t}",
+   "orderT": "Follow the trail in order: tap the stop that glows.",
+   "alt": "A wagon trail from the red-clay hills of Georgia down into the Florida pines, with six stops",
+   "why": {
+    "icon": "🛤️",
+    "q": "Why a trail?",
+    "t": "Most pioneer families came south from Georgia, Alabama, and the Carolinas, traveling for weeks. Their story starts on the trail and ends at a new home on land where others already lived. That’s why you follow the trail to read it."
+   }
+  },
+  "evidence": {
+   "type": "madehere",
+   "kicker": "Made from what grew here",
+   "h": "Grew right here, or brought in?",
+   "voice": "Tap a card, then tap the basket it belongs in, or drag it. Use the numbered labels on the photo. Then answer one question.",
+   "img": "source-4-07-04-barker-pioneer-home-1891.jpg",
+   "alt": "George Barker’s 1891 photo of a palm-frond pioneer home in South Florida, with six numbered labels",
+   "baskets": [
+    {
+     "id": "here",
+     "ico": "🌴",
+     "t": "Grew right here"
+    },
+    {
+     "id": "away",
+     "ico": "🛒",
+     "t": "Made somewhere else and brought in"
+    }
+   ],
+   "cards": [
+    {
+     "id": "roof",
+     "b": "here",
+     "t": "The palm-frond roof (1)",
+     "why": "Palm fronds grew on the trees all around the home.",
+     "miss": "Look at label 1 and the trees around the home. Where did the fronds come from?"
+    },
+    {
+     "id": "walls",
+     "b": "here",
+     "t": "The palm-frond walls (1)",
+     "why": "More fronds, laid on thick to keep out sun and rain.",
+     "miss": "The walls are made of the same leaves as the roof. Where did they grow?"
+    },
+    {
+     "id": "nuts",
+     "b": "here",
+     "t": "The coconuts (5)",
+     "why": "Coconut palms grow right there, so this food fell from the trees.",
+     "miss": "Look up from label 5. What kind of tree is next to the home?"
+    },
+    {
+     "id": "hat",
+     "b": "away",
+     "t": "The man’s hat and clothes",
+     "why": "Cloth like this was woven in mills far away, then bought or brought in.",
+     "miss": "Can a family grow a hat? Think about where cloth is made."
+    },
+    {
+     "id": "bowl",
+     "b": "away",
+     "t": "The bowl on the bench (4)",
+     "why": "A bowl like this was made in a workshop or factory and brought in.",
+     "miss": "A bowl doesn’t grow on a tree. Where was it made?"
+    },
+    {
+     "id": "boards",
+     "b": "away",
+     "t": "The smooth, flat boards of the bench (4)",
+     "why": "Boards this smooth and flat were usually cut at a sawmill.",
+     "miss": "Look closely at label 4. Are these boards rough fronds, or smooth cut wood?"
+    }
+   ],
+   "q": {
+    "q": "What does your sort tell you about pioneer life?",
+    "opts": [
+     {
+      "id": "ok",
+      "t": "Pioneers built with what grew nearby, and brought in only what they couldn’t make",
+      "ok": true
+     },
+     {
+      "id": "store",
+      "t": "Pioneers bought everything at stores",
+      "ok": false,
+      "miss": "Look at the roof and walls again. Did those come from a store?"
+     },
+     {
+      "id": "none",
+      "t": "Pioneers had no tools or things from anywhere else",
+      "ok": false,
+      "miss": "Look at label 4 again. Some things were brought in."
+     }
+    ]
+   },
+   "countT": "sorted. Tap a card, then tap the basket it belongs in.",
+   "firstT": "Tap a card first, then tap its basket.",
+   "hotT": "Last step: tap every gold number on the photo above.",
+   "readT": "Last step: follow every stop of the trail in Learn the Story at the top of this tab.",
+   "win": "Most of this home grew right where it stands. A family far from stores built with what was around them, and brought in only what they couldn’t make.",
+   "why": {
+    "icon": "🧺",
+    "q": "Why baskets?",
+    "t": "Far from any store, a pioneer family made what it could from the land around it and brought in only what it couldn’t make. Sorting the parts of this home shows which was which. That’s why there are two baskets."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Follow the trail in Learn the Story: tap each stop and read its part.",
+    "Tap each of the 6 gold numbers on the photo.",
+    "Read the three questions under the photo.",
+    "Do Made from what grew here: sort each card into its basket, then answer one question."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "Now try Made from what grew here below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 37.7,
+    "y": 33.6,
+    "title": "The roof and walls.",
+    "t": "Layers of palm fronds (the big leaves of palm trees), laid on thick to keep out sun and rain."
+   },
+   {
+    "n": "2",
+    "x": 62.1,
+    "y": 50.9,
+    "title": "The window.",
+    "t": "An opening with a wooden shutter propped up. There is no glass."
+   },
+   {
+    "n": "3",
+    "x": 31.1,
+    "y": 56.4,
+    "title": "The doorway.",
+    "t": "The way into the one-room home."
+   },
+   {
+    "n": "4",
+    "x": 54.6,
+    "y": 91.8,
+    "title": "A bench.",
+    "t": "A bench outside, made of boards, with a bowl on it."
+   },
+   {
+    "n": "5",
+    "x": 16.0,
+    "y": 94.6,
+    "title": "Coconuts.",
+    "t": "Coconut palms grow in South Florida, and coconuts are food."
+   },
+   {
+    "n": "6",
+    "x": 6.6,
+    "y": 53.6,
+    "title": "A cabbage palm.",
+    "t": "Florida’s state tree. Its fronds are the kind used for roofs like this one."
+   }
+  ]
+ },
+ "planner": {
+  "type": "saddlebags",
+  "voice": "Fill the left bag first: what daily life was like. Then the right bag: what it took to survive, and whose land it was. These are just notes. You’ll write your own sentences in Step 3.",
+  "cardA": {
+   "t": "What daily life was like",
+   "rows": [
+    {
+     "id": "home",
+     "lab": "Their home",
+     "short": "Home",
+     "opts": [
+      {
+       "t": "a one-room log cabin or lean-to with a dirt floor",
+       "ok": true
+      },
+      {
+       "t": "a brick house with glass windows",
+       "ok": false,
+       "miss": "Glass windows were rare. Reread stop 3, Shelter."
+      }
+     ]
+    },
+    {
+     "id": "work",
+     "lab": "Their work",
+     "short": "Work",
+     "opts": [
+      {
+       "t": "everyone worked, children too",
+       "ok": true
+      },
+      {
+       "t": "farming corn, sweet potatoes, and peas",
+       "ok": true
+      },
+      {
+       "t": "raising cattle and hogs",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "hard",
+     "lab": "A hardship",
+     "short": "Hardship",
+     "opts": [
+      {
+       "t": "heat, hurricanes, and floods",
+       "ok": true
+      },
+      {
+       "t": "mosquitoes that carried malaria and yellow fever",
+       "ok": true
+      },
+      {
+       "t": "the nearest doctor was a day’s ride away",
+       "ok": true
+      },
+      {
+       "t": "snow and ice all winter",
+       "ok": false,
+       "miss": "Florida is warm. Reread stop 5, Hard times."
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "What it took to survive",
+   "rows": [
+    {
+     "id": "took",
+     "lab": "What it took",
+     "short": "It took",
+     "opts": [
+      {
+       "t": "courage, to keep going far from help"
+      },
+      {
+       "t": "hard work from the whole family"
+      },
+      {
+       "t": "using what grew nearby"
+      }
+     ]
+    },
+    {
+     "id": "det",
+     "lab": "A detail to use",
+     "short": "Detail",
+     "opts": [
+      {
+       "t": "they cleared land by hand with axes"
+      },
+      {
+       "t": "some trips took weeks"
+      },
+      {
+       "t": "the 1891 photo’s palm-frond home"
+      }
+     ]
+    },
+    {
+     "id": "land",
+     "lab": "Whose land was it?",
+     "short": "Whose land",
+     "opts": [
+      {
+       "t": "the Seminole’s and other Native peoples’",
+       "ok": true
+      },
+      {
+       "t": "nobody’s, it was empty",
+       "ok": false,
+       "miss": "Reread stop 6: the land was not empty."
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "The tag ties both bags shut. Now write your Historian’s Notebook entry in Step 3.",
+  "why": {
+   "icon": "👝",
+   "q": "Why saddlebags?",
+   "t": "A pioneer on horseback carried things in two bags that hang on each side of the horse. Your notebook entry needs two sides too: what daily life was like, and what it took to survive. That’s why your plan goes in two bags."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what daily life was like",
+    "rx": "cabin|log|lean|home|house|shelter|work|chore|farm|corn|potato|pea|hog|pig|cattle|cow|hunt|fish|water|firewood|wood|garden|crop|child|kid|famil|dirt|floor|daily|every day|life|liv"
+   },
+   {
+    "t": "what it took to survive",
+    "rx": "courage|brave|hard work|work(ed)? hard|strong|strength|endur|persever|keep going|kept going|never gave up|give up|together|help|skill|tool|axe|surviv|tough|patien|grit|took"
+   },
+   {
+    "t": "whose land it already was",
+    "rx": "seminole|native|indian|their land|already|not empty|lived there|living there|live there|moultrie|reservation|someone"
+   }
+  ],
+  "lines": [
+   "Start with what daily life was like.",
+   "Good. Now say what it took to survive.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the wagon, the trail, and the 1891 photo."
+  },
+  {
+   "t": "Plan",
+   "w": "Pack the saddlebags: daily life on the left, what it took to survive and whose land on the right."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences: what daily life was like, what it took to survive, and whose land it already was. Use one detail. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "signposts",
+  "kicker": "Down the trail",
+  "h": "migr = to move",
+  "root": "migr",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match puts up a signpost and moves the wagon closer to its new home.",
+  "words": [
+   {
+    "w": "migrate",
+    "root": "migr",
+    "m": "to move from one place to live in another",
+    "miss": "Pioneers did this when they moved to Florida. Which word is the action?",
+    "say": "Migrate. To move from one place to live in another."
+   },
+   {
+    "w": "migration",
+    "root": "migr",
+    "m": "a move of many people or animals from one place to another",
+    "miss": "The ending -tion makes a thing, not an action. Which word names a big move?",
+    "say": "Migration. A move of many people or animals from one place to another."
+   },
+   {
+    "w": "immigrant",
+    "root": "migr",
+    "m": "a person who comes into a new country to live",
+    "miss": "Im- means into. Which word is a person coming into a country?",
+    "say": "Immigrant. A person who comes into a new country to live."
+   },
+   {
+    "w": "emigrate",
+    "root": "migr",
+    "m": "to leave your own country to live in another one",
+    "miss": "E- means out of. Which word means moving out of your country?",
+    "say": "Emigrate. To leave your own country to live in another one."
+   }
+  ],
+  "win": "🪧 The wagon is home. <b>migr<\/b> = to move",
+  "why": {
+   "icon": "🪧",
+   "q": "Why signposts?",
+   "t": "Migr means to move. Pioneer families migrated south to Florida, and signposts along a road show how far you’ve come. That’s why each word you match puts up a sign."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Only what fits",
+   "at": "scene1",
+   "script": "When I moved to a new apartment once, I had one small car and way too much stuff. I had to ask about every box: do I really need this? Pioneer families had to ask that about everything. As you load the wagon, ask: would this help a family build a home and grow food?"
+  },
+  {
+   "slot": "guide2",
+   "label": "The very first day",
+   "at": "s1done",
+   "script": "Pause me and look at what’s in your wagon. Pick the one thing the family would need on the very first day. Say it out loud with a because. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One stop at a time",
+   "at": "explore",
+   "script": "Picture this trip: almost no roads, a slow wagon, and weeks of travel. Follow the trail one stop at a time, and read each part before you roll on. The last stop matters most, so take your time there."
+  },
+  {
+   "slot": "guide4",
+   "label": "Someone’s home",
+   "at": "afterread",
+   "script": "The last stop says the land was not empty. Pioneers wanted land, and the Seminole already lived there. In 1823 a treaty moved the Seminole onto a reservation in the middle of Florida. Pause me and think: what did pioneer families gain, and what did Seminole families lose?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Grew here or brought in",
+   "at": "evidence",
+   "script": "When I clean out my garage, I can tell which things came from my own yard, like firewood and leaves, and which came from a store, like paint cans. Do the same with this photo. For each card, ask: did this grow right here, or was it made somewhere else?"
+  },
+  {
+   "slot": "guide6",
+   "label": "Two bags",
+   "at": "plan",
+   "script": "Two saddlebags. On the left, what daily life was like. On the right, what it took to survive, and whose land it was. A good entry needs both sides. These are just notes. You’ll write the sentences yourself in Step 3."
+  }
+ ],
+ "cabinet": {
+  "n": 7
+ },
+ "notes": {
+  "learned": [
+   "After Florida became a U.S. territory in 1821, pioneers moved in, mostly from Georgia, Alabama, and the Carolinas, for cheap land.",
+   "There were almost no roads. Some trips took weeks by wagon, horse, or boat.",
+   "Pioneers built log cabins or lean-tos from trees and palm fronds. Everyone in the family worked, children too.",
+   "Heat, hurricanes, floods, and mosquitoes that carried malaria and yellow fever made life hard, and doctors were far away.",
+   "The land was not empty. In 1823 the Treaty of Moultrie Creek moved the Seminole onto a reservation, and in 1835 the Second Seminole War began."
+  ],
+  "vocab": [
+   [
+    "territory",
+    "land that belongs to the United States but is not yet a state"
+   ],
+   [
+    "pioneer",
+    "one of the first people from somewhere else to settle a new place"
+   ],
+   [
+    "settle",
+    "make a home in a new place"
+   ],
+   [
+    "lean-to",
+    "a rough shelter with a roof that slants one way"
+   ],
+   [
+    "palm fronds",
+    "the big leaves of palm trees"
+   ],
+   [
+    "livestock",
+    "farm animals"
+   ],
+   [
+    "isolated",
+    "cut off from other people"
+   ],
+   [
+    "tension",
+    "anger and distrust"
+   ],
+   [
+    "reservation",
+    "an area of land set aside for a Native nation"
+   ],
+   [
+    "endurance",
+    "the strength to keep going"
+   ],
+   [
+    "perseverance",
+    "keeping on when things are hard"
+   ],
+   [
+    "frontier",
+    "land where few settlers lived yet"
+   ],
+   [
+    "migrate",
+    "to move from one place to live in another"
+   ],
+   [
+    "migration",
+    "a move of many people or animals from one place to another"
+   ],
+   [
+    "immigrant",
+    "a person who comes into a new country to live"
+   ],
+   [
+    "emigrate",
+    "to leave your own country to live in another one"
+   ]
+  ],
+  "wordParts": "The Latin root migr (from migrare) means “to move.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a challenge",
+    "rx": "heat|hot|sun|weather|hurricane|storm|flood|rain|swamp|mosquito|bug|disease|sick|malaria|yellow fever|fever|ill|doctor|medic|alone|isolat|far|lonel|neighbor|road|travel|trip|wagon|week|journey|work|labor|chore|clear|cut|tree|supplies|food|hungry|water|dirt|hard|seminole|conflict",
+    "n": 1
+   },
+   {
+    "t": "a second challenge",
+    "groups": [
+     "heat|hot|sun|weather|hurricane|storm|flood|rain|swamp",
+     "mosquito|bug|disease|sick|malaria|yellow fever|fever|ill",
+     "doctor|medic|alone|isolat|far|lonel|neighbor|nobody",
+     "road|travel|trip|wagon|week|journey|tired|exhaust",
+     "work|labor|chore|clear|cut|tree|axe|build|farm",
+     "supplies|food|hungry|water",
+     "seminole|native|conflict|fight|war"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "what happened to them",
+    "rx": "tension|anger|angry|distrust|conflict|fight|war|push|forc|mov|reservation|lost|lose|land|taken|took|take|treaty|moultrie|pressur|left|leave|kick|remov|middle|fewer|hurt|harm",
+    "n": 1
+   },
+   {
+    "t": "a detail from the lesson",
+    "rx": "1823|1835|moultrie|reservation|treaty|second seminole war|seminole war|war|middle of florida|central|settler|pioneer|clear|more land|land|seminole",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a part of the photo",
+    "rx": "roof|wall|palm|frond|leaf|leaves|thatch|window|shutter|glass|door|bench|bowl|coconut|tree|label|[1-6]|number|hut|house|home|cabin|man|hat|sand|board",
+    "n": 1
+   },
+   {
+    "t": "what it tells you",
+    "rx": "shelter|food|eat|work|built|build|made|make|grew|grow|nearby|around|plant|by hand|simple|hard|cool|shade|rain|sun|no glass|chore|cook|wash|live|lived|shows|tells|means|because",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at stops 2 and 5 on the trail in the Explore tab (tab 2).",
+   "Think about the trip, the weather, the mosquitoes, and how far away help was.",
+   "Try this shape: “One challenge was ___. Another was ___.”"
+  ],
+  "journal-q2": [
+   "Look at the last stop on the trail, Whose land?, in the Explore tab (tab 2).",
+   "What happened in 1823? What began in 1835?",
+   "Try this shape: “As more pioneers came, ___. In 1823, ___.”"
+  ],
+  "journal-q3": [
+   "Look at the 1891 photo and its gold numbers in the Explore tab (tab 2).",
+   "Pick one label. What is it made of, or what is it for? What does that tell you about shelter, food, or work?",
+   "Try this shape: “Label ___ shows ___. This tells me ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which challenge do you think was hardest? Why?",
+  "journal-q2": "Go further: the Seminole had no say in where pioneers settled. How might a Seminole family have told this story?",
+  "journal-q3": "Go further: this photo is from 1891, not 1821. What can it tell us about the first pioneers, and what can’t it?"
+ },
+ "quizMiss": [
+  {
+   "a": "Brick and glass were too costly and hard to bring. Reread stop 3, Shelter.",
+   "c": "Forts were built by armies, not families. Reread stop 3, Shelter."
+  },
+  {
+   "a": "Florida is warm, and it has plenty of rain. Reread stop 5, Hard times.",
+   "c": "Florida doesn’t have volcanoes. Reread stop 5, Hard times."
+  },
+  {
+   "a": "The lesson doesn’t say that. Reread stop 6, Whose land?",
+   "c": "Spain gave Florida to the United States in 1821. Reread stop 1 and stop 6."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1915,86 +2804,87 @@ body {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Pioneer Life in Florida ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: two fires in the pines — dusk in the Florida pine flatwoods: a new log cabin with a young cornfield and chimney smoke on one side, and beyond the trees, the cooking smoke of a Seminole town with palm-thatched chickees. Both halves of the story (4.07.04 sparkle) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dusk in the Florida pine woods. On the left, a new log cabin with a small cornfield and smoke rising from its chimney. Across the clearing, beyond tall pines, the smoke of a Seminole town rises from palm-thatched chickees. Both fires glow under the same sky." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h704sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#78B8D8"/>
-      <stop offset="50%" stop-color="#98D0E8"/>
-      <stop offset="100%" stop-color="#A8D8B0"/>
+    <linearGradient id="b704sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E3D5C"/>
+      <stop offset=".5" stop-color="#B9706A"/>
+      <stop offset=".82" stop-color="#F0B27A"/>
+      <stop offset="1" stop-color="#F6D9A0"/>
     </linearGradient>
+    <linearGradient id="b704ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4A5A35"/>
+      <stop offset="1" stop-color="#2C3620"/>
+    </linearGradient>
+    <radialGradient id="b704glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFC861" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#FFC861" stop-opacity="0"/>
+    </radialGradient>
     <style>
-      .h704smoke { animation: h704smoke 4s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h704smoke { 0%,100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(-8px); opacity: 0.15; } }
-      .h704sway { animation: h704sway 3s ease-in-out infinite; transform-origin: bottom center; transform-box: fill-box; }
-      @keyframes h704sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
+      .b704smoke { fill: none; stroke: #D9CFC2; stroke-width: 5; stroke-linecap: round; opacity: .55; animation: b704rise 7s ease-in-out infinite; }
+      .b704smoke.two { animation-delay: -3.5s; }
+      @keyframes b704rise { 0% { transform: translateY(6px); opacity: 0; } 30% { opacity: .55; } 100% { transform: translateY(-26px); opacity: 0; } }
+      .b704glow { animation: b704glo 3.2s ease-in-out infinite; }
+      @keyframes b704glo { 50% { opacity: .55; } }
+      .b704fly { fill: #FFE08A; animation: b704blink 4s ease-in-out infinite; }
+      .b704fly.d2 { animation-delay: -1.3s; } .b704fly.d3 { animation-delay: -2.6s; }
+      @keyframes b704blink { 0%,100% { opacity: 0; } 40%,60% { opacity: .95; } }
+      @media (prefers-reduced-motion: reduce) { .b704smoke, .b704glow, .b704fly { animation: none; } .b704fly { opacity: .7; } }
     </style>
   </defs>
-  <rect width="920" height="180" fill="url(#h704sky)"/>
-  <g opacity="0.45" fill="#FFFFFF">
-    <ellipse cx="180" cy="42" rx="70" ry="22"/>
-    <ellipse cx="220" cy="38" rx="45" ry="15"/>
-    <ellipse cx="600" cy="50" rx="55" ry="16"/>
+  <rect width="920" height="200" fill="url(#b704sky)"/>
+  <circle cx="470" cy="150" r="30" fill="#FBE3B0" opacity=".8"/>
+  <!-- far tree line -->
+  <path d="M0,150 C80,140 140,146 220,140 C300,134 360,142 460,138 C560,134 640,142 740,136 C820,132 880,140 920,138 L920,200 L0,200 Z" fill="#3A4A2E" opacity=".75"/>
+  <!-- ground -->
+  <path d="M0,164 C160,156 320,162 460,158 C600,154 760,162 920,156 L920,200 L0,200 Z" fill="url(#b704ground)"/>
+  <!-- tall longleaf pines across the middle: bare trunks, round tufted crowns -->
+  <g fill="#25301B">
+    <line x1="400" y1="160" x2="400" y2="46" stroke="#1E2616" stroke-width="3.0"/><ellipse cx="400" cy="40" rx="13.0" ry="8.0"/><ellipse cx="391.0" cy="47.0" rx="8.0" ry="5.0"/><ellipse cx="410.0" cy="45.0" rx="8.0" ry="5.0"/><ellipse cx="402.0" cy="34.0" rx="7.0" ry="5.0"/>
+    <line x1="438" y1="160" x2="438" y2="64" stroke="#1E2616" stroke-width="2.4"/><ellipse cx="438" cy="58" rx="10.4" ry="6.4"/><ellipse cx="430.8" cy="63.6" rx="6.4" ry="4.0"/><ellipse cx="446.0" cy="62.0" rx="6.4" ry="4.0"/><ellipse cx="439.6" cy="53.2" rx="5.6" ry="4.0"/>
+    <line x1="508" y1="158" x2="508" y2="36" stroke="#1E2616" stroke-width="3.3"/><ellipse cx="508" cy="30" rx="14.3" ry="8.8"/><ellipse cx="498.1" cy="37.7" rx="8.8" ry="5.5"/><ellipse cx="519.0" cy="35.5" rx="8.8" ry="5.5"/><ellipse cx="510.2" cy="23.4" rx="7.7" ry="5.5"/>
+    <line x1="548" y1="158" x2="548" y2="70" stroke="#1E2616" stroke-width="2.4"/><ellipse cx="548" cy="64" rx="10.4" ry="6.4"/><ellipse cx="540.8" cy="69.6" rx="6.4" ry="4.0"/><ellipse cx="556.0" cy="68.0" rx="6.4" ry="4.0"/><ellipse cx="549.6" cy="59.2" rx="5.6" ry="4.0"/>
+    <line x1="120" y1="166" x2="120" y2="58" stroke="#1E2616" stroke-width="3.0"/><ellipse cx="120" cy="52" rx="13.0" ry="8.0"/><ellipse cx="111.0" cy="59.0" rx="8.0" ry="5.0"/><ellipse cx="130.0" cy="57.0" rx="8.0" ry="5.0"/><ellipse cx="122.0" cy="46.0" rx="7.0" ry="5.0"/>
+    <line x1="842" y1="162" x2="842" y2="52" stroke="#1E2616" stroke-width="3.0"/><ellipse cx="842" cy="46" rx="13.0" ry="8.0"/><ellipse cx="833.0" cy="53.0" rx="8.0" ry="5.0"/><ellipse cx="852.0" cy="51.0" rx="8.0" ry="5.0"/><ellipse cx="844.0" cy="40.0" rx="7.0" ry="5.0"/>
   </g>
-  <g fill="#2A5A3A" opacity="0.5">
-    <polygon points="50,180 65,130 80,180"/>
-    <polygon points="90,180 108,120 126,180"/>
-    <polygon points="130,180 145,135 160,180"/>
-    <polygon points="730,180 748,125 766,180"/>
-    <polygon points="780,180 795,140 810,180"/>
-    <polygon points="840,180 855,130 870,180"/>
-    <polygon points="880,180 898,138 916,180"/>
+  <!-- palmettos -->
+  <g fill="none" stroke="#2E3D22" stroke-width="2.4" stroke-linecap="round">
+    <path d="M340,168 c-10,-12 -22,-12 -28,-6 M340,168 c4,-14 16,-18 24,-12 M340,168 c-2,-14 2,-22 8,-24 M340,168 c-8,-6 -18,-2 -22,4"/>
+    <path d="M610,166 c-10,-12 -22,-12 -28,-6 M610,166 c4,-14 16,-18 24,-12 M610,166 c-2,-14 2,-22 8,-24"/>
+    <path d="M30,176 c-6,-10 -16,-10 -20,-4 M30,176 c4,-12 14,-14 20,-8"/>
   </g>
-  <rect y="180" width="920" height="80" fill="#6A8A50"/>
-  <path d="M 0 190 Q 100 185 200 190 Q 300 195 400 188 Q 500 182 600 190 Q 700 196 800 188 Q 850 184 920 190 L 920 260 L 0 260 Z" fill="#5A7A45" opacity="0.5"/>
-  <g transform="translate(420,95)">
-    <rect x="-70" y="15" width="140" height="70" rx="2" fill="#A07040" stroke="#6A4520" stroke-width="2.5"/>
-    <line x1="-70" y1="30" x2="70" y2="30" stroke="#8A5A30" stroke-width="1"/>
-    <line x1="-70" y1="45" x2="70" y2="45" stroke="#8A5A30" stroke-width="1"/>
-    <line x1="-70" y1="60" x2="70" y2="60" stroke="#8A5A30" stroke-width="1"/>
-    <line x1="-70" y1="75" x2="70" y2="75" stroke="#8A5A30" stroke-width="1"/>
-    <polygon points="-80,15 0,-25 80,15" fill="#5A3A1A" stroke="#3A2510" stroke-width="2.5"/>
-    <rect x="40" y="-18" width="18" height="35" fill="#8A7A6A" stroke="#5A4A3A" stroke-width="1.5"/>
-    <g class="h704smoke">
-      <circle cx="50" cy="-28" r="6" fill="#8A8A8A" opacity="0.3"/>
-      <circle cx="46" cy="-40" r="8" fill="#8A8A8A" opacity="0.2"/>
-      <circle cx="52" cy="-52" r="5" fill="#8A8A8A" opacity="0.15"/>
+  <!-- LEFT: the pioneer cabin and its young cornfield -->
+  <g transform="translate(150,104)">
+    <circle class="b704glow" cx="46" cy="42" r="44" fill="url(#b704glow)"/>
+    <path d="M0,40 L46,10 L92,40 Z" fill="#5B3E24"/>
+    <g fill="#7A5634" stroke="#4A321C" stroke-width="1">
+      <rect x="6" y="40" width="80" height="7" rx="3"/><rect x="6" y="47" width="80" height="7" rx="3"/><rect x="6" y="54" width="80" height="7" rx="3"/><rect x="6" y="61" width="80" height="7" rx="3"/>
     </g>
-    <rect x="-12" y="48" width="24" height="37" rx="1" fill="#4A2A0A"/>
-    <rect x="-55" y="30" width="22" height="18" rx="1" fill="#B8D8E8" stroke="#4A2A0A" stroke-width="1.5"/>
-    <line x1="-44" y1="30" x2="-44" y2="48" stroke="#4A2A0A" stroke-width="1"/>
-    <line x1="-55" y1="39" x2="-33" y2="39" stroke="#4A2A0A" stroke-width="1"/>
-    <rect x="33" y="30" width="22" height="18" rx="1" fill="#B8D8E8" stroke="#4A2A0A" stroke-width="1.5"/>
-    <line x1="44" y1="30" x2="44" y2="48" stroke="#4A2A0A" stroke-width="1"/>
-    <line x1="33" y1="39" x2="55" y2="39" stroke="#4A2A0A" stroke-width="1"/>
+    <rect x="38" y="48" width="16" height="20" fill="#2A1A0C"/>
+    <rect x="62" y="46" width="12" height="9" fill="#FFC861" opacity=".85"/>
+    <rect x="86" y="16" width="10" height="52" fill="#8A6A48" stroke="#4A321C" stroke-width="1"/>
+    <path class="b704smoke" d="M91,12 c-6,-8 6,-14 0,-22 c-5,-7 4,-12 1,-18"/>
   </g>
-  <g class="h704sway">
-    <g stroke="#3A7A2A" stroke-width="2" fill="none">
-      <line x1="200" y1="185" x2="200" y2="140"/>
-      <path d="M 200 150 L 212 142 M 200 160 L 188 152"/>
-      <line x1="222" y1="185" x2="222" y2="145"/>
-      <path d="M 222 155 L 234 147 M 222 165 L 210 157"/>
-      <line x1="244" y1="185" x2="244" y2="142"/>
-      <path d="M 244 152 L 256 144 M 244 162 L 232 154"/>
-    </g>
+  <g stroke="#7C9446" stroke-width="2" stroke-linecap="round">
+    <path d="M60,170 v-14 M60,162 l-5,-4 M60,160 l5,-5"/><path d="M76,170 v-12 M76,162 l-5,-4 M76,160 l5,-4"/>
+    <path d="M92,170 v-14 M92,162 l-5,-4 M92,160 l5,-5"/><path d="M108,171 v-12 M108,164 l-5,-4 M108,162 l5,-4"/>
+    <path d="M68,180 v-12 M68,174 l-5,-4 M68,172 l5,-4"/><path d="M84,181 v-14 M84,174 l-5,-4 M84,172 l5,-5"/><path d="M100,181 v-12 M100,174 l-5,-4 M100,172 l5,-4"/>
   </g>
-  <g transform="translate(600,155)">
-    <rect x="-12" y="0" width="24" height="22" rx="2" fill="#8A7A6A" stroke="#5A4A3A" stroke-width="1.5"/>
-    <line x1="-12" y1="0" x2="0" y2="-12" stroke="#5A3A1A" stroke-width="2"/>
-    <line x1="12" y1="0" x2="0" y2="-12" stroke="#5A3A1A" stroke-width="2"/>
-    <rect x="-3" y="-14" width="6" height="4" fill="#5A3A1A"/>
+  <!-- RIGHT, beyond the pines: a Seminole town, palm-thatched chickees and a cooking fire -->
+  <g transform="translate(640,112)">
+    <circle class="b704glow" cx="70" cy="44" r="46" fill="url(#b704glow)" style="animation-delay:-1.6s"/>
+    <g stroke="#3B2A18" stroke-width="2.4"><line x1="10" y1="34" x2="10" y2="58"/><line x1="50" y1="34" x2="50" y2="58"/><line x1="96" y1="38" x2="96" y2="58"/><line x1="134" y1="38" x2="134" y2="58"/></g>
+    <path d="M2,36 L30,14 L58,36 Z" fill="#8C7A4A" stroke="#5E5030" stroke-width="1"/>
+    <path d="M88,40 L115,20 L142,40 Z" fill="#8C7A4A" stroke="#5E5030" stroke-width="1"/>
+    <path d="M6,26 l48,0 M12,22 l36,0 M92,30 l46,0 M98,26 l34,0" stroke="#A8955E" stroke-width="1"/>
+    <rect x="12" y="50" width="38" height="3" fill="#5E4A2C"/><rect x="98" y="50" width="36" height="3" fill="#5E4A2C"/>
+    <path d="M64,58 l6,-12 l6,12 Z" fill="#FFB44A"/><path d="M60,58 L80,58" stroke="#3B2A18" stroke-width="2.4"/>
+    <path class="b704smoke two" d="M70,40 c6,-8 -6,-14 0,-22 c5,-7 -4,-12 -1,-18"/>
   </g>
-  <g fill="#1A5A3A">
-    <path d="M 30 250 Q 25 220 15 210 Q 28 220 35 215 Q 25 205 32 193 Q 38 210 40 220 Q 48 200 58 200 Q 48 215 43 225 Q 58 215 68 220 Q 53 230 40 237 L 36 255 Z"/>
-    <rect x="34" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A5A3A" transform="translate(885,0)">
-    <path d="M 10 248 Q 5 218 -5 208 Q 8 218 15 213 Q 5 203 12 191 Q 18 208 20 218 Q 28 198 38 198 Q 28 213 23 223 Q 38 213 48 218 Q 33 228 20 235 L 16 253 Z"/>
-    <rect x="14" y="235" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="none" stroke="#3A2510" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
-    <path d="M 680 40 Q 690 35 700 40 Q 710 35 720 40"/>
-  </g>
+  <!-- fireflies in the clearing -->
+  <circle class="b704fly" cx="300" cy="150" r="2"/><circle class="b704fly d2" cx="360" cy="138" r="1.8"/><circle class="b704fly d3" cx="578" cy="146" r="2"/>
+  <circle class="b704fly d2" cx="262" cy="172" r="1.6"/><circle class="b704fly" cx="760" cy="176" r="1.8"/><circle class="b704fly d3" cx="460" cy="172" r="1.6"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3526,5 +4416,8 @@ updateProgress();
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

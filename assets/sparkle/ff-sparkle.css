@@ -2599,3 +2599,101 @@ html.spk-quiet .spk-farm .sun { animation: none; }
   .spk-lg .knot.slip, .spk-yw .stone.next .st, .spk-yw .ft.walk ellipse, .spk-tbd .seg.draw, .spk-tbd .pt.next .ring { animation: none !important; }
   .spk-lg .rope, .spk-lg .es, .spk-lg .us, .spk-lg .fl, .spk-kp .keyw, .spk-kp .lock .shk, .spk-tcp .rb .rbl { transition: none !important; }
 }
+
+/* ═══ 4.07.04 · Load the wagon (scene 1) ═══ */
+.spk-lwwrap { position: relative; max-width: 460px; margin: 6px auto 8px; border-radius: 10px; border: 2px solid transparent; cursor: pointer; outline: none; transition: border-color .2s; overflow: hidden; }
+.spk-lwwrap > svg { display: block; width: 100%; height: auto; border-radius: 8px; }
+.spk-lwwrap.armed { border-color: #C9A24A; border-style: dashed; } .spk-lwwrap.over, .spk-lwwrap:focus-visible { border-color: #1E8C7C; }
+.spk-lw .ground { fill: #CDBB8A; } .spk-lw .road { fill: none; stroke: #B49A66; stroke-width: 6; stroke-linecap: round; }
+.spk-lw .pines path:first-child { fill: #4F6B3A; } .spk-lw .pines .tr { stroke: #5A4024; stroke-width: 2; }
+.spk-lw .ox { fill: #8A6534; stroke: #5A4024; stroke-width: 1.2; } .spk-lw .horn { stroke: #EADBB8; stroke-width: 2; stroke-linecap: round; } .spk-lw .lg { stroke: #5A4024; stroke-width: 3; stroke-linecap: round; }
+.spk-lw .tong { stroke: #5A4024; stroke-width: 3; }
+.spk-lw .bed { fill: #8E6A3A; stroke: #5A4024; stroke-width: 1.4; } .spk-lw .cover { fill: #F3EAD3; stroke: #B8A47A; stroke-width: 1.6; } .spk-lw .hoop { fill: none; stroke: #CDBD94; stroke-width: 1.2; }
+.spk-lw .wheel { fill: none; stroke: #4E3A1E; stroke-width: 3; } .spk-lw .spoke { stroke: #6A4E2A; stroke-width: 1.6; }
+.spk-lw .wh { transform-box: fill-box; transform-origin: center; }
+.spk-lw .slot .sl { fill: rgba(255,248,225,.35); stroke: #EADBB8; stroke-width: 1; stroke-dasharray: 3 2; } .spk-lw .slot.on .sl { fill: #F3EAD3; stroke: #8A6534; stroke-dasharray: none; }
+.spk-lw .slot .ic { font-size: 13px; }
+.spk-lw .slot.drop .ic { animation: spk-lwdrop .5s ease-out; }
+@keyframes spk-lwdrop { from { transform: translateY(-24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.spk-lw .rig { transition: transform 2.6s ease-in .6s; } .spk-lw.done .rig { transform: translateX(-36px); }
+.spk-lw.done .wh { animation: spk-lwroll 1.3s linear .6s 2; }
+@keyframes spk-lwroll { to { transform: rotate(-360deg); } }
+.spk-lwtray { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.spk-lwcard.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-lwlog .it b { color: #22304A; }
+
+/* ═══ 4.07.04 · Follow the trail (explore reading) ═══ */
+.spk-tr { margin: 4px 0 16px; }
+.spk-trbar { position: sticky; top: 96px; z-index: 3; background: #3B4A33; border-radius: 12px; padding: 6px 6px 4px; box-shadow: 0 3px 0 #C9B486; margin-bottom: 10px; }
+.spk-trbar svg { display: block; width: 100%; max-width: 560px; max-height: 190px; height: auto; margin: 0 auto; border-radius: 8px; }
+.spk-trbar .spk-trct { color: #ECE6CF; margin: 0; font: 600 13px 'Nunito', sans-serif; text-align: center; } .spk-trbar .spk-trct b { color: #FFE7A0; }
+@media (max-width: 640px) { .spk-trbar { position: static; } }
+.spk-tr .flat { fill: #C9D2A0; } .spk-tr .clay { fill: #C98A5A; opacity: .55; } .spk-tr .line { fill: none; stroke: #8A5A34; stroke-width: 1.4; stroke-dasharray: 4 3; }
+.spk-tr .st { font: 800 10px 'Nunito', sans-serif; fill: #3A3020; letter-spacing: .06em; text-transform: uppercase; }
+.spk-tr .pn path { fill: #4F6B3A; } .spk-tr .pal path { fill: none; stroke: #5E7A3E; stroke-width: 2.2; stroke-linecap: round; }
+.spk-tr .road { fill: none; stroke: #E7D8AE; stroke-width: 6; stroke-linecap: round; }
+.spk-tr .done { fill: none; stroke: #8A5A34; stroke-width: 2.4; stroke-dasharray: 100; transition: stroke-dashoffset 1.6s ease; }
+.spk-tr .stop .dot { fill: #EEE6CF; stroke: #6F695C; stroke-width: 1.4; transition: fill .4s; } .spk-tr .stop .nm { font: 800 10px 'Nunito', sans-serif; fill: #3A372F; pointer-events: none; }
+.spk-tr .stop { opacity: .6; } .spk-tr .stop.next { opacity: 1; cursor: pointer; } .spk-tr .stop.next .dot { fill: #F2DE9E; stroke: #B48A2C; animation: spk-trglow 1.8s ease-in-out infinite; }
+.spk-tr .stop.on { opacity: 1; cursor: pointer; } .spk-tr .stop.on .dot { fill: #E7D9B0; stroke: #8A6A1E; }
+@keyframes spk-trglow { 50% { fill: #FFF1C8; } }
+.spk-tr .wg { transition: transform 1.6s cubic-bezier(.4,.1,.3,1); } .spk-tr .wg.home { opacity: .9; }
+.spk-tr .wg .cv { fill: #F7F0DC; stroke: #8A7A56; stroke-width: 1; } .spk-tr .wg .bd { fill: #8E6A3A; } .spk-tr .wg .wl { fill: #4E3A1E; }
+.spk-tr .spk-ywp .tab .y { background: #3B4A33; }
+
+/* ═══ 4.07.04 · Made from what grew here (explore evidence) ═══ */
+.spk-mhpic { max-width: 380px; margin: 6px auto 8px; border: 1px solid #D8C7A2; border-radius: 10px; overflow: hidden; background: #E9DDC3; }
+.spk-mhpic img { display: block; width: 100%; height: auto; }
+.spk-mhtray { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.spk-mhcard.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-mhbks { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 6px 0 10px; }
+@media (max-width: 560px) { .spk-mhbks { grid-template-columns: 1fr; } }
+.spk-mhbks .bk { background: #FBF5E6; border: 2px solid #D8C7A2; border-radius: 12px 12px 18px 18px; padding: 8px 10px 10px; min-height: 92px; cursor: pointer; outline: none; transition: border-color .2s, background .2s;
+  background-image: repeating-linear-gradient(90deg, rgba(138,101,52,.08) 0 6px, transparent 6px 12px); }
+.spk-mhbks .bk .hd { font: 800 14px 'Nunito', sans-serif; color: #22304A; margin-bottom: 6px; }
+.spk-mhbks .bk.armed { border-color: #C9A24A; border-style: dashed; } .spk-mhbks .bk.over, .spk-mhbks .bk:focus-visible { border-color: #1E8C7C; background-color: #FFF8E2; }
+.spk-mhbks .bk.thud { animation: spk-mhthud .45s ease-out; }
+@keyframes spk-mhthud { 30% { transform: translateY(3px) scaleY(.97); } }
+.spk-mhbks .bk .it { font: 500 13px/1.4 'Nunito', sans-serif; color: #3A4458; background: #fff; border: 1px solid #E8DCBE; border-radius: 6px; padding: 5px 8px; margin-top: 5px; }
+.spk-mhbks .bk .it b { color: #22304A; } .spk-mhbks .bk .it.new { animation: spk-qfade .5s ease-out; }
+.spk-mh .spk-step.locked { opacity: .4; pointer-events: none; }
+.spk-mh .spk-opt.shake { animation: spk-shake .4s; border-color: #E8636B; }
+
+/* ═══ 4.07.04 · Down the trail (vocab, migr) ═══ */
+.spk-spwrap svg.spv { display: block; width: 100%; max-width: 420px; height: auto; margin: 6px auto 8px; border-radius: 10px; }
+.spk-sp .sky { fill: #F3E6CC; } .spk-sp .gr { fill: #B7C68D; } .spk-sp .road { fill: none; stroke: #D8C79E; stroke-width: 7; stroke-linecap: round; }
+.spk-sp .rf { fill: #8E6A3A; } .spk-sp .hw { fill: #A9835A; stroke: #5A4024; stroke-width: 1; } .spk-sp .dr { fill: #4E3A1E; }
+.spk-sp .smoke { fill: none; stroke: #BDB6A6; stroke-width: 2; stroke-linecap: round; opacity: 0; transition: opacity 1s 1.4s; } .spk-sp.done .smoke { opacity: .9; }
+.spk-sp .pl { stroke: #6A4E2A; stroke-width: 2.4; }
+.spk-sp .sg { opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .6s cubic-bezier(.3,1.4,.5,1); transform-box: fill-box; }
+.spk-sp .post.up .sg { opacity: 1; transform: none; }
+.spk-sp .sg .bd { fill: #F3EAD3; stroke: #8A6534; stroke-width: 1.2; } .spk-sp .sg .tx { font: 800 7.5px 'Nunito', sans-serif; fill: #5A3F86; }
+.spk-sp .wgw { transition: transform 1.2s cubic-bezier(.3,.9,.4,1); }
+.spk-sp .cv { fill: #F7F0DC; stroke: #8A7A56; stroke-width: 1; } .spk-sp .bd2 { fill: #8E6A3A; } .spk-sp .wl { fill: #4E3A1E; }
+.spk-sp .wds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.spk-sp .wd { background: #FFFDF6; border: 2px solid #D8C7A2; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-sp .wd .w { display: block; font: 800 16px 'Nunito', sans-serif; color: #22304A; } .spk-sp .wd .w b { color: #8B6FC0; }
+.spk-sp .wd .m { display: block; font: 500 12.5px/1.35 'Nunito', sans-serif; color: #5B667A; margin-top: 3px; } .spk-sp .wd .m:empty { display: none; }
+.spk-sp .wd.heard { border-color: #B8A2E0; } .spk-sp .wd.up { background: #F2EDFB; border-color: #8B6FC0; }
+.spk-sp .wd.armed { border-color: #C9A24A; border-style: dashed; } .spk-sp .wd.over, .spk-sp .wd:focus-visible { background: #FFF3C4; }
+.spk-sp .wd.tap { animation: spk-qfade .5s ease-out; }
+.spk-spmeans { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .spk-spmeans.wait { opacity: .5; }
+.spk-sp.done .spk-spmeans { display: none; }
+.spk-sp.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.07.04 · Saddlebags (planner) ═══ */
+.spk-sbp .spk-fmcards { grid-template-columns: 1fr 64px 1fr; }
+@media (max-width: 720px) { .spk-sbp .spk-fmcards { grid-template-columns: 1fr; } .spk-sbp .pin.mid { transform: rotate(90deg); } }
+.spk-sbp .pin.mid { width: 60px; opacity: .35; transition: opacity .6s; } .spk-sbp .pin.mid svg.sb { width: 56px; height: auto; display: block; }
+.spk-sbp .sb .strap { fill: none; stroke: #6A4E2A; stroke-width: 6; stroke-linecap: round; }
+.spk-sbp .sb .tag { fill: #E9D7A8; stroke: #8A6534; stroke-width: 1.4; opacity: 0; transform: translateY(-10px); transform-box: fill-box; transition: opacity .5s .6s, transform .6s cubic-bezier(.3,1.5,.5,1) .6s; }
+.spk-sbp .sb .tie { stroke: #8A6534; stroke-width: 1.4; opacity: 0; transition: opacity .5s .6s; } .spk-sbp .sb .hole { fill: #8A6534; opacity: 0; transition: opacity .5s .6s; }
+.spk-sbp.topdone .pin.mid { opacity: .7; }
+.spk-sbp.done .pin.mid { opacity: 1; } .spk-sbp.done .sb .tag { opacity: 1; transform: none; } .spk-sbp.done .sb .tie, .spk-sbp.done .sb .hole { opacity: 1; }
+.spk-sbp .fc { border-radius: 10px 10px 26px 26px; background-image: linear-gradient(180deg, rgba(138,101,52,.10) 0 22px, transparent 22px); }
+.spk-sbp .fc.a { border-top-color: #8A6534; } .spk-sbp .fc.b { border-top-color: #4F6B3A; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spk-lw .slot.drop .ic, .spk-lw.done .wh, .spk-tr .stop.next .dot, .spk-mhbks .bk.thud, .spk-sp .wd.tap { animation: none !important; }
+  .spk-lw .rig, .spk-tr .wg, .spk-tr .done, .spk-sp .sg, .spk-sp .wgw, .spk-sp .smoke, .spk-sbp .sb .tag { transition: none !important; }
+}
