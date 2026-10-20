@@ -4368,7 +4368,7 @@
     {n:5,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
     {n:6,t:'Spanish Florida',      img:'source-4-06-02-st-augustine-engraving.png', lon:-81.31,lat:29.89, where:'St. Augustine and the missions', blurb:'The oldest city, the mission trail, and life in a Spanish colony.'},
     {n:7,t:'Fort Mose & Pioneers', img:'source-4-07-01-fort-mose-plan-original.jpg', lon:-81.32,lat:29.93, where:'Fort Mose, two miles north of St. Augustine', blurb:'The first free Black town in what is now the U.S. that the law allowed, and the flags and pioneers that followed.'},
-    {n:8,t:'Statehood & War',      img:'source-4-08-01-florida-statehood-map.png', lon:-84.28,lat:30.44, where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
+    {n:8,t:'Statehood & War',      img:'source-4-08-01-state-of-florida-1846-original.jpg', lon:-84.28,lat:30.44, where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
     {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
     {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
     {n:11,t:'Civil Rights & Citizens', img:'source-4-11-01-civil-rights.png', lon:-81.20,lat:29.60, where:'St. Augustine, 1964', blurb:'Floridians who stood up for their rights, and what changed.'},
