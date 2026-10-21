@@ -1683,6 +1683,824 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.08.02",
+ "title": "Life in Antebellum Florida",
+ "quiet": true,
+ "file": {
+  "n": 8,
+  "title": "Statehood & War",
+  "label": "Statehood & War",
+  "seals": [
+   "⭐",
+   "📜",
+   "📍"
+  ]
+ },
+ "prevFile": "Florida Becomes a State",
+ "connector": "Last time Florida became the 27th state, as a slave state. Today we look at life in Florida in the years before the Civil War, and how slavery shaped it.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Map the Belt",
+   "t": "Where was the cotton belt?",
+   "why": "Sort facts about Florida from 1845 to 1861 onto a map. See where the big cotton plantations were, and how people lived in other parts of Florida."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Read the story, read the ruins",
+   "why": "Bring in one cloud at a time to read the story. Then read the ruins of real cabins where enslaved people lived."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Light the lantern, then write",
+   "why": "Answer three questions. Then pick two events from the timeline and write 3 to 5 sentences about how the first one caused or shaped the second."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about life in Florida before the Civil War. It’s hard history, so let’s take it slowly.",
+  "opening": [
+   "This file is about Florida from 1845 to 1861, the years before the Civil War. Nearly half of the people in Florida were enslaved.",
+   "Start in the Map the Belt tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the map",
+      "go": true,
+      "reply": "Tap a fact card, then tap where it belongs: the cotton belt in north Florida, or other parts of Florida. You can drag it, too."
+     },
+     {
+      "t": "What’s a plantation?",
+      "reply": "A plantation was a very large farm. In Florida, plantations grew cotton, sugar, or tobacco, and enslaved people were forced to do the work."
+     },
+     {
+      "t": "Why go slowly?",
+      "reply": "Because this file is about slavery. Going slowly is how we show respect to the people who lived it."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Bring in one cloud at a time, and read each part."
+     },
+     {
+      "t": "Why is it called a belt?",
+      "reply": "The cotton plantations stretched across north Florida in a band, like a belt. People back then called this area Middle Florida."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who took the photo?",
+      "reply": "The Historic American Buildings Survey, a National Park Service program that photographs old buildings so their history isn’t lost. The Library of Congress keeps the photos."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we study Florida in the Civil War: what happened when the country split apart."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every fact is on the map. You can see where the cotton belt was. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You read the whole story and read the ruins. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then light the lantern and write 3 to 5 sentences about how one event caused or shaped another."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for studying it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage for a historian means telling the truth about the past, even when it is hard to hear. Today you are a chronicler, someone who writes down events in the order they happened. As a Florida historian, you’ll study how slavery shaped Florida before the Civil War (the war between the Northern and Southern states, 1861 to 1865), and how one event led to the next.",
+ "scene1": {
+  "type": "cottonbelt",
+  "kicker": "Map the cotton belt",
+  "h": "How did people make a living in Florida before the war?",
+  "voice": "Tap a fact card, then tap where it belongs: on the map, or in a box. You can drag it, too. The cotton belt shades gold as you go.",
+  "belt": {
+   "w": -85.0,
+   "e": -83.1,
+   "n": 31.2,
+   "s": 29.6
+  },
+  "places": [
+   {
+    "t": "Tallahassee",
+    "lon": -84.28,
+    "lat": 30.44,
+    "dx": -24,
+    "dy": -6
+   },
+   {
+    "t": "St. Marks",
+    "lon": -84.2,
+    "lat": 30.16,
+    "dx": 4,
+    "dy": 9
+   },
+   {
+    "t": "Jacksonville",
+    "lon": -81.66,
+    "lat": 30.33,
+    "dx": 5,
+    "dy": 3
+   },
+   {
+    "t": "Key West",
+    "lon": -81.78,
+    "lat": 24.56,
+    "dx": -44,
+    "dy": 3
+   }
+  ],
+  "pockets": [
+   {
+    "id": "belt",
+    "t": "The cotton belt",
+    "sub": "Middle Florida, around Tallahassee"
+   },
+   {
+    "id": "rest",
+    "t": "Other parts of Florida",
+    "sub": "central and south Florida, the coasts"
+   }
+  ],
+  "cards": [
+   {
+    "id": "b1",
+    "p": "belt",
+    "t": "Big plantations grew cotton for sale.",
+    "miss": "Where were the big cotton plantations? Look for the gold area near Tallahassee."
+   },
+   {
+    "id": "b2",
+    "p": "belt",
+    "t": "In Leon County, around Tallahassee, about 3 out of 4 people were enslaved.",
+    "miss": "Tallahassee is in Leon County. Find it on the map."
+   },
+   {
+    "id": "b3",
+    "p": "belt",
+    "t": "Tobacco grew on plantations in Gadsden County, just west of Tallahassee.",
+    "miss": "Gadsden County is next to Tallahassee. Which area is that?"
+   },
+   {
+    "id": "b4",
+    "p": "belt",
+    "t": "Mules pulled railroad cars of cotton from Tallahassee to the port of St. Marks (a town where ships load and unload).",
+    "miss": "Find Tallahassee and St. Marks on the map. Which area are they in?"
+   },
+   {
+    "id": "o1",
+    "p": "rest",
+    "t": "Cattle ranchers let their cattle eat grass on open land in central Florida.",
+    "miss": "Central Florida is below the gold belt. Ranching was not cotton farming."
+   },
+   {
+    "id": "o2",
+    "p": "rest",
+    "t": "In Key West, people fished and saved cargo (goods carried by ships) from shipwrecks.",
+    "miss": "Key West is at the very bottom of the map, far from the cotton belt."
+   },
+   {
+    "id": "o3",
+    "p": "rest",
+    "t": "Small farm families in the pine woods grew corn and raised hogs to eat.",
+    "miss": "Small farms that fed one family were not big cotton plantations."
+   },
+   {
+    "id": "o4",
+    "p": "rest",
+    "t": "Very few settlers (people who move to a new place to live) lived in the far south, in the Everglades.",
+    "miss": "The Everglades are in the far south. Is that the cotton belt?"
+   }
+  ],
+  "firstT": "Tap a fact card first, then tap where it belongs.",
+  "countT": "facts on the map.",
+  "win": "🗺️ <b>The cotton belt is on the map.<\/b> Many of Florida’s biggest plantations were in Middle Florida, between the Apalachicola and Suwannee Rivers. Plantations were found in other places too, like Kingsley Plantation near Jacksonville. Most other Floridians lived by ranching, fishing, and small farms.",
+  "why": {
+   "icon": "🗺️",
+   "q": "Why a map?",
+   "t": "Florida was not the same everywhere before the war. In north Florida, cotton plantations stretched across the land in a band, like a belt, and enslaved people were forced to do the work. Other parts of Florida made a living in other ways. That’s why you sort these facts onto a map."
+  }
+ },
+ "explore": {
+  "reading": {
+   "type": "stormclouds",
+   "activity": "Life in Antebellum Florida",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^The word antebellum"
+    },
+    {
+     "id": "p2",
+     "match": "^The plantation economy"
+    },
+    {
+     "id": "p3",
+     "match": "^Daily life for enslaved people"
+    },
+    {
+     "id": "p4",
+     "match": "^Other Floridians"
+    },
+    {
+     "id": "p5",
+     "match": "^Rising tension"
+    }
+   ],
+   "parts": [
+    {
+     "id": "a",
+     "t": "Before the war",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "b",
+     "t": "The plantation economy",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "c",
+     "t": "Daily life for enslaved people",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "d",
+     "t": "Other Floridians",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "e",
+     "t": "Rising tension",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "startT": "Bring in the first cloud to start reading.",
+   "countT": "parts read. Read this part, then bring in the next cloud.",
+   "allT": "The storm is close. You read the whole story.",
+   "nextT": "Next cloud: {t}",
+   "why": {
+    "icon": "☁️",
+    "q": "Why clouds?",
+    "t": "Before a storm, clouds gather one at a time and the sky slowly gets darker. Before the Civil War, the fight over slavery grew a little bigger each year, until the country broke apart in 1861. That’s why each part of the story brings in one more cloud."
+   }
+  },
+  "evidence": {
+   "type": "readruins",
+   "kicker": "Read the ruins",
+   "h": "What can these cabins tell a historian?",
+   "voice": "Read each question. Then tap the label number on the photo that answers it. Use the numbered labels above to help.",
+   "labels": [
+    {
+     "n": "1",
+     "t": "The restored cabin"
+    },
+    {
+     "n": "2",
+     "t": "Tabby walls"
+    },
+    {
+     "n": "3",
+     "t": "The chimney"
+    },
+    {
+     "n": "4",
+     "t": "Shingle roof"
+    },
+    {
+     "n": "5",
+     "t": "Ruins of other cabins"
+    },
+    {
+     "n": "6",
+     "t": "Doorway and windows"
+    }
+   ],
+   "qs": [
+    {
+     "id": "q1",
+     "q": "What were the cabins’ walls made of?",
+     "a": "2",
+     "learn": "Tabby: oyster shells, lime, sand, and water. People made it from things found on the coast.",
+     "miss": "Look for the label about the walls."
+    },
+    {
+     "id": "q2",
+     "q": "How did people cook and keep warm?",
+     "a": "3",
+     "learn": "Each cabin had one fireplace at one end. Families cooked and kept warm by that one fire.",
+     "miss": "Fire needs a way for smoke to get out. Which label is that?"
+    },
+    {
+     "id": "q3",
+     "q": "How do we know there were more cabins than this one?",
+     "a": "5",
+     "learn": "The ruins of other cabins still stand. There were 32 cabins in a big half-circle.",
+     "miss": "Look behind the palm tree. Which label points there?"
+    },
+    {
+     "id": "q4",
+     "q": "Which part was rebuilt in modern times, so it is not exactly the same as it was?",
+     "a": "1",
+     "learn": "This one cabin was restored (fixed up) in the 1900s and 2000s. Historians remember that a rebuilt place is close to the past, but not the same.",
+     "miss": "Which cabin still has its roof? It was fixed up long after the war."
+    }
+   ],
+   "countT": "answered. Tap the label number that answers each question.",
+   "hotT": "Last step: tap every gold number on the photo above.",
+   "readT": "Last step: read the whole story in Learn the Story at the top of this tab.",
+   "win": "These walls tell us where people lived and what their homes were made of. But a building can’t tell us people’s names, feelings, or stories. For that, historians use people’s own words, like interviews with people who had been enslaved, recorded in the 1930s.",
+   "why": {
+    "icon": "🏚️",
+    "q": "Why read ruins?",
+    "t": "Ruins are what is left of old buildings. Enslaved people were not allowed to learn to read or write in many places, so few of them could leave letters or diaries. The places where they lived are one way we can still learn about their lives. That’s why you read the ruins."
+   }
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Bring in each cloud in Learn the Story and read each part.",
+    "Tap each of the 6 gold numbers on the photo.",
+    "Read the three questions under the photo.",
+    "Do Read the ruins: tap the label number that answers each question."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "Now try Read the ruins below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 74.2,
+    "y": 88.6,
+    "title": "The restored cabin.",
+    "t": "One cabin, restored (fixed up) to look the way it did. It was restored after 1966 and again in 2004."
+   },
+   {
+    "n": "2",
+    "x": 90.8,
+    "y": 87.9,
+    "title": "Tabby walls.",
+    "t": "Tabby is a kind of concrete made from oyster shells, lime, sand, and water."
+   },
+   {
+    "n": "3",
+    "x": 54.7,
+    "y": 14.3,
+    "title": "The chimney.",
+    "t": "Each cabin had a fireplace at one end for cooking and heat."
+   },
+   {
+    "n": "4",
+    "x": 67.4,
+    "y": 23.2,
+    "title": "Shingle roof.",
+    "t": "A roof made of thin pieces of wood called shingles."
+   },
+   {
+    "n": "5",
+    "x": 10.7,
+    "y": 81.8,
+    "title": "Ruins of other cabins.",
+    "t": "What is left of other cabins. There were 32, set in a big half-circle."
+   },
+   {
+    "n": "6",
+    "x": 43.0,
+    "y": 87.3,
+    "title": "Doorway and windows.",
+    "t": "Open spaces for a door and windows, with no glass."
+   }
+  ]
+ },
+ "planner": {
+  "type": "lantern",
+  "voice": "First pick the lantern: the event that came first. Then pick its shadow: the event it caused or shaped. Then pick the words that join them. These are just notes. You’ll write your own sentences in Step 3.",
+  "events": [
+   {
+    "id": "e1",
+    "y": "1845",
+    "t": "Florida becomes a slave state"
+   },
+   {
+    "id": "e2",
+    "y": "1845–1860",
+    "t": "The plantation economy grows"
+   },
+   {
+    "id": "e3",
+    "y": "1850",
+    "t": "The Fugitive Slave Act"
+   },
+   {
+    "id": "e4",
+    "y": "1860",
+    "t": "Lincoln is elected president"
+   },
+   {
+    "id": "e5",
+    "y": "1861",
+    "t": "Florida secedes from the Union"
+   }
+  ],
+  "links": [
+   [
+    "e1",
+    "e2"
+   ],
+   [
+    "e2",
+    "e5"
+   ],
+   [
+    "e3",
+    "e4"
+   ],
+   [
+    "e3",
+    "e5"
+   ],
+   [
+    "e4",
+    "e5"
+   ]
+  ],
+  "words": [
+   "because",
+   "as a result"
+  ],
+  "orderT": "The shadow has to come after the lantern in time. Pick a later event.",
+  "weakT": "These two are in order, but one didn’t really cause the other. Try a pair with a clearer link, like 1860 and 1861.",
+  "lastT": "1861 is the last event on the timeline, so nothing here came after it. Pick an earlier one.",
+  "doneT": "The lantern is lit and its shadow is on the wall. Now write in Step 3.",
+  "why": {
+   "icon": "🏮",
+   "q": "Why a lantern?",
+   "t": "When a lantern shines on something, it makes a shadow on the wall behind it. In history, one event can cast a shadow on what comes next. That’s why your plan is a lantern (the first event) and its shadow (the event it caused or shaped)."
+  }
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "two events",
+    "rx": "1845|1850|1860|1861|state|lincoln|compromise|fugitive|secede|seced|left the union|plantation|cotton|elect|president|war"
+   },
+   {
+    "t": "because or as a result",
+    "rx": "because|as a result|so |caused|cause|led to|that is why|that's why|that’s why|result"
+   },
+   {
+    "t": "a date",
+    "rx": "18[4-6]\\d|january"
+   }
+  ],
+  "lines": [
+   "Start by naming your first event and its date.",
+   "Good. Now say how it caused or shaped the second event.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the map, the story, and the photo of the cabins."
+  },
+  {
+   "t": "Plan",
+   "w": "Light the lantern: pick the first event, the event it caused or shaped, and the joining words."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about your two events. Use “because” or “as a result.” Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "turnclock",
+  "kicker": "Turn back the clock",
+  "h": "ante = before",
+  "root": "ante",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match turns the clock back one hour.",
+  "words": [
+   {
+    "w": "antebellum",
+    "root": "ante",
+    "m": "before the war; the years before the Civil War",
+    "miss": "This lesson’s big word. Which one means before the war?",
+    "say": "Antebellum. Before the war. In the United States, the years before the Civil War."
+   },
+   {
+    "w": "anteroom",
+    "root": "ante",
+    "m": "a small room you walk through before a bigger room",
+    "miss": "It has the word room in it. Which word is it?",
+    "say": "Anteroom. A small room you walk through before a bigger room."
+   },
+   {
+    "w": "a.m.",
+    "root": "a",
+    "m": "the hours before noon",
+    "miss": "You see it on a clock in the morning. Which word is it?",
+    "say": "A.M. Short for ante meridiem. The hours before noon."
+   },
+   {
+    "w": "ancestor",
+    "root": "an",
+    "m": "a person in your family who lived long before you",
+    "miss": "Think of your great-great-grandparents. Which word is it?",
+    "say": "Ancestor. A person in your family who lived long before you."
+   }
+  ],
+  "win": "🕰️ The clock turned back. <b>ante<\/b> = before",
+  "why": {
+   "icon": "🕰️",
+   "q": "Why a clock?",
+   "t": "Ante means before. On a clock, a.m. stands for ante meridiem, Latin for “before midday,” so every hour before noon is an a.m. hour. Historians turn back the clock to study what came before. That’s why each match turns the clock back one hour."
+  }
+ },
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "What work happened here?",
+   "at": "scene1",
+   "script": "When I drive through a town, I can guess what people do for work by what I see: farms, a harbor, shops. Do that with Florida in the 1850s. As you sort each fact, ask: what work happened here, and who was made to do it?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Say it with your map",
+   "at": "s1done",
+   "script": "Pause me and look at your map. Say one sentence out loud: The cotton belt was in north Florida, and the work there was done by enslaved people. Then add one way people made a living in another part of Florida. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One cloud at a time",
+   "at": "explore",
+   "script": "This reading is hard history. Bring in one cloud at a time, and read each part before the next. Watch the sky. The fight over slavery grew a little bigger each year, until 1861."
+  },
+  {
+   "slot": "guide4",
+   "label": "They resisted",
+   "at": "afterread",
+   "script": "Pause me and think about the daily life part. The law gave enslaved people no rights. But they kept their families, songs, and beliefs alive, and they resisted. Name one way enslaved people resisted. Say it out loud."
+  },
+  {
+   "slot": "guide5",
+   "label": "Ask the building",
+   "at": "evidence",
+   "script": "When I visit an old building, I ask it questions. What is it made of? How did people stay warm? What’s missing? Do that with this photo. Tap the label that answers each question. And remember: a building can’t tell us everything."
+  },
+  {
+   "slot": "guide6",
+   "label": "Lantern and shadow",
+   "at": "plan",
+   "script": "Your plan is a lantern and a shadow. The lantern is the event that came first. The shadow is the event it caused or shaped. Pick a pair with a real link, then the words that join them. These are just notes. You’ll write the sentences yourself in Step 3."
+  }
+ ],
+ "cabinet": {
+  "n": 8
+ },
+ "notes": {
+  "learned": [
+   "Antebellum means “before the war.” In Florida, we study the years from statehood in 1845 to 1861.",
+   "Florida’s plantations grew cotton, sugar, and tobacco, and depended on the forced labor of enslaved people. Many of the biggest were in Middle Florida, around Tallahassee.",
+   "The 1860 census counted 140,424 people in Florida. 61,745 of them were enslaved, nearly half.",
+   "Enslaved people had no rights under the law, but they built communities, kept their traditions, and resisted.",
+   "Most white Floridians did not enslave anyone, but slavery was legal and protected by Florida’s laws.",
+   "The Fugitive Slave Act of 1850, Lincoln’s election in 1860, and Florida’s secession on January 10, 1861 led toward the Civil War."
+  ],
+  "vocab": [
+   [
+    "antebellum",
+    "before the war; the years before the Civil War"
+   ],
+   [
+    "Civil War",
+    "the war between the Northern and Southern states, 1861 to 1865"
+   ],
+   [
+    "secede",
+    "to leave; Florida seceded from the Union in 1861"
+   ],
+   [
+    "Union",
+    "the United States"
+   ],
+   [
+    "economy",
+    "the way people in a place make money and get what they need"
+   ],
+   [
+    "plantation",
+    "a very large farm, worked by enslaved people"
+   ],
+   [
+    "forced labor",
+    "work people are made to do without pay and without a choice"
+   ],
+   [
+    "census",
+    "a count of everyone living in the country"
+   ],
+   [
+    "planter class",
+    "the rich families who owned plantations"
+   ],
+   [
+    "resist",
+    "to fight back in the ways you can"
+   ],
+   [
+    "slaveholder",
+    "a person who enslaved other people"
+   ],
+   [
+    "tension",
+    "the feeling when people disagree and a fight could start"
+   ],
+   [
+    "compromise",
+    "a deal where each side gives up something"
+   ],
+   [
+    "Fugitive Slave Act",
+    "an 1850 law that required people in free states to help catch people who escaped slavery"
+   ],
+   [
+    "tabby",
+    "a kind of concrete made from oyster shells, lime, sand, and water"
+   ],
+   [
+    "ruins",
+    "what is left of old buildings"
+   ],
+   [
+    "anteroom",
+    "a small room you walk through before a bigger room"
+   ],
+   [
+    "a.m.",
+    "the hours before noon (ante meridiem)"
+   ],
+   [
+    "ancestor",
+    "a person in your family who lived long before you"
+   ]
+  ],
+  "wordParts": "The Latin word ante means “before.” Antebellum joins ante with bellum, “war.”"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "the crops",
+    "rx": "cotton|sugar|tobacco|crop|farm|plantation|agricultur|grow|grew|field",
+    "n": 1
+   },
+   {
+    "t": "who did the work",
+    "rx": "enslav|slave|african|black|forced|made to|people who|without pay|no pay",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a cause",
+    "rx": "lincoln|slavery|slave|keep|end|afraid|fear|scared|worr|president|elect|north|right|protect|stop",
+    "n": 1
+   },
+   {
+    "t": "evidence from the lesson",
+    "rx": "1860|1861|1850|lincoln|january|third|union|compromise|fugitive|north|south|election|elected|president|plantation|cotton",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "whose lives",
+    "rx": "enslav|slave|people|everyone|all|black|african|families|them|they|not just|leader|ordinary|regular|everyday",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|so |truth|true|whole|complete|full|fair|honest|learn|understand|remember|matter|important|story|history|know|forget|respect",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your cotton belt map in tab 1, or the plantation economy part of the story in the Explore tab (tab 2).",
+   "What crops grew on the plantations? Who was forced to do the work?",
+   "Try this shape: “The main source of wealth was ___. The work was done by ___.”"
+  ],
+  "journal-q2": [
+   "Look at the Rising tension part of the story and the Timeline Thread in the Explore tab (tab 2).",
+   "What happened in 1860? What were Southern states afraid would happen to slavery?",
+   "Try this shape: “Florida seceded because ___. One piece of evidence is ___.”"
+  ],
+  "journal-q3": [
+   "Look at the Daily life part of the story, and the Read the ruins game in the Explore tab (tab 2).",
+   "If historians only studied leaders, whose stories would be missing?",
+   "Try this shape: “Historians study the lives of enslaved people because ___. Without them, history would ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: the planter class got rich. Who did the work, and who kept the money?",
+  "journal-q2": "Go further: Florida was the third state to secede. Which two states left before it?",
+  "journal-q3": "Go further: what could historians learn from interviews with people who had been enslaved that they can’t learn from a building?"
+ },
+ "quizMiss": [
+  {
+   "a": "Ante- means before, not after. Reread the first part of the story.",
+   "c": "Ante- means before. Reread the first part of the story."
+  },
+  {
+   "a": "It was more than one-quarter. Reread the plantation economy part: 61,745 of 140,424.",
+   "c": "It was much more than one-tenth. Reread the plantation economy part: 61,745 of 140,424."
+  },
+  {
+   "a": "March 3, 1845 is when Florida became a state. Check the Timeline Thread.",
+   "b": "November 6, 1860 is when Lincoln was elected. Check the Timeline Thread."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1915,94 +2733,97 @@ body {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Life in Antebellum Florida ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: cotton port before the storm — Apalachicola's waterfront at dusk in the 1850s: brick cotton warehouses, bales stacked on the wharf, a side-wheel steamboat tied up, and storm clouds slowly building over the Gulf (4.08.02 sparkle, quiet) ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dusk at a Florida river port before the Civil War: brick warehouses and stacked cotton bales on a wooden wharf, a paddle-wheel steamboat tied up, and dark storm clouds slowly building over the water." style="width:100%;height:auto;display:block;">
   <defs>
-    <linearGradient id="h802sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#6A8AA8"/>
-      <stop offset="50%" stop-color="#90AAC0"/>
-      <stop offset="100%" stop-color="#B0C8D8"/>
+    <linearGradient id="b802sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3E4757"/>
+      <stop offset=".45" stop-color="#7E7F86"/>
+      <stop offset=".8" stop-color="#D4A57A"/>
+      <stop offset="1" stop-color="#E8C392"/>
     </linearGradient>
-    <linearGradient id="h802field" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#5A8A4A"/>
-      <stop offset="100%" stop-color="#3A6A2A"/>
+    <linearGradient id="b802sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6F7E86"/>
+      <stop offset="1" stop-color="#36444E"/>
     </linearGradient>
     <style>
-      .h802sway { animation: h802sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
-      @keyframes h802sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(2deg); } }
+      .b802cl { animation: b802drift 26s ease-in-out infinite; }
+      .b802cl2 { animation: b802drift 34s ease-in-out infinite reverse; }
+      @keyframes b802drift { 50% { transform: translateX(-22px); } }
+      .b802dark { animation: b802dk 12s ease-in-out infinite; }
+      @keyframes b802dk { 50% { opacity: .55; } }
+      .b802smoke { animation: b802sm 7s ease-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+      @keyframes b802sm { 0% { opacity: .0; transform: translate(0,6px) scale(.7); } 30% { opacity: .55; } 100% { opacity: 0; transform: translate(-26px,-26px) scale(1.5); } }
+      .b802glint { animation: b802gl 5s ease-in-out infinite; }
+      @keyframes b802gl { 50% { opacity: .25; } }
+      .b802flash { animation: b802fl 14s linear infinite; opacity: 0; }
+      @keyframes b802fl { 0%, 88%, 100% { opacity: 0; } 89% { opacity: .5; } 90% { opacity: 0; } 91.5% { opacity: .3; } 92.5% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .b802cl, .b802cl2, .b802dark, .b802smoke, .b802glint, .b802flash { animation: none; } .b802smoke { opacity: .4; } }
     </style>
   </defs>
-  <rect width="920" height="185" fill="url(#h802sky)"/>
-  <g opacity="0.3" fill="#FFFFFF">
-    <ellipse cx="180" cy="45" rx="60" ry="20"/>
-    <ellipse cx="210" cy="40" rx="40" ry="14"/>
-    <ellipse cx="680" cy="55" rx="55" ry="18"/>
+  <rect width="920" height="200" fill="url(#b802sky)"/>
+  <!-- low sun glow behind the clouds -->
+  <circle cx="170" cy="120" r="46" fill="#F3CF95" opacity=".55"/>
+  <circle cx="170" cy="122" r="16" fill="#FBE3B4" opacity=".85"/>
+  <!-- far-off flash out over the Gulf -->
+  <path class="b802flash" d="M612,52 l-9,22 h9 l-7,20 l19,-27 h-9 l7,-15 Z" fill="#FFF3C4"/>
+  <!-- storm clouds building -->
+  <g class="b802cl" fill="#4A5262">
+    <ellipse cx="560" cy="38" rx="150" ry="30"/><ellipse cx="470" cy="50" rx="90" ry="22"/><ellipse cx="660" cy="52" rx="110" ry="24"/><ellipse cx="760" cy="32" rx="130" ry="28"/>
   </g>
-  <rect y="180" width="920" height="80" fill="url(#h802field)"/>
-  <!-- Rolling field lines -->
-  <path d="M 0 185 Q 100 178 200 183 Q 300 188 400 180 Q 500 175 600 182 Q 700 188 800 180 Q 850 177 920 183 L 920 195 L 0 195 Z" fill="#4A7A3A" opacity="0.6"/>
-  <!-- Cotton rows -->
-  <g opacity="0.7">
-    <g class="h802sway">
-      <line x1="100" y1="195" x2="100" y2="215" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="100" cy="193" r="5" fill="#F0EAE0"/>
+  <g class="b802cl2" fill="#5B6373" opacity=".9">
+    <ellipse cx="860" cy="58" rx="110" ry="22"/><ellipse cx="380" cy="30" rx="120" ry="20"/><ellipse cx="250" cy="60" rx="80" ry="14" opacity=".6"/>
+  </g>
+  <rect class="b802dark" width="920" height="200" fill="#2A303A" opacity=".25"/>
+  <!-- the bay -->
+  <rect y="132" width="920" height="68" fill="url(#b802sea)"/>
+  <g class="b802glint" stroke="#E8C392" stroke-width="1.4" opacity=".5"><line x1="120" y1="146" x2="190" y2="146"/><line x1="150" y1="156" x2="220" y2="156"/><line x1="96" y1="166" x2="150" y2="166"/></g>
+  <!-- brick cotton warehouses -->
+  <g transform="translate(560,70)">
+    <rect x="0" y="22" width="120" height="58" fill="#7C3B2A"/>
+    <path d="M-4,22 L60,4 L124,22 Z" fill="#4C2A20"/>
+    <g fill="#3A1E16"><path d="M14,80 v-26 a10,10 0 0 1 20,0 v26 Z"/><path d="M50,80 v-26 a10,10 0 0 1 20,0 v26 Z"/><path d="M86,80 v-26 a10,10 0 0 1 20,0 v26 Z"/></g>
+    <g fill="#E8B977" opacity=".75"><rect x="18" y="30" width="8" height="10"/><rect x="56" y="30" width="8" height="10"/><rect x="94" y="30" width="8" height="10"/></g>
+    <rect x="130" y="34" width="110" height="46" fill="#6E3424"/>
+    <path d="M126,34 L185,18 L244,34 Z" fill="#45261C"/>
+    <g fill="#3A1E16"><path d="M146,80 v-22 a9,9 0 0 1 18,0 v22 Z"/><path d="M178,80 v-22 a9,9 0 0 1 18,0 v22 Z"/><path d="M210,80 v-22 a9,9 0 0 1 18,0 v22 Z"/></g>
+    <rect x="250" y="44" width="90" height="36" fill="#7C3B2A"/>
+    <path d="M246,44 L295,30 L344,44 Z" fill="#4C2A20"/>
+    <g fill="#E8B977" opacity=".6"><rect x="268" y="52" width="7" height="9"/><rect x="314" y="52" width="7" height="9"/></g>
+  </g>
+  <!-- the wharf -->
+  <rect x="300" y="150" width="620" height="8" fill="#5A4024"/>
+  <g stroke="#3E2A16" stroke-width="4"><line x1="320" y1="158" x2="320" y2="182"/><line x1="420" y1="158" x2="420" y2="182"/><line x1="520" y1="158" x2="520" y2="182"/><line x1="620" y1="158" x2="620" y2="182"/><line x1="720" y1="158" x2="720" y2="182"/><line x1="820" y1="158" x2="820" y2="182"/></g>
+  <!-- cotton bales stacked on the wharf -->
+  <g>
+    <g fill="#E9E1CC" stroke="#9C8F72" stroke-width="1">
+      <rect x="430" y="132" width="26" height="18" rx="3"/><rect x="458" y="132" width="26" height="18" rx="3"/><rect x="486" y="132" width="26" height="18" rx="3"/><rect x="444" y="114" width="26" height="18" rx="3"/><rect x="472" y="114" width="26" height="18" rx="3"/><rect x="458" y="96" width="26" height="18" rx="3"/>
+      <rect x="700" y="132" width="26" height="18" rx="3"/><rect x="728" y="132" width="26" height="18" rx="3"/><rect x="756" y="132" width="26" height="18" rx="3"/><rect x="784" y="132" width="26" height="18" rx="3"/><rect x="714" y="114" width="26" height="18" rx="3"/><rect x="742" y="114" width="26" height="18" rx="3"/><rect x="770" y="114" width="26" height="18" rx="3"/>
     </g>
-    <g class="h802sway" style="animation-delay:0.3s">
-      <line x1="160" y1="198" x2="160" y2="218" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="160" cy="196" r="5" fill="#F0EAE0"/>
-    </g>
-    <g class="h802sway" style="animation-delay:0.6s">
-      <line x1="220" y1="192" x2="220" y2="212" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="220" cy="190" r="5" fill="#F0EAE0"/>
-    </g>
-    <g class="h802sway" style="animation-delay:0.1s">
-      <line x1="690" y1="196" x2="690" y2="216" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="690" cy="194" r="5" fill="#F0EAE0"/>
-    </g>
-    <g class="h802sway" style="animation-delay:0.8s">
-      <line x1="750" y1="193" x2="750" y2="213" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="750" cy="191" r="5" fill="#F0EAE0"/>
-    </g>
-    <g class="h802sway" style="animation-delay:0.4s">
-      <line x1="810" y1="198" x2="810" y2="218" stroke="#4A6A2A" stroke-width="2"/>
-      <circle cx="810" cy="196" r="5" fill="#F0EAE0"/>
+    <g stroke="#8A7A5A" stroke-width="1" opacity=".7">
+      <line x1="430" y1="138" x2="512" y2="138"/><line x1="430" y1="144" x2="512" y2="144"/><line x1="444" y1="120" x2="498" y2="120"/><line x1="444" y1="126" x2="498" y2="126"/><line x1="458" y1="102" x2="484" y2="102"/><line x1="458" y1="108" x2="484" y2="108"/>
+      <line x1="700" y1="138" x2="810" y2="138"/><line x1="700" y1="144" x2="810" y2="144"/><line x1="714" y1="120" x2="796" y2="120"/><line x1="714" y1="126" x2="796" y2="126"/>
     </g>
   </g>
-  <!-- Plantation house (distant) -->
-  <g transform="translate(460,110)">
-    <rect x="-50" y="20" width="100" height="55" fill="#D0C0A0" stroke="#8A7A60" stroke-width="1.5"/>
-    <rect x="-55" y="18" width="110" height="6" fill="#A08A70"/>
-    <polygon points="-60,18 0,-5 60,18" fill="#A08A70" stroke="#8A7A60" stroke-width="1"/>
-    <!-- Columns -->
-    <rect x="-40" y="24" width="5" height="50" fill="#C0B090"/>
-    <rect x="-20" y="24" width="5" height="50" fill="#C0B090"/>
-    <rect x="15" y="24" width="5" height="50" fill="#C0B090"/>
-    <rect x="35" y="24" width="5" height="50" fill="#C0B090"/>
-    <!-- Door -->
-    <rect x="-8" y="48" width="16" height="26" fill="#5A4A30"/>
-    <!-- Windows -->
-    <rect x="-38" y="35" width="12" height="10" fill="#7A9AB0" opacity="0.5"/>
-    <rect x="26" y="35" width="12" height="10" fill="#7A9AB0" opacity="0.5"/>
+  <!-- side-wheel steamboat tied up at the wharf -->
+  <g transform="translate(206,104)">
+    <path d="M0,42 L196,42 L184,58 L14,58 Z" fill="#3C3328"/>
+    <rect x="20" y="28" width="150" height="14" fill="#E9E1CC"/>
+    <rect x="40" y="16" width="100" height="12" fill="#D9CFB6"/>
+    <g fill="#6E6656"><rect x="28" y="31" width="6" height="7"/><rect x="42" y="31" width="6" height="7"/><rect x="56" y="31" width="6" height="7"/><rect x="118" y="31" width="6" height="7"/><rect x="132" y="31" width="6" height="7"/><rect x="146" y="31" width="6" height="7"/><rect x="50" y="19" width="5" height="6"/><rect x="64" y="19" width="5" height="6"/><rect x="112" y="19" width="5" height="6"/><rect x="126" y="19" width="5" height="6"/></g>
+    <path d="M70,42 a20,20 0 0 1 40,0 Z" fill="#8A3A2A"/>
+    <path d="M74,42 a16,16 0 0 1 32,0" fill="none" stroke="#C9A24A" stroke-width="1.4"/>
+    <rect x="72" y="-16" width="7" height="32" fill="#2A2420"/><rect x="100" y="-16" width="7" height="32" fill="#2A2420"/>
+    <path d="M70,-18 h11 l-2,4 h-7 Z M98,-18 h11 l-2,4 h-7 Z" fill="#2A2420"/>
+    <ellipse class="b802smoke" cx="76" cy="-24" rx="9" ry="6" fill="#8D8F95"/>
+    <ellipse class="b802smoke" cx="104" cy="-26" rx="9" ry="6" fill="#8D8F95" style="animation-delay:-3.5s"/>
+    <g fill="#E9E1CC" stroke="#9C8F72" stroke-width=".8"><rect x="150" y="18" width="14" height="10" rx="2"/><rect x="164" y="18" width="14" height="10" rx="2" transform="translate(-2,0)"/><rect x="156" y="8" width="14" height="10" rx="2"/></g>
   </g>
-  <!-- Broken chain links (symbol) -->
-  <g transform="translate(320,155)" stroke="#5A3A1A" stroke-width="2.5" fill="none" opacity="0.6">
-    <ellipse cx="-12" cy="0" rx="10" ry="6"/>
-    <ellipse cx="12" cy="0" rx="10" ry="6"/>
-    <line x1="-2" y1="-3" x2="2" y2="3" stroke="#C03020" stroke-width="2.5"/>
-  </g>
-  <!-- Trees framing -->
-  <g fill="#2A5A2A">
-    <ellipse cx="60" cy="155" rx="40" ry="30"/>
-    <rect x="57" y="155" width="6" height="30" fill="#3A2A1A"/>
-  </g>
-  <g fill="#2A5A2A">
-    <ellipse cx="860" cy="150" rx="45" ry="35"/>
-    <rect x="857" y="150" width="6" height="35" fill="#3A2A1A"/>
-  </g>
-  <!-- Birds -->
-  <g fill="none" stroke="#4A4A4A" stroke-width="1.2" stroke-linecap="round" opacity="0.4">
-    <path d="M 400 50 Q 405 46 410 50 Q 415 46 420 50"/>
-    <path d="M 530 40 Q 534 37 538 40 Q 542 37 546 40"/>
+  <!-- reflections -->
+  <g opacity=".25" fill="#E9E1CC"><rect x="226" y="166" width="150" height="2"/><rect x="440" y="164" width="70" height="2"/><rect x="706" y="164" width="100" height="2"/></g>
+  <!-- low pines on the far shore at left -->
+  <g fill="#2E3A2A">
+    <path d="M0,132 L0,118 L10,112 L22,122 L34,108 L48,120 L60,110 L74,124 L88,114 L100,126 L112,118 L124,132 Z"/>
   </g>
 </svg>
 
@@ -3529,5 +4350,8 @@ updateProgress();
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>

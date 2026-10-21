@@ -2791,3 +2791,128 @@ html.spk-quiet .spk-farm .sun { animation: none; }
   .spk-sew.done .wave, .spk-scp.on, .spk-scp.write .yr .qy, .spk-scp.write .yr .quill, .spk-ptmap.armed .ring, .spk-ptmap .ring.drop .pin, .spk-su .wd.tap { animation: none !important; }
   .spk-sew .new, .spk-sew .newf, .spk-su .col, .spk-su .top, .spk-su .fl, .spk-cert .ce { transition: none !important; }
 }
+
+/* ═══ 4.08.02 · Map the cotton belt (scene 1) ═══ */
+.spk-cbwrap { display: grid; grid-template-columns: minmax(0, 300px) 1fr; gap: 12px; align-items: start; }
+@media (max-width: 640px) { .spk-cbwrap { grid-template-columns: 1fr; } }
+.spk-cbmapw svg { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto; border-radius: 10px; border: 1px solid #D8C7A2; }
+.spk-cbelt .zone { cursor: pointer; outline: none; }
+.spk-cbelt .zone .fill { transition: fill-opacity .8s ease; }
+.spk-cbelt .zone.belt .fill { fill: #D9A441; fill-opacity: calc(.12 + .6 * var(--k, 0)); }
+.spk-cbelt .zone.belt .rows { opacity: calc(.3 + .7 * var(--k, 0)); }
+.spk-cbelt .zone.rest .fill { fill: #5E8F4E; fill-opacity: calc(.04 + .4 * var(--k, 0)); }
+.spk-cbelt .edge { fill: none; stroke: #8A6534; stroke-width: 1.4; stroke-dasharray: 4 3; pointer-events: none; }
+.spk-cbelt.armed .zone .fill, .spk-cbelt .zone.armed .fill { stroke: #C9A24A; stroke-width: 2; }
+.spk-cbelt .zone.over .fill { fill-opacity: .7; }
+.spk-cbelt .zone.pulse .fill { animation: spk-cbpulse .7s ease-out; }
+@keyframes spk-cbpulse { 40% { fill-opacity: .85; } }
+.spk-cbelt .pl circle { fill: #22304A; stroke: #FFFDF5; stroke-width: 1; pointer-events: none; }
+.spk-cbelt .pl text { font: 800 9px 'Nunito', sans-serif; fill: #22304A; paint-order: stroke; stroke: #FFFDF5; stroke-width: 2.6px; pointer-events: none; }
+.spk-cbtray { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.spk-cbcard.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-cbbks { grid-template-columns: 1fr; margin-top: 0; }
+.spk-cbbks .bk .hd .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.spk-cbbks .bk.belt .hd .sw { background: #D9A441; } .spk-cbbks .bk.rest .hd .sw { background: #5E8F4E; }
+.spk-cbbks .bk .hd .sub { font: 600 12px 'Nunito', sans-serif; color: #5B667A; }
+.spk-cbbks .bk { min-height: 70px; }
+
+/* ═══ 4.08.02 · Storm clouds gather (explore reading) ═══ */
+.spk-storm { margin: 4px 0 16px; }
+.spk-stbar { position: sticky; top: 96px; z-index: 3; background: #2E3A4E; border-radius: 12px; padding: 6px; box-shadow: 0 3px 0 #B8C2D2; margin-bottom: 8px; }
+@media (max-width: 640px) { .spk-stbar { position: static; } }
+.spk-stbar svg.stsky { display: block; width: 100%; height: auto; max-height: 150px; border-radius: 8px; }
+.spk-stbar .spk-stct { color: #E6ECF5; margin: 0; } .spk-stbar .spk-stct b { color: #FFE7A0; }
+.spk-storm .s0 { stop-color: #7FB2D9; transition: stop-color 1.2s ease; } .spk-storm .s1 { stop-color: #EAF3F8; transition: stop-color 1.2s ease; }
+.spk-storm[data-lvl="1"] .s0 { stop-color: #8AA8C2; } .spk-storm[data-lvl="1"] .s1 { stop-color: #E1E8EC; }
+.spk-storm[data-lvl="2"] .s0 { stop-color: #7D8EA2; } .spk-storm[data-lvl="2"] .s1 { stop-color: #CCD3D6; }
+.spk-storm[data-lvl="3"] .s0 { stop-color: #5E6A7C; } .spk-storm[data-lvl="3"] .s1 { stop-color: #AEB5B8; }
+.spk-storm[data-lvl="4"] .s0 { stop-color: #3F4858; } .spk-storm[data-lvl="4"] .s1 { stop-color: #8E9396; }
+.spk-storm .sun { fill: #FFE9A6; transition: opacity 1.2s ease; }
+.spk-storm[data-lvl="2"] .sun { opacity: .6; } .spk-storm[data-lvl="3"] .sun { opacity: .25; } .spk-storm[data-lvl="4"] .sun { opacity: 0; }
+.spk-storm .cl .cli { fill: #F2F4F6; opacity: 0; transform: translateX(-60px); transition: opacity 1s ease, transform 1.4s ease, fill 1.2s ease; }
+.spk-storm .cl.in .cli { opacity: .95; transform: none; }
+.spk-storm[data-lvl="3"] .cl .cli { fill: #B9C0C8; } .spk-storm[data-lvl="4"] .cl .cli { fill: #7E8792; }
+.spk-storm .land { fill: #8DA36A; } .spk-storm .river { fill: #6E9DB6; } .spk-storm .rows path { stroke: #F4F1E6; stroke-width: 1.4; opacity: .7; } .spk-storm .pines path { fill: #3F5530; }
+.spk-storm .flash { fill: #FFF3C4; opacity: 0; }
+.spk-storm.flashing .flash { animation: spk-stflash 2.4s ease-out 1.2s 1; }
+@keyframes spk-stflash { 0%, 100% { opacity: 0; } 8% { opacity: .9; } 14% { opacity: 0; } 20% { opacity: .6; } 26% { opacity: 0; } }
+.spk-stp { display: none; padding: 10px 12px; margin: 0 0 8px; border-left: 4px solid #7D8EA2; background: #F7F9FB; border-radius: 0 10px 10px 0; }
+.spk-stp.on { display: block; animation: spk-qfade .6s ease-out; }
+.spk-stp .tab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #4A5568; margin-bottom: 4px; }
+.spk-stp p { margin: 0 0 6px; }
+
+/* ═══ 4.08.02 · Read the ruins (explore evidence) ═══ */
+.spk-rrqs { display: grid; gap: 10px; margin: 6px 0; }
+.spk-ruin .rq { background: #FFFDF6; border: 1px solid #E2D6B8; border-left: 4px solid #C9A24A; border-radius: 10px; padding: 10px 12px; transition: opacity .3s; }
+.spk-ruin .rq.locked { opacity: .45; pointer-events: none; }
+.spk-ruin .rq .lab { font: 700 15px/1.4 'Nunito', sans-serif; color: #22304A; margin-bottom: 8px; }
+.spk-ruin .rq .qn { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #22304A; color: #fff; font: 800 12px 'Nunito', sans-serif; margin-right: 4px; }
+.spk-ruin .nums { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; }
+.spk-ruin .nb { display: flex; gap: 6px; align-items: center; text-align: left; font: 600 12.5px/1.25 'Nunito', sans-serif; color: #22304A; background: #fff; border: 1.5px solid #D8C7A2; border-radius: 10px; padding: 6px 8px; cursor: pointer; }
+.spk-ruin .nb b { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #CC8C1E; color: #fff; font: 800 13px 'Nunito', sans-serif; border: 2px solid #FFF8E1; box-shadow: 0 0 0 1px #8A6A1E; }
+.spk-ruin .nb:hover, .spk-ruin .nb:focus-visible { background: #FFF8E2; }
+.spk-ruin .nb.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-ruin .rq.ok .nums { display: none; }
+.spk-ruin .rq .learn { display: none; margin: 0; font: 500 14px/1.45 'Nunito', sans-serif; color: #3D2C14; }
+.spk-ruin .rq.ok { border-left-color: #1F6B3A; } .spk-ruin .rq.ok .learn { display: block; }
+.spk-ruin .rq.lit .learn { animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.08.02 · Turn back the clock (vocab, ante) ═══ */
+.spk-tcwrap { display: grid; grid-template-columns: 170px 1fr; gap: 14px; align-items: center; }
+@media (max-width: 560px) { .spk-tcwrap { grid-template-columns: 1fr; } }
+.spk-tcface { text-align: center; padding: 8px; border-radius: 14px; background: linear-gradient(180deg, #8EC3E6, #F6E7B8); transition: background 1s ease; }
+.spk-tclk[data-k="2"] .spk-tcface { background: linear-gradient(180deg, #9CC3E0, #F8DDB0); }
+.spk-tclk[data-k="3"] .spk-tcface { background: linear-gradient(180deg, #B4C5DD, #F7CFA6); }
+.spk-tclk[data-k="4"] .spk-tcface { background: linear-gradient(180deg, #C8C2DA, #F6BE98); }
+.spk-tcface svg { display: block; width: 100%; max-width: 150px; height: auto; margin: 0 auto; }
+.spk-tclk .rim { fill: #8A6534; } .spk-tclk .dial { fill: #FFFDF5; } .spk-tclk .tk { stroke: #8A7A5A; stroke-width: 1.2; } .spk-tclk .tk.big { stroke: #22304A; stroke-width: 2.2; }
+.spk-tclk .nu { font: 700 8.5px 'Lora', Georgia, serif; fill: #22304A; }
+.spk-tclk .hand { stroke: #22304A; stroke-linecap: round; } .spk-tclk .hand.h { stroke-width: 4; } .spk-tclk .hand.m { stroke-width: 2.4; } .spk-tclk .hub { fill: #A3312B; }
+.spk-tclk .hh, .spk-tclk .mh { transform-origin: 60px 60px; transition: transform 1.6s cubic-bezier(.4,0,.2,1); }
+.spk-tclk .ampm { font: 800 15px 'Nunito', sans-serif; color: #22304A; margin-top: 4px; }
+.spk-tclk .wds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.spk-tclk .wd { background: #FFFDF6; border: 2px solid #D8C7A2; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-tclk .wd .w { display: block; font: 800 16px 'Nunito', sans-serif; color: #22304A; } .spk-tclk .wd .w b { color: #8B6FC0; }
+.spk-tclk .wd .m { display: block; font: 500 12.5px/1.35 'Nunito', sans-serif; color: #5B667A; margin-top: 3px; } .spk-tclk .wd .m:empty { display: none; }
+.spk-tclk .wd.heard { border-color: #B8A2E0; } .spk-tclk .wd.up { background: #F2EDFB; border-color: #8B6FC0; }
+.spk-tclk .wd.armed { border-color: #C9A24A; border-style: dashed; } .spk-tclk .wd.over, .spk-tclk .wd:focus-visible { background: #FFF3C4; }
+.spk-tclk .wd.tap { animation: spk-qfade .5s ease-out; }
+.spk-tcmeans { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .spk-tcmeans.wait { opacity: .5; }
+.spk-tcmean.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-tclk.done .spk-tcmeans { display: none; }
+.spk-tclk.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ═══ 4.08.02 · Lantern and shadow (planner) ═══ */
+.spk-lnstage { position: relative; margin: 6px 0 12px; padding: 14px; border-radius: 12px; background: #3A3326; overflow: hidden; }
+.spk-lnstage .wall { position: relative; display: grid; grid-template-columns: 1fr 40px 1fr; gap: 6px; align-items: center; min-height: 120px; }
+.spk-lnstage .lamp { display: flex; gap: 8px; align-items: center; }
+.spk-lnstage .lamp svg { width: 46px; height: auto; flex: none; }
+.spk-lant .cap, .spk-lant .base { fill: #2A2014; } .spk-lant .hook { stroke: #2A2014; stroke-width: 2; } .spk-lant .glass { fill: rgba(255,255,255,.08); stroke: #6B5A3A; stroke-width: 1.6; }
+.spk-lant .flame { fill: #6B5A3A; transition: fill .6s ease; }
+.spk-lant.lit .flame { fill: #FFC94A; animation: spk-lnflick 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+@keyframes spk-lnflick { 50% { transform: scaleY(.9) scaleX(1.05); } }
+.spk-lant.lit .spk-lnstage { background: radial-gradient(circle at 18% 50%, #7A6236 0, #4A3F2C 40%, #3A3326 75%); }
+.spk-lnstage .lcard { font: 600 13px/1.35 'Nunito', sans-serif; border-radius: 8px; padding: 8px 10px; min-height: 38px; }
+.spk-lnstage .lcard:empty { display: none; }
+.spk-lnstage .lcard.a { background: #FFF6D6; color: #3D2C14; border: 1px solid #E8D5A8; box-shadow: 0 0 18px rgba(255,201,74,.45); }
+.spk-lnstage .lcard.b { background: rgba(10,8,4,.55); color: #EDE3CC; border: 1px dashed rgba(237,227,204,.4); filter: blur(.2px); }
+.spk-lnstage .lcard.b.grow { animation: spk-lngrow .9s ease-out; }
+@keyframes spk-lngrow { from { opacity: 0; transform: scale(.6) translateX(-30px); } to { opacity: 1; transform: none; } }
+.spk-lnstage .beam { height: 0; border-top: 2px dashed rgba(255,231,160,.0); align-self: center; transition: border-color .6s ease; }
+.spk-lant.cast .spk-lnstage .beam { border-top-color: rgba(255,231,160,.7); }
+.spk-lnstage .ln-word { text-align: center; font: 800 15px 'Lora', Georgia, serif; color: #FFE7A0; margin-top: 8px; }
+.spk-lnstage .ln-word:empty { display: none; }
+@media (max-width: 560px) { .spk-lnstage .wall { grid-template-columns: 1fr; } .spk-lnstage .beam { width: 2px; height: 18px; border-top: 0; border-left: 2px dashed rgba(255,231,160,.7); justify-self: center; } }
+.spk-lant .fr { margin: 10px 0; } .spk-lant .fr .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--ffg2); margin-bottom: 5px; }
+.spk-lant .fr.locked { opacity: .45; pointer-events: none; }
+.spk-lant .fr .spk-opt { font-size: 12.5px; padding: 6px 11px; text-align: left; }
+.spk-lant .spk-opt.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-lant.done .spk-chain-done { display: block; animation: spk-qfade .5s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spk-cbelt .zone.pulse .fill, .spk-storm.flashing .flash, .spk-stp.on, .spk-ruin .rq.lit .learn, .spk-tclk .wd.tap, .spk-lant.lit .flame, .spk-lnstage .lcard.b.grow { animation: none !important; }
+  .spk-storm .cl .cli, .spk-tclk .hh, .spk-tclk .mh, .spk-cbelt .zone .fill { transition: none !important; }
+}
+
+/* one-column chips: these cards have no icon, so the text gets the whole width (fixes 4.07.04 Made from what grew here and 4.08.01 Sew the 27th star, where the text was squeezed into the 28px icon column) */
+.spk-chip.noimg.spk-mhcard, .spk-chip.noimg.spk-sscard, .spk-chip.noimg.spk-cbcard { grid-template-columns: 1fr; }
