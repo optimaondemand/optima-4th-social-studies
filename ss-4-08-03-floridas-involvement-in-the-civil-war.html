@@ -1683,6 +1683,909 @@ body {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.08.03",
+ "title": "Florida's Involvement in the Civil War",
+ "quiet": true,
+ "file": {
+  "n": 8,
+  "title": "Statehood & War",
+  "label": "Statehood & War",
+  "seals": [
+   "⭐",
+   "📜",
+   "📍"
+  ]
+ },
+ "prevFile": "Life in Antebellum Florida",
+ "connector": "Last time we studied life in Florida before the Civil War. Today the war begins: Florida leaves the United States, and the fighting reaches Florida.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Read the Paper",
+   "t": "What did the paper say?",
+   "why": "Read a real front page from January 1861. Tap the gold numbers, then sort what the paper tells us and what it doesn’t."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Walk the museum, check the print",
+   "why": "Open one museum case at a time to read the story. Then check an 1894 picture of the Battle of Olustee: what can we trust?"
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Plan a front page, then write",
+   "why": "Answer three questions. Then plan a front page and write 3 to 5 sentences about how Florida was involved in the Civil War."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. This file is about Florida in the Civil War. It’s serious history, so let’s take it carefully.",
+  "opening": [
+   "This file is about the Civil War, from 1861 to 1865. Florida left the United States and joined the Confederacy, the side that fought to keep slavery.",
+   "Start in the Read the Paper tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the paper",
+      "go": true,
+      "reply": "It’s a real newspaper from January 13, 1861. Tap each gold number on it. Then sort the cards: what the paper tells us, and what it doesn’t."
+     },
+     {
+      "t": "Why a New York paper?",
+      "reply": "I looked for a Florida newspaper from that week, and I couldn’t find one online. A New York paper printed the news from Tallahassee, so we can still read it today."
+     },
+     {
+      "t": "What does secede mean?",
+      "reply": "To secede means to leave, or break away. In January 1861, Florida’s leaders voted to leave the United States."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Open the museum cases one at a time, and read each part."
+     },
+     {
+      "t": "Did everyone agree?",
+      "reply": "No. At the meeting in Tallahassee, 7 of the 69 leaders voted not to leave. And the paper doesn’t tell us what enslaved people thought."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Why is the date wrong?",
+      "reply": "We don’t know for sure. The print was made about 30 years later, in Chicago, by people who weren’t there. That’s why historians check a picture against other records."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s in the next file?",
+      "reply": "Next we study Reconstruction: how Florida tried to rebuild after the war, and the hard problems people faced."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You read the front page and sorted every card. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You opened every museum case and checked the print. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then plan your own front page and write 3 to 5 sentences."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for studying it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}because you finished this file, another door in this hallway just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page. Under it, read about Freedom Day.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage takes many forms: soldiers who fought, families who held on at home, and enslaved people who risked everything to reach freedom. Today you are a newspaper reader and a museum visitor. As a Florida historian, you’ll study how the Civil War (the war between the Northern and Southern states, 1861 to 1865) reached Florida, and how it ended slavery here.",
+ "scene1": {
+  "type": "frontpage",
+  "kicker": "Read the front page",
+  "h": "What did a newspaper say when Florida left the Union?",
+  "voice": "Tap each gold number on the newspaper to see what it shows. Then sort each card: does the paper tell us this, or not? Tap a card, then a box, or drag it.",
+  "why": {
+   "icon": "📰",
+   "q": "Why a newspaper?",
+   "t": "In 1861 there was no TV, radio, or internet. People read newspapers to learn the news, and news from far away came by telegraph (electric signals sent down a wire). An old newspaper shows what people knew on the day it was printed. That’s why you start with a real front page."
+  },
+  "page": {
+   "img": "ff-4-08-03-herald-page.jpg",
+   "alt": "The top half of the front page of the New York Herald, January 13, 1861, with four gold numbers",
+   "cap": "The New York Herald, Sunday, January 13, 1861, front page (top half). Library of Congress, Chronicling America. Free to use."
+  },
+  "zoom": {
+   "img": "ff-4-08-03-herald-florida.jpg",
+   "alt": "A close-up of the short story about Florida, with gold numbers 5 and 6",
+   "cap": "Close-up of label 4. It says: “The ordinance of secession was signed to-day in the eastern portico of the Capitol, amid the firing of cannon and the cheers and enthusiasm of the people.” (A portico is a porch with tall columns.)"
+  },
+  "labels": [
+   {
+    "n": "1",
+    "on": "page",
+    "x": 33.8,
+    "y": 28.7,
+    "title": "The name of the newspaper.",
+    "t": "The New York Herald, a big newspaper in New York City."
+   },
+   {
+    "n": "2",
+    "on": "page",
+    "x": 65.0,
+    "y": 24.3,
+    "title": "The date.",
+    "t": "Sunday morning, January 13, 1861. The paper cost two cents."
+   },
+   {
+    "n": "3",
+    "on": "page",
+    "x": 20.6,
+    "y": 19.3,
+    "title": "“The Crisis.”",
+    "t": "The biggest headline. A crisis is a time of great danger or trouble. In 1861, Southern states were leaving the United States."
+   },
+   {
+    "n": "4",
+    "on": "page",
+    "x": 26.2,
+    "y": 87.8,
+    "title": "The Florida story.",
+    "t": "This short story is about Florida. Look at the close-up below."
+   },
+   {
+    "n": "5",
+    "on": "zoom",
+    "x": 94.3,
+    "y": 18.0,
+    "title": "The headline.",
+    "t": "“The Signing of the Florida Secession Ordinance.” An ordinance is an official order. This one took Florida out of the United States."
+   },
+   {
+    "n": "6",
+    "on": "zoom",
+    "x": 94.3,
+    "y": 48.8,
+    "title": "Where and when.",
+    "t": "“Tallahassee, Jan. 11, 1861.” The news came from Tallahassee, Florida’s capital, on January 11. The paper printed it two days later."
+   }
+  ],
+  "pockets": [
+   {
+    "id": "tells",
+    "t": "The paper tells us",
+    "ico": "📰"
+   },
+   {
+    "id": "not",
+    "t": "The paper doesn’t tell us",
+    "ico": "❔"
+   }
+  ],
+  "cards": [
+   {
+    "id": "c1",
+    "p": "tells",
+    "t": "Florida’s leaders signed an order to leave the United States.",
+    "why": "Labels 4 and 5.",
+    "miss": "Look at the headline in the close-up (5). What was signed?"
+   },
+   {
+    "id": "c2",
+    "p": "tells",
+    "t": "It was signed at the Capitol in Tallahassee.",
+    "why": "The close-up says so.",
+    "miss": "Read the close-up. Where was it signed?"
+   },
+   {
+    "id": "c3",
+    "p": "tells",
+    "t": "Cannons fired and people cheered when it was signed.",
+    "why": "The last line of the close-up.",
+    "miss": "Read the last line of the close-up."
+   },
+   {
+    "id": "c4",
+    "p": "tells",
+    "t": "A New York paper printed the news two days later.",
+    "why": "Sent January 11, printed January 13.",
+    "miss": "Compare the date in label 6 with the date at the top of the paper (2)."
+   },
+   {
+    "id": "n1",
+    "p": "not",
+    "t": "How enslaved people in Florida felt about the news.",
+    "why": "The story only tells about the people who cheered.",
+    "miss": "Does the story say anything about enslaved people? Read it again."
+   },
+   {
+    "id": "n2",
+    "p": "not",
+    "t": "Whether every Floridian agreed with leaving.",
+    "why": "In fact, 7 of the 69 leaders voted no.",
+    "miss": "The story tells about cheers. Does it say whether anyone disagreed?"
+   },
+   {
+    "id": "n3",
+    "p": "not",
+    "t": "That the war would start three months later.",
+    "why": "A newspaper can’t know the future.",
+    "miss": "Could a paper from January 1861 know what would happen in April?"
+   }
+  ],
+  "prompt": "Tap each gold number on the newspaper to see what it shows.",
+  "allT": "Now sort the cards below.",
+  "lockT": "First tap all 6 gold numbers on the newspaper.",
+  "countT": "cards sorted.",
+  "firstT": "Tap a card first, then tap the box where it belongs.",
+  "win": "📰 <b>You read the front page.<\/b> A newspaper is a good source for what happened and when. But it can leave people out. This story tells about cheering crowds. It says nothing about the 61,745 enslaved people in Florida, or the Floridians who did not want to leave."
+ },
+ "explore": {
+  "reading": {
+   "type": "museumwalk",
+   "activity": "Florida in the Civil War",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^On January 10, 1861"
+    },
+    {
+     "id": "p2",
+     "match": "^Florida.s military role"
+    },
+    {
+     "id": "p3",
+     "match": "^The Battle of Olustee"
+    },
+    {
+     "id": "p4",
+     "match": "^Life on the home front"
+    },
+    {
+     "id": "p5",
+     "match": "^The end of the war"
+    }
+   ],
+   "cases": [
+    {
+     "id": "a",
+     "t": "Leaving the Union",
+     "obj": "Florida’s Ordinance of Secession",
+     "date": "January 10, 1861",
+     "img": "case-4-08-03-ordinance.jpg",
+     "alt": "A handwritten page with a green seal and many signatures",
+     "cap": "A handwritten copy of the order Florida’s leaders passed to leave the United States. An ordinance is an official order. The names at the bottom belong to the leaders who signed it.",
+     "credit": "State Archives of Florida, via the World Digital Library. Free to use.",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "b",
+     "t": "Feeding the army",
+     "obj": "“Destruction of a Rebel Salt Factory, on the Florida Coast”",
+     "date": "Harper’s Weekly, November 15, 1862",
+     "img": "case-4-08-03-salt.jpg",
+     "alt": "A drawing of a salt works on the coast with a tall smokestack, a long brick furnace, and sacks",
+     "cap": "A drawing from a Northern magazine. In September 1862, sailors from the U.S. ship Kingfisher burned a salt works on St. Joseph’s Bay, on Florida’s Gulf coast. Look for the tall smokestack, the long brick furnace, and the sacks.",
+     "credit": "Harper’s Weekly, 1862. State Archives of Florida, Florida Memory. Free to use.",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "c",
+     "t": "The Battle of Olustee",
+     "obj": "“Battle of Olustee, Fla.”",
+     "date": "A color print made in 1894",
+     "img": "case-4-08-03-olustee.jpg",
+     "alt": "A colorful print of Union soldiers in battle among pine trees",
+     "cap": "Printmakers in Chicago made this picture about 30 years after the battle. You will check it like a historian in Investigate the Evidence, below the story.",
+     "credit": "Kurz & Allison, 1894. State Archives of Florida. Free to use.",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "d",
+     "t": "The road to freedom",
+     "obj": "“Come and Join Us Brothers”",
+     "date": "A poster from the 1860s",
+     "img": "case-4-08-03-poster.jpg",
+     "alt": "A poster of Black Union soldiers standing in a row with a white officer and a U.S. flag",
+     "cap": "This poster asked Black men to join the Union army. About 180,000 Black soldiers served in the Union army, and some of them were Black Floridians who had escaped slavery.",
+     "credit": "Published by the Supervisory Committee for Recruiting Colored Regiments, Philadelphia. Via Wikimedia Commons. Free to use.",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "e",
+     "t": "Freedom comes",
+     "obj": "The Knott House, Tallahassee",
+     "date": "Freedom was announced here on May 20, 1865",
+     "img": "case-4-08-03-knott.jpg",
+     "alt": "A white two-story house with tall columns and green shutters",
+     "cap": "Union General Edward McCook read the Emancipation Proclamation from these front steps. The house was built in the early 1840s, and today it is a museum.",
+     "credit": "Photo, 2006: State Archives of Florida, Florida Memory. Free to use.",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "startT": "Open the first case to start reading.",
+   "countT": "cases open. Read this part, then open the next case.",
+   "allT": "Every case is open. You read the whole story.",
+   "nextT": "Open case {n}: {t}",
+   "why": {
+    "icon": "🏛️",
+    "q": "Why a museum?",
+    "t": "A museum keeps real objects from the past behind glass so people can study them. Each case here holds something real from Florida’s Civil War years: a page, a drawing, a print, a poster, and a house. That’s why each part of the story opens a museum case."
+   }
+  },
+  "evidence": {
+   "type": "trustcheck",
+   "kicker": "Trust or check?",
+   "h": "Can we trust everything in this picture?",
+   "voice": "First tap each gold number on the print. Then sort each card: can we trust it, or should a historian check it? Tap a card, then a box, or drag it.",
+   "why": {
+    "icon": "🔍",
+    "q": "Why trust or check?",
+    "t": "This print was made in 1894, about 30 years after the battle, by artists in Chicago who were not there. They made it to sell. Some things in it match other records, and some don’t. That’s why a historian sorts what to trust and what to check."
+   },
+   "pockets": [
+    {
+     "id": "trust",
+     "t": "We can trust this",
+     "sub": "other records agree",
+     "ico": "✅"
+    },
+    {
+     "id": "check",
+     "t": "A historian should check this",
+     "sub": "it may be wrong",
+     "ico": "🔎"
+    }
+   ],
+   "cards": [
+    {
+     "id": "t1",
+     "p": "trust",
+     "t": "Black Union soldiers fought at Olustee.",
+     "why": "Army records agree: the 54th Massachusetts and the 8th and 35th U.S. Colored Troops were there.",
+     "miss": "Do other records say Black soldiers fought at Olustee? Reread the Olustee case in Learn the Story."
+    },
+    {
+     "id": "t2",
+     "p": "trust",
+     "t": "Union soldiers carried the U.S. flag.",
+     "why": "Union army groups carried the U.S. flag into battle.",
+     "miss": "Which side used the U.S. flag? Look at label 3."
+    },
+    {
+     "id": "t3",
+     "p": "trust",
+     "t": "The print was made in 1894.",
+     "why": "It is printed right on it (label 2).",
+     "miss": "Look at label 2. Is that year printed on the picture itself?"
+    },
+    {
+     "id": "k1",
+     "p": "check",
+     "t": "The battle was on February 26, 1864.",
+     "why": "The caption says the 26th, but army records say February 20.",
+     "miss": "Compare label 1 with the date in the Olustee part of the story."
+    },
+    {
+     "id": "k2",
+     "p": "check",
+     "t": "193 Union soldiers were killed.",
+     "why": "Army reports say 203. The numbers don’t match.",
+     "miss": "The printmakers wrote these numbers 30 years later. A historian checks numbers like these against army reports."
+    },
+    {
+     "id": "k3",
+     "p": "check",
+     "t": "The soldiers stood in neat, straight lines in a sunny clearing.",
+     "why": "The artists weren’t there. They drew it to look exciting, 30 years later.",
+     "miss": "Were the artists at the battle? Look at label 2."
+    }
+   ],
+   "countT": "cards sorted.",
+   "hotT": "Last step: tap every gold number on the print above.",
+   "readT": "Last step: open every museum case in Learn the Story at the top of this tab.",
+   "win": "🔍 <b>You checked the print like a historian.<\/b> A picture can show who was there and how people remembered it. But when a source was made long after, by people who weren’t there, historians check it against other records."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Open each museum case in Learn the Story and read each part.",
+    "Tap each of the 6 gold numbers on the print.",
+    "Read the three questions under the print.",
+    "Do Trust or check?: sort each card into the right box."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the print to see what it shows.",
+  "allT": "Now try Trust or check? below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 13.3,
+    "y": 95.4,
+    "title": "The caption.",
+    "t": "Small words under the picture. They say “Feby 26th 1864” and name the Union army groups: the 8th U.S., the 54th Massachusetts, and the 1st North Carolina Colored (renamed the 35th U.S. Colored Troops in February 1864)."
+   },
+   {
+    "n": "2",
+    "x": 89.8,
+    "y": 95.4,
+    "title": "The copyright line.",
+    "t": "“Copyrighted 1894 by Kurz & Allison,” Chicago. A copyright line tells who made something. Here it tells who made the print, and when: about 30 years after the battle."
+   },
+   {
+    "n": "3",
+    "x": 69.0,
+    "y": 37.7,
+    "title": "The U.S. flag.",
+    "t": "Union soldiers carried the U.S. flag into battle."
+   },
+   {
+    "n": "4",
+    "x": 36.5,
+    "y": 37.7,
+    "title": "Black Union soldiers.",
+    "t": "A line of Black soldiers firing their rifles."
+   },
+   {
+    "n": "5",
+    "x": 20.8,
+    "y": 26.5,
+    "title": "A Confederate flag.",
+    "t": "Far off on the hill, a Confederate battle flag. The Confederate army is over there."
+   },
+   {
+    "n": "6",
+    "x": 77.5,
+    "y": 17.8,
+    "title": "Pine trees.",
+    "t": "Tall pine trees. The battle was fought in the pine woods of north Florida."
+   }
+  ]
+ },
+ "planner": {
+  "type": "headline",
+  "voice": "Plan your own front page. Pick the story, then two facts for the columns, then how you’ll start “why it matters.” These are just notes. You’ll write the sentences yourself in Step 3.",
+  "why": {
+   "icon": "🗞️",
+   "q": "Why a front page?",
+   "t": "You started this file with a real front page from 1861. Now you are the writer. A good news story tells what happened, when, and why it matters. That’s why you plan your notebook entry as a front page."
+  },
+  "paper": "The Florida Historian",
+  "edition": "Special Edition",
+  "topics": [
+   {
+    "id": "secede",
+    "date": "January 10, 1861",
+    "h": "Florida Leaves the Union",
+    "facts": [
+     "Florida was the third state to secede.",
+     "Leaders in Tallahassee voted 62 to 7 to leave.",
+     "Florida joined the Confederacy, which wanted to keep slavery.",
+     "The war began in April 1861 at Fort Sumter."
+    ]
+   },
+   {
+    "id": "supply",
+    "date": "1861 to 1865",
+    "h": "Florida Feeds the Confederate Army",
+    "facts": [
+     "About 15,000 Floridians served in the Confederate army.",
+     "Florida sent beef, salt, and cotton.",
+     "Salt works on the coast boiled seawater to make salt.",
+     "After 1863, Florida’s cattle were one of the most important sources of beef for Confederate armies."
+    ]
+   },
+   {
+    "id": "olustee",
+    "date": "February 20, 1864",
+    "h": "Battle at Olustee",
+    "facts": [
+     "It was the largest battle fought in Florida.",
+     "It was fought near Lake City.",
+     "Confederate forces won, and the Union troops went back to Jacksonville.",
+     "Black soldiers from three Union regiments fought with great courage."
+    ]
+   },
+   {
+    "id": "freedom",
+    "date": "May 20, 1865",
+    "h": "Freedom Comes to Florida",
+    "facts": [
+     "Many enslaved Floridians escaped to Union lines during the war.",
+     "Some of them joined the Union army.",
+     "General McCook read the Emancipation Proclamation in Tallahassee.",
+     "Many Floridians still celebrate May 20 as Emancipation Day."
+    ]
+   }
+  ],
+  "stems": [
+   "This matters because",
+   "The evidence shows",
+   "Florida played a role by"
+  ],
+  "doneT": "Your front page is planned. Now write it in your own words in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "how Florida was involved",
+    "rx": "secede|seced|left the union|leave the union|confedera|soldier|beef|salt|cotton|cattle|cow|suppl|battle|olustee|fought|fight|army|war"
+   },
+   {
+    "t": "a date or number",
+    "rx": "18[56]\\d|15,?000|\\b62\\b|third|february|january|april|may 20"
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|matter|important|shows|so |ended slavery|end slavery|freedom|free"
+   }
+  ],
+  "lines": [
+   "Start by naming one way Florida was involved in the war.",
+   "Good. Now add a date or a number from the lesson.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a careful, honest entry. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the newspaper, the museum cases, and the print."
+  },
+  {
+   "t": "Plan",
+   "w": "Plan a front page: pick the story, two facts, and how you’ll start “why it matters.”"
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about how Florida was involved in the Civil War, with at least two details. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "telegraph",
+  "kicker": "Down the wire",
+  "h": "bell = war",
+  "root": "bell",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match sends a message one pole down the wire.",
+  "words": [
+   {
+    "w": "rebel",
+    "m": "a person who fights against the people in charge",
+    "miss": "It’s the shortest word. Which one means a person?",
+    "say": "Rebel. A person who fights against the people in charge."
+   },
+   {
+    "w": "rebellion",
+    "m": "a fight against the people in charge",
+    "miss": "This word is the fight itself, not the person. Which one is longer?",
+    "say": "Rebellion. A fight against the people in charge."
+   },
+   {
+    "w": "belligerent",
+    "m": "ready to fight or argue",
+    "miss": "This word describes how someone acts. Which one?",
+    "say": "Belligerent. Ready to fight or argue."
+   },
+   {
+    "w": "antebellum",
+    "m": "before the war; the years before the Civil War",
+    "miss": "Last lesson’s word. Ante means before.",
+    "say": "Antebellum. Before the war. The years before the Civil War."
+   }
+  ],
+  "lastT": "THE WAR IS OVER",
+  "win": "📡 Every message went through. <b>bell<\/b> = war",
+  "why": {
+   "icon": "📡",
+   "q": "Why a telegraph?",
+   "t": "During the Civil War, news and army orders traveled by telegraph: electric signals of short and long clicks (dots and dashes) sent down a wire strung on tall poles. In 1865, the news that the war was over traveled the same way. That’s why each word you match sends a message down the wire."
+  }
+ },
+ "closing": {
+  "img": "case-4-08-03-knott.jpg",
+  "alt": "The Knott House in Tallahassee, a white two-story house with tall columns",
+  "k": "Freedom Day · May 20, 1865",
+  "h": "Freedom came to Florida",
+  "t": [
+   "On May 20, 1865, Union General Edward McCook stood on the front steps of this house in Tallahassee and read the Emancipation Proclamation. Enslaved people in Florida were free.",
+   "Every year on May 20, people in Tallahassee gather to remember that day. Many Floridians call it Emancipation Day."
+  ],
+  "credit": "The Knott House Museum, Tallahassee. Photo: State Archives of Florida, Florida Memory."
+ },
+ "cabinet": {
+  "n": 8
+ },
+ "notes": {
+  "learned": [
+   "On January 10, 1861, Florida became the third state to secede from the United States. Leaders voted 62 to 7 to leave.",
+   "Florida joined the Confederacy, the Southern states that wanted to keep slavery. The Civil War began in April 1861.",
+   "About 15,000 Floridians served in the Confederate army. Florida sent beef, salt, and cotton.",
+   "The Battle of Olustee, February 20, 1864, near Lake City, was the largest battle in Florida. Black soldiers from three Union regiments fought there.",
+   "Many enslaved Floridians escaped to Union lines, and some joined the Union army.",
+   "On May 20, 1865, the Emancipation Proclamation was read in Tallahassee. Many Floridians still celebrate May 20 as Emancipation Day.",
+   "Historians check a source against other records, especially one made long after the event."
+  ],
+  "vocab": [
+   [
+    "secede",
+    "to leave, or break away; Florida seceded from the United States in 1861"
+   ],
+   [
+    "Confederacy",
+    "the Confederate States of America, the Southern states that left the United States to keep slavery"
+   ],
+   [
+    "Union",
+    "the United States; the states that stayed in it during the Civil War"
+   ],
+   [
+    "Civil War",
+    "the war between the Northern and Southern states, 1861 to 1865"
+   ],
+   [
+    "ordinance",
+    "an official order"
+   ],
+   [
+    "crisis",
+    "a time of great danger or trouble"
+   ],
+   [
+    "portico",
+    "a porch with tall columns"
+   ],
+   [
+    "salt works",
+    "a place where workers boiled seawater to make salt"
+   ],
+   [
+    "regiment",
+    "an army group of up to about 1,000 soldiers"
+   ],
+   [
+    "home front",
+    "life back home, away from the fighting"
+   ],
+   [
+    "shortage",
+    "not enough of something"
+   ],
+   [
+    "Union lines",
+    "places the Union army controlled"
+   ],
+   [
+    "surrender",
+    "to give up in a war"
+   ],
+   [
+    "Emancipation Proclamation",
+    "President Lincoln’s order that freed enslaved people in the Confederate states"
+   ],
+   [
+    "telegraph",
+    "a way to send messages as electric signals down a wire"
+   ],
+   [
+    "rebel",
+    "a person who fights against the people in charge"
+   ],
+   [
+    "rebellion",
+    "a fight against the people in charge"
+   ],
+   [
+    "belligerent",
+    "ready to fight or argue"
+   ],
+   [
+    "antebellum",
+    "before the war; the years before the Civil War"
+   ]
+  ],
+  "wordParts": "The Latin word bellum means “war.” You can find bel or bell inside rebel, rebellion, belligerent, and antebellum."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "one way",
+    "rx": "soldier|men|army|fought|fight|serv|join|beef|cattle|cow|meat|food|salt|cotton|suppl|resource|sent|gave",
+    "n": 1
+   },
+   {
+    "t": "a second way",
+    "groups": [
+     "soldier|men|army|fought|fight|serv|join|15,?000",
+     "beef|cattle|cow|meat|food",
+     "salt",
+     "cotton",
+     "suppl|resource"
+    ],
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "why it mattered",
+    "rx": "largest|biggest|most|important|matter|significan|showed|show|proved|prove|courage|brave|war reached|came to florida|in florida|won|win|victory|lost|defeat|first",
+    "n": 1
+   },
+   {
+    "t": "a detail about the soldiers",
+    "rx": "black|african|colored|usct|54th|8th|35th|massachusetts|union|confedera|soldier|regiment|troops|courage|brave|fought",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "what they did",
+    "rx": "escap|ran|run|fled|flee|left|leave|went|go|join|fought|fight|help|union lines|freedom|free|hid|hide",
+    "n": 1
+   },
+   {
+    "t": "why",
+    "rx": "free|freedom|union|slaver|enslav|path|chance|better|because|so |to be",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "The war effort means all the work to help win the war. Look at the Feeding the army case in the Explore tab (tab 2), or your front page in tab 1.",
+   "Florida sent people and things to help the Confederacy. What did it send?",
+   "Try this shape: “Florida helped by sending ___. Florida also ___.”"
+  ],
+  "journal-q2": [
+   "Significant means important. Look at the Battle of Olustee case and the print in the Explore tab (tab 2).",
+   "Was it a big battle for Florida? Who fought for the Union there?",
+   "Try this shape: “The Battle of Olustee mattered because ___. One detail about the soldiers is ___.”"
+  ],
+  "journal-q3": [
+   "Look at the Road to freedom case in the Explore tab (tab 2).",
+   "What did many enslaved people do when Union forces came near? What did some of them join?",
+   "Try this shape: “When Union forces came near, many enslaved people ___ because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why did Florida’s beef matter even more after 1863?",
+  "journal-q2": "Go further: the print says the battle was on February 26. How would a historian find out which date is right?",
+  "journal-q3": "Go further: what do you think it took for a person to escape to Union lines?"
+ },
+ "quizMiss": [
+  {
+   "a": "April 1861 is when the war began, at Fort Sumter. Florida left before that. Reread the first museum case.",
+   "c": "February 1864 is the Battle of Olustee. Florida left almost three years earlier. Reread the first museum case."
+  },
+  {
+   "a": "Fort Sumter is in South Carolina, where the war began. Reread the Olustee case.",
+   "c": "Gettysburg is in Pennsylvania, far from Florida. Reread the Olustee case."
+  },
+  {
+   "a": "Florida sent food and resources, not weapons. Reread the Feeding the army case.",
+   "c": "Florida sent food and resources, not ships. Reread the Feeding the army case."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Check the date first",
+   "at": "scene1",
+   "script": "When I read a news story, I check two things first: the date, and where the story came from. Once I read a scary storm story, and the date told me it was a year old. Do that here. Find the date at the top. Then find where the Florida story came from."
+  },
+  {
+   "label": "Hear the Florida story",
+   "at": "s1done",
+   "parts": [
+    {
+     "slot": "guide2a",
+     "script": "Here are the words from that short Florida story, read the way people read them in 1861."
+    },
+    {
+     "slot": "guide2b",
+     "who": "From the New York Herald, January 13, 1861",
+     "script": "The Signing of the Florida Secession Ordinance. Tallahassee, January 11, 1861. The ordinance of secession was signed to-day in the eastern portico of the Capitol, amid the firing of cannon and the cheers and enthusiasm of the people."
+    },
+    {
+     "slot": "guide2c",
+     "script": "Now pause me and think: who is missing from that story? Then go to the Explore tab, tab 2."
+    }
+   ]
+  },
+  {
+   "slot": "guide3",
+   "label": "Read the label first",
+   "at": "explore",
+   "script": "In a museum, I always read the little label before I look closely. What is it? When was it made? Do that here. Open one case at a time. Read its label first, then read that part of the story under it."
+  },
+  {
+   "slot": "guide4",
+   "label": "Why May 20 matters",
+   "at": "afterread",
+   "script": "For four years, enslaved Floridians watched the war, and many risked everything to escape. On May 20, 1865, freedom was read aloud in Tallahassee. Pause me and say one sentence out loud about why people still remember that day."
+  },
+  {
+   "slot": "guide5",
+   "label": "Trust the faces, check the date",
+   "at": "evidence",
+   "script": "I have an old family photo with a date written on the back. My aunt wrote it years later, and she got the year wrong. I trust the faces in the photo, but I check the date. Do the same with this print. What can you trust? What should you check?"
+  },
+  {
+   "slot": "guide6",
+   "label": "You’re the writer now",
+   "at": "plan",
+   "script": "Now you’re the newspaper writer. Pick the story you understand best. Then pick two facts that prove it, and how you’ll start why it matters. These are notes, not sentences. In Step 3 you’ll write it all in your own words."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -1916,85 +2819,91 @@ body {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Florida's Involvement in the Civil War ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Dawn over a white house with tall columns in Tallahassee, live oaks with Spanish moss, and a U.S. flag rising">
   <defs>
-    <linearGradient id="h803sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#5A6A80"/>
-      <stop offset="50%" stop-color="#7A8A9A"/>
-      <stop offset="100%" stop-color="#A0AAB8"/>
+    <linearGradient id="b803sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E3F66"/><stop offset=".45" stop-color="#7C7FA6"/><stop offset=".75" stop-color="#E9B58C"/><stop offset="1" stop-color="#F8DDA6"/>
     </linearGradient>
-    <linearGradient id="h803ground" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#4A5A3A"/>
-      <stop offset="100%" stop-color="#3A4A2A"/>
+    <radialGradient id="b803sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF4C9"/><stop offset=".35" stop-color="#FFE29A" stop-opacity=".85"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b803wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E9E1D3"/><stop offset=".7" stop-color="#F7F1E6"/><stop offset="1" stop-color="#FFF8EC"/>
     </linearGradient>
-    <style>
-      .h803drift { animation: h803drift 5s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h803drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
-      .h803smoke { animation: h803smoke 6s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h803smoke { 0%,100% { opacity: 0.15; transform: translateY(0); } 50% { opacity: 0.35; transform: translateY(-5px); } }
-    </style>
+    <linearGradient id="b803lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6F8A55"/><stop offset="1" stop-color="#3F5634"/>
+    </linearGradient>
+    <linearGradient id="b803col" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D9D0C0"/><stop offset=".5" stop-color="#FFFDF7"/><stop offset="1" stop-color="#E6DDCD"/>
+    </linearGradient>
   </defs>
-  <rect width="920" height="185" fill="url(#h803sky)"/>
-  <!-- Muted clouds -->
-  <g opacity="0.25" fill="#C0C8D0">
-    <ellipse cx="150" cy="50" rx="65" ry="22"/>
-    <ellipse cx="190" cy="45" rx="40" ry="15"/>
-    <ellipse cx="700" cy="60" rx="55" ry="20"/>
-    <ellipse cx="740" cy="55" rx="35" ry="13"/>
+  <style>
+    .b803-glow{transform-origin:742px 150px;animation:b803-breathe 7s ease-in-out infinite}
+    .b803-flag{animation:b803-rise 7s cubic-bezier(.3,.1,.2,1) 1 forwards}
+    .b803-cloth{transform-origin:600px 0;animation:b803-wave 3.6s ease-in-out infinite}
+    .b803-moss{transform-box:fill-box;transform-origin:50% 0;animation:b803-sway 6s ease-in-out infinite}
+    .b803-moss.m2{animation-delay:-2.4s}
+    .b803-ray{opacity:.0;animation:b803-ray 7s ease-in-out infinite}
+    @keyframes b803-breathe{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.08);opacity:1}}
+    @keyframes b803-rise{from{transform:translateY(46px)}to{transform:translateY(0)}}
+    @keyframes b803-wave{0%,100%{transform:skewY(0deg)}50%{transform:skewY(-3deg)}}
+    @keyframes b803-sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(2.5deg)}}
+    @keyframes b803-ray{0%,100%{opacity:.08}50%{opacity:.22}}
+    @media (prefers-reduced-motion: reduce){.b803-glow,.b803-flag,.b803-cloth,.b803-moss,.b803-ray{animation:none}.b803-ray{opacity:.15}}
+  </style>
+  <rect width="920" height="200" fill="url(#b803sky)"/>
+  <g fill="#FFF1D2">
+    <path class="b803-ray" d="M742,150 L560,0 L610,0 Z"/><path class="b803-ray" style="animation-delay:-2s" d="M742,150 L700,0 L740,0 Z"/><path class="b803-ray" style="animation-delay:-4s" d="M742,150 L860,0 L910,0 Z"/>
   </g>
-  <rect y="180" width="920" height="80" fill="url(#h803ground)"/>
-  <!-- Fort structure -->
-  <g transform="translate(460,100)">
-    <g class="h803drift">
-      <!-- Fort walls -->
-      <rect x="-90" y="30" width="180" height="50" fill="#8A7A60" stroke="#5A4A30" stroke-width="2"/>
-      <rect x="-95" y="27" width="190" height="8" fill="#6A5A40"/>
-      <!-- Battlements -->
-      <rect x="-90" y="20" width="20" height="12" fill="#8A7A60"/>
-      <rect x="-50" y="20" width="20" height="12" fill="#8A7A60"/>
-      <rect x="-10" y="20" width="20" height="12" fill="#8A7A60"/>
-      <rect x="30" y="20" width="20" height="12" fill="#8A7A60"/>
-      <rect x="70" y="20" width="20" height="12" fill="#8A7A60"/>
-      <!-- Gate -->
-      <rect x="-12" y="55" width="24" height="25" rx="12" fill="#3A2A1A"/>
+  <circle class="b803-glow" cx="742" cy="150" r="120" fill="url(#b803sun)"/>
+  <circle cx="742" cy="150" r="22" fill="#FFF3C6" opacity=".95"/>
+  <path d="M0,150 Q160,140 320,146 T640,142 T920,146 L920,200 L0,200 Z" fill="#5D6E4C" opacity=".55"/>
+  <!-- the house: a two-story Greek Revival front with a columned portico -->
+  <g>
+    <rect x="300" y="78" width="250" height="92" fill="url(#b803wall)"/>
+    <path d="M292,80 L425,40 L558,80 Z" fill="#F4EEE2" stroke="#BDB4A3" stroke-width="1.5"/>
+    <path d="M396,72 A29,29 0 0 1 454,72 Z" fill="#3E4A5C"/><path d="M425,72 L425,46 M410,72 L404,52 M440,72 L446,52" stroke="#F4EEE2" stroke-width="1.6"/>
+    <rect x="288" y="80" width="274" height="7" fill="#E2D9C8"/>
+    <rect x="550" y="96" width="70" height="74" fill="#ECE4D6"/><path d="M546,98 L585,80 L624,98 Z" fill="#D9D0C0"/>
+    <g fill="#33503F">
+      <rect x="318" y="98" width="12" height="24"/><rect x="342" y="98" width="12" height="24"/><rect x="496" y="98" width="12" height="24"/><rect x="520" y="98" width="12" height="24"/>
+      <rect x="318" y="134" width="12" height="26"/><rect x="342" y="134" width="12" height="26"/><rect x="496" y="134" width="12" height="26"/><rect x="520" y="134" width="12" height="26"/>
+      <rect x="566" y="110" width="10" height="20"/><rect x="594" y="110" width="10" height="20"/>
+    </g>
+    <g fill="#4A5A6E"><rect x="330" y="98" width="12" height="24"/><rect x="508" y="98" width="12" height="24"/><rect x="330" y="134" width="12" height="26"/><rect x="508" y="134" width="12" height="26"/><rect x="576" y="110" width="18" height="20"/></g>
+    <rect x="410" y="128" width="30" height="42" fill="#5A4632"/><path d="M410,128 A15,10 0 0 1 440,128 Z" fill="#E9D9A8"/>
+    <rect x="374" y="114" width="102" height="5" fill="#E2D9C8"/><path d="M380,119 L470,119" stroke="#BDB4A3" stroke-width="1"/>
+    <g fill="url(#b803col)" stroke="#C9C0AE" stroke-width=".8">
+      <rect x="372" y="86" width="10" height="84"/><rect x="398" y="86" width="10" height="84"/><rect x="442" y="86" width="10" height="84"/><rect x="468" y="86" width="10" height="84"/>
+    </g>
+    <path d="M362,170 h126 v5 h6 v5 h-138 v-5 h6 Z" fill="#D8CFBE"/>
+  </g>
+  <rect x="0" y="176" width="920" height="24" fill="url(#b803lawn)"/>
+  <path d="M0,178 Q230,172 460,178 T920,176 L920,182 L0,182 Z" fill="#7E9862" opacity=".7"/>
+  <!-- flagpole and the flag going up -->
+  <rect x="598" y="36" width="3" height="142" fill="#5E5446"/><circle cx="599.5" cy="35" r="3" fill="#C9A24A"/>
+  <g class="b803-flag">
+    <g class="b803-cloth">
+      <rect x="601" y="40" width="56" height="34" fill="#F7F3EA"/>
+      <g fill="#B5322E"><rect x="601" y="40" width="56" height="2.6"/><rect x="601" y="45.2" width="56" height="2.6"/><rect x="601" y="50.4" width="56" height="2.6"/><rect x="601" y="55.6" width="56" height="2.6"/><rect x="601" y="60.8" width="56" height="2.6"/><rect x="601" y="66" width="56" height="2.6"/><rect x="601" y="71.2" width="56" height="2.6"/></g>
+      <rect x="601" y="40" width="24" height="18" fill="#2B3E6E"/>
+      <g fill="#F7F3EA"><circle cx="606" cy="45" r=".9"/><circle cx="612" cy="45" r=".9"/><circle cx="618" cy="45" r=".9"/><circle cx="609" cy="49" r=".9"/><circle cx="615" cy="49" r=".9"/><circle cx="621" cy="49" r=".9"/><circle cx="606" cy="53" r=".9"/><circle cx="612" cy="53" r=".9"/><circle cx="618" cy="53" r=".9"/></g>
     </g>
   </g>
-  <!-- Smoke wisps -->
-  <g class="h803smoke">
-    <ellipse cx="380" cy="90" rx="30" ry="12" fill="#8A8A8A" opacity="0.2"/>
-    <ellipse cx="540" cy="85" rx="25" ry="10" fill="#8A8A8A" opacity="0.15"/>
+  <!-- live oaks framing the scene, with Spanish moss -->
+  <g fill="#26301F">
+    <path d="M0,0 H200 Q190,30 150,38 Q160,60 120,62 Q130,84 90,86 Q100,110 60,110 Q70,140 30,138 L36,180 L18,180 L22,130 Q0,128 0,120 Z"/>
+    <path d="M24,180 Q40,120 70,96 Q90,82 140,60" stroke="#26301F" stroke-width="7" fill="none"/>
+    <path d="M920,0 H730 Q752,26 790,30 Q782,56 826,58 Q818,82 862,84 Q856,108 896,110 Q890,132 920,134 Z"/>
+    <path d="M905,180 Q890,130 868,104 Q850,84 800,50" stroke="#26301F" stroke-width="7" fill="none"/>
   </g>
-  <!-- Cannon -->
-  <g transform="translate(280,160)">
-    <circle cx="0" cy="10" r="8" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="1.5"/>
-    <circle cx="16" cy="10" r="8" fill="#3A3A3A" stroke="#2A2A2A" stroke-width="1.5"/>
-    <rect x="-5" y="-5" width="35" height="12" rx="3" fill="#4A4A4A" stroke="#2A2A2A" stroke-width="1.5"/>
-  </g>
-  <!-- Florida outline (simplified) -->
-  <g transform="translate(700,90)" opacity="0.4">
-    <path d="M 0 0 L 40 -5 L 60 5 L 55 15 L 65 30 L 60 50 L 45 65 L 30 85 L 25 95 L 20 80 L 15 60 L 5 45 L -5 25 Z" fill="none" stroke="#C0B090" stroke-width="2"/>
-    <!-- Star marking (Olustee area) -->
-    <circle cx="35" cy="25" r="4" fill="#C04040" opacity="0.7"/>
-  </g>
-  <!-- Supply wagon -->
-  <g transform="translate(150,155)">
-    <rect x="0" y="0" width="40" height="20" fill="#A08060" stroke="#6A5030" stroke-width="1.5"/>
-    <circle cx="5" cy="22" r="6" fill="#5A4A30" stroke="#3A2A1A" stroke-width="1.5"/>
-    <circle cx="35" cy="22" r="6" fill="#5A4A30" stroke="#3A2A1A" stroke-width="1.5"/>
-  </g>
-  <!-- Tattered flag -->
-  <g transform="translate(460,60)">
-    <line x1="0" y1="0" x2="0" y2="40" stroke="#5A3A1A" stroke-width="2.5"/>
-    <polygon points="3,5 30,10 28,20 3,18" fill="#8A8A8A" stroke="#6A6A6A" stroke-width="0.8" opacity="0.6"/>
-  </g>
-  <!-- Trees -->
-  <g fill="#2A4A2A">
-    <ellipse cx="50" cy="160" rx="35" ry="28"/>
-    <rect x="47" y="160" width="5" height="25" fill="#3A2A1A"/>
-  </g>
-  <g fill="#2A4A2A">
-    <ellipse cx="880" cy="155" rx="35" ry="30"/>
-    <rect x="877" y="155" width="5" height="30" fill="#3A2A1A"/>
+  <g fill="#7E8A78" opacity=".85">
+    <path class="b803-moss" d="M60,104 q3,22 -2,40 q4,-14 8,-2 q2,-18 -2,-38 Z"/>
+    <path class="b803-moss m2" d="M110,64 q2,26 -3,44 q4,-12 8,0 q1,-24 -1,-44 Z"/>
+    <path class="b803-moss" d="M152,36 q3,20 -2,34 q4,-10 7,0 q1,-20 -2,-34 Z"/>
+    <path class="b803-moss m2" d="M826,56 q-3,24 2,42 q-4,-12 -8,0 q-1,-22 2,-42 Z"/>
+    <path class="b803-moss" d="M866,84 q-2,22 3,38 q-4,-10 -8,0 q-1,-20 1,-38 Z"/>
+    <path class="b803-moss m2" d="M788,30 q-2,18 2,30 q-3,-8 -6,0 q0,-18 1,-30 Z"/>
   </g>
 </svg>
 
@@ -3489,5 +4398,9 @@ updateProgress();
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
