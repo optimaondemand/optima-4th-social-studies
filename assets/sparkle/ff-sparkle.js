@@ -5167,6 +5167,61 @@
   function quizTotal(){ return document.querySelectorAll('#panel-check .quiz-q').length||3; }
   var WHEN={ perfect:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()===quizTotal(); },
              review:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()!==quizTotal(); } };
+  /* ═══ Spotlight: page parts light up, pop, point and reveal exactly when the recorded voice names them (PowerPoint-style).
+     Ported from the G4 Science Field Station layer (fs-sparkle.js cueRunner), 22 Oct 2026.
+     DATA.cues     = { <clip id>: [ {at: 'regex for the spoken word (first match after the previous cue)', sel: 'CSS selector',
+                                     i: n (n-th match) | all: true, fx: 'glow'|'pop'|'wiggle'|'point'|'trace'|'reveal', tag: 'short label', scroll: true} ] }
+     DATA.cueWords = { <clip id>: [[start, end, 'word'], …] }  (from an ElevenLabs Scribe transcript of the clip; without it the times are estimated)
+     spotlight(id, script, audio) wires one <audio>/Audio object. Nothing happens for a clip with no cues. ═══ */
+  function spotlight(id, script, audio) {
+    var D_ = (typeof DATA === 'object' && DATA) || {};
+    var C = (D_.cues || {})[id]; if (!C || !C.length || !audio) return;
+    var RM = false; try { RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    var toks = String(script || '').split(/\s+/).filter(Boolean), from = 0, beats = [];
+    function clean(t) { return String(t).replace(/^[^\w’']+|[^\w’']+$/g, ''); }
+    C.forEach(function (c) {
+      var re = new RegExp(c.at, 'i'), k = from;
+      while (k < toks.length && !re.test(clean(toks[k]))) k++;
+      if (k >= toks.length) { try { console.warn('spotlight: cue "' + c.at + '" is not in the ' + id + ' script'); } catch (e) {} return; }
+      beats.push({ c: c, k: k }); from = k + 1;
+    });
+    var W = (D_.cueWords || {})[id];
+    if (W && W.length) { var wf = 0; beats.forEach(function (b) { var re = new RegExp(b.c.at, 'i'), j = wf; while (j < W.length && !re.test(clean(W[j][2]))) j++; if (j < W.length) { b.t = W[j][0]; wf = j + 1; } }); }
+    function est(k, dur) {
+      var wt = function (t) { return t.length + 2 + (/[.!?]$/.test(t) ? 7 : /[,;:]$/.test(t) ? 3 : 0); };
+      var tot = toks.reduce(function (n, t) { return n + wt(t); }, 0), before = 0;
+      for (var i = 0; i < k; i++) before += wt(toks[i]);
+      return Math.max(0, before / (tot || 1) * (dur || 30) - 0.15);
+    }
+    var fired = -1, live = [], raf = 0, clr = 0;
+    function els(c) { var a = [].slice.call(document.querySelectorAll(c.sel)); if (c.i != null) return a[c.i] ? [a[c.i]] : []; return c.all ? a : a.slice(0, 1); }
+    function clearNow() { live.forEach(function (e) { e.classList.remove('spk-cue-now', 'spk-cue-pop', 'spk-cue-wiggle', 'spk-cue-point', 'spk-cue-trace'); var t = e.querySelector(':scope > .spk-cue-tag'); if (t) t.remove(); }); live = []; }
+    function fire(i) {
+      var b = beats[i]; if (!b) return; clearNow();
+      els(b.c).forEach(function (e) {
+        e.classList.remove('spk-cue-wait'); e.classList.add('spk-cue-lit', 'spk-cue-now');
+        var fx = b.c.fx || 'glow'; if (fx !== 'glow' && fx !== 'reveal' && !RM) { void e.offsetWidth; e.classList.add('spk-cue-' + fx); }
+        if ((b.c.tag || fx === 'point') && getComputedStyle(e).position === 'static') e.classList.add('spk-cue-rel');
+        if (b.c.tag) { var t = document.createElement('span'); t.className = 'spk-cue-tag'; t.setAttribute('aria-hidden', 'true'); t.textContent = b.c.tag; e.appendChild(t); }
+        if (b.c.scroll) { var r = e.getBoundingClientRect(); if (r.bottom < 60 || r.top > innerHeight - 60) e.scrollIntoView({ block: 'center', behavior: RM ? 'auto' : 'smooth' }); }
+        live.push(e);
+      });
+    }
+    function at(t, dur) { var n = -1; beats.forEach(function (b, i) { if (t >= (b.t != null ? b.t - 0.1 : est(b.k, dur))) n = i; }); while (fired < n) { fired++; fire(fired); } }
+    function tick() { if (audio.paused) return; at(audio.currentTime, audio.duration); raf = requestAnimationFrame(tick); }
+    audio.addEventListener('play', function () {
+      clearTimeout(clr); if (audio.currentTime < 0.3) { fired = -1; clearNow(); }
+      beats.forEach(function (b) { if ((b.c.fx || '') === 'reveal') els(b.c).forEach(function (e) { if (!e.classList.contains('spk-cue-lit')) e.classList.add('spk-cue-wait'); }); });
+      document.documentElement.classList.add('spk-cueing'); cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
+    });
+    audio.addEventListener('timeupdate', function () { if (!audio.paused) at(audio.currentTime, audio.duration); });
+    function end(done) { cancelAnimationFrame(raf); document.documentElement.classList.remove('spk-cueing');
+      [].forEach.call(document.querySelectorAll('.spk-cue-wait'), function (e) { e.classList.remove('spk-cue-wait'); });
+      clr = setTimeout(clearNow, done ? 1600 : 0); if (done) fired = -1; }
+    audio.addEventListener('pause', function () { if (!audio.ended) end(false); });
+    audio.addEventListener('ended', function () { end(true); });
+  }
+
   function buildVoice(){ (DATA.voice||[]).forEach(function(v){ var w=AT[v.at]&&AT[v.at](); if(!w) return;
     var parts=v.parts||[{slot:v.slot,script:v.script}], key=v.slot||parts.map(function(p){ return p.slot; }).join('+'), bars='';
     for(var i=0;i<30;i++) bars+='<i style="height:'+(5+Math.round(13*Math.abs(Math.sin(i*1.7+key.length))))+'px"></i>';
@@ -5185,7 +5240,7 @@
       document.querySelectorAll('.spk-vn.playing').forEach(function(o){ if(o!==n&&o.__stop) o.__stop(); });
       aus[cur].play(); n.classList.add('playing'); play.textContent='❚❚'; });
     n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'Read along'; });
-    parts.forEach(function(p,idx){ aus[idx].src=AUD+'g4ss-'+LESSON+'-'+p.slot+'.mp3'; }); }); refreshVoice(); }
+    parts.forEach(function(p,idx){ aus[idx].src=AUD+'g4ss-'+LESSON+'-'+p.slot+'.mp3'; spotlight(p.slot, p.script, aus[idx]); }); }); refreshVoice(); }
   function refreshVoice(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
   function paintVideos(){ if(!document.documentElement.classList.contains('spk-on')) return; document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
   function buildMedia(){ paintVideos(); if(!window.__spkVidObs){ window.__spkVidObs=new MutationObserver(function(){ clearTimeout(window.__spkVidT); window.__spkVidT=setTimeout(paintVideos,100); }); window.__spkVidObs.observe(document.body,{childList:true,subtree:true}); } }

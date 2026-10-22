@@ -3250,3 +3250,22 @@ html.spk-quiet .spk-farm .sun { animation: none; }
   .spk-efbks .bk .in .it.new, .spk-efbks .bk.thud .pocket, .spk-rng .rg.grow, .spk-rngp.on, .spk-cstsvg .str.new, .spk-cstnotes li.new, .spk-crn .cr .wing, .spk-crn .flock, .spk-crn .wd.tap, .spk-stairs .sp.rise { animation: none !important; }
   .spk-cstsvg .str.new { stroke-dashoffset: 0; }
 }
+
+/* ═══ Spotlight: parts light up when the recorded voice names them (ported from the G4 Science layer) ═══ */
+.spk-cue-rel { position:relative; }
+.spk-cue-wait { opacity:.28; filter:grayscale(.6); transform:translateY(6px); transition: opacity .45s, filter .45s, transform .45s; }
+.spk-cue-lit { transition: opacity .45s, filter .45s, transform .45s, box-shadow .35s; }
+.spk-cue-now { box-shadow: 0 0 0 3px #E0A92E, 0 0 22px rgba(245,184,61,.75) !important; border-radius:12px; animation: spkCueGlow 1.6s ease-in-out infinite; }
+@keyframes spkCueGlow { 50% { box-shadow: 0 0 0 3px #F5B83D, 0 0 34px rgba(245,184,61,.95); } }
+.spk-cue-pop { animation: spkCuePop .6s ease-out, spkCueGlow 1.6s .6s ease-in-out infinite; }
+@keyframes spkCuePop { 0% { transform: scale(1); } 40% { transform: scale(1.07); } 70% { transform: scale(.98); } 100% { transform: scale(1); } }
+.spk-cue-wiggle { animation: spkCueWig .7s ease-in-out, spkCueGlow 1.6s .7s ease-in-out infinite; }
+@keyframes spkCueWig { 20% { transform: rotate(-2.5deg); } 45% { transform: rotate(2.5deg); } 70% { transform: rotate(-1.2deg); } 100% { transform: rotate(0); } }
+.spk-cue-point::before { content:'\1F449'; position:absolute; left:-34px; top:50%; font-size:26px; transform:translateY(-50%); animation: spkCuePoint .8s ease-in-out infinite; z-index:3; pointer-events:none; }
+@keyframes spkCuePoint { 50% { transform: translate(7px,-50%); } }
+.spk-cue-trace { background-image: linear-gradient(#F9D98A, #F9D98A); background-repeat:no-repeat; background-position: 0 100%; background-size: 0 35%; animation: spkCueTrace .9s ease-out forwards, spkCueGlow 1.6s ease-in-out infinite; }
+@keyframes spkCueTrace { to { background-size: 100% 35%; } }
+.spk-cue-tag { position:absolute; top:-12px; right:10px; background:#0E1C42; color:#FFE7A3; font:900 12px 'Nunito',sans-serif; padding:3px 9px; border-radius:20px; box-shadow:0 2px 6px rgba(0,0,0,.25); z-index:4; pointer-events:none; white-space:nowrap; animation: spkCueTagIn .35s ease-out; }
+@keyframes spkCueTagIn { from { opacity:0; transform: translateY(6px); } to { opacity:1; transform:none; } }
+@media (max-width:700px) { .spk-cue-point::before { left:-6px; top:-14px; transform:none; font-size:22px; } }
+@media (prefers-reduced-motion: reduce) { .spk-cue-now, .spk-cue-pop, .spk-cue-wiggle, .spk-cue-trace, .spk-cue-point::before, .spk-cue-tag { animation:none !important; } .spk-cue-wait { transform:none; } .spk-cue-trace { background-size:100% 35%; } }
