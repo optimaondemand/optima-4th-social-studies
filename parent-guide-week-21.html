@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 21 Family Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 21: Florida at a Crossroads</h1>
+      <div class="sub">Unit 9: Florida at a Crossroads · Lessons 4.09.01–4.09.02</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Review week</span>
+        <span class="chip">Unit 9 Assessment</span>
+        <span class="chip">Florida File 9 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-09-01-sources-timeline.jpg');background-position:center center;background-color:#E9DDC3;" role="img" aria-label="A timeline made for this lesson from five real sources, from an 1819 map to an 1872 print"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four tabs, in order:</strong> Learn → Explore → Check → Assignment. A button at the bottom of each tab moves to the next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> The bottom of the Assignment tab collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Download as PDF</strong> (or Copy) saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Listen</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>A one-week review of Units 7 and 8. Your student looks back over 56 years, from <strong>1821</strong>, when Florida became a U.S. territory, to <strong>1877</strong>, when Reconstruction ended. In Lesson 1 they put the big events in order and find how each one led to the next. In Lesson 2 they choose the one event they think <strong>most changed Florida</strong> and defend that claim with evidence. There is no single right answer. What counts is the evidence. The week ends with the Unit 9 Assessment.</p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Claim, evidence, reasoning.</strong> Make a claim you can prove, back it with facts you can check, and explain how the facts prove it.</div>
+      <div class="box b-green"><div class="box-label">Virtues this week</div><strong>Perseverance and honesty.</strong> Sticking with a big review, and following the evidence even when it leads somewhere you didn’t expect.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> These lessons look back at slavery, the Civil War, and Reconstruction, so the pages stay calm, with no celebrations. Nothing new or graphic is added. In Lesson 4.09.02 your student learns that “Slavery was wrong” is a true judgment but not <em>evidence</em>; evidence is a fact you can check in a record, like “By 1860, nearly half of the people in Florida were enslaved.” If your student asks why, that’s a great conversation to have.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.09.01<span>Lesson 1</span></td>
+          <td><span class="ch">Timeline Review: Territorial Florida to Reconstruction</span><br>Four eras, in order. <strong>Territory</strong> (1821–1845): after the Adams-Onís Treaty of 1819, Spain gave Florida to the United States, and the Second Seminole War (1835–1842) was fought over Seminole land. <strong>Statehood</strong> (1845–1861): Florida became the 27th state on March 3, 1845, as a slave state, and cotton plantations grew. <strong>Civil War</strong> (1861–1865): Florida left the United States on January 10, 1861, and the Battle of Olustee was fought on February 20, 1864. <strong>Reconstruction</strong> (1865–1877): freedom was announced in Tallahassee on May 20, 1865, three amendments changed the Constitution, and in 1871 Josiah T. Walls became Florida’s first Black member of Congress. Your student looks for how each event led to the next.<br><span class="pill p-source">Source: a timeline of five real sources from Units 7 and 8, from an 1819 map to an 1872 print</span><span class="pill p-virtue">Virtue: Perseverance</span><span class="pill p-new">Word root: sequ = to follow</span></td>
+          <td><strong>Historian’s Notebook synthesis</strong> (4–6 sentences): how Florida changed from a territory to a state rebuilding after the Civil War, with at least three specific events or facts.</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.09.02<span>Lesson 2</span></td>
+          <td><span class="ch">Evidence Claim: Which Event Most Changed Florida?</span><br>Historians don’t just describe the past; they make claims about it and prove them. Your student learns the difference between a <strong>claim</strong> (an idea you can prove), <strong>evidence</strong> (a fact you can check), and an <strong>opinion</strong> (a feeling). They study a diagram of seven events, from the Seminole Wars to Reconstruction, with arrows showing which events led to later ones. Then they pick the event they think most changed Florida and back it with two facts, using the Claim-Evidence-Reasoning pattern.<br><span class="pill p-source">Source: a diagram made for this lesson of seven events and how they connect</span><span class="pill p-virtue">Virtue: Honesty</span><span class="pill p-new">Word root: clam/claim = to call out</span></td>
+          <td><strong>Evidence-claim response</strong> (4–6 sentences): “I claim that ___ most changed Florida because ___. My evidence is ___ and ___. This shows that ___.”</td>
+        </tr>
+        <tr class="extra-row">
+          <td class="day-n">📝<span>Assessment</span></td>
+          <td colspan="2"><strong>Unit 9 Assessment: a review of Units 7 and 8</strong> (about 35 minutes). 6 multiple-choice questions, two short questions about a reading on Florida statehood in 1845, a claim (which one event, from Fort Mose through Reconstruction, most changed Florida, with at least two pieces of evidence), and a reflection on <strong>justice</strong>. Your student copies or downloads their answers and <strong>submits them in Canvas</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>File 9 is the <strong>second checkpoint</strong>, a door between Unit 8 and modern Florida. The teacher can’t go through it until the class shows how the Crossroads files fit together. In Lesson 4.09.01 your student sorts nine event cards into four manila folders, one for each era. As they read, a live oak’s cut end grows one ring per era, oldest in the middle. They tap the numbers on a timeline of five real sources and tie red strings from each earlier event to a later one it led to. They bring sandhill cranes into line by matching words built on <em>sequ</em> (to follow), like sequence and consequence, and plan their writing on a three-step staircase. In Lesson 4.09.02 they sort statements into three trays (claim, evidence, opinion), then build an “argument house” as they read: facts for the ground, evidence for the pillars, reasoning for the beam, and the claim for the roof. They tap each event in the diagram to watch its arrows light up, pin their claim, and fill a claim card with their event, two facts, and how they’ll start their reasoning. A word game on <em>clam/claim</em> (claim, exclaim, proclaim, proclamation) ends with a real Florida moment: on May 20, 1865, the Emancipation Proclamation was read aloud from the steps of the Knott House in Tallahassee. Then the door opens, calmly, and modern Florida is next.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>era</b><span>a long stretch of time with something in common, like the Civil War era</span></div>
+      <div class="word"><b>sequence</b><span>the order things happen in (sequ = to follow)</span></div>
+      <div class="word"><b>consequence</b><span>something that follows from, or happens because of, something else</span></div>
+      <div class="word"><b>claim</b><span>an idea you can prove with evidence</span></div>
+      <div class="word"><b>evidence</b><span>facts you can check that show what really happened</span></div>
+      <div class="word"><b>opinion</b><span>a feeling or belief that facts can’t prove</span></div>
+      <div class="word"><b>reasoning</b><span>explaining how your evidence proves your claim</span></div>
+      <div class="word"><b>proclaim</b><span>to announce out loud, in public (clam = to call out)</span></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">Can you put the four eras in order, with the year each one starts?</span><span class="listen">Listen for: Territory, 1821. Statehood, 1845. Civil War, 1861. Reconstruction, 1865 (it ended in 1877).</span></li>
+      <li><span class="q">Name one event that led to another.</span><span class="listen">Listen for: a real link, like “Florida joined as a slave state, and that led to secession in 1861,” or “the Union won, so the amendments ended slavery and gave Black men the vote.”</span></li>
+      <li><span class="q">What’s the difference between a claim, evidence, and an opinion?</span><span class="listen">Listen for: a claim is an idea you can prove; evidence is a fact you can check; an opinion is a feeling.</span></li>
+      <li><span class="q">Which event do you think changed Florida the most? What’s your evidence?</span><span class="listen">Listen for: one event and two specific facts (a date, a number, or a name). Any event works if the evidence holds it up.</span></li>
+      <li><span class="q">Why isn’t “Slavery was wrong” evidence?</span><span class="listen">Listen for: it’s true, but it’s a judgment. Evidence is a fact you can check, like “nearly half of the people in Florida were enslaved in 1860.”</span></li>
+    </ol>
+  </section>
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a writing task (a Historian’s Notebook synthesis or an evidence-claim response), and a Historian’s Sentence, submitted in Canvas</li>
+        <li><strong>Unit 9 Assessment:</strong> submitted in Canvas when it’s finished</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> a clear claim, at least two specific facts from Units 7 and 8 (like March 3, 1845, or Josiah T. Walls in 1871), and a sentence that starts “This shows…” to explain how the facts prove the claim.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Family timeline.</strong> Put four family events in order. Which one led to another?</li>
+        <li><strong>Prove it.</strong> Make a claim about the best family dinner. Give two facts, not feelings.</li>
+        <li><strong>Find the root.</strong> Claim, exclaim, and proclaim all hide a word part that means “to call out.” Then try sequence and consequence: what do they share?</li>
+      </ul>
+    </section>
+  </div>
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🏛️</div>
+      <div><p><strong>The Knott House Museum</strong> (Tallahassee), where the Emancipation Proclamation was read on May 20, 1865. Nearby, the <strong>Museum of Florida History</strong> tells Florida’s story across many eras, including the Civil War. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 22</h2></div>
+    <p><strong>Unit 10: Modern Florida Takes Shape.</strong> A four-week unit. It starts with the railroads, roads, and new inventions that helped Florida grow in the late 1800s and early 1900s, including Henry Flagler’s railroad down the east coast, and then the big industries Florida is known for, like farming, tourism, and space.</p>
+    <p class="small" style="margin-top:8px;"><a href="parent-guide-unit-9.html">See the whole Unit 9 guide →</a></p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 21 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
