@@ -1784,6 +1784,2235 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.09.02",
+ "title": "Evidence Claim: Which Event Most Changed Florida?",
+ "quiet": true,
+ "file": {
+  "n": 9,
+  "title": "Checkpoint",
+  "label": "Checkpoint",
+  "seals": [
+   "⚖️",
+   "🏛️",
+   "📌"
+  ]
+ },
+ "prevFile": "Timeline Review: Territorial Florida to Reconstruction",
+ "connector": "Last time you put the files from 1821 to 1877 in order. Today the checkpoint door asks for one more thing: a claim.",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Sort",
+   "t": "Claim, evidence, or opinion?",
+   "why": "Put each card in its tray: a claim you could prove, a fact you can check, or a feeling."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Build the house, follow the arrows",
+   "why": "Build the argument house one piece at a time to read the guide. Then tap each event in the diagram and pin your claim."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill the claim card, then write",
+   "why": "Answer three questions. Then fill your claim card and write 4 to 6 sentences: your claim, two pieces of evidence, and your reasoning."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. The checkpoint door has one more lock on it.",
+  "opening": [
+   "The sign on the door says: Make a claim. Which event most changed Florida? Back it up with evidence.",
+   "Start in the Sort tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the trays",
+      "go": true,
+      "reply": "Tap a card, then tap its tray: Claim, Evidence, or Opinion. You can drag it, too."
+     },
+     {
+      "t": "What’s a claim?",
+      "reply": "A claim is an idea you say is true and can back up with evidence. Someone could disagree with it, so you have to prove it."
+     },
+     {
+      "t": "Is there a right answer?",
+      "reply": "Not one single answer. Historians disagree about this. What matters is how well you back up your claim."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Build the house one piece at a time, and read each part."
+     },
+     {
+      "t": "Claim or opinion?",
+      "reply": "Ask: could I prove it with facts? If yes, it’s a claim. If it’s only a feeling, it’s an opinion."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Can I change my claim?",
+      "reply": "Yes. Good historians follow the evidence. If the facts point somewhere else, it’s honest to change your mind."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s past the door?",
+      "reply": "A new unit: modern Florida. Railroads, roads, and new inventions changed where people lived and worked."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every card is in its tray. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Your house is built and your claim is pinned. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill your claim card and write 4 to 6 sentences with your claim, two pieces of evidence, and your reasoning."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for studying it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}the second checkpoint is clear. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Honesty for a historian means following the evidence, even when it leads somewhere you didn’t expect. Today you are a chronicler, someone who records and explains events, choosing the event that most changed Florida and proving your claim with facts.",
+ "scene1": {
+  "type": "cersort",
+  "h": "Is it a claim, evidence, or an opinion?",
+  "voice": "Tap a card, then tap its tray: Claim, Evidence, or Opinion. You can drag it, too.",
+  "why": {
+   "icon": "⚖️",
+   "q": "Why three trays?",
+   "t": "Historians keep three kinds of statements apart. A claim is an idea you can prove. Evidence is a fact you can check in a record. An opinion is a feeling that facts can’t prove. That’s why there are three trays."
+  },
+  "folders": [
+   {
+    "id": "c",
+    "t": "Claim",
+    "sub": "an idea you can prove"
+   },
+   {
+    "id": "e",
+    "t": "Evidence",
+    "sub": "a fact you can check"
+   },
+   {
+    "id": "o",
+    "t": "Opinion",
+    "sub": "a feeling"
+   }
+  ],
+  "cards": [
+   {
+    "id": "k1",
+    "p": "c",
+    "t": "Statehood in 1845 changed Florida the most, because it made Florida a slave state.",
+    "why": "A claim: someone could disagree, and facts can back it up.",
+    "miss": "Could someone disagree, and could you back it up with facts?"
+   },
+   {
+    "id": "k2",
+    "p": "c",
+    "t": "The Civil War changed Florida more than any other event.",
+    "why": "A claim you would prove with facts about the war.",
+    "miss": "This is an idea someone could argue about and prove. Which tray is that?"
+   },
+   {
+    "id": "k3",
+    "p": "c",
+    "t": "Reconstruction was the biggest turning point for Black Floridians.",
+    "why": "A claim. Facts like the vote and Walls in Congress could back it up.",
+    "miss": "It isn’t a single fact, and it isn’t just a feeling. It’s an idea to prove."
+   },
+   {
+    "id": "v1",
+    "p": "e",
+    "t": "On March 3, 1845, Florida became the 27th state.",
+    "why": "A fact with a date you can check.",
+    "miss": "Can you check this in a record? Look for a date."
+   },
+   {
+    "id": "v2",
+    "p": "e",
+    "t": "In 1860, 61,745 of Florida’s 140,424 people were enslaved.",
+    "why": "Numbers from the 1860 census. You can check them.",
+    "miss": "These are numbers you could check in a record."
+   },
+   {
+    "id": "v3",
+    "p": "e",
+    "t": "In 1871, Josiah T. Walls became Florida’s first Black member of Congress.",
+    "why": "A fact with a name and a date.",
+    "miss": "A name and a date you can check. Which tray?"
+   },
+   {
+    "id": "o1",
+    "p": "o",
+    "t": "Florida has the prettiest beaches in the country.",
+    "why": "A feeling. People can like different beaches.",
+    "miss": "Could anyone prove this with facts? Or is it a feeling?"
+   },
+   {
+    "id": "o2",
+    "p": "o",
+    "t": "Old maps are more fun to study than old newspapers.",
+    "why": "A feeling about what’s fun.",
+    "miss": "This is about what someone likes. Which tray?"
+   },
+   {
+    "id": "o3",
+    "p": "o",
+    "t": "1821 is the hardest date to remember.",
+    "why": "A feeling. It’s different for every person.",
+    "miss": "Is this a fact about history, or how someone feels?"
+   }
+  ],
+  "countT": "cards sorted.",
+  "firstT": "Tap a card first, then tap its tray.",
+  "win": "⚖️ <b>Every card is in its tray.<\/b> Claims are ideas you can prove. Evidence is facts you can check. Opinions are feelings. Your claim will need evidence holding it up."
+ },
+ "explore": {
+  "reading": {
+   "type": "arghouse",
+   "activity": "Making an Evidence-Based Claim",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Historians don't just describe"
+    },
+    {
+     "id": "p2",
+     "match": "^What makes a strong claim"
+    },
+    {
+     "id": "p3",
+     "match": "^What counts as evidence"
+    },
+    {
+     "id": "p4",
+     "match": "^The Claim-Evidence-Reasoning pattern"
+    },
+    {
+     "id": "p5",
+     "match": "^Which event will you choose"
+    }
+   ],
+   "parts": [
+    {
+     "id": "a",
+     "t": "What a claim is",
+     "piece": "ground",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "b",
+     "t": "A strong claim",
+     "piece": "roof",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "c",
+     "t": "Evidence",
+     "piece": "pillars",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "d",
+     "t": "Claim, Evidence, Reasoning",
+     "piece": "beam",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "e",
+     "t": "Your choice",
+     "piece": "lights",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "startT": "Lay the ground to start reading.",
+   "countT": "pieces built. Read this part, then build the next piece.",
+   "allT": "The house stands: a claim on top, held up by evidence and reasoning.",
+   "nextT": "Next: {t}",
+   "why": {
+    "icon": "🏛️",
+    "q": "Why a house?",
+    "t": "A roof can’t float in the air. It needs pillars under it and beams to hold it on. An argument works the same way: your claim is the roof, your evidence is the pillars, and your reasoning is the beam that joins them. That’s why each part of the guide builds one piece of the house."
+   }
+  },
+  "evidence": {
+   "type": "causeweb",
+   "kicker": "Ripple web",
+   "h": "Which event led to the most changes?",
+   "voice": "Tap each event in the diagram. Watch its arrows light up to the later events it led to, and read what it changed. When you’ve opened all seven, pin your claim.",
+   "why": {
+    "icon": "🕸️",
+    "q": "Why a web?",
+    "t": "One event can cause another, and that one can cause more, like ripples spreading on a pond. Following the arrows shows how far an event’s changes reached. That’s why each event you tap sends ripples down its arrows."
+   },
+   "nodes": {
+    "t": {
+     "t": "Territory",
+     "y": "1821",
+     "changes": [
+      "Florida became part of the United States.",
+      "Settlers moved in, many onto Seminole land.",
+      "Florida’s population grew until it could become a state."
+     ]
+    },
+    "sw": {
+     "t": "Seminole Wars",
+     "y": "1817–1858",
+     "changes": [
+      "Thousands of Seminole people were forced from their homes.",
+      "Many were made to move west.",
+      "A few hundred stayed in the Everglades. The Seminole Tribe of Florida is still here today."
+     ]
+    },
+    "st": {
+     "t": "Statehood",
+     "y": "1845",
+     "changes": [
+      "Florida became the 27th state, as a slave state.",
+      "Voters could elect a governor and vote for president, but only white men could vote."
+     ]
+    },
+    "sl": {
+     "t": "Slavery grows",
+     "y": "1845–1860",
+     "changes": [
+      "Cotton plantations grew in north Florida.",
+      "By 1860, nearly half of the people in Florida were enslaved."
+     ]
+    },
+    "sc": {
+     "t": "Secession",
+     "y": "1861",
+     "changes": [
+      "On January 10, 1861, Florida left the United States.",
+      "Florida joined the Confederacy."
+     ]
+    },
+    "cw": {
+     "t": "Civil War",
+     "y": "1861–1865",
+     "changes": [
+      "About 15,000 Floridians served in the Confederate army.",
+      "The Battle of Olustee (1864) was the largest battle in Florida.",
+      "Slavery ended. Freedom was announced in Tallahassee on May 20, 1865."
+     ]
+    },
+    "r": {
+     "t": "Reconstruction",
+     "y": "1865–1877",
+     "changes": [
+      "Three amendments promised freedom, citizenship, and the vote.",
+      "Black Floridians voted, went to school, and held office. Josiah T. Walls went to Congress.",
+      "After 1877, Jim Crow laws took many of these gains away."
+     ]
+    }
+   },
+   "countT": "events opened. Tap an event in the diagram above.",
+   "pinT": "Pin the event you will claim changed Florida the most:",
+   "readT": "Last step: build every piece of the house in Learn the Story at the top of this tab.",
+   "win": "🕸️ <b>Your claim is pinned.<\/b> Some events led to many later changes; others changed people’s lives deeply right away. Either can make a strong claim if you back it up."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Build each piece of the house in Learn the Story and read each part.",
+    "Tap each of the 7 events in the diagram and read what it changed.",
+    "Pin the event you will claim.",
+    "Read the three questions under the diagram."
+   ]
+  }
+ },
+ "planner": {
+  "type": "claimcard",
+  "voice": "Fill your claim card. First pick your event. Then pin two facts that belong to it. Last, pick how you’ll start your reasoning. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "📌",
+   "q": "Why a claim card?",
+   "t": "Before historians write, they jot their claim and their best facts on a card, so nothing important gets lost. That’s why your plan is a card with three slots: claim, evidence, and reasoning."
+  },
+  "events": [
+   {
+    "id": "t",
+    "t": "Territory (1821)"
+   },
+   {
+    "id": "sw",
+    "t": "Seminole Wars (1817–1858)"
+   },
+   {
+    "id": "st",
+    "t": "Statehood (1845)"
+   },
+   {
+    "id": "sl",
+    "t": "Slavery grows (1845–1860)"
+   },
+   {
+    "id": "sc",
+    "t": "Secession (1861)"
+   },
+   {
+    "id": "cw",
+    "t": "Civil War (1861–1865)"
+   },
+   {
+    "id": "r",
+    "t": "Reconstruction (1865–1877)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "a1",
+    "e": "t",
+    "t": "In 1821 Florida became a U.S. territory."
+   },
+   {
+    "id": "a2",
+    "e": "t",
+    "t": "Settlers moved onto Seminole land."
+   },
+   {
+    "id": "a3",
+    "e": "t",
+    "t": "Florida’s population grew until it could become a state."
+   },
+   {
+    "id": "b1",
+    "e": "sw",
+    "t": "Three Seminole Wars were fought: 1817–1818, 1835–1842, and 1855–1858."
+   },
+   {
+    "id": "b2",
+    "e": "sw",
+    "t": "Thousands of Seminole people were forced from their homes."
+   },
+   {
+    "id": "b3",
+    "e": "sw",
+    "t": "The Seminole Tribe of Florida is still here today."
+   },
+   {
+    "id": "c1",
+    "e": "st",
+    "t": "On March 3, 1845, Florida became the 27th state."
+   },
+   {
+    "id": "c2",
+    "e": "st",
+    "t": "Florida joined as a slave state."
+   },
+   {
+    "id": "c3",
+    "e": "st",
+    "t": "Voters could elect a governor, but only white men could vote."
+   },
+   {
+    "id": "d1",
+    "e": "sl",
+    "t": "By 1860, 61,745 of Florida’s 140,424 people were enslaved."
+   },
+   {
+    "id": "d2",
+    "e": "sl",
+    "t": "Cotton plantations grew in north Florida."
+   },
+   {
+    "id": "e1",
+    "e": "sc",
+    "t": "On January 10, 1861, Florida left the United States."
+   },
+   {
+    "id": "e2",
+    "e": "sc",
+    "t": "Florida joined the Confederacy to keep slavery."
+   },
+   {
+    "id": "f1",
+    "e": "cw",
+    "t": "About 15,000 Floridians served in the Confederate army."
+   },
+   {
+    "id": "f2",
+    "e": "cw",
+    "t": "The Battle of Olustee in 1864 was the largest battle in Florida."
+   },
+   {
+    "id": "f3",
+    "e": "cw",
+    "t": "Freedom was announced in Tallahassee on May 20, 1865."
+   },
+   {
+    "id": "g1",
+    "e": "r",
+    "t": "The 15th Amendment (1870) gave Black men the right to vote."
+   },
+   {
+    "id": "g2",
+    "e": "r",
+    "t": "In 1871 Josiah T. Walls became Florida’s first Black member of Congress."
+   },
+   {
+    "id": "g3",
+    "e": "r",
+    "t": "After 1877, Jim Crow laws took many gains away."
+   },
+   {
+    "id": "z1",
+    "e": "op",
+    "t": "This was the most interesting event to learn about."
+   },
+   {
+    "id": "z2",
+    "e": "op",
+    "t": "This event is easy to remember."
+   },
+   {
+    "id": "z3",
+    "e": "op",
+    "t": "I like this event the best."
+   }
+  ],
+  "starters": [
+   "This shows that…",
+   "This proves that…"
+  ],
+  "opT": "That’s an opinion, not a fact you can check. Pick a fact.",
+  "otherT": "That’s a true fact, but it’s about a different event. Pick a fact about your claim.",
+  "doneT": "Your claim card is ready. Now write in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a claim",
+    "rx": "claim|most changed|changed florida|changed it the most|biggest|most important|i think|i believe"
+   },
+   {
+    "t": "evidence with a date or number",
+    "rx": "18\\d\\d|15,000|15000|61,745|140,424|half|62,000"
+   },
+   {
+    "t": "a second fact",
+    "rx": "walls|gibbs|olustee|seminole|plantation|cotton|enslaved|slave state|confedera|amendment|vote|governor|jim crow|black code|tallahassee|territor|congress"
+   },
+   {
+    "t": "reasoning",
+    "rx": "this shows|this proves|shows that|proves that|because|so "
+   }
+  ],
+  "lines": [
+   "Start with your claim: which event most changed Florida?",
+   "Good. Now add a fact with a date or a number.",
+   "Add your second piece of evidence.",
+   "Now explain it: “This shows that…”",
+   "That’s a strong, honest claim. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the trays, the house, and the diagram."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill the claim card: your event, two facts, and how you’ll start your reasoning."
+  },
+  {
+   "t": "Write",
+   "w": "Write 4 to 6 sentences: your claim, two pieces of evidence, and your reasoning. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Evidence-Claim Response"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your evidence-claim response and check off the whole list.",
+ "vocab": {
+  "type": "proclaim",
+  "kicker": "Proclaim it",
+  "h": "clam / claim = to call out",
+  "root": "clam",
+  "hl": "cla(?:i)?m",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match sends the message farther.",
+  "words": [
+   {
+    "w": "claim",
+    "m": "to say something is true, and be ready to back it up",
+    "miss": "It’s the shortest word, and the one you’ll write today.",
+    "say": "Claim. To say something is true, and be ready to back it up."
+   },
+   {
+    "w": "exclaim",
+    "m": "to call out suddenly, with strong feeling",
+    "miss": "Ex- means out. Which word means to call out suddenly?",
+    "say": "Exclaim. To call out suddenly, with strong feeling."
+   },
+   {
+    "w": "proclaim",
+    "m": "to announce something out loud to everyone",
+    "miss": "Pro- means forward, out in front. Which word means to announce to everyone?",
+    "say": "Proclaim. To announce something out loud to everyone."
+   },
+   {
+    "w": "proclamation",
+    "m": "an official announcement made to the public",
+    "miss": "It ends in -tion, which makes a thing. Which word is it?",
+    "say": "Proclamation. An official announcement made to the public."
+   }
+  ],
+  "win": "📣 The message carries. <b>clam / claim<\/b> = to call out",
+  "why": {
+   "icon": "📣",
+   "q": "Why a speaker’s stand?",
+   "t": "Long ago, important news was called out to a crowd from the steps of a public building. On May 20, 1865, the Emancipation Proclamation was read aloud from the steps of the Knott House in Tallahassee. That’s why each match sends the message farther from the stand."
+  }
+ },
+ "cabinet": {
+  "n": 9,
+  "where": "The door between Unit 8 and Unit 10",
+  "blurb": "The second checkpoint: sort the files from 1821 to 1877, connect them, and make a claim about which event changed Florida most."
+ },
+ "notes": {
+  "learned": [
+   "A claim is a statement you can defend with evidence. Someone could disagree with it.",
+   "Evidence is a specific fact you can check: a date, a name, a number, or a detail. An opinion is a feeling.",
+   "Claim, Evidence, Reasoning: say what you claim, give at least two facts, then explain how the facts prove it.",
+   "Some events, like becoming a territory, led to many later changes. Others, like the Civil War, changed lives deeply right away.",
+   "There is no single right answer. What matters is how well you back up your claim, and being honest if the evidence points somewhere else."
+  ],
+  "vocab": [
+   [
+    "claim",
+    "a statement you can defend with evidence"
+   ],
+   [
+    "evidence",
+    "a specific fact you can check"
+   ],
+   [
+    "opinion",
+    "what someone thinks or feels; it can’t be proved with facts"
+   ],
+   [
+    "judgment",
+    "what someone believes is right or wrong"
+   ],
+   [
+    "reasoning",
+    "explaining how your evidence proves your claim"
+   ],
+   [
+    "specific",
+    "naming exact events, dates, or people"
+   ],
+   [
+    "arguable",
+    "something people could disagree about"
+   ],
+   [
+    "claim (word root)",
+    "clam / claim = to call out"
+   ],
+   [
+    "exclaim",
+    "to call out suddenly, with strong feeling"
+   ],
+   [
+    "proclaim",
+    "to announce something out loud to everyone"
+   ],
+   [
+    "proclamation",
+    "an official announcement made to the public"
+   ]
+  ],
+  "wordParts": "The Latin word clamare means “to call out.” You can find it as claim or clam in claim, exclaim, proclaim, and proclamation."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "an event",
+    "rx": "territor|seminole|state|statehood|slaver|slave|plantation|cotton|seced|secession|confedera|civil war|war|reconstruct|1821|1845|1861|1865",
+    "n": 1
+   },
+   {
+    "t": "why",
+    "rx": "because|since|so |changed|change|made|gave|led|ended|end|freed|free|right|vote",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "two facts",
+    "rx": "18\\d\\d|15,000|15000|61,745|140,424|half|62,000|walls|gibbs|olustee|seminole|plantation|cotton|enslaved|slave state|confedera|amendment|vote|governor|jim crow|black code|tallahassee|territor|congress|27th",
+    "n": 2
+   },
+   {
+    "t": "a date or number",
+    "rx": "18\\d\\d|15,000|15000|61,745|140,424|half|62,000|27th|thousand",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "this shows / this proves",
+    "rx": "this shows|this proves|shows that|proves that|it shows|it proves|shows|proves",
+    "n": 1
+   },
+   {
+    "t": "connects to your claim",
+    "rx": "because|so |changed|change|most|biggest|important|led|caused|claim|florida",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the event you pinned in the Ripple web in the Explore tab (tab 2).",
+   "Name one event, then say why it changed Florida.",
+   "Try this shape: “I claim that ___ most changed Florida because ___.”"
+  ],
+  "journal-q2": [
+   "Tap your event in the diagram in the Explore tab (tab 2) and read what it changed.",
+   "Find two facts with dates, names, or numbers. Opinions don’t count.",
+   "Try this shape: “One piece of evidence is ___. Another is ___.”"
+  ],
+  "journal-q3": [
+   "Look at the beam of the argument house: reasoning joins the evidence to the claim.",
+   "Ask: how do your two facts show that your event changed Florida?",
+   "Try this shape: “This shows that ___ because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which event might a Seminole family pick? A family freed in 1865? Why?",
+  "journal-q2": "Go further: which of your two facts is stronger evidence, and why?",
+  "journal-q3": "Go further: what fact could someone use to argue against your claim? How would you answer?"
+ },
+ "quizMiss": [
+  {
+   "a": "A guess has nothing backing it up. A claim comes with evidence. Reread the first part of the house.",
+   "c": "Dates and facts are evidence. A claim is the idea they prove. Reread A strong claim."
+  },
+  {
+   "a": "This is a judgment about right and wrong. It’s true, but it isn’t a fact you can check. Reread Evidence.",
+   "c": "“The worst thing” is a judgment, not a fact you can check. Reread Evidence."
+  },
+  {
+   "a": "Those are steps for answering questions, not for proving a claim. Reread Claim, Evidence, Reasoning.",
+   "c": "Who, what, when are question words. Reread Claim, Evidence, Reasoning."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Can I check it?",
+   "at": "scene1",
+   "script": "If my friend says, this is the best pizza place in town, that’s an opinion. If she says it won the town pizza contest last year, that’s evidence. Read each card and ask: can I check it in a record? Is it an idea to prove? Or just a feeling? Then pick Claim, Evidence, or Opinion."
+  },
+  {
+   "slot": "guide2",
+   "label": "Say the difference",
+   "at": "s1done",
+   "script": "Pause me and say it out loud: A claim is an idea you can prove. Evidence is a fact you can check. An opinion is a feeling. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Build the house",
+   "at": "explore",
+   "script": "A roof can’t float in the air. It needs pillars under it. As you read each part, watch the house go up. Your claim is the roof, your evidence is the pillars, and your reasoning is the beam that holds them together."
+  },
+  {
+   "slot": "guide4",
+   "label": "Which roof?",
+   "at": "afterread",
+   "script": "Pause me and think. If you built this house for your own claim, which event would sit on the roof? Say it out loud, with one fact that could hold it up."
+  },
+  {
+   "slot": "guide5",
+   "label": "Follow the arrows",
+   "at": "evidence",
+   "script": "When I plan a road trip, I follow each road on the map to see where it leads. Do that with this diagram. Tap an event, watch its arrows light up, and read what it changed. Then pin your claim."
+  },
+  {
+   "slot": "guide6",
+   "label": "Fill the card",
+   "at": "plan",
+   "script": "Your claim card has three slots. First, the claim: pick your event. Next, the evidence: pin two facts that belong to it, not opinions. Last, the reasoning: pick how you’ll start, this shows or this proves. You’ll write the sentences yourself in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^opinion$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"o\"]"
+   },
+   {
+    "at": "^evidence$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"e\"]"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-cers .spk-efcard",
+    "scroll": true
+   },
+   {
+    "at": "^Claim$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"c\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^Evidence$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"e\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^Opinion$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"o\"]",
+    "fx": "trace"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^claim$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"c\"]"
+   },
+   {
+    "at": "^Evidence$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"e\"]"
+   },
+   {
+    "at": "^opinion$",
+    "sel": ".spk-cers .spk-efbks .bk[data-b=\"o\"]"
+   },
+   {
+    "at": "^Explore$",
+    "sel": "#btn-explore"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^roof$",
+    "sel": ".spk-ahs .pc.roof"
+   },
+   {
+    "at": "^pillars$",
+    "sel": ".spk-ahs .pc.pillars"
+   },
+   {
+    "at": "^house$",
+    "sel": ".spk-ahs .spk-ahsbar"
+   },
+   {
+    "at": "^claim$",
+    "sel": ".spk-ahs .pc.roof"
+   },
+   {
+    "at": "^evidence$",
+    "sel": ".spk-ahs .pc.pillars"
+   },
+   {
+    "at": "^reasoning$",
+    "sel": ".spk-ahs .pc.beam"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^house$",
+    "sel": ".spk-ahs .spk-ahsbar",
+    "scroll": true
+   },
+   {
+    "at": "^roof$",
+    "sel": ".spk-ahs .pc.roof"
+   },
+   {
+    "at": "^fact$",
+    "sel": ".spk-ahs .pc.pillars"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^diagram$",
+    "sel": "figure.cause-web",
+    "scroll": true
+   },
+   {
+    "at": "^event$",
+    "sel": "figure.cause-web .cw-node",
+    "i": 0
+   },
+   {
+    "at": "^arrows$",
+    "sel": "figure.cause-web .cw-edge",
+    "all": true
+   },
+   {
+    "at": "^changed$",
+    "sel": ".spk-cweb .spk-cwpanel"
+   },
+   {
+    "at": "^pin$",
+    "sel": ".spk-cweb .spk-cw-ct"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^card$",
+    "sel": ".spk-ccd .spk-ccdcard"
+   },
+   {
+    "at": "^claim$",
+    "sel": ".spk-ccdcard .row.cl",
+    "fx": "reveal"
+   },
+   {
+    "at": "^evidence$",
+    "sel": ".spk-ccdcard .row.ev",
+    "fx": "reveal"
+   },
+   {
+    "at": "^reasoning$",
+    "sel": ".spk-ccdcard .row.rs",
+    "fx": "reveal"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "trace",
+    "scroll": true
+   }
+  ]
+ },
+ "cueWords": {
+  "guide1": [
+   [
+    0.0,
+    0.16,
+    "If"
+   ],
+   [
+    0.24,
+    0.32,
+    "my"
+   ],
+   [
+    0.4,
+    0.72,
+    "friend"
+   ],
+   [
+    0.96,
+    1.36,
+    "says,"
+   ],
+   [
+    1.52,
+    1.68,
+    "this"
+   ],
+   [
+    1.76,
+    1.84,
+    "is"
+   ],
+   [
+    1.96,
+    2.08,
+    "the"
+   ],
+   [
+    2.16,
+    2.48,
+    "best"
+   ],
+   [
+    2.64,
+    2.8,
+    "pizza"
+   ],
+   [
+    2.88,
+    3.12,
+    "place"
+   ],
+   [
+    3.2,
+    3.28,
+    "in"
+   ],
+   [
+    3.36,
+    4.08,
+    "town,"
+   ],
+   [
+    4.16,
+    4.36,
+    "that’s"
+   ],
+   [
+    4.4,
+    4.48,
+    "an"
+   ],
+   [
+    4.56,
+    5.32,
+    "opinion."
+   ],
+   [
+    5.6,
+    5.76,
+    "If"
+   ],
+   [
+    5.88,
+    6.0,
+    "she"
+   ],
+   [
+    6.16,
+    6.32,
+    "says"
+   ],
+   [
+    6.56,
+    6.72,
+    "it"
+   ],
+   [
+    6.84,
+    6.96,
+    "won"
+   ],
+   [
+    7.04,
+    7.12,
+    "the"
+   ],
+   [
+    7.28,
+    7.44,
+    "town"
+   ],
+   [
+    7.52,
+    7.84,
+    "pizza"
+   ],
+   [
+    7.92,
+    8.4,
+    "contest"
+   ],
+   [
+    8.56,
+    8.72,
+    "last"
+   ],
+   [
+    8.84,
+    9.36,
+    "year,"
+   ],
+   [
+    9.44,
+    9.84,
+    "that’s"
+   ],
+   [
+    9.92,
+    10.92,
+    "evidence."
+   ],
+   [
+    11.36,
+    11.44,
+    "Read"
+   ],
+   [
+    11.6,
+    11.68,
+    "each"
+   ],
+   [
+    12.08,
+    12.16,
+    "card"
+   ],
+   [
+    12.24,
+    12.48,
+    "and"
+   ],
+   [
+    12.72,
+    13.12,
+    "ask:"
+   ],
+   [
+    13.2,
+    13.28,
+    "can"
+   ],
+   [
+    13.44,
+    13.56,
+    "I"
+   ],
+   [
+    13.68,
+    13.76,
+    "check"
+   ],
+   [
+    13.84,
+    13.88,
+    "it"
+   ],
+   [
+    13.92,
+    14.0,
+    "in"
+   ],
+   [
+    14.04,
+    14.08,
+    "a"
+   ],
+   [
+    14.48,
+    15.04,
+    "record?"
+   ],
+   [
+    15.2,
+    15.24,
+    "Is"
+   ],
+   [
+    15.28,
+    15.36,
+    "it"
+   ],
+   [
+    15.44,
+    15.52,
+    "an"
+   ],
+   [
+    15.92,
+    15.96,
+    "idea"
+   ],
+   [
+    16.0,
+    16.08,
+    "to"
+   ],
+   [
+    16.56,
+    17.08,
+    "prove?"
+   ],
+   [
+    17.2,
+    17.44,
+    "Or"
+   ],
+   [
+    17.6,
+    17.64,
+    "just"
+   ],
+   [
+    17.68,
+    17.76,
+    "a"
+   ],
+   [
+    17.84,
+    18.84,
+    "feeling?"
+   ],
+   [
+    18.96,
+    19.04,
+    "Then"
+   ],
+   [
+    19.28,
+    19.52,
+    "pick"
+   ],
+   [
+    19.92,
+    20.24,
+    "Claim,"
+   ],
+   [
+    20.8,
+    21.0,
+    "Evidence,"
+   ],
+   [
+    21.04,
+    21.12,
+    "or"
+   ],
+   [
+    21.28,
+    22.08,
+    "Opinion."
+   ]
+  ],
+  "guide2": [
+   [
+    0.0,
+    0.32,
+    "Pause"
+   ],
+   [
+    0.4,
+    0.64,
+    "me"
+   ],
+   [
+    0.72,
+    0.88,
+    "and"
+   ],
+   [
+    0.96,
+    1.04,
+    "say"
+   ],
+   [
+    1.12,
+    1.2,
+    "it"
+   ],
+   [
+    1.28,
+    1.36,
+    "out"
+   ],
+   [
+    1.44,
+    2.4,
+    "loud:"
+   ],
+   [
+    2.44,
+    2.48,
+    "A"
+   ],
+   [
+    2.64,
+    3.12,
+    "claim"
+   ],
+   [
+    3.2,
+    3.28,
+    "is"
+   ],
+   [
+    3.36,
+    3.44,
+    "an"
+   ],
+   [
+    3.52,
+    4.0,
+    "idea"
+   ],
+   [
+    4.08,
+    4.16,
+    "you"
+   ],
+   [
+    4.24,
+    4.4,
+    "can"
+   ],
+   [
+    4.48,
+    5.6,
+    "prove."
+   ],
+   [
+    5.92,
+    6.24,
+    "Evidence"
+   ],
+   [
+    6.32,
+    6.4,
+    "is"
+   ],
+   [
+    6.48,
+    6.56,
+    "a"
+   ],
+   [
+    6.64,
+    6.96,
+    "fact"
+   ],
+   [
+    7.04,
+    7.12,
+    "you"
+   ],
+   [
+    7.2,
+    7.36,
+    "can"
+   ],
+   [
+    7.56,
+    8.32,
+    "check."
+   ],
+   [
+    8.36,
+    8.4,
+    "An"
+   ],
+   [
+    8.48,
+    9.12,
+    "opinion"
+   ],
+   [
+    9.2,
+    9.28,
+    "is"
+   ],
+   [
+    9.36,
+    9.52,
+    "a"
+   ],
+   [
+    9.56,
+    10.52,
+    "feeling."
+   ],
+   [
+    10.56,
+    10.8,
+    "Then"
+   ],
+   [
+    10.88,
+    11.04,
+    "go"
+   ],
+   [
+    11.08,
+    11.12,
+    "to"
+   ],
+   [
+    11.2,
+    11.28,
+    "the"
+   ],
+   [
+    11.56,
+    11.84,
+    "Explore"
+   ],
+   [
+    11.92,
+    12.56,
+    "tab,"
+   ],
+   [
+    12.72,
+    12.88,
+    "tab"
+   ],
+   [
+    12.96,
+    13.52,
+    "2."
+   ]
+  ],
+  "guide3": [
+   [
+    0.0,
+    0.08,
+    "A"
+   ],
+   [
+    0.16,
+    0.42,
+    "roof"
+   ],
+   [
+    0.48,
+    0.76,
+    "can’t"
+   ],
+   [
+    0.8,
+    1.2,
+    "float"
+   ],
+   [
+    1.24,
+    1.28,
+    "in"
+   ],
+   [
+    1.36,
+    1.44,
+    "the"
+   ],
+   [
+    1.52,
+    1.92,
+    "air."
+   ],
+   [
+    2.24,
+    2.28,
+    "It"
+   ],
+   [
+    2.32,
+    2.56,
+    "needs"
+   ],
+   [
+    2.64,
+    3.04,
+    "pillars"
+   ],
+   [
+    3.12,
+    3.28,
+    "under"
+   ],
+   [
+    3.36,
+    3.6,
+    "it."
+   ],
+   [
+    4.08,
+    4.24,
+    "As"
+   ],
+   [
+    4.32,
+    4.4,
+    "you"
+   ],
+   [
+    4.48,
+    4.72,
+    "read"
+   ],
+   [
+    4.8,
+    4.96,
+    "each"
+   ],
+   [
+    5.04,
+    5.68,
+    "part,"
+   ],
+   [
+    5.84,
+    6.0,
+    "watch"
+   ],
+   [
+    6.08,
+    6.12,
+    "the"
+   ],
+   [
+    6.16,
+    6.48,
+    "house"
+   ],
+   [
+    6.56,
+    6.72,
+    "go"
+   ],
+   [
+    6.8,
+    7.32,
+    "up."
+   ],
+   [
+    7.6,
+    7.76,
+    "Your"
+   ],
+   [
+    7.84,
+    8.24,
+    "claim"
+   ],
+   [
+    8.32,
+    8.4,
+    "is"
+   ],
+   [
+    8.48,
+    8.56,
+    "the"
+   ],
+   [
+    8.64,
+    9.36,
+    "roof,"
+   ],
+   [
+    9.44,
+    9.6,
+    "your"
+   ],
+   [
+    9.68,
+    10.16,
+    "evidence"
+   ],
+   [
+    10.24,
+    10.32,
+    "is"
+   ],
+   [
+    10.4,
+    10.48,
+    "the"
+   ],
+   [
+    10.56,
+    11.44,
+    "pillars,"
+   ],
+   [
+    11.52,
+    11.6,
+    "and"
+   ],
+   [
+    11.68,
+    11.76,
+    "your"
+   ],
+   [
+    11.84,
+    12.4,
+    "reasoning"
+   ],
+   [
+    12.48,
+    12.64,
+    "is"
+   ],
+   [
+    12.68,
+    12.72,
+    "the"
+   ],
+   [
+    12.88,
+    13.2,
+    "beam"
+   ],
+   [
+    13.28,
+    13.36,
+    "that"
+   ],
+   [
+    13.44,
+    13.76,
+    "holds"
+   ],
+   [
+    13.84,
+    13.92,
+    "them"
+   ],
+   [
+    14.0,
+    14.8,
+    "together."
+   ]
+  ],
+  "guide4": [
+   [
+    0.0,
+    0.288,
+    "Pause"
+   ],
+   [
+    0.32,
+    0.48,
+    "me"
+   ],
+   [
+    0.56,
+    0.827,
+    "and"
+   ],
+   [
+    0.88,
+    1.36,
+    "think."
+   ],
+   [
+    2.08,
+    2.24,
+    "If"
+   ],
+   [
+    2.32,
+    2.4,
+    "you"
+   ],
+   [
+    2.48,
+    2.72,
+    "built"
+   ],
+   [
+    2.8,
+    2.88,
+    "this"
+   ],
+   [
+    2.96,
+    3.2,
+    "house"
+   ],
+   [
+    3.28,
+    3.36,
+    "for"
+   ],
+   [
+    3.44,
+    3.6,
+    "your"
+   ],
+   [
+    3.68,
+    3.84,
+    "own"
+   ],
+   [
+    3.92,
+    4.64,
+    "claim,"
+   ],
+   [
+    4.72,
+    4.88,
+    "which"
+   ],
+   [
+    4.96,
+    5.28,
+    "event"
+   ],
+   [
+    5.36,
+    5.44,
+    "would"
+   ],
+   [
+    5.52,
+    5.68,
+    "sit"
+   ],
+   [
+    5.72,
+    5.76,
+    "on"
+   ],
+   [
+    5.84,
+    5.88,
+    "the"
+   ],
+   [
+    5.92,
+    6.4,
+    "roof?"
+   ],
+   [
+    7.2,
+    7.24,
+    "Say"
+   ],
+   [
+    7.28,
+    7.36,
+    "it"
+   ],
+   [
+    7.52,
+    7.72,
+    "out"
+   ],
+   [
+    7.92,
+    8.28,
+    "loud,"
+   ],
+   [
+    8.4,
+    8.48,
+    "with"
+   ],
+   [
+    8.64,
+    8.8,
+    "one"
+   ],
+   [
+    9.12,
+    9.2,
+    "fact"
+   ],
+   [
+    9.28,
+    9.36,
+    "that"
+   ],
+   [
+    9.52,
+    9.6,
+    "could"
+   ],
+   [
+    9.68,
+    9.76,
+    "hold"
+   ],
+   [
+    9.84,
+    10.0,
+    "it"
+   ],
+   [
+    10.16,
+    10.4,
+    "up."
+   ]
+  ],
+  "guide5": [
+   [
+    0.0,
+    0.16,
+    "When"
+   ],
+   [
+    0.2,
+    0.24,
+    "I"
+   ],
+   [
+    0.4,
+    0.56,
+    "plan"
+   ],
+   [
+    0.64,
+    0.68,
+    "a"
+   ],
+   [
+    0.72,
+    0.96,
+    "road"
+   ],
+   [
+    1.04,
+    1.52,
+    "trip,"
+   ],
+   [
+    1.6,
+    1.68,
+    "I"
+   ],
+   [
+    1.76,
+    2.08,
+    "follow"
+   ],
+   [
+    2.16,
+    2.4,
+    "each"
+   ],
+   [
+    2.48,
+    2.64,
+    "road"
+   ],
+   [
+    2.72,
+    2.8,
+    "on"
+   ],
+   [
+    2.84,
+    2.88,
+    "the"
+   ],
+   [
+    2.96,
+    3.28,
+    "map"
+   ],
+   [
+    3.36,
+    3.44,
+    "to"
+   ],
+   [
+    3.52,
+    3.6,
+    "see"
+   ],
+   [
+    3.68,
+    3.76,
+    "where"
+   ],
+   [
+    3.84,
+    3.92,
+    "it"
+   ],
+   [
+    4.0,
+    4.76,
+    "leads."
+   ],
+   [
+    5.04,
+    5.2,
+    "Do"
+   ],
+   [
+    5.28,
+    5.44,
+    "that"
+   ],
+   [
+    5.52,
+    5.68,
+    "with"
+   ],
+   [
+    5.8,
+    5.92,
+    "this"
+   ],
+   [
+    6.0,
+    6.84,
+    "diagram."
+   ],
+   [
+    7.12,
+    7.36,
+    "Tap"
+   ],
+   [
+    7.4,
+    7.44,
+    "an"
+   ],
+   [
+    7.52,
+    8.32,
+    "event,"
+   ],
+   [
+    8.4,
+    8.64,
+    "watch"
+   ],
+   [
+    8.76,
+    8.88,
+    "its"
+   ],
+   [
+    8.96,
+    9.2,
+    "arrows"
+   ],
+   [
+    9.28,
+    9.44,
+    "light"
+   ],
+   [
+    9.52,
+    9.92,
+    "up,"
+   ],
+   [
+    10.0,
+    10.08,
+    "and"
+   ],
+   [
+    10.16,
+    10.4,
+    "read"
+   ],
+   [
+    10.48,
+    10.56,
+    "what"
+   ],
+   [
+    10.64,
+    10.72,
+    "it"
+   ],
+   [
+    10.8,
+    11.76,
+    "changed."
+   ],
+   [
+    11.88,
+    12.0,
+    "Then"
+   ],
+   [
+    12.24,
+    12.4,
+    "pin"
+   ],
+   [
+    12.48,
+    12.56,
+    "your"
+   ],
+   [
+    12.64,
+    13.36,
+    "claim."
+   ]
+  ],
+  "guide6": [
+   [
+    0.0,
+    0.24,
+    "Your"
+   ],
+   [
+    0.36,
+    0.48,
+    "claim"
+   ],
+   [
+    0.56,
+    0.88,
+    "card"
+   ],
+   [
+    0.96,
+    1.2,
+    "has"
+   ],
+   [
+    1.28,
+    1.52,
+    "three"
+   ],
+   [
+    1.6,
+    2.4,
+    "slots."
+   ],
+   [
+    2.64,
+    3.2,
+    "First,"
+   ],
+   [
+    3.28,
+    3.36,
+    "the"
+   ],
+   [
+    3.6,
+    4.24,
+    "claim:"
+   ],
+   [
+    4.36,
+    4.48,
+    "pick"
+   ],
+   [
+    4.56,
+    4.64,
+    "your"
+   ],
+   [
+    4.88,
+    5.44,
+    "event."
+   ],
+   [
+    5.76,
+    6.32,
+    "Next,"
+   ],
+   [
+    6.4,
+    6.48,
+    "the"
+   ],
+   [
+    6.56,
+    7.52,
+    "evidence:"
+   ],
+   [
+    7.68,
+    7.84,
+    "pin"
+   ],
+   [
+    7.92,
+    8.08,
+    "two"
+   ],
+   [
+    8.24,
+    8.56,
+    "facts"
+   ],
+   [
+    8.64,
+    8.72,
+    "that"
+   ],
+   [
+    8.84,
+    9.12,
+    "belong"
+   ],
+   [
+    9.2,
+    9.28,
+    "to"
+   ],
+   [
+    9.36,
+    9.76,
+    "it,"
+   ],
+   [
+    9.84,
+    10.08,
+    "not"
+   ],
+   [
+    10.16,
+    11.28,
+    "opinions."
+   ],
+   [
+    11.36,
+    12.0,
+    "Last,"
+   ],
+   [
+    12.08,
+    12.16,
+    "the"
+   ],
+   [
+    12.24,
+    13.2,
+    "reasoning:"
+   ],
+   [
+    13.32,
+    13.44,
+    "pick"
+   ],
+   [
+    13.52,
+    13.6,
+    "how"
+   ],
+   [
+    13.68,
+    13.84,
+    "you’ll"
+   ],
+   [
+    13.92,
+    14.64,
+    "start,"
+   ],
+   [
+    14.76,
+    14.88,
+    "this"
+   ],
+   [
+    14.96,
+    15.52,
+    "shows"
+   ],
+   [
+    15.6,
+    15.84,
+    "or"
+   ],
+   [
+    15.92,
+    16.16,
+    "this"
+   ],
+   [
+    16.28,
+    17.2,
+    "proves."
+   ],
+   [
+    17.28,
+    17.44,
+    "You’ll"
+   ],
+   [
+    17.56,
+    17.68,
+    "write"
+   ],
+   [
+    17.72,
+    17.76,
+    "the"
+   ],
+   [
+    17.84,
+    18.32,
+    "sentences"
+   ],
+   [
+    18.4,
+    18.96,
+    "yourself"
+   ],
+   [
+    19.04,
+    19.12,
+    "in"
+   ],
+   [
+    19.2,
+    19.44,
+    "Step"
+   ],
+   [
+    19.52,
+    20.08,
+    "3."
+   ]
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,81 +4251,75 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Evidence Claim: Which Event Most Changed Florida? ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A Florida lighthouse at dusk on a sandy point, its beam sweeping slowly across the water and the pines">
   <defs>
-    <linearGradient id="h902sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3A5A8A"/>
-      <stop offset="50%" stop-color="#5A7AAA"/>
-      <stop offset="100%" stop-color="#8AAAC8"/>
+    <linearGradient id="b902sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F2A4A"/><stop offset=".5" stop-color="#4B4E78"/><stop offset=".8" stop-color="#C98A7A"/><stop offset="1" stop-color="#E9B08A"/>
     </linearGradient>
-    <linearGradient id="h902ground" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2A5A3A"/>
-      <stop offset="100%" stop-color="#1A3A2A"/>
+    <linearGradient id="b902sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C5A78"/><stop offset="1" stop-color="#1E3348"/>
     </linearGradient>
-    <style>
-      .h902tilt { animation: h902tilt 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center top; }
-      @keyframes h902tilt { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-    </style>
+    <linearGradient id="b902beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF2C2" stop-opacity=".75"/><stop offset="1" stop-color="#FFF2C2" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="b902lamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF7D6"/><stop offset=".4" stop-color="#FFE29A" stop-opacity=".7"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="920" height="185" fill="url(#h902sky)"/>
-  <g opacity="0.3" fill="#FFFFFF">
-    <ellipse cx="200" cy="50" rx="55" ry="18"/>
-    <ellipse cx="680" cy="45" rx="50" ry="16"/>
+  <style>
+    .b902-beam{transform-origin:600px 46px;animation:b902-sweep 9s ease-in-out infinite}
+    .b902-beam.b2{animation-delay:-4.5s}
+    .b902-glow{transform-origin:600px 46px;animation:b902-pulse 4.5s ease-in-out infinite}
+    .b902-star{animation:b902-twinkle 5s ease-in-out infinite}
+    .b902-star.s2{animation-delay:-2s}.b902-star.s3{animation-delay:-3.4s}
+    .b902-wave{animation:b902-drift 10s ease-in-out infinite}
+    .b902-pine{transform-box:fill-box;transform-origin:50% 100%;animation:b902-sway 8s ease-in-out infinite}
+    @keyframes b902-sweep{0%,100%{transform:rotate(-14deg);opacity:.25}50%{transform:rotate(16deg);opacity:.9}}
+    @keyframes b902-pulse{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+    @keyframes b902-twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+    @keyframes b902-drift{0%,100%{transform:translateX(0)}50%{transform:translateX(14px)}}
+    @keyframes b902-sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1deg)}}
+    @media (prefers-reduced-motion: reduce){.b902-beam,.b902-glow,.b902-star,.b902-wave,.b902-pine{animation:none}.b902-beam{opacity:.6}}
+  </style>
+  <rect width="920" height="200" fill="url(#b902sky)"/>
+  <g fill="#FFF6DC">
+    <circle class="b902-star" cx="120" cy="30" r="1.4"/><circle class="b902-star s2" cx="260" cy="18" r="1.2"/><circle class="b902-star s3" cx="380" cy="40" r="1.1"/>
+    <circle class="b902-star s2" cx="760" cy="22" r="1.3"/><circle class="b902-star" cx="860" cy="44" r="1.1"/><circle class="b902-star s3" cx="470" cy="14" r="1.2"/>
   </g>
-  <rect y="180" width="920" height="80" fill="url(#h902ground)"/>
-  <!-- Balance scale -->
-  <g transform="translate(460,70)">
-    <!-- Post -->
-    <rect x="-3" y="0" width="6" height="90" fill="#5A4A30"/>
-    <circle cx="0" cy="0" r="6" fill="#D4943A"/>
-    <!-- Beam -->
-    <g class="h902tilt">
-      <rect x="-100" y="-3" width="200" height="6" rx="2" fill="#8A7A60"/>
-      <!-- Left pan -->
-      <line x1="-85" y1="3" x2="-85" y2="40" stroke="#6A5A40" stroke-width="1.5"/>
-      <line x1="-70" y1="3" x2="-85" y2="40" stroke="#6A5A40" stroke-width="1"/>
-      <line x1="-100" y1="3" x2="-85" y2="40" stroke="#6A5A40" stroke-width="1"/>
-      <ellipse cx="-85" cy="42" rx="22" ry="6" fill="#C8B890" stroke="#8A7A60" stroke-width="1"/>
-      <!-- Evidence card in left pan -->
-      <rect x="-95" y="30" width="20" height="14" rx="2" fill="#F0E8D0" stroke="#A08A60" stroke-width="0.8"/>
-      <!-- Right pan -->
-      <line x1="85" y1="3" x2="85" y2="40" stroke="#6A5A40" stroke-width="1.5"/>
-      <line x1="70" y1="3" x2="85" y2="40" stroke="#6A5A40" stroke-width="1"/>
-      <line x1="100" y1="3" x2="85" y2="40" stroke="#6A5A40" stroke-width="1"/>
-      <ellipse cx="85" cy="42" rx="22" ry="6" fill="#C8B890" stroke="#8A7A60" stroke-width="1"/>
-      <!-- Evidence card in right pan -->
-      <rect x="75" y="30" width="20" height="14" rx="2" fill="#F0E8D0" stroke="#A08A60" stroke-width="0.8"/>
-    </g>
+  <!-- the sweeping beams -->
+  <path class="b902-beam" d="M600,46 L930,6 L930,90 Z" fill="url(#b902beam)"/>
+  <path class="b902-beam b2" d="M600,46 L-10,4 L-10,92 Z" fill="url(#b902beam)" transform="scale(1,1)"/>
+  <!-- sea -->
+  <rect x="0" y="128" width="920" height="72" fill="url(#b902sea)"/>
+  <g class="b902-wave" stroke="#8FB0C8" stroke-width="1.4" fill="none" opacity=".55">
+    <path d="M40,150 q20,-4 40,0 t40,0"/><path d="M200,168 q20,-4 40,0 t40,0"/><path d="M700,160 q20,-4 40,0 t40,0"/><path d="M820,178 q20,-4 40,0 t40,0"/><path d="M380,182 q20,-4 40,0 t40,0"/>
   </g>
-  <!-- Evidence cards scattered -->
-  <g transform="translate(200,120)">
-    <rect x="0" y="0" width="35" height="45" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.2" transform="rotate(-8)"/>
-    <line x1="5" y1="10" x2="25" y2="10" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="5" y1="16" x2="25" y2="16" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="5" y1="22" x2="20" y2="22" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
+  <path d="M560,150 L640,150 L700,200 L500,200 Z" fill="#FFE29A" opacity=".12"/>
+  <!-- sandy point and dunes -->
+  <path d="M470,140 Q560,118 680,126 Q760,132 840,128 L920,130 L920,146 Q800,150 700,146 Q590,150 470,146 Z" fill="#D9C39A"/>
+  <path d="M500,134 Q530,122 560,128 M640,124 Q670,116 700,124" stroke="#B9A07A" stroke-width="2" fill="none"/>
+  <!-- lighthouse: tapered tower with a black-and-white spiral band look, lantern room on top -->
+  <g>
+    <path d="M588,130 L593,60 L607,60 L612,130 Z" fill="#F4EEE2"/>
+    <path d="M589.6,112 L610.4,104 L611,112 L589,120 Z" fill="#2B2F38"/>
+    <path d="M591.2,90 L608.8,83 L609.4,91 L590.6,98 Z" fill="#2B2F38"/>
+    <path d="M592.4,70 L607.6,64 L608,71 L592,77 Z" fill="#2B2F38"/>
+    <rect x="589" y="56" width="22" height="4" fill="#2B2F38"/>
+    <rect x="593" y="40" width="14" height="16" fill="#FFF2C2" stroke="#2B2F38" stroke-width="1.5"/>
+    <path d="M590,40 L600,30 L610,40 Z" fill="#2B2F38"/>
+    <rect x="582" y="128" width="36" height="6" fill="#B9A07A"/>
+    <rect x="618" y="118" width="22" height="14" fill="#E9E1D3"/><path d="M616,118 L629,110 L642,118 Z" fill="#8E5A3C"/>
   </g>
-  <g transform="translate(680,115)">
-    <rect x="0" y="0" width="35" height="45" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.2" transform="rotate(5)"/>
-    <line x1="5" y1="10" x2="25" y2="10" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="5" y1="16" x2="25" y2="16" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
+  <circle class="b902-glow" cx="600" cy="46" r="26" fill="url(#b902lamp)"/>
+  <!-- pines and palms on the near shore, left -->
+  <path d="M0,150 Q90,132 200,140 Q300,148 400,150 L470,146 L470,200 L0,200 Z" fill="#26341F"/>
+  <g fill="#1E2A19">
+    <rect x="52" y="70" width="5" height="78"/><g class="b902-pine"><path d="M54,50 L32,84 L46,82 L26,112 L84,112 L62,82 L76,84 Z"/></g>
+    <rect x="150" y="92" width="4" height="54"/><g class="b902-pine"><path d="M152,78 L136,102 L146,100 L132,122 L172,122 L158,100 L168,102 Z"/></g>
   </g>
-  <!-- Star badge (claim) -->
-  <g transform="translate(460,170)">
-    <polygon points="0,-16 4,-6 15,-6 6,1 10,12 0,5 -10,12 -6,1 -15,-6 -4,-6" fill="#D4943A" opacity="0.7"/>
-  </g>
-  <!-- Palm trees -->
-  <g fill="#1A5A3A">
-    <path d="M 60 250 Q 55 220 45 210 Q 58 220 65 215 Q 55 205 62 193 Q 68 210 70 220 Q 78 200 88 200 Q 78 215 73 225 Q 88 215 98 220 Q 83 230 70 237 L 66 255 Z"/>
-    <rect x="64" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A5A3A" transform="translate(830,0)">
-    <path d="M 20 248 Q 15 218 5 208 Q 18 218 25 213 Q 15 203 22 191 Q 28 208 30 218 Q 38 198 48 198 Q 38 213 33 223 Q 48 213 58 218 Q 43 228 30 235 L 26 253 Z"/>
-    <rect x="24" y="235" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <!-- Birds -->
-  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.6">
-    <path d="M 320 40 Q 326 35 332 40 Q 338 35 344 40"/>
-    <path d="M 560 50 Q 565 46 570 50 Q 575 46 580 50"/>
+  <g stroke="#1E2A19" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M300,148 Q298,118 304,96"/><path d="M304,96 q-18,-4 -26,6 M304,96 q16,-8 26,0 M304,96 q-6,-16 -18,-18 M304,96 q8,-14 20,-14"/>
+    <path d="M380,150 Q382,124 378,104"/><path d="M378,104 q-16,-6 -24,4 M378,104 q14,-8 24,-2 M378,104 q-4,-14 -14,-16 M378,104 q8,-12 18,-12"/>
   </g>
 </svg>
 
@@ -3619,5 +5842,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
