@@ -3168,6 +3168,7 @@ html.spk-quiet .spk-farm .sun { animation: none; }
 .spk-rng .rg { fill: #E2B57E; stroke: #A9733F; stroke-width: 1.4; opacity: .12; transform-box: view-box; transform-origin: 118px 88px; transition: opacity .7s ease; }
 .spk-rng .rg.b { fill: #D7A46B; }
 .spk-rng .rg.in { opacity: 1; }
+.spk-rng .rg.spk-cue-now:not(.in) { opacity: .6; } /* Spotlight: a ghost of the rings while the voice names them */
 .spk-rng .rg.grow { animation: spk-rngin .9s ease-out; }
 @keyframes spk-rngin { from { transform: scale(.88); } to { transform: none; } }
 .spk-rng .cracks path { stroke: #8E6438; stroke-width: 1; fill: none; opacity: .6; }
