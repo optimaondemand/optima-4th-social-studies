@@ -1784,6 +1784,813 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.09.01",
+ "title": "Timeline Review: Territorial Florida to Reconstruction",
+ "quiet": true,
+ "file": {
+  "n": 9,
+  "title": "Checkpoint",
+  "label": "Checkpoint",
+  "seals": [
+   "🗂️",
+   "🌳",
+   "🪜"
+  ]
+ },
+ "prevFile": "Challenges During Reconstruction",
+ "connector": "Last time we finished File 8, about Reconstruction. Now I’m at the second checkpoint, and the files from 1821 to 1877 are all mixed up.",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Sort",
+   "t": "Which era?",
+   "why": "Put each event card in the folder for its era: Territory, Statehood, Civil War, or Reconstruction."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Rings, then strings",
+   "why": "Add one tree ring at a time to read the story. Then tie strings between real sources to show what led to what."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Build the staircase, then write",
+   "why": "Answer three questions. Then build a three-step plan and write 4 to 6 sentences about how Florida changed from 1821 to 1877."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I reached another door. It’s the second checkpoint.",
+  "opening": [
+   "A checkpoint is a stop where you show what you know before you go on. This door says: put the Crossroads files in order, then connect them.",
+   "Start in the Sort tab (tab 1). Scroll down to the file card under the welcome video.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the folders",
+      "go": true,
+      "reply": "Tap a card, then tap the folder for its era. You can drag it, too."
+     },
+     {
+      "t": "What’s an era?",
+      "reply": "An era is a stretch of years that belong together, like the Civil War, 1861 to 1865."
+     },
+     {
+      "t": "Why “Crossroads”?",
+      "reply": "A crossroads is a place where roads meet and you choose which way to go. From 1821 to 1877, Florida came to one turning point after another."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Add one tree ring at a time, and read each part."
+     },
+     {
+      "t": "Why four folders?",
+      "reply": "Each folder is one era: Territory, Statehood, Civil War, and Reconstruction. Sorting them first helps you see the order."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "What’s a consequence?",
+      "reply": "A consequence is something that happens because of something else. Each string you tied joins a cause to its consequence."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s past this door?",
+      "reply": "One more file in this checkpoint. Next time you make a claim: which event changed Florida the most? Bring your evidence."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every card is in its folder. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You added every ring and tied the strings. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then build the staircase and write 4 to 6 sentences about how Florida changed from 1821 to 1877."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "This file is finished. Thank you for studying it with care.",
+     "quiet": true
+    },
+    {
+     "t": "{name,}the checkpoint door just opened. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Perseverance for a historian means sticking with hard work, even when there is a lot to remember. Today you are a Florida historian looking back over 56 years, from 1821 to 1877, to put the big events in order and find how each one led to the next.",
+ "scene1": {
+  "type": "erafolders",
+  "kicker": "Four era folders",
+  "h": "Which era does each event belong to?",
+  "voice": "Tap a card, then tap the folder for its era. You can drag it, too. An era is a stretch of years that belong together.",
+  "why": {
+   "icon": "🗂️",
+   "q": "Why folders?",
+   "t": "Historians sort what they find before they connect it, the way you might sort papers into folders. An era is a stretch of years that belong together. Florida’s story from 1821 to 1877 has four eras. That’s why there are four folders."
+  },
+  "folders": [
+   {
+    "id": "t",
+    "t": "Territory",
+    "sub": "1821–1845"
+   },
+   {
+    "id": "s",
+    "t": "Statehood",
+    "sub": "1845–1861"
+   },
+   {
+    "id": "w",
+    "t": "Civil War",
+    "sub": "1861–1865"
+   },
+   {
+    "id": "r",
+    "t": "Reconstruction",
+    "sub": "1865–1877"
+   }
+  ],
+  "cards": [
+   {
+    "id": "c1",
+    "p": "t",
+    "t": "Florida becomes a U.S. territory.",
+    "why": "1821",
+    "miss": "This is the very start of the story. Which era comes first?"
+   },
+   {
+    "id": "c2",
+    "p": "t",
+    "t": "The Second Seminole War begins.",
+    "why": "1835. It lasted until 1842.",
+    "miss": "This war began ten years before Florida became a state."
+   },
+   {
+    "id": "c3",
+    "p": "t",
+    "t": "Florida’s leaders write a constitution that protects slavery.",
+    "why": "1838, seven years before statehood.",
+    "miss": "This plan was written to get ready for statehood. Was Florida a state yet?"
+   },
+   {
+    "id": "c4",
+    "p": "s",
+    "t": "Florida becomes the 27th state, as a slave state.",
+    "why": "March 3, 1845.",
+    "miss": "This is the event that starts an era. Which one?"
+   },
+   {
+    "id": "c5",
+    "p": "s",
+    "t": "Cotton plantations grow in north Florida, worked by enslaved people.",
+    "why": "1850s. By 1860, nearly half of Floridians were enslaved.",
+    "miss": "This happened in the years before the war, the antebellum years."
+   },
+   {
+    "id": "c6",
+    "p": "w",
+    "t": "Florida secedes and joins the Confederacy.",
+    "why": "January 10, 1861.",
+    "miss": "Leaving the United States started Florida’s war years."
+   },
+   {
+    "id": "c7",
+    "p": "w",
+    "t": "The Battle of Olustee is fought near Lake City.",
+    "why": "February 20, 1864, the largest battle in Florida.",
+    "miss": "This was a battle. Which era had the fighting?"
+   },
+   {
+    "id": "c8",
+    "p": "r",
+    "t": "Florida passes Black Codes to limit what freed people can do.",
+    "why": "1865 and 1866, right after the war.",
+    "miss": "These laws came right after the war, when rebuilding began."
+   },
+   {
+    "id": "c9",
+    "p": "r",
+    "t": "Josiah T. Walls becomes Florida’s first Black member of Congress.",
+    "why": "1871",
+    "miss": "This happened in the rebuilding years after the war."
+   }
+  ],
+  "countT": "cards filed.",
+  "firstT": "Tap a card first, then tap the folder for its era.",
+  "win": "🗂️ <b>Every card is in its folder.<\/b> Four eras in 56 years: a territory, a state, a war, and rebuilding. Now you can see the order. Next, find how each era led to the next."
+ },
+ "explore": {
+  "reading": {
+   "type": "treerings",
+   "activity": "Timeline Review: Territory to Reconstruction",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Territorial Florida \\(1821"
+    },
+    {
+     "id": "p2",
+     "match": "^Statehood and the Antebellum"
+    },
+    {
+     "id": "p3",
+     "match": "^The Civil War \\(1861"
+    },
+    {
+     "id": "p4",
+     "match": "^Reconstruction \\(1865"
+    }
+   ],
+   "parts": [
+    {
+     "id": "a",
+     "t": "Territory",
+     "y": "1821–1845",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "b",
+     "t": "Statehood",
+     "y": "1845–1861",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "c",
+     "t": "Civil War",
+     "y": "1861–1865",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "d",
+     "t": "Reconstruction",
+     "y": "1865–1877",
+     "paras": [
+      "p4"
+     ]
+    }
+   ],
+   "startT": "Add the first ring to start reading.",
+   "countT": "rings in. Read this part, then add the next ring.",
+   "allT": "Four rings, 1821 to 1877. You read the whole story.",
+   "nextT": "Next ring: {t}",
+   "why": {
+    "icon": "🌳",
+    "q": "Why tree rings?",
+    "t": "A tree grows one new ring every year, so its rings are a timeline you can see. The oldest ring is in the middle, and the newest is near the bark. Live oaks in Florida can live for hundreds of years. That’s why each era of the story adds a ring."
+   }
+  },
+  "evidence": {
+   "type": "stringcauses",
+   "kicker": "String the causes",
+   "h": "What led to what?",
+   "need": 3,
+   "voice": "First tap each gold number on the timeline. Then tie three strings: tap an earlier source, then a later source it led to. You can drag one onto the other, too.",
+   "why": {
+    "icon": "🧵",
+    "q": "Why strings?",
+    "t": "Historians sometimes pin events on a board and tie string between them to show how one led to another. A cause comes first, and its consequence comes after. That’s why you tie a red string from an earlier source to a later one."
+   },
+   "items": [
+    {
+     "id": "s1",
+     "n": "1",
+     "y": "1819",
+     "t": "The treaty map"
+    },
+    {
+     "id": "s2",
+     "n": "2",
+     "y": "1846",
+     "t": "The new state"
+    },
+    {
+     "id": "s3",
+     "n": "3",
+     "y": "1861",
+     "t": "Leaving the Union"
+    },
+    {
+     "id": "s4",
+     "n": "4",
+     "y": "1864",
+     "t": "The Civil War in Florida"
+    },
+    {
+     "id": "s5",
+     "n": "5",
+     "y": "1872",
+     "t": "Rebuilding: Black members of Congress"
+    }
+   ],
+   "links": [
+    {
+     "a": "s1",
+     "b": "s2",
+     "note": "The treaty gave Florida to the U.S. → a territory in 1821 → the 27th state in 1845."
+    },
+    {
+     "a": "s2",
+     "b": "s3",
+     "note": "Florida joined as a slave state → it left the Union in 1861 to keep slavery."
+    },
+    {
+     "a": "s3",
+     "b": "s4",
+     "note": "Florida joined the Confederacy → the war came to Florida, at Olustee in 1864."
+    },
+    {
+     "a": "s4",
+     "b": "s5",
+     "note": "The Union won the war in 1865 → new amendments → Black men voted and served in Congress."
+    }
+   ],
+   "countT": "strings tied.",
+   "firstT": "Tap the earlier source first.",
+   "orderT": "A cause comes before what it leads to. Tap the earlier source first, then a later one.",
+   "weakT": "These are in order, but they’re far apart. What happened in between? Try a closer pair.",
+   "hotT": "Last step: tap every gold number on the timeline above.",
+   "readT": "Last step: add every ring in Learn the Story at the top of this tab.",
+   "win": "🧵 <b>The strings are tied.<\/b> Each source led to the next: a treaty, a new state, leaving the Union, war, and rebuilding. That’s how historians turn a list of dates into a story."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Add each tree ring in Learn the Story and read each part.",
+    "Tap each of the 5 gold numbers on the timeline.",
+    "Read the three questions under the timeline.",
+    "String the causes: tie three strings from an earlier source to a later one."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the timeline to see what it shows.",
+  "allT": "Now try String the causes below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 6.0,
+    "y": 8.3,
+    "title": "1819 · The treaty map.",
+    "t": "John Melish’s map of the United States. The Adams-Onís Treaty used an earlier printing of it. Spain agreed to give Florida to the U.S., and in 1821 Florida became a U.S. territory."
+   },
+   {
+    "n": "2",
+    "x": 37.9,
+    "y": 8.3,
+    "title": "1846 · The new state.",
+    "t": "“The State of Florida,” made by U.S. Army mapmakers one year after Florida became the 27th state, on March 3, 1845."
+   },
+   {
+    "n": "3",
+    "x": 69.8,
+    "y": 8.3,
+    "title": "1861 · Leaving the Union.",
+    "t": "The New York Herald of January 13, 1861. It reported that Florida had signed its order to secede (leave the United States)."
+   },
+   {
+    "n": "4",
+    "x": 21.9,
+    "y": 60.2,
+    "title": "1864 · The Civil War in Florida.",
+    "t": "The Battle of Olustee, the largest battle fought in Florida. This print was made in 1894, about 30 years later, by artists who weren’t there."
+   },
+   {
+    "n": "5",
+    "x": 53.8,
+    "y": 60.2,
+    "title": "1872 · Rebuilding.",
+    "t": "The first Black senator and representatives in Congress, elected during Reconstruction. Josiah T. Walls of Florida sits in the middle."
+   }
+  ]
+ },
+ "planner": {
+  "type": "staircase",
+  "voice": "Build three steps. The bottom step is an early event. The middle step is a later event it led to. The top step is an event from Reconstruction. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🪜",
+   "q": "Why stairs?",
+   "t": "You climb stairs one step at a time, and each step sits on the one below it. Florida’s story climbed the same way, from territory to state to war to rebuilding. That’s why your plan has three steps, each later than the one below."
+  },
+  "events": [
+   {
+    "id": "e1",
+    "y": "1821",
+    "t": "Florida becomes a U.S. territory",
+    "era": "t"
+   },
+   {
+    "id": "e2",
+    "y": "1835–1842",
+    "t": "The Second Seminole War",
+    "era": "t"
+   },
+   {
+    "id": "e3",
+    "y": "1845",
+    "t": "Florida becomes the 27th state, a slave state",
+    "era": "s"
+   },
+   {
+    "id": "e4",
+    "y": "1850s",
+    "t": "Cotton plantations grow, worked by enslaved people",
+    "era": "s"
+   },
+   {
+    "id": "e5",
+    "y": "1861",
+    "t": "Florida secedes and joins the Confederacy",
+    "era": "w"
+   },
+   {
+    "id": "e6",
+    "y": "1864",
+    "t": "The Battle of Olustee",
+    "era": "w"
+   },
+   {
+    "id": "e7",
+    "y": "1865–1870",
+    "t": "Three amendments: freedom, citizenship, the vote",
+    "era": "r"
+   },
+   {
+    "id": "e8",
+    "y": "1871",
+    "t": "Josiah T. Walls goes to Congress",
+    "era": "r"
+   },
+   {
+    "id": "e9",
+    "y": "1877",
+    "t": "Reconstruction ends; Jim Crow laws follow",
+    "era": "r"
+   }
+  ],
+  "steps": [
+   {
+    "lab": "First",
+    "top": "The bottom step: an early event"
+   },
+   {
+    "lab": "This led to",
+    "top": "The middle step: a later event it led to"
+   },
+   {
+    "lab": "By the end of Reconstruction",
+    "top": "The top step: an event from Reconstruction"
+   }
+  ],
+  "lastEra": "r",
+  "orderT": "Each step has to come after the one below it. Pick a later event.",
+  "lateT": "That’s too late for this step. The steps above it still need later events. Pick an earlier one.",
+  "eraT": "The top step is the end of the story. Pick an event from Reconstruction (1865–1877).",
+  "doneT": "Your staircase is built. Now write in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "an early event",
+    "rx": "1821|1835|1838|territor|treaty|seminole|constitution"
+   },
+   {
+    "t": "a middle event",
+    "rx": "1845|1861|1864|statehood|became a state|27th|plantation|cotton|seced|confedera|civil war|olustee"
+   },
+   {
+    "t": "Reconstruction",
+    "rx": "reconstruct|1865|1866|1868|1870|1871|1877|amendment|black code|walls|gibbs|jim crow|vote"
+   },
+   {
+    "t": "how it led on",
+    "rx": "led to|because|as a result|first|then|changed|by the end|so |after"
+   }
+  ],
+  "lines": [
+   "Start with your first event and its date.",
+   "Good. Now say what it led to.",
+   "Keep climbing: tell how things stood by the end of Reconstruction.",
+   "Almost there. Add the piece that’s still grey.",
+   "That’s a strong synthesis. Now write your Historian’s Sentence and finish the checklist."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the folders, the rings, and the strings."
+  },
+  {
+   "t": "Plan",
+   "w": "Build the staircase: an early event, what it led to, and an event from Reconstruction."
+  },
+  {
+   "t": "Write",
+   "w": "Write 4 to 6 sentences about how Florida changed from 1821 to 1877, with at least three events. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Synthesis Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your synthesis entry and check off the whole list.",
+ "vocab": {
+  "type": "cranes",
+  "kicker": "Follow the cranes",
+  "h": "sequ = to follow",
+  "root": "sequ",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match brings one more crane to follow the leader.",
+  "words": [
+   {
+    "w": "sequence",
+    "m": "the order in which things happen, one following another",
+    "miss": "A timeline shows this. Which word is it?",
+    "say": "Sequence. The order in which things happen, one following another."
+   },
+   {
+    "w": "consequence",
+    "m": "something that happens because of something else; a result",
+    "miss": "It starts with con-. It’s what happens because of something.",
+    "say": "Consequence. Something that happens because of something else. A result."
+   },
+   {
+    "w": "sequel",
+    "m": "a book or movie that follows an earlier one and continues its story",
+    "miss": "Think of a second movie in a series. Which word is it?",
+    "say": "Sequel. A book or movie that follows an earlier one and continues its story."
+   },
+   {
+    "w": "subsequent",
+    "m": "coming after; later",
+    "miss": "Sub- and -ent wrap around the root here. Which word means later?",
+    "say": "Subsequent. Coming after. Later."
+   }
+  ],
+  "win": "🕊️ The whole line is flying. <b>sequ<\/b> = to follow",
+  "why": {
+   "icon": "🕊️",
+   "q": "Why cranes?",
+   "t": "Sandhill cranes live in Florida all year, and in winter more fly in from the north. They often fly in a long line, each bird following the one ahead. Sequ means to follow. That’s why each match brings one more crane into line."
+  }
+ },
+ "cabinet": {
+  "n": 9,
+  "where": "The door between Unit 8 and Unit 10",
+  "blurb": "The second checkpoint: sort the files from 1821 to 1877 into eras, then connect them into one story."
+ },
+ "notes": {
+  "learned": [
+   "From 1821 to 1877, Florida went through four eras: Territory (1821–1845), Statehood (1845–1861), Civil War (1861–1865), and Reconstruction (1865–1877).",
+   "In 1821 Florida became a U.S. territory. The Seminole Wars forced thousands of Seminole people from their homes. The 1838 constitution protected slavery.",
+   "On March 3, 1845, Florida became the 27th state, as a slave state. By 1860, nearly half of the people in Florida were enslaved.",
+   "On January 10, 1861, Florida seceded and joined the Confederacy. The Battle of Olustee (1864) was the largest battle in Florida.",
+   "During Reconstruction, three amendments ended slavery, made freed people citizens, and gave Black men the vote. Josiah T. Walls went to Congress in 1871. Black Codes, violence, and later Jim Crow laws took many gains away.",
+   "Each event caused or shaped the next. Historians look for causes and consequences, not just dates."
+  ],
+  "vocab": [
+   [
+    "era",
+    "a stretch of years that belong together"
+   ],
+   [
+    "territory",
+    "land that belongs to the United States but is not yet a state"
+   ],
+   [
+    "constitution",
+    "a written plan for a government"
+   ],
+   [
+    "antebellum",
+    "before the war"
+   ],
+   [
+    "secede",
+    "to leave the United States"
+   ],
+   [
+    "Confederacy",
+    "the Southern states that fought to keep slavery"
+   ],
+   [
+    "Reconstruction",
+    "the time of rebuilding after the Civil War, 1865 to 1877"
+   ],
+   [
+    "Black Codes",
+    "laws in 1865 and 1866 that limited what freed people could do"
+   ],
+   [
+    "Jim Crow laws",
+    "laws after Reconstruction that kept Black and white people apart and took many rights away"
+   ],
+   [
+    "sequence",
+    "the order in which things happen"
+   ],
+   [
+    "consequence",
+    "something that happens because of something else; a result"
+   ],
+   [
+    "sequel",
+    "a book or movie that follows an earlier one"
+   ],
+   [
+    "subsequent",
+    "coming after; later"
+   ]
+  ],
+  "wordParts": "The Latin word sequi means “to follow.” You can find sequ in sequence, consequence, sequel, and subsequent."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "all four events",
+    "groups": [
+     "territor",
+     "state",
+     "civil war|war",
+     "reconstruct"
+    ],
+    "n": 4
+   },
+   {
+    "t": "dates",
+    "groups": [
+     "1821",
+     "1845",
+     "1865",
+     "1877"
+    ],
+    "n": 3
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "two events",
+    "rx": "1821|1835|1838|1842|1845|1861|1864|1865|1866|1868|1870|1871|1877|territor|state|seminole|constitution|slave|plantation|cotton|seced|confedera|war|olustee|amendment|reconstruct|black code|jim crow|vote|walls|gibbs|union|free|treaty|school",
+    "n": 2
+   },
+   {
+    "t": "because or as a result",
+    "rx": "because|as a result|so |led to|caused|cause|result|that is why|that's why|that’s why",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "an event",
+    "rx": "1821|1835|1838|1842|1845|1861|1864|1865|1866|1868|1870|1871|1877|territor|state|seminole|constitution|slave|plantation|cotton|seced|confedera|war|olustee|amendment|reconstruct|black code|jim crow|vote|walls|gibbs|union|free|treaty|school",
+    "n": 1
+   },
+   {
+    "t": "a reason",
+    "rx": "because|since|so |changed|change|led|made|gave|ended|end|free|freed|freedom|right|rights|vote|slave|slavery|people",
+    "n": 1
+   },
+   {
+    "t": "evidence",
+    "rx": "18\\d\\d|olustee|walls|gibbs|amendment|15,000|half|62,000|black code|constitution|confedera|union|treaty|seminole|enslaved|slavery|slave|free|vote|congress|war",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at your four era folders in tab 1. Each folder starts with one of these events.",
+   "Which came first: becoming a territory or becoming a state? Which came last?",
+   "Try this shape: “1821: ___. 1845: ___. 1865: ___. 1877: ___.”"
+  ],
+  "journal-q2": [
+   "Look at the red strings you tied in the Explore tab (tab 2).",
+   "Pick two events. Which came first? How did the first one lead to the second?",
+   "Try this shape: “Because ___, ___.” or “___. As a result, ___.”"
+  ],
+  "journal-q3": [
+   "Think back to the tree rings in the Explore tab (tab 2). Which ring had the biggest change?",
+   "Name one event. Then ask: how was Florida different after it?",
+   "Try this shape: “I think ___ changed Florida the most because ___. For example, ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: how many years passed from territory to statehood? From statehood to the end of the war?",
+  "journal-q2": "Go further: can you find a chain of three events, where each one led to the next?",
+  "journal-q3": "Go further: who might pick a different event, and why? Think about Seminole families, enslaved people, and settlers."
+ },
+ "quizMiss": [
+  {
+   "a": "1821 is when Florida became a territory, not a state. Reread the Territory ring.",
+   "c": "1861 is when Florida left the Union. Reread the Statehood ring."
+  },
+  {
+   "a": "Women got the vote much later, in 1920, from the 19th Amendment. Reread the Reconstruction ring.",
+   "c": "Florida became a state in 1845, long before the 13th Amendment. Reread the Reconstruction ring."
+  },
+  {
+   "a": "The Seminole Wars came before the Civil War. Olustee was in 1864. Reread the Civil War ring.",
+   "c": "Reconstruction began after the war ended in 1865. Olustee was in 1864. Reread the Civil War ring."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Sort by era",
+   "at": "scene1",
+   "script": "When I clean out a closet, I sort things into boxes first: summer clothes, winter clothes, school things. Then it’s easy to find anything. Do that with these files. Read each card and ask: was Florida a territory, a state, at war, or rebuilding?"
+  },
+  {
+   "slot": "guide2",
+   "label": "Say the four eras",
+   "at": "s1done",
+   "script": "Pause me and say the four eras in order, out loud, with the year each one starts: Territory, 1821. Statehood, 1845. Civil War, 1861. Reconstruction, 1865. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Read the rings",
+   "at": "explore",
+   "script": "A tree keeps its oldest ring in the middle and adds a new one every year. As you add each ring, read that part of the story, and ask yourself: what changed since the ring before?"
+  },
+  {
+   "slot": "guide4",
+   "label": "Pick a turning point",
+   "at": "afterread",
+   "script": "Pause me and think. Of all four rings, which part changed Florida the most? Say one reason out loud. You’ll need that idea for question three."
+  },
+  {
+   "slot": "guide5",
+   "label": "What led to what",
+   "at": "evidence",
+   "script": "When my yard flooded, I traced it back. First the rain came, then the river rose, and then the water reached my yard. Each thing led to the next. Do that with these sources. Tap the earlier one first, then the later one it led to."
+  },
+  {
+   "slot": "guide6",
+   "label": "Climb the stairs",
+   "at": "plan",
+   "script": "Your plan is three steps. The bottom step is an early event. The middle step is something it led to. The top step is how things stood by the end of Reconstruction. These are just notes. You’ll write the sentences yourself in Step 3."
+  }
+ ]
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,70 +2829,87 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Timeline Review: Territorial Florida to Reconstruction ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Dawn at a sandy crossroads in the Florida pines, with a wooden signpost pointing four ways and wagon ruts leading off in every direction">
   <defs>
-    <linearGradient id="h901sky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#3A5A8A"/>
-      <stop offset="50%" stop-color="#5A7AAA"/>
-      <stop offset="100%" stop-color="#8AAAC8"/>
+    <linearGradient id="b901sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#46577F"/><stop offset=".45" stop-color="#A98FA8"/><stop offset=".75" stop-color="#EDB58E"/><stop offset="1" stop-color="#F9DFAE"/>
     </linearGradient>
-    <linearGradient id="h901ground" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2A5A3A"/>
-      <stop offset="100%" stop-color="#1A3A2A"/>
+    <radialGradient id="b901sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF4C9"/><stop offset=".35" stop-color="#FFE29A" stop-opacity=".8"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b901ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#93A06A"/><stop offset="1" stop-color="#5B6A42"/>
     </linearGradient>
-    <style>
-      .h901pulse { animation: h901pulse 3s ease-in-out infinite; transform-box: fill-box; }
-      @keyframes h901pulse { 0%,100% { r: 8; } 50% { r: 10; } }
-    </style>
+    <linearGradient id="b901sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9D6AE"/><stop offset="1" stop-color="#D4BB8A"/>
+    </linearGradient>
   </defs>
-  <rect width="920" height="185" fill="url(#h901sky)"/>
-  <g opacity="0.3" fill="#FFFFFF">
-    <ellipse cx="150" cy="50" rx="55" ry="18"/>
-    <ellipse cx="700" cy="45" rx="50" ry="16"/>
+  <style>
+    .b901-glow{transform-origin:470px 128px;animation:b901-breathe 7s ease-in-out infinite}
+    .b901-arm{transform-box:fill-box;transform-origin:0 50%;animation:b901-creak 6s ease-in-out infinite}
+    .b901-arm.a2{transform-origin:100% 50%;animation-delay:-3s}
+    .b901-pine{transform-box:fill-box;transform-origin:50% 100%;animation:b901-sway 7s ease-in-out infinite}
+    .b901-pine.p2{animation-delay:-3.5s}
+    .b901-mist{animation:b901-mist 14s ease-in-out infinite}
+    .b901-crane{animation:b901-fly 24s linear infinite}
+    @keyframes b901-breathe{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.07);opacity:1}}
+    @keyframes b901-creak{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.4deg)}}
+    @keyframes b901-sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(1.1deg)}}
+    @keyframes b901-mist{0%,100%{transform:translateX(0);opacity:.55}50%{transform:translateX(18px);opacity:.75}}
+    @keyframes b901-fly{from{transform:translateX(-80px)}to{transform:translateX(1000px)}}
+    @media (prefers-reduced-motion: reduce){.b901-glow,.b901-arm,.b901-pine,.b901-mist,.b901-crane{animation:none}.b901-crane{transform:translateX(560px)}}
+  </style>
+  <rect width="920" height="200" fill="url(#b901sky)"/>
+  <circle class="b901-glow" cx="470" cy="128" r="130" fill="url(#b901sun)"/>
+  <circle cx="470" cy="128" r="22" fill="#FFF3C6" opacity=".95"/>
+  <!-- distant cranes in a line -->
+  <g class="b901-crane" fill="none" stroke="#4A4560" stroke-width="1.5" stroke-linecap="round">
+    <path d="M0,44 q6,-5 12,0 q6,-5 12,0"/><path d="M-22,52 q5,-4 10,0 q5,-4 10,0"/><path d="M-42,60 q5,-4 10,0 q5,-4 10,0"/>
   </g>
-  <rect y="180" width="920" height="80" fill="url(#h901ground)"/>
-  <!-- Timeline line -->
-  <line x1="120" y1="130" x2="800" y2="130" stroke="#D4943A" stroke-width="3" opacity="0.7"/>
-  <!-- Timeline dots -->
-  <circle cx="180" cy="130" r="8" fill="#D4943A" opacity="0.8"/>
-  <circle cx="320" cy="130" r="8" fill="#D4943A" opacity="0.8"/>
-  <circle cx="460" cy="130" class="h901pulse" fill="#55C8E8"/>
-  <circle cx="600" cy="130" r="8" fill="#D4943A" opacity="0.8"/>
-  <circle cx="740" cy="130" r="8" fill="#D4943A" opacity="0.8"/>
-  <!-- Scroll documents -->
-  <g transform="translate(180,80)">
-    <rect x="-15" y="-25" width="30" height="35" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.2"/>
-    <line x1="-8" y1="-15" x2="8" y2="-15" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="-8" y1="-9" x2="8" y2="-9" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
+  <!-- far tree line -->
+  <path d="M0,128 Q50,118 100,124 T220,120 T360,126 T520,118 T680,124 T820,118 T920,122 L920,200 L0,200 Z" fill="#6E7D58" opacity=".6"/>
+  <path class="b901-mist" d="M120,134 Q260,126 400,134 T700,132 L700,142 L120,142 Z" fill="#F7E6CF"/>
+  <!-- ground -->
+  <rect x="0" y="140" width="920" height="60" fill="url(#b901ground)"/>
+  <!-- four sandy roads meeting at the crossroads -->
+  <path d="M470,150 L-20,200 L120,200 Z" fill="url(#b901sand)"/>
+  <path d="M470,150 L940,200 L800,200 Z" fill="url(#b901sand)"/>
+  <path d="M470,150 L420,200 L520,200 Z" fill="url(#b901sand)"/>
+  <path d="M462,151 L450,140 L490,140 L478,151 Z" fill="#E2CFA2"/>
+  <ellipse cx="470" cy="153" rx="46" ry="7" fill="#E7D3A8"/>
+  <!-- wagon ruts -->
+  <g stroke="#B99A68" stroke-width="1.6" fill="none" opacity=".8">
+    <path d="M462,155 L60,200"/><path d="M478,155 L100,200"/><path d="M466,157 L440,200"/><path d="M476,157 L500,200"/><path d="M462,153 L860,200"/><path d="M478,153 L900,200"/>
   </g>
-  <g transform="translate(460,80)">
-    <rect x="-15" y="-25" width="30" height="35" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.2"/>
-    <line x1="-8" y1="-15" x2="8" y2="-15" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="-8" y1="-9" x2="8" y2="-9" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="-8" y1="-3" x2="5" y2="-3" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
+  <!-- signpost with four blank arms -->
+  <rect x="467" y="70" width="6" height="84" fill="#6B4A33"/>
+  <rect x="466" y="66" width="8" height="5" fill="#4E3524"/>
+  <g class="b901-arm"><path d="M473,80 L522,80 L532,87 L522,94 L473,94 Z" fill="#9A6B3F" stroke="#5C3F26" stroke-width="1.2"/><path d="M480,87 L515,87" stroke="#7A5230" stroke-width="1"/></g>
+  <g class="b901-arm a2"><path d="M467,98 L420,98 L410,105 L420,112 L467,112 Z" fill="#A87848" stroke="#5C3F26" stroke-width="1.2"/><path d="M428,105 L460,105" stroke="#7A5230" stroke-width="1"/></g>
+  <g class="b901-arm"><path d="M473,116 L512,113 L520,121 L513,128 L473,128 Z" fill="#8E6438" stroke="#5C3F26" stroke-width="1.2"/></g>
+  <g class="b901-arm a2"><path d="M467,74 L432,72 L425,78 L432,84 L467,84 Z" fill="#B0814F" stroke="#5C3F26" stroke-width="1.2"/></g>
+  <!-- a small pile of stones at the post -->
+  <g fill="#A39A8A"><ellipse cx="462" cy="154" rx="6" ry="3"/><ellipse cx="479" cy="154" rx="5" ry="2.6"/><ellipse cx="470" cy="151" rx="4" ry="2.4" fill="#B8AF9E"/></g>
+  <!-- longleaf pines framing the scene -->
+  <g fill="#2C3A27">
+    <rect x="58" y="40" width="6" height="110" fill="#4A3A2C"/>
+    <g class="b901-pine"><path d="M61,18 L32,58 L48,56 L24,90 L44,88 L22,120 L100,120 L78,88 L98,90 L74,56 L90,58 Z"/></g>
+    <rect x="170" y="72" width="5" height="76" fill="#4A3A2C"/>
+    <g class="b901-pine p2"><path d="M172,56 L150,88 L162,86 L144,114 L200,114 L182,86 L194,88 Z"/></g>
+    <rect x="290" y="94" width="4" height="52" fill="#4A3A2C"/>
+    <g class="b901-pine"><path d="M292,82 L276,106 L286,104 L272,124 L312,124 L298,104 L308,106 Z"/></g>
+    <rect x="642" y="92" width="4" height="54" fill="#4A3A2C"/>
+    <g class="b901-pine p2"><path d="M644,80 L628,104 L638,102 L624,124 L664,124 L650,102 L660,104 Z"/></g>
+    <rect x="760" y="62" width="5" height="86" fill="#4A3A2C"/>
+    <g class="b901-pine"><path d="M762,46 L738,80 L752,78 L732,110 L792,110 L772,78 L786,80 Z"/></g>
+    <rect x="866" y="30" width="6" height="120" fill="#4A3A2C"/>
+    <g class="b901-pine p2"><path d="M869,10 L838,52 L856,50 L832,86 L906,86 L882,50 L900,52 Z"/></g>
   </g>
-  <g transform="translate(740,80)">
-    <rect x="-15" y="-25" width="30" height="35" rx="3" fill="#F0E8D0" stroke="#A08A60" stroke-width="1.2"/>
-    <line x1="-8" y1="-15" x2="8" y2="-15" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-    <line x1="-8" y1="-9" x2="8" y2="-9" stroke="#8A7A60" stroke-width="0.8" opacity="0.5"/>
-  </g>
-  <!-- Florida outline (simplified) -->
-  <g transform="translate(60,100)" opacity="0.3">
-    <path d="M 0 0 L 30 -5 L 45 3 L 42 12 L 50 25 L 45 40 L 35 55 L 22 70 L 18 60 L 12 45 L 5 30 L -2 15 Z" fill="none" stroke="#D4943A" stroke-width="2"/>
-  </g>
-  <!-- Magnifying glass -->
-  <g transform="translate(850,100)" opacity="0.4">
-    <circle cx="0" cy="0" r="18" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
-    <line x1="13" y1="13" x2="25" y2="25" stroke="#FFFFFF" stroke-width="2.5"/>
-  </g>
-  <!-- Palm trees -->
-  <g fill="#1A5A3A">
-    <path d="M 50 250 Q 45 220 35 210 Q 48 220 55 215 Q 45 205 52 193 Q 58 210 60 220 Q 68 200 78 200 Q 68 215 63 225 Q 78 215 88 220 Q 73 230 60 237 L 56 255 Z"/>
-    <rect x="54" y="237" width="4" height="18" fill="#2A1A0A"/>
-  </g>
-  <g fill="#1A5A3A" transform="translate(860,0)">
-    <path d="M 20 248 Q 15 218 5 208 Q 18 218 25 213 Q 15 203 22 191 Q 28 208 30 218 Q 38 198 48 198 Q 38 213 33 223 Q 48 213 58 218 Q 43 228 30 235 L 26 253 Z"/>
-    <rect x="24" y="235" width="4" height="18" fill="#2A1A0A"/>
+  <!-- palmetto clumps -->
+  <g fill="#3F5A35">
+    <path d="M210,166 q-14,-16 -24,-14 q14,2 20,14 q-10,-20 -4,-26 q4,14 8,26 q2,-18 14,-24 q-6,12 -6,24 Z"/>
+    <path d="M700,170 q-14,-16 -24,-14 q14,2 20,14 q-10,-20 -4,-26 q4,14 8,26 q2,-18 14,-24 q-6,12 -6,24 Z"/>
+    <path d="M360,160 q-10,-12 -18,-10 q10,2 14,10 q-6,-14 -2,-18 q3,10 6,18 q2,-12 10,-16 q-4,8 -4,16 Z"/>
   </g>
 </svg>
 
@@ -3592,5 +4416,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
