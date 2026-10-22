@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 20 Family Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 20: The Civil War and Reconstruction</h1>
+      <div class="sub">Unit 8: Statehood, Civil War, and Reconstruction · Lessons 4.08.03–4.08.04</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Unit 8 ends</span>
+        <span class="chip">Florida File 8 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/ff-4-08-03-herald-page-original.jpg');background-position:center top;background-color:#E9DDC3;" role="img" aria-label="The front page of the New York Herald, January 13, 1861"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four tabs, in order:</strong> Learn → Explore → Check → Assignment. A button at the bottom of each tab moves to the next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> The bottom of the Assignment tab collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Download as PDF</strong> (or Copy) saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Listen</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>Unit 8 ends. On <strong>January 10, 1861</strong>, Florida became the third state to <strong>secede</strong> (leave the United States) and joined the <strong>Confederacy</strong>. Your student learns what Florida gave the war (about 15,000 soldiers, plus beef, salt, and cotton), studies the <strong>Battle of Olustee</strong> (February 20, 1864), the largest battle fought in Florida, and learns how freedom was announced in Tallahassee on <strong>May 20, 1865</strong>. Then comes <strong>Reconstruction</strong> (1865 to 1877): new amendments, new rights for people who had been enslaved, and the people who pushed those rights back.</p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Checking a source.</strong> Ask who made it, when, and whether they were there. Then decide what to trust and what to check against other records.</div>
+      <div class="box b-green"><div class="box-label">Virtue this unit</div><strong>Courage.</strong> Soldiers, families at home, and enslaved people who risked everything to reach freedom each showed a different kind of courage.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> Both lessons are serious, and the pages are calm, with no celebrations. Lesson 4.08.03 studies an 1894 color print of the Battle of Olustee that shows soldiers fighting, with some lying hurt on the ground; nothing is graphic. Lesson 4.08.04 explains that groups like the Ku Klux Klan used violence and threats to stop Black citizens from voting, and that laws later took back many of the rights Reconstruction had promised.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.08.03<span>Lesson 3</span></td>
+          <td><span class="ch">Florida’s Involvement in the Civil War</span><br>On January 10, 1861, Florida’s leaders voted 62 to 7 to leave the United States, and Florida joined the Confederacy, the Southern states that wanted to keep slavery. Florida had the fewest people of any Confederate state, but about 15,000 Floridians served in the Confederate army, and Florida sent beef, salt, and cotton. On February 20, 1864, Confederate forces won the Battle of Olustee, near Lake City. Three of the Union army groups there were Black soldiers: the 54th Massachusetts and the 8th and 35th U.S. Colored Troops. Many enslaved Floridians escaped to Union lines, and some joined the Union army. On May 20, 1865, Union General Edward McCook read the Emancipation Proclamation from the steps of the Knott House in Tallahassee, and many Floridians still celebrate May 20 as Emancipation Day.<br><span class="pill p-source">Sources: the New York Herald front page of January 13, 1861, and Kurz &amp; Allison’s 1894 print of the Battle of Olustee</span><span class="pill p-virtue">Virtue: Courage</span><span class="pill p-new">Word root: bell = war</span></td>
+          <td><strong>Historian’s Notebook entry</strong> (3–5 sentences): how Florida was involved in the Civil War, with at least two details (dates, battles, numbers, or facts about people).</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.08.04<span>Lesson 4</span></td>
+          <td><span class="ch">Challenges During Reconstruction</span><br>Reconstruction (1865 to 1877) was the time of rebuilding after the war, when nearly 62,000 Floridians who had been enslaved were free. Three amendments changed the U.S. Constitution: the 13th (1865) ended slavery, the 14th (1868) made citizenship and equal protection the law, and the 15th (1870) gave Black men the right to vote. Formerly enslaved people in Florida voted, went to school, and held office for the first time. Florida’s 1868 constitution created public schools open to all children, and Jonathan Gibbs, a Black man, served as Florida’s Secretary of State and then as head of its public schools. Many white Floridians fought these changes with threats and violence, and by 1877 many of the gains had been rolled back.<br><span class="pill p-virtue">Virtue: Courage</span></td>
+          <td><strong>Timeline Thread</strong>: two connected Reconstruction events, and how the first caused or shaped the second, using “because” or “as a result.”</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>File 8 finishes this week. In Lesson 4.08.03 your student reads a real newspaper front page from January 1861 and sorts what the paper tells us and what it leaves out. They walk through a small museum, opening five glass cases that each hold something real from the war years: Florida’s secession order, an 1862 magazine drawing of a salt works, the Olustee print, a poster that asked Black men to join the Union army, and the Knott House. They check the 1894 print like a historian (its caption has the wrong date), match war words by sending messages down a telegraph line, and plan their writing as a front page of their own. When the file opens, a calm card tells the story of Freedom Day. In Lesson 4.08.04 your student studies the Reconstruction amendments and the people who fought for and against new rights.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>Confederacy</b><span>the Southern states that left the United States to keep slavery</span></div>
+      <div class="word"><b>Union</b><span>the United States; the states that stayed in it during the war</span></div>
+      <div class="word"><b>Emancipation Proclamation</b><span>President Lincoln’s order that freed enslaved people in the Confederate states</span></div>
+      <div class="word"><b>Reconstruction</b><span>the time of rebuilding after the Civil War, 1865 to 1877</span></div>
+      <div class="word"><b>amendment</b><span>a change or addition to the Constitution</span></div>
+      <div class="word"><b>rebel</b><span>a person who fights against the people in charge (bel = war)</span></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">What did Florida send to help the Confederacy?</span><span class="listen">Listen for: about 15,000 soldiers, and beef, salt, and cotton.</span></li>
+      <li><span class="q">What happened at the Battle of Olustee?</span><span class="listen">Listen for: February 20, 1864, near Lake City; the Confederates won; Black Union soldiers fought there with courage.</span></li>
+      <li><span class="q">Why should a historian check an old picture?</span><span class="listen">Listen for: the Olustee print was made about 30 years later by artists who weren’t there, and its caption has the wrong date.</span></li>
+      <li><span class="q">What happened on May 20, 1865?</span><span class="listen">Listen for: freedom was announced in Tallahassee, at the Knott House. Many Floridians still celebrate it as Emancipation Day.</span></li>
+      <li><span class="q">What did the 13th, 14th, and 15th Amendments do?</span><span class="listen">Listen for: ended slavery; made citizenship and equal protection the law; gave Black men the right to vote.</span></li>
+    </ol>
+  </section>
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a writing task (a Historian’s Notebook entry or a Timeline Thread), and a Historian’s Sentence, submitted in Canvas</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> specific dates and facts (January 10, 1861; Olustee, 1864; May 20, 1865), plus a sentence about why it matters for the people who lived through it.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Check the date.</strong> Look at a photo or a news story at home. When was it made? Who made it?</li>
+        <li><strong>Your front page.</strong> Write a headline for something that happened in your family this week.</li>
+        <li><strong>Find the root.</strong> Rebel and rebellion hide a word part that means war. Can you spot it?</li>
+      </ul>
+    </section>
+  </div>
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🏛️</div>
+      <div><p><strong>The Knott House Museum</strong> (Tallahassee), where freedom was announced on May 20, 1865. Tallahassee remembers that day each year around May 20. <strong>Olustee Battlefield Historic State Park</strong> (near Olustee, west of Lake City) keeps the site of the battle, with a trail and a small visitor center. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 21</h2></div>
+    <p><strong>Florida at a Crossroads.</strong> A review week. Your student puts the big events from 1821 to 1877 in order, from territory to statehood, the Civil War, and Reconstruction, then picks the one event they think changed Florida the most and defends that claim with evidence.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 20 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
