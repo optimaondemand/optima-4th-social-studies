@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -843,6 +843,8 @@
       else if(kind==='door'){ tone(196,.5,.07,'triangle',150); noise(.35,700,1.4,.08,function(p){ return Math.max(0,Math.sin(p*Math.PI)); }); }
       else if(kind==='bell'){ [392,392*2.01,392*3.02].forEach(function(f,i){ tone(f,1.6-i*.35,.12/(i+1),'sine'); }); }
       else if(kind==='paper') noise(.3,2600,.6,.14,function(p){ return Math.max(0,1-p)*(.4+.6*Math.random()); });
+      else if(kind==='whistle'){ tone(523,.95,.05,'triangle',530); tone(659,.95,.05,'triangle',668); tone(784,.9,.025,'sine'); noise(.95,1900,2.5,.05,function(p){ return Math.max(0,Math.sin(p*Math.PI)); }); }
+      else if(kind==='chug') noise(.16,320,.9,.22,function(p){ return Math.max(0,1-p)*(.6+.4*Math.random()); });
       else if(kind==='win') [523,659,784].forEach(function(f,i){ setTimeout(function(){ chime(f); },i*180); });
     }catch(e){} }
 
@@ -5241,6 +5243,242 @@
     return {done:done, lines:lines, sync:function(){ if(!S.cd.e&&S.cw&&S.cw.pick&&find(EV,S.cw.pick)){ S.cd.e=S.cw.pick; save(); paint(); } }};
   };
 
+
+  /* ---- Scene 1 · Load the train cars (4.10.01): an engine and three freight cars (People / Goods / Messages). Each
+     card is something a new technology carried; tap it (or drag it) onto the car it fills. The car thuds and settles;
+     when every car is loaded the engine whistles and the train eases forward.
+     DATA: cars [{id,t,sub,ico}], cards [{id,t,p,miss}] ---- */
+  MOD.traincars=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var FD=cfg.cars||[], CD=cfg.cards||[]; S.tcar=S.tcar||[]; var was=null;
+    var done=function(){ return CD.length>0&&CD.every(function(c){ return S.tcar.indexOf(c.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var eng='<svg viewBox="0 0 120 84" aria-hidden="true"><rect x="8" y="30" width="72" height="32" rx="6" class="boil"/><rect x="62" y="12" width="34" height="50" rx="3" class="cab"/><rect x="68" y="18" width="22" height="14" rx="2" class="win"/><rect x="20" y="12" width="12" height="20" class="stack"/><rect x="17" y="9" width="18" height="5" rx="2" class="stack"/><rect x="40" y="22" width="12" height="10" rx="5" class="dome"/><path d="M8,62 L-2,72 L12,72 Z" class="cow"/><circle cx="26" cy="68" r="11" class="wh"/><circle cx="52" cy="68" r="11" class="wh"/><circle cx="84" cy="70" r="9" class="wh"/><line x1="26" y1="68" x2="52" y2="68" class="rod"/></svg>';
+    var car=function(f,i){ return '<span class="coup" aria-hidden="true"></span><div class="bk" data-b="'+esc(f.id)+'" role="button" tabindex="0" style="--i:'+i+'"><div class="tabk"><span class="ic" aria-hidden="true">'+esc(f.ico||'🚃')+'</span><b>'+esc(f.t)+'</b><span class="sub">'+esc(f.sub||'')+'</span><span class="ok" aria-hidden="true">✓</span></div><div class="pocket"><div class="in"></div></div><span class="wh a" aria-hidden="true"></span><span class="wh b" aria-hidden="true"></span></div>'; };
+    var g=el('div','spk spk-game spk-tcars');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Load the train cars')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<p class="spk-bell-ct spk-tc-ct"></p><div class="spk-chips spk-tctray"></div><p class="spk-miss"></p>'
+      +'<div class="spk-tctrack"><div class="spk-tctrain"><div class="eng">'+eng+'<span class="puff p1"></span><span class="puff p2"></span><span class="puff p3"></span></div><div class="spk-tcbks">'+FD.map(car).join('')+'</div></div><div class="rails" aria-hidden="true"></div></div>'
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var sorter=spkSorter({g:g, tray:g.querySelector('.spk-tctray'), bks:g.querySelector('.spk-tcbks'), cards:CD, pockets:FD, state:S.tcar, miss:g.querySelector('.spk-miss'), cls:'spk-tccard', scene:'open', firstT:cfg.firstT||'Tap a card first, then tap the car it belongs in.', done:done, paint:function(){ paint(); } });
+    function paint(){ FD.forEach(function(f){ var mine=CD.filter(function(c){ return c.p===f.id; }), n=mine.filter(function(c){ return S.tcar.indexOf(c.id)>=0; }).length, b=g.querySelector('.bk[data-b="'+f.id+'"]');
+        b.style.setProperty('--n',n); b.classList.toggle('has',n>0); b.classList.toggle('full',mine.length>0&&n===mine.length); });
+      var d=done();
+      g.querySelector('.spk-tc-ct').innerHTML=d?'':'<b>'+S.tcar.length+' of '+CD.length+'</b> '+esc(cfg.countT||'cards loaded.');
+      g.querySelector('.spk-tctray').classList.toggle('spk-hide',d);
+      if(d&&was===false){ sfx('whistle'); var tr=g.querySelector('.spk-tctrack'); tr.classList.remove('go'); void tr.offsetWidth; tr.classList.add('go'); [0,260,520,780].forEach(function(ms){ setTimeout(function(){ sfx('chug'); },ms+500); }); }
+      was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    sorter.paint();
+    return {done:done, journal:function(e,NA){ if(!S.tcar.length) return NA; return '<p class="a">'+FD.map(function(f){ var L=S.tcar.map(function(id){ return find(CD,id); }).filter(function(c){ return c&&c.p===f.id; }); return L.length?'<b>'+e(f.t)+':</b> '+e(L.map(function(c){ return c.t; }).join(' · ')):''; }).filter(Boolean).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · Investor's map (4.10.01): a real-projection Florida map beside the reading. Each part starts
+     with an action before its text appears: 'pick' = tap where YOU would put the next stop (any choice is fine), then
+     the real one appears with its route and what grew there; 'lay' = lay a line one piece at a time (the map zooms in);
+     'send' = tap a town to send a message down the wires; 'compare' = see your picks beside the real ones while the
+     towns grow. DATA: paras [{id,match}], steps [{id,kind,t,yr,q,spots:[{id,label,lon,lat,dx,dy,a}],real,line:[[lon,lat]],
+     color,realT,grew,paras:[],view:[x,y,w,h],segs:[[lon,lat]],layT,wires:[[[lon,lat]..]],town:{label,lon,lat,dx,dy,a}}] ---- */
+  MOD.investormap=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var ST=cfg.steps||[], N=ST.length; S.inv=S.inv||{cur:0,pick:{},fin:[],lay:0};
+    var fin=function(id){ return S.inv.fin.indexOf(id)>=0; };
+    var done=function(){ return N>0&&ST.every(function(s){ return fin(s.id); }); };
+    var P=function(ll){ return project(ll[0],ll[1]); };
+    var pt=function(ll){ var q=P(ll); return q[0].toFixed(1)+','+q[1].toFixed(1); };
+    var path=function(L){ return L&&L.length?geoPath(L):''; };
+    var svg='<svg class="spk-invsvg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.aria||'Map of Florida')+'">'+floridaBase('V')
+      +ST.map(function(s){ var h='';
+        if(s.line) h+='<path class="rte" data-s="'+s.id+'" pathLength="100" style="--c:'+(s.color||'#8A3B12')+'" d="'+path(s.line)+'"/>';
+        if(s.segs) for(var i=1;i<s.segs.length;i++) h+='<path class="seg" data-s="'+s.id+'" data-k="'+(i-1)+'" pathLength="100" d="'+path([s.segs[i-1],s.segs[i]])+'"/>';
+        (s.wires||[]).forEach(function(w,i){ h+='<path class="wire" data-s="'+s.id+'" pathLength="100" d="'+path(w)+'"/><circle class="pulse" data-s="'+s.id+'" r="2.4"><animateMotion dur="1.6s" begin="indefinite" fill="freeze" path="'+path(w)+'"/></circle>'; });
+        return h; }).join('')
+      +ST.map(function(s){ var h=''; (s.spots||[]).forEach(function(o){ var q=P([o.lon,o.lat]); h+='<g class="spot" data-s="'+s.id+'" data-o="'+esc(o.id)+'" role="button" tabindex="0" aria-label="'+esc(o.label)+'"><circle class="hit" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="'+(s.view?5:13)+'"/><circle class="ring" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="'+(s.view?2.2:7)+'"/><circle class="dotc" cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="'+(s.view?1.2:3)+'"/><text class="sl'+(s.view?' sm':'')+'" x="'+(q[0]+(o.dx||0)).toFixed(1)+'" y="'+(q[1]+(o.dy!=null?o.dy:(s.view?-4:-11))).toFixed(1)+'" text-anchor="'+(o.a||'middle')+'">'+esc(o.label)+'</text><g class="mine" transform="translate('+q[0].toFixed(1)+','+q[1].toFixed(1)+')"><line x1="0" y1="0" x2="0" y2="'+(s.view?-7:-17)+'"/><path d="M0,'+(s.view?-7:-17)+' l'+(s.view?5:11)+','+(s.view?1.6:3.5)+' l-'+(s.view?5:11)+','+(s.view?1.6:3.5)+'z"/></g></g>'; });
+        if(s.town){ var q=P([s.town.lon,s.town.lat]); h+='<g class="town" data-s="'+s.id+'"><circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="'+(s.view?1.8:3.2)+'"/><text x="'+(q[0]+(s.town.dx||0)).toFixed(1)+'" y="'+(q[1]+(s.town.dy!=null?s.town.dy:-7)).toFixed(1)+'" text-anchor="'+(s.town.a||'middle')+'"'+(s.view?' class="sm"':'')+'>'+esc(s.town.label)+'</text></g>'; }
+        if(s.segs){ var e=P(s.segs[0]); h+='<g class="loco" data-s="'+s.id+'" transform="translate('+e[0].toFixed(1)+','+e[1].toFixed(1)+')"><rect x="-3.2" y="-2.4" width="6.4" height="3.6" rx=".8"/><rect x="0.6" y="-4.4" width="2.4" height="2.4"/><circle cx="-1.8" cy="1.6" r="1"/><circle cx="1.8" cy="1.6" r="1"/></g>'; }
+        return h; }).join('')+'</svg>';
+    var w=el('div','spk spk-inv');
+    w.innerHTML=whyCard(cfg.why)+'<div class="spk-invgrid"><div class="spk-invmap"><div class="spk-map">'+svg+'</div><p class="spk-invct"></p></div><div class="spk-invsteps"></div></div>';
+    before(first,w);
+    var steps=w.querySelector('.spk-invsteps'), svgEl=w.querySelector('svg'), BOX={};
+    ST.forEach(function(s,i){ var b=el('div','spk-invstep'); b.dataset.i=i; b.style.setProperty('--c',s.color||'#8A3B12');
+      b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span><span class="t">'+esc(s.t)+'</span>'+(s.yr?'<span class="yr">'+esc(s.yr)+'</span>':'')+'</div>'
+        +'<div class="ask"><p class="q">'+esc(s.q||'')+'</p>'+(s.kind==='lay'?'<button type="button" class="spk-ywgo lay"></button>':s.kind==='compare'?'<button type="button" class="spk-ywgo cmp">'+esc(s.btnT||'Compare your picks')+'</button>':'<p class="tip">'+esc(s.tip||(s.kind==='send'?'Tap a town on the map.':'Tap a spot on the map.'))+'</p>')+'<p class="spk-miss"></p></div><div class="mapslot"></div>'
+        +'<div class="rev"><div class="you"></div>'+(s.realT?'<p class="real"><b>'+esc(s.realLab||'What really happened:')+'</b> '+esc(s.realT)+'</p>':'')+(s.grew?'<p class="grew"><span aria-hidden="true">🌱</span> '+esc(s.grew)+'</p>':'')+'<div class="cmpt"></div><div class="read"></div>'
+        +(i<N-1?'<button type="button" class="spk-ywgo nx">'+esc(cfg.nextT||'Next')+' →</button>':'')+'</div>';
+      steps.appendChild(b); BOX[s.id]=b; (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.querySelector('.read').appendChild(nd); }); }); });
+    var curView=[0,0,300,300], vAnim=null;
+    function view(v){ v=v||[0,0,300,300]; if(String(v)===String(curView)) return; var from=curView.slice(), t0=null, rm=matchMedia('(prefers-reduced-motion: reduce)').matches; if(vAnim) cancelAnimationFrame(vAnim);
+      var stepF=function(ts){ if(!t0) t0=ts; var k=rm?1:Math.min(1,(ts-t0)/900), e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2; curView=from.map(function(a,j){ return a+(v[j]-a)*e; }); svgEl.setAttribute('viewBox',curView.map(function(x){ return x.toFixed(2); }).join(' ')); svgEl.classList.toggle('zoom',v[2]<200); if(k<1) vAnim=requestAnimationFrame(stepF); else curView=v.slice(); };
+      vAnim=requestAnimationFrame(stepF); }
+    function locoAt(s,k){ var lo=svgEl.querySelector('.loco[data-s="'+s.id+'"]'); if(!lo) return; var q=P(s.segs[Math.min(k,s.segs.length-1)]); lo.setAttribute('transform','translate('+q[0].toFixed(1)+','+q[1].toFixed(1)+')'); }
+    var mapEl=w.querySelector('.spk-invmap'), mapHome=w.querySelector('.spk-invgrid'), NARROW=matchMedia('(max-width: 760px)');
+    function placeMap(){ var cur=Math.min(S.inv.cur,N-1), host=NARROW.matches?BOX[ST[cur].id].querySelector('.mapslot'):mapHome; if(host&&mapEl.parentNode!==host){ if(host===mapHome) mapHome.insertBefore(mapEl,mapHome.firstChild); else host.appendChild(mapEl); } }
+    try{ NARROW.addEventListener('change',placeMap); }catch(e){ try{ NARROW.addListener(placeMap); }catch(e2){} }
+    function paint(anim){ var cur=Math.min(S.inv.cur,N-1); placeMap();
+      ST.forEach(function(s,i){ var b=BOX[s.id], f=fin(s.id), on=i===cur;
+        b.classList.toggle('now',on); b.classList.toggle('fin',f); b.classList.toggle('seen',i<=cur);
+        svgEl.querySelectorAll('[data-s="'+s.id+'"].rte, [data-s="'+s.id+'"].town, [data-s="'+s.id+'"].wire').forEach(function(x){ x.classList.toggle('in',f); if(anim===s.id){ x.classList.remove('draw'); void x.getBoundingClientRect(); x.classList.add('draw'); } });
+        svgEl.querySelectorAll('.spot[data-s="'+s.id+'"]').forEach(function(x){ x.classList.toggle('armed',on&&!f&&(s.kind==='pick'||s.kind==='send')); var mi=S.inv.pick[s.id]===x.dataset.o, rl=s.real===x.dataset.o; x.classList.toggle('show',(on&&!f)||(s.kind==='pick'&&f&&(mi||rl))); x.classList.toggle('mine',mi); x.classList.toggle('real',f&&rl); x.classList.toggle('flagonly',f&&rl&&!!s.town); x.classList.toggle('picked',f&&mi&&!rl); });
+        if(s.segs){ var k=f?s.segs.length-1:(on?S.inv.lay:0); svgEl.querySelectorAll('.seg[data-s="'+s.id+'"]').forEach(function(x){ x.classList.toggle('in',+x.dataset.k<k); }); var lo=svgEl.querySelector('.loco[data-s="'+s.id+'"]'); if(lo) lo.classList.toggle('in',on||f); locoAt(s,k);
+          var lb=b.querySelector('.lay'); if(lb){ lb.classList.toggle('spk-hide',f); lb.textContent=(s.layT||'Lay the next bridge')+' ('+Math.min(k+1,s.segs.length-1)+' of '+(s.segs.length-1)+')'; } }
+        var y=b.querySelector('.you'); if(s.kind==='pick'){ var pk=S.inv.pick[s.id], o=pk&&find(s.spots,pk); y.innerHTML=o?'<b>'+esc(cfg.youLab||'Your pick:')+'</b> '+esc(o.label)+(pk===s.real?' <span class="same">'+esc(cfg.sameT||'Same as the real builders!')+'</span>':''):''; } });
+      if(ST[cur]) view(fin(ST[cur].id)&&!ST[cur].keepView?null:ST[cur].view);
+      var nf=S.inv.fin.length; w.querySelector('.spk-invct').innerHTML=done()?'<b>'+esc(cfg.allHead||'The map is finished.')+'</b> '+esc(cfg.allT||''):'<b>'+nf+' of '+N+'</b> '+esc(cfg.countT||'parts done. Do the action in each part to read it.');
+      w.classList.toggle('all',done()); svgEl.classList.toggle('grown',done()); var th=body.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function finish(s){ if(fin(s.id)) return; ack('explore'); S.inv.fin.push(s.id); save(); sfx(s.kind==='lay'?'whistle':'click'); paint(s.id); refreshFile(); refreshVoice();
+      var b=BOX[s.id], rv=b.querySelector('.rev'); setTimeout(function(){ if(rv.getBoundingClientRect().top>innerHeight-80&&!matchMedia('(prefers-reduced-motion: reduce)').matches) try{ rv.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },400); }
+    function compareTable(){ var rows=ST.filter(function(s){ return s.kind==='pick'; }).map(function(s){ var mine=find(s.spots,S.inv.pick[s.id]), real=find(s.spots,s.real); return '<tr><td>'+esc(s.t)+'</td><td>'+esc(mine?mine.label:'—')+'</td><td>'+esc(real?real.label:'')+(mine&&mine.id===s.real?' ✓':'')+'</td></tr>'; }).join('');
+      var same=ST.filter(function(s){ return s.kind==='pick'&&S.inv.pick[s.id]===s.real; }).length, tot=ST.filter(function(s){ return s.kind==='pick'; }).length;
+      return '<table><tr><th></th><th>'+esc(cfg.youCol||'You')+'</th><th>'+esc(cfg.realCol||'The real builders')+'</th></tr>'+rows+'</table><p class="sc">'+esc((cfg.scoreT||'You picked {n} of {t} of the same places.').replace('{n}',same).replace('{t}',tot))+'</p>'; }
+    function pick(s,oid){ var b=BOX[s.id], miss=b.querySelector('.spk-miss');
+      if(s.kind==='send'){ finish(s); svgEl.querySelectorAll('.pulse[data-s="'+s.id+'"] animateMotion').forEach(function(a){ try{ a.beginElement(); }catch(e){} }); sfx('clink'); return; }
+      S.inv.pick[s.id]=oid; save(); miss.textContent=''; finish(s); }
+    svgEl.addEventListener('click',function(e){ var g=e.target.closest('.spot.armed'); if(!g) return; var s=find(ST,g.dataset.s); if(s) pick(s,g.dataset.o); });
+    svgEl.addEventListener('keydown',function(e){ var g=e.target.closest('.spot.armed'); if(g&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); var s=find(ST,g.dataset.s); if(s) pick(s,g.dataset.o); } });
+    steps.addEventListener('click',function(e){ var b=e.target.closest('.spk-invstep'); if(!b) return; var s=ST[+b.dataset.i];
+      if(e.target.closest('.nx')){ S.inv.cur=Math.min(N-1,+b.dataset.i+1); if(S.inv.cur===+b.dataset.i+1&&ST[S.inv.cur].segs) S.inv.lay=0; save(); sfx('click'); paint(); var nb=BOX[ST[S.inv.cur].id]; setTimeout(function(){ try{ nb.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); }catch(err){} },150); return; }
+      if(e.target.closest('.lay')&&+b.dataset.i===S.inv.cur){ S.inv.lay=Math.min(s.segs.length-1,S.inv.lay+1); save(); sfx('thud'); setTimeout(function(){ sfx('chug'); },180); if(S.inv.lay>=s.segs.length-1) finish(s); else paint(); return; }
+      if(e.target.closest('.cmp')&&+b.dataset.i===S.inv.cur){ b.querySelector('.cmpt').innerHTML=compareTable(); finish(s); sfx('win'); return; }
+      if(e.target.closest('.tip')||e.target.closest('.q')){ w.querySelector('.spk-invmap').scrollIntoView({behavior:'smooth',block:'nearest'}); } });
+    ST.forEach(function(s){ if(s.kind==='compare'&&fin(s.id)) BOX[s.id].querySelector('.cmpt').innerHTML=compareTable(); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ return BOX[id]; }, journal:function(e){ var picks=ST.filter(function(s){ return s.kind==='pick'&&S.inv.pick[s.id]; }).map(function(s){ return e(s.t)+': '+e(find(s.spots,S.inv.pick[s.id]).label); }); return '<p class="a">Map parts done: '+S.inv.fin.length+' of '+N+'.'+(picks.length?'<br>My stops: '+picks.join(' · '):'')+'</p>'; }};
+  };
+
+  /* ---- Explore evidence · Pan the panorama (4.10.01): the labeled panorama in a camera viewfinder. Drag the photo (or
+     use the arrows or the slider) to move the camera; when a gold number is inside the frame, Snap it into the film
+     strip, which keeps that frame and its label. Snapping also counts that label as opened.
+     DATA: img, zoom (how many frames wide the photo is), uses DATA.source.hotspots [{n,x,y,title,t}] ---- */
+  MOD.panpano=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var H=(DATA.source&&DATA.source.hotspots)||[], Z=cfg.zoom||3.4, A=cfg.aspect||4.25, ZMAX=cfg.zoom||3.4, SRC=IMG+cfg.img; S.pp=S.pp||[]; if(S.ppPos==null) S.ppPos=0;
+    var snapped=function(){ return H.length>0&&H.every(function(h,i){ return S.pp.indexOf(i)>=0; }); };
+    var done=function(){ return snapped()&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-pp');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Pan the panorama')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-ppcam"><div class="spk-ppview" tabindex="0" role="group" aria-label="'+esc(cfg.aria||'Camera viewfinder. Use the arrow keys to move the camera.')+'"><div class="strip"></div><div class="flash"></div><span class="cnr tl"></span><span class="cnr tr"></span><span class="cnr bl"></span><span class="cnr br"></span><span class="rec">● '+esc(cfg.recT||'1912')+'</span><span class="inf"></span></div>'
+      +'<div class="spk-ppmini" aria-hidden="true"><div class="fr"></div></div>'
+      +'<div class="spk-ppctl"><button type="button" class="l" aria-label="Move the camera left">◀</button><input type="range" min="0" max="1000" step="1" class="scrub" aria-label="Move the camera"><button type="button" class="r" aria-label="Move the camera right">▶</button><button type="button" class="snap">📸 '+esc(cfg.snapT||'Snap')+'</button></div></div>'
+      +'<p class="spk-miss"></p><p class="spk-bell-ct spk-pp-ct"></p><div class="spk-ppfilm">'+H.map(function(h,i){ return '<div class="fm" data-i="'+i+'"><div class="th"><span class="n">'+esc(h.n)+'</span></div><div class="cap"></div></div>'; }).join('')+'</div>'
+      +'<p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    before(anchor,g);
+    var vw=g.querySelector('.spk-ppview'), strip=vw.querySelector('.strip'), scrub=g.querySelector('.scrub'), miss=g.querySelector('.spk-miss'), mini=g.querySelector('.spk-ppmini'), was=done();
+    function fit(){ var w=vw.clientWidth||g.clientWidth||600, mh=Math.min(cfg.maxH||340,Math.max(200,innerHeight*.45)); Z=Math.max(1.6,Math.min(ZMAX,A*mh/w)); vw.style.aspectRatio=String(A/Z); mini.querySelector('.fr').style.width=(100/Z)+'%'; g.querySelectorAll('.fm .th').forEach(function(t){ t.style.aspectRatio=String(A/Z); }); }
+    strip.style.backgroundImage='url("'+SRC+'")'; mini.style.backgroundImage='url("'+SRC+'")';
+    g.querySelectorAll('.fm .th').forEach(function(t){ t.style.backgroundImage='url("'+SRC+'")'; });
+    var center=function(p){ return p/100*(1-1/Z)+1/(2*Z); };
+    var posFor=function(x){ return Math.max(0,Math.min(100,(x-1/(2*Z))/(1-1/Z)*100)); };
+    function inFrame(){ var c=center(S.ppPos), best=-1, bd=9, bu=-1, bdu=9; H.forEach(function(h,i){ var d=Math.abs(h.x/100-c); if(d<0.5/Z-0.02){ if(d<bd){ bd=d; best=i; } if(S.pp.indexOf(i)<0&&d<bdu){ bdu=d; bu=i; } } }); return bu>=0?bu:best; }
+    function setPos(p,keep){ S.ppPos=Math.max(0,Math.min(100,p)); strip.style.backgroundPosition=S.ppPos+'% 50%'; scrub.value=String(Math.round(S.ppPos*10)); mini.querySelector('.fr').style.left=(center(S.ppPos)*100-50/Z)+'%'; if(!keep) save(); paintFrame(); }
+    function paintFrame(){ var i=inFrame(), inf=vw.querySelector('.inf'), sn=g.querySelector('.snap');
+      if(i>=0&&S.pp.indexOf(i)<0){ inf.textContent=(cfg.inT||'Number {n} is in the frame!').replace('{n}',H[i].n); vw.classList.add('lock'); sn.classList.add('ready'); }
+      else { inf.textContent=i>=0?(cfg.gotT||'Already snapped. Keep panning.'):''; vw.classList.remove('lock'); sn.classList.remove('ready'); } }
+    function paint(anim){ g.querySelectorAll('.fm').forEach(function(f){ var i=+f.dataset.i, on=S.pp.indexOf(i)>=0, th=f.querySelector('.th'); f.classList.toggle('on',on);
+        th.style.backgroundPosition=posFor(H[i].x/100)+'% 50%'; f.querySelector('.cap').innerHTML=on?'<b>'+esc(H[i].title||'')+'</b> '+esc(H[i].t||''):'';
+        if(anim===i){ f.classList.remove('new'); void f.offsetWidth; f.classList.add('new'); } });
+      var n=S.pp.length; g.querySelector('.spk-pp-ct').innerHTML=snapped()?'':'<b>'+n+' of '+H.length+'</b> '+esc(cfg.countT||'numbers snapped.');
+      var d=done(); g.querySelector('.spk-si-gate').textContent=snapped()&&!d?(cfg.gateT||'Now finish the reading above (every part of the map) to finish this tab.'):'';
+      g.querySelector('.spk-win').classList.toggle('show',snapped()); g.classList.toggle('done',snapped());
+      if(d&&!was){ refreshFile(); refreshVoice(); } was=d; paintFrame(); }
+    function snap(){ var i=inFrame(); ack('explore');
+      if(i<0){ miss.textContent=cfg.noneT||'No gold number in the frame yet. Move the camera until a number is inside the frame.'; vw.classList.remove('shake'); void vw.offsetWidth; vw.classList.add('shake'); return; }
+      if(S.pp.indexOf(i)>=0){ miss.textContent=cfg.againT||'You already snapped that one. Find a number you haven’t snapped.'; return; }
+      miss.textContent=''; S.pp.push(i); if(S.hot&&S.hot.indexOf(i)<0) S.hot.push(i); save(); sfx('clink'); var fl=vw.querySelector('.flash'); fl.classList.remove('go'); void fl.offsetWidth; fl.classList.add('go'); paint(i); refreshFile(); refreshVoice(); }
+    var drag=null;
+    vw.addEventListener('pointerdown',function(e){ drag={x:e.clientX,p:S.ppPos}; try{ vw.setPointerCapture(e.pointerId); }catch(err){} vw.classList.add('grab'); });
+    vw.addEventListener('pointermove',function(e){ if(!drag) return; var wpx=vw.clientWidth*(Z-1); if(wpx>0) setPos(drag.p-(e.clientX-drag.x)/wpx*100,true); });
+    var end=function(){ if(drag){ drag=null; vw.classList.remove('grab'); save(); } };
+    vw.addEventListener('pointerup',end); vw.addEventListener('pointercancel',end);
+    vw.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft'){ e.preventDefault(); setPos(S.ppPos-4); } else if(e.key==='ArrowRight'){ e.preventDefault(); setPos(S.ppPos+4); } else if(e.key==='Enter'||e.key===' '){ e.preventDefault(); snap(); } });
+    scrub.addEventListener('input',function(){ setPos(+scrub.value/10); });
+    g.querySelector('.l').addEventListener('click',function(){ setPos(S.ppPos-8); sfx('slide'); });
+    g.querySelector('.r').addEventListener('click',function(){ setPos(S.ppPos+8); sfx('slide'); });
+    g.querySelector('.snap').addEventListener('click',snap);
+    mini.addEventListener('click',function(e){ var r=mini.getBoundingClientRect(); setPos(posFor((e.clientX-r.left)/r.width)); });
+    fit(); setPos(S.ppPos,true); paint();
+    var rt=null; addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(function(){ fit(); setPos(S.ppPos,true); paint(); },150); });
+    if(!vw.clientWidth){ var mo=new MutationObserver(function(){ if(vw.clientWidth){ fit(); setPos(S.ppPos,true); paint(); } }); document.querySelectorAll('.tab-panel, [id^="panel-"]').forEach(function(pn){ mo.observe(pn,{attributes:true,attributeFilter:['class','style']}); }); }
+    return {done:done, journal:function(e){ return '<p class="a">Snapped '+S.pp.length+' of '+H.length+': '+S.pp.map(function(i){ return e(H[i].n+' '+(H[i].title||'')); }).join(' · ')+'</p>'; }};
+  };
+
+  /* ---- Vocabulary · Get the locomotive going (4.10.01, mot = to move): five keys joined by four bridges, a steam
+     locomotive waiting on the first island. Tap each word to hear it (g4ss-<lesson>-mot-<n>.mp3); then put each
+     meaning on its word and the locomotive puffs one bridge farther; the last match brings it into Key West. ---- */
+  MOD.mottrain=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'mot', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.mt=S.mt||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.mt.set.length===N; };
+    var IS=[[28,92,26],[112,86,20],[190,90,22],[262,84,18],[320,88,22]], isl='', brg='';
+    IS.forEach(function(p,i){ isl+='<ellipse class="key" cx="'+p[0]+'" cy="'+p[1]+'" rx="'+p[2]+'" ry="7"/><g class="palm" transform="translate('+(p[0]-p[2]*.4)+','+(p[1]-5)+')"><path d="M0,0 q1,-9 -1,-16"/><path d="M-1,-16 q-7,-1 -10,4 M-1,-16 q6,-3 10,2 M-1,-16 q-2,-6 -7,-8 M-1,-16 q3,-6 8,-7"/></g>'; if(i){ var a=IS[i-1]; brg+='<g class="brg" data-k="'+(i-1)+'"><line x1="'+(a[0]+a[2]-4)+'" y1="'+(a[1]-6)+'" x2="'+(p[0]-p[2]+4)+'" y2="'+(p[1]-6)+'"/>'; var x0=a[0]+a[2]-4, x1=p[0]-p[2]+4, n=Math.max(2,Math.round((x1-x0)/12)); for(var j=0;j<=n;j++){ var x=x0+(x1-x0)*j/n; brg+='<line class="pier" x1="'+x.toFixed(1)+'" y1="'+(a[1]-6+(p[1]-a[1])*j/n).toFixed(1)+'" x2="'+x.toFixed(1)+'" y2="104"/>'; } brg+='</g>'; } });
+    var g=el('div','spk spk-mot');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Get the locomotive going')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-motscene"><svg viewBox="0 0 340 120" aria-hidden="true"><defs><linearGradient id="spkMotSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F9E3B4"/><stop offset="1" stop-color="#BFE6EA"/></linearGradient></defs><rect width="340" height="120" fill="url(#spkMotSky)"/><rect y="78" width="340" height="42" class="sea"/><path class="wv" d="M0,100 q10,-4 20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0 t20,0"/>'+brg+isl
+      +'<text class="kw" x="320" y="112" text-anchor="middle">'+esc(cfg.endLab||'Key West')+'</text>'
+      +'<g class="loco"><g class="body" transform="scale(-1,1)"><rect x="-14" y="-12" width="20" height="10" rx="2" class="boil"/><rect x="2" y="-18" width="10" height="16" rx="1.5" class="cab"/><rect x="-10" y="-19" width="4" height="8" class="stk"/><circle cx="-9" cy="0" r="3.4" class="wh"/><circle cx="0" cy="0" r="3.4" class="wh"/><circle cx="8" cy="0.6" r="2.8" class="wh"/></g><g class="smoke"><circle cx="8" cy="-24" r="3"/><circle cx="4" cy="-31" r="4"/><circle cx="-2" cy="-38" r="5"/></g></g></svg></div>'
+      +'<div class="wds spk-motwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-mot-ct"></p><div class="spk-chips spk-motmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-motmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-motwds'), loco=g.querySelector('.loco'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-motmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function say(i){ var au=AU[i]; if(!au) return; try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.mt.heard.length===N, k=S.mt.set.length, isl=IS[Math.min(k,IS.length-1)];
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.mt.heard.indexOf(i)>=0, u=S.mt.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      g.querySelectorAll('.brg').forEach(function(b){ b.classList.toggle('in',+b.dataset.k<k); });
+      loco.style.transform='translate('+isl[0]+'px,'+(isl[1]-7)+'px)'; loco.classList.toggle('puff',anim!=null&&anim!=='h');
+      g.dataset.k=String(k); g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-motmean').forEach(function(t){ var f=S.mt.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-mot-ct').innerHTML=!allH?'<b>'+S.mt.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Put each meaning on its word to move the train.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.mt.set.indexOf(i)>=0||S.mt.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.mt.set.push(i); save(); sel=null; miss.textContent=''; sfx('click'); [150,400,650].forEach(function(ms){ setTimeout(function(){ sfx('chug'); },ms); }); if(done()) setTimeout(function(){ sfx('whistle'); },900); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.mt.heard.length===N){ attempt(sel,c); return; }
+      if(S.mt.heard.indexOf(i)<0){ S.mt.heard.push(i); save(); sfx('click'); } say(i); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-motmean'); if(!t) return; if(S.mt.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-motmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-motmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-motmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+  /* ---- Planner · Couple the cars (4.10.01): an engine, two cars and a caboose. Engine = your big idea; car 1 and
+     car 2 = two different technologies; caboose = a person or a detail. Each filled car rolls up and couples with a
+     clank; when all four are on, the train pulls out. Notes only — the student writes.
+     DATA: slots [{id,lab,q,kind:'engine'|'car'|'caboose',opts:[{id,t}],group}] (cars sharing a group must differ) ---- */
+  MOD.couplecars=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var SL=cfg.slots||[]; S.cpl=S.cpl||{}; var was=null;
+    var opt=function(sl,id){ return find(sl.opts,id); };
+    var dup=function(){ var seen={}, bad=false; SL.forEach(function(s){ if(!s.group||!S.cpl[s.id]) return; var k=s.group+':'+S.cpl[s.id]; if(seen[k]) bad=true; seen[k]=1; }); return bad; };
+    var filled=function(){ return SL.length>0&&SL.every(function(s){ return !!S.cpl[s.id]; }); };
+    var done=function(){ return filled()&&!dup(); };
+    var shape=function(s){ if(s.kind==='engine') return '<svg viewBox="0 0 120 70" aria-hidden="true"><rect x="8" y="24" width="66" height="28" rx="5" class="body"/><rect x="58" y="8" width="30" height="44" rx="3" class="cab"/><rect x="20" y="8" width="11" height="18" class="stack"/><path d="M8,52 l-8,10 l12,0z" class="cow"/><circle cx="26" cy="58" r="9" class="wh"/><circle cx="50" cy="58" r="9" class="wh"/><circle cx="80" cy="60" r="7" class="wh"/></svg>';
+      if(s.kind==='caboose') return '<svg viewBox="0 0 120 70" aria-hidden="true"><rect x="8" y="20" width="104" height="32" rx="5" class="body cab2"/><rect x="40" y="6" width="40" height="16" rx="3" class="cupola"/><rect x="18" y="28" width="14" height="10" rx="2" class="win"/><rect x="88" y="28" width="14" height="10" rx="2" class="win"/><circle cx="30" cy="58" r="9" class="wh"/><circle cx="90" cy="58" r="9" class="wh"/></svg>';
+      return '<svg viewBox="0 0 120 70" aria-hidden="true"><rect x="6" y="14" width="108" height="38" rx="5" class="body"/><circle cx="30" cy="58" r="9" class="wh"/><circle cx="90" cy="58" r="9" class="wh"/></svg>'; };
+    var b=el('div','spk spk-builder spk-trainb spk-cpl');
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-track"><div class="spk-train">'+SL.map(function(s,i){ return (i?'<span class="link" aria-hidden="true"></span>':'')+'<div class="car k-'+esc(s.kind||'car')+'" data-c="'+esc(s.id)+'">'+shape(s)+'<span class="lab">'+esc(s.lab)+'</span><span class="load"></span></div>'; }).join('')+'</div><div class="rails" aria-hidden="true"></div></div>'
+      +SL.map(function(s,i){ return '<div class="spk-step" data-r="'+esc(s.id)+'"><div class="lab">'+(s.kind==='engine'?'🚂':s.kind==='caboose'?'🛤️':'🚃')+' '+(i+1)+' · '+esc(s.q||s.lab)+'</div><div class="spk-opts">'+(s.opts||[]).map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'; }).join('')
+      +'<p class="spk-miss spk-trmiss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'All coupled! Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ return SL.filter(function(s){ return S.cpl[s.id]; }).map(function(s){ return [s.lab,(opt(s,S.cpl[s.id])||{}).t||'']; }); }
+    function paint(anim){ SL.forEach(function(s){ b.querySelectorAll('.spk-step[data-r="'+s.id+'"] .spk-opt').forEach(function(o){ o.classList.toggle('on',o.dataset.v===S.cpl[s.id]); });
+        var c=b.querySelector('.car[data-c="'+s.id+'"]'), o=opt(s,S.cpl[s.id]); c.querySelector('.load').textContent=o?o.t:''; c.classList.toggle('full',!!o); if(anim===s.id){ c.classList.remove('roll'); void c.offsetWidth; c.classList.add('roll'); } });
+      b.querySelectorAll('.link').forEach(function(l,i){ l.classList.toggle('on',!!S.cpl[SL[i].id]&&!!S.cpl[SL[i+1].id]); });
+      b.querySelector('.spk-trmiss').textContent=dup()?(cfg.dupT||'Your two cars carry the same technology. Pick two different ones.'):'';
+      var all=done(), trk=b.querySelector('.spk-track'); if(all&&was===false){ sfx('clink'); setTimeout(function(){ sfx('whistle'); },300); trk.classList.add('go'); setTimeout(function(){ trk.classList.remove('go'); },4400); } if(!all) trk.classList.remove('go'); was=all; b.classList.toggle('done',all);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var r=o.closest('.spk-step').dataset.r; S.cpl[r]=o.dataset.v; save(); sfx('clink'); paint(r); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -5333,7 +5571,8 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp'); return d&&[d,'before']; },
+    readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
@@ -5514,7 +5753,7 @@
     {n:7,t:'Fort Mose & Pioneers', img:'source-4-07-01-fort-mose-plan-original.jpg', lon:-81.32,lat:29.93, where:'Fort Mose, two miles north of St. Augustine', blurb:'The first free Black town in what is now the U.S. that the law allowed, and the flags and pioneers that followed.'},
     {n:8,t:'Statehood & War',      img:'source-4-08-01-state-of-florida-1846-original.jpg', lon:-84.28,lat:30.44, where:'Tallahassee', blurb:'Florida becomes a state, the Seminole Wars, and the Civil War.'},
     {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
-    {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
+    {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad-original.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
     {n:11,t:'Civil Rights & Citizens', img:'source-4-11-01-civil-rights.png', lon:-81.20,lat:29.60, where:'St. Augustine, 1964', blurb:'Floridians who stood up for their rights, and what changed.'},
     {n:12,t:'Government',          img:'source-4-12-01-florida-constitution.png', lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
     {n:13,t:'The Exhibit',         img:'source-4-13-01-exhibit-board.png', lon:-81.38,lat:28.54, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
