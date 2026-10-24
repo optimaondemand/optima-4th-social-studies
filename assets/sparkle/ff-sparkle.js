@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -559,7 +559,7 @@
      callout is hidden while the layer is on. ---- */
   function buildHotspots(){ var cfg=DATA.source; if(!cfg||!cfg.hotspots) return null;
     var ph=document.querySelector('#panel-explore .source-card .source-image-placeholder'); if(!ph) return null;
-    var card=ph.closest('.source-card'), key=card.querySelector('.callout-vocab'); if(key) key.classList.add('spk-hide');
+    var card=ph.closest('.source-card'), key=card.querySelector('.callout-vocab'); if(key) key.classList.add('spk-hide'); if(cfg.maxW){ ph.classList.add('spk-srcnarrow'); card.style.setProperty('--spk-srcw',cfg.maxW); }
     S.hot=S.hot||[]; var H=cfg.hotspots;
     var info=el('div','spk spk-hotinfo'); ph.parentNode.insertBefore(info,ph.nextSibling);
     var sel=null;
@@ -5479,6 +5479,186 @@
     return {done:done, lines:lines};
   };
 
+
+  /* ---- Scene 1 · Clear the breakfast table (4.10.02): a sunny Florida breakfast table holds things that came from
+     Florida industries. Tap one (or drag it) and put it in its industry's basket; the basket bobs and the item drops in.
+     DATA: baskets [{id,t,sub,ico}], items [{id,t,ico,p,miss,why}] ---- */
+  MOD.breakfast=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var PK=cfg.baskets||[], CD=(cfg.items||[]).map(function(x){ return Object.assign({},x,{t:(x.ico?x.ico+' ':'')+x.t}); }); S.bkf=S.bkf||[]; var was=null;
+    var done=function(){ return CD.length>0&&CD.every(function(c){ return S.bkf.indexOf(c.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-bkf');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Clear the breakfast table')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-bkftable"><div class="win" aria-hidden="true"><span class="sun"></span><span class="palm"></span></div><p class="spk-bell-ct spk-bkf-ct"></p><div class="spk-chips spk-bkftray"></div><span class="cloth" aria-hidden="true"></span></div><p class="spk-miss"></p>'
+      +'<div class="spk-bkfbks">'+PK.map(function(p,i){ return '<div class="bk" data-b="'+esc(p.id)+'" role="button" tabindex="0" style="--i:'+i+'"><div class="hd"><span class="ico" aria-hidden="true">'+esc(p.ico||'🧺')+'</span><b>'+esc(p.t)+'</b><span class="sub">'+esc(p.sub||'')+'</span><span class="ok" aria-hidden="true">✓</span></div><div class="in"></div><span class="weave" aria-hidden="true"></span></div>'; }).join('')+'</div>'
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var sorter=spkSorter({g:g, tray:g.querySelector('.spk-bkftray'), bks:g.querySelector('.spk-bkfbks'), cards:CD, pockets:PK, state:S.bkf, miss:g.querySelector('.spk-miss'), cls:'spk-bkfcard', scene:'open', firstT:cfg.firstT||'Tap something on the table first, then tap its basket.', done:done, paint:function(){ paint(); } });
+    function paint(){ PK.forEach(function(p){ var mine=CD.filter(function(c){ return c.p===p.id; }), n=mine.filter(function(c){ return S.bkf.indexOf(c.id)>=0; }).length, b=g.querySelector('.bk[data-b="'+p.id+'"]'); b.classList.toggle('has',n>0); b.classList.toggle('full',mine.length>0&&n===mine.length); });
+      var d=done(); g.querySelector('.spk-bkf-ct').innerHTML=d?esc(cfg.clearT||'The table is clear!'):'<b>'+S.bkf.length+' of '+CD.length+'</b> '+esc(cfg.countT||'things put away.');
+      g.querySelector('.spk-bkftable').classList.toggle('clear',d);
+      if(d&&was===false){ sfx('win'); } was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    sorter.paint();
+    return {done:done, journal:function(e,NA){ if(!S.bkf.length) return NA; return '<p class="a">'+PK.map(function(p){ var L=S.bkf.map(function(id){ return find(CD,id); }).filter(function(c){ return c&&c.p===p.id; }); return L.length?'<b>'+e(p.t)+':</b> '+e(L.map(function(c){ return c.t; }).join(' · ')):''; }).filter(Boolean).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · The industry machine (4.10.02): a factory conveyor. Geography goes in, an industry comes out.
+     Each part, a crate of geography (warm sun, rich soil, long coast…) rolls up to the machine; stamp it with the industry
+     it feeds. The right stamp thumps down, the crate turns into that industry's product and rolls on, and the part opens.
+     DATA: paras [{id,match}], stamps [{id,t,ico}], parts [{id,t,in,inIco,out,outIco,stamp,miss,paras:[]}] (stamp null = a
+     'Start the machine' part with a button) ---- */
+  MOD.conveyor=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var PT=cfg.parts||[], ST=cfg.stamps||[], N=PT.length; if(S.cnv==null) S.cnv=0;
+    var done=function(){ return N>0&&S.cnv>=N; };
+    var w=el('div','spk spk-cnv');
+    w.innerHTML=whyCard(cfg.why)+'<div class="spk-cnvfloor"><div class="mach" aria-hidden="true"><span class="chim"></span><span class="lbl">'+esc(cfg.machineT||'INDUSTRY MACHINE')+'</span><span class="gear g1"></span><span class="gear g2"></span><span class="mouth"></span></div>'
+      +'<div class="belt" aria-hidden="true"><span class="rollers"></span></div><div class="crate" aria-hidden="true"><span class="ico"></span><span class="tx"></span></div><div class="outs" aria-hidden="true"></div></div>'
+      +'<div class="spk-cnvctl"><p class="spk-ys-ct spk-cnvct"></p><div class="spk-cnvstamps">'+ST.map(function(s){ return '<button type="button" class="stamp" data-s="'+esc(s.id)+'"><span class="ico" aria-hidden="true">'+esc(s.ico||'')+'</span>'+esc(s.t)+'</button>'; }).join('')+'</div><button type="button" class="spk-ywgo spk-cnvgo"></button><p class="spk-miss"></p></div><div class="spk-cnvparts"></div>';
+    before(first,w);
+    var holder=w.querySelector('.spk-cnvparts'), boxes={}, crate=w.querySelector('.crate'), outs=w.querySelector('.outs'), miss=w.querySelector('.spk-miss'), go=w.querySelector('.spk-cnvgo'), floor=w.querySelector('.spk-cnvfloor');
+    PT.forEach(function(s,i){ var b=el('div','spk-cnvp'); b.innerHTML='<div class="tab"><span class="ic" aria-hidden="true">'+esc(s.outIco||'📦')+'</span> '+esc(s.t)+(s.in?' <span class="eq">'+esc(s.in)+' → '+esc(s.out||'')+'</span>':'')+'</div>'; holder.appendChild(b); (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.appendChild(nd); }); }); boxes[i]=b; });
+    function paint(anim){ var k=Math.min(S.cnv,N), cur=PT[k];
+      PT.forEach(function(s,i){ boxes[i].classList.toggle('on',i<S.cnv); });
+      outs.innerHTML=PT.slice(0,S.cnv).filter(function(s){ return s.stamp; }).map(function(s){ return '<span class="o" title="'+esc(s.out||'')+'">'+esc(s.outIco||'📦')+'</span>'; }).join('');
+      if(cur){ crate.querySelector('.ico').textContent=cur.inIco||'📦'; crate.querySelector('.tx').textContent=cur.in||(cfg.startCrate||'Ready'); }
+      crate.classList.toggle('spk-hide',done()); crate.classList.toggle('start',!!cur&&!cur.stamp);
+      w.querySelector('.spk-cnvstamps').classList.toggle('spk-hide',done()||!cur||!cur.stamp);
+      go.classList.toggle('spk-hide',done()||!cur||!!cur.stamp); if(cur&&!cur.stamp) go.textContent=cfg.startT||'Start the machine';
+      w.querySelector('.spk-cnvct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every crate is stamped. Geography in, industries out!')+'</b>':(cur&&cur.stamp?'<b>'+(k)+' of '+(N-1)+'</b> '+esc((cfg.askT||'A crate of {in} is in the machine. Which industry does it feed? Tap a stamp.').replace('{in}',(cur.in||'').toLowerCase())):esc(cfg.introT||'Press the button to start the machine and read the first part.'));
+      w.classList.toggle('all',done()); floor.classList.toggle('run',!done());
+      if(anim!=null){ crate.classList.remove('roll'); void crate.offsetWidth; crate.classList.add('roll'); var nb=boxes[anim]; if(nb&&!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ try{ nb.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },400); }
+      var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function advance(){ var i=S.cnv; S.cnv++; save(); ack('explore'); paint(i); refreshFile(); refreshVoice(); }
+    go.addEventListener('click',function(){ if(done()) return; sfx('door'); advance(); });
+    w.querySelector('.spk-cnvstamps').addEventListener('click',function(e){ var b=e.target.closest('.stamp'); if(!b||done()) return; var cur=PT[S.cnv]; if(!cur||!cur.stamp) return;
+      if(b.dataset.s===cur.stamp){ miss.textContent=''; b.classList.remove('thump'); void b.offsetWidth; b.classList.add('thump'); crate.classList.add('stamped'); sfx('thud'); setTimeout(function(){ crate.classList.remove('stamped'); sfx('click'); advance(); },520); }
+      else { b.classList.add('shake'); setTimeout(function(){ b.classList.remove('shake'); },450); miss.textContent=(cur.miss&&cur.miss[b.dataset.s])||cur.missAny||cfg.missT||'Look at what is in the crate. Which industry needs that?'; missBeat(miss.textContent); } });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<N;i++) if(PT[i].id===id) return boxes[i]; return null; }, journal:function(){ return '<p class="a">Crates stamped: '+Math.max(0,Math.min(S.cnv,N)-1)+' of '+(N-1)+'.</p>'; }};
+  };
+
+  /* ---- Explore evidence · Mission control (4.10.02): a control panel under the labeled launch photo. Each gold number
+     tapped on the photo turns its panel light from red to green ("system check"). With every light green, answer the
+     GO / NO-GO question: pick every reason this spot was good for launches (decoys bounce with a reason); then LAUNCH.
+     DATA: lights [{n,t}] in hotspot order, q, reasons [{id,t,ok,why}], need (number of ok reasons) ---- */
+  MOD.missionctl=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var LT=cfg.lights||[], RS=cfg.reasons||[], NEED=RS.filter(function(r){ return r.ok; }).length; S.mc2=S.mc2||{pick:[],launched:false};
+    var lit=function(i){ return !!(S.hot&&S.hot.indexOf(i)>=0); };
+    var allLit=function(){ return LT.length>0&&LT.every(function(l,i){ return lit(i); }); };
+    var answered=function(){ return S.mc2.pick.length>=NEED; };
+    var done=function(){ return allLit()&&answered()&&S.mc2.launched&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-mc2');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Mission control')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-mcpanel"><div class="scr"><span class="clk">T−00:00:00</span><span class="st"></span></div><div class="lights">'+LT.map(function(l,i){ return '<div class="lt" data-i="'+i+'"><span class="led" aria-hidden="true"></span><span class="n">'+esc(l.n)+'</span><span class="t">'+esc(l.t)+'</span></div>'; }).join('')+'</div></div>'
+      +'<div class="spk-mcq"><p class="q">'+esc(cfg.q||'')+'</p><div class="spk-opts">'+RS.map(function(r){ return '<button type="button" class="spk-opt" data-r="'+esc(r.id)+'">'+esc(r.t)+'</button>'; }).join('')+'</div><p class="spk-miss"></p><p class="whys"></p><button type="button" class="spk-mcgo">🚀 '+esc(cfg.goT||'LAUNCH')+'</button></div>'
+      +'<div class="spk-mcsky" aria-hidden="true"><span class="rk">🚀</span><span class="trail"></span></div>'
+      +'<p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var miss=g.querySelector('.spk-mcq .spk-miss'), was=done();
+    function paint(anim){ LT.forEach(function(l,i){ var e=g.querySelector('.lt[data-i="'+i+'"]'); var on=lit(i); if(on&&!e.classList.contains('go')&&anim==='hot'){ e.classList.add('flip'); setTimeout(function(){ e.classList.remove('flip'); },600); } e.classList.toggle('go',on); });
+      var al=allLit(), n=LT.filter(function(l,i){ return lit(i); }).length;
+      g.querySelector('.st').textContent=al?(answered()?(S.mc2.launched?(cfg.liftT||'LIFTOFF'):(cfg.goStT||'ALL SYSTEMS GO')):(cfg.qStT||'ANSWER GO / NO-GO')):(n+' / '+LT.length+' '+(cfg.checkT||'SYSTEMS CHECKED'));
+      g.querySelector('.spk-mcq').classList.toggle('locked',!al);
+      g.querySelectorAll('.spk-mcq .spk-opt').forEach(function(o){ o.classList.toggle('on',S.mc2.pick.indexOf(o.dataset.r)>=0); });
+      g.querySelector('.whys').innerHTML=S.mc2.pick.map(function(id){ var r=find(RS,id); return r&&r.why?'✓ '+esc(r.why):''; }).filter(Boolean).join('<br>');
+      g.querySelector('.spk-mcgo').classList.toggle('ready',al&&answered()&&!S.mc2.launched); g.querySelector('.spk-mcgo').disabled=!(al&&answered());
+      g.classList.toggle('launched',!!S.mc2.launched);
+      var d=done(); g.querySelector('.spk-si-gate').textContent=S.mc2.launched&&!d?(cfg.gateT||'Last step: finish every part of the industry machine in Learn the Story.'):(!al?(cfg.lockT||'Tap each gold number on the photo to check its system.'):'');
+      g.querySelector('.spk-win').classList.toggle('show',!!S.mc2.launched); if(d!==was){ refreshFile(); refreshVoice(); } was=d; }
+    HOT_TAP.push(function(){ paint('hot'); sfx('click'); refreshFile(); });
+    g.querySelector('.spk-mcq').addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o||!allLit()) { if(o) miss.textContent=cfg.lockT||'Check every system first: tap each gold number on the photo.'; return; } var r=find(RS,o.dataset.r);
+      if(!r.ok){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=r.why||cfg.noT||'No-go. Look again at the photo and the reading.'; return; }
+      if(S.mc2.pick.indexOf(r.id)<0) S.mc2.pick.push(r.id); miss.textContent=''; save(); sfx('clink'); ack('explore'); paint(); });
+    g.querySelector('.spk-mcgo').addEventListener('click',function(){ if(!(allLit()&&answered())) return; S.mc2.launched=true; save(); sfx('whistle'); var sky=g.querySelector('.spk-mcsky'); sky.classList.remove('go'); void sky.offsetWidth; sky.classList.add('go'); paint(); refreshFile(); refreshVoice(); });
+    paint();
+    return {done:done, journal:function(e){ return '<p class="a">Systems checked: '+LT.filter(function(l,i){ return lit(i); }).length+' of '+LT.length+'. Reasons: '+S.mc2.pick.map(function(id){ return e(find(RS,id).t); }).join(' · ')+'</p>'; }};
+  };
+
+  /* ---- Vocabulary · Countdown (4.10.02, astro = star): a rocket on its pad with a big countdown board at 4. Hear each
+     word (g4ss-<lesson>-astro-<n>.mp3); each meaning matched counts down one; the last match plays the teacher's
+     countdown clip (g4ss-<lesson>-astro-launch.mp3, if it exists) and the rocket lifts off into the stars. ---- */
+  MOD.countdown=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'astro', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.cdn=S.cdn||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.cdn.set.length===N; };
+    var stars=''; for(var i=0;i<26;i++){ stars+='<circle cx="'+((i*53)%340)+'" cy="'+((i*37)%90)+'" r="'+(i%3?0.9:1.4)+'" class="st"/>'; }
+    var g=el('div','spk spk-cdn');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Countdown')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-cdnscene"><svg viewBox="0 0 340 170" aria-hidden="true"><defs><linearGradient id="spkCdnSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E1C42"/><stop offset=".7" stop-color="#3B4F8A"/><stop offset="1" stop-color="#F2A65A"/></linearGradient></defs><rect width="340" height="170" fill="url(#spkCdnSky)"/><g class="stars">'+stars+'</g>'
+      +'<rect y="146" width="340" height="24" class="gr"/><path d="M0,150 q40,-6 80,0 t80,0 t80,0 t100,0" class="sea"/>'
+      +'<g class="tower"><rect x="186" y="58" width="8" height="90"/>'+[0,1,2,3,4,5].map(function(k){ return '<line x1="186" y1="'+(64+k*14)+'" x2="194" y2="'+(72+k*14)+'"/>'; }).join('')+'<rect x="176" y="70" width="12" height="3"/></g>'
+      +'<g class="rkt"><path d="M170,52 L176,66 L176,140 L164,140 L164,66 Z" class="body"/><rect x="164" y="98" width="12" height="6" class="band"/><path d="M164,128 L156,142 L164,140 Z M176,128 L184,142 L176,140 Z" class="fin"/><g class="fire"><path d="M164,140 Q170,168 176,140 Z"/><path d="M166,140 Q170,158 174,140 Z" class="core"/></g></g>'
+      +'<g class="smoke"><circle cx="152" cy="150" r="10"/><circle cx="190" cy="152" r="12"/><circle cx="170" cy="156" r="9"/></g></svg>'
+      +'<div class="board"><span class="lb">'+esc(cfg.boardT||'T-minus')+'</span><span class="num"></span></div></div>'
+      +'<div class="wds spk-cdnwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-cdn-ct"></p><div class="spk-chips spk-cdnmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-cdnmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-cdnwds'), sel=null, AU={}, LAU=new Audio(); LAU.preload='none'; LAU.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-launch.mp3';
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-cdnmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.cdn.heard.length===N, k=S.cdn.set.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.cdn.heard.indexOf(i)>=0, u=S.cdn.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      var num=g.querySelector('.board .num'); num.textContent=done()?(cfg.liftT||'LIFTOFF!'):String(N-k); if(anim!=null&&anim!=='h'){ num.classList.remove('tick'); void num.offsetWidth; num.classList.add('tick'); }
+      g.dataset.k=String(k); g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-cdnmean').forEach(function(t){ var f=S.cdn.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-cdn-ct').innerHTML=!allH?'<b>'+S.cdn.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Each match counts down one.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.cdn.set.indexOf(i)>=0||S.cdn.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.cdn.set.push(i); save(); sel=null; miss.textContent=''; sfx('clink'); if(done()){ setTimeout(function(){ play(LAU); sfx('whistle'); },250); } paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.cdn.heard.length===N){ attempt(sel,c); return; }
+      if(S.cdn.heard.indexOf(i)<0){ S.cdn.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-cdnmean'); if(!t) return; if(S.cdn.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-cdnmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-cdnmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-cdnmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); attempt(sel,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+  /* ---- Planner · Greetings from Florida (4.10.02): a vintage big-letter postcard. Two stamp spots: pick an industry for
+     each (they must differ), then pick the geography that helps it ("because…"); a feature that doesn't fit that
+     industry bounces with a hint. Stamps land with a postmark. Notes only — the student writes in Step 3.
+     DATA: industries [{id,t,ico,feats:[ids]}], feats [{id,t}] ---- */
+  MOD.greetings=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var IN=cfg.industries||[], FT=cfg.feats||[]; S.grt=S.grt||{a:null,af:null,b:null,bf:null}; var was=null;
+    var okf=function(ind,f){ var x=find(IN,ind); return !!(x&&x.feats.indexOf(f)>=0); };
+    var done=function(){ var G=S.grt; return !!(G.a&&G.b&&G.a!==G.b&&G.af&&G.bf&&okf(G.a,G.af)&&okf(G.b,G.bf)); };
+    var big=(cfg.big||'FLORIDA').split('').map(function(ch,i){ return '<span style="--i:'+i+'">'+esc(ch)+'</span>'; }).join('');
+    var b=el('div','spk spk-builder spk-grt');
+    var row=function(k,lab){ return '<div class="fr" data-r="'+k+'"><div class="lab">'+esc(lab)+'</div><div class="spk-opts">'+IN.map(function(x){ return '<button type="button" class="spk-opt" data-v="'+esc(x.id)+'">'+esc((x.ico?x.ico+' ':'')+x.t)+'</button>'; }).join('')+'</div></div><div class="fr" data-r="'+k+'f"><div class="lab">'+esc(cfg.becT||'…because Florida has')+'</div><div class="spk-opts">'+FT.map(function(f){ return '<button type="button" class="spk-opt" data-v="'+esc(f.id)+'">'+esc(f.t)+'</button>'; }).join('')+'</div></div>'; };
+    b.innerHTML=voice(cfg.voice,cfg)
+      +'<div class="spk-grtcard"><div class="front"><span class="greet">'+esc(cfg.greetT||'Greetings from')+'</span><span class="big">'+big+'</span></div>'
+      +'<div class="back"><div class="lines"><p class="l a"></p><p class="l b"></p></div><div class="stamps"><span class="stp a"><i></i></span><span class="stp b"><i></i></span><span class="pm" aria-hidden="true">'+esc(cfg.pmT||'FLA')+'</span></div></div></div>'
+      +row('a',cfg.aT||'Stamp 1 · pick an industry')+row('b',cfg.bT||'Stamp 2 · pick a different industry')
+      +'<p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Your postcard is ready. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ var G=S.grt, L=[]; [['a','af'],['b','bf']].forEach(function(p,i){ var x=find(IN,G[p[0]]), f=find(FT,G[p[1]]); if(x) L.push([(cfg.indLab||'Industry')+' '+(i+1),x.t+(f&&okf(x.id,f.id)?' · because Florida has '+f.t.toLowerCase():'')]); }); return L; }
+    function paint(anim){ var G=S.grt;
+      ['a','b'].forEach(function(k){ var x=find(IN,G[k]), f=find(FT,G[k+'f']), good=x&&f&&okf(x.id,f.id); var stp=b.querySelector('.stp.'+k); stp.querySelector('i').textContent=x?(x.ico||'★'):''; stp.classList.toggle('set',!!x); if(anim===k){ stp.classList.remove('drop'); void stp.offsetWidth; stp.classList.add('drop'); }
+        b.querySelector('.l.'+k).textContent=x?(x.t+(good?' · because Florida has '+f.t.toLowerCase():' · because Florida has …')):'';
+        b.querySelector('.fr[data-r="'+k+'f"]').classList.toggle('locked',!x); });
+      b.querySelectorAll('.fr').forEach(function(fr){ var r=fr.dataset.r; fr.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',G[r]===o.dataset.v); }); });
+      var d=done(); b.querySelector('.pm').classList.toggle('on',d); if(d&&was===false){ sfx('thud'); setTimeout(function(){ sfx('win'); },250); } was=d; b.classList.toggle('done',d);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var fr=o.closest('.fr'); if(fr.classList.contains('locked')) return; var r=fr.dataset.r, v=o.dataset.v, miss=b.querySelector('.spk-miss'), G=S.grt;
+      var bad=function(m){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=m; };
+      if(r==='a'||r==='b'){ var other=r==='a'?G.b:G.a; if(v===other) return bad(cfg.sameT||'Pick two different industries for your two stamps.'); if(G[r]!==v){ G[r]=v; G[r+'f']=null; } save(); miss.textContent=''; sfx('click'); paint(r); return; }
+      var k=r.charAt(0); if(!okf(G[k],v)){ var x=find(IN,G[k]); return bad((x&&x.miss&&x.miss[v])||cfg.noFitT||'That feature doesn’t help this industry much. Look back at the industry machine in the Explore tab.'); }
+      G[r]=v; save(); miss.textContent=''; sfx('clink'); paint(); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -5571,7 +5751,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2'); return d&&[d,'before']; },
     readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
