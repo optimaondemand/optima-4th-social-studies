@@ -1784,6 +1784,1204 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.10.03",
+ "title": "Immigrant Contributions to Florida",
+ "quiet": false,
+ "file": {
+  "n": 10,
+  "title": "Modern Florida",
+  "label": "Modern Florida",
+  "seals": [
+   "🍊",
+   "🏖️",
+   "🚀"
+  ]
+ },
+ "prevFile": "Major Industries in Florida",
+ "connector": "Last time, you found Florida’s big industries. Now let’s meet the people who came from other countries to do the work.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Predict, then hear",
+   "why": "Guess who paid the factory reader and who chose what he read. Then hear what a photographer wrote in 1909."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Fill the album, then solve the caption",
+   "why": "Paste in each keepsake to read a family’s story and their neighbors’. Then match the photographer’s words to his photo."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Build a sandwich, then write",
+   "why": "Answer three questions. Plan with a Cuban sandwich, then write 3 to 5 sentences about how immigrants shaped Florida."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Can you hear someone reading out loud in here?",
+  "opening": [
+   "I found an old photo of a cigar factory. A man is up high, reading to all the workers.",
+   "Start in the Learn tab (tab 1). Scroll down to the photo and the three question cards.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the photo",
+      "go": true,
+      "reply": "Make a guess on each card first. Then press Hear the caption to find out."
+     },
+     {
+      "t": "What’s an immigrant?",
+      "reply": "An immigrant is a person who moves from one country to live in another."
+     },
+     {
+      "t": "Why read to workers?",
+      "reply": "Rolling cigars kept their hands busy all day, but their ears were free. The cards will tell you more."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Open the family photo album and paste in the first keepsake."
+     },
+     {
+      "t": "Who took the photo?",
+      "reply": "The Burgert Brothers, a family of photographers in Tampa, took it in 1929. The words you heard were written by a different photographer, Lewis Hine, in 1909."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Was the Pérez family real?",
+      "reply": "No, I made them up. But every detail on their pages comes from real Ybor City history."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in this file?",
+      "reply": "Next time: some of the people who shaped Florida’s growth, one person at a time."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Three guesses, and now you know! The workers paid the reader and chose what he read. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The album is full, and the caption is solved! Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then build your sandwich and write 3 to 5 sentences about how immigrants shaped Florida."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! Another part of the modern Florida file is open. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Perseverance means you keep going when things are hard. Immigrants left everything they knew and started over in Florida. Today you are an immigration historian, someone who studies people who moved here from other countries, finding out what they added to Florida.",
+ "scene1": {
+  "type": "predicthear",
+  "kicker": "Predict, then hear",
+  "h": "Who paid the factory reader?",
+  "voice": "Make a guess on each card. It’s okay to be wrong! Then press <b>Hear the caption<\/b>.",
+  "why": {
+   "icon": "📖",
+   "q": "What’s a lector?",
+   "t": "In Cuba and Florida, cigar workers rolled cigars by hand for hours. A <b>lector<\/b> (a reader) sat or stood up high and read aloud to them, so work time became learning time. A <b>caption<\/b> is the writing that goes with a photo. That’s why you guess first, then hear the caption a photographer wrote about a reader in 1909."
+  },
+  "img": "scene-4-10-03-burgert-cuesta-rey-lector-1929.jpg",
+  "imgAlt": "A 1929 photo of a large cigar factory in Tampa. Rows of workers sit at long tables. A man stands on a high wooden platform at the right, reading.",
+  "imgCap": "A lector reads at the Cuesta-Rey Cigar Company in Tampa, 1929. He stands on the high platform at the right. Burgert Brothers photo, State Archives of Florida.",
+  "hearT": "Hear the caption",
+  "hearClip": "guide2b",
+  "quoteWho": "Lewis Hine, photographer · Tampa, January 1909",
+  "quote": "A “Reader” in cigar factory, Tampa, Fla. He reads books and newspapers at top of his voice all day long. This is all the education many of these workers receive. He is paid by them and they select what he shall read.",
+  "rightT": "You guessed it!",
+  "surpriseT": "Your guess was:",
+  "cards": [
+   {
+    "id": "paid",
+    "q": "Who paid the reader?",
+    "opts": [
+     {
+      "id": "owner",
+      "t": "The factory owner"
+     },
+     {
+      "id": "workers",
+      "t": "The cigar workers"
+     },
+     {
+      "id": "city",
+      "t": "The city of Tampa"
+     }
+    ],
+    "a": "workers",
+    "ans": "The cigar workers paid him.",
+    "proof": "“He is paid by them…”"
+   },
+   {
+    "id": "chose",
+    "q": "Who chose what he read?",
+    "opts": [
+     {
+      "id": "owner",
+      "t": "The factory owner"
+     },
+     {
+      "id": "workers",
+      "t": "The cigar workers"
+     },
+     {
+      "id": "reader",
+      "t": "The reader, all by himself"
+     }
+    ],
+    "a": "workers",
+    "ans": "The workers chose what he read.",
+    "proof": "“…and they select what he shall read.”"
+   },
+   {
+    "id": "why",
+    "q": "Why read aloud to the workers?",
+    "opts": [
+     {
+      "id": "learn",
+      "t": "So they could hear the news and stories while their hands rolled cigars"
+     },
+     {
+      "id": "orders",
+      "t": "So the boss could give orders"
+     },
+     {
+      "id": "quiet",
+      "t": "To keep the factory quiet"
+     }
+    ],
+    "a": "learn",
+    "ans": "So the workers could learn. For many of them, it was their only schooling.",
+    "proof": "“This is all the education many of these workers receive.”"
+   }
+  ],
+  "win": "📖 <b>Now you know!<\/b> The workers paid the lector and chose what he read. For many of them, listening was their school. Next, meet the people who came to Florida to work."
+ },
+ "explore": {
+  "reading": {
+   "type": "album",
+   "activity": "Immigrants Who Built Florida",
+   "mid": "greek",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^An immigrant is"
+    },
+    {
+     "id": "p2",
+     "match": "^Cuban immigrants and Ybor"
+    },
+    {
+     "id": "p3",
+     "match": "^Inside the cigar factories"
+    },
+    {
+     "id": "p4",
+     "match": "^Greek immigrants in"
+    },
+    {
+     "id": "p5",
+     "match": "^Bahamian communities"
+    },
+    {
+     "id": "p6",
+     "match": "^Minorcan communities"
+    },
+    {
+     "id": "p7",
+     "match": "^Why it matters"
+    }
+   ],
+   "why": {
+    "icon": "📷",
+    "q": "Why a photo album?",
+    "t": "Families keep albums full of tickets, photos and keepsakes (small things saved to remember a time). Each one tells part of a family’s story. That’s why you paste in a keepsake before you read each page."
+   },
+   "coverT": "The Pérez Family Album",
+   "coverS": "Ybor City, Tampa · and the neighbors",
+   "note": "The Pérez family is made up. Every detail on their pages comes from real Ybor City history.",
+   "pasteT": "Paste it in",
+   "allT": "The album is full! Cuban, Greek, Bahamian and Minorcan pages, all in one Florida album.",
+   "countT": "pages filled. Fill the next page to read on.",
+   "pages": [
+    {
+     "id": "ticket",
+     "t": "Leaving Havana",
+     "ico": "🎫",
+     "item": "Steamship ticket: Havana to Tampa",
+     "cap": "Meet the Pérez family. In 1886, Ramón and Elena Pérez sailed from Havana, Cuba, to Tampa. Ramón was a <i>tabaquero<\/i>, a skilled cigar roller.",
+     "paras": [
+      "p1",
+      "p2"
+     ]
+    },
+    {
+     "id": "band",
+     "t": "Ramón’s work",
+     "ico": "🏷️",
+     "item": "A paper cigar band from Ramón’s factory",
+     "cap": "Ramón rolled cigars by hand all day. The tobacco leaves came by ship from Cuba. While he worked, the lector read the news aloud.",
+     "paras": [
+      "p3"
+     ],
+     "ask": {
+      "q": "Ramón’s cigars need tobacco leaves. Where did the leaves come from?",
+      "opts": [
+       {
+        "t": "Tobacco fields in Ybor City",
+        "miss": "Ybor City was a town of factories, not farms. The leaves had to come from somewhere else. Where did the Pérez family come from?"
+       },
+       {
+        "t": "Ships brought them from Cuba",
+        "ok": true
+       },
+       {
+        "t": "Ramón grew them in his backyard",
+        "miss": "One backyard couldn’t grow enough for a whole factory! Think about the ships that came from Cuba."
+       }
+      ]
+     }
+    },
+    {
+     "id": "greek",
+     "t": "Neighbors in Tarpon Springs",
+     "ico": "🧽",
+     "item": "A dried sea sponge",
+     "neighbor": true,
+     "cap": "Across the bay, in Tarpon Springs, divers in heavy suits walk on the floor of the Gulf to gather sponges.",
+     "paras": [
+      "p4"
+     ],
+     "ask": {
+      "q": "These neighbors dive for sponges in Tarpon Springs. Where did they come from?",
+      "opts": [
+       {
+        "t": "Cuba, like the Pérez family",
+        "miss": "Not everyone came from Cuba! These divers spoke Greek and went to an Orthodox church. Try again."
+       },
+       {
+        "t": "Greece",
+        "ok": true
+       },
+       {
+        "t": "Italy",
+        "miss": "Many Italians lived in Ybor City. These divers came from a different country, across the Mediterranean Sea from Italy."
+       }
+      ]
+     }
+    },
+    {
+     "id": "bah",
+     "t": "Neighbors in Key West and Miami",
+     "ico": "🐚",
+     "item": "A conch shell (a big sea snail’s shell)",
+     "neighbor": true,
+     "cap": "Down in Key West and Miami, neighbors fish, gather sponges, build boats and build houses.",
+     "paras": [
+      "p5"
+     ],
+     "ask": {
+      "q": "These neighbors fish and build boats in Key West and Miami. Where did they come from?",
+      "opts": [
+       {
+        "t": "Cuba, like the Pérez family",
+        "miss": "Florida’s immigrants came from many places, not just Cuba. These neighbors came from islands just off Florida’s east coast."
+       },
+       {
+        "t": "The Bahamas",
+        "ok": true
+       },
+       {
+        "t": "Greece",
+        "miss": "The Greek divers lived in Tarpon Springs, on the Gulf Coast. These neighbors came from islands much closer to Miami."
+       }
+      ]
+     }
+    },
+    {
+     "id": "min",
+     "t": "Neighbors in St. Augustine",
+     "ico": "🌶️",
+     "item": "A tiny hot datil pepper",
+     "neighbor": true,
+     "cap": "Up in St. Augustine, a family stirs a pot of spicy clam chowder, the way their great-great-grandparents did.",
+     "paras": [
+      "p6"
+     ],
+     "ask": {
+      "q": "These neighbors’ families came to Florida long ago, in 1768. Where did they come from?",
+      "opts": [
+       {
+        "t": "Cuba, like the Pérez family",
+        "miss": "Not Cuba this time! Their families came from an island in the Mediterranean Sea, near Spain."
+       },
+       {
+        "t": "Minorca, an island of Spain",
+        "ok": true
+       },
+       {
+        "t": "The Bahamas",
+        "miss": "The Bahamians settled in Key West and Miami. These families came from much farther away, across the Atlantic."
+       }
+      ]
+     }
+    },
+    {
+     "id": "today",
+     "t": "Florida today",
+     "ico": "🗺️",
+     "item": "A postcard of Florida today",
+     "cap": "Today, Florida’s culture is a blend: Cuban coffee, Greek festivals, Bahamian music and Minorcan chowder, side by side with older traditions.",
+     "paras": [
+      "p7"
+     ],
+     "ask": {
+      "q": "What happened to Florida’s older traditions when all these newcomers came?",
+      "opts": [
+       {
+        "t": "The newcomers replaced them",
+        "miss": "Not replaced! Florida still has its older traditions. The new ones blended in with them, like ingredients in one dish."
+       },
+       {
+        "t": "Old and new traditions blended together",
+        "ok": true
+       },
+       {
+        "t": "Nothing changed at all",
+        "miss": "A lot changed: new foods, festivals, churches and jobs. Look back at your album pages."
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "evidence": {
+   "type": "captiondet",
+   "kicker": "Caption detective",
+   "h": "Which words can the photo prove?",
+   "voice": "Tap a caption strip. Then tap the gold number on the photo that proves it, or drag it there. If a photo can’t show it, put it in the box: <b>Only the caption tells us<\/b>.",
+   "why": {
+    "icon": "🔎",
+    "q": "Why a caption detective?",
+    "t": "A <b>caption<\/b> is the writing that goes with a photo. Lewis Hine wrote his on a card for this photo in 1909. Historians check a caption against the picture: some words the photo can prove, and some only the writer knew. That’s why you match each strip to its proof."
+   },
+   "quoteWho": "Lewis Hine’s caption, cut into strips",
+   "noneT": "Only the caption tells us",
+   "noneSub": "A photo can’t show this. We know it only because Hine wrote it down.",
+   "strips": [
+    {
+     "id": "reader",
+     "t": "A ‘Reader’ in cigar factory",
+     "to": "1",
+     "missAny": "Find the man the caption calls a reader. Where is he sitting?"
+    },
+    {
+     "id": "news",
+     "t": "He reads books and newspapers",
+     "to": "2",
+     "missAny": "What is the reader holding in his hands?"
+    },
+    {
+     "id": "workers",
+     "t": "many of these workers",
+     "to": "3",
+     "missAny": "Find the people working at the long tables."
+    },
+    {
+     "id": "paid",
+     "t": "He is paid by them",
+     "to": "none",
+     "missAny": "Can a photo show who pays someone? You can’t see any money changing hands. Try the box: Only the caption tells us."
+    },
+    {
+     "id": "select",
+     "t": "they select what he shall read",
+     "to": "none",
+     "missAny": "A photo can’t show who chose the newspaper. Only the caption can tell us that."
+    },
+    {
+     "id": "educ",
+     "t": "This is all the education many of these workers receive",
+     "to": "none",
+     "missAny": "A photo can’t show how much schooling someone had. Only the caption can tell us that."
+    }
+   ],
+   "countT": "strips placed. Tap a strip, then the gold number that proves it.",
+   "placedT": "Every strip is placed.",
+   "restT": "Now tap the gold numbers no strip used.",
+   "gateT": "Last step: fill every page of the family album in Learn the Story.",
+   "win": "🔎 <b>Case solved!<\/b> The photo proves there was a reader, a newspaper and workers listening. Only the caption tells us the workers paid him and chose what he read. Historians use both. Now read the three questions under the photo."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "In Learn the Story, fill the family photo album: paste in each keepsake to read its page.",
+    "Under the photo, tap a caption strip, then the gold number that proves it. Some strips go in the box: Only the caption tells us.",
+    "Tap any gold numbers no strip used.",
+    "Read the three questions under the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 78.9,
+    "y": 21.9,
+    "title": "The reader.",
+    "t": "He sits on a chair on top of a high table, so every worker can hear him."
+   },
+   {
+    "n": "2",
+    "x": 56.1,
+    "y": 45.6,
+    "title": "His newspaper.",
+    "t": "He holds it up and reads it aloud. More newspapers wait in a stack by his chair."
+   },
+   {
+    "n": "3",
+    "x": 48.2,
+    "y": 74.2,
+    "title": "The cigar workers.",
+    "t": "They sit at long tables and roll cigars by hand while they listen."
+   },
+   {
+    "n": "4",
+    "x": 29.5,
+    "y": 50.2,
+    "title": "Buckets.",
+    "t": "Two metal buckets hang from the wooden beam, up out of the way of the work tables."
+   },
+   {
+    "n": "5",
+    "x": 4.9,
+    "y": 39.6,
+    "title": "Big windows.",
+    "t": "Rows of windows let in daylight. Rolling cigars is close work with the hands, so workers needed good light."
+   }
+  ]
+ },
+ "planner": {
+  "type": "sandwich",
+  "voice": "Build your sandwich from the top down. Pick the main idea, two immigrant groups and what each one added, then why it matters. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🥪",
+   "q": "Why a sandwich?",
+   "t": "Good writing is built like a sandwich: the bread holds everything together, and the fillings are the good stuff in the middle. Tampa is famous for one sandwich in particular. That’s why you plan with a Cuban sandwich."
+  },
+  "top": {
+   "lab": "Top bread · the main idea",
+   "opts": [
+    {
+     "id": "main",
+     "t": "Immigrants from many countries helped build Florida’s towns, jobs and culture.",
+     "ok": true
+    },
+    {
+     "id": "cuba",
+     "t": "All of Florida’s immigrants came from Cuba.",
+     "miss": "Look at your album. The neighbors came from Greece, the Bahamas and Minorca too."
+    },
+    {
+     "id": "replace",
+     "t": "Immigrants replaced Florida’s old culture.",
+     "miss": "They didn’t replace it. Their traditions blended in. Look at the last page of your album."
+    }
+   ]
+  },
+  "aT": "Filling 1 · an immigrant group",
+  "bT": "Filling 2 · a different group",
+  "fT": "…and what they added",
+  "groups": [
+   {
+    "id": "cuban",
+    "t": "Cuban workers in Ybor City",
+    "ico": "🏭",
+    "contribs": [
+     "cigars",
+     "lector",
+     "coffee"
+    ]
+   },
+   {
+    "id": "greek",
+    "t": "Greek divers in Tarpon Springs",
+    "ico": "🧽",
+    "contribs": [
+     "sponge",
+     "church",
+     "greekfood"
+    ]
+   },
+   {
+    "id": "bah",
+    "t": "Bahamians in Key West and Miami",
+    "ico": "🐚",
+    "contribs": [
+     "fish",
+     "music"
+    ]
+   },
+   {
+    "id": "min",
+    "t": "Minorcans in St. Augustine",
+    "ico": "🌶️",
+    "contribs": [
+     "chowder"
+    ]
+   }
+  ],
+  "contribs": [
+   {
+    "id": "cigars",
+    "t": "made cigars by hand and built a big industry"
+   },
+   {
+    "id": "lector",
+    "t": "brought the lector, who read aloud to workers"
+   },
+   {
+    "id": "coffee",
+    "t": "brought Cuban coffee and Spanish bean soup"
+   },
+   {
+    "id": "sponge",
+    "t": "brought sponge diving and made the sponge capital of the U.S."
+   },
+   {
+    "id": "church",
+    "t": "brought the Orthodox church and the Epiphany celebration"
+   },
+   {
+    "id": "greekfood",
+    "t": "brought baklava and moussaka"
+   },
+   {
+    "id": "fish",
+    "t": "worked in fishing, sponging and construction"
+   },
+   {
+    "id": "music",
+    "t": "brought Caribbean cooking, music and boat-building"
+   },
+   {
+    "id": "chowder",
+    "t": "kept pilau and Minorcan clam chowder alive"
+   }
+  ],
+  "noFitT": "That belongs to a different group. Look back at the album pages in the Explore tab.",
+  "sameT": "Pick two different groups for your two fillings.",
+  "bottom": {
+   "lab": "Bottom bread · This matters because…",
+   "opts": [
+    {
+     "id": "today",
+     "t": "their traditions still shape how Floridians work, eat and celebrate today.",
+     "ok": true
+    },
+    {
+     "id": "econ",
+     "t": "they built industries that helped Florida’s economy grow.",
+     "ok": true
+    },
+    {
+     "id": "left",
+     "t": "they all went back home after a few years.",
+     "miss": "Most stayed! Their children, grandchildren and great-grandchildren still live in Florida today."
+    }
+   ]
+  },
+  "doneT": "Your sandwich is built! Now write in Step 3: the main idea, two groups and what each added, and why it matters.",
+  "twist": "🥪 <b>Twist!<\/b> Look at what you just built. Many historians say the Cuban sandwich grew up in Ybor City’s workers’ cafés around 1900: Cuban bread and roast pork, plus Genoa salami from Italian neighbors. In 2012, Tampa named it the city’s signature sandwich. Like Florida, it’s many homelands on one plate."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "two groups",
+    "rx": "cuba|greek|greece|bahamian|bahamas|minorcan|minorca|italian|italy|spanish|spain|sicil"
+   },
+   {
+    "t": "a contribution",
+    "rx": "cigar|lector|reader|read|coffee|soup|bread|sandwich|sponge|div|church|orthodox|epiphany|festival|baklava|moussaka|fish|boat|music|cook|food|chowder|pilau|build|built|work|job|industr|tradition|language"
+   },
+   {
+    "t": "this matters because",
+    "rx": "because|matter|that.?s why|so |since|as a result|today|still"
+   },
+   {
+    "t": "a detail",
+    "rx": "ybor|tampa|tarpon|key west|miami|st\\.? augustine|1886|1885|1905|1768|1777|1929|500|million|capital|cocoris|hine"
+   }
+  ],
+  "lines": [
+   "Start with your main idea: “Immigrants shaped Florida by…”",
+   "Good. Now name a group and what they added.",
+   "Add your second group and what they added.",
+   "Add a detail, like a place, a number or a year.",
+   "That’s a strong entry. Read it over once."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the cards, the family album and the caption detective."
+  },
+  {
+   "t": "Plan",
+   "w": "Build your Cuban sandwich: the main idea, two groups and what each added, and why it matters."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about how immigrants shaped Florida. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Source Study Response"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "lectorvoice",
+  "kicker": "The lector’s voice",
+  "h": "lect / leg = to read",
+  "root": "lect",
+  "hl": "lect|leg",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match lets the lector’s voice reach one more row of workers.",
+  "why": {
+   "icon": "📖",
+   "q": "Why a lector?",
+   "t": "A lector read aloud so a whole factory could listen. Lector comes from the Latin word legere, to read. That’s why each word you match carries his voice to one more row of workers."
+  },
+  "words": [
+   {
+    "w": "lector",
+    "m": "a person who reads aloud to other people",
+    "miss": "Lect means read. Who did the reading in the cigar factory?",
+    "say": "Lector. A person who reads aloud to other people."
+   },
+   {
+    "w": "lecture",
+    "m": "a talk that teaches people about something",
+    "miss": "Long ago, teachers read their lessons aloud. Now the word means a teaching talk.",
+    "say": "Lecture. A talk that teaches people about something."
+   },
+   {
+    "w": "legible",
+    "m": "clear enough to read",
+    "miss": "The ending -ible means “able to be.” Able to be read means…",
+    "say": "Legible. Clear enough to read."
+   },
+   {
+    "w": "legend",
+    "m": "an old story people have told for a long time",
+    "miss": "Long ago, a legend was a story to be read aloud. Now it’s an old story people keep telling.",
+    "say": "Legend. An old story people have told for a long time."
+   }
+  ],
+  "boardT": "Rows listening",
+  "win": "📖 The whole factory is listening!"
+ },
+ "cabinet": {
+  "n": 10
+ },
+ "notes": {
+  "learned": [
+   "An immigrant is a person who moves from one country to live in another.",
+   "In 1885, Vicente Martinez Ybor built Ybor City in Tampa. Cuban, Spanish and Italian immigrants made it the cigar capital of the world. Its factories made about 500 million cigars in 1929.",
+   "Ybor City didn’t grow tobacco. Ships brought the leaves from Cuba. The workers paid a lector to read aloud to them, and they chose what he read.",
+   "In 1905, Greek sponge divers came to Tarpon Springs and made it the sponge capital of the United States.",
+   "Bahamians worked in fishing, sponging and construction in Key West and Miami. Minorcans came to Florida in 1768 and moved to St. Augustine in 1777.",
+   "Immigrant traditions blended with Florida’s older ones. They didn’t replace them."
+  ],
+  "vocab": [
+   [
+    "immigrant",
+    "a person who moves from one country to live in another"
+   ],
+   [
+    "tradition",
+    "a way of doing things that families pass down"
+   ],
+   [
+    "customs",
+    "ways of doing things"
+   ],
+   [
+    "company town",
+    "a town a business builds for its workers"
+   ],
+   [
+    "manufactured",
+    "made"
+   ],
+   [
+    "lector",
+    "a person who reads aloud to other people"
+   ],
+   [
+    "novel",
+    "a long made-up story"
+   ],
+   [
+    "sponge",
+    "a soft sea animal that, once dried, is used for washing"
+   ],
+   [
+    "Orthodox church",
+    "the kind of Christian church most people in Greece belong to"
+   ],
+   [
+    "Epiphany",
+    "a church holiday on January 6"
+   ],
+   [
+    "baklava",
+    "a sweet, flaky pastry with nuts and honey"
+   ],
+   [
+    "moussaka",
+    "a baked dish of eggplant and meat"
+   ],
+   [
+    "construction",
+    "building houses, roads and other things"
+   ],
+   [
+    "Caribbean",
+    "from the islands of the Caribbean Sea and nearby"
+   ],
+   [
+    "Mediterranean",
+    "the sea between Europe and Africa"
+   ],
+   [
+    "descendants",
+    "children, grandchildren and great-grandchildren"
+   ],
+   [
+    "perseverance",
+    "keeping going when things are hard"
+   ],
+   [
+    "caption",
+    "the writing that goes with a photo"
+   ],
+   [
+    "lect / leg (word root)",
+    "to read"
+   ],
+   [
+    "lecture",
+    "a talk that teaches people about something"
+   ],
+   [
+    "legible",
+    "clear enough to read"
+   ],
+   [
+    "legend",
+    "an old story people have told for a long time"
+   ]
+  ],
+  "wordParts": "The Latin word legere means “to read.” You can find it as lect or leg in lector, lecture, legible and legend."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "three groups",
+    "groups": [
+     "cuba",
+     "greek|greece",
+     "bahamian|bahamas",
+     "minorcan|minorca|menorca",
+     "italian|italy|sicil",
+     "spanish|spain"
+    ],
+    "n": 3
+   },
+   {
+    "t": "what each added",
+    "rx": "cigar|lector|read|coffee|soup|bread|sponge|div|church|orthodox|epiphany|festival|baklava|moussaka|fish|boat|music|cook|food|chowder|pilau|build|built|work|job|construct|tradition",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "who worked there",
+    "rx": "cuba|spanish|spain|italian|italy|immigrant|worker|tabaquero|people|famil",
+    "n": 1
+   },
+   {
+    "t": "what they made",
+    "rx": "cigar|tobacco|roll",
+    "n": 1
+   },
+   {
+    "t": "a tradition they brought",
+    "rx": "lector|reader|read|coffee|soup|bread|sandwich|newspaper|book|language|spanish|club|food",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a tradition you can still see",
+    "rx": "food|eat|festival|church|epiphany|coffee|bread|sandwich|chowder|baklava|music|language|spanish|greek|neighborhood|ybor|tarpon|sponge|cigar",
+    "n": 1
+   },
+   {
+    "t": "why it lasted",
+    "rx": "pass|famil|child|grand|kid|generation|still|today|kept|keep|descend|teach|taught|blend|stay|live|love",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at your family album in the Explore tab (tab 2).",
+   "Name three groups: Cuban, Greek, Bahamian or Minorcan. Say one thing each one added.",
+   "Try this shape: “Cuban workers ___. Greek divers ___. Bahamians ___.”"
+  ],
+  "journal-q2": [
+   "Look at the Inside the cigar factories page and the caption detective in the Explore tab.",
+   "Who did the work? What did they make? What tradition came with them from Cuba?",
+   "Try this shape: “Immigrant workers from ___ rolled ___. They also brought ___.”"
+  ],
+  "journal-q3": [
+   "Look at the last page of your album, Florida today.",
+   "Name something you can still eat, see or celebrate in Florida. Who keeps it going?",
+   "Try this shape: “Today, people still ___ because families ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which group’s contribution do you think changed Florida the most? Why?",
+  "journal-q2": "Go further: why do you think the workers wanted to choose what the lector read?",
+  "journal-q3": "Go further: what tradition from your own family or town might people still enjoy 100 years from now?"
+ },
+ "quizMiss": [
+  {
+   "a": "Ybor City didn’t grow tobacco. Ships brought the leaves from Cuba, and workers made them into cigars. Reread Inside the cigar factories.",
+   "c": "Ybor City was built in 1885. St. Augustine is much older. Reread the Ybor City part."
+  },
+  {
+   "a": "Cattle ranching wasn’t their skill. Reread the Tarpon Springs part.",
+   "c": "Other builders made the railroads. The Greek divers worked in the sea. Reread the Tarpon Springs part."
+  },
+  {
+   "a": "They didn’t replace Florida’s traditions. Theirs blended in. Reread Why it matters.",
+   "b": "They had a big, lasting impact. You can still eat their food and visit their festivals. Reread Why it matters."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Guess before you read",
+   "at": "scene1",
+   "script": "When I find an old photo, I like to guess before I read the caption. Look at this cigar factory in 1929. One man stands up high, reading, while everyone else works. Who paid him? Who chose what he read? Make a guess on each card. Then press Hear the caption."
+  },
+  {
+   "label": "Hear the photographer",
+   "at": "s1done",
+   "parts": [
+    {
+     "slot": "guide2a",
+     "script": "In 1909, a photographer named Lewis Hine visited a cigar factory in Tampa. He wrote these words about the reader. Listen one more time."
+    },
+    {
+     "slot": "guide2b",
+     "who": "Lewis Hine’s caption, Tampa, January 1909",
+     "script": "A reader in cigar factory, Tampa, Florida. He reads books and newspapers at top of his voice all day long. This is all the education many of these workers receive. He is paid by them, and they select what he shall read."
+    },
+    {
+     "slot": "guide2c",
+     "script": "Pause me and look at your three cards. Which answer surprised you the most? Say it out loud. Then go to the Explore tab, tab 2."
+    }
+   ]
+  },
+  {
+   "slot": "guide3",
+   "label": "Open the album",
+   "at": "explore",
+   "script": "My grandmother kept an old photo album. Every picture had a story, and she told me each one. Today you’ll fill an album for a Cuban family in Ybor City. The family is made up, but every detail is real. Paste in each keepsake, and its page will open."
+  },
+  {
+   "slot": "guide4",
+   "label": "Not just one place",
+   "at": "readmid",
+   "script": "Notice something? These neighbors didn’t come from Cuba. Florida’s immigrants came from many places. As you fill the next pages, keep track: where did each group come from, and what did they bring?"
+  },
+  {
+   "slot": "guide5",
+   "label": "Be a caption detective",
+   "at": "evidence",
+   "script": "Lewis Hine wrote a caption for this photo. A good detective asks: which words can the photo prove? Tap a caption strip, then tap the gold number that proves it. Some words, a photo just can’t show. Those go in the box that says Only the caption tells us."
+  },
+  {
+   "slot": "guide6",
+   "label": "Build your sandwich",
+   "at": "plan",
+   "script": "When I make a sandwich, the bread holds everything together. Your writing works the same way. The top bread is your main idea. The two fillings are two immigrant groups and what each one added. The bottom bread tells why it matters. Build your sandwich, then write it in your own words."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^photo$",
+    "sel": ".spk-pnhpic",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^high$",
+    "sel": ".spk-pnhpic",
+    "fx": "point",
+    "tag": "lector"
+   },
+   {
+    "at": "^paid$",
+    "sel": ".spk-pnhcards .pc",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^chose$",
+    "sel": ".spk-pnhcards .pc",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-pnhcards .pc",
+    "all": true
+   },
+   {
+    "at": "^Hear$",
+    "sel": ".spk-pnhgo",
+    "fx": "point"
+   }
+  ],
+  "guide2a": [
+   {
+    "at": "^Hine$",
+    "sel": ".spk-pnhquote .who",
+    "fx": "trace",
+    "scroll": true
+   },
+   {
+    "at": "^words$",
+    "sel": ".spk-pnhquote",
+    "fx": "glow"
+   }
+  ],
+  "guide2b": [
+   {
+    "at": "^reads$",
+    "sel": ".spk-pnhquote",
+    "fx": "trace"
+   },
+   {
+    "at": "^education$",
+    "sel": ".spk-pnhcards .pc",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^paid$",
+    "sel": ".spk-pnhcards .pc",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^select$",
+    "sel": ".spk-pnhcards .pc",
+    "i": 1,
+    "fx": "pop"
+   }
+  ],
+  "guide2c": [
+   {
+    "at": "^cards$",
+    "sel": ".spk-pnhcards",
+    "fx": "reveal"
+   },
+   {
+    "at": "^surprised$",
+    "sel": ".spk-pnhcards .you",
+    "all": true,
+    "fx": "trace"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^album$",
+    "sel": ".spk-albcover",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^story$",
+    "sel": ".spk-albcover",
+    "fx": "pop"
+   },
+   {
+    "at": "^Cuban$",
+    "sel": ".spk-albp[data-i=\"0\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^made$",
+    "sel": ".spk-albnote",
+    "fx": "trace"
+   },
+   {
+    "at": "^keepsake$",
+    "sel": ".spk-albp.cur .act",
+    "fx": "point"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^Cuba$",
+    "sel": ".spk-albp[data-i=\"2\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^places$",
+    "sel": ".spk-albp[data-i=\"2\"] .act .spk-opts",
+    "fx": "trace"
+   },
+   {
+    "at": "^bring$",
+    "sel": ".spk-albp.cur .act",
+    "fx": "point"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^caption$",
+    "sel": ".spk-cdtcap",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow"
+   },
+   {
+    "at": "^strip$",
+    "sel": ".spk-cdtstrip",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^gold$",
+    "sel": ".source-image-placeholder .spk-hot",
+    "all": true
+   },
+   {
+    "at": "^box$",
+    "sel": ".spk-cdtnone",
+    "fx": "point"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^sandwich$",
+    "sel": ".spk-sdwstack",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^top$",
+    "sel": ".spk-sdw .fr[data-r=\"top\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^fillings$",
+    "sel": ".spk-sdwstack .fa, .spk-sdwstack .fb",
+    "all": true,
+    "fx": "pop"
+   },
+   {
+    "at": "^bottom$",
+    "sel": ".spk-sdw .fr[data-r=\"bot\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^Build$",
+    "sel": ".spk-sdwstack",
+    "fx": "pop"
+   }
+  ]
+ },
+ "cueWords": {}
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,85 +3220,54 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Immigrant Contributions to Florida ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1003sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#e8d5b8"/>
-    <stop offset="100%" stop-color="#c9a87c"/>
-  </linearGradient>
-  <linearGradient id="h1003water" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#6a9fb5"/>
-    <stop offset="100%" stop-color="#5b8fa5"/>
-  </linearGradient>
-  <style>
-    .h1003sway { animation: h1003sway 3s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1003sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
-    .h1003drift { animation: h1003drift 5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1003drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
-    .h1003glow { animation: h1003glow 2.5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1003glow { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
-  </style>
-</defs>
-<!-- sky -->
-<rect width="920" height="260" fill="url(#h1003sky)"/>
-<!-- ground -->
-<rect x="0" y="180" width="920" height="80" fill="#b8886a"/>
-<rect x="0" y="190" width="920" height="70" fill="#a07858"/>
-<!-- cigar factory building -->
-<rect x="60" y="80" width="160" height="100" fill="#c4745a" rx="2"/>
-<rect x="70" y="90" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="110" y="90" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="150" y="90" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="70" y="130" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="110" y="130" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="150" y="130" width="30" height="25" fill="#e8d5b8" rx="1"/>
-<rect x="60" y="72" width="160" height="10" fill="#a05a42"/>
-<polygon points="90,72 140,50 190,72" fill="#b06850"/>
-<!-- window glow -->
-<g transform="translate(110,130)">
-  <g class="h1003glow">
-    <rect x="0" y="0" width="30" height="25" fill="#f5d89a" opacity="0.6" rx="1"/>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A red-brick cigar factory with tall arched windows and iron balconies on an Ybor City brick street at dusk, with streetcar tracks, a glowing streetlamp and two wild chickens">
+  <defs>
+    <linearGradient id="b1003sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26244F"/><stop offset=".45" stop-color="#6E3F6E"/><stop offset=".8" stop-color="#D9725A"/><stop offset="1" stop-color="#F2A65A"/></linearGradient>
+    <pattern id="b1003brick" width="16" height="8" patternUnits="userSpaceOnUse"><rect width="16" height="8" fill="#A4432C"/><path d="M0,7.5 H16 M8,0 V3.75 M0,3.75 H16 M0,3.75 V7.5 M16,3.75 V7.5" stroke="#7E2F1E" stroke-width="1" fill="none"/></pattern>
+    <pattern id="b1003brick2" width="14" height="7" patternUnits="userSpaceOnUse"><rect width="14" height="7" fill="#C2884A"/><path d="M0,6.5 H14 M7,0 V3.3 M0,3.3 H14 M0,3.3 V6.5 M14,3.3 V6.5" stroke="#946330" stroke-width="1" fill="none"/></pattern>
+    <pattern id="b1003pave" width="20" height="8" patternUnits="userSpaceOnUse"><rect width="20" height="8" fill="#7A3F2E"/><path d="M0,7.5 H20 M10,0 V4 M0,4 H20 M0,4 V7.5 M20,4 V7.5" stroke="#5A2C20" stroke-width="1" fill="none"/></pattern>
+    <radialGradient id="b1003lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4C8"/><stop offset=".4" stop-color="#FFD27A" stop-opacity=".7"/><stop offset="1" stop-color="#FFB25A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="b1003win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE29A"/><stop offset="1" stop-color="#F2A64B"/></linearGradient>
+    <style>
+      .b1003-glow { animation: b1003glow 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b1003glow { 0%,100% { opacity: .75; } 50% { opacity: 1; } }
+      .b1003-stars circle { fill: #FFFFFF; animation: b1003tw 4s ease-in-out infinite; }
+      .b1003-stars circle:nth-child(3n) { animation-delay: 1.3s; } .b1003-stars circle:nth-child(3n+1) { animation-delay: 2.6s; }
+      @keyframes b1003tw { 0%,100% { opacity: .25; } 50% { opacity: .9; } }
+      .b1003-peck { animation: b1003peck 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: 70% 90%; }
+      @keyframes b1003peck { 0%,70%,100% { transform: rotate(0); } 78% { transform: rotate(28deg); } 86% { transform: rotate(0); } 92% { transform: rotate(24deg); } }
+      .b1003-win .lit { animation: b1003flick 7s ease-in-out infinite; } .b1003-win .lit:nth-child(4n) { animation-delay: 2s; } .b1003-win .lit:nth-child(5n) { animation-delay: 4.5s; }
+      @keyframes b1003flick { 0%,100% { opacity: 1; } 50% { opacity: .82; } }
+      @media (prefers-reduced-motion: reduce) { .b1003-glow, .b1003-stars circle, .b1003-peck, .b1003-win .lit { animation: none; } }
+    </style>
+  </defs>
+  <g class="b1003">
+  <rect width="920" height="200" fill="url(#b1003sky)"/>
+  <g class="b1003-stars"><circle cx="514" cy="40" r="1.0"/><circle cx="231" cy="51" r="1.0"/><circle cx="462" cy="39" r="1.0"/><circle cx="418" cy="6" r="1.3"/><circle cx="347" cy="9" r="1.0"/><circle cx="519" cy="33" r="1.3"/><circle cx="94" cy="23" r="1.0"/><circle cx="600" cy="37" r="1.3"/><circle cx="691" cy="49" r="0.8"/><circle cx="663" cy="19" r="1.3"/><circle cx="556" cy="39" r="0.8"/><circle cx="332" cy="19" r="1.3"/><circle cx="578" cy="40" r="0.8"/><circle cx="148" cy="30" r="1.0"/><circle cx="37" cy="39" r="0.8"/><circle cx="720" cy="54" r="1.0"/><circle cx="67" cy="22" r="1.0"/><circle cx="139" cy="59" r="1.0"/><circle cx="391" cy="32" r="0.8"/><circle cx="208" cy="53" r="1.0"/><circle cx="470" cy="57" r="0.8"/><circle cx="777" cy="48" r="0.8"/><circle cx="881" cy="13" r="1.3"/><circle cx="765" cy="44" r="1.0"/><circle cx="190" cy="6" r="1.0"/><circle cx="212" cy="51" r="1.0"/><circle cx="462" cy="45" r="1.0"/><circle cx="157" cy="40" r="1.3"/></g>
+  <circle cx="160" cy="38" r="11" fill="#FFF1C9" opacity=".9"/><circle cx="165" cy="35" r="10" fill="#3A2F5E" opacity=".9"/>
+  <path d="M0,120 L0,96 L40,96 L40,84 L70,84 L70,100 L110,100 L110,90 L150,90 L150,104 L230,104 L230,120 Z" fill="#3E2A4A" opacity=".85"/>
+  <path d="M860,120 L860,92 L890,92 L890,80 L905,80 L905,92 L920,92 L920,120 Z" fill="#3E2A4A" opacity=".85"/>
+  <rect x="40" y="64" width="250" height="88" fill="url(#b1003brick2)"/>
+  <rect x="36" y="58" width="258" height="7" fill="#8A5A2A"/>
+  <g class="b1003-win"><rect class="lit" x="58" y="76" width="22" height="28" rx="1" fill="url(#b1003win)"/><path d="M58,90 h22" stroke="#5A3A1E" stroke-width="2"/><rect x="58" y="120" width="22" height="34" fill="#3A2A20"/><rect class="lit" x="59" y="122" width="20" height="30" fill="url(#b1003win)" opacity=".85"/><rect class="lit" x="105" y="76" width="22" height="28" rx="1" fill="url(#b1003win)"/><path d="M105,90 h22" stroke="#5A3A1E" stroke-width="2"/><rect x="105" y="120" width="22" height="34" fill="#3A2A20"/><rect class="lit" x="106" y="122" width="20" height="30" fill="url(#b1003win)" opacity=".85"/><rect class="lit" x="152" y="76" width="22" height="28" rx="1" fill="url(#b1003win)"/><path d="M152,90 h22" stroke="#5A3A1E" stroke-width="2"/><path d="M149,152 v-30 a14,14 0 0 1 28,0 v30 z" fill="#2E2018"/><rect class="lit" x="199" y="76" width="22" height="28" rx="1" fill="url(#b1003win)"/><path d="M199,90 h22" stroke="#5A3A1E" stroke-width="2"/><rect x="199" y="120" width="22" height="34" fill="#3A2A20"/><rect class="lit" x="200" y="122" width="20" height="30" fill="url(#b1003win)" opacity=".85"/><rect class="lit" x="246" y="76" width="22" height="28" rx="1" fill="url(#b1003win)"/><path d="M246,90 h22" stroke="#5A3A1E" stroke-width="2"/><rect x="246" y="120" width="22" height="34" fill="#3A2A20"/><rect class="lit" x="247" y="122" width="20" height="30" fill="url(#b1003win)" opacity=".85"/></g>
+  <g><rect x="34" y="108" width="262" height="4" fill="#1E1A1E"/><path d="M34,96 H296" stroke="#1E1A1E" stroke-width="2"/><path d="M36,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M43,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M50,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M57,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M64,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M71,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M78,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M85,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M92,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M99,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M106,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M113,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M120,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M127,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M134,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M141,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M148,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M155,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M162,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M169,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M176,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M183,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M190,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M197,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M204,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M211,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M218,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M225,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M232,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M239,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M246,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M253,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M260,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M267,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M274,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M281,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M288,96 v12" stroke="#1E1A1E" stroke-width="1.6"/><path d="M295,96 v12" stroke="#1E1A1E" stroke-width="1.6"/></g>
+  <rect x="330" y="30" width="520" height="122" fill="url(#b1003brick)"/>
+  <rect x="324" y="22" width="532" height="9" fill="#6E2A1C"/><rect x="324" y="31" width="532" height="4" fill="#C9A27A"/>
+  <rect x="330" y="70" width="520" height="4" fill="#C9A27A"/><rect x="330" y="110" width="520" height="4" fill="#C9A27A"/>
+  <rect x="560" y="2" width="18" height="30" fill="#7E2F1E"/><rect x="556" y="0" width="26" height="5" fill="#5A2014"/>
+  <g class="b1003-win"><path d="M346,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M348,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M358,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M402,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M404,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M414,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M458,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M460,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M470,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M514,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M516,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M526,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M570,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M572,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M582,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M626,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M628,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M638,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M682,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M684,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M694,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M738,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M740,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M750,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M794,67 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M796,66 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M806,42 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M346,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M348,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M358,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M402,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M404,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M414,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M458,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M460,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M470,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M514,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M516,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M526,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M570,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M572,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M582,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M626,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M628,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M638,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M682,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M684,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M694,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M738,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M740,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M750,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M794,107 v-16 a12,12 0 0 1 24,0 v16 z" fill="#C9A27A"/><path class="lit" d="M796,106 v-15 a10,10 0 0 1 20,0 v15 z" fill="url(#b1003win)"/><path d="M806,82 v24" stroke="#6E2A1C" stroke-width="1.5"/><path d="M346,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M348,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M358,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M402,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M404,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M414,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M458,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M460,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M470,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M514,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M516,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M526,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M570,152 v-26 a16,16 0 0 1 32,0 v26 z" fill="#2A1A14"/><path d="M572,152 v-24 a14,14 0 0 1 28,0 v24" fill="none" stroke="#C9A27A" stroke-width="2"/><path d="M626,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M628,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M638,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M682,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M684,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M694,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M738,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M740,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M750,122 v50" stroke="#6E2A1C" stroke-width="1.5"/><path d="M794,173 v-42 a12,12 0 0 1 24,0 v42 z" fill="#C9A27A"/><path class="lit" d="M796,172 v-41 a10,10 0 0 1 20,0 v41 z" fill="url(#b1003win)"/><path d="M806,122 v50" stroke="#6E2A1C" stroke-width="1.5"/></g>
+  <g><rect x="340" y="68" width="96" height="3" fill="#161216"/><path d="M340,56 H436" stroke="#161216" stroke-width="1.8"/><path d="M342,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M348,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M354,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M360,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M366,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M372,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M378,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M384,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M390,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M396,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M402,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M408,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M414,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M420,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M426,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M432,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M344,64 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="452" y="68" width="96" height="3" fill="#161216"/><path d="M452,56 H548" stroke="#161216" stroke-width="1.8"/><path d="M454,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M460,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M466,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M472,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M478,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M484,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M490,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M496,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M502,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M508,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M514,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M520,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M526,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M532,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M538,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M544,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M456,64 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="564" y="68" width="96" height="3" fill="#161216"/><path d="M564,56 H660" stroke="#161216" stroke-width="1.8"/><path d="M566,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M572,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M578,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M584,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M590,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M596,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M602,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M608,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M614,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M620,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M626,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M632,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M638,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M644,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M650,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M656,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M568,64 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="676" y="68" width="96" height="3" fill="#161216"/><path d="M676,56 H772" stroke="#161216" stroke-width="1.8"/><path d="M678,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M684,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M690,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M696,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M702,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M708,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M714,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M720,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M726,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M732,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M738,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M744,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M750,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M756,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M762,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M768,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M680,64 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="788" y="68" width="40" height="3" fill="#161216"/><path d="M788,56 H828" stroke="#161216" stroke-width="1.8"/><path d="M790,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M796,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M802,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M808,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M814,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M820,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M826,56 v12" stroke="#161216" stroke-width="1.3"/><path d="M792,64 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/></g>
+  <g><rect x="340" y="108" width="96" height="3" fill="#161216"/><path d="M340,96 H436" stroke="#161216" stroke-width="1.8"/><path d="M342,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M348,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M354,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M360,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M366,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M372,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M378,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M384,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M390,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M396,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M402,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M408,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M414,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M420,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M426,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M432,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M344,104 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="452" y="108" width="96" height="3" fill="#161216"/><path d="M452,96 H548" stroke="#161216" stroke-width="1.8"/><path d="M454,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M460,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M466,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M472,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M478,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M484,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M490,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M496,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M502,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M508,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M514,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M520,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M526,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M532,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M538,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M544,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M456,104 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="564" y="108" width="96" height="3" fill="#161216"/><path d="M564,96 H660" stroke="#161216" stroke-width="1.8"/><path d="M566,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M572,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M578,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M584,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M590,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M596,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M602,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M608,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M614,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M620,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M626,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M632,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M638,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M644,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M650,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M656,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M568,104 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="676" y="108" width="96" height="3" fill="#161216"/><path d="M676,96 H772" stroke="#161216" stroke-width="1.8"/><path d="M678,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M684,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M690,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M696,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M702,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M708,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M714,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M720,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M726,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M732,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M738,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M744,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M750,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M756,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M762,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M768,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M680,104 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/><rect x="788" y="108" width="40" height="3" fill="#161216"/><path d="M788,96 H828" stroke="#161216" stroke-width="1.8"/><path d="M790,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M796,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M802,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M808,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M814,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M820,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M826,96 v12" stroke="#161216" stroke-width="1.3"/><path d="M792,104 q8,-8 16,0 q8,-8 16,0" stroke="#161216" stroke-width="1.2" fill="none"/></g>
+  <rect y="150" width="920" height="8" fill="#9A8A78"/><rect y="157" width="920" height="2" fill="#6E5E50"/>
+  <rect y="159" width="920" height="41" fill="url(#b1003pave)"/>
+  <rect y="159" width="920" height="41" fill="#26244F" opacity=".18"/>
+  <g><rect x="-4" y="174" width="5" height="18" fill="#3A2418"/><rect x="12" y="174" width="5" height="18" fill="#3A2418"/><rect x="28" y="174" width="5" height="18" fill="#3A2418"/><rect x="44" y="174" width="5" height="18" fill="#3A2418"/><rect x="60" y="174" width="5" height="18" fill="#3A2418"/><rect x="76" y="174" width="5" height="18" fill="#3A2418"/><rect x="92" y="174" width="5" height="18" fill="#3A2418"/><rect x="108" y="174" width="5" height="18" fill="#3A2418"/><rect x="124" y="174" width="5" height="18" fill="#3A2418"/><rect x="140" y="174" width="5" height="18" fill="#3A2418"/><rect x="156" y="174" width="5" height="18" fill="#3A2418"/><rect x="172" y="174" width="5" height="18" fill="#3A2418"/><rect x="188" y="174" width="5" height="18" fill="#3A2418"/><rect x="204" y="174" width="5" height="18" fill="#3A2418"/><rect x="220" y="174" width="5" height="18" fill="#3A2418"/><rect x="236" y="174" width="5" height="18" fill="#3A2418"/><rect x="252" y="174" width="5" height="18" fill="#3A2418"/><rect x="268" y="174" width="5" height="18" fill="#3A2418"/><rect x="284" y="174" width="5" height="18" fill="#3A2418"/><rect x="300" y="174" width="5" height="18" fill="#3A2418"/><rect x="316" y="174" width="5" height="18" fill="#3A2418"/><rect x="332" y="174" width="5" height="18" fill="#3A2418"/><rect x="348" y="174" width="5" height="18" fill="#3A2418"/><rect x="364" y="174" width="5" height="18" fill="#3A2418"/><rect x="380" y="174" width="5" height="18" fill="#3A2418"/><rect x="396" y="174" width="5" height="18" fill="#3A2418"/><rect x="412" y="174" width="5" height="18" fill="#3A2418"/><rect x="428" y="174" width="5" height="18" fill="#3A2418"/><rect x="444" y="174" width="5" height="18" fill="#3A2418"/><rect x="460" y="174" width="5" height="18" fill="#3A2418"/><rect x="476" y="174" width="5" height="18" fill="#3A2418"/><rect x="492" y="174" width="5" height="18" fill="#3A2418"/><rect x="508" y="174" width="5" height="18" fill="#3A2418"/><rect x="524" y="174" width="5" height="18" fill="#3A2418"/><rect x="540" y="174" width="5" height="18" fill="#3A2418"/><rect x="556" y="174" width="5" height="18" fill="#3A2418"/><rect x="572" y="174" width="5" height="18" fill="#3A2418"/><rect x="588" y="174" width="5" height="18" fill="#3A2418"/><rect x="604" y="174" width="5" height="18" fill="#3A2418"/><rect x="620" y="174" width="5" height="18" fill="#3A2418"/><rect x="636" y="174" width="5" height="18" fill="#3A2418"/><rect x="652" y="174" width="5" height="18" fill="#3A2418"/><rect x="668" y="174" width="5" height="18" fill="#3A2418"/><rect x="684" y="174" width="5" height="18" fill="#3A2418"/><rect x="700" y="174" width="5" height="18" fill="#3A2418"/><rect x="716" y="174" width="5" height="18" fill="#3A2418"/><rect x="732" y="174" width="5" height="18" fill="#3A2418"/><rect x="748" y="174" width="5" height="18" fill="#3A2418"/><rect x="764" y="174" width="5" height="18" fill="#3A2418"/><rect x="780" y="174" width="5" height="18" fill="#3A2418"/><rect x="796" y="174" width="5" height="18" fill="#3A2418"/><rect x="812" y="174" width="5" height="18" fill="#3A2418"/><rect x="828" y="174" width="5" height="18" fill="#3A2418"/><rect x="844" y="174" width="5" height="18" fill="#3A2418"/><rect x="860" y="174" width="5" height="18" fill="#3A2418"/><rect x="876" y="174" width="5" height="18" fill="#3A2418"/><rect x="892" y="174" width="5" height="18" fill="#3A2418"/><rect x="908" y="174" width="5" height="18" fill="#3A2418"/><rect y="177" width="920" height="3" fill="#C8C2BA"/><rect y="186" width="920" height="3" fill="#C8C2BA"/></g>
+  <circle class="b1003-glow" cx="312" cy="92" r="40" fill="url(#b1003lamp)"/>
+  <rect x="309" y="98" width="6" height="54" fill="#1E1A1E"/><rect x="304" y="148" width="16" height="5" fill="#1E1A1E"/><circle cx="312" cy="92" r="8" fill="#FFF0BE"/><path d="M303,86 h18 l-3,-6 h-12 z" fill="#1E1A1E"/>
+  <g transform="translate(196,154) scale(1.10,1.10)"><path d="M2,-6 q-10,-16 -2,-24 q2,10 8,14 z" fill="#2A1A14"/><path d="M0,-4 q-12,-8 -10,-20 q4,8 10,10 z" fill="#3E5A3A"/><path d="M10,1 v7 M15,1 v7" stroke="#E0A030" stroke-width="1.6"/><path d="M8,8 h5 M13,8 h5" stroke="#E0A030" stroke-width="1.4"/><path d="M0,0 q-4,-14 8,-18 q10,-2 16,6 q4,8 -4,14 q-10,5 -20,-2 z" fill="#B4462A"/><g class="b1003-peck"><path d="M20,-12 q2,-10 8,-10 q6,0 6,6 q0,5 -6,7 z" fill="#B4462A"/><path d="M26,-22 q1,-4 3,-1 q1,-4 3,0 q2,-2 2,2 z" fill="#D8232A"/><path d="M34,-17 l5,1.5 l-5,1.5 z" fill="#F2B23A"/><path d="M31,-13 q1,4 -1,5 q-2,-2 0,-5 z" fill="#D8232A"/><circle cx="30" cy="-17.5" r="1" fill="#111"/></g></g>
+  <g transform="translate(660,160) scale(-0.95,0.95)"><path d="M2,-6 q-10,-16 -2,-24 q2,10 8,14 z" fill="#2A1A14"/><path d="M0,-4 q-12,-8 -10,-20 q4,8 10,10 z" fill="#3E5A3A"/><path d="M10,1 v7 M15,1 v7" stroke="#E0A030" stroke-width="1.6"/><path d="M8,8 h5 M13,8 h5" stroke="#E0A030" stroke-width="1.4"/><path d="M0,0 q-4,-14 8,-18 q10,-2 16,6 q4,8 -4,14 q-10,5 -20,-2 z" fill="#C98A4B"/><g class=""><path d="M20,-12 q2,-10 8,-10 q6,0 6,6 q0,5 -6,7 z" fill="#C98A4B"/><path d="M26,-22 q1,-4 3,-1 q1,-4 3,0 q2,-2 2,2 z" fill="#D8232A"/><path d="M34,-17 l5,1.5 l-5,1.5 z" fill="#F2B23A"/><path d="M31,-13 q1,4 -1,5 q-2,-2 0,-5 z" fill="#D8232A"/><circle cx="30" cy="-17.5" r="1" fill="#111"/></g></g>
+  <g transform="translate(612,163) scale(0.75,0.75)"><path d="M2,-6 q-10,-16 -2,-24 q2,10 8,14 z" fill="#2A1A14"/><path d="M0,-4 q-12,-8 -10,-20 q4,8 10,10 z" fill="#3E5A3A"/><path d="M10,1 v7 M15,1 v7" stroke="#E0A030" stroke-width="1.6"/><path d="M8,8 h5 M13,8 h5" stroke="#E0A030" stroke-width="1.4"/><path d="M0,0 q-4,-14 8,-18 q10,-2 16,6 q4,8 -4,14 q-10,5 -20,-2 z" fill="#E6D2A8"/><g class=""><path d="M20,-12 q2,-10 8,-10 q6,0 6,6 q0,5 -6,7 z" fill="#E6D2A8"/><path d="M26,-22 q1,-4 3,-1 q1,-4 3,0 q2,-2 2,2 z" fill="#C92A2A"/><path d="M34,-17 l5,1.5 l-5,1.5 z" fill="#F2B23A"/><path d="M31,-13 q1,4 -1,5 q-2,-2 0,-5 z" fill="#C92A2A"/><circle cx="30" cy="-17.5" r="1" fill="#111"/></g></g>
   </g>
-</g>
-<!-- chimney -->
-<rect x="170" y="45" width="15" height="27" fill="#a05a42"/>
-<!-- water area for boat -->
-<rect x="300" y="155" width="300" height="25" fill="url(#h1003water)" rx="3"/>
-<!-- sponge diving boat -->
-<g transform="translate(400,145)">
-  <g class="h1003drift">
-    <polygon points="-35,15 -25,30 25,30 35,15" fill="#8b6f4e"/>
-    <rect x="-2" y="-15" width="4" height="30" fill="#6b5030"/>
-    <polygon points="2,-12 2,8 22,-2" fill="#e8ddd0"/>
-  </g>
-</g>
-<!-- cafe con leche cup -->
-<rect x="640" y="160" width="30" height="25" fill="#f0e6d2" rx="3"/>
-<rect x="636" y="158" width="38" height="6" fill="#e0d0b8" rx="2"/>
-<ellipse cx="655" cy="162" rx="12" ry="3" fill="#c9a060"/>
-<!-- bread loaf -->
-<ellipse cx="720" cy="172" rx="25" ry="12" fill="#d4a050"/>
-<ellipse cx="720" cy="168" rx="22" ry="8" fill="#e0b868"/>
-<!-- flags/banners on poles -->
-<g transform="translate(800,70)">
-  <g class="h1003sway">
-    <rect x="0" y="0" width="3" height="110" fill="#6b5030"/>
-    <rect x="3" y="5" width="30" height="18" fill="#c44040" rx="1"/>
-    <rect x="3" y="28" width="25" height="15" fill="#4060a0" rx="1"/>
-  </g>
-</g>
-<g transform="translate(850,80)">
-  <g class="h1003sway">
-    <rect x="0" y="0" width="3" height="100" fill="#6b5030"/>
-    <rect x="3" y="5" width="28" height="16" fill="#d4a030" rx="1"/>
-  </g>
-</g>
-<!-- cobblestone dots -->
-<circle cx="350" cy="200" r="3" fill="#9a7050" opacity="0.4"/>
-<circle cx="380" cy="210" r="2.5" fill="#9a7050" opacity="0.3"/>
-<circle cx="500" cy="205" r="3" fill="#9a7050" opacity="0.4"/>
-<circle cx="600" cy="215" r="2" fill="#9a7050" opacity="0.3"/>
-<circle cx="700" cy="200" r="3" fill="#9a7050" opacity="0.4"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3608,5 +4775,10 @@ function toggleTX() {
 })();
 </script>
 
+
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
