@@ -3984,3 +3984,138 @@ html.spk-on .source-image-placeholder.spk-srcnarrow { max-width: var(--spk-srcw,
   .spk-sgwp .sp, .spk-sgwp .tr, .spk-sgwp .fr circle, .spk-ldl .line, .spk-ldl .kid, .spk-plqwall .rb { transition: none !important; }
   .spk-mkdhouse .spot.pop, .spk-sgwp.just .pot svg, .spk-ldl.done .ldr, .spk-plqwall .pq.shine { animation: none !important; }
 }
+
+/* ================================================================ 4.10.05 · Who gets the war? (warmap) */
+.spk-wmpneeds { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.spk-wmpneeds .nd { font: 800 13px 'Nunito', sans-serif; color: #22304A; background: #FFFFFF; border: 2px solid #C9A24A; border-radius: 999px; padding: 4px 12px; }
+.spk-wmpwrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+@media (max-width: 640px) { .spk-wmpwrap { grid-template-columns: 1fr; } }
+.spk-wmpmapw { max-width: 340px; margin: 0 auto; width: 100%; }
+.spk-wmp .wmmap { display: block; width: 100%; height: auto; border-radius: 10px; border: 2px solid #8A7A4A; }
+.spk-wmp .ct { cursor: pointer; outline: none; }
+.spk-wmp .ct .hit { fill: transparent; }
+.spk-wmp .ct .dot { fill: #FFFFFF; stroke: #22304A; stroke-width: 2; transition: fill .3s; }
+.spk-wmp .ct text { font: 800 10px 'Nunito', sans-serif; fill: #22304A; paint-order: stroke; stroke: #FFFFFF; stroke-width: 3px; }
+.spk-wmp .ct .rt { fill: none; stroke: #8A5A22; stroke-width: 1.4; stroke-dasharray: 3 3; opacity: 0; transition: opacity .4s; }
+.spk-wmp .ct.seen .dot { fill: #E8B032; }
+.spk-wmp .ct.cur .dot { fill: #C0392B; } .spk-wmp .ct.cur .rt, .spk-wmp .ct:hover .rt, .spk-wmp .ct:focus-visible .rt { opacity: .9; }
+.spk-wmp .ct:focus-visible .dot { stroke: #C0392B; stroke-width: 3; }
+.spk-wmp .ct.won .rt { opacity: 1; stroke: #1F6B3A; stroke-width: 2.4; stroke-dasharray: 5 4; animation: spk-wmpsail 1.2s linear infinite; }
+.spk-wmp .ct.won .dot { fill: #1F6B3A; }
+@keyframes spk-wmpsail { to { stroke-dashoffset: -18; } }
+.spk-wmp .hv circle { fill: #8A5A22; } .spk-wmp .hv text { font: 800 10px 'Nunito', sans-serif; fill: #3A2806; } .spk-wmp .hv .sub { font: 600 8px 'Nunito', sans-serif; fill: #5B667A; }
+.spk-wmpcard .hint { font: 600 14px 'Nunito', sans-serif; color: #5B667A; margin: 8px 0; }
+.spk-wmpcard .cd { background: #FFFDF6; border: 1px solid #D8C7A2; border-left: 6px solid #8A5A22; border-radius: 8px; padding: 10px 12px; }
+.spk-wmpcard .cd.flip { animation: spk-wmpflip .45s ease-out; }
+@keyframes spk-wmpflip { 0% { transform: rotateY(70deg); opacity: .3; } 100% { transform: none; opacity: 1; } }
+.spk-wmpcard .nm { display: block; font: 700 19px 'Lora', Georgia, serif; color: #22304A; margin-bottom: 6px; }
+.spk-wmpcard .ck { display: grid; grid-template-columns: 28px 1fr; gap: 6px; align-items: start; margin: 6px 0; font: 600 13.5px/1.4 'Nunito', sans-serif; color: #22304A; }
+.spk-wmpcard .cd.flip .ck { animation: spk-in .35s ease-out both; animation-delay: var(--d); }
+.spk-wmpcard .ck b { display: block; }
+.spk-wmpcard .ck .st { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 900 14px 'Nunito', sans-serif; border: 2px solid; transform: rotate(-8deg); }
+.spk-wmpcard .ck.y .st { color: #1F6B3A; border-color: #1F6B3A; background: #EAF5E6; }
+.spk-wmpcard .ck.n .st { color: #B03A2E; border-color: #B03A2E; background: #FBEAE8; }
+.spk-wmpcard .sc { margin: 8px 0 0; font: 800 12px 'Nunito', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #8A5A22; }
+.spk-wmppick { display: none; margin-top: 8px; } .spk-wmppick.on { display: block; animation: spk-in .35s ease-out; }
+.spk-wmppick .q { font: 800 15px 'Nunito', sans-serif; color: #22304A; margin: 0 0 6px; }
+.spk-wmppick .spk-opt.shake { animation: spk-shake .4s; }
+
+/* ================================================================ 4.10.05 · Punch the ticket (ticket) */
+.spk-tixcard { position: relative; margin: 6px 0 10px; border-radius: 10px; background: #F6E9C9; border: 2px solid #A8885A; box-shadow: 0 6px 12px -10px rgba(60,40,10,.8); overflow: hidden; }
+.spk-tixcard .tt { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 8px 14px; background: #8A2E22; color: #FBEFD6; }
+.spk-tixcard .tt .co { font: 800 11px 'Nunito', sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+.spk-tixcard .tt b { font: 700 15px 'Lora', Georgia, serif; }
+.spk-tixcard .stubs { display: grid; grid-template-columns: repeat(6, 1fr); }
+@media (max-width: 640px) { .spk-tixcard .stubs { grid-template-columns: repeat(3, 1fr); } }
+.spk-tixcard .stub { position: relative; padding: 22px 6px 10px; text-align: center; border-right: 2px dashed #C2A878; border-bottom: 2px dashed #C2A878; }
+.spk-tixcard .stub .hole { position: absolute; left: 50%; top: 6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 1.5px dashed #A8885A; }
+.spk-tixcard .stub .ic { display: block; font-size: 20px; opacity: .45; }
+.spk-tixcard .stub .nm { display: block; font: 800 11.5px/1.25 'Nunito', sans-serif; color: #5A3E0A; }
+.spk-tixcard .stub.cur { background: #FFF6DA; box-shadow: inset 0 0 0 2px #C9A24A; }
+.spk-tixcard .stub.punched .hole { border: 0; background: #2B1E05; box-shadow: inset 0 0 0 2px #5A3E0A; }
+.spk-tixcard .stub.punched .ic { opacity: 1; }
+.spk-tixcard .stub.pk .hole { animation: spk-tixpunch .35s cubic-bezier(.3,1.6,.5,1); }
+@keyframes spk-tixpunch { 0% { transform: scale(2.2); } 100% { transform: none; } }
+.spk-tixctl { margin: 6px 0; }
+.spk-tixctl .q { font: 800 14.5px/1.4 'Nunito', sans-serif; color: #22304A; margin: 0 0 6px; }
+.spk-tixctl .q .n, .spk-tixp .hd .n { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #8A2E22; color: #FBEFD6; font: 900 12px 'Nunito', sans-serif; }
+.spk-tixctl .spk-opt.shake { animation: spk-shake .4s; }
+.spk-tixgo { font: 800 14px 'Nunito', sans-serif; border: 0; border-radius: 999px; padding: 10px 18px; background: #8A2E22; color: #FFFFFF; cursor: pointer; box-shadow: 0 3px 0 #5A1C14; }
+.spk-tixgo:hover, .spk-tixgo:focus-visible { background: #A63A2C; }
+.spk-tixp { display: none; margin: 10px 0; border-left: 4px solid #8A2E22; background: #FFFFFF; border-radius: 0 8px 8px 0; padding: 8px 14px 2px; }
+.spk-tixp.on { display: block; animation: spk-in .4s ease-out; }
+.spk-tixp .hd { font: 800 15px 'Nunito', sans-serif; color: #22304A; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.spk-tixp .hd .sub { font: 600 12.5px 'Nunito', sans-serif; color: #5B667A; }
+.spk-tixp .ph { margin: 8px 0; } .spk-tixp .ph img { display: block; max-width: 100%; max-height: 360px; border-radius: 6px; margin: 0 auto; }
+.spk-tixp .ph figcaption { font: 600 12px/1.4 'Nunito', sans-serif; color: #5B667A; margin-top: 4px; text-align: center; }
+
+/* ================================================================ 4.10.05 · The ship's manifest (manifest) */
+.spk-mnfsheet { position: relative; margin: 8px 0; background: repeating-linear-gradient(180deg, #FFFDF6 0 31px, #E3D9C2 31px 32px); border: 1px solid #C9B48A; border-radius: 6px; box-shadow: 0 6px 12px -10px rgba(60,40,10,.8); overflow: hidden; }
+.spk-mnfsheet .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 8px 14px; border-bottom: 3px double #8A6A3A; background: #F3E6C6; }
+.spk-mnfsheet .top b { font: 700 18px 'Lora', Georgia, serif; color: #3A2806; letter-spacing: .04em; }
+.spk-mnfsheet .top span { font: 600 12px 'Nunito', sans-serif; color: #6E5215; }
+.spk-mnfsheet .ln { padding: 8px 14px; border-bottom: 1px solid #E3D9C2; }
+.spk-mnfsheet .ln .k { display: block; font: 800 11px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #8A5A22; margin-bottom: 4px; }
+.spk-mnfsheet .ln .v { display: block; font: italic 700 16px 'Lora', Georgia, serif; color: #1F3A6B; }
+.spk-mnfsheet .ln .pf { display: inline-block; margin-top: 3px; font: 700 12px 'Nunito', sans-serif; color: #1F6B3A; background: #EAF5E6; border-radius: 999px; padding: 1px 8px; }
+.spk-mnfsheet .ln.just .v { animation: spk-mnfstamp .45s cubic-bezier(.3,1.5,.5,1); }
+@keyframes spk-mnfstamp { 0% { transform: scale(1.25); opacity: 0; } 100% { transform: none; opacity: 1; } }
+.spk-mnfsheet .ln .spk-opt.shake { animation: spk-shake .4s; }
+.spk-mnfsheet .ok { position: absolute; right: 14px; top: 46px; font: 900 18px 'Nunito', sans-serif; letter-spacing: .12em; color: #B03A2E; border: 3px solid #B03A2E; border-radius: 6px; padding: 2px 10px; transform: rotate(-10deg) scale(1.4); opacity: 0; transition: opacity .3s, transform .4s cubic-bezier(.3,1.6,.5,1); pointer-events: none; }
+.spk-mnfsheet.full .ok { opacity: .85; transform: rotate(-10deg); }
+
+/* ================================================================ 4.10.05 · Float the fleet (floatfleet) */
+.spk-fftscene { position: relative; border-radius: 12px; overflow: hidden; margin: 6px auto 10px; max-width: 520px; --k: 0; --n: 4; }
+.spk-fftscene svg { display: block; width: 100%; height: auto; }
+.spk-fft .sky { fill: #F6E3C4; } .spk-fft .far { fill: #9DB6A0; } .spk-fft .bar { fill: #E8D6A8; }
+.spk-fft .pier rect { fill: #7A5A3A; } .spk-fft .pier path { stroke: #5E432A; stroke-width: 3; }
+.spk-fft .wt { fill: #3E8FB0; opacity: .85; transform: translateY(calc(150px - var(--k) / var(--n) * 30px)); transition: transform 1s ease-in-out; }
+.spk-fft .ship { transform: translateY(calc(10px - var(--k) / var(--n) * 14px)); transition: transform 1s ease-in-out; }
+.spk-fft .hull { fill: #2E2A2E; } .spk-fft .deck { fill: #EFE7D6; } .spk-fft .stack { fill: #1E1A1E; } .spk-fft .mast { stroke: #3A2E22; stroke-width: 2; }
+.spk-fft .smoke circle { fill: #8A8A8A; opacity: 0; }
+.spk-fft.done .ship { animation: spk-fftsail 3.5s ease-in forwards; }
+.spk-fft.done .smoke circle { animation: spk-fftpuff 1.4s ease-out infinite; }
+.spk-fft.done .smoke circle:nth-child(2) { animation-delay: .3s; } .spk-fft.done .smoke circle:nth-child(3) { animation-delay: .6s; }
+@keyframes spk-fftsail { 0% { transform: translateY(-4px); } 100% { transform: translate(80px, -4px); } }
+@keyframes spk-fftpuff { 0% { opacity: .7; transform: translateY(0); } 100% { opacity: 0; transform: translate(-8px, -10px); } }
+.spk-fftscene .board { position: absolute; left: 10px; top: 10px; background: #12384A; border: 2px solid #7FB5CC; border-radius: 8px; padding: 4px 10px; text-align: center; }
+.spk-fftscene .board .lb { display: block; font: 800 9px 'Nunito', sans-serif; letter-spacing: .14em; color: #BFE3EE; text-transform: uppercase; }
+.spk-fftscene .board .num { display: block; font: 900 20px/1.1 'Nunito', sans-serif; color: #FFFFFF; }
+.spk-fft .wds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.spk-fft .wd { background: #FFFDF6; border: 2px solid #D8C7A2; border-radius: 10px; padding: 8px 10px; cursor: pointer; outline: none; text-align: center; }
+.spk-fft .wd .w { display: block; font: 800 16px 'Nunito', sans-serif; color: #22304A; } .spk-fft .wd .w b { color: #2F7FA0; }
+.spk-fft .wd .m { display: block; font: 500 12.5px/1.35 'Nunito', sans-serif; color: #5B667A; margin-top: 3px; } .spk-fft .wd .m:empty { display: none; }
+.spk-fft .wd.heard { border-color: #8FC3D8; } .spk-fft .wd.up { background: #EAF5FA; border-color: #2F7FA0; }
+.spk-fft .wd.armed { border-color: #C9A24A; border-style: dashed; } .spk-fft .wd.over, .spk-fft .wd:focus-visible { background: #FFF3C4; }
+.spk-fft .wd.tap { animation: spk-qfade .5s ease-out; }
+.spk-chip.noimg.spk-fftmean { grid-template-columns: 1fr; }
+.spk-fftmeans { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } .spk-fftmeans.wait { opacity: .5; }
+.spk-fftmean.shake { animation: spk-shake .4s; border-color: #E8636B; }
+.spk-fft.done .spk-fftmeans { display: none; }
+.spk-fft.done .spk-flag-win2 { display: block; animation: spk-qfade .5s ease-out; }
+
+/* ================================================================ 4.10.05 · Telegram home (telegram) */
+.spk-tlgform { position: relative; margin: 8px 0 12px; background: #FBF3DD; border: 1px solid #C9B48A; border-radius: 4px; box-shadow: 0 6px 12px -10px rgba(60,40,10,.8); padding: 0 0 10px; overflow: hidden; }
+.spk-tlgform .hd { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 8px 14px; background: #2E4A6B; color: #F3E6C6; }
+.spk-tlgform .hd b { font: 800 16px 'Nunito', sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.spk-tlgform .hd span { font: 600 11.5px 'Nunito', sans-serif; }
+.spk-tlgform .to { font: 700 12px 'Nunito', sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #6E5215; padding: 8px 14px 0; }
+.spk-tlgform .body { min-height: 64px; padding: 8px 14px; font: 700 15px/1.6 'Courier New', Courier, monospace; color: #22304A; letter-spacing: .03em; }
+.spk-tlgform .body .ln { animation: spk-in .35s ease-out; } .spk-tlgform .body i { font-style: normal; color: #8A5A22; }
+.spk-tlgform .body .empty { font: italic 600 13.5px 'Nunito', sans-serif; color: #8A93A3; letter-spacing: 0; }
+.spk-tlgform .ft { display: flex; justify-content: space-between; align-items: center; padding: 0 14px; }
+.spk-tlgform .wc { font: 800 12px 'Nunito', sans-serif; color: #6E5215; }
+.spk-tlgform .sent { font: 900 18px 'Nunito', sans-serif; letter-spacing: .14em; color: #1F6B3A; border: 3px solid #1F6B3A; border-radius: 6px; padding: 1px 10px; transform: rotate(-8deg) scale(1.4); opacity: 0; transition: opacity .3s, transform .4s cubic-bezier(.3,1.6,.5,1); }
+.spk-tlgform.sent .sent { opacity: .9; transform: rotate(-8deg); }
+.spk-tlg .fr .lab { font: 800 11px 'Nunito', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #1E8C7C; margin: 8px 0 4px; }
+.spk-tlg .spk-opt.shake { animation: spk-shake .4s; }
+.spk-tlgsend { display: block; margin: 10px 0 4px; font: 800 14px 'Nunito', sans-serif; border: 0; border-radius: 999px; padding: 10px 18px; background: #B7C0CC; color: #FFFFFF; cursor: pointer; }
+.spk-tlgsend.on { background: #2E4A6B; box-shadow: 0 3px 0 #1A2E46; }
+.spk-tlg.done .spk-tlgsend { display: none; }
+.spk-tlg.done .spk-chain-done { display: block; animation: spk-in .35s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spk-fft .wt, .spk-fft .ship, .spk-mnfsheet .ok, .spk-tlgform .sent { transition: none !important; }
+  .spk-wmp .ct.won .rt, .spk-wmpcard .cd.flip, .spk-wmpcard .cd.flip .ck, .spk-tixcard .stub.pk .hole, .spk-mnfsheet .ln.just .v, .spk-fft.done .ship, .spk-fft.done .smoke circle { animation: none !important; }
+}
+.spk-tixp .txt > p > strong:first-child { display: none; }

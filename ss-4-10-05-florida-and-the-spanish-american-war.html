@@ -1784,6 +1784,1200 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.10.05",
+ "title": "Florida and the Spanish-American War",
+ "quiet": false,
+ "file": {
+  "n": 10,
+  "title": "Modern Florida",
+  "label": "Modern Florida",
+  "seals": [
+   "🍊",
+   "🏖️",
+   "🚀"
+  ]
+ },
+ "prevFile": "Significant Individuals in Florida’s Development",
+ "connector": "Last time, you met people whose choices changed Florida. Today, find out why an army came to Tampa in 1898.",
+ "storySoFar": "Your teacher is still stuck inside Canvas, but the room keeps changing. Last time, the names on the wall came into focus. Today, a ship’s horn blew, and a map appeared with Tampa circled.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Who gets the war?",
+   "why": "Check four Florida cities like a general would. Which one has everything the army needs?"
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Punch the ticket, then check the manifest",
+   "why": "Punch each stop of an 1898 trip to read the story. Then use a real photo to fill in a ship’s cargo list."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Send a telegram, then write",
+   "why": "Answer three questions. Plan a telegram home, then write 3 to 5 sentences about Florida’s role in the war."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Did you hear that ship’s horn? Come look at this map!",
+  "opening": [
+   "A ship’s horn just blew inside Canvas! Now there’s a map on the wall, and someone circled Tampa.",
+   "Start in the Learn tab (tab 1). Scroll down to the map of Florida.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the map",
+      "go": true,
+      "reply": "Check each city like a general would. Which one has everything the army needs?"
+     },
+     {
+      "t": "What does courage have to do with it?",
+      "reply": "It took courage to leave home for a war far away. It also takes courage to study a war honestly."
+     },
+     {
+      "t": "Why a ship’s horn?",
+      "reply": "I don’t know yet. Maybe Canvas is pointing somewhere. Let’s find out what happened in Tampa."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Punch the first stop on the 1898 ticket."
+     },
+     {
+      "t": "Was the war fought in Tampa?",
+      "reply": "No. Tampa was where the army got ready. The battles happened in Cuba and on other islands."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "So what sank the Maine?",
+      "reply": "Nobody has proved it. Many experts think it was an accident inside the ship."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in this file?",
+      "reply": "Next time: the 1920s, when Florida land sold fast, and then it didn’t."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Tampa gets the army! And look: on the map on the wall, a dotted line now runs from Tampa to Cuba. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Ticket punched and manifest checked. The ship’s horn blew again! Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill in your telegram and write 3 to 5 sentences about Florida’s role in the war."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! The map on the wall now shows the whole trip, from Tampa to Cuba, and another part of the modern Florida file is open. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means doing something hard or scary because it matters. Today you are a military historian, someone who studies wars and armies, finding out why Florida’s location mattered in 1898.",
+ "scene1": {
+  "type": "warmap",
+  "kicker": "Who gets the war?",
+  "h": "Check every city, then pick one.",
+  "voice": "Tap each city on the map. Its card checks it for the three things the army needs. When you’ve checked all four, pick one.",
+  "why": {
+   "icon": "🎖️",
+   "q": "What’s a staging ground?",
+   "t": "In 1898, the U.S. Army had to move about 30,000 soldiers, plus horses, food and cannons, to Cuba. A <b>staging ground<\/b> is the place where an army gathers and gets ready before it leaves. That’s why you check each city like a general would."
+  },
+  "needs": [
+   {
+    "id": "port",
+    "ico": "⚓",
+    "t": "A port for big ships"
+   },
+   {
+    "id": "rail",
+    "ico": "🚂",
+    "t": "A railroad right to the ships"
+   },
+   {
+    "id": "near",
+    "ico": "📏",
+    "t": "A short trip to Cuba"
+   }
+  ],
+  "pick": "tampa",
+  "to": {
+   "t": "Havana, Cuba",
+   "lon": -82.38,
+   "lat": 23.13
+  },
+  "toSub": "south of Key West",
+  "cities": [
+   {
+    "id": "pensacola",
+    "t": "Pensacola",
+    "lon": -87.217,
+    "lat": 30.421,
+    "dx": -2,
+    "dy": 14,
+    "checks": {
+     "port": {
+      "ok": true,
+      "t": "A deep harbor where Navy ships docked."
+     },
+     "rail": {
+      "ok": true,
+      "t": "Railroads reached its docks."
+     },
+     "near": {
+      "ok": false,
+      "t": "About 585 miles from Havana, the farthest of the four."
+     }
+    },
+    "miss": "Pensacola had a port and a railroad, but it was the farthest from Cuba. Check its card again."
+   },
+   {
+    "id": "jacksonville",
+    "t": "Jacksonville",
+    "lon": -81.656,
+    "lat": 30.332,
+    "dx": -58,
+    "dy": -8,
+    "checks": {
+     "port": {
+      "ok": true,
+      "t": "A busy port on the St. Johns River."
+     },
+     "rail": {
+      "ok": true,
+      "t": "Many railroads met here."
+     },
+     "near": {
+      "ok": false,
+      "t": "About 500 miles from Havana, and ships had to sail all the way around the tip of Florida."
+     }
+    },
+    "miss": "Ships from Jacksonville had to sail all the way around the tip of Florida. Check its card again."
+   },
+   {
+    "id": "tampa",
+    "t": "Tampa",
+    "lon": -82.458,
+    "lat": 27.951,
+    "dx": -40,
+    "dy": 4,
+    "checks": {
+     "port": {
+      "ok": true,
+      "t": "Port Tampa had a long pier where big ships could tie up."
+     },
+     "rail": {
+      "ok": true,
+      "t": "Henry Plant’s railroad ran nine miles from Tampa right onto the pier."
+     },
+     "near": {
+      "ok": true,
+      "t": "About 330 miles from Havana, across the Gulf of Mexico."
+     }
+    }
+   },
+   {
+    "id": "keywest",
+    "t": "Key West",
+    "lon": -81.78,
+    "lat": 24.555,
+    "dx": 8,
+    "dy": 4,
+    "checks": {
+     "port": {
+      "ok": true,
+      "t": "A harbor for Navy warships."
+     },
+     "rail": {
+      "ok": false,
+      "t": "No railroad reached Key West until 1912. Soldiers and supplies couldn’t get there by train."
+     },
+     "near": {
+      "ok": true,
+      "t": "Only about 90 miles from Cuba."
+     }
+    },
+    "miss": "Key West was the closest, but how would 30,000 soldiers and their horses get there without a railroad?"
+   }
+  ],
+  "pickQ": "Which city should get the army?",
+  "win": "🚂 <b>Tampa gets the army!<\/b> A port, a railroad right to the ships, and a short trip to Cuba. But remember: Florida was where the army got ready. The battles happened far away, in Cuba and on other islands.",
+  "jT": "The army needed:",
+  "jWon": "had all three."
+ },
+ "explore": {
+  "reading": {
+   "type": "ticket",
+   "activity": "Florida and the Spanish-American War",
+   "mid": "war",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Why was there a war"
+    },
+    {
+     "id": "p2",
+     "match": "^Why Florida"
+    },
+    {
+     "id": "p3",
+     "match": "^Tampa fills up"
+    },
+    {
+     "id": "p4",
+     "match": "^The jam at Port Tampa"
+    },
+    {
+     "id": "p5",
+     "match": "^The fighting was far away"
+    },
+    {
+     "id": "p6",
+     "match": "^After the war"
+    }
+   ],
+   "why": {
+    "icon": "🎫",
+    "q": "Why a ticket?",
+    "t": "In 1898, soldiers came to Tampa by train, and a conductor punched a hole in each ticket to show it had been used. That’s why you punch one stop at a time to follow the army’s trip from the start of the war to the end."
+   },
+   "coT": "Plant System · 1898",
+   "ticketT": "Good for one trip, Tampa to Cuba",
+   "allT": "Every stop is punched. Trip complete!",
+   "countT": "stops punched. Punch the next stop to read that part of the trip.",
+   "punchT": "Punch stop",
+   "stops": [
+    {
+     "id": "war",
+     "t": "Why a war?",
+     "ico": "💥",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "florida",
+     "t": "Why Florida?",
+     "ico": "🗺️",
+     "paras": [
+      "p2"
+     ],
+     "ask": {
+      "q": "Before you go on: who blew up the Maine?",
+      "opts": [
+       {
+        "t": "Spain did. Everyone agreed.",
+        "miss": "Many Americans blamed Spain in 1898. But read stop 1 again: was it ever proved?"
+       },
+       {
+        "t": "No one has ever proved what caused it.",
+        "ok": true
+       },
+       {
+        "t": "A storm sank it.",
+        "miss": "It wasn’t a storm. Read stop 1 again."
+       }
+      ]
+     }
+    },
+    {
+     "id": "tampa",
+     "t": "Tampa fills up",
+     "ico": "⛺",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "jam",
+     "t": "The jam at Port Tampa",
+     "ico": "🚂",
+     "paras": [
+      "p4"
+     ],
+     "img": "photo-4-10-05-troop-train-camp-tampa-1898.jpg",
+     "imgAlt": "An 1898 photograph of a long line of railroad freight cars with soldiers in hats sitting on top of them.",
+     "imgCap": "“Arrival of U.S. Troops, Camp Tampa, Fla.” Soldiers ride on top of railroad cars. Keystone View Company, 1898. Library of Congress."
+    },
+    {
+     "id": "far",
+     "t": "The fighting was far away",
+     "ico": "⚔️",
+     "paras": [
+      "p5"
+     ],
+     "ask": {
+      "q": "Where were the battles of this war?",
+      "opts": [
+       {
+        "t": "In Tampa and Key West",
+        "miss": "Florida was the launchpad, not the battlefield. Read stop 4 again: where did the ships sail?"
+       },
+       {
+        "t": "In Cuba and on other islands Spain ruled",
+        "ok": true
+       },
+       {
+        "t": "In Spain",
+        "miss": "The battles were much closer to Florida than Spain is. Where did the ships go?"
+       }
+      ]
+     }
+    },
+    {
+     "id": "after",
+     "t": "After the war",
+     "ico": "📰",
+     "paras": [
+      "p6"
+     ]
+    }
+   ]
+  },
+  "evidence": {
+   "type": "manifest",
+   "kicker": "The ship’s manifest",
+   "h": "What’s on board, and how do we know?",
+   "voice": "Fill in each line of the manifest. Use the gold numbers on the photo for proof. One line can’t be proved by the photo at all.",
+   "why": {
+    "icon": "📋",
+    "q": "What’s a manifest?",
+    "t": "A <b>manifest<\/b> is a ship’s list of everything and everyone on board. Before a ship sailed, someone checked it line by line. That’s why you check this ship’s manifest against a real photo."
+   },
+   "sheetT": "Manifest",
+   "sheetSub": "Troop ship · Tampa Bay · 1898",
+   "stampT": "CHECKED",
+   "recT": "Only the records tell us",
+   "photoT": "Photo",
+   "lines": [
+    {
+     "id": "pass",
+     "t": "Passengers",
+     "n": "1",
+     "opts": [
+      {
+       "t": "Tourists on vacation",
+       "miss": "Look at #1. These people are packed together in hats for a trip to war."
+      },
+      {
+       "t": "Soldiers, crowded on deck",
+       "ok": true
+      },
+      {
+       "t": "Horses",
+       "miss": "Look at #1 again. Most of the horses were left behind in Tampa."
+      }
+     ]
+    },
+    {
+     "id": "power",
+     "t": "What makes it go",
+     "n": "2",
+     "opts": [
+      {
+       "t": "Sails only",
+       "miss": "Find #2. What’s that tall black pipe for?"
+      },
+      {
+       "t": "Oars",
+       "miss": "A ship this big can’t be rowed. Find #2."
+      },
+      {
+       "t": "A steam engine that burns coal",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "load",
+     "t": "How supplies reached the ship",
+     "n": "4",
+     "opts": [
+      {
+       "t": "Trains on tracks along the pier",
+       "ok": true
+      },
+      {
+       "t": "Wagons on a dirt road",
+       "miss": "Look at #4. What runs along the pier?"
+      },
+      {
+       "t": "Airplanes",
+       "miss": "Airplanes weren’t flying yet in 1898. Look at #4."
+      }
+     ]
+    },
+    {
+     "id": "fleet",
+     "t": "Ships making this trip",
+     "n": "3",
+     "opts": [
+      {
+       "t": "Only this one ship",
+       "miss": "Look at #3. How many ships do you see lined up?"
+      },
+      {
+       "t": "A long line of ships",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "way",
+     "t": "The way out to sea",
+     "n": "5",
+     "opts": [
+      {
+       "t": "Down a narrow river",
+       "miss": "Look at #5. Is that a river, or wide open water?"
+      },
+      {
+       "t": "The open water of Tampa Bay",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "dest",
+     "t": "Going to",
+     "rec": true,
+     "proof": "A photo can’t show where a ship is going.",
+     "opts": [
+      {
+       "t": "Spain",
+       "miss": "Spain is across the ocean in Europe. The battles were much closer to Florida."
+      },
+      {
+       "t": "Cuba",
+       "ok": true
+      },
+      {
+       "t": "Key West",
+       "miss": "Some Navy ships stayed at Key West, but these troop ships were going farther south."
+      }
+     ]
+    }
+   ],
+   "gateT": "Last step: punch every stop on the ticket in Learn the Story.",
+   "win": "📋 <b>Manifest checked!<\/b> Five lines proved by the photo, and one only the records could tell us. That’s how historians use a photo: they know what it can show and what it can’t. Now read the three questions under the photo."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "In Learn the Story, punch each stop on the ticket. Read each part as it opens.",
+    "Tap the gold numbers on the photo to see what each one shows.",
+    "Fill in every line of the ship’s manifest, using the gold numbers as proof.",
+    "Read the three questions under the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 5.7,
+    "y": 64.4,
+    "title": "Soldiers.",
+    "t": "Soldiers crowded together on the deck, waiting to sail."
+   },
+   {
+    "n": "2",
+    "x": 24.5,
+    "y": 25.8,
+    "title": "A smokestack.",
+    "t": "These were steamships. Their engines burned coal, and the smoke went up this tall pipe."
+   },
+   {
+    "n": "3",
+    "x": 57.8,
+    "y": 26.8,
+    "title": "More ships.",
+    "t": "A long line of ships, waiting their turn."
+   },
+   {
+    "n": "4",
+    "x": 33.3,
+    "y": 44.0,
+    "title": "The pier and its railroad tracks.",
+    "t": "A long pier sticks out into the bay. Railroad tracks run along it, so trains could come right up to the ships."
+   },
+   {
+    "n": "5",
+    "x": 7.3,
+    "y": 35.4,
+    "title": "Open water.",
+    "t": "The wide water of Tampa Bay, the way out to the Gulf of Mexico."
+   }
+  ]
+ },
+ "planner": {
+  "type": "telegram",
+  "voice": "Fill in your telegram home: where it’s from, two true details, and why it mattered. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "📨",
+   "q": "What’s a telegram?",
+   "t": "In 1898, people sent quick messages by <b>telegram<\/b>. A clerk sent your words over an electric wire, and you paid for every word. So people kept them short and wrote STOP instead of a period. That’s why you plan with a telegram."
+  },
+  "coT": "Telegram",
+  "hdSub": "Florida · 1898",
+  "toT": "TO: My family at home",
+  "places": [
+   {
+    "id": "tampa",
+    "t": "Tampa"
+   },
+   {
+    "id": "porttampa",
+    "t": "Port Tampa"
+   },
+   {
+    "id": "keywest",
+    "t": "Key West"
+   },
+   {
+    "id": "jax",
+    "t": "Jacksonville"
+   }
+  ],
+  "details": [
+   {
+    "id": "d1",
+    "t": "About 30,000 soldiers camped in Tampa.",
+    "ok": true
+   },
+   {
+    "id": "d2",
+    "t": "Only one railroad track ran to Port Tampa.",
+    "ok": true
+   },
+   {
+    "id": "d3",
+    "t": "The Rough Riders left their horses behind.",
+    "ok": true
+   },
+   {
+    "id": "d4",
+    "t": "The ships sailed for Cuba in June 1898.",
+    "ok": true
+   },
+   {
+    "id": "d5",
+    "t": "Key West was a Navy base close to Cuba.",
+    "ok": true
+   },
+   {
+    "id": "d6",
+    "t": "About 30,000 soldiers gathered at Camp Cuba Libre.",
+    "ok": true
+   },
+   {
+    "id": "x1",
+    "t": "The big battles were fought in Tampa.",
+    "miss": "The battles were in Cuba, Puerto Rico and the Philippines. Florida was the launchpad."
+   },
+   {
+    "id": "x2",
+    "t": "Spain blew up the Maine.",
+    "miss": "Nobody has ever proved what caused the Maine to blow up."
+   }
+  ],
+  "whys": [
+   {
+    "id": "w1",
+    "t": "Florida is the closest state to Cuba.",
+    "ok": true
+   },
+   {
+    "id": "w2",
+    "t": "Tampa had a port and a railroad to the ships.",
+    "ok": true
+   },
+   {
+    "id": "w3",
+    "t": "The war helped Tampa grow into a city.",
+    "ok": true
+   },
+   {
+    "id": "x3",
+    "t": "Florida was the biggest state.",
+    "miss": "Florida wasn’t the biggest state. Why was it the best place to leave from?"
+   }
+  ],
+  "wcT": "words to pay for",
+  "sendT": "📨 Send the telegram",
+  "sentT": "SENT",
+  "doneT": "Telegram sent! Now write in Step 3: Florida’s role in the war, with two details, and why it mattered.",
+  "l1": "Sent from",
+  "l2": "Detail",
+  "l3": "This mattered because"
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "Florida’s role",
+    "rx": "launch|staging|ready|gather|camp|port|ship|sail|base|train|troop|soldier|army"
+   },
+   {
+    "t": "a place",
+    "rx": "tampa|key west|jacksonville|port tampa|camp cuba libre|florida"
+   },
+   {
+    "t": "because / this mattered",
+    "rx": "because|as a result|so |that.?s why|since|this mattered|mattered|important"
+   },
+   {
+    "t": "a detail",
+    "rx": "1898|30,?000|90|rough rider|roosevelt|one track|one-track|horse|maine|cuba|navy|5,?532|15,?839|june|nine miles"
+   }
+  ],
+  "lines": [
+   "Start with the year: “In 1898…”",
+   "Good. Now say what Florida’s job was in the war.",
+   "Add a place, like Tampa or Key West.",
+   "Add a detail, like a number or a name.",
+   "Say why it mattered. Then read it over once."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the map, the ticket and the ship’s manifest."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill in a telegram home: where it’s from, two details, and why it mattered."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about Florida’s role in the war. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "floatfleet",
+  "kicker": "Float the fleet",
+  "h": "mar = sea",
+  "root": "mar",
+  "hl": "mar",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match raises the tide.",
+  "why": {
+   "icon": "🌊",
+   "q": "Why a tide?",
+   "t": "Tampa Bay is shallow in many places, so big ships had to follow a <b>channel<\/b> (a deep path through the water) or get stuck. <b>Mar<\/b> means sea. That’s why each sea word you match raises the water until the ship floats free to join the <b>fleet<\/b> (a group of ships)."
+  },
+  "words": [
+   {
+    "w": "marine",
+    "m": "having to do with the sea",
+    "miss": "Marine animals live in the sea. Marine means…",
+    "say": "Marine. Having to do with the sea."
+   },
+   {
+    "w": "maritime",
+    "m": "about ships and sailing on the sea",
+    "miss": "A maritime museum is full of old ships. Maritime means…",
+    "say": "Maritime. About ships and sailing on the sea."
+   },
+   {
+    "w": "submarine",
+    "m": "a ship that can travel under the sea",
+    "miss": "Sub- means under. A submarine goes under the…",
+    "say": "Submarine. A ship that can travel under the sea."
+   },
+   {
+    "w": "mariner",
+    "m": "a sailor",
+    "miss": "A mariner is a person who works at sea. A mariner is a…",
+    "say": "Mariner. A sailor."
+   }
+  ],
+  "boardT": "Tide",
+  "win": "🚢 The ship floats free and steams out to sea!"
+ },
+ "cabinet": {
+  "n": 10
+ },
+ "notes": {
+  "learned": [
+   "In 1898, the United States went to war with Spain over Cuba, an island just 90 miles south of Key West.",
+   "The battleship Maine blew up in Havana Harbor in February 1898. Many Americans blamed Spain, but no one has ever proved what caused it.",
+   "Tampa was the army’s main staging ground because it had a port, a railroad right to the ships, and a short trip to Cuba.",
+   "About 30,000 soldiers came to Tampa, including the Rough Riders. Only one railroad track ran to Port Tampa, so everything got tangled.",
+   "The battles were in Cuba, Puerto Rico and the Philippines. Key West was a Navy base, and Jacksonville had Camp Cuba Libre.",
+   "The war helped Tampa grow from 5,532 people in 1890 to 15,839 in 1900."
+  ],
+  "vocab": [
+   [
+    "courage",
+    "doing something hard or scary because it matters"
+   ],
+   [
+    "military historian",
+    "someone who studies wars and armies"
+   ],
+   [
+    "independence",
+    "the freedom to rule yourselves"
+   ],
+   [
+    "battleship",
+    "a big warship"
+   ],
+   [
+    "troops",
+    "groups of soldiers"
+   ],
+   [
+    "staging ground",
+    "the place where an army gathers and gets ready before it leaves"
+   ],
+   [
+    "cavalry regiment",
+    "a group of about 1,000 soldiers who fight on horseback"
+   ],
+   [
+    "volunteers",
+    "people who sign up on their own"
+   ],
+   [
+    "pier",
+    "a dock that sticks out into the water"
+   ],
+   [
+    "launchpad",
+    "the place something is launched from"
+   ],
+   [
+    "Navy base",
+    "a home port for warships"
+   ],
+   [
+    "treaty",
+    "a written agreement that ends a war"
+   ],
+   [
+    "transports",
+    "ships that carry soldiers"
+   ],
+   [
+    "manifest",
+    "a ship’s list of everything and everyone on board"
+   ],
+   [
+    "telegram",
+    "a message sent over an electric wire, paid for by the word"
+   ],
+   [
+    "mar (word root)",
+    "sea"
+   ],
+   [
+    "marine",
+    "having to do with the sea"
+   ],
+   [
+    "maritime",
+    "about ships and sailing on the sea"
+   ],
+   [
+    "submarine",
+    "a ship that can travel under the sea"
+   ],
+   [
+    "mariner",
+    "a sailor"
+   ]
+  ],
+  "wordParts": "The Latin word mare means “sea.” You can find it as mar in marine, maritime, submarine and mariner."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "close to Cuba",
+    "rx": "cuba|90|close|near|closest|south|island|short",
+    "n": 1
+   },
+   {
+    "t": "a geography detail",
+    "rx": "port|coast|water|ocean|gulf|bay|map|mile|location|tampa|key west|ship|sea|peninsula",
+    "n": 1
+   },
+   {
+    "t": "why it mattered",
+    "rx": "because|so |that.?s why|easy|easier|fast|quick|short|help|could|made|good place|best place",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "troops",
+    "rx": "soldier|troop|army|30,?000|rough rider|men|camp|tent|roosevelt|people|staging|cavalry|volunteer|regiment",
+    "n": 1
+   },
+   {
+    "t": "supplies or the port",
+    "rx": "suppl|horse|food|weapon|gun|cannon|port|ship|pier|dock|train|rail|track|boat",
+    "n": 1
+   },
+   {
+    "t": "a challenge",
+    "rx": "jam|crowd|one track|one-track|single|wait|chaos|tangle|mess|stuck|hard|problem|not ready|left|behind|hot|heat|too many|full|small|confus",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "after the war",
+    "rx": "after|later|then|ended|end|treaty|today|1900|grew|grow",
+    "n": 1
+   },
+   {
+    "t": "how Florida changed",
+    "rx": "grew|grow|bigger|city|people|attention|famous|newspaper|known|navy|base|key west|tampa|5,?532|15,?839|popul",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the map in the Learn tab (tab 1).",
+   "How far is Florida from Cuba? What did Tampa and Key West have that the army needed?",
+   "Try this shape: “Florida was important because it is close to ___. Tampa had ___.”"
+  ],
+  "journal-q2": [
+   "Look back at stops 3 and 4 on the ticket in the Explore tab (tab 2).",
+   "How many soldiers came? How did supplies get to the ships? What went wrong?",
+   "Try this shape: “In 1898, about ___ soldiers came to Tampa. They ___. One problem was ___.”"
+  ],
+  "journal-q3": [
+   "Look back at stop 6, After the war, on the ticket.",
+   "What happened to Tampa’s size? What did people across the country learn about Florida?",
+   "Try this shape: “After the war, Tampa ___. Florida ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why didn’t the army use Key West, even though it was closer to Cuba?",
+  "journal-q2": "Go further: if you were in charge at Port Tampa, what is one thing you would have done differently?",
+  "journal-q3": "Go further: why do you think historians still argue about what sank the Maine?"
+ },
+ "quizMiss": [
+  {
+   "a": "Spain never attacked Florida. Reread stop 1 on the ticket.",
+   "c": "Trade wasn’t the reason. Reread stop 1: think about Cuba and the Maine."
+  },
+  {
+   "a": "Tampa was small! Only 5,532 people lived there in 1890. Reread stop 2.",
+   "c": "Roosevelt came to Tampa with the Rough Riders. He didn’t live there. Reread stop 2."
+  },
+  {
+   "a": "Reread stop 3: they were soldiers who were supposed to fight on horseback.",
+   "c": "They were American volunteers, not Spanish soldiers. Reread stop 3."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Check like a general",
+   "at": "scene1",
+   "script": "When my family picks a place to camp, we check a list: water nearby, a flat spot for the tent, and a short drive. Generals in 1898 had a list too. Tap each city on the map. Check it for a port, a railroad to the ships, and a short trip to Cuba."
+  },
+  {
+   "slot": "guide2",
+   "label": "Trace the trip",
+   "at": "s1done",
+   "script": "Pause me. Put one finger on Tampa and one on Cuba. Everything the army brought had to cross that water by ship: soldiers, horses, food and cannons. Say one thing that could go wrong. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Punch the ticket",
+   "at": "explore",
+   "script": "In 1898, a ticket got you on the train. Today, this ticket takes you through the war, one stop at a time. Punch the first stop and read that part. Then punch the next. Some stops ask you a question first."
+  },
+  {
+   "slot": "guide4",
+   "label": "A mystery from 1898",
+   "at": "readmid",
+   "script": "Here’s a mystery from 1898. The battleship Maine blew up, and many Americans blamed Spain. A good historian asks: where is the proof? Read stop 1 carefully. The next stop will ask you about it."
+  },
+  {
+   "label": "Hear Roosevelt’s words",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide5a",
+     "script": "This photo shows troop ships in Tampa Bay in 1898. Theodore Roosevelt sailed from here on a ship like these. A year later, he wrote a book about the war. Here is what he wrote about Tampa. Listen."
+    },
+    {
+     "slot": "guide5b",
+     "who": "Theodore Roosevelt, The Rough Riders, 1899",
+     "script": "Tampa lay in the pine-covered sand-flats at the end of a one-track railroad, and everything connected with both military and railroad matters was in an almost inextricable tangle."
+    },
+    {
+     "slot": "guide5c",
+     "script": "A tangle that nobody could undo! Now fill in the ship’s manifest, the list of everything on board. Tap the gold numbers on the photo to find your proof."
+    }
+   ]
+  },
+  {
+   "slot": "guide6",
+   "label": "Send a telegram",
+   "at": "plan",
+   "script": "When I went to camp as a kid, I sent a postcard home with just a few words. In 1898, people sent telegrams, and every word cost money. Pick where yours comes from, two true details, and why it mattered. Then write it in your own words."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^Generals$",
+    "sel": ".spk-wmp .wmmap",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^city$",
+    "sel": ".wmmap .ct .dot",
+    "all": true,
+    "fx": "pop"
+   },
+   {
+    "at": "^port$",
+    "sel": ".spk-wmpneeds .nd",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^railroad$",
+    "sel": ".spk-wmpneeds .nd",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^trip$",
+    "sel": ".spk-wmpneeds .nd",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^Cuba$",
+    "sel": ".wmmap .hv",
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^Tampa$",
+    "sel": ".wmmap .ct[data-c=\"tampa\"] .dot",
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^Cuba$",
+    "sel": ".wmmap .hv",
+    "fx": "glow"
+   },
+   {
+    "at": "^water$",
+    "sel": ".wmmap .ct[data-c=\"tampa\"] .rt",
+    "fx": "glow"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^ticket$",
+    "sel": ".spk-tixcard",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^stop$",
+    "sel": ".spk-tixcard .stub",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^Punch$",
+    "sel": ".spk-tixctl",
+    "fx": "point"
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-tixcard .stub",
+    "i": 1,
+    "fx": "wiggle"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^Maine$",
+    "sel": ".spk-tixp[data-i=\"0\"] .txt",
+    "fx": "trace"
+   },
+   {
+    "at": "^proof$",
+    "sel": ".spk-tixp[data-i=\"0\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^next$",
+    "sel": ".spk-tixctl",
+    "fx": "point"
+   }
+  ],
+  "guide5a": [
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^ships$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"2\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Tampa$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"3\"]",
+    "fx": "glow"
+   }
+  ],
+  "guide5b": [
+   {
+    "at": "^one-track$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"3\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^tangle$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "glow"
+   }
+  ],
+  "guide5c": [
+   {
+    "at": "^manifest$",
+    "sel": ".spk-mnfsheet",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^list$",
+    "sel": ".spk-mnfsheet .top",
+    "fx": "glow"
+   },
+   {
+    "at": "^gold$",
+    "sel": ".source-image-placeholder .spk-hot",
+    "all": true,
+    "fx": "pop"
+   },
+   {
+    "at": "^proof$",
+    "sel": ".spk-mnfsheet .ln",
+    "i": 0,
+    "fx": "point"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^telegrams$",
+    "sel": ".spk-tlgform",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^word$",
+    "sel": ".spk-tlgform .wc",
+    "fx": "pop"
+   },
+   {
+    "at": "^where$",
+    "sel": ".spk-tlg .fr[data-r=\"p\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^details$",
+    "sel": ".spk-tlg .fr[data-r=\"d\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^mattered$",
+    "sel": ".spk-tlg .fr[data-r=\"w\"]",
+    "fx": "point"
+   }
+  ]
+ },
+ "cueWords": {}
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,84 +3216,135 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Florida and the Spanish-American War ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Port Tampa at dawn in 1898: a long wooden pier with railroad tracks and a line of freight cars runs out into Tampa Bay, three steamships wait at the pier with smoke rising, crates and a cannon sit on the dock, and pelicans fly low over the water">
 <defs>
-  <linearGradient id="h1005sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#8a9aaa"/>
-    <stop offset="100%" stop-color="#b0baba"/>
-  </linearGradient>
-  <linearGradient id="h1005water" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#3a5a7a"/>
-    <stop offset="100%" stop-color="#2a4a68"/>
-  </linearGradient>
-  <style>
-    .h1005bob { animation: h1005bob 3.5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1005bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
-    .h1005drift { animation: h1005drift 4s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1005drift { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(2.5deg); } }
-    .h1005glow { animation: h1005glow 2s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1005glow { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
-  </style>
+<linearGradient id="b1005sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E4F7E"/><stop offset=".5" stop-color="#D98F7E"/><stop offset=".85" stop-color="#F4C07C"/><stop offset="1" stop-color="#FBE0A8"/></linearGradient>
+<radialGradient id="b1005sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6D6"/><stop offset=".4" stop-color="#FFD98A" stop-opacity=".9"/><stop offset="1" stop-color="#FFB86A" stop-opacity="0"/></radialGradient>
+<linearGradient id="b1005wat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9C48C"/><stop offset=".35" stop-color="#8FA7B0"/><stop offset="1" stop-color="#3F5F72"/></linearGradient>
+<style>
+ .b1005-sun { animation: b1005glow 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+ @keyframes b1005glow { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+ .b1005-smoke circle { fill: #8E8A8C; animation: b1005puff 6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+ @keyframes b1005puff { 0% { opacity: 0; transform: translate(0,0) scale(.6); } 20% { opacity: .55; } 100% { opacity: 0; transform: translate(-26px,-22px) scale(1.6); } }
+ .b1005-glint line { stroke: #FFF2CF; stroke-width: 1.3; stroke-linecap: round; animation: b1005gl 4.5s ease-in-out infinite; }
+ @keyframes b1005gl { 0%,100% { opacity: .15; } 50% { opacity: .85; } }
+ .b1005-birds { animation: b1005fly 30s linear infinite; }
+ @keyframes b1005fly { from { transform: translateX(-80px); } to { transform: translateX(1000px); } }
+ .b1005-flag { animation: b1005flap 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: left center; }
+ @keyframes b1005flap { 0%,100% { transform: skewY(0); } 50% { transform: skewY(-6deg); } }
+ @media (prefers-reduced-motion: reduce) { .b1005-sun, .b1005-smoke circle, .b1005-glint line, .b1005-birds, .b1005-flag { animation: none; } .b1005-smoke circle { opacity: .4; } }
+</style>
 </defs>
-<!-- sky -->
-<rect width="920" height="260" fill="url(#h1005sky)"/>
-<!-- water -->
-<rect x="0" y="150" width="500" height="30" fill="url(#h1005water)"/>
-<!-- sandy ground -->
-<rect x="0" y="180" width="920" height="80" fill="#c4a878"/>
-<rect x="0" y="195" width="920" height="65" fill="#b09868"/>
-<!-- ships in port -->
-<g transform="translate(120,120)">
-  <g class="h1005bob">
-    <polygon points="-50,30 -40,50 40,50 50,30" fill="#6a5a40"/>
-    <rect x="-3" y="-20" width="6" height="50" fill="#5a4a30"/>
-    <polygon points="3,-15 3,15 35,0" fill="#d8d0c0"/>
-    <rect x="-40" y="20" width="80" height="8" fill="#7a6a50" rx="2"/>
-  </g>
+<rect width="920" height="200" fill="url(#b1005sky)"/>
+<circle class="b1005-sun" cx="760" cy="118" r="70" fill="url(#b1005sun)"/><circle cx="760" cy="118" r="20" fill="#FFF1C9"/>
+<path d="M0,116 C120,112 240,114 360,111 C500,108 640,112 920,110 L920,122 L0,124Z" fill="#6E7E86" opacity=".55"/>
+<path d="M10,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M33,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M56,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M79,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M102,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M125,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M148,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M171,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M194,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M217,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M240,111 l3,5 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M263,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M286,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M309,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M332,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M355,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M378,111 l3,5 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M401,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M424,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M447,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M470,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M493,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M516,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M539,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M562,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M585,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M608,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M631,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M654,111 l3,5 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M677,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M700,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M723,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M746,112 l3,4 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M769,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M792,111 l3,5 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M815,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M838,109 l3,7 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M861,110 l3,6 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M884,107 l3,9 h-6z" fill="#5A6A72" opacity=".5"/>
+<path d="M907,108 l3,8 h-6z" fill="#5A6A72" opacity=".5"/>
+<rect y="120" width="920" height="80" fill="url(#b1005wat)"/>
+<path d="M700,122 L820,122 L860,200 L660,200Z" fill="#FFE3A6" opacity=".25"/>
+<g class="b1005-glint">
+<line x1="652" y1="160" x2="672" y2="160" style="animation-delay:3.7s"/>
+<line x1="810" y1="165" x2="831" y2="165" style="animation-delay:3.7s"/>
+<line x1="747" y1="186" x2="762" y2="186" style="animation-delay:1.8s"/>
+<line x1="770" y1="162" x2="787" y2="162" style="animation-delay:0.4s"/>
+<line x1="861" y1="128" x2="874" y2="128" style="animation-delay:2.4s"/>
+<line x1="713" y1="196" x2="733" y2="196" style="animation-delay:1.4s"/>
+<line x1="785" y1="150" x2="802" y2="150" style="animation-delay:3.7s"/>
+<line x1="777" y1="145" x2="785" y2="145" style="animation-delay:2.1s"/>
+<line x1="757" y1="129" x2="765" y2="129" style="animation-delay:0.8s"/>
+<line x1="752" y1="134" x2="763" y2="134" style="animation-delay:3.6s"/>
+<line x1="761" y1="150" x2="774" y2="150" style="animation-delay:0.6s"/>
+<line x1="682" y1="163" x2="700" y2="163" style="animation-delay:1.5s"/>
+<line x1="757" y1="170" x2="772" y2="170" style="animation-delay:2.9s"/>
+<line x1="776" y1="130" x2="790" y2="130" style="animation-delay:1.7s"/>
+<line x1="703" y1="135" x2="725" y2="135" style="animation-delay:1.8s"/>
+<line x1="724" y1="154" x2="745" y2="154" style="animation-delay:2.1s"/>
+<line x1="741" y1="155" x2="759" y2="155" style="animation-delay:2.3s"/>
+<line x1="787" y1="175" x2="798" y2="175" style="animation-delay:2.5s"/>
+<line x1="733" y1="132" x2="750" y2="132" style="animation-delay:3.4s"/>
+<line x1="867" y1="181" x2="889" y2="181" style="animation-delay:1.0s"/>
+<line x1="790" y1="166" x2="798" y2="166" style="animation-delay:3.4s"/>
+<line x1="664" y1="142" x2="679" y2="142" style="animation-delay:1.5s"/>
+<line x1="800" y1="153" x2="815" y2="153" style="animation-delay:1.4s"/>
+<line x1="786" y1="167" x2="804" y2="167" style="animation-delay:1.8s"/>
+<line x1="871" y1="165" x2="890" y2="165" style="animation-delay:2.1s"/>
+<line x1="845" y1="196" x2="855" y2="196" style="animation-delay:0.3s"/>
 </g>
-<g transform="translate(300,125)">
-  <g class="h1005bob">
-    <polygon points="-40,25 -30,45 30,45 40,25" fill="#5a5040"/>
-    <rect x="-2" y="-15" width="5" height="40" fill="#5a4a30"/>
-    <polygon points="3,-12 3,10 28,-1" fill="#d0c8b8"/>
-    <rect x="-30" y="18" width="60" height="6" fill="#6a5a48" rx="2"/>
-  </g>
-</g>
-<!-- dock/wharf -->
-<rect x="0" y="170" width="420" height="10" fill="#7a6040"/>
-<rect x="20" y="165" width="6" height="20" fill="#6a5030"/>
-<rect x="100" y="165" width="6" height="20" fill="#6a5030"/>
-<rect x="200" y="165" width="6" height="20" fill="#6a5030"/>
-<rect x="350" y="165" width="6" height="20" fill="#6a5030"/>
-<!-- military tents -->
-<polygon points="520,180 560,140 600,180" fill="#8a8a6a"/>
-<polygon points="620,180 660,145 700,180" fill="#7a7a5a"/>
-<polygon points="710,180 745,150 780,180" fill="#8a8a6a"/>
-<!-- camp lantern -->
-<g transform="translate(590,155)">
-  <g class="h1005glow">
-    <rect x="-3" y="0" width="6" height="10" fill="#a09040"/>
-    <ellipse cx="0" cy="3" rx="5" ry="6" fill="#f0d060" opacity="0.5"/>
-    <rect x="-5" y="-2" width="10" height="3" fill="#8a7a40" rx="1"/>
-  </g>
-</g>
-<!-- map on table -->
-<rect x="800" y="160" width="60" height="5" fill="#6a5030"/>
-<rect x="790" y="155" width="70" height="3" fill="#7a6040"/>
-<!-- table legs -->
-<rect x="795" y="163" width="4" height="17" fill="#6a5030"/>
-<rect x="851" y="163" width="4" height="17" fill="#6a5030"/>
-<!-- map paper -->
-<rect x="802" y="148" width="45" height="30" fill="#e8dcc0" rx="1" transform="rotate(-5,824,163)"/>
-<ellipse cx="820" cy="158" rx="8" ry="6" fill="#c0b898" transform="rotate(-5,824,163)"/>
-<!-- Florida flag -->
-<g transform="translate(750,80)">
-  <g class="h1005drift">
-    <rect x="0" y="0" width="4" height="100" fill="#6a5a40"/>
-    <rect x="4" y="5" width="40" height="25" fill="#e8e0d0"/>
-    <line x1="14" y1="10" x2="34" y2="25" stroke="#c04040" stroke-width="2"/>
-    <line x1="34" y1="10" x2="14" y2="25" stroke="#c04040" stroke-width="2"/>
-  </g>
+<g transform="translate(540,118) scale(0.62)"><path d="M0,0 L170,0 L156,22 L12,22Z" fill="#2B2730"/><rect x="10" y="-2" width="150" height="4" fill="#7A2E26"/><rect x="34" y="-16" width="96" height="14" fill="#E9E1CF"/><rect x="34" y="-16" width="96" height="3" fill="#C9BFA8"/><rect x="40" y="-11" width="5" height="4" fill="#5B5560"/><rect x="50" y="-11" width="5" height="4" fill="#5B5560"/><rect x="60" y="-11" width="5" height="4" fill="#5B5560"/><rect x="70" y="-11" width="5" height="4" fill="#5B5560"/><rect x="80" y="-11" width="5" height="4" fill="#5B5560"/><rect x="90" y="-11" width="5" height="4" fill="#5B5560"/><rect x="100" y="-11" width="5" height="4" fill="#5B5560"/><rect x="110" y="-11" width="5" height="4" fill="#5B5560"/><rect x="120" y="-11" width="5" height="4" fill="#5B5560"/><path d="M20,0 V-58 M150,0 V-52" stroke="#3A2E22" stroke-width="2.4"/><path d="M20,-50 L150,-46" stroke="#3A2E22" stroke-width="1" opacity=".7"/><rect x="70" y="-44" width="13" height="28" fill="#1E1A1E"/><rect x="70" y="-40" width="13" height="4" fill="#B03A2E"/><g class="b1005-smoke"><circle cx="76" cy="-50" r="5" style="animation-delay:0.0s"/><circle cx="76" cy="-57" r="7" style="animation-delay:1.4s"/><circle cx="76" cy="-64" r="9" style="animation-delay:2.8s"/><circle cx="76" cy="-71" r="11" style="animation-delay:4.2s"/></g></g>
+<g transform="translate(390,122) scale(0.78)"><path d="M0,0 L170,0 L156,22 L12,22Z" fill="#2B2730"/><rect x="10" y="-2" width="150" height="4" fill="#7A2E26"/><rect x="34" y="-16" width="96" height="14" fill="#E9E1CF"/><rect x="34" y="-16" width="96" height="3" fill="#C9BFA8"/><rect x="40" y="-11" width="5" height="4" fill="#5B5560"/><rect x="50" y="-11" width="5" height="4" fill="#5B5560"/><rect x="60" y="-11" width="5" height="4" fill="#5B5560"/><rect x="70" y="-11" width="5" height="4" fill="#5B5560"/><rect x="80" y="-11" width="5" height="4" fill="#5B5560"/><rect x="90" y="-11" width="5" height="4" fill="#5B5560"/><rect x="100" y="-11" width="5" height="4" fill="#5B5560"/><rect x="110" y="-11" width="5" height="4" fill="#5B5560"/><rect x="120" y="-11" width="5" height="4" fill="#5B5560"/><path d="M20,0 V-58 M150,0 V-52" stroke="#3A2E22" stroke-width="2.4"/><path d="M20,-50 L150,-46" stroke="#3A2E22" stroke-width="1" opacity=".7"/><rect x="70" y="-44" width="13" height="28" fill="#1E1A1E"/><rect x="70" y="-40" width="13" height="4" fill="#B03A2E"/><g class="b1005-smoke"><circle cx="76" cy="-50" r="5" style="animation-delay:0.0s"/><circle cx="76" cy="-57" r="7" style="animation-delay:1.4s"/><circle cx="76" cy="-64" r="9" style="animation-delay:2.8s"/><circle cx="76" cy="-71" r="11" style="animation-delay:4.2s"/></g><path d="M150,-52 h-1 v-12" stroke="#3A2E22" stroke-width="1.5"/><g class="b1005-flag"><rect x="150" y="-64" width="16" height="10" fill="#B03A2E"/><rect x="150" y="-64" width="7" height="5" fill="#2E4A6B"/><path d="M157,-62 h9 M150,-58 h16 M150,-56 h16" stroke="#F3EFE6" stroke-width="1"/></g></g>
+<g transform="translate(210,128) scale(0.95)"><path d="M0,0 L170,0 L156,22 L12,22Z" fill="#2B2730"/><rect x="10" y="-2" width="150" height="4" fill="#7A2E26"/><rect x="34" y="-16" width="96" height="14" fill="#E9E1CF"/><rect x="34" y="-16" width="96" height="3" fill="#C9BFA8"/><rect x="40" y="-11" width="5" height="4" fill="#5B5560"/><rect x="50" y="-11" width="5" height="4" fill="#5B5560"/><rect x="60" y="-11" width="5" height="4" fill="#5B5560"/><rect x="70" y="-11" width="5" height="4" fill="#5B5560"/><rect x="80" y="-11" width="5" height="4" fill="#5B5560"/><rect x="90" y="-11" width="5" height="4" fill="#5B5560"/><rect x="100" y="-11" width="5" height="4" fill="#5B5560"/><rect x="110" y="-11" width="5" height="4" fill="#5B5560"/><rect x="120" y="-11" width="5" height="4" fill="#5B5560"/><path d="M20,0 V-58 M150,0 V-52" stroke="#3A2E22" stroke-width="2.4"/><path d="M20,-50 L150,-46" stroke="#3A2E22" stroke-width="1" opacity=".7"/><rect x="70" y="-44" width="13" height="28" fill="#1E1A1E"/><rect x="70" y="-40" width="13" height="4" fill="#B03A2E"/><g class="b1005-smoke"><circle cx="76" cy="-50" r="5" style="animation-delay:0.0s"/><circle cx="76" cy="-57" r="7" style="animation-delay:1.4s"/><circle cx="76" cy="-64" r="9" style="animation-delay:2.8s"/><circle cx="76" cy="-71" r="11" style="animation-delay:4.2s"/></g><rect x="96" y="-44" width="13" height="28" fill="#1E1A1E"/><rect x="96" y="-40" width="13" height="4" fill="#B03A2E"/><g class="b1005-smoke"><circle cx="102" cy="-50" r="5" style="animation-delay:0.7s"/><circle cx="102" cy="-57" r="7" style="animation-delay:2.1s"/><circle cx="102" cy="-64" r="9" style="animation-delay:3.5s"/><circle cx="102" cy="-71" r="11" style="animation-delay:4.9s"/></g></g>
+<path d="M0,152 L470,136 L470,142 L0,162Z" fill="#7A5A3A"/>
+<path d="M0,152 L470,136" stroke="#A88458" stroke-width="2"/>
+<rect x="0" y="158.0" width="4" height="30.0" fill="#4E3A26"/>
+<rect x="26" y="157.1" width="4" height="29.4" fill="#4E3A26"/>
+<rect x="52" y="156.2" width="4" height="28.9" fill="#4E3A26"/>
+<rect x="78" y="155.3" width="4" height="28.3" fill="#4E3A26"/>
+<rect x="104" y="154.5" width="4" height="27.8" fill="#4E3A26"/>
+<rect x="130" y="153.6" width="4" height="27.2" fill="#4E3A26"/>
+<rect x="156" y="152.7" width="4" height="26.7" fill="#4E3A26"/>
+<rect x="182" y="151.8" width="4" height="26.1" fill="#4E3A26"/>
+<rect x="208" y="150.9" width="4" height="25.6" fill="#4E3A26"/>
+<rect x="234" y="150.0" width="4" height="25.0" fill="#4E3A26"/>
+<rect x="260" y="149.1" width="4" height="24.5" fill="#4E3A26"/>
+<rect x="286" y="148.3" width="4" height="23.9" fill="#4E3A26"/>
+<rect x="312" y="147.4" width="4" height="23.4" fill="#4E3A26"/>
+<rect x="338" y="146.5" width="4" height="22.8" fill="#4E3A26"/>
+<rect x="364" y="145.6" width="4" height="22.3" fill="#4E3A26"/>
+<rect x="390" y="144.7" width="4" height="21.7" fill="#4E3A26"/>
+<rect x="416" y="143.8" width="4" height="21.1" fill="#4E3A26"/>
+<rect x="442" y="143.0" width="4" height="20.6" fill="#4E3A26"/>
+<rect x="468" y="142.1" width="4" height="20.0" fill="#4E3A26"/>
+<path d="M0,154.5 L470,138.5 M0,158.5 L470,140.5" stroke="#3A2E22" stroke-width="1.2"/>
+<g transform="translate(18,125.4)"><rect width="46" height="24" rx="1" fill="#8A3A2A"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(70,123.6)"><rect width="46" height="24" rx="1" fill="#7A4A32"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(122,121.8)"><rect width="46" height="24" rx="1" fill="#6E3A2A"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(174,120.1)"><rect width="46" height="24" rx="1" fill="#8A3A2A"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(226,118.3)"><rect width="46" height="24" rx="1" fill="#7A4A32"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(278,116.5)"><rect width="46" height="24" rx="1" fill="#6E3A2A"/><path d="M4,4 h38 M4,12 h38 M4,20 h38" stroke="#5A2A1E" stroke-width="1" opacity=".6"/><rect x="18" y="5" width="10" height="17" fill="#5A2A1E" opacity=".7"/><circle cx="9" cy="25" r="3.2" fill="#2B2730"/><circle cx="37" cy="25" r="3.2" fill="#2B2730"/></g>
+<g transform="translate(352,118)"><rect x="0" y="0" width="16" height="13" fill="#B88A52" stroke="#6E5232"/><rect x="18" y="3" width="14" height="10" fill="#C99A5E" stroke="#6E5232"/><rect x="6" y="-11" width="14" height="11" fill="#A87A44" stroke="#6E5232"/></g>
+<g transform="translate(398,112)"><path d="M0,10 L30,2" stroke="#2B2730" stroke-width="4" stroke-linecap="round"/><circle cx="8" cy="14" r="7" fill="none" stroke="#3A2E22" stroke-width="2"/><path d="M8,7 v14 M1,14 h14 M3,9 l10,10 M13,9 l-10,10" stroke="#3A2E22" stroke-width="1"/></g>
+<g class="b1005-birds" fill="none" stroke="#3A3440" stroke-width="1.8" stroke-linecap="round">
+<path d="M50,64 q5,-5 10,0 q5,-5 10,0"/>
+<path d="M74,58 q5,-5 10,0 q5,-5 10,0"/>
+<path d="M98,66 q5,-5 10,0 q5,-5 10,0"/>
 </g>
 </svg>
 
@@ -3607,5 +4852,10 @@ function toggleTX() {
 })();
 </script>
 
+
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
