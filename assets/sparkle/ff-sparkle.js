@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -5877,6 +5877,187 @@
     return {done:done, lines:lines};
   };
 
+
+  /* ---- Scene 1 · Make do (4.10.04): a small schoolhouse with a few empty spots (desks, pencils, ink, money). For each
+     need, pick how the founder really got it; "buy it" choices bounce because there's only $1.50. Each right pick fills
+     its spot. DATA: purse (text), needs [{id,ico,t,got,opts:[{t,ok,miss}]}] ---- */
+  MOD.makedo=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var ND=cfg.needs||[], N=ND.length; S.mkd=S.mkd||[]; var was=null;
+    var done=function(){ return N>0&&ND.every(function(n){ return S.mkd.indexOf(n.id)>=0; }); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-mkd');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Make do')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-mkdhouse"><div class="roof" aria-hidden="true"></div><div class="wall"><span class="purse">'+esc(cfg.purse||'$1.50')+'</span>'
+      +ND.map(function(n){ return '<div class="spot" data-n="'+esc(n.id)+'"><span class="ico" aria-hidden="true">'+esc(n.ico||'❓')+'</span><b>'+esc(n.t)+'</b><span class="got"></span></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-bell-ct spk-mkd-ct"></p>'
+      +'<div class="spk-mkdqs">'+ND.map(function(n){ return '<div class="q" data-n="'+esc(n.id)+'"><p class="qt"><span aria-hidden="true">'+esc(n.ico||'')+'</span> '+esc(n.q||('How did she get '+n.t.toLowerCase()+'?'))+'</p><div class="spk-opts">'+n.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="spk-miss"></p></div>'; }).join('')+'</div>'
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    function paint(anim){ ND.forEach(function(n){ var on=S.mkd.indexOf(n.id)>=0, sp=g.querySelector('.spot[data-n="'+n.id+'"]'), q=g.querySelector('.q[data-n="'+n.id+'"]'); sp.classList.toggle('on',on); sp.querySelector('.got').textContent=on?(n.got||''):''; q.classList.toggle('on',on); if(anim===n.id){ sp.classList.remove('pop'); void sp.offsetWidth; sp.classList.add('pop'); } });
+      var k=S.mkd.length, d=done(); g.querySelector('.spk-mkd-ct').innerHTML=d?'<b>'+esc(cfg.doneT||'The school is ready, and she still has her $1.50!')+'</b>':'<b>'+k+' of '+N+'</b> '+esc(cfg.countT||'needs met. Pick how she got each one.');
+      if(d&&was===false) sfx('win'); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    g.querySelector('.spk-mkdqs').addEventListener('click',function(e){ var b=e.target.closest('.spk-opt'); if(!b) return; var q=b.closest('.q'), n=find(ND,q.dataset.n); if(!n||S.mkd.indexOf(n.id)>=0) return; ack('open'); var o=n.opts[+b.dataset.k], miss=q.querySelector('.spk-miss');
+      if(o.ok){ S.mkd.push(n.id); save(); miss.textContent=''; sfx('clink'); paint(n.id); refreshFile(); refreshVoice(); }
+      else { b.classList.add('shake'); setTimeout(function(){ b.classList.remove('shake'); },450); miss.textContent=o.miss||cfg.missT||'She only had $1.50. Think of a way that costs nothing.'; missBeat(miss.textContent); } });
+    paint();
+    return {done:done, journal:function(e,NA){ if(!S.mkd.length) return NA; return '<p class="a">'+ND.filter(function(n){ return S.mkd.indexOf(n.id)>=0; }).map(function(n){ return '<b>'+e(n.t)+':</b> '+e(n.got||''); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · Plant a seed (4.10.04): one garden plot per person. Plant the choice (seed), water it (what it
+     caused, a sprout), let it grow (what Florida still has, a tree with fruit). Each stage opens its part of the reading
+     and can ask a question first (wrong ideas bounce). DATA: paras [{id,match}], plots [{id,t,ico,fruit,stages:[{k,
+     label,t,paras:[],ask:{q,opts:[{t,ok,miss}]}}]}] (k = seed | sprout | tree) ---- */
+  MOD.seedgrow=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var PL=cfg.plots||[], ST=[]; PL.forEach(function(p,i){ p.stages.forEach(function(s,j){ ST.push({p:i,j:j,s:s}); }); }); var N=ST.length; if(S.sgw==null) S.sgw=0;
+    var done=function(){ return N>0&&S.sgw>=N; };
+    var BTN={seed:'🌱 '+(cfg.plantT||'Plant the choice'),sprout:'💧 '+(cfg.waterT||'Water it'),tree:'☀️ '+(cfg.growT||'Let it grow')};
+    var w=el('div','spk spk-sgw'); w.innerHTML=whyCard(cfg.why)+'<p class="spk-ys-ct spk-sgwct"></p><div class="spk-sgwplots"></div><p class="spk-miss"></p>';
+    before(first,w);
+    var holder=w.querySelector('.spk-sgwplots'), boxes={}, miss=w.querySelector('.spk-miss');
+    function plantSVG(){ return '<svg viewBox="0 0 120 120" aria-hidden="true"><rect x="0" y="96" width="120" height="24" rx="4" class="soil"/><ellipse cx="60" cy="96" rx="40" ry="6" class="mound"/>'
+      +'<g class="sd"><ellipse cx="60" cy="92" rx="5" ry="3.5"/></g>'
+      +'<g class="sp"><path d="M60,94 C60,82 60,76 60,68"/><path d="M60,76 C52,70 46,72 44,76 C50,80 56,80 60,76Z" class="lf"/><path d="M60,72 C68,66 74,68 76,72 C70,76 64,76 60,72Z" class="lf"/></g>'
+      +'<g class="tr"><rect x="56" y="58" width="8" height="38" rx="2" class="trunk"/><circle cx="60" cy="44" r="26" class="crown"/><circle cx="42" cy="54" r="14" class="crown"/><circle cx="78" cy="54" r="14" class="crown"/><g class="fr"><circle cx="50" cy="38" r="4"/><circle cx="68" cy="34" r="4"/><circle cx="74" cy="52" r="4"/><circle cx="46" cy="56" r="4"/><circle cx="62" cy="54" r="4"/></g></g></svg>'; }
+    PL.forEach(function(p,i){ var b=el('div','spk-sgwp'); b.dataset.i=i; b.style.setProperty('--fruit',p.fruit||'#E8636B');
+      b.innerHTML='<div class="hd"><span class="ic" aria-hidden="true">'+esc(p.ico||'🌳')+'</span> '+esc(p.t)+'</div><div class="row"><div class="pot">'+plantSVG()+'</div><div class="tags">'+p.stages.map(function(s,j){ return '<div class="tg" data-j="'+j+'"><span class="k">'+esc(s.label||'')+'</span><span class="v">'+esc(s.t||'')+'</span></div>'; }).join('')+'</div></div>'
+        +'<div class="ctl"></div><div class="txt"></div>';
+      holder.appendChild(b); boxes[i]=b; });
+    var txts={}; ST.forEach(function(x,k){ var t=el('div','spk-sgwt'); t.dataset.k=k; boxes[x.p].querySelector('.txt').appendChild(t); (x.s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ t.appendChild(nd); }); }); txts[k]=t; });
+    function paint(anim){ var cur=ST[S.sgw];
+      PL.forEach(function(p,i){ var b=boxes[i], sts=ST.filter(function(x){ return x.p===i; }), nDone=sts.filter(function(x){ return ST.indexOf(x)<S.sgw; }).length;
+        b.classList.toggle('show',i<=(cur?cur.p:PL.length-1)||done()); b.classList.toggle('cur',!!cur&&cur.p===i);
+        ['seed','sprout','tree'].forEach(function(k,ix){ b.classList.toggle('g-'+k, sts.some(function(x){ return x.s.k===k&&ST.indexOf(x)<S.sgw; })); });
+        b.querySelectorAll('.tg').forEach(function(t){ t.classList.toggle('on',+t.dataset.j<nDone); });
+        if(anim!=null&&ST[anim]&&ST[anim].p===i){ b.classList.remove('just'); void b.offsetWidth; b.classList.add('just'); }
+        var ctl=b.querySelector('.ctl'); if(cur&&cur.p===i){ var s=cur.s; ctl.innerHTML=s.ask?'<p class="q">'+esc(s.ask.q)+'</p><div class="spk-opts">'+s.ask.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div>':'<button type="button" class="spk-sgwgo">'+esc(s.btn||BTN[s.k]||'Next')+'</button>'; } else ctl.innerHTML=''; });
+      ST.forEach(function(x,k){ txts[k].classList.toggle('on',k<S.sgw); });
+      w.querySelector('.spk-sgwct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every seed has grown!')+'</b>':'<b>'+S.sgw+' of '+N+'</b> '+esc(cfg.countT||'steps grown. Plant, water and grow each choice.');
+      w.classList.toggle('all',done()); var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function advance(){ var k=S.sgw; S.sgw++; save(); ack('explore'); miss.textContent=''; sfx(ST[k].s.k==='sprout'?'water':ST[k].s.k==='tree'?'plant':'plop'); paint(k); refreshFile(); refreshVoice();
+      var t=txts[k]; if(t&&!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ try{ t.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },350); }
+    holder.addEventListener('click',function(e){ var b=e.target.closest('.spk-sgwp'); if(!b) return; var cur=ST[S.sgw]; if(!cur||cur.p!==+b.dataset.i) return;
+      if(e.target.closest('.spk-sgwgo')){ advance(); return; }
+      var o=e.target.closest('.spk-opt'); if(!o||!cur.s.ask) return; var opt=cur.s.ask.opts[+o.dataset.k];
+      if(opt.ok){ sfx('clink'); advance(); } else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||'Read that part again.'; b.querySelector('.ctl').appendChild(miss); missBeat(miss.textContent); } });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<PL.length;i++) if(PL[i].id===id) return boxes[i]; return null; }, journal:function(){ return '<p class="a">'+PL.map(function(p,i){ var n=ST.filter(function(x){ return x.p===i&&ST.indexOf(x)<S.sgw; }).length; return esc(p.t)+': '+p.stages.slice(0,n).map(function(s){ return esc(s.t); }).join(' → '); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore evidence · Three detective pens (4.10.04): tap a gold number on the photo and its note cards appear.
+     Ink each note with the right pen: blue = the photo SAYS it, green = I INFER it, red = I still QUESTION it. Inked
+     notes stack in a notebook in their colors. DATA: pens [{id,t,c}], notes [{id,n,t,pen,miss}]; uses source.hotspots ---- */
+  MOD.threepens=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var H=(DATA.source&&DATA.source.hotspots)||[], PN=cfg.pens||[], NT=cfg.notes||[], NN=NT.length; S.tpn=S.tpn||[]; S.hot=S.hot||[]; var curN=null, was=null;
+    var hidx=function(n){ for(var i=0;i<H.length;i++) if(String(H[i].n)===String(n)) return i; return -1; };
+    var inked=function(){ return NN>0&&NT.every(function(x){ return S.tpn.indexOf(x.id)>=0; }); };
+    var allHot=function(){ return H.length===0||S.hot.length>=H.length; };
+    var done=function(){ return inked()&&allHot()&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-tpn');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Three detective pens')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-tpnpens">'+PN.map(function(p){ return '<span class="pen" style="--c:'+esc(p.c)+'"><i aria-hidden="true"></i>'+esc(p.t)+'</span>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-tpn-ct"></p><div class="spk-tpncards"></div><p class="spk-miss"></p>'
+      +'<div class="spk-tpnbook"><div class="k">'+esc(cfg.bookT||'My detective notebook')+'</div><div class="lines"></div></div><p class="spk-si-gate"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var cards=g.querySelector('.spk-tpncards'), miss=g.querySelector('.spk-miss');
+    function pen(id){ return find(PN,id)||{}; }
+    function paintCards(){ var L=NT.filter(function(x){ return String(x.n)===String(curN); });
+      cards.innerHTML=curN==null?'<p class="hint">'+esc(cfg.pickT||'Tap a gold number on the photo to see its notes.')+'</p>':'<p class="lab"><span class="n">'+esc(curN)+'</span> '+esc(cfg.notesT||'Ink each note with the right pen:')+'</p>'+L.map(function(x){ var on=S.tpn.indexOf(x.id)>=0, p=pen(x.pen); return '<div class="nc'+(on?' on':'')+'" data-id="'+esc(x.id)+'"'+(on?' style="--c:'+esc(p.c)+'"':'')+'><p class="t">'+esc(x.t)+'</p>'+(on?'<span class="ink">'+esc(p.t)+'</span>':'<div class="pb">'+PN.map(function(q){ return '<button type="button" class="pbtn" data-p="'+esc(q.id)+'" style="--c:'+esc(q.c)+'">'+esc(q.t)+'</button>'; }).join('')+'</div>')+'</div>'; }).join(''); }
+    function paint(){ paintCards();
+      g.querySelector('.spk-tpnbook .lines').innerHTML=NT.filter(function(x){ return S.tpn.indexOf(x.id)>=0; }).map(function(x){ var p=pen(x.pen); return '<p style="--c:'+esc(p.c)+'"><span class="n">'+esc(x.n)+'</span> '+esc(x.t)+'</p>'; }).join('')||'<p class="empty">'+esc(cfg.emptyT||'Your notes will show up here.')+'</p>';
+      var k=S.tpn.length; g.querySelector('.spk-tpn-ct').innerHTML=inked()?'<b>'+esc(cfg.inkedT||'Every note is inked.')+'</b> '+(allHot()?'':esc(cfg.restT||'Tap the gold numbers you haven’t opened yet.')):'<b>'+k+' of '+NN+'</b> '+esc(cfg.countT||'notes inked.');
+      var d=done(); g.querySelector('.spk-si-gate').textContent=inked()&&allHot()&&!d?(cfg.gateT||'Last step: grow every seed in Learn the Story.'):'';
+      g.querySelector('.spk-win').classList.toggle('show',inked()&&allHot()); if(d&&was===false) sfx('win'); if(d!==was){ refreshFile(); refreshVoice(); } was=d; g.classList.toggle('done',d); }
+    HOT_TAP.push(function(i){ var h=H[i]; if(h){ curN=h.n; miss.textContent=''; } paint(); });
+    cards.addEventListener('click',function(e){ var b=e.target.closest('.pbtn'); if(!b) return; var c=b.closest('.nc'), x=find(NT,c.dataset.id); if(!x||S.tpn.indexOf(x.id)>=0) return; ack('explore');
+      if(b.dataset.p===x.pen){ S.tpn.push(x.id); save(); miss.textContent=''; sfx('pluck'); paint(); refreshFile(); }
+      else { b.classList.add('shake'); setTimeout(function(){ b.classList.remove('shake'); },450); miss.textContent=(x.miss&&x.miss[b.dataset.p])||x.missAny||cfg.missT||'Look again. Can you see it in the photo, figure it out, or do you still wonder?'; missBeat(miss.textContent); } });
+    paint();
+    return {done:done, journal:function(e){ return '<p class="a">'+NT.filter(function(x){ return S.tpn.indexOf(x.id)>=0; }).map(function(x){ return '['+e(pen(x.pen).t)+'] '+e(x.t); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Vocabulary · Lead the line (4.10.04, duc/duct = to lead): a sandy road to a schoolhouse. Hear each word
+     (g4ss-<lesson>-<root>-<n>.mp3); each meaning matched brings one more student into the line behind the leader, and
+     the line walks closer to the school. ---- */
+  MOD.leadline=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'duc', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.ldl=S.ldl||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.ldl.set.length===N; };
+    var kids=''; for(var i=0;i<N;i++){ kids+='<g class="kid" data-i="'+i+'" style="--i:'+i+'"><circle cx="0" cy="-30" r="6"/><path d="M-7,-22 h14 l3,16 h-20 z"/><path d="M-4,-6 v12 M4,-6 v12" class="lg"/><ellipse cx="0" cy="-35" rx="10" ry="2.6" class="hat"/></g>'; }
+    var g=el('div','spk spk-ldl');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Lead the line')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-ldlscene"><svg viewBox="0 0 360 150" aria-hidden="true"><rect width="360" height="150" class="sky"/><path d="M0,104 L360,96 L360,150 L0,150Z" class="gr"/><path d="M0,128 C120,118 240,112 360,108 L360,124 C240,128 120,136 0,146Z" class="road"/>'
+      +'<g class="pines"><path d="M30,96 l10,-40 l10,40z"/><path d="M60,98 l8,-30 l8,30z"/><path d="M200,92 l9,-36 l9,36z"/></g>'
+      +'<g class="sch"><rect x="290" y="68" width="56" height="40" class="w"/><path d="M284,70 L318,46 L352,70Z" class="rf"/><rect x="312" y="86" width="12" height="22" class="dr"/><rect x="296" y="78" width="10" height="9" class="wn"/><rect x="330" y="78" width="10" height="9" class="wn"/></g>'
+      +'<g class="line">'+kids+'<g class="ldr"><circle cx="0" cy="-36" r="7"/><path d="M-8,-27 h16 l5,27 h-26z"/><ellipse cx="0" cy="-42" rx="12" ry="3" class="hat"/><rect x="7" y="-24" width="6" height="8" class="bk"/></g></g></svg>'
+      +'<div class="board"><span class="lb">'+esc(cfg.boardT||'In line')+'</span><span class="num"></span></div></div>'
+      +'<div class="wds spk-ldlwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-ldl-ct"></p><div class="spk-chips spk-ldlmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-ldlmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-ldlwds'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-ldlmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.ldl.heard.length===N, k=S.ldl.set.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.ldl.heard.indexOf(i)>=0, u=S.ldl.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      g.querySelectorAll('.spk-ldlscene .kid').forEach(function(kd){ kd.classList.toggle('in',+kd.dataset.i<k); }); g.querySelector('.spk-ldlscene .line').style.setProperty('--k',k);
+      g.querySelector('.board .num').textContent=k+' / '+N; g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-ldlmean').forEach(function(t){ var f=S.ldl.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-ldl-ct').innerHTML=!allH?'<b>'+S.ldl.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Each match brings one more student into the line.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.ldl.set.indexOf(i)>=0||S.ldl.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.ldl.set.push(i); save(); sel=null; miss.textContent=''; sfx('click'); if(done()) setTimeout(function(){ sfx('bell'); },300); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.ldl.heard.length===N){ attempt(sel,c); return; }
+      if(S.ldl.heard.indexOf(i)<0){ S.ldl.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-ldlmean'); if(!t) return; if(S.ldl.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-ldlmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-ldlmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-ldlmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-ldlmean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+  /* ---- Planner · Hall of Fame plaques (4.10.04): two brass plaques. For each: pick a person, what they did (must be
+     theirs), and why it mattered (must fit). The two people must differ. When both plaques are ready, a ribbon is cut.
+     Notes only — the student writes in Step 3. DATA: people [{id,t,did:[ids],why:[ids]}], dids [{id,t}], whys [{id,t}] ---- */
+  MOD.plaques=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var PP=cfg.people||[], DD=cfg.dids||[], WY=cfg.whys||[]; S.plq=S.plq||{a:null,ad:null,aw:null,b:null,bd:null,bw:null}; var was=null;
+    var ok=function(k){ var D=S.plq, p=find(PP,D[k]); return !!(p&&D[k+'d']&&D[k+'w']&&p.did.indexOf(D[k+'d'])>=0&&p.why.indexOf(D[k+'w'])>=0); };
+    var done=function(){ return ok('a')&&ok('b')&&S.plq.a!==S.plq.b; };
+    var b=el('div','spk spk-builder spk-plq');
+    var row=function(r,lab,L){ return '<div class="fr" data-r="'+r+'"><div class="lab">'+esc(lab)+'</div><div class="spk-opts">'+L.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>'; };
+    var plaque=function(k,n){ return '<div class="pq" data-k="'+k+'"><span class="sc tl"></span><span class="sc tr"></span><span class="sc bl"></span><span class="sc br"></span><span class="hof">'+esc(cfg.hofT||'Florida Hall of Fame')+'</span><b class="nm">'+esc(n)+'</b><span class="dd"></span><span class="ww"></span></div>'; };
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-plqwall"><span class="rb" aria-hidden="true"></span>'+plaque('a',cfg.p1T||'Plaque 1')+plaque('b',cfg.p2T||'Plaque 2')+'</div>'
+      +[['a',cfg.aT||'Plaque 1 · pick a person'],['b',cfg.bT||'Plaque 2 · pick a different person']].map(function(x){ return row(x[0],x[1],PP)+row(x[0]+'d',cfg.didT||'…what they did',DD)+row(x[0]+'w',cfg.whyT||'…why it mattered',WY); }).join('')
+      +'<p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Both plaques are up. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ var D=S.plq, L=[]; ['a','b'].forEach(function(k,i){ var p=find(PP,D[k]), d=find(DD,D[k+'d']), w=find(WY,D[k+'w']); if(p) L.push([(cfg.plLab||'Plaque')+' '+(i+1),p.t+(d&&p.did.indexOf(d.id)>=0?' · '+d.t:'')+(w&&p.why.indexOf(w.id)>=0?' · because '+w.t:'')]); }); return L; }
+    function paint(anim){ var D=S.plq;
+      ['a','b'].forEach(function(k){ var p=find(PP,D[k]), d=find(DD,D[k+'d']), w=find(WY,D[k+'w']), pq=b.querySelector('.pq[data-k="'+k+'"]');
+        pq.querySelector('.nm').textContent=p?p.t:(k==='a'?(cfg.p1T||'Plaque 1'):(cfg.p2T||'Plaque 2')); pq.querySelector('.dd').textContent=d&&p&&p.did.indexOf(d.id)>=0?d.t:''; pq.querySelector('.ww').textContent=w&&p&&p.why.indexOf(w.id)>=0?'Because '+w.t:'';
+        pq.classList.toggle('set',!!p); pq.classList.toggle('full',ok(k)); if(anim===k){ pq.classList.remove('shine'); void pq.offsetWidth; pq.classList.add('shine'); }
+        b.querySelector('.fr[data-r="'+k+'d"]').classList.toggle('locked',!p); b.querySelector('.fr[data-r="'+k+'w"]').classList.toggle('locked',!p); });
+      b.querySelectorAll('.fr').forEach(function(fr){ var r=fr.dataset.r; fr.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',D[r]===o.dataset.v); }); });
+      var d=done(); b.querySelector('.rb').classList.toggle('cut',d); if(d&&was===false){ sfx('thud'); setTimeout(function(){ sfx('win'); },250); } was=d; b.classList.toggle('done',d);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var fr=o.closest('.fr'); if(fr.classList.contains('locked')) return; var r=fr.dataset.r, v=o.dataset.v, miss=b.querySelector('.spk-miss'), D=S.plq;
+      var bad=function(m){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=m; };
+      if(r==='a'||r==='b'){ var other=r==='a'?D.b:D.a; if(v===other) return bad(cfg.sameT||'Pick two different people for your two plaques.'); if(D[r]!==v){ D[r]=v; D[r+'d']=null; D[r+'w']=null; } save(); miss.textContent=''; sfx('click'); paint(r); return; }
+      var k=r.charAt(0), p=find(PP,D[k]), isD=r.charAt(1)==='d';
+      if(!p||(isD?p.did:p.why).indexOf(v)<0) return bad((p&&p.miss&&p.miss[v])||(isD?cfg.noDidT:cfg.noWhyT)||'That belongs to someone else. Look back at the garden in the Explore tab.');
+      D[r]=v; save(); miss.textContent=''; sfx('clink'); paint(k); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -5969,7 +6150,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn'); return d&&[d,'before']; },
     readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
