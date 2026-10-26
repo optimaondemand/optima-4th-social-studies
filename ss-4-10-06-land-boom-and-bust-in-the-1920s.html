@@ -1784,6 +1784,1161 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.10.06",
+ "title": "Land Boom and Bust in the 1920s",
+ "quiet": false,
+ "file": {
+  "n": 10,
+  "title": "Modern Florida",
+  "label": "Modern Florida",
+  "seals": [
+   "🍊",
+   "🏖️",
+   "🚀"
+  ]
+ },
+ "prevFile": "Florida and the Spanish-American War",
+ "connector": "Last time, an army came to Tampa. Today, find out why everyone wanted Florida land in the 1920s, and what went wrong.",
+ "storySoFar": "Your teacher is still stuck inside Canvas, but the room keeps changing. Last time, a ship’s horn blew and a map showed the way from Tampa to Cuba. Today, shiny new doors are popping up too fast.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Build the skyline",
+   "why": "Tap each reason Florida grew in the 1920s and watch Miami rise."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Two bars and a billboard",
+   "why": "Open each part of the story and watch what people paid pull away from what the land could really do. Then question a real 1922 billboard."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Draw the line, then write",
+   "why": "Answer three questions. Draw an up-and-down line for the boom and the bust, then write 3 to 5 sentences."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Did you see all those new doors? Come look!",
+  "opening": [
+   "Shiny new doors keep popping up all over this room, faster than I can count.",
+   "Start in the Learn tab (tab 1). Scroll down to the city by the bay.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the city",
+      "go": true,
+      "reply": "Tap each reason Florida grew in the 1920s, and watch Miami rise."
+     },
+     {
+      "t": "What does honesty have to do with it?",
+      "reply": "In the 1920s, some sellers made big promises. Honesty means telling the truth, even when a lie would make more money."
+     },
+     {
+      "t": "Why so many doors?",
+      "reply": "I don’t know yet. Things that show up this fast make me nervous. Let’s see what happened in Florida."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Open the first part of the story and watch the two bars."
+     },
+     {
+      "t": "Did everyone get rich?",
+      "reply": "Not everyone. Keep reading to find out who lost the most."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Was the billboard lying?",
+      "reply": "Not exactly. Its promises might come true someday. A careful buyer asks questions before paying."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What’s next in this file?",
+      "reply": "Next time: the Great Depression and World War II, and how Florida got through hard years."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don’t forget to copy or download your work and turn it in on Canvas. I’ll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Miami grew almost four times bigger! And the new doors in this room are still popping up. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Half of the shiny new doors just vanished, like the lots nobody could sell. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then draw your up-and-down line and write 3 to 5 sentences about the boom and the bust."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! The doors that stayed are the strong ones, and another part of the modern Florida file is open. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Honesty means telling the truth, even when a lie seems easier or would make more money. Today you are an economic historian, someone who studies how people earned, spent and lost money long ago, finding out why Florida’s land boom turned into a bust.",
+ "scene1": {
+  "type": "skyline",
+  "kicker": "Build the skyline",
+  "h": "Tap every reason, then answer one question.",
+  "voice": "Tap each reason Florida grew. Each one raises more of the city. Then answer the question.",
+  "why": {
+   "icon": "🏙️",
+   "q": "What’s a land boom?",
+   "t": "A <b>boom<\/b> is a time when something grows very fast. In the 1920s, so many people wanted Florida land that new neighborhoods, hotels and offices went up almost overnight. That’s why you build a city: each reason Florida grew raises more buildings."
+  },
+  "causes": [
+   {
+    "id": "cars",
+    "ico": "🚗",
+    "t": "Cars and new roads",
+    "fact": "In the 1920s, many families had a car for the first time. New roads like the Dixie Highway let them drive all the way to Miami."
+   },
+   {
+    "id": "ads",
+    "ico": "📣",
+    "t": "Ads and billboards",
+    "fact": "Developers (people who turn empty land into neighborhoods) sold lots (pieces of land, each big enough for one house) with newspaper ads and giant billboards that promised sunshine, beaches and easy money."
+   },
+   {
+    "id": "tax",
+    "ico": "🏛️",
+    "t": "No state income tax",
+    "fact": "In 1924, Florida voters changed the state’s constitution (its main set of laws) so the state could not charge an income tax (money people pay the government from what they earn). Leaders hoped this would bring rich people."
+   },
+   {
+    "id": "binders",
+    "ico": "📄",
+    "t": "Binders",
+    "fact": "You could hold a lot by paying a small part of the price, often 10 percent. Many people hoped to sell that paper for more money a few days later."
+   }
+  ],
+  "pop": {
+   "from": {
+    "y": 1920,
+    "n": 29571
+   },
+   "to": {
+    "y": 1930,
+    "n": 110637
+   }
+  },
+  "signT": "people in Miami",
+  "ask": {
+   "q": "Would you buy a Florida lot in 1925?",
+   "opts": [
+    {
+     "t": "Yes, to build a house and live there",
+     "reply": "Some buyers did. But by 1925, most buyers planned to sell again fast for more money. That’s called speculation. Read on to see how that turned out."
+    },
+    {
+     "t": "Yes, to sell it again for more money",
+     "reply": "That’s what most buyers did by 1925. It’s called speculation. It works only while new buyers keep coming. Read on!"
+    },
+    {
+     "t": "No, the prices seem too high",
+     "reply": "A careful choice! A few people warned that prices were too high. Read on to find out if they were right."
+    }
+   ]
+  },
+  "win": "🏙️ <b>Miami grew almost four times bigger!<\/b> 29,571 people lived there in 1920, and 110,637 in 1930 (U.S. census). That’s what a boom looks like.",
+  "jT": "Florida grew because of:"
+ },
+ "explore": {
+  "reading": {
+   "type": "priceworth",
+   "activity": "Boom and Bust in 1920s Florida",
+   "mid": "binders",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Easier to get to"
+    },
+    {
+     "id": "p2",
+     "match": "^Selling sunshine"
+    },
+    {
+     "id": "p3",
+     "match": "^Buying to sell"
+    },
+    {
+     "id": "p4",
+     "match": "^Warning signs"
+    },
+    {
+     "id": "p5",
+     "match": "^The bust"
+    },
+    {
+     "id": "p6",
+     "match": "^The lesson"
+    }
+   ],
+   "why": {
+    "icon": "📊",
+    "q": "Why two bars?",
+    "t": "<b>Price<\/b> is what people pay for something. <b>Worth<\/b> is what it can really do for you, like hold a house or grow a garden. Most of the time, the two stay close together. That’s why you watch two bars: when the price runs far ahead of the worth, watch out."
+   },
+   "priceT": "What people paid",
+   "worthT": "What the land could really do",
+   "gapT": "the gap",
+   "noteT": "The bars are a picture of the idea, not real prices.",
+   "allT": "Every part is open.",
+   "countT": "parts open. Tap the button to open the next part and watch the bars.",
+   "parts": [
+    {
+     "id": "roads",
+     "t": "Easier to get to",
+     "ico": "🚗",
+     "act": "Drive down the new highway",
+     "paras": [
+      "p1"
+     ],
+     "lv": [
+      28,
+      24
+     ]
+    },
+    {
+     "id": "ads",
+     "t": "Selling sunshine",
+     "ico": "📣",
+     "act": "Put up the billboards",
+     "paras": [
+      "p2"
+     ],
+     "lv": [
+      52,
+      26
+     ]
+    },
+    {
+     "id": "binders",
+     "t": "Buying to sell",
+     "ico": "📄",
+     "act": "Sell a binder",
+     "paras": [
+      "p3"
+     ],
+     "lv": [
+      90,
+      27
+     ]
+    },
+    {
+     "id": "warn",
+     "t": "Warning signs",
+     "ico": "⚠️",
+     "paras": [
+      "p4"
+     ],
+     "lv": [
+      88,
+      27
+     ],
+     "ask": {
+      "q": "Before you go on: why were most people buying lots by 1925?",
+      "opts": [
+       {
+        "t": "To build a home and live there",
+        "miss": "Some did, but read part 3 again. What did most buyers plan to do with their lots?"
+       },
+       {
+        "t": "To sell them again for more money",
+        "ok": true
+       },
+       {
+        "t": "To grow oranges",
+        "miss": "Some land was farmland, but read part 3 again. Why were people buying so fast?"
+       }
+      ]
+     }
+    },
+    {
+     "id": "bust",
+     "t": "The bust",
+     "ico": "🌀",
+     "act": "Turn the calendar to 1926",
+     "paras": [
+      "p5"
+     ],
+     "lv": [
+      16,
+      27
+     ]
+    },
+    {
+     "id": "lesson",
+     "t": "The lesson",
+     "ico": "🔎",
+     "paras": [
+      "p6"
+     ],
+     "lv": [
+      16,
+      27
+     ],
+     "ask": {
+      "q": "Before you go on: who lost the most in the bust?",
+      "opts": [
+       {
+        "t": "Everyone who bought land got rich",
+        "miss": "Not everyone! Read part 5 again. What happened to people still holding binders?"
+       },
+       {
+        "t": "The last people who bought binders and lots",
+        "ok": true
+       },
+       {
+        "t": "Nobody lost anything",
+        "miss": "Read part 5 again. What happened to banks and to people who borrowed money?"
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "evidence": {
+   "type": "honestq",
+   "kicker": "Ask the honest question",
+   "h": "What would a careful buyer ask?",
+   "voice": "Tap the gold numbers on the billboard. Then, for each promise, pick the question a careful buyer would ask before paying.",
+   "why": {
+    "icon": "🧐",
+    "q": "What’s a careful buyer?",
+    "t": "A billboard is an ad. Its job is to make you want to buy. A <b>careful buyer<\/b> asks honest questions before paying: What exactly am I getting? What will it really cost? Is it real yet? That’s why you pick a question for every promise."
+   },
+   "padT": "A careful buyer’s questions",
+   "padSub": "Altos del Mar · December 1922",
+   "rows": [
+    {
+     "id": "lots",
+     "n": "1",
+     "promise": "50 foot lots here · Altos del Mar",
+     "opts": [
+      {
+       "t": "Is the name pretty?",
+       "miss": "A pretty name doesn’t tell you what you’re buying. What would you want to see first?"
+      },
+      {
+       "t": "Can I see exactly where my lot is, and what is on it now?",
+       "ok": true
+      },
+      {
+       "t": "How fast can I sign?",
+       "miss": "Rushing is how buyers got fooled. What would a careful buyer check first?"
+      }
+     ]
+    },
+    {
+     "id": "price",
+     "n": "2",
+     "promise": "$745.00 and up",
+     "opts": [
+      {
+       "t": "What does “and up” mean? What will my lot really cost?",
+       "ok": true
+      },
+      {
+       "t": "It’s cheap, so I should buy two!",
+       "miss": "“And up” means many lots cost more. Ask before you buy."
+      },
+      {
+       "t": "Do I get a free sign?",
+       "miss": "That won’t help you learn the real price. Look at #2 again."
+      }
+     ]
+    },
+    {
+     "id": "terms",
+     "n": "3",
+     "promise": "Easy terms",
+     "opts": [
+      {
+       "t": "Does “easy” mean free?",
+       "miss": "Easy terms means paying a little at a time, not free. What would you need to know?"
+      },
+      {
+       "t": "How much will I owe in all, and when is each payment due?",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "left",
+     "n": "4",
+     "promise": "Ocean front · riparian rights · protective restrictions",
+     "opts": [
+      {
+       "t": "Is my lot really by the ocean, and what are the rules for it?",
+       "ok": true
+      },
+      {
+       "t": "Do I get my own ocean?",
+       "miss": "Nobody owns the ocean. Look at #4: what do riparian rights and restrictions mean?"
+      }
+     ]
+    },
+    {
+     "id": "right",
+     "n": "5",
+     "promise": "Pure water · electric lights · paved streets",
+     "opts": [
+      {
+       "t": "Are the lights pretty?",
+       "miss": "Think bigger: are the lights even there yet? Look under the sign."
+      },
+      {
+       "t": "Are the water pipes, lights and streets built yet, or only promised?",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "id": "land",
+     "land": true,
+     "promise": "The land under the sign",
+     "opts": [
+      {
+       "t": "The sign says it’s ready, so it must be.",
+       "miss": "Look below the sign in the photo. Do you see streets or houses?"
+      },
+      {
+       "t": "Where are the streets and houses? I only see sand.",
+       "ok": true
+      }
+     ]
+    }
+   ],
+   "gateT": "Last step: open every part of Learn the Story.",
+   "win": "📝 <b>Every promise has a question!<\/b> The billboard made big promises. In the photo, all we can see under the sign is sand. Honest questions help a buyer find out what is real. Now read the three questions under the photo."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "In Learn the Story, tap the button to open each part. Watch the two bars.",
+    "Tap the gold numbers on the billboard to see what each one says.",
+    "For each promise, pick the question a careful buyer would ask.",
+    "Read the three questions under the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the billboard to see what it says.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 73.7,
+    "y": 26.6,
+    "title": "The lots and the name.",
+    "t": "“50 foot lots here.” Each lot was 50 feet wide. Altos del Mar was the name of the new neighborhood."
+   },
+   {
+    "n": "2",
+    "x": 71.5,
+    "y": 47.7,
+    "title": "The price.",
+    "t": "$745 “and up.” “And up” means many lots cost more than $745."
+   },
+   {
+    "n": "3",
+    "x": 84.7,
+    "y": 66.8,
+    "title": "Easy terms.",
+    "t": "You could pay a little at a time instead of all at once. That also means you would owe money for a long time."
+   },
+   {
+    "n": "4",
+    "x": 17.1,
+    "y": 18.9,
+    "title": "Promises on the left post.",
+    "t": "Ocean front, riparian rights (the right to use the water next to your land) and protective restrictions (rules about what owners could and could not do with their lots)."
+   },
+   {
+    "n": "5",
+    "x": 96.7,
+    "y": 24.7,
+    "title": "Promises on the right post.",
+    "t": "Pure water, electric lights and paved streets."
+   }
+  ]
+ },
+ "planner": {
+  "type": "pricechart",
+  "voice": "Pick a reason for the climb, a cause of the drop, and what it teaches. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "📈",
+   "q": "Why draw a line?",
+   "t": "People who study prices draw a line to show how a price changes over time. In a boom, the line climbs. In a bust, it drops. That’s why you draw the 1920s as one up-and-down line, with a reason for each part."
+  },
+  "rises": [
+   {
+    "id": "r1",
+    "t": "Cars and new roads brought people to Florida.",
+    "ok": true
+   },
+   {
+    "id": "r2",
+    "t": "Developers sold lots with big ads and billboards.",
+    "ok": true
+   },
+   {
+    "id": "r3",
+    "t": "People bought land to sell again for more money.",
+    "ok": true
+   },
+   {
+    "id": "r4",
+    "t": "Binders let people hold a lot with a small deposit.",
+    "ok": true
+   },
+   {
+    "id": "rx",
+    "t": "Florida ran out of land.",
+    "miss": "Florida didn’t run out of land. What made prices climb?"
+   }
+  ],
+  "falls": [
+   {
+    "id": "f1",
+    "t": "New buyers stopped coming, so prices fell.",
+    "ok": true
+   },
+   {
+    "id": "f2",
+    "t": "A railroad jam and a sunk ship slowed building.",
+    "ok": true
+   },
+   {
+    "id": "f3",
+    "t": "The 1926 hurricane wrecked Miami.",
+    "ok": true
+   },
+   {
+    "id": "f4",
+    "t": "People could not sell their binders or pay their loans.",
+    "ok": true
+   },
+   {
+    "id": "fx",
+    "t": "Flagler closed his railroad.",
+    "miss": "Flagler’s railroad didn’t close. Look back at parts 4 and 5 of Learn the Story."
+   }
+  ],
+  "lessons": [
+   {
+    "id": "l1",
+    "t": "Prices based on speculation can crash.",
+    "ok": true
+   },
+   {
+    "id": "l2",
+    "t": "Honesty about risk protects buyers.",
+    "ok": true
+   },
+   {
+    "id": "lx",
+    "t": "Everyone who buys land gets rich.",
+    "miss": "Not everyone. The last buyers lost the most. What does the bust teach?"
+   },
+   {
+    "id": "ly",
+    "t": "Hurricanes always cause busts.",
+    "miss": "The hurricane ended the boom, but prices had already stopped rising. What’s the bigger lesson?"
+   }
+  ],
+  "doneT": "Your line is drawn! Now write in Step 3: what caused the boom, what caused the bust, and what it teaches, with two details.",
+  "l1": "The boom happened because",
+  "l2": "The bust was caused by",
+  "l3": "This teaches us that"
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "the boom",
+    "rx": "boom|grew|grow|climb|rose|rise|went up|fast|speculat|binder|car|road|highway|ad|billboard|tax|buy|bought"
+   },
+   {
+    "t": "the bust",
+    "rx": "bust|crash|fell|fall|drop|collapse|went down|hurricane|storm|bank|stopped|broke|lost"
+   },
+   {
+    "t": "because / this teaches",
+    "rx": "because|caused|so |that.?s why|since|teach|lesson|learn|shows"
+   },
+   {
+    "t": "a detail",
+    "rx": "1920|1924|1925|1926|1929|miami|29,?571|110,?637|372|binder|dixie|forbes|hurricane|railroad|ship|coral gables|hollywood|10 ?percent|10%"
+   }
+  ],
+  "lines": [
+   "Start with the boom: “The boom happened because…”",
+   "Good. Now the bust: “The bust was caused by…”",
+   "Add a detail, like a year, a number or a name.",
+   "Say what it teaches: “This teaches us that…”",
+   "Read it over once. Did you use your own words?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the city you built, the two bars and the billboard."
+  },
+  {
+   "t": "Plan",
+   "w": "Draw your up-and-down line: why prices climbed, why they dropped, and what it teaches."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about the boom and the bust. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "lookout",
+  "kicker": "The lookout tower",
+  "h": "spec = to look",
+  "root": "spec",
+  "hl": "spec",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match turns the spyglass to spot something new on the bay.",
+  "why": {
+   "icon": "🔭",
+   "q": "Why a lookout tower?",
+   "t": "<b>Spec<\/b> means to look. The Latin word <b>specula<\/b> means a lookout tower, a tall place to watch from. That’s why each look word you match turns the spyglass to spot something new on Biscayne Bay, next to Miami."
+  },
+  "words": [
+   {
+    "w": "speculate",
+    "m": "to buy something hoping to sell it later for more",
+    "miss": "Land speculators bought lots hoping to sell them for more. Speculate means…",
+    "say": "Speculate. To buy something hoping to sell it later for more."
+   },
+   {
+    "w": "inspect",
+    "m": "to look at something closely",
+    "miss": "A careful buyer inspects a lot before paying. Inspect means…",
+    "say": "Inspect. To look at something closely."
+   },
+   {
+    "w": "spectator",
+    "m": "someone who watches",
+    "miss": "Spectators sit in the stands at a game. A spectator is…",
+    "say": "Spectator. Someone who watches."
+   },
+   {
+    "w": "spectacles",
+    "m": "eyeglasses",
+    "miss": "Grandpa puts on his spectacles to read. Spectacles are…",
+    "say": "Spectacles. Eyeglasses."
+   }
+  ],
+  "boardT": "Spotted",
+  "win": "🔭 The haze lifts. You can see the whole bay!"
+ },
+ "cabinet": {
+  "n": 10
+ },
+ "notes": {
+  "learned": [
+   "In the early 1920s, cars and new roads like the Dixie Highway brought many people to Florida.",
+   "Developers sold lots with ads and billboards, and in 1924 Florida voters changed the constitution so the state could not charge an income tax.",
+   "Miami grew from 29,571 people in 1920 to 110,637 in 1930.",
+   "Many people bought land to sell again for more. That is speculation. A binder let them hold a lot with a small deposit.",
+   "By the spring of 1926, a railroad jam, a sunk ship in Miami’s harbor and fewer buyers had stopped prices from rising.",
+   "The hurricane of September 18, 1926 killed 372 people and ended the boom. The last buyers lost the most."
+  ],
+  "vocab": [
+   [
+    "honesty",
+    "telling the truth, even when a lie seems easier or would make more money"
+   ],
+   [
+    "economic historian",
+    "someone who studies how people earned, spent and lost money long ago"
+   ],
+   [
+    "boom",
+    "a time when something grows very fast"
+   ],
+   [
+    "bust",
+    "a sudden crash after a boom"
+   ],
+   [
+    "developers",
+    "people who turn empty land into neighborhoods"
+   ],
+   [
+    "lots",
+    "small pieces of land, each big enough for one house"
+   ],
+   [
+    "income tax",
+    "money people pay the government from what they earn"
+   ],
+   [
+    "constitution",
+    "a state’s or country’s main set of laws"
+   ],
+   [
+    "freight cars",
+    "railroad cars that carry goods"
+   ],
+   [
+    "speculation",
+    "buying something to sell it again for a higher price"
+   ],
+   [
+    "deposit",
+    "a first payment"
+   ],
+   [
+    "binder",
+    "a paper that held a lot for a small deposit"
+   ],
+   [
+    "Great Depression",
+    "a time when many people lost their jobs and their savings, starting in 1929"
+   ],
+   [
+    "risk",
+    "the chance of losing"
+   ],
+   [
+    "hype",
+    "big promises and excitement"
+   ],
+   [
+    "billboard",
+    "a big outdoor sign"
+   ],
+   [
+    "easy terms",
+    "paying a little at a time instead of all at once"
+   ],
+   [
+    "riparian rights",
+    "the right to use the water next to your land"
+   ],
+   [
+    "protective restrictions",
+    "rules about what owners could and could not do with their lots"
+   ],
+   [
+    "spec (word root)",
+    "to look"
+   ],
+   [
+    "speculate",
+    "to buy something hoping to sell it later for more"
+   ],
+   [
+    "inspect",
+    "to look at something closely"
+   ],
+   [
+    "spectator",
+    "someone who watches"
+   ],
+   [
+    "spectacles",
+    "eyeglasses"
+   ]
+  ],
+  "wordParts": "The Latin word specere means “to look.” You can find it as spec or spect in speculate, inspect, spectator and spectacles."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a first cause",
+    "rx": "car|road|highway|railroad|train|ad|advertis|billboard|newspaper|tax|sun|warm|weather|beach|tourist|visit",
+    "n": 1
+   },
+   {
+    "t": "a second cause",
+    "rx": "speculat|resell|sell.{0,20}(again|more|higher)|flip|binder|deposit|profit|money|rich|price|buy|bought|invest|developer|build|paradise|promis|land|lot|tax|ad |ads|billboard",
+    "n": 1
+   },
+   {
+    "t": "because",
+    "rx": "because|caused|cause|so |made|led|brought|helped|why|reason",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "what went wrong",
+    "rx": "hurricane|storm|price|fell|fall|drop|crash|collapse|stopped|railroad|ship|harbor|bank|binder|could.?n.?t sell|no one|nobody|buyers",
+    "n": 1
+   },
+   {
+    "t": "who was hurt",
+    "rx": "people|buyer|owner|bank|famil|investor|everyone|those|worker|binder boy|last|miami|they",
+    "n": 1
+   },
+   {
+    "t": "a detail",
+    "rx": "1926|1925|372|september|miami|bank|binder|hurricane|storm|half.?built|empty|lot|ship|harbor|train|railroad|building|supplies",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "honesty",
+    "rx": "honest|truth|true|lie|lied|lying|trick|fool|promis|exaggerat|cheat|mislead|fake",
+    "n": 1
+   },
+   {
+    "t": "sellers or buyers",
+    "rx": "seller|sell|buyer|buy|ad|billboard|developer|people|they|company",
+    "n": 1
+   },
+   {
+    "t": "what happened",
+    "rx": "because|so |price|lost|crash|bust|money|risk|hurt|broke|believ|thought|ask",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the city you built in the Learn tab (tab 1).",
+   "What brought people to Florida? Why did prices keep climbing? Think of cars, ads, taxes and binders.",
+   "Try this shape: “The boom happened because ___ and because ___.”"
+  ],
+  "journal-q2": [
+   "Look back at parts 4 and 5 of Learn the Story in the Explore tab (tab 2).",
+   "What stopped buyers from coming? What did the hurricane do? Who was stuck?",
+   "Try this shape: “In 1926, ___. Prices ___. People who ___ lost money.”"
+  ],
+  "journal-q3": [
+   "Look back at the billboard and your careful buyer’s questions.",
+   "What did sellers promise? What did buyers believe without asking? What was really true?",
+   "Try this shape: “Some sellers ___. Buyers didn’t ask ___. Honesty matters because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which cause do you think mattered most, and why?",
+  "journal-q2": "Go further: why did the bust hurt the last buyers more than the first ones?",
+  "journal-q3": "Go further: what is one honest question you would ask before buying something expensive today?"
+ },
+ "quizMiss": [
+  {
+   "a": "Building houses to live in isn’t speculation. Reread part 3, Buying to sell.",
+   "c": "Saving money isn’t speculation. Reread part 3: why were people buying lots?"
+  },
+  {
+   "b": "Flagler’s railroad didn’t close. Reread part 5, The bust.",
+   "c": "Florida had plenty of land left. Reread parts 4 and 5."
+  },
+  {
+   "a": "Hurricanes don’t always cause busts. Reread part 6, The lesson.",
+   "c": "Building wasn’t the problem. Reread part 6: what were prices based on?"
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Build it fast",
+   "at": "scene1",
+   "script": "When I was a kid, I built a block tower as fast as I could. It got really tall, really fast, and then it fell over. Florida grew fast in the 1920s too. Tap each reason Florida grew, and watch Miami rise. Then answer the question."
+  },
+  {
+   "slot": "guide2",
+   "label": "Guess the price",
+   "at": "s1done",
+   "script": "Pause me. Look at the sign: Miami grew almost four times bigger in ten years. Now think: if everyone wants to buy land, what happens to prices? Say your guess out loud. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Watch the two bars",
+   "at": "explore",
+   "script": "Two bars, side by side. The red bar is what people paid for land. The green bar is what the land could really do, like hold a house. Tap the button to open each part of the story, and watch the red bar."
+  },
+  {
+   "slot": "guide4",
+   "label": "How a binder worked",
+   "at": "readmid",
+   "script": "Here’s how a binder worked. You paid a small part of the price to hold a lot. Then you tried to sell that paper for more, fast, before the big payment was due. Look at the red bar now. How far is it from the green one?"
+  },
+  {
+   "label": "Hear the billboard",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide5a",
+     "script": "This photo was taken near Miami in December 1922, just as the boom was starting. A giant billboard is selling lots. Before we look closely, listen to everything it promises."
+    },
+    {
+     "slot": "guide5b",
+     "who": "The Altos del Mar billboard, December 1922",
+     "script": "Fifty foot lots here. Altos del Mar. Tatum Brothers Company, owners and developers. Seven hundred forty-five dollars and up. Easy terms. Ocean front. Riparian rights. Protective restrictions. Pure water. Electric lights. Paved streets."
+    },
+    {
+     "slot": "guide5c",
+     "script": "Big promises! Now look below the sign. What do you see? A careful buyer asks honest questions. For each promise, pick the question you would ask before paying."
+    }
+   ]
+  },
+  {
+   "slot": "guide6",
+   "label": "Draw the line",
+   "at": "plan",
+   "script": "When I tell the story of my block tower, I say why it went up, why it fell, and what I learned. Draw your line the same way. Pick why prices climbed, why they dropped, and what it teaches. Then write it in your own words."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^Florida$",
+    "sel": ".spk-sky .skysvg",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^reason$",
+    "sel": ".spk-skycards .cz",
+    "all": true,
+    "fx": "pop"
+   },
+   {
+    "at": "^Miami$",
+    "sel": ".spk-skyscene .sign",
+    "fx": "glow"
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-sky-ct",
+    "fx": "point"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^sign$",
+    "sel": ".spk-skyscene .sign",
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^prices$",
+    "sel": ".spk-sky .skysvg",
+    "fx": "glow"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^bars$",
+    "sel": ".spk-pwchart",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^red$",
+    "sel": ".spk-pwchart .bar.pr",
+    "fx": "pop"
+   },
+   {
+    "at": "^green$",
+    "sel": ".spk-pwchart .bar.wo",
+    "fx": "pop"
+   },
+   {
+    "at": "^button$",
+    "sel": ".spk-pwctl",
+    "fx": "point"
+   },
+   {
+    "at": "^red$",
+    "sel": ".spk-pwchart .bar.pr .fill",
+    "fx": "glow"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^binder$",
+    "sel": ".spk-pwp[data-i=\"2\"] .txt",
+    "fx": "trace"
+   },
+   {
+    "at": "^paper$",
+    "sel": ".spk-pwchart .steps li",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^red$",
+    "sel": ".spk-pwchart .bar.pr",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^far$",
+    "sel": ".spk-pwchart .gap",
+    "fx": "pop"
+   }
+  ],
+  "guide5a": [
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^lots$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^promises$",
+    "sel": ".source-image-placeholder .spk-hot",
+    "all": true,
+    "fx": "glow"
+   }
+  ],
+  "guide5b": [
+   {
+    "at": "^Fifty$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Seven$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"1\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Easy$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"2\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Ocean$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"3\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Pure$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"4\"]",
+    "fx": "pop"
+   }
+  ],
+  "guide5c": [
+   {
+    "at": "^below$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow"
+   },
+   {
+    "at": "^careful$",
+    "sel": ".spk-hqpad",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^promise$",
+    "sel": ".spk-hqpad .rw",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-hqpad .rw .spk-opts",
+    "i": 0,
+    "fx": "glow"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^line$",
+    "sel": ".spk-pcchart",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^climbed$",
+    "sel": ".spk-pc .fr[data-r=\"r\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^dropped$",
+    "sel": ".spk-pc .fr[data-r=\"f\"]",
+    "fx": "trace"
+   },
+   {
+    "at": "^teaches$",
+    "sel": ".spk-pc .fr[data-r=\"l\"]",
+    "fx": "point"
+   }
+  ]
+ },
+ "cueWords": {}
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,102 +3177,19 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Land Boom and Bust in the 1920s ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1006sky" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#d0e8e0"/>
-    <stop offset="60%" stop-color="#e8d0c0"/>
-    <stop offset="100%" stop-color="#7a8090"/>
-  </linearGradient>
-  <style>
-    .h1006sway { animation: h1006sway 3s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
-    @keyframes h1006sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(5deg); } }
-    .h1006drift { animation: h1006drift 5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1006drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(8px); } }
-    .h1006glow { animation: h1006glow 2s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1006glow { 0%,100% { opacity: 0.4; } 50% { opacity: 0.9; } }
-  </style>
-</defs>
-<!-- sky with gradient from bright to stormy -->
-<rect width="920" height="260" fill="url(#h1006sky)"/>
-<!-- ground -->
-<rect x="0" y="180" width="920" height="80" fill="#c0b090"/>
-<rect x="0" y="195" width="920" height="65" fill="#b0a080"/>
-<!-- road -->
-<rect x="0" y="200" width="920" height="15" fill="#a09070"/>
-<!-- art deco building 1 - mint -->
-<rect x="80" y="70" width="80" height="110" fill="#a8d8c8" rx="2"/>
-<rect x="85" y="60" width="70" height="15" fill="#90c0b0"/>
-<rect x="100" y="50" width="40" height="15" fill="#80b0a0"/>
-<rect x="115" y="40" width="10" height="12" fill="#90c0b0"/>
-<g transform="translate(95,85)">
-  <g class="h1006glow">
-    <rect x="0" y="0" width="15" height="18" fill="#f0e8a0" opacity="0.5"/>
-  </g>
-</g>
-<rect x="120" y="85" width="15" height="18" fill="#80b8a8"/>
-<rect x="95" y="115" width="15" height="18" fill="#80b8a8"/>
-<rect x="120" y="115" width="15" height="18" fill="#80b8a8"/>
-<rect x="100" y="145" width="30" height="35" fill="#708880" rx="2"/>
-<!-- art deco building 2 - coral -->
-<rect x="200" y="85" width="90" height="95" fill="#e0a090" rx="2"/>
-<rect x="205" y="77" width="80" height="12" fill="#d09080"/>
-<rect x="230" y="67" width="30" height="14" fill="#d09080"/>
-<rect x="215" y="95" width="18" height="18" fill="#f0d0c0"/>
-<rect x="245" y="95" width="18" height="18" fill="#f0d0c0"/>
-<rect x="215" y="125" width="18" height="18" fill="#f0d0c0"/>
-<rect x="245" y="125" width="18" height="18" fill="#f0d0c0"/>
-<rect x="232" y="152" width="26" height="28" fill="#b07868" rx="2"/>
-<!-- art deco building 3 - cream -->
-<rect x="330" y="95" width="70" height="85" fill="#f0e8d0" rx="2"/>
-<rect x="335" y="88" width="60" height="10" fill="#e0d8c0"/>
-<rect x="350" y="78" width="20" height="13" fill="#e0d8c0"/>
-<rect x="340" y="105" width="14" height="14" fill="#e0d0a0"/>
-<rect x="362" y="105" width="14" height="14" fill="#e0d0a0"/>
-<rect x="355" y="140" width="20" height="40" fill="#c0b898" rx="2"/>
-<!-- FOR SALE sign -->
-<rect x="440" y="130" width="5" height="50" fill="#6a5a40"/>
-<rect x="430" y="118" width="50" height="22" fill="#e8e0d0" rx="2" stroke="#8a7a60" stroke-width="1.5"/>
-<!-- construction crane -->
-<rect x="540" y="50" width="6" height="130" fill="#8a8070"/>
-<rect x="530" y="50" width="80" height="5" fill="#8a8070"/>
-<line x1="546" y1="50" x2="610" y2="55" stroke="#8a8070" stroke-width="2"/>
-<line x1="543" y1="55" x2="530" y2="50" stroke="#8a8070" stroke-width="2"/>
-<rect x="600" y="55" width="3" height="30" fill="#7a7060"/>
-<rect x="594" y="82" width="15" height="10" fill="#a09080"/>
-<!-- palm trees bending (hurricane reference) -->
-<g transform="translate(680,90)">
-  <g class="h1006sway">
-    <rect x="-3" y="0" width="6" height="90" fill="#7a6a40" rx="2"/>
-    <ellipse cx="-18" cy="5" rx="25" ry="6" fill="#5a8a40" transform="rotate(-20)"/>
-    <ellipse cx="15" cy="-2" rx="22" ry="5" fill="#4a7a38" transform="rotate(15)"/>
-    <ellipse cx="-5" cy="-5" rx="20" ry="5" fill="#5a8a40" transform="rotate(-40)"/>
-  </g>
-</g>
-<g transform="translate(770,100)">
-  <g class="h1006sway">
-    <rect x="-3" y="0" width="5" height="80" fill="#7a6a40" rx="2"/>
-    <ellipse cx="-15" cy="5" rx="22" ry="5" fill="#4a7a38" transform="rotate(-25)"/>
-    <ellipse cx="12" cy="-3" rx="18" ry="4.5" fill="#5a8a40" transform="rotate(10)"/>
-  </g>
-</g>
-<!-- storm clouds on right side -->
-<g transform="translate(800,30)">
-  <g class="h1006drift">
-    <ellipse cx="0" cy="0" rx="50" ry="18" fill="#6a7080" opacity="0.6"/>
-    <ellipse cx="30" cy="-8" rx="35" ry="14" fill="#5a6070" opacity="0.5"/>
-    <ellipse cx="-20" cy="8" rx="30" ry="12" fill="#6a7080" opacity="0.4"/>
-  </g>
-</g>
-<g transform="translate(870,55)">
-  <g class="h1006drift">
-    <ellipse cx="0" cy="0" rx="40" ry="15" fill="#5a6070" opacity="0.5"/>
-    <ellipse cx="20" cy="-5" rx="28" ry="10" fill="#4a5060" opacity="0.4"/>
-  </g>
-</g>
-<!-- darker ground on storm side -->
-<rect x="700" y="180" width="220" height="80" fill="#8a8070" opacity="0.3"/>
-</svg>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A half-built hotel by the sea at sunset in the 1920s: the left side is finished, with a red tile roof and glowing windows, and the right side is only a bare steel frame with scaffolding and a stopped crane, beside palm trees, a sandy beach and pelicans over the water"><defs><linearGradient id="b1006sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E3A6B"/><stop offset=".45" stop-color="#B8607A"/><stop offset=".8" stop-color="#F09A6A"/><stop offset="1" stop-color="#FBD08A"/></linearGradient><radialGradient id="b1006sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF3CC"/><stop offset=".45" stop-color="#FFC978" stop-opacity=".9"/><stop offset="1" stop-color="#FF9A5A" stop-opacity="0"/></radialGradient><linearGradient id="b1006sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7A77E"/><stop offset=".3" stop-color="#7C7F9E"/><stop offset="1" stop-color="#2F4566"/></linearGradient><linearGradient id="b1006wall" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F6D7B4"/><stop offset="1" stop-color="#E8B98E"/></linearGradient><style>
+ .b1006-sun { animation: b1006glow 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+ @keyframes b1006glow { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+ .b1006-win { animation: b1006lit 7s ease-in-out infinite; }
+ @keyframes b1006lit { 0%,100% { opacity: 1; } 50% { opacity: .7; } }
+ .b1006-sh { animation: b1006shim 6s ease-in-out infinite; }
+ @keyframes b1006shim { 0%,100% { opacity: .25; transform: translateX(0); } 50% { opacity: .6; transform: translateX(6px); } }
+ .b1006-birds { animation: b1006glide 26s linear infinite; }
+ @keyframes b1006glide { 0% { transform: translateX(-60px); } 100% { transform: translateX(980px); } }
+ .b1006-hook { animation: b1006sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: top center; }
+ @keyframes b1006sway { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+ @media (prefers-reduced-motion: reduce) { .b1006-sun, .b1006-win, .b1006-sh, .b1006-birds, .b1006-hook { animation: none !important; } }
+</style></defs><rect width="920" height="200" fill="url(#b1006sky)"/><ellipse cx="120" cy="40" rx="45.0" ry="7" fill="#F6B9A0" opacity=".45"/><ellipse cx="700" cy="30" rx="60.0" ry="7" fill="#F6B9A0" opacity=".45"/><ellipse cx="820" cy="62" rx="35.0" ry="7" fill="#F6B9A0" opacity=".45"/><ellipse cx="380" cy="24" rx="40.0" ry="7" fill="#F6B9A0" opacity=".45"/><circle class="b1006-sun" cx="760" cy="128" r="58" fill="url(#b1006sun)"/><circle cx="760" cy="128" r="22" fill="#FFE7B0"/><rect y="136" width="920" height="64" fill="url(#b1006sea)"/><rect x="700" y="138" width="120" height="4" fill="#FFE2A8" class="b1006-sh"/><rect x="720" y="148" width="80" height="3" fill="#FFE2A8" class="b1006-sh" style="animation-delay:1.5s"/><rect x="735" y="158" width="50" height="2" fill="#FFE2A8" class="b1006-sh" style="animation-delay:3s"/><path d="M0,170 C140,160 300,158 470,166 C600,172 700,182 920,178 L920,200 L0,200Z" fill="#E8C690"/><path d="M0,176 C160,168 320,168 470,174 C620,180 720,188 920,186" fill="none" stroke="#F6E3B8" stroke-width="2" opacity=".7"/><g><rect x="300" y="64" width="130" height="104" fill="url(#b1006wall)"/><rect x="336" y="34" width="58" height="32" fill="url(#b1006wall)"/><path d="M330,36 L365,16 L400,36Z" fill="#B5543A"/><path d="M294,66 L436,66 L430,58 L300,58Z" fill="#B5543A"/><rect x="362" y="10" width="6" height="8" fill="#B5543A"/><path class="b1006-win" style="animation-delay:2.1s" d="M310,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.4s" d="M330,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.1s" d="M350,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.6s" d="M370,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.9s" d="M390,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.0s" d="M410,88 V80 a5,5 0 0 1 10,0 V88Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.3s" d="M310,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:3.1s" d="M330,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.6s" d="M350,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.9s" d="M370,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.9s" d="M390,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.4s" d="M410,106 V98 a5,5 0 0 1 10,0 V106Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.2s" d="M310,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.8s" d="M330,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:1.6s" d="M350,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.9s" d="M370,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.4s" d="M390,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.6s" d="M410,124 V116 a5,5 0 0 1 10,0 V124Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.4s" d="M310,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.2s" d="M330,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.7s" d="M350,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.9s" d="M370,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.9s" d="M390,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:0.5s" d="M410,142 V134 a5,5 0 0 1 10,0 V142Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:3.7s" d="M310,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:5.4s" d="M330,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:4.8s" d="M350,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:2.3s" d="M370,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:2.1s" d="M390,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path class="b1006-win" style="animation-delay:2.4s" d="M410,160 V152 a5,5 0 0 1 10,0 V160Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path d="M344,60 V46 a4,4 0 0 1 8,0 V60Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path d="M360,60 V46 a4,4 0 0 1 8,0 V60Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path d="M376,60 V46 a4,4 0 0 1 8,0 V60Z" fill="#FFD27A" stroke="#9A6A3A" stroke-width=".8"/><path d="M352,168 V146 a13,13 0 0 1 26,0 V168Z" fill="#6B3E22"/></g><g stroke="#4A4E5E" stroke-width="2.4" fill="none"><line x1="434" y1="168" x2="434" y2="64"/><line x1="460" y1="168" x2="460" y2="64"/><line x1="486" y1="168" x2="486" y2="64"/><line x1="512" y1="168" x2="512" y2="64"/><line x1="538" y1="168" x2="538" y2="64"/><line x1="430" y1="64" x2="560" y2="64"/><line x1="430" y1="82" x2="560" y2="82"/><line x1="430" y1="100" x2="560" y2="100"/><line x1="430" y1="118" x2="560" y2="118"/><line x1="430" y1="136" x2="560" y2="136"/><line x1="430" y1="154" x2="560" y2="154"/></g><g stroke="#4A4E5E" stroke-width="1" opacity=".7"><line x1="434" y1="64" x2="460" y2="82"/><line x1="434" y1="100" x2="460" y2="118"/><line x1="434" y1="136" x2="460" y2="154"/><line x1="460" y1="64" x2="486" y2="82"/><line x1="460" y1="100" x2="486" y2="118"/><line x1="460" y1="136" x2="486" y2="154"/><line x1="486" y1="64" x2="512" y2="82"/><line x1="486" y1="100" x2="512" y2="118"/><line x1="486" y1="136" x2="512" y2="154"/><line x1="512" y1="64" x2="538" y2="82"/><line x1="512" y1="100" x2="538" y2="118"/><line x1="512" y1="136" x2="538" y2="154"/></g><g stroke="#8A6A3A" stroke-width="1.6"><line x1="566" y1="168" x2="566" y2="80"/><line x1="580" y1="168" x2="580" y2="80"/><line x1="560" y1="84" x2="584" y2="84"/><line x1="560" y1="98" x2="584" y2="98"/><line x1="560" y1="112" x2="584" y2="112"/><line x1="560" y1="126" x2="584" y2="126"/><line x1="560" y1="140" x2="584" y2="140"/><line x1="560" y1="154" x2="584" y2="154"/></g><g><g stroke="#C9A24A" stroke-width="2" fill="none"><line x1="610" y1="168" x2="610" y2="22"/><line x1="622" y1="168" x2="622" y2="22"/><line x1="610" y1="30" x2="622" y2="46"/><line x1="610" y1="46" x2="622" y2="62"/><line x1="610" y1="62" x2="622" y2="78"/><line x1="610" y1="78" x2="622" y2="94"/><line x1="610" y1="94" x2="622" y2="110"/><line x1="610" y1="110" x2="622" y2="126"/><line x1="610" y1="126" x2="622" y2="142"/><line x1="610" y1="142" x2="622" y2="158"/><line x1="610" y1="158" x2="622" y2="174"/><line x1="520" y1="22" x2="680" y2="22"/><line x1="520" y1="30" x2="680" y2="30"/><line x1="524" y1="22" x2="531" y2="30"/><line x1="538" y1="22" x2="545" y2="30"/><line x1="552" y1="22" x2="559" y2="30"/><line x1="566" y1="22" x2="573" y2="30"/><line x1="580" y1="22" x2="587" y2="30"/><line x1="594" y1="22" x2="601" y2="30"/><line x1="608" y1="22" x2="615" y2="30"/><line x1="622" y1="22" x2="629" y2="30"/><line x1="636" y1="22" x2="643" y2="30"/><line x1="650" y1="22" x2="657" y2="30"/><line x1="664" y1="22" x2="671" y2="30"/><line x1="678" y1="22" x2="685" y2="30"/><line x1="616" y1="8" x2="530" y2="22"/><line x1="616" y1="8" x2="676" y2="22"/></g><rect x="660" y="30" width="18" height="12" fill="#5A4A3A"/><g class="b1006-hook"><line x1="548" y1="30" x2="548" y2="70" stroke="#3A3A3A" stroke-width="1.2"/><path d="M544,70 h8 l-2,6 a2,2 0 0 1 -4,0Z" fill="#3A3A3A"/></g></g><g fill="#5A5E6E"><rect x="452" y="172" width="70" height="4"/><rect x="456" y="168" width="64" height="4"/><rect x="460" y="164" width="56" height="4"/></g><g transform="translate(230,174) scale(1)"><path d="M0,0 C4,-36.800000000000004 2,-73.60000000000001 8,-92" fill="none" stroke="#4A3220" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q-9.0,-98.0 -26,-84" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q-5.0,-108.0 -18,-104" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q5.0,-113.0 2,-114" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q17.0,-111.0 26,-110" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q25.0,-100.0 42,-88" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q22.0,-95.0 36,-78" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-92 Q-2.0,-94.0 -12,-76" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/></g><g transform="translate(262,174) scale(0.85)"><path d="M0,0 C4,-28.0 2,-56.0 8,-70" fill="none" stroke="#4A3220" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q-9.0,-76.0 -26,-62" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q-5.0,-86.0 -18,-82" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q5.0,-91.0 2,-92" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q17.0,-89.0 26,-88" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q25.0,-78.0 42,-66" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q22.0,-73.0 36,-56" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-70 Q-2.0,-72.0 -12,-54" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/></g><g transform="translate(660,174) scale(0.9)"><path d="M0,0 C4,-32.0 2,-64.0 8,-80" fill="none" stroke="#4A3220" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q-9.0,-86.0 -26,-72" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q-5.0,-96.0 -18,-92" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q5.0,-101.0 2,-102" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q17.0,-99.0 26,-98" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q25.0,-88.0 42,-76" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q22.0,-83.0 36,-66" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-80 Q-2.0,-82.0 -12,-64" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/></g><g transform="translate(860,174) scale(1)"><path d="M0,0 C4,-38.400000000000006 2,-76.80000000000001 8,-96" fill="none" stroke="#4A3220" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q-9.0,-102.0 -26,-88" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q-5.0,-112.0 -18,-108" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q5.0,-117.0 2,-118" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q17.0,-115.0 26,-114" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q25.0,-104.0 42,-92" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q22.0,-99.0 36,-82" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/><path d="M8,-96 Q-2.0,-98.0 -12,-80" fill="none" stroke="#1F4A2E" stroke-width="5" stroke-linecap="round"/></g><g class="b1006-birds" fill="none" stroke="#2A2230" stroke-width="2" stroke-linecap="round"><path d="M0,96 q7,-6 14,0 q7,-6 14,0"/><path d="M26,88 q7,-6 14,0 q7,-6 14,0"/><path d="M50,100 q7,-6 14,0 q7,-6 14,0"/></g><g><line x1="40" y1="175" x2="40" y2="159" stroke="#7A5A3A" stroke-width="2"/><rect x="32" y="151" width="16" height="10" fill="#F3E6C6" stroke="#7A5A3A" stroke-width="1"/></g><g><line x1="80" y1="174" x2="80" y2="158" stroke="#7A5A3A" stroke-width="2"/><rect x="72" y="150" width="16" height="10" fill="#F3E6C6" stroke="#7A5A3A" stroke-width="1"/></g><g><line x1="120" y1="176" x2="120" y2="160" stroke="#7A5A3A" stroke-width="2"/><rect x="112" y="152" width="16" height="10" fill="#F3E6C6" stroke="#7A5A3A" stroke-width="1"/></g><g><line x1="160" y1="175" x2="160" y2="159" stroke="#7A5A3A" stroke-width="2"/><rect x="152" y="151" width="16" height="10" fill="#F3E6C6" stroke="#7A5A3A" stroke-width="1"/></g></svg>
 
 <!-- ═══ INFO STRIP ═══ -->
 <div class="info-strip">
@@ -3623,5 +4695,10 @@ function toggleTX() {
 })();
 </script>
 
+
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
