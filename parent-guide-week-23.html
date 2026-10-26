@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 23 Family Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 23: The People Who Built Modern Florida</h1>
+      <div class="sub">Unit 10: Modern Florida Takes Shape · Lessons 4.10.03–4.10.04</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Real primary sources</span>
+        <span class="chip">Florida File 10 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-10-04-bethune-line-of-girls-1905-original.jpg');background-position:center 45%;background-color:#D8CDB8;" role="img" aria-label="A 1905 photograph of Mary McLeod Bethune standing at the front of a long line of girls from her school in Daytona, Florida"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four tabs, in order:</strong> Learn → Explore → Check → Assignment. A button at the bottom of each tab moves to the next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> The bottom of the Assignment tab collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Download as PDF</strong> (or Copy) saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Listen</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>Last week your student saw railroads and industries change Florida. This week they meet the <strong>people</strong> behind those changes. In Lesson 3 they learn how <strong>immigrants</strong> (people who move from one country to live in another) built communities that still shape Florida: Cuban, Spanish, and Italian cigar workers in <strong>Ybor City</strong>, Greek sponge divers in <strong>Tarpon Springs</strong>, and Bahamian and Minorcan families. In Lesson 4 they meet four <strong>individuals</strong> whose choices changed the state: Henry Flagler, Julia Tuttle, Mary McLeod Bethune, and Marjory Stoneman Douglas. The big idea: <strong>one person’s choice, or one family’s, can grow into something a whole state still has today.</strong></p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Reading a source like a historian.</strong> Your student sorts what a photo or caption <em>says</em>, what they can <em>infer</em> (figure out from clues), and what they still <em>question</em>.</div>
+      <div class="box b-green"><div class="box-label">Virtues this week</div><strong>Perseverance and self-governance.</strong> Immigrants who kept going in a new land, and people like Bethune who started fixing a problem without waiting for someone else.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> There is a famous story that Julia Tuttle mailed Henry Flagler fresh orange blossoms after the freezes of 1894–1895 to prove Miami stayed warm. Historians still question it. Your student practices asking, “Where is the evidence?” What is certain: Tuttle offered Flagler land, his first passenger train reached Miami on April 22, 1896, and Miami became a city that July.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.10.03<span>Lesson 3</span></td>
+          <td><span class="ch">Immigrant Contributions to Florida</span><br>In 1885, Vicente Martinez Ybor built <strong>Ybor City</strong> in Tampa. Cuban, Spanish, and Italian immigrants made it the cigar capital of the world, about 500 million cigars in 1929. The tobacco came by ship from Cuba. Workers paid a <strong>lector</strong> (a reader) to read newspapers and books aloud while they rolled cigars, and they chose what he read. In 1905, Greek divers came to <strong>Tarpon Springs</strong> and made it the sponge capital of the United States. Bahamians fished, sponged, and built in Key West and Miami, and Minorcans came in 1768 and settled in St. Augustine in 1777. Their foods and festivals blended with Florida’s older traditions.<br><span class="pill p-source">Source: Lewis Hine’s 1909 photo of a reader in a Tampa cigar factory (Library of Congress)</span><span class="pill p-virtue">Virtue: Perseverance</span><span class="pill p-new">Word root: lect / leg = to read</span></td>
+          <td><strong>Historian’s Notebook entry</strong> (3–5 sentences): how immigrants shaped Florida’s communities and culture, with two groups and one contribution, plus a Historian’s Sentence.</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.10.04<span>Lesson 4</span></td>
+          <td><span class="ch">Significant Individuals in Florida’s Development</span><br>An <strong>individual</strong> is one person. <strong>Henry Flagler</strong> built railroads and hotels down the east coast to Key West by 1912, and <strong>Henry Plant</strong> did the same for Tampa. <strong>Julia Tuttle</strong> offered Flagler land to bring his railroad to Miami. <strong>Mary McLeod Bethune</strong> started a school for Black girls in Daytona in 1904 with $1.50 and five girls; she built desks from crates and sold pies to raise money, and the school became <strong>Bethune-Cookman University</strong>. <strong>Marjory Stoneman Douglas</strong> wrote <em>The Everglades: River of Grass</em> in 1947, the year Everglades National Park opened, and spent decades speaking up for the Everglades.<br><span class="pill p-source">Source: a 1905 photo of Bethune with her students (State Archives of Florida)</span><span class="pill p-virtue">Virtue: Self-governance</span><span class="pill p-new">Word root: duc / duct = to lead</span></td>
+          <td><strong>Source study response</strong> (3–5 sentences): how two individuals shaped Florida, what each did and why it mattered, plus a Historian’s Sentence.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>The teacher is still stuck inside Canvas, but something is changing: each file your student finishes makes the room a little clearer. In Lesson 4.10.03 your student guesses who paid a cigar factory’s reader before hearing the caption photographer Lewis Hine wrote in 1909. They fill a family photo album, pasting in a keepsake to open each page (the Pérez family is made up, but every detail comes from real Ybor City history). Then, as a “caption detective,” they match pieces of Hine’s real caption to the numbered spots on his photo, sort out which words only the caption can tell us, and plan their writing as a Cuban sandwich. In Lesson 4.10.04 the teacher finds a wall of blurry names that come into focus as your student learns about each person. They help Bethune fill her school with only $1.50, plant each person’s choice in a garden and watch what it grew into, and stop to question the orange-blossom story. On the real 1905 photo they ink notes with three detective pens: blue for what the photo says, green for what they can infer, red for what they still wonder. They hear Bethune’s own words, “I leave you hope. I leave you a thirst for education,” and hang two Hall of Fame plaques before they write.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>immigrant</b><span>a person who moves from one country to live in another</span></div>
+      <div class="word"><b>tradition</b><span>a way of doing things that families pass down</span></div>
+      <div class="word"><b>lector</b><span>a person who reads aloud to other people (lect = to read)</span></div>
+      <div class="word"><b>caption</b><span>the writing that goes with a photo</span></div>
+      <div class="word"><b>individual</b><span>one person</span></div>
+      <div class="word"><b>infer</b><span>to figure something out from clues</span></div>
+      <div class="word"><b>ecosystem</b><span>living things and the place they share</span></div>
+      <div class="word"><b>educate</b><span>to teach someone (duc = to lead)</span></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">What did a lector do in a Tampa cigar factory?</span><span class="listen">Listen for: he read newspapers and books aloud while workers rolled cigars by hand; the workers paid him and chose what he read.</span></li>
+      <li><span class="q">Name an immigrant group and something they added to Florida.</span><span class="listen">Listen for: Cubans, Spanish, and Italians and the cigar industry in Ybor City; Greek sponge divers in Tarpon Springs; Bahamians in Key West and Miami; Minorcans in St. Augustine.</span></li>
+      <li><span class="q">How did Mary McLeod Bethune start a school with only $1.50?</span><span class="listen">Listen for: she made do, building desks from crates and selling pies to raise money, and her school grew into Bethune-Cookman University.</span></li>
+      <li><span class="q">Did Julia Tuttle really send Flagler orange blossoms?</span><span class="listen">Listen for: nobody knows for sure, so historians ask where the evidence is. We do know she offered him land, and the train reached Miami in 1896.</span></li>
+      <li><span class="q">Pick one person you learned about. What would Florida be missing without them?</span><span class="listen">Listen for: a choice and what it grew into, like Miami, a university, or a protected Everglades.</span></li>
+    </ol>
+  </section>
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a 3–5 sentence writing task, and a Historian’s Sentence, submitted in Canvas</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> two specific examples (like Greek sponge divers in Tarpon Springs, or Bethune’s school growing into a university) and a “because” that says why each one still matters to Florida today.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Family keepsake.</strong> Find one old photo or object in your home. What does it show for sure? What can you guess? What do you still wonder?</li>
+        <li><strong>Make do.</strong> Like Bethune, find one thing at home you could reuse to make something new.</li>
+        <li><strong>Find the root.</strong> Lecture, legible, and legend share a part that means “to read.” What do educate, conduct, and introduce share?</li>
+      </ul>
+    </section>
+  </div>
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🏛️</div>
+      <div><p><strong>Ybor City Museum State Park</strong> (Tampa) tells the cigar city’s story, and the <strong>Sponge Docks</strong> in Tarpon Springs still sell natural sponges. In Daytona Beach, Bethune’s home on the <strong>Bethune-Cookman University</strong> campus is a museum. For Marjory Stoneman Douglas, visit <strong>Everglades National Park</strong>. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 24</h2></div>
+    <p><strong>War, boom, and bust.</strong> Next week your student learns why Florida’s spot close to Cuba mattered in the Spanish-American War of 1898, and how a land boom in the 1920s turned into a bust.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 23 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
