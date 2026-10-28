@@ -6613,7 +6613,7 @@
     var parts=v.parts||[{slot:v.slot,script:v.script}], key=v.slot||parts.map(function(p){ return p.slot; }).join('+'), bars='';
     for(var i=0;i<30;i++) bars+='<i style="height:'+(5+Math.round(13*Math.abs(Math.sin(i*1.7+key.length))))+'px"></i>';
     var tx=parts.map(function(p){ return (p.who?'<b>'+esc(p.who)+':</b> ':'')+esc(p.script); }).join('<br><br>');
-    var n=el('div','spk spk-vn spk-hide','<span class="spk-avatar">👩‍🏫</span><div><div class="k">Voice note from your teacher</div><div class="t">'+esc(v.label)+'</div><div class="wave">'+bars+'</div></div><button type="button" class="play" aria-label="Play voice note">▶</button><button type="button" class="rd">Read along</button><div class="tx">'+tx+'</div>');
+    var n=el('div','spk spk-vn spk-hide','<span class="spk-avatar">👩‍🏫</span><div><div class="k">Voice note from your teacher</div><div class="t">'+esc(v.label)+'</div><div class="wave">'+bars+'</div></div><button type="button" class="play" aria-label="Play voice note">▶</button><button type="button" class="rd">📄 Read the words instead</button><div class="tx">'+tx+'</div>');
     n.dataset.slot=key; n.__when=WHEN[v.when]; w[1]==='after'?after(w[0],n):before(w[0],n);
     var play=n.querySelector('.play'), cur=0, ok=0, bad=false;
     var aus=parts.map(function(p,idx){ var au=new Audio(); au.preload='metadata';
@@ -6626,7 +6626,7 @@
     play.addEventListener('click',function(){ if(n.classList.contains('playing')){ stop(); return; }
       document.querySelectorAll('.spk-vn.playing').forEach(function(o){ if(o!==n&&o.__stop) o.__stop(); });
       aus[cur].play(); n.classList.add('playing'); play.textContent='❚❚'; });
-    n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'Read along'; });
+    n.querySelector('.rd').addEventListener('click',function(){ n.classList.toggle('read'); this.textContent=n.classList.contains('read')?'Hide words':'📄 Read the words instead'; });
     parts.forEach(function(p,idx){ aus[idx].src=AUD+'g4ss-'+LESSON+'-'+p.slot+'.mp3'; spotlight(p.slot, p.script, aus[idx]); }); }); refreshVoice(); }
   function refreshVoice(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
   function paintVideos(){ if(!document.documentElement.classList.contains('spk-on')) return; document.querySelectorAll('.video-wrap').forEach(function(v){ v.classList.toggle('spk-empty',!v.querySelector('iframe,video')); }); }
@@ -6776,4 +6776,35 @@
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
+})();
+
+/* Flow fix (Oct 28 2026, parent feedback): remember the open tab, so a
+   Canvas reload (after Submit) reopens where the student was instead of
+   on the first tab. One key per lesson page. */
+(function () {
+  var KEY = 'oao-tab-' + location.pathname;
+  function put(v) { try { localStorage.setItem(KEY, v); } catch (e) { try { sessionStorage.setItem(KEY, v); } catch (e2) {} } }
+  function get() { try { return localStorage.getItem(KEY); } catch (e) { try { return sessionStorage.getItem(KEY); } catch (e2) { return null; } } }
+  function tabIdOf(b) {
+    return b.getAttribute('data-tab') || (b.id || '').replace(/^btn-/, '') ||
+      ((b.getAttribute('onclick') || '').match(/switchTab\(\s*['"]([\w-]+)/) || [])[1] || '';
+  }
+  function hook() {
+    var cur = window.switchTab;
+    if (typeof cur !== 'function' || cur._remembers) return;
+    var wrapped = function (id) { var r = cur.apply(this, arguments); put(id); return r; };
+    wrapped._remembers = true;
+    window.switchTab = wrapped;
+    var b = document.querySelector('.tab-btn'), first = b ? tabIdOf(b) : '', last = get();
+    if (!last || last === first) return;
+    if (!document.getElementById('tab-' + last) && !document.getElementById('panel-' + last)) return;
+    setTimeout(function () {                 /* after the page's own layers have set up */
+      var sT = window.scrollTo, sIV = Element.prototype.scrollIntoView;
+      window.scrollTo = function () {}; Element.prototype.scrollIntoView = function () {};  /* no jump on restore */
+      try { window.switchTab(last); } catch (e) {}
+      window.scrollTo = sT; Element.prototype.scrollIntoView = sIV;
+    }, 0);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', hook);
+  else hook();
 })();
