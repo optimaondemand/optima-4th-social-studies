@@ -1784,6 +1784,948 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">
+{
+ "lesson": "4.10.07",
+ "title": "Florida During the Great Depression and World War II",
+ "quiet": false,
+ "file": {
+  "n": 10,
+  "title": "Modern Florida",
+  "label": "Modern Florida",
+  "seals": [
+   "🍊",
+   "🏖️",
+   "🚀"
+  ]
+ },
+ "prevFile": "Land Boom and Bust in the 1920s",
+ "connector": "Last time, Florida's land boom turned into a bust. Today, find out how the Great Depression and World War II changed life all over Florida.",
+ "storySoFar": "Your teacher is still stuck inside Canvas, and the room keeps changing. Last time, shiny new doors popped up too fast and half of them vanished. Today the lights dim, like someone is saving power.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Blackout the coast",
+   "why": "Turn off the beach lights the way Florida did in 1942, and find out why the war came so close to home."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Follow one place through time",
+   "why": "Open each part of the story and watch one Florida clearing change from hard times to the war years. Then study a real photo of New Deal workers."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian's Notebook",
+   "t": "Hard times, then the comeback",
+   "why": "Answer three questions. Match one hard-times card to one comeback card, then write 3 to 5 sentences."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it's me, your teacher. The lights in here just dimmed. Come see what's going on.",
+  "opening": [
+   "The lights in this room just went dim, like someone is saving power.",
+   "Start in the Learn tab (tab 1). Scroll down to the beach at night.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Show me the beach",
+      "go": true,
+      "reply": "Tap each light to turn it off, the way Florida really did in 1942. Watch what shows up out at sea."
+     },
+     {
+      "t": "Why turn the lights off?",
+      "reply": "In 1942, enemy submarines hid off Florida's coast. Bright lights on shore made ships behind them easy to spot at night, so towns dimmed their lights."
+     },
+     {
+      "t": "What does courage have to do with it?",
+      "reply": "Courage means doing something hard even when you're scared. Floridians faced hard times and a war, and kept going."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What's next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Open the first part of the story and watch the clearing change."
+     },
+     {
+      "t": "Did subs really come that close?",
+      "reply": "Yes. In 1942, the tanker Gulfamerica burned close enough to see from Jacksonville Beach. Keep going to see how the war changed Florida."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren't graded."
+     },
+     {
+      "t": "Did the New Deal end the Depression?",
+      "reply": "Not by itself. New Deal jobs helped, but the huge spending of World War II is what finally ended the Depression."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What's next in this file?",
+      "reply": "Next time: tourism and the space program, and how Florida's economy took off."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don't forget to copy or download your work and turn it in on Canvas. I'll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "The whole coast is dark now, and far out at sea a ship is burning. The war really did come to Florida. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Look at that clearing now! Hard times built a park, and the war filled the skies. A thin line of light just showed up under one of the doors in here. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian's Notebook tab (tab 4), answer three questions. Then match a hard-times card to a comeback card and write 3 to 5 sentences."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! Another part of the modern Florida file is open, and the line of light under the door is a little brighter. Your Historian's Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means doing something hard even when it scares you. Today you are an economic and wartime historian, someone who studies how hard times and war changed the places where people lived and worked.",
+ "scene1": {
+  "type": "blackoutcoast",
+  "kicker": "Blackout the coast",
+  "h": "Turn off every light, then answer one question.",
+  "voice": "Tap each light to turn it off. Watch what shows up out at sea. Then answer the question.",
+  "alt": "A Florida beach town at night, its lights still shining out to sea",
+  "why": {
+   "icon": "🌊",
+   "q": "Why turn the lights off?",
+   "t": "In 1942, German submarines, called <b>U-boats</b>, hid underwater off Florida's coast. At night, bright lights on shore lit up ships from behind, making them easy to hit. So Florida towns dimmed their lights. That's why you turn off the coast one light at a time."
+  },
+  "lights": [
+   {
+    "id": "hotel",
+    "ico": "🏨",
+    "t": "Beachfront hotel lights",
+    "fact": "Big hotels along the beach kept their lights on for guests. At night, those lights showed ships out at sea as dark shapes, easy for a submarine to spot."
+   },
+   {
+    "id": "homes",
+    "ico": "🪟",
+    "t": "House windows",
+    "fact": "Families near the coast were asked to cover their windows at night. This was called a dimout. A dark coast kept ships safer."
+   },
+   {
+    "id": "lamp",
+    "ico": "💡",
+    "t": "Streetlamp",
+    "fact": "Towns switched off streetlamps near the water, so no light pointed out to sea."
+   },
+   {
+    "id": "car",
+    "ico": "🚗",
+    "t": "Car headlights",
+    "fact": "Even cars near the beach had to dim their lights. People painted the top half of their headlights black so the glow couldn't reach the water."
+   },
+   {
+    "id": "pier",
+    "ico": "🎇",
+    "t": "Pier and sign lights",
+    "fact": "Bright signs and pier lights went dark too. For the first time, the busy Florida coast was black at night."
+   }
+  ],
+  "fireT": "The coast is dark.",
+  "nowT": "Now answer one question.",
+  "countT": "lights dimmed. Tap each light to turn it off.",
+  "ask": {
+   "q": "Was World War II only fought far away?",
+   "opts": [
+    {
+     "t": "Yes, it was all overseas",
+     "reply": "Not for Florida. In 1942, subs sank ships right off the coast. The tanker Gulfamerica burned close enough to see from Jacksonville Beach. The war came home."
+    },
+    {
+     "t": "No, the war came right to Florida's coast",
+     "reply": "Right. Subs sank ships off the coast, towns went dark, and bases and shipyards filled the state. The war reached everyday Florida."
+    },
+    {
+     "t": "Only soldiers overseas were part of it",
+     "reply": "Not only them. Families on the coast went dark at night, grew gardens and used ration books. The whole state was part of the war."
+    }
+   ]
+  },
+  "win": "🌙 <b>The coast is dark, and a ship is burning offshore.</b> In 1942, U-boats sank many ships near Florida. The tanker Gulfamerica burned within sight of Jacksonville Beach on April 10, 1942. The war had come home.",
+  "jT": "On the home front, Florida dimmed:"
+ },
+ "explore": {
+  "reading": {
+   "type": "placetransform",
+   "activity": "Hard Times and a Nation at War",
+   "mid": "war",
+   "startCap": "A quiet Florida clearing",
+   "why": {
+    "icon": "🌲",
+    "q": "Why one clearing?",
+    "t": "The Depression and World War II changed Florida bit by bit. To see it, we watch one pine clearing over the years: first the hard times, then New Deal workers build a park, then the war fills the skies, then the home front, then the road that led to the modern state. That's why you follow one place through time."
+   },
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Hard times hit Florida"
+    },
+    {
+     "id": "p2",
+     "match": "^New Deal jobs"
+    },
+    {
+     "id": "p3",
+     "match": "^A nation at war"
+    },
+    {
+     "id": "p4",
+     "match": "^The home front"
+    },
+    {
+     "id": "p5",
+     "match": "^What the hard years built"
+    }
+   ],
+   "parts": [
+    {
+     "id": "hard",
+     "t": "Hard times",
+     "ico": "📉",
+     "act": "See the hard times",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "newdeal",
+     "t": "New Deal jobs",
+     "ico": "🌲",
+     "act": "Put workers on the job",
+     "paras": [
+      "p2"
+     ]
+    },
+    {
+     "id": "war",
+     "t": "A nation at war",
+     "ico": "✈️",
+     "act": "The war begins",
+     "paras": [
+      "p3"
+     ],
+     "ask": {
+      "q": "Why did the military build so many bases in Florida?",
+      "opts": [
+       {
+        "t": "Florida had cold winters to toughen troops",
+        "miss": "Florida is warm, not cold. Read again: what about the weather helped training?"
+       },
+       {
+        "t": "Florida's warm weather and flat land were good for year-round training",
+        "ok": true
+       },
+       {
+        "t": "Florida was the closest state to Europe",
+        "miss": "That isn't why. Read again: what about Florida's land and weather helped?"
+       }
+      ]
+     }
+    },
+    {
+     "id": "home",
+     "t": "The home front",
+     "ico": "🥫",
+     "act": "Help from home",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "after",
+     "t": "What it built",
+     "ico": "🛣️",
+     "act": "After the war",
+     "paras": [
+      "p5"
+     ]
+    }
+   ],
+   "allT": "You followed the clearing through every year.",
+   "countT": "parts open. Tap the button to open the next part and watch the clearing change."
+  },
+  "evidence": {
+   "type": "madehere",
+   "kicker": "Worker and community",
+   "h": "Who did this New Deal project help?",
+   "voice": "First, tap the gold numbers on the photo. Then sort each card: did it help the worker right away, or does it still help the community today?",
+   "why": {
+    "icon": "🏞️",
+    "q": "Why a park shelter?",
+    "t": "The men in this photo were paid by a New Deal program to build a shelter in a Florida state park. It gave them a job when work was hard to find, and it gave Florida a park families still visit. That's why you sort what it did: some things helped the worker right away, and some still help everyone today."
+   },
+   "baskets": [
+    {
+     "id": "worker",
+     "ico": "💵",
+     "t": "Helped the worker right away"
+    },
+    {
+     "id": "community",
+     "ico": "🏞️",
+     "t": "Still helps the community today"
+    }
+   ],
+   "cards": [
+    {
+     "id": "pay",
+     "t": "A paycheck",
+     "b": "worker",
+     "why": "money for his family",
+     "miss": "A paycheck was money the worker took home that week. Which basket is that?"
+    },
+    {
+     "id": "food",
+     "t": "Food on the table",
+     "b": "worker",
+     "why": "wages bought groceries",
+     "miss": "His wages fed his family right away. Which basket is that?"
+    },
+    {
+     "id": "skill",
+     "t": "A new building skill",
+     "b": "worker",
+     "why": "he learned a trade",
+     "miss": "The worker learned a skill while he worked. Which basket is that?"
+    },
+    {
+     "id": "park",
+     "t": "A state park to visit",
+     "b": "community",
+     "why": "still open today",
+     "miss": "The park is still here for everyone. Which basket is that?"
+    },
+    {
+     "id": "shelter",
+     "t": "A shelter that still stands",
+     "b": "community",
+     "why": "families use it now",
+     "miss": "Families still use the shelter today. Which basket is that?"
+    },
+    {
+     "id": "roads",
+     "t": "Better park roads and trails",
+     "b": "community",
+     "why": "we still use them",
+     "miss": "We still walk and drive them today. Which basket is that?"
+    }
+   ],
+   "q": {
+    "q": "So who did this New Deal project help?",
+    "opts": [
+     {
+      "id": "only",
+      "t": "Only the workers",
+      "miss": "Look at your community basket. The park and shelter are still here. Try again."
+     },
+     {
+      "id": "both",
+      "t": "Both the workers then and the community now",
+      "ok": true
+     },
+     {
+      "id": "none",
+      "t": "Nobody, really",
+      "miss": "It gave jobs AND built things we still use. Look at both baskets."
+     }
+    ]
+   },
+   "countT": "sorted. Tap a card, then tap the basket it belongs in.",
+   "hotT": "Last step: tap every gold number on the photo above.",
+   "readT": "Last step: finish Learn the Story at the top of this tab.",
+   "win": "🏞️ <b>It helped both!</b> The New Deal gave workers a paycheck when jobs were scarce, and it built parks, shelters, and roads that Florida families still use today. Hard times built things that lasted. Now read the three questions below."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "In Learn the Story, tap the button to open each part. Watch the clearing change.",
+    "Tap the gold numbers on the photo to see what each part shows.",
+    "Sort each card into the basket it belongs in, then answer the question.",
+    "Read the three questions under the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 82,
+    "y": 15,
+    "title": "A worker on the roof beam.",
+    "t": "A man kneels on the very top beam, nailing down the roof boards by hand."
+   },
+   {
+    "n": "2",
+    "x": 50,
+    "y": 26,
+    "title": "The timber frame.",
+    "t": "The shelter is built from logs and posts, cut and raised by the workers themselves."
+   },
+   {
+    "n": "3",
+    "x": 73,
+    "y": 72,
+    "title": "A stone pier.",
+    "t": "Workers stack stone to make a low base, called a pier, for the building to sit on."
+   },
+   {
+    "n": "4",
+    "x": 50,
+    "y": 62,
+    "title": "A worker with a shovel.",
+    "t": "A man rests on his shovel. Simple hand tools, like shovels and saws, did most of the work."
+   },
+   {
+    "n": "5",
+    "x": 9,
+    "y": 52,
+    "title": "The Florida pine woods.",
+    "t": "Saw palmetto and tall pines show this is a Florida park, out in the woods."
+   }
+  ]
+ },
+ "planner": {
+  "type": "comebackcard",
+  "midT": "this led to",
+  "voice": "Match one hard-times card to one comeback card. These are just notes. You'll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🔁",
+   "q": "Why two cards?",
+   "t": "Your notebook entry needs one hard time AND one comeback. So you pick one card for the hard times, then one card for what helped Florida bounce back. The arrow between them is your <b>this led to</b> — the cause and effect you'll write about."
+  },
+  "cardA": {
+   "t": "The hard times",
+   "rows": [
+    {
+     "id": "a",
+     "lab": "Pick one hard time",
+     "short": "Hard time",
+     "opts": [
+      {
+       "t": "Tourists stopped coming and hotels sat empty"
+      },
+      {
+       "t": "Thousands of Floridians lost jobs and savings"
+      },
+      {
+       "t": "The 1928 hurricane and the land bust hurt Florida"
+      }
+     ]
+    }
+   ]
+  },
+  "cardB": {
+   "t": "The comeback",
+   "rows": [
+    {
+     "id": "b",
+     "lab": "Pick one comeback",
+     "short": "Comeback",
+     "opts": [
+      {
+       "t": "New Deal programs (CCC and WPA) built parks, roads, and schools"
+      },
+      {
+       "t": "The military built bases and shipyards across Florida"
+      },
+      {
+       "t": "Women took factory jobs and families helped on the home front"
+      }
+     ]
+    }
+   ]
+  },
+  "doneT": "Both cards are pinned. Now write in Step 3: one hard time, one comeback, and how one led to the other.",
+  "emptyT": "Your plan will show up here as you choose."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "the hard times",
+    "rx": "depress|crash|1929|hurricane|boom|bust|empty|hotel|tourist|lost|lose|jobless|unemploy|poor|hungry|saving|home|money"
+   },
+   {
+    "t": "the comeback",
+    "rx": "new deal|ccc|wpa|conservation|works progress|park|road|school|bridge|base|shipyard|navy|women|welder|ration|garden|war|job|work|built|build|grew|grow"
+   },
+   {
+    "t": "because / this led to",
+    "rx": "because|caused|cause|so |led|helped|help|made|brought|this led|turned|that.?s why|since"
+   },
+   {
+    "t": "a detail",
+    "rx": "1929|1928|1941|1942|1945|ccc|wpa|jacksonville|eglin|macdill|tampa|panama|okeechobee|roosevelt|gulfamerica|u-?boat|submarine|ration"
+   }
+  ],
+  "lines": [
+   "Start with the hard times: “During the Great Depression, Florida…”",
+   "Good. Now the comeback: “Then a New Deal program (or the war)…”",
+   "Add a detail, like a year, a place, or a program name.",
+   "Say how one led to the other: “This helped because…”",
+   "Read it over once. Did you use your own words?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the beach you darkened, the clearing you followed, and the photo."
+  },
+  {
+   "t": "Plan",
+   "w": "Match one hard-times card to one comeback card."
+  },
+  {
+   "t": "Write",
+   "w": "Write 3 to 5 sentences about the Depression and the war. Then your Historian's Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian's Notebook Entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "preserve",
+  "kicker": "Keep the preserve",
+  "h": "serv = to serve or keep safe",
+  "root": "serv",
+  "hl": "serv",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match keeps one more part of the park safe.",
+  "why": {
+   "icon": "🌲",
+   "q": "Why a park?",
+   "t": "<b>Serv</b> means to serve or keep safe. The Civilian Con<b>serv</b>ation Corps kept Florida's forests and springs safe, and they built the parks. That's why each serve word you match keeps one more part of a Florida state park safe."
+  },
+  "words": [
+   {
+    "w": "conserve",
+    "m": "to keep something safe from harm",
+    "miss": "The CCC worked to conserve Florida's forests. Conserve means…",
+    "say": "Conserve. To keep something safe from harm."
+   },
+   {
+    "w": "service",
+    "m": "work that helps other people",
+    "miss": "Soldiers gave wartime service. Service is…",
+    "say": "Service. Work that helps other people."
+   },
+   {
+    "w": "preserve",
+    "m": "to protect something so it lasts",
+    "miss": "A park can preserve old trees. Preserve means…",
+    "say": "Preserve. To protect something so it lasts."
+   },
+   {
+    "w": "reserve",
+    "m": "to keep something set aside for later",
+    "miss": "They reserve land for a park. Reserve means…",
+    "say": "Reserve. To keep something set aside for later."
+   }
+  ],
+  "boardT": "Kept safe",
+  "win": "🌲 The whole preserve is kept safe!"
+ },
+ "cabinet": {
+  "n": 10
+ },
+ "notes": {
+  "learned": [
+   "In 1929 the stock market crashed, starting the Great Depression. Florida's tourists stopped coming and many people lost their jobs, savings, and homes.",
+   "President Roosevelt's New Deal gave people work. The CCC built state parks and roads, and the WPA built schools and bridges.",
+   "In 1941 the United States entered World War II. Florida's warm, flat land was good for year-round training, so the military built bases like NAS Jacksonville, Eglin Field, and MacDill Field.",
+   "In 1942, enemy submarines sank ships off Florida's coast, so towns dimmed their lights at night.",
+   "Shipyards in Jacksonville, Tampa, and Panama City built ships. Women took factory jobs, and families used ration books and grew gardens.",
+   "After the war, soldiers came back to live in Florida, and the new roads, airfields, and factories helped Florida start to boom."
+  ],
+  "vocab": [
+   [
+    "stock market",
+    "the place where people buy and sell small pieces of companies"
+   ],
+   [
+    "Great Depression",
+    "a time starting in 1929 when many people lost their jobs and their savings"
+   ],
+   [
+    "New Deal",
+    "President Roosevelt's programs that gave people work in hard times"
+   ],
+   [
+    "Civilian Conservation Corps (CCC)",
+    "a New Deal program that hired young men to build parks and plant trees"
+   ],
+   [
+    "Works Progress Administration (WPA)",
+    "a New Deal program that paid workers to build schools, bridges, and buildings"
+   ],
+   [
+    "World War II",
+    "a war fought by countries all over the world, which the U.S. joined in 1941"
+   ],
+   [
+    "dimout",
+    "turning off or covering lights at night so ships at sea could not be seen"
+   ],
+   [
+    "U-boat",
+    "a German submarine"
+   ],
+   [
+    "ration book",
+    "a book of tickets that limited how much sugar, gas, or meat a family could buy"
+   ],
+   [
+    "shipyard",
+    "a place where ships are built"
+   ],
+   [
+    "conserve",
+    "to keep something safe from harm"
+   ],
+   [
+    "serv (word root)",
+    "to serve or keep safe"
+   ],
+   [
+    "service",
+    "work that helps other people"
+   ],
+   [
+    "preserve",
+    "to protect something so it lasts"
+   ],
+   [
+    "reserve",
+    "to keep something set aside for later"
+   ]
+  ],
+  "wordParts": "The Latin words servare (to keep safe) and servire (to serve) give us serv. You can find it in conserve, service, preserve and reserve."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what happened",
+    "rx": "tourist|visitor|stop|empty|hotel|job|jobless|unemploy|lost|lose|money|saving|home|poor|hungry|close|bust|crash|farm|work|broke",
+    "n": 1
+   },
+   {
+    "t": "the Depression",
+    "rx": "depress|1929|crash|hard times|hard|bust|boom|stock",
+    "n": 1
+   },
+   {
+    "t": "a detail",
+    "rx": "hotel|tourist|job|1929|1928|okeechobee|hurricane|saving|home|bank|money",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a program",
+    "rx": "new deal|ccc|civilian|conservation|wpa|works progress|roosevelt|program",
+    "n": 1
+   },
+   {
+    "t": "what it did",
+    "rx": "job|work|paid|pay|paycheck|built|build|park|road|school|bridge|tree|plant|help|hire",
+    "n": 1
+   },
+   {
+    "t": "a detail",
+    "rx": "ccc|wpa|park|road|school|bridge|tree|young men|1930|conserv",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a war change",
+    "rx": "base|shipyard|ship|navy|train|pilot|soldier|women|welder|factory|road|airfield|macdill|eglin|jacksonville|tampa|panama|war",
+    "n": 1
+   },
+   {
+    "t": "lasting / after",
+    "rx": "after|stay|settle|came back|come back|return|grew|grow|boom|modern|foundation|still|lasting|permanent|future|start",
+    "n": 1
+   },
+   {
+    "t": "a detail",
+    "rx": "macdill|eglin|jacksonville|tampa|panama|1941|1945|base|shipyard|airfield|road|submarine|u-?boat",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the beach you darkened and the start of Learn the Story.",
+   "What happened to tourists, hotels, and jobs when the Depression hit Florida?",
+   "Try this shape: “During the Depression, Florida ___. Many people ___.”"
+  ],
+  "journal-q2": [
+   "Look back at the New Deal part of Learn the Story (part 2).",
+   "Which program hired young men? Which built schools and bridges? What did workers get?",
+   "Try this shape: “The ___ gave people jobs. Workers built ___.”"
+  ],
+  "journal-q3": [
+   "Look back at the war parts of Learn the Story (parts 3, 4, and 5).",
+   "Think about bases, shipyards, and the soldiers who came back. What stayed after the war?",
+   "Try this shape: “World War II changed Florida because ___. After the war, ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which do you think hurt Florida most — losing tourists, or losing jobs? Why?",
+  "journal-q2": "Go further: why might a park built in the 1930s still matter long after the Depression ended?",
+  "journal-q3": "Go further: how could training bases turn into a reason Florida grew after the war?"
+ },
+ "quizMiss": [
+  {
+   "a": "People didn't take cheap vacations in the Depression — most had no money to travel. Reread the hard-times part.",
+   "c": "Tourism did not stay the same. Visitors stopped coming and hotels emptied. Reread the hard-times part."
+  },
+  {
+   "b": "The National Guard wasn't a New Deal work program. Reread the New Deal part.",
+   "c": "The Florida Highway Patrol didn't build the parks. The CCC did. Reread the New Deal part."
+  },
+  {
+   "a": "Florida is warm, not cold. Reread the war part: what about the weather helped training?",
+   "c": "Florida is far from Germany. Reread the war part: what about Florida's land and weather helped?"
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Lights out",
+   "at": "scene1",
+   "script": "When I was a kid, a storm once knocked out all the power on my street. For the first time, it was really dark, and really quiet. In 1942, Florida towns turned their own lights off on purpose, because the war had come close. Tap each light to turn it off, and watch the sea."
+  },
+  {
+   "slot": "guide2",
+   "label": "A ship on fire",
+   "at": "s1done",
+   "script": "Pause me for a second. Look out at the water. That glow is a ship on fire. In 1942, enemy submarines sank ships right off Florida, close enough to see from the beach. Say one word out loud for how that would feel. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One clearing",
+   "at": "explore",
+   "script": "In this story, we watch one Florida clearing over many years. Tap the button to open each part. First the hard times, then the workers who built a park, then the war. Watch the same clearing change each time."
+  },
+  {
+   "slot": "guide4",
+   "label": "Why Florida",
+   "at": "readmid",
+   "script": "Here's something that surprised me. Florida was so good for training pilots because it was warm and flat all year. Planes could fly almost every day. Look at the clearing now. A plane flies over the same spot where workers once built a park."
+  },
+  {
+   "slot": "guide5",
+   "label": "Built by hand",
+   "at": "evidence",
+   "script": "Look closely at the workers in this photo. They were paid by a New Deal program to build a shelter in a Florida park. When you visit a state park today, you are standing in something hands built almost a hundred years ago. Sort each card: did it help the worker then, or does it still help us now?"
+  },
+  {
+   "slot": "guide6",
+   "label": "Tell the comeback",
+   "at": "plan",
+   "script": "When I tell a comeback story, I say the hard part first, then what turned it around. Do the same here. Pick one hard time, then pick one comeback, like a New Deal park or a wartime shipyard. Then write how one led to the other in your own words."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^dark$",
+    "sel": ".spk-bocscene",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^lights$",
+    "sel": ".spk-boccards .lc",
+    "all": true,
+    "fx": "pop"
+   },
+   {
+    "at": "^Tap$",
+    "sel": ".spk-boccards .lc",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^sea$",
+    "sel": ".spk-bocscene .sea",
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^water$",
+    "sel": ".spk-bocscene .sea",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^glow$",
+    "sel": ".spk-bocscene .fire",
+    "fx": "pop"
+   },
+   {
+    "at": "^submarines$",
+    "sel": ".spk-bocscene .ship",
+    "fx": "glow"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^clearing$",
+    "sel": ".spk-ptxscene",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^button$",
+    "sel": ".spk-ptxctl",
+    "fx": "point"
+   },
+   {
+    "at": "^hard$",
+    "sel": ".spk-xform .steps li",
+    "i": 0,
+    "fx": "glow"
+   },
+   {
+    "at": "^war$",
+    "sel": ".spk-xform .steps li",
+    "i": 2,
+    "fx": "glow"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^warm$",
+    "sel": ".spk-ptxscene .sun",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^clearing$",
+    "sel": ".spk-ptxscene",
+    "fx": "reveal"
+   },
+   {
+    "at": "^plane$",
+    "sel": ".spk-xform .plane",
+    "fx": "pop"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^shelter$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"1\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-mhtray",
+    "fx": "point"
+   },
+   {
+    "at": "^worker$",
+    "sel": ".spk-mhbks .bk[data-b=\"worker\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^now$",
+    "sel": ".spk-mhbks .bk[data-b=\"community\"]",
+    "fx": "glow"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^hard$",
+    "sel": ".spk-cbk .fc.a",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^comeback$",
+    "sel": ".spk-cbk .fc.b",
+    "fx": "glow"
+   },
+   {
+    "at": "^led$",
+    "sel": ".spk-cbk .pin.mid",
+    "fx": "point"
+   }
+  ]
+ },
+ "cueWords": {}
+}
+</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,96 +2964,50 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Florida During the Great Depression and World War II ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A Florida pine clearing at dawn: an empty timber park shelter the jobless built, with training planes crossing the sky">
 <defs>
   <linearGradient id="h1007sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#8a8a8a"/>
-    <stop offset="60%" stop-color="#b5a995"/>
-    <stop offset="100%" stop-color="#c4b69c"/>
+    <stop offset="0%" stop-color="#2E4A6E"/>
+    <stop offset="45%" stop-color="#C98A5A"/>
+    <stop offset="100%" stop-color="#F3D9A6"/>
+  </linearGradient>
+  <linearGradient id="h1007grd" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#5E6B3A"/>
+    <stop offset="100%" stop-color="#3E4A28"/>
   </linearGradient>
   <style>
-    .h1007cloud { animation: h1007cloud 12s ease-in-out infinite; }
-    @keyframes h1007cloud { 0%,100% { transform: translateX(0); } 50% { transform: translateX(15px); } }
-    .h1007glow { animation: h1007glow 4s ease-in-out infinite; }
-    @keyframes h1007glow { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+    .h1007plane { animation: h1007fly 16s linear infinite; }
+    .h1007plane2 { animation: h1007fly 22s linear infinite; }
+    @keyframes h1007fly { 0% { transform: translateX(-60px); } 100% { transform: translateX(980px); } }
+    .h1007sun { animation: h1007glow 6s ease-in-out infinite; transform-origin:center; }
+    @keyframes h1007glow { 0%,100% { opacity:.75; } 50% { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) { .h1007plane,.h1007plane2,.h1007sun { animation: none; } }
   </style>
 </defs>
-<!-- sky -->
-<rect width="920" height="260" fill="url(#h1007sky)"/>
+<rect width="920" height="200" fill="url(#h1007sky)"/>
+<!-- dawn sun -->
+<circle class="h1007sun" cx="740" cy="70" r="30" fill="#FFE6A8" opacity=".9"/>
+<circle class="h1007sun" cx="740" cy="70" r="46" fill="#FFE6A8" opacity=".3"/>
+<!-- training planes crossing high -->
+<g class="h1007plane" fill="#2A3A52" opacity=".9"><g transform="translate(120,46)"><rect x="-13" y="-2" width="26" height="4" rx="2"/><rect x="-3" y="-8" width="6" height="16" rx="2"/><polygon points="13,-2 20,-4 20,4 13,2"/></g></g>
+<g class="h1007plane2" fill="#33425c" opacity=".85"><g transform="translate(60,78)"><rect x="-11" y="-2" width="22" height="3" rx="1.5"/><rect x="-2" y="-7" width="5" height="14" rx="2"/><polygon points="11,-2 17,-3 17,3 11,2"/></g></g>
 <!-- ground -->
-<rect x="0" y="180" width="920" height="80" fill="#8b7d6b"/>
-<rect x="0" y="185" width="920" height="75" fill="#7a6e5e"/>
-
-<!-- clouds -->
-<g transform="translate(80,30)">
-  <g class="h1007cloud">
-    <ellipse cx="0" cy="0" rx="50" ry="18" fill="#9e9e9e" opacity="0.5"/>
-    <ellipse cx="30" cy="-5" rx="35" ry="14" fill="#9e9e9e" opacity="0.4"/>
-  </g>
+<rect x="0" y="150" width="920" height="50" fill="url(#h1007grd)"/>
+<path d="M0,150 Q460,138 920,152 L920,164 L0,164 Z" fill="#6E7A44" opacity=".8"/>
+<!-- pines -->
+<g fill="#24451F"><path d="M54,150 L86,150 L70,78 L86,150 Z"/><rect x="67" y="138" width="6" height="18" fill="#4A3722"/><path d="M134,150 L166,150 L150,78 L166,150 Z"/><rect x="147" y="138" width="6" height="18" fill="#4A3722"/><path d="M824,150 L856,150 L840,78 L856,150 Z"/><rect x="837" y="138" width="6" height="18" fill="#4A3722"/><path d="M864,150 L896,150 L880,78 L896,150 Z"/><rect x="877" y="138" width="6" height="18" fill="#4A3722"/></g>
+<!-- saw palmetto -->
+<g fill="none" stroke="#2F7B47" stroke-width="4" stroke-linecap="round"><path d="M250,150 q-2,-16 0,-30 M250,124 q-14,-4 -22,2 M250,124 q14,-4 22,2 M250,124 q-6,-12 -2,-22 M250,124 q6,-12 2,-22"/><path d="M320,150 q-2,-16 0,-30 M320,124 q-14,-4 -22,2 M320,124 q14,-4 22,2 M320,124 q-6,-12 -2,-22 M320,124 q6,-12 2,-22"/><path d="M610,150 q-2,-16 0,-30 M610,124 q-14,-4 -22,2 M610,124 q14,-4 22,2 M610,124 q-6,-12 -2,-22 M610,124 q6,-12 2,-22"/><path d="M690,150 q-2,-16 0,-30 M690,124 q-14,-4 -22,2 M690,124 q14,-4 22,2 M690,124 q-6,-12 -2,-22 M690,124 q6,-12 2,-22"/></g>
+<!-- empty timber park shelter (no walls, no people) -->
+<g stroke="#6B4A26" stroke-width="7" stroke-linejoin="round" fill="none">
+  <path d="M400,96 L470,56 L540,96"/>
+  <line x1="410" y1="96" x2="410" y2="150"/>
+  <line x1="470" y1="66" x2="470" y2="150"/>
+  <line x1="530" y1="96" x2="530" y2="150"/>
 </g>
-<g transform="translate(600,50)">
-  <g class="h1007cloud">
-    <ellipse cx="0" cy="0" rx="60" ry="20" fill="#a0a0a0" opacity="0.45"/>
-    <ellipse cx="-25" cy="-6" rx="30" ry="12" fill="#a0a0a0" opacity="0.35"/>
-  </g>
-</g>
-
-<!-- boarded-up building (Depression) -->
-<rect x="60" y="100" width="120" height="80" fill="#6b5e50"/>
-<rect x="65" y="105" width="110" height="70" fill="#5e5245"/>
-<!-- boarded windows -->
-<rect x="75" y="115" width="25" height="30" fill="#4a3f35"/>
-<line x1="75" y1="115" x2="100" y2="145" stroke="#6b5e50" stroke-width="3"/>
-<line x1="100" y1="115" x2="75" y2="145" stroke="#6b5e50" stroke-width="3"/>
-<rect x="115" y="115" width="25" height="30" fill="#4a3f35"/>
-<line x1="115" y1="115" x2="140" y2="145" stroke="#6b5e50" stroke-width="3"/>
-<line x1="140" y1="115" x2="115" y2="145" stroke="#6b5e50" stroke-width="3"/>
-<!-- door boarded -->
-<rect x="100" y="150" width="20" height="25" fill="#4a3f35"/>
-<line x1="100" y1="150" x2="120" y2="175" stroke="#6b5e50" stroke-width="2"/>
-<!-- roof -->
-<polygon points="55,100 120,75 185,100" fill="#5a4e42"/>
-
-<!-- WPA/CCC structure (stone bridge/arch) -->
-<rect x="340" y="140" width="140" height="40" fill="#807060"/>
-<rect x="345" y="145" width="130" height="30" fill="#70634f"/>
-<!-- arch -->
-<path d="M380,180 Q410,155 440,180" fill="#5e5245" stroke="#807060" stroke-width="2"/>
-<!-- stone texture lines -->
-<line x1="350" y1="155" x2="380" y2="155" stroke="#8a7d6b" stroke-width="1" opacity="0.5"/>
-<line x1="390" y1="150" x2="430" y2="150" stroke="#8a7d6b" stroke-width="1" opacity="0.5"/>
-<line x1="440" y1="160" x2="470" y2="160" stroke="#8a7d6b" stroke-width="1" opacity="0.5"/>
-
-<!-- military base gate -->
-<rect x="620" y="110" width="10" height="70" fill="#5b6b50"/>
-<rect x="780" y="110" width="10" height="70" fill="#5b6b50"/>
-<!-- gate top bar -->
-<rect x="618" y="108" width="175" height="8" fill="#5b6b50"/>
-<!-- gate arch sign area -->
-<path d="M630,116 Q705,90 780,116" fill="none" stroke="#6b7b60" stroke-width="3"/>
-<!-- star on gate -->
-<polygon points="705,100 708,108 716,108 710,113 712,121 705,117 698,121 700,113 694,108 702,108" fill="#8b9b70" opacity="0.7"/>
-<!-- fence lines -->
-<line x1="650" y1="116" x2="650" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="670" y1="116" x2="670" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="690" y1="116" x2="690" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="710" y1="116" x2="710" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="730" y1="116" x2="730" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="750" y1="116" x2="750" y2="180" stroke="#5b6b50" stroke-width="3"/>
-<line x1="770" y1="116" x2="770" y2="180" stroke="#5b6b50" stroke-width="3"/>
-
-<!-- lantern with glow -->
-<g transform="translate(270,150)">
-  <g class="h1007glow">
-    <circle cx="0" cy="0" r="12" fill="#d4a840" opacity="0.3"/>
-    <circle cx="0" cy="0" r="6" fill="#e8c44a" opacity="0.6"/>
-    <rect x="-3" y="-10" width="6" height="5" fill="#5a4e42"/>
-    <rect x="-4" y="-5" width="8" height="12" fill="#d4a840" opacity="0.5" rx="1"/>
-  </g>
-</g>
-
-<!-- dirt path -->
-<path d="M0,210 Q200,200 460,215 Q700,225 920,205" fill="none" stroke="#6b5e50" stroke-width="2" opacity="0.4"/>
+<path d="M398,96 L470,52 L542,96 Z" fill="#7A3B2A" opacity=".55" stroke="#6B4A26" stroke-width="3"/>
+<!-- coquina piers -->
+<g fill="#C9BE9A" stroke="#9A8A5A" stroke-width="1.5"><rect x="401" y="146" width="20" height="12" rx="2"/><rect x="461" y="146" width="20" height="12" rx="2"/><rect x="521" y="146" width="20" height="12" rx="2"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -2158,9 +3054,9 @@ body.tx-active .tx-toggle-label {
     <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
   </div>
   <div class="canvas-sticky-body">
-    <p>I found two difficult files from Florida's modern history — one about economic hardship and one about wartime service. They're tangled together, and I need your help connecting both of them to Florida. These stories shaped families, communities, and the whole state.</p>
+    <p>Last time, those shiny new land doors popped up too fast, then half of them vanished. Now the lights in here just dimmed, like someone is saving power. I pulled a file on Florida’s hardest years — the Great Depression and World War II. Help me connect it to Florida, and I think a way out will start to show.</p>
   </div>
-  <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 10</div>
+  <div class="canvas-sticky-byline">— Your teacher, still stuck inside Canvas</div>
 </div>
 
 <!-- ═══ INTRO SECTION (collapsible) ═══ -->
@@ -2280,19 +3176,19 @@ body.tx-active .tx-toggle-label {
 
   <div class="callout callout-info">
     <div class="callout-icon">📜</div>
-    <p><strong>Your Role Today:</strong> You are a <strong>Economic and Wartime Historian</strong> on the student research team. You study how hard times and war changed the places where people lived and worked.</p>
+    <p><strong>Your Role Today:</strong> You are an <strong>Economic and Wartime Historian</strong> on the student research team. You study how hard times and war changed the places where people lived and worked.</p>
   </div>
 
   <!-- ═══ SHOW OR MAKE FILE CARD ═══ -->
   <div class="canvas-file-card" data-tab="FLORIDA FILE · 4.10.07">
     <div class="canvas-file-card-head">
       <span class="canvas-file-card-head-icon">🗂️</span>
-      <span class="canvas-file-card-head-text">The Hardship-and-Service File</span>
+      <span class="canvas-file-card-head-text">Blackout on the Florida Coast</span>
     </div>
     <div class="canvas-file-card-body">
-      <p>This file holds clues about economic collapse, New Deal projects, military bases, and home-front life in Florida. Piece together how the Depression and WWII reshaped the state.</p>
+      <p>It is 1942, and the Florida coast has gone dark at night. Turn off the lights along the beach the way Florida really did, and find out why the war came so close to home.</p>
       <div class="canvas-file-card-visual">
-        <p style="font-size:14px;color:#6E5215;padding:12px;">📂 This file holds clues about economic collapse, New Deal projects, military bases, and home-front life in Florida. Piece together how the Depression and WWII reshaped the state.</p>
+        <p style="font-size:14px;color:#6E5215;padding:12px;">📂 It is 1942, and the Florida coast has gone dark at night. Turn off the lights along the beach the way Florida really did, and find out why the war came so close to home.</p>
       </div>
     </div>
   </div>
@@ -2353,11 +3249,11 @@ body.tx-active .tx-toggle-label {
       </div>
     </div>
     <div class="activity-body">
-      <p>When the stock market crashed in 1929, Florida was already struggling. The land boom of the 1920s had gone bust, and a devastating hurricane in 1928 had destroyed communities around Lake Okeechobee. Now the Great Depression made everything worse. Tourism dried up. Hotels stood empty. Thousands of Floridians lost their jobs, their savings, and their homes.</p>
-      <p>President Franklin Roosevelt’s New Deal brought relief programs to Florida. The Civilian Conservation Corps (CCC) put young men to work building state parks, planting trees, and improving roads. The Works Progress Administration (WPA) hired workers to construct public buildings, bridges, and schools. These programs didn’t end the Depression, but they gave families income and built infrastructure Florida still uses today.</p>
-      <p>When the United States entered World War II in 1941, Florida’s geography made it a perfect training ground. The military built or expanded dozens of bases across the state. NAS Jacksonville trained naval aviators. Eglin Field in the Panhandle tested weapons and trained bomber crews. MacDill Field near Tampa became a major Army Air Forces base. Florida’s warm weather and flat land made year-round training possible.</p>
-      <p>Shipyards in Jacksonville, Tampa, and Panama City built vessels for the Navy. Women stepped into factory jobs, welding hulls and assembling equipment. Back home, families planted victory gardens, collected scrap metal, and used ration books for sugar, gasoline, and meat. Everyone contributed to the war effort.</p>
-      <p>The war changed Florida permanently. Military families who trained in the state came back after the war to settle down. New roads, airfields, and industries built for wartime became the foundation for peacetime growth. Florida went from a struggling agricultural state to one on the edge of a modern boom.</p>
+      <p><strong>Hard times hit Florida.</strong> In 1929, the stock market crashed. The stock market is where people buy and sell small pieces of companies. When it crashed, people all over the country lost their money. This started the <strong>Great Depression</strong>, a time when many people lost their jobs and their savings. Florida was already hurting: its land boom had gone bust, and a terrible hurricane in 1928 had flooded towns around Lake Okeechobee. Now tourists stopped coming. Hotels sat empty. Thousands of Floridians lost their jobs, their savings, and their homes.</p>
+      <p><strong>New Deal jobs came to Florida.</strong> President Franklin Roosevelt started programs called the <strong>New Deal</strong> to help people find work. The <strong>Civilian Conservation Corps</strong>, or CCC, hired young men to build state parks, plant trees, and fix roads. (To <em>conserve</em> means to keep something safe.) The <strong>Works Progress Administration</strong>, or WPA, paid workers to build schools, bridges, and other public buildings. These programs did not end the Depression, but they gave families a paycheck, and Florida still uses the parks and roads they built.</p>
+      <p><strong>A nation at war changed everything.</strong> In 1941, the United States entered <strong>World War II</strong>, a war fought by countries all over the world. Florida’s warm weather and flat land were perfect for training soldiers and pilots all year long. The military built dozens of bases: NAS Jacksonville trained Navy pilots, Eglin Field in the Panhandle tested weapons, and MacDill Field near Tampa was a big Army airfield. The war even reached Florida’s coast: in 1942, enemy submarines sank ships close to shore.</p>
+      <p><strong>The home front worked hard too.</strong> Shipyards (places where ships are built) in Jacksonville, Tampa, and Panama City built ships for the Navy. With so many men away at war, <strong>women</strong> stepped into the factory jobs, welding steel and putting equipment together. At home, families grew gardens to raise their own food, saved scrap metal, and used <strong>ration books</strong> (books of tickets that limited how much sugar, gas, and meat each family could buy). Everyone helped.</p>
+      <p><strong>What the hard years built.</strong> When the war ended, many soldiers who had trained in Florida came back to live there. The new roads, airfields, and factories built for the war became the start of something bigger. Florida had gone from a struggling farm state to a state ready to boom. The hard years had built the foundation for the modern Florida we know today.</p>
     </div>
   </div>
 
@@ -2383,22 +3279,21 @@ body.tx-active .tx-toggle-label {
       <div class="source-card-header-icon">📜</div>
       <div>
         <div class="source-card-header-label">Source Study</div>
-        <div class="source-card-header-title">A WPA Project in Florida</div>
+        <div class="source-card-header-title">A New Deal Work Project in Florida</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-10-07-depression-wpa">
+    <div class="source-image-placeholder" data-image="source-4-10-07-ccc-park-shelter">
       <div class="source-image-placeholder-text">
-        A black-and-white photograph showing WPA workers constructing a public building in Florida during the 1930s, with tools, scaffolding, and a partly finished stone wall visible.<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-4-10-07-depression-wpa.png</code>
+        A real black-and-white photograph of New Deal workers building a wooden shelter in a Florida state park in the 1930s. They raise a timber roof, lay a stone pier, and work with hand tools in the pine woods.
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Enter the Scene</span> · Historical photograph, circa 1935
+        <span class="src-type">Primary source</span> · New Deal workers building a shelter in a Florida state park, 1930s
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> What are the workers building, and what tools or materials can you see?</p>
+        <p><strong>What do I see?</strong> Use the numbered labels. What are the workers building, and what tools or materials can you see?</p>
       </div>
       <div class="callout callout-think">
         <div class="callout-icon">💭</div>
@@ -2438,6 +3333,45 @@ body.tx-active .tx-toggle-label {
     <div class="owl-buddy-bubble">
       <div class="owl-buddy-name">🌴 Opti says…</div>
       Tough times test communities — but they also reveal what people can build together. Florida’s Depression and wartime story is one of hardship, courage, and transformation.
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- ✏️ WORD ROOTS — Latin serv (to serve / keep safe). Added Nov 2026; the planning table lists no root for this lesson. -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">🔤</div>
+      <div>
+        <div class="activity-title">Word Roots</div>
+        <div class="activity-sub">Latin Root: serv — "to serve or keep safe"</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The Latin words <strong>servare</strong> ("to keep safe") and <strong>servire</strong> ("to serve") give us the root <strong>serv</strong>. You can find it in many English words. The Civilian Con<strong>serv</strong>ation Corps kept Florida’s forests safe, and soldiers gave wartime <strong>serv</strong>ice.</p>
+      <div class="callout callout-vocab">
+        <div class="callout-icon">📖</div>
+        <p><strong>conserve</strong> · to keep something safe from harm · <strong>service</strong> · work that helps other people · <strong>preserve</strong> · to protect something so it lasts · <strong>reserve</strong> · to keep something set aside for later</p>
+      </div>
+
+      <!-- Root Match Game -->
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">conserve</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">to protect something so it lasts</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">service</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">to keep something set aside for later</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">preserve</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">to keep something safe from harm</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">reserve</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">work that helps other people</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! You know your roots.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+The word conserve comes from Latin con- ("together") and servare ("to keep safe"). The Civilian Conservation Corps kept Florida’s forests and springs safe, and built the very first Florida state parks — parks families still visit today.
+        </div>
+      </div>
     </div>
   </div>
 
@@ -3574,5 +4508,8 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
