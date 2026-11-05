@@ -1784,8 +1784,7 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
-<script type="application/json" id="ff-data">
-{
+<script type="application/json" id="ff-data">{
  "lesson": "4.10.07",
  "title": "Florida During the Great Depression and World War II",
  "quiet": false,
@@ -2101,8 +2100,8 @@ body.tx-active .tx-toggle-label {
    "voice": "First, tap the gold numbers on the photo. Then sort each card: did it help the worker right away, or does it still help the community today?",
    "why": {
     "icon": "🏞️",
-    "q": "Why a park shelter?",
-    "t": "The men in this photo were paid by a New Deal program to build a shelter in a Florida state park. It gave them a job when work was hard to find, and it gave Florida a park families still visit. That's why you sort what it did: some things helped the worker right away, and some still help everyone today."
+    "q": "Why a camp building?",
+    "t": "The men in this photo worked for the CCC, a New Deal program that paid young men to work outdoors. In July 1935 they were building a dining hall at a forestry camp in north Florida. In 1940 that camp became O’Leno State Park, one of Florida’s first state parks, and many of the buildings they made are still there. That’s why you sort what it did: some things helped the worker right away, and some still help everyone today."
    },
    "baskets": [
     {
@@ -2147,10 +2146,10 @@ body.tx-active .tx-toggle-label {
     },
     {
      "id": "shelter",
-     "t": "A shelter that still stands",
+     "t": "Park buildings that still stand",
      "b": "community",
-     "why": "families use it now",
-     "miss": "Families still use the shelter today. Which basket is that?"
+     "why": "many are still in use",
+     "miss": "Many CCC buildings are still in the park today. Which basket is that?"
     },
     {
      "id": "roads",
@@ -2166,7 +2165,7 @@ body.tx-active .tx-toggle-label {
      {
       "id": "only",
       "t": "Only the workers",
-      "miss": "Look at your community basket. The park and shelter are still here. Try again."
+      "miss": "Look at your community basket. The park and its buildings are still here. Try again."
      },
      {
       "id": "both",
@@ -2183,7 +2182,7 @@ body.tx-active .tx-toggle-label {
    "countT": "sorted. Tap a card, then tap the basket it belongs in.",
    "hotT": "Last step: tap every gold number on the photo above.",
    "readT": "Last step: finish Learn the Story at the top of this tab.",
-   "win": "🏞️ <b>It helped both!</b> The New Deal gave workers a paycheck when jobs were scarce, and it built parks, shelters, and roads that Florida families still use today. Hard times built things that lasted. Now read the three questions below."
+   "win": "🏞️ <b>It helped both!</b> The New Deal gave workers a paycheck when jobs were scarce, and it built parks, buildings, and roads that Florida families still use today. Hard times built things that lasted. Now read the three questions below."
   },
   "directive": {
    "k": "What to do here",
@@ -2201,38 +2200,38 @@ body.tx-active .tx-toggle-label {
   "hotspots": [
    {
     "n": "1",
-    "x": 82,
-    "y": 15,
-    "title": "A worker on the roof beam.",
-    "t": "A man kneels on the very top beam, nailing down the roof boards by hand."
+    "x": 81,
+    "y": 21,
+    "title": "A worker up on the wall.",
+    "t": "At the top right, a CCC worker stands up on the logs to set the next log in place."
    },
    {
     "n": "2",
-    "x": 50,
-    "y": 26,
-    "title": "The timber frame.",
-    "t": "The shelter is built from logs and posts, cut and raised by the workers themselves."
+    "x": 40,
+    "y": 52,
+    "title": "Log walls.",
+    "t": "Workers notched the ends of long logs and stacked them to make thick walls."
    },
    {
     "n": "3",
-    "x": 73,
-    "y": 72,
-    "title": "A stone pier.",
-    "t": "Workers stack stone to make a low base, called a pier, for the building to sit on."
+    "x": 58,
+    "y": 55,
+    "title": "A stone chimney.",
+    "t": "In the middle, a tall chimney made of stacked stone is going up between the log walls."
    },
    {
     "n": "4",
-    "x": 50,
-    "y": 62,
-    "title": "A worker with a shovel.",
-    "t": "A man rests on his shovel. Simple hand tools, like shovels and saws, did most of the work."
+    "x": 11,
+    "y": 75,
+    "title": "A pile of rock.",
+    "t": "Rocks are piled up, ready to use. Moving them took a lot of muscle."
    },
    {
     "n": "5",
-    "x": 9,
-    "y": 52,
-    "title": "The Florida pine woods.",
-    "t": "Saw palmetto and tall pines show this is a Florida park, out in the woods."
+    "x": 14,
+    "y": 20,
+    "title": "North Florida woods.",
+    "t": "Tall trees hung with Spanish moss. This camp was in the woods by the Santa Fe River."
    }
   ]
  },
@@ -2553,6 +2552,25 @@ body.tx-active .tx-toggle-label {
    "script": "When I was a kid, a storm once knocked out all the power on my street. For the first time, it was really dark, and really quiet. In 1942, Florida towns turned their own lights off on purpose, because the war had come close. Tap each light to turn it off, and watch the sea."
   },
   {
+   "label": "The Navy's log",
+   "at": "s1done",
+   "parts": [
+    {
+     "slot": "guide2a",
+     "script": "That fire really happened, on April 10, 1942. The U.S. Navy kept a war diary, a record of every attack, hour by hour. Here are two real lines from that night. Sub means submarine, and a tanker is a ship that carries oil."
+    },
+    {
+     "slot": "guide2b",
+     "who": "U.S. Navy, Eastern Sea Frontier war diary, April 10, 1942",
+     "script": "Coast Guard Jacksonville Beach saw sub shelling ship. Bomber pilots reported large explosion same place. S.S. Gulf America, U.S. tanker, torpedoed approximately eight miles south St. John's Light."
+    },
+    {
+     "slot": "guide2c",
+     "script": "Notice how short those lines are. No feelings, just facts. St. John's Light marked the mouth of the St. Johns River, near Jacksonville. People standing on the beach could see this ship burn."
+    }
+   ]
+  },
+  {
    "slot": "guide2",
    "label": "A ship on fire",
    "at": "s1done",
@@ -2574,7 +2592,7 @@ body.tx-active .tx-toggle-label {
    "slot": "guide5",
    "label": "Built by hand",
    "at": "evidence",
-   "script": "Look closely at the workers in this photo. They were paid by a New Deal program to build a shelter in a Florida park. When you visit a state park today, you are standing in something hands built almost a hundred years ago. Sort each card: did it help the worker then, or does it still help us now?"
+   "script": "Look closely at this photo from July 1935. CCC workers are building a big dining hall at a camp in north Florida. Find the worker up on the log wall. In 1940 that camp became O'Leno State Park, and many of the buildings are still there. Sort each card: did it help the worker then, or does it still help us now?"
   },
   {
    "slot": "guide6",
@@ -2684,9 +2702,15 @@ body.tx-active .tx-toggle-label {
     "scroll": true
    },
    {
-    "at": "^shelter$",
+    "at": "^wall$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "pop",
+    "tag": "1935"
+   },
+   {
+    "at": "^buildings$",
     "sel": ".source-image-placeholder .spk-hot[data-i=\"1\"]",
-    "fx": "pop"
+    "fx": "glow"
    },
    {
     "at": "^card$",
@@ -2720,6 +2744,58 @@ body.tx-active .tx-toggle-label {
     "at": "^led$",
     "sel": ".spk-cbk .pin.mid",
     "fx": "point"
+   }
+  ],
+  "guide2a": [
+   {
+    "at": "^fire$",
+    "sel": ".spk-bocscene .fire",
+    "fx": "glow"
+   },
+   {
+    "at": "^diary$",
+    "sel": ".spk-bocscene",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^tanker$",
+    "sel": ".spk-bocscene .ship",
+    "fx": "pop"
+   }
+  ],
+  "guide2b": [
+   {
+    "at": "^Beach$",
+    "sel": ".spk-bocscene .beach",
+    "fx": "glow"
+   },
+   {
+    "at": "^explosion$",
+    "sel": ".spk-bocscene .fire",
+    "fx": "pop"
+   },
+   {
+    "at": "^torpedoed$",
+    "sel": ".spk-bocscene .ship",
+    "fx": "glow"
+   }
+  ],
+  "guide2c": [
+   {
+    "at": "^facts$",
+    "sel": ".spk-bocfact",
+    "fx": "glow"
+   },
+   {
+    "at": "^River$",
+    "sel": ".spk-bocscene .sea",
+    "fx": "glow"
+   },
+   {
+    "at": "^burn$",
+    "sel": ".spk-bocscene .fire",
+    "fx": "pop"
    }
   ]
  },
@@ -3677,303 +3753,6 @@ body.tx-active .tx-toggle-label {
     "park."
    ]
   ],
-  "guide5": [
-   [
-    0,
-    0.24,
-    "Look"
-   ],
-   [
-    0.32,
-    0.8,
-    "closely"
-   ],
-   [
-    0.88,
-    0.96,
-    "at"
-   ],
-   [
-    1,
-    1.04,
-    "the"
-   ],
-   [
-    1.12,
-    1.52,
-    "workers"
-   ],
-   [
-    1.56,
-    1.6,
-    "in"
-   ],
-   [
-    1.68,
-    1.84,
-    "this"
-   ],
-   [
-    1.92,
-    2.6,
-    "photo."
-   ],
-   [
-    2.88,
-    2.96,
-    "They"
-   ],
-   [
-    3.04,
-    3.12,
-    "were"
-   ],
-   [
-    3.2,
-    3.44,
-    "paid"
-   ],
-   [
-    3.52,
-    3.68,
-    "by"
-   ],
-   [
-    3.72,
-    3.76,
-    "a"
-   ],
-   [
-    3.84,
-    4,
-    "New"
-   ],
-   [
-    4.08,
-    4.32,
-    "Deal"
-   ],
-   [
-    4.4,
-    4.88,
-    "program"
-   ],
-   [
-    4.96,
-    5.12,
-    "to"
-   ],
-   [
-    5.24,
-    5.36,
-    "build"
-   ],
-   [
-    5.4,
-    5.44,
-    "a"
-   ],
-   [
-    5.52,
-    5.92,
-    "shelter"
-   ],
-   [
-    6,
-    6.08,
-    "in"
-   ],
-   [
-    6.12,
-    6.16,
-    "a"
-   ],
-   [
-    6.24,
-    6.56,
-    "Florida"
-   ],
-   [
-    6.64,
-    7.36,
-    "park."
-   ],
-   [
-    7.68,
-    7.84,
-    "When"
-   ],
-   [
-    7.92,
-    8,
-    "you"
-   ],
-   [
-    8.08,
-    8.32,
-    "visit"
-   ],
-   [
-    8.36,
-    8.4,
-    "a"
-   ],
-   [
-    8.48,
-    8.72,
-    "state"
-   ],
-   [
-    8.8,
-    8.96,
-    "park"
-   ],
-   [
-    9.04,
-    9.76,
-    "today,"
-   ],
-   [
-    9.84,
-    9.92,
-    "you"
-   ],
-   [
-    10,
-    10.16,
-    "are"
-   ],
-   [
-    10.36,
-    10.56,
-    "standing"
-   ],
-   [
-    10.64,
-    10.72,
-    "in"
-   ],
-   [
-    10.92,
-    11.12,
-    "something"
-   ],
-   [
-    11.28,
-    11.6,
-    "hands"
-   ],
-   [
-    11.68,
-    12,
-    "built"
-   ],
-   [
-    12.08,
-    12.48,
-    "almost"
-   ],
-   [
-    12.56,
-    12.72,
-    "a"
-   ],
-   [
-    12.8,
-    13.12,
-    "hundred"
-   ],
-   [
-    13.2,
-    13.44,
-    "years"
-   ],
-   [
-    13.52,
-    14.32,
-    "ago."
-   ],
-   [
-    14.8,
-    15.04,
-    "Sort"
-   ],
-   [
-    15.12,
-    15.36,
-    "each"
-   ],
-   [
-    15.44,
-    16.16,
-    "card:"
-   ],
-   [
-    16.48,
-    16.56,
-    "did"
-   ],
-   [
-    16.64,
-    16.72,
-    "it"
-   ],
-   [
-    16.84,
-    16.96,
-    "help"
-   ],
-   [
-    17,
-    17.04,
-    "the"
-   ],
-   [
-    17.12,
-    17.44,
-    "worker"
-   ],
-   [
-    17.52,
-    18.16,
-    "then,"
-   ],
-   [
-    18.24,
-    18.32,
-    "or"
-   ],
-   [
-    18.4,
-    18.48,
-    "does"
-   ],
-   [
-    18.56,
-    18.64,
-    "it"
-   ],
-   [
-    18.8,
-    19.04,
-    "still"
-   ],
-   [
-    19.12,
-    19.28,
-    "help"
-   ],
-   [
-    19.36,
-    19.52,
-    "us"
-   ],
-   [
-    19.6,
-    20.24,
-    "now?"
-   ]
-  ],
   "guide6": [
    [
     0,
@@ -4225,10 +4004,847 @@ body.tx-active .tx-toggle-label {
     17.84,
     "words."
    ]
+  ],
+  "guide2a": [
+   [
+    0.0,
+    0.21,
+    "That"
+   ],
+   [
+    0.24,
+    0.64,
+    "fire"
+   ],
+   [
+    0.72,
+    1.28,
+    "really"
+   ],
+   [
+    1.36,
+    2.16,
+    "happened,"
+   ],
+   [
+    2.24,
+    2.32,
+    "on"
+   ],
+   [
+    2.4,
+    2.64,
+    "April"
+   ],
+   [
+    2.8,
+    3.28,
+    "10,"
+   ],
+   [
+    3.36,
+    4.96,
+    "1942."
+   ],
+   [
+    5.0,
+    5.04,
+    "The"
+   ],
+   [
+    5.2,
+    5.44,
+    "U.S."
+   ],
+   [
+    5.6,
+    5.84,
+    "Navy"
+   ],
+   [
+    5.92,
+    6.08,
+    "kept"
+   ],
+   [
+    6.16,
+    6.24,
+    "a"
+   ],
+   [
+    6.32,
+    6.48,
+    "war"
+   ],
+   [
+    6.56,
+    7.36,
+    "diary,"
+   ],
+   [
+    7.4,
+    7.44,
+    "a"
+   ],
+   [
+    7.52,
+    7.84,
+    "record"
+   ],
+   [
+    7.92,
+    8.16,
+    "of"
+   ],
+   [
+    8.24,
+    8.48,
+    "every"
+   ],
+   [
+    8.56,
+    9.36,
+    "attack,"
+   ],
+   [
+    9.52,
+    9.68,
+    "hour"
+   ],
+   [
+    9.84,
+    10.0,
+    "by"
+   ],
+   [
+    10.08,
+    10.8,
+    "hour."
+   ],
+   [
+    11.12,
+    11.36,
+    "Here"
+   ],
+   [
+    11.44,
+    11.68,
+    "are"
+   ],
+   [
+    11.8,
+    11.92,
+    "two"
+   ],
+   [
+    12.08,
+    12.32,
+    "real"
+   ],
+   [
+    12.4,
+    12.8,
+    "lines"
+   ],
+   [
+    12.88,
+    12.96,
+    "from"
+   ],
+   [
+    13.04,
+    13.2,
+    "that"
+   ],
+   [
+    13.28,
+    13.96,
+    "night."
+   ],
+   [
+    14.32,
+    14.72,
+    "Sub"
+   ],
+   [
+    14.88,
+    15.12,
+    "means"
+   ],
+   [
+    15.28,
+    16.24,
+    "submarine,"
+   ],
+   [
+    16.32,
+    16.4,
+    "and"
+   ],
+   [
+    16.44,
+    16.48,
+    "a"
+   ],
+   [
+    16.56,
+    17.12,
+    "tanker"
+   ],
+   [
+    17.2,
+    17.28,
+    "is"
+   ],
+   [
+    17.36,
+    17.44,
+    "a"
+   ],
+   [
+    17.52,
+    17.68,
+    "ship"
+   ],
+   [
+    17.76,
+    17.92,
+    "that"
+   ],
+   [
+    18.0,
+    18.32,
+    "carries"
+   ],
+   [
+    18.48,
+    19.12,
+    "oil."
+   ]
+  ],
+  "guide2b": [
+   [
+    0.0,
+    0.24,
+    "Coast"
+   ],
+   [
+    0.32,
+    0.56,
+    "Guard"
+   ],
+   [
+    0.64,
+    1.28,
+    "Jacksonville"
+   ],
+   [
+    1.36,
+    1.68,
+    "Beach"
+   ],
+   [
+    1.76,
+    2.0,
+    "saw"
+   ],
+   [
+    2.16,
+    2.32,
+    "sub"
+   ],
+   [
+    2.4,
+    2.72,
+    "shelling"
+   ],
+   [
+    2.8,
+    3.32,
+    "ship."
+   ],
+   [
+    3.52,
+    3.76,
+    "Bomber"
+   ],
+   [
+    3.92,
+    4.24,
+    "pilots"
+   ],
+   [
+    4.32,
+    4.72,
+    "reported"
+   ],
+   [
+    4.88,
+    5.12,
+    "large"
+   ],
+   [
+    5.2,
+    5.92,
+    "explosion"
+   ],
+   [
+    6.08,
+    6.32,
+    "same"
+   ],
+   [
+    6.4,
+    6.88,
+    "place."
+   ],
+   [
+    7.52,
+    7.76,
+    "S.S."
+   ],
+   [
+    7.84,
+    8.08,
+    "Gulf"
+   ],
+   [
+    8.16,
+    8.88,
+    "America,"
+   ],
+   [
+    8.96,
+    9.2,
+    "U.S."
+   ],
+   [
+    9.36,
+    9.92,
+    "tanker,"
+   ],
+   [
+    10.04,
+    10.48,
+    "torpedoed"
+   ],
+   [
+    10.56,
+    11.2,
+    "approximately"
+   ],
+   [
+    11.36,
+    11.52,
+    "eight"
+   ],
+   [
+    11.6,
+    12.0,
+    "miles"
+   ],
+   [
+    12.08,
+    12.4,
+    "south"
+   ],
+   [
+    12.64,
+    12.8,
+    "St."
+   ],
+   [
+    12.88,
+    13.2,
+    "John's"
+   ],
+   [
+    13.28,
+    13.84,
+    "Light."
+   ]
+  ],
+  "guide2c": [
+   [
+    0.0,
+    0.4,
+    "Notice"
+   ],
+   [
+    0.48,
+    0.56,
+    "how"
+   ],
+   [
+    0.8,
+    1.04,
+    "short"
+   ],
+   [
+    1.16,
+    1.28,
+    "those"
+   ],
+   [
+    1.36,
+    1.6,
+    "lines"
+   ],
+   [
+    1.68,
+    2.16,
+    "are."
+   ],
+   [
+    2.4,
+    2.56,
+    "No"
+   ],
+   [
+    2.64,
+    3.44,
+    "feelings,"
+   ],
+   [
+    3.52,
+    3.68,
+    "just"
+   ],
+   [
+    3.76,
+    4.32,
+    "facts."
+   ],
+   [
+    5.12,
+    5.36,
+    "St."
+   ],
+   [
+    5.44,
+    5.76,
+    "John's"
+   ],
+   [
+    5.84,
+    6.16,
+    "Light"
+   ],
+   [
+    6.32,
+    6.56,
+    "marked"
+   ],
+   [
+    6.64,
+    6.72,
+    "the"
+   ],
+   [
+    6.8,
+    7.04,
+    "mouth"
+   ],
+   [
+    7.12,
+    7.2,
+    "of"
+   ],
+   [
+    7.24,
+    7.28,
+    "the"
+   ],
+   [
+    7.36,
+    7.6,
+    "St."
+   ],
+   [
+    7.68,
+    8.0,
+    "Johns"
+   ],
+   [
+    8.16,
+    8.48,
+    "River,"
+   ],
+   [
+    8.56,
+    8.64,
+    "near"
+   ],
+   [
+    8.8,
+    9.52,
+    "Jacksonville."
+   ],
+   [
+    10.08,
+    10.4,
+    "People"
+   ],
+   [
+    10.48,
+    10.8,
+    "standing"
+   ],
+   [
+    10.88,
+    10.96,
+    "on"
+   ],
+   [
+    11.0,
+    11.04,
+    "the"
+   ],
+   [
+    11.12,
+    11.44,
+    "beach"
+   ],
+   [
+    11.52,
+    11.76,
+    "could"
+   ],
+   [
+    11.84,
+    12.0,
+    "see"
+   ],
+   [
+    12.08,
+    12.24,
+    "this"
+   ],
+   [
+    12.32,
+    12.56,
+    "ship"
+   ],
+   [
+    12.64,
+    13.36,
+    "burn."
+   ]
+  ],
+  "guide5": [
+   [
+    0.0,
+    0.24,
+    "Look"
+   ],
+   [
+    0.32,
+    0.8,
+    "closely"
+   ],
+   [
+    0.88,
+    0.96,
+    "at"
+   ],
+   [
+    1.04,
+    1.12,
+    "this"
+   ],
+   [
+    1.2,
+    1.52,
+    "photo"
+   ],
+   [
+    1.6,
+    1.76,
+    "from"
+   ],
+   [
+    1.84,
+    2.24,
+    "July"
+   ],
+   [
+    2.4,
+    4.24,
+    "1935."
+   ],
+   [
+    4.32,
+    4.96,
+    "CCC"
+   ],
+   [
+    5.04,
+    5.52,
+    "workers"
+   ],
+   [
+    5.6,
+    5.76,
+    "are"
+   ],
+   [
+    5.92,
+    6.08,
+    "building"
+   ],
+   [
+    6.16,
+    6.28,
+    "a"
+   ],
+   [
+    6.4,
+    6.64,
+    "big"
+   ],
+   [
+    6.72,
+    7.04,
+    "dining"
+   ],
+   [
+    7.12,
+    7.44,
+    "hall"
+   ],
+   [
+    7.48,
+    7.52,
+    "at"
+   ],
+   [
+    7.6,
+    7.68,
+    "a"
+   ],
+   [
+    7.84,
+    8.0,
+    "camp"
+   ],
+   [
+    8.08,
+    8.24,
+    "in"
+   ],
+   [
+    8.36,
+    8.48,
+    "north"
+   ],
+   [
+    8.56,
+    9.36,
+    "Florida."
+   ],
+   [
+    9.68,
+    9.92,
+    "Find"
+   ],
+   [
+    9.96,
+    10.0,
+    "the"
+   ],
+   [
+    10.08,
+    10.4,
+    "worker"
+   ],
+   [
+    10.48,
+    10.64,
+    "up"
+   ],
+   [
+    10.68,
+    10.72,
+    "on"
+   ],
+   [
+    10.8,
+    10.88,
+    "the"
+   ],
+   [
+    10.96,
+    11.2,
+    "log"
+   ],
+   [
+    11.28,
+    11.6,
+    "wall."
+   ],
+   [
+    12.16,
+    12.24,
+    "In"
+   ],
+   [
+    12.32,
+    13.12,
+    "1940"
+   ],
+   [
+    13.44,
+    13.6,
+    "that"
+   ],
+   [
+    13.68,
+    13.92,
+    "camp"
+   ],
+   [
+    14.0,
+    14.32,
+    "became"
+   ],
+   [
+    14.48,
+    14.96,
+    "O'Leno"
+   ],
+   [
+    15.04,
+    15.28,
+    "State"
+   ],
+   [
+    15.44,
+    16.0,
+    "Park,"
+   ],
+   [
+    16.08,
+    16.16,
+    "and"
+   ],
+   [
+    16.24,
+    16.4,
+    "many"
+   ],
+   [
+    16.48,
+    16.56,
+    "of"
+   ],
+   [
+    16.6,
+    16.64,
+    "the"
+   ],
+   [
+    16.72,
+    17.12,
+    "buildings"
+   ],
+   [
+    17.16,
+    17.2,
+    "are"
+   ],
+   [
+    17.36,
+    17.6,
+    "still"
+   ],
+   [
+    17.68,
+    18.44,
+    "there."
+   ],
+   [
+    18.88,
+    18.96,
+    "Sort"
+   ],
+   [
+    19.2,
+    19.28,
+    "each"
+   ],
+   [
+    19.68,
+    20.24,
+    "card:"
+   ],
+   [
+    20.32,
+    20.4,
+    "did"
+   ],
+   [
+    20.48,
+    20.6,
+    "it"
+   ],
+   [
+    20.72,
+    20.76,
+    "help"
+   ],
+   [
+    20.8,
+    20.88,
+    "the"
+   ],
+   [
+    21.2,
+    21.28,
+    "worker"
+   ],
+   [
+    21.6,
+    22.04,
+    "then,"
+   ],
+   [
+    22.16,
+    22.24,
+    "or"
+   ],
+   [
+    22.4,
+    22.48,
+    "does"
+   ],
+   [
+    22.56,
+    22.64,
+    "it"
+   ],
+   [
+    22.88,
+    22.96,
+    "still"
+   ],
+   [
+    23.12,
+    23.2,
+    "help"
+   ],
+   [
+    23.36,
+    23.44,
+    "us"
+   ],
+   [
+    23.76,
+    24.08,
+    "now?"
+   ]
   ]
  }
-}
-</script>
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -4785,14 +5401,14 @@ body.tx-active .tx-toggle-label {
         <div class="source-card-header-title">A New Deal Work Project in Florida</div>
       </div>
     </div>
-    <div class="source-image-placeholder" data-image="source-4-10-07-ccc-park-shelter">
+    <div class="source-image-placeholder" data-image="source-4-10-07-oleno-mess-hall-1935">
       <div class="source-image-placeholder-text">
-        A real black-and-white photograph of New Deal workers building a wooden shelter in a Florida state park in the 1930s. They raise a timber roof, lay a stone pier, and work with hand tools in the pine woods.
+        A black-and-white photograph from the State Archives of Florida: Civilian Conservation Corps (CCC) workers building the dining hall at a forestry camp in north Florida, July 24, 1935. The camp is now O’Leno State Park. Log walls, a stone chimney and a pile of rock fill the clearing, and a worker stands up on the logs.
       </div>
     </div>
     <div class="source-card-body">
       <div class="source-label-bar">
-        <span class="src-type">Primary source</span> · New Deal workers building a shelter in a Florida state park, 1930s
+        <span class="src-type">Primary source</span> · CCC workers building a dining hall at the forestry camp that became O’Leno State Park, Florida, July 24, 1935 · photo by H. E. Whitehead, Florida Forest Service · State Archives of Florida
       </div>
       <div class="callout callout-info">
         <div class="callout-icon">👁️</div>
