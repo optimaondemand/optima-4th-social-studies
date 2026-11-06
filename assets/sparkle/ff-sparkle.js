@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast | tripstrip
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform | effecttree
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots) | estimate (tap the gold numbers, then slide a guess and see the real number; uses source.hotspots)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -6608,6 +6608,261 @@
   MOD.comebackcard=function(cfg){ var mid='<svg class="spk-cbkarrow" viewBox="0 0 46 28" aria-hidden="true"><path d="M4,14 H34 M26,6 L38,14 L26,22" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><em>'+esc(cfg.midT||'this led to')+'</em>';
     return MOD.factcard(Object.assign({},cfg,{mid:mid,cls:'spk-cbk'})); };
 
+  /* ---- Scene 1 · Plan a 1971 trip (4.10.08): drag each stop card (or tap it, then tap a day) onto the four-day trip strip.
+     Each stop placed drives the station wagon down the road and drops the workers your family paid into the "jobs we made"
+     jar. When all four days are planned, one question meets the "only astronauts got jobs" mix-up.
+     DATA: stops [{id,ico,t,fact,jobs:[…]}], ask {q,opts:[{t,ok,miss,reply}]}, dayT, jarT ---- */
+  MOD.tripstrip=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var ST=cfg.stops||[], N=ST.length, AK=cfg.ask||null; S.trip=S.trip||{slot:{},ans:null}; var was=null, sel=null, cur=null, wrong=null;
+    var ids=function(){ var a=[]; for(var d=0;d<N;d++) if(S.trip.slot[d]) a.push(S.trip.slot[d]); return a; };
+    var full=function(){ return N>0&&ids().length>=N; };
+    var askOk=function(){ if(!AK) return true; var o=AK.opts[S.trip.ans]; return !!(o&&o.ok); };
+    var done=function(){ return full()&&askOk(); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var X=[]; for(var d=0;d<N;d++) X.push(Math.round(40+d*(280/Math.max(1,N-1))));
+    var svg='<svg class="tripsvg" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A Florida highway in 1971, with a station wagon and a signpost for each day of the trip')+'"><defs><linearGradient id="spkTripSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FD0F0"/><stop offset="1" stop-color="#FCEFD2"/></linearGradient></defs>'
+      +'<rect width="360" height="120" fill="url(#spkTripSky)"/><circle class="sun" cx="318" cy="26" r="13"/>'
+      +'<path class="sea" d="M0,62 H360 V74 H0Z"/><path class="sand" d="M0,74 H360 V84 H0Z"/>'
+      +[22,96,170,246,330].map(function(x,i){ return '<path class="palm" d="M'+x+',84 q2,-12 0,-24 M'+x+',60 q-9,-3 -14,2 M'+x+',60 q9,-3 14,2 M'+x+',60 q-3,-8 0,-14"/>'; }).join('')
+      +'<rect class="road" x="0" y="88" width="360" height="22"/><path class="lane" d="M0,99 H360"/>'
+      +X.map(function(x,d){ return '<g class="sign" data-d="'+d+'"><line x1="'+x+'" y1="88" x2="'+x+'" y2="70" class="pole"/><rect x="'+(x-14)+'" y="58" width="28" height="13" rx="3" class="board"/><text x="'+x+'" y="68" text-anchor="middle" class="num">'+(d+1)+'</text></g>'; }).join('')
+      +'<g class="wagon"><rect x="-22" y="88" width="44" height="11" rx="3" class="body"/><rect x="-14" y="81" width="27" height="9" rx="2" class="top"/><rect x="-20" y="91" width="40" height="2" class="wood"/><circle cx="-12" cy="100" r="4" class="tire"/><circle cx="12" cy="100" r="4" class="tire"/><rect x="-12" y="77" width="22" height="4" rx="1" class="bags"/></g>'
+      +'</svg>';
+    var g=el('div','spk spk-game spk-trip');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Plan a 1971 trip')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-tripscene">'+svg+'</div>'
+      +'<div class="spk-tripdays">'+ST.map(function(s,d){ return '<div class="day" data-d="'+d+'" role="button" tabindex="0"><span class="lb">'+esc(cfg.dayT||'Day')+' '+(d+1)+'</span><span class="in"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-trip-ct"></p><div class="spk-chips spk-triptray"></div><p class="spk-miss"></p>'
+      +'<div class="spk-tripfact" aria-live="polite"></div>'
+      +'<div class="spk-tripjar"><div class="jar" aria-hidden="true"><div class="fill"></div></div><div class="jx"><div class="lb">'+esc(cfg.jarT||'Jobs we made')+' <b class="n">0</b></div><div class="tok"></div></div></div>'
+      +(AK?'<div class="spk-tripask"><p class="q">'+esc(AK.q)+'</p><div class="spk-opts">'+AK.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="rp"></p></div>':'')
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var tray=g.querySelector('.spk-triptray'), days=g.querySelector('.spk-tripdays'), miss=g.querySelector('.spk-miss'), wagon=g.querySelector('.wagon');
+    ST.forEach(function(s){ var c=el('div','spk-chip noimg spk-tripcard','<span class="ic" aria-hidden="true">'+esc(s.ico||'📍')+'</span><span>'+esc(s.t)+'</span>'); c.setAttribute('role','button'); c.tabIndex=0; c.draggable=true; c.dataset.id=s.id; tray.appendChild(c); });
+    function jobs(){ var out=[]; ids().forEach(function(id){ var s=find(ST,id); if(s) (s.jobs||[]).forEach(function(j){ out.push([j,s.ico]); }); }); return out; }
+    function paint(anim){ var k=ids().length, f=full(), d=done(), last=-1, J=jobs();
+      for(var i=0;i<N;i++) if(S.trip.slot[i]) last=i;
+      days.querySelectorAll('.day').forEach(function(dy){ var i=+dy.dataset.d, s=find(ST,S.trip.slot[i]); dy.classList.toggle('set',!!s); dy.querySelector('.in').innerHTML=s?'<span class="ic" aria-hidden="true">'+esc(s.ico||'')+'</span> '+esc(s.t):esc(cfg.emptyT||'Drop a stop here'); if(anim===i){ dy.classList.remove('thud'); void dy.offsetWidth; dy.classList.add('thud'); } });
+      g.querySelectorAll('.sign').forEach(function(sg){ sg.classList.toggle('on',!!S.trip.slot[+sg.dataset.d]); });
+      wagon.setAttribute('transform','translate('+(last<0?-30:X[last])+',0)'); wagon.classList.toggle('go',last>=0);
+      tray.querySelectorAll('.spk-tripcard').forEach(function(c){ var on=ids().indexOf(c.dataset.id)>=0; c.classList.toggle('spk-hide',on); c.draggable=!on; c.classList.toggle('sel',sel===c); });
+      var c=find(ST,cur); g.querySelector('.spk-tripfact').innerHTML=c?'<div class="cd"><span class="ic" aria-hidden="true">'+esc(c.ico||'')+'</span><p><b>'+esc(c.t)+'.</b> '+esc(c.fact||'')+(c.jobs&&c.jobs.length?' <span class="pd">'+esc(cfg.paidT||'Your family paid:')+' '+c.jobs.map(esc).join(', ')+'.</span>':'')+'</p></div>':'';
+      g.querySelector('.spk-tripjar .n').textContent=J.length;
+      g.querySelector('.spk-tripjar .fill').style.height=Math.min(100,Math.round(J.length/Math.max(1,ST.reduce(function(n,s){ return n+(s.jobs||[]).length; },0))*100))+'%';
+      g.querySelector('.spk-tripjar .tok').innerHTML=J.map(function(j,i){ return '<span class="t'+(anim!=null&&anim!=='keep'&&i>=J.length-((find(ST,S.trip.slot[anim])||{jobs:[]}).jobs||[]).length?' drop':'')+'" style="--d:'+(i%4)*90+'ms">'+esc(j[0])+'</span>'; }).join('');
+      g.querySelector('.spk-trip-ct').innerHTML=f?(d?'':'<b>'+esc(cfg.fullT||'Your trip is planned.')+'</b> '+esc(cfg.nowT||'Now answer one question.')):'<b>'+k+' of '+N+'</b> '+esc(cfg.countT||'days planned. Drag a stop onto a day, or tap a stop and then a day.');
+      var ask=g.querySelector('.spk-tripask'); if(ask){ ask.classList.toggle('on',f); ask.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',S.trip.ans===+o.dataset.k&&askOk()); }); ask.querySelector('.rp').innerHTML=askOk()&&S.trip.ans!=null?esc(AK.opts[S.trip.ans].reply||''):''; }
+      if(d&&was===false){ sfx('win'); } was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); g.classList.toggle('full',f); }
+    function arm(on){ days.querySelectorAll('.day').forEach(function(dy){ dy.classList.toggle('armed',on&&!dy.classList.contains('set')); dy.classList.remove('over'); }); }
+    function place(chip,dy){ if(!chip||!dy) return; var id=chip.dataset.id, i=+dy.dataset.d; if(S.trip.slot[i]||ids().indexOf(id)>=0) return; arm(false);
+      S.trip.slot[i]=id; save(); sel=null; cur=id; miss.textContent=''; ack('open'); sfx('chug'); setTimeout(function(){ sfx('clink'); },380); paint(i); refreshFile(); refreshVoice(); }
+    tray.addEventListener('click',function(e){ var c=e.target.closest('.spk-tripcard'); if(!c) return; sel=c; miss.textContent=''; paint('keep'); arm(true); });
+    tray.addEventListener('keydown',function(e){ var c=e.target.closest('.spk-tripcard'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    tray.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-tripcard'); if(!c||!c.draggable){ e.preventDefault(); return; } sel=c; e.dataTransfer.setData('text/plain',c.dataset.id); e.dataTransfer.effectAllowed='move'; arm(true); });
+    tray.addEventListener('dragend',function(){ arm(false); });
+    days.addEventListener('click',function(e){ var dy=e.target.closest('.day'); if(!dy) return; var i=+dy.dataset.d;
+      if(S.trip.slot[i]){ if(done()) return; cur=S.trip.slot[i]; if(!sel){ paint('keep'); return; } miss.textContent=cfg.takenT||'That day is planned already. Pick an empty day.'; return; }
+      if(!sel){ miss.textContent=cfg.firstT||'Tap a stop first, then tap a day.'; return; } place(sel,dy); });
+    days.addEventListener('keydown',function(e){ var dy=e.target.closest('.day'); if(dy&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); dy.click(); } });
+    days.addEventListener('dragover',function(e){ var dy=e.target.closest('.day'); days.querySelectorAll('.day').forEach(function(x){ x.classList.toggle('over',x===dy); }); if(dy&&!dy.classList.contains('set')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    days.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var c=sel||(id&&tray.querySelector('.spk-tripcard[data-id="'+id+'"]')); place(c,e.target.closest('.day')); });
+    var askEl=g.querySelector('.spk-tripask'); if(askEl) askEl.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o||!full()||askOk()) return; var k=+o.dataset.k, opt=AK.opts[k];
+      if(opt.ok){ S.trip.ans=k; save(); miss.textContent=''; sfx('click'); paint('keep'); refreshFile(); refreshVoice(); }
+      else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||''; missBeat(opt.miss||''); } });
+    paint();
+    return {done:done, journal:function(e,NA){ if(!ids().length) return NA; var J=jobs(); return '<p class="a">'+esc(cfg.jT||'My 1971 trip:')+' '+ids().map(function(id){ var s=find(ST,id); return e(s?s.t:id); }).join(' → ')+(J.length?'<br><b>'+esc(cfg.jarT||'Jobs we made')+':</b> '+J.map(function(j){ return e(j[0]); }).join(' · '):'')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · Grow the effect tree (4.10.08): three trunks (visitors · Disney · space) and a crown. Each part opens
+     with an action (or a question that meets a mix-up); its paragraph appears and its branch grows effect leaves. Parts can carry
+     real sources (img, img2: {src,alt,cap}) and a rolling counter ({from,to,lab}).
+     DATA: paras [{id,match}], parts [{id,t,ico,act,trunk:0|1|2|null,leaves:[…],paras:[],img,img2,counter,ask:{q,opts}}] ---- */
+  MOD.effecttree=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var PT=cfg.parts||[], N=PT.length, TX=[70,180,290], TN=cfg.trunks||['Visitors','Disney','Space']; if(S.etr==null) S.etr=0;
+    var done=function(){ return N>0&&S.etr>=N; };
+    var seen={}; var g='';
+    PT.forEach(function(p,i){ var t=p.trunk; if(t==null){ g+='<g class="pt crown" data-i="'+i+'"><path d="M40,58 Q180,-6 320,58" class="arc"/>'+[60,120,180,240,300].map(function(x,k){ var y=58-Math.round(52*Math.sin(Math.PI*(x-40)/280)); return '<circle cx="'+x+'" cy="'+(y+6)+'" r="5" class="lf gold" style="--k:'+k+'"/>'; }).join('')+'<path class="star" d="M180,14 l3,7 7,1 -5,5 1,7 -6,-3 -6,3 1,-7 -5,-5 7,-1z"/></g>'; return; }
+      var x=TX[t], lvl=seen[t]||0; seen[t]=lvl+1; var top=lvl?78:112, base=lvl?112:182, L=p.leaves||[], n=L.length;
+      g+='<g class="pt" data-i="'+i+'" data-t="'+t+'"><line x1="'+x+'" y1="'+base+'" x2="'+x+'" y2="'+top+'" class="trunk"/>'
+        +L.map(function(l,k){ var a=(-60+(n>1?120*k/(n-1):0))*Math.PI/180, bx=x+Math.round(38*Math.sin(a)), by=top+8-Math.round(30*Math.cos(a)); return '<path d="M'+x+','+(top+10)+' Q'+x+','+(by+6)+' '+bx+','+by+'" class="br"/><circle cx="'+bx+'" cy="'+by+'" r="8" class="lf" style="--k:'+k+'"/>'; }).join('')+'</g>'; });
+    var svg='<svg class="etsvg" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A tree of effects with three trunks: visitors, Disney, and the space program')+'"><defs><linearGradient id="spkEtSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E4F3FB"/><stop offset="1" stop-color="#FBF4E2"/></linearGradient></defs>'
+      +'<rect width="360" height="200" fill="url(#spkEtSky)"/><rect y="182" width="360" height="18" class="ground"/>'
+      +TX.map(function(x,t){ return '<text x="'+x+'" y="196" text-anchor="middle" class="root">'+esc(TN[t]||'')+'</text>'; }).join('')+g+'</svg>';
+    var w=el('div','spk spk-et'); w.innerHTML=whyCard(cfg.why)
+      +'<div class="spk-etscene">'+svg+'<div class="spk-etleaves">'+TX.map(function(x,t){ return '<div class="col" data-t="'+t+'"><span class="tn">'+esc(TN[t]||'')+'</span><div class="ch"></div></div>'; }).join('')+'</div><div class="crownt"></div></div>'
+      +'<ol class="steps">'+PT.map(function(p,i){ return '<li data-i="'+i+'"><span class="ic" aria-hidden="true">'+esc(p.ico||'•')+'</span><span class="nm">'+esc(p.t)+'</span></li>'; }).join('')+'</ol>'
+      +'<p class="spk-ys-ct spk-etct"></p><div class="spk-ptxctl spk-etctl"></div><p class="spk-miss"></p><div class="spk-etparts"></div>';
+    before(first,w);
+    var parts=w.querySelector('.spk-etparts'), ctl=w.querySelector('.spk-etctl'), miss=w.querySelector('.spk-miss'), boxes={};
+    function fig(m,cls){ return m&&m.src?'<figure class="'+cls+'"><img alt="'+esc(m.alt||'')+'" data-src="'+esc(m.src)+'"><figcaption>'+esc(m.cap||'')+'</figcaption></figure>':''; }
+    PT.forEach(function(p,i){ var b=el('div','spk-ptxp spk-etp'); b.dataset.i=i;
+      b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span> '+esc(p.t)+'</div>'+(p.counter?'<div class="spk-etcount"><span class="lb">'+esc(p.counter.lab||'')+'</span><span class="num" data-from="'+(+p.counter.from)+'" data-to="'+(+p.counter.to)+'">'+(+p.counter.from).toLocaleString('en-US')+'</span><span class="yr">'+esc(p.counter.yr||'')+'</span></div>':'')+'<div class="txt"></div>'+fig(p.img,'spk-etfig')+fig(p.img2,'spk-etfig two');
+      (p.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.querySelector('.txt').appendChild(nd); }); });
+      b.querySelectorAll('img[data-src]').forEach(function(im){ im.src=IMG+im.dataset.src; im.addEventListener('error',function(){ var f=im.closest('figure'); if(f) f.remove(); }); });
+      parts.appendChild(b); boxes[i]=b; });
+    function roll(b){ var nm=b&&b.querySelector('.spk-etcount .num'); if(!nm||nm.dataset.done) return; nm.dataset.done=1; var a=+nm.dataset.from, z=+nm.dataset.to, t0=0;
+      if(matchMedia('(prefers-reduced-motion: reduce)').matches){ nm.textContent=z.toLocaleString('en-US'); return; }
+      function step(ts){ if(!t0) t0=ts; var p=Math.min(1,(ts-t0)/1600), e=1-Math.pow(1-p,3); nm.textContent=Math.round(a+(z-a)*e).toLocaleString('en-US'); if(p<1) requestAnimationFrame(step); else sfx('clink'); } requestAnimationFrame(step); }
+    function paint(anim){ var cur=PT[S.etr];
+      w.querySelectorAll('.etsvg .pt').forEach(function(pt){ pt.classList.toggle('on',+pt.dataset.i<S.etr); pt.classList.toggle('new',+pt.dataset.i===anim); });
+      w.querySelectorAll('.spk-etleaves .col').forEach(function(c){ var t=+c.dataset.t; c.querySelector('.ch').innerHTML=PT.slice(0,S.etr).filter(function(p){ return p.trunk===t; }).map(function(p){ return (p.leaves||[]).map(function(l){ return '<span>'+esc(l)+'</span>'; }).join(''); }).join(''); c.classList.toggle('on',PT.slice(0,S.etr).some(function(p){ return p.trunk===t; })); });
+      var crown=PT.filter(function(p){ return p.trunk==null; })[0], ci=PT.indexOf(crown); w.querySelector('.crownt').innerHTML=crown&&ci<S.etr?'⭐ '+(crown.leaves||[]).map(esc).join(' · '):'';
+      w.querySelectorAll('.steps li').forEach(function(li){ var i=+li.dataset.i; li.classList.toggle('on',i<S.etr); li.classList.toggle('cur',i===S.etr); });
+      PT.forEach(function(p,i){ boxes[i].classList.toggle('on',i<S.etr); if(i<S.etr&&anim!==i) { var nm=boxes[i].querySelector('.spk-etcount .num'); if(nm&&!nm.dataset.done){ nm.dataset.done=1; nm.textContent=(+nm.dataset.to).toLocaleString('en-US'); } } });
+      ctl.innerHTML=cur?(cur.ask?'<p class="q"><span class="n">'+(S.etr+1)+'</span> '+esc(cur.ask.q)+'</p><div class="spk-opts">'+cur.ask.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div>':'<button type="button" class="spk-ptxgo">'+esc(cur.ico||'▶')+' '+esc(cur.act||cur.t)+'</button>'):'';
+      w.querySelector('.spk-etct').innerHTML=done()?'<b>'+esc(cfg.allT||'The whole tree has grown.')+'</b>':'<b>'+S.etr+' of '+N+'</b> '+esc(cfg.countT||'parts open. Tap the button to open the next part and grow the tree.');
+      w.classList.toggle('all',done()); var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function advance(){ var k=S.etr; S.etr++; save(); ack('explore'); miss.textContent=''; sfx('plant'); setTimeout(function(){ sfx('paper'); },180); paint(k); roll(boxes[k]); refreshFile(); refreshVoice();
+      var b=boxes[k]; if(b&&!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ try{ b.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },450); }
+    ctl.addEventListener('click',function(e){ var cur=PT[S.etr]; if(!cur) return; if(e.target.closest('.spk-ptxgo')){ advance(); return; }
+      var o=e.target.closest('.spk-opt'); if(!o||!cur.ask) return; var opt=cur.ask.opts[+o.dataset.k];
+      if(opt.ok){ sfx('clink'); advance(); } else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||'Think again.'; missBeat(miss.textContent); } });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<PT.length;i++) if(PT[i].id===id) return boxes[i].classList.contains('on')?boxes[i]:w.querySelector('.spk-etscene'); return null; }, journal:function(){ return '<p class="a">'+PT.slice(0,S.etr).map(function(p){ return esc(p.t)+((p.leaves||[]).length?': '+p.leaves.map(esc).join(', '):''); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore evidence · Count, then estimate (4.10.08): tap every gold number on the photo, then slide a guess for how many
+     people came (a log slider, 1,000 to 10 million). Lock it in and the real number is shown next to your guess and a
+     comparison bar; a second real photo and one question follow. DATA: answer {n,lab,cap}, compare {n,lab}, min, max,
+     photo {src,alt,cap}, q {q,opts:[{id,t,ok,miss}]} ---- */
+  MOD.estimate=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var A=cfg.answer||{n:1000000}, CP=cfg.compare||null, LO=Math.log10(cfg.min||1000), HI=Math.log10(cfg.max||10000000), Q=cfg.q; S.est=S.est||{v:null,lock:false,a:null};
+    var qOk=function(){ if(!Q) return true; var o=find(Q.opts,S.est.a); return !!(o&&o.ok); };
+    var mine=function(){ return S.est.lock&&qOk(); };
+    var hotDone=function(){ var H=(DATA.source||{}).hotspots; return !H||(S.hot||[]).length>=H.length; };
+    var done=function(){ return mine()&&hotDone()&&(!R.reading||R.reading.done()); };
+    function nice(v){ var n=Math.pow(10,v), p=Math.pow(10,Math.floor(Math.log10(n))-1); n=Math.round(n/p)*p; return n; }
+    function words(n){ return n>=1e6?(n/1e6).toLocaleString('en-US',{maximumFractionDigits:1})+' million':n.toLocaleString('en-US'); }
+    function pct(n){ return Math.max(2,Math.min(100,(Math.log10(n)-LO)/(HI-LO)*100)); }
+    var g=el('div','spk spk-game spk-est');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Count, then estimate')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="guess"><p class="lab">'+esc(cfg.askT||'How many people do you think came?')+'</p><div class="big"><span class="num">?</span></div>'
+      +'<input type="range" class="sl" min="'+LO+'" max="'+HI+'" step="0.01" aria-label="'+esc(cfg.askT||'Your guess')+'"><div class="ticks">'+[3,4,5,6,7].filter(function(e){ return e>=LO&&e<=HI; }).map(function(e){ return '<span style="left:'+((e-LO)/(HI-LO)*100)+'%">'+esc(words(Math.pow(10,e)))+'</span>'; }).join('')+'</div>'
+      +'<button type="button" class="spk-ptxgo lock">'+esc(cfg.lockT||'🔒 Lock in my guess')+'</button></div>'
+      +'<p class="spk-si-gate gate"></p>'
+      +'<div class="rev"><div class="bars"><div class="br you"><span class="lb">'+esc(cfg.youT||'Your guess')+'</span><span class="bar"><i></i></span><span class="v"></span></div>'
+      +'<div class="br real"><span class="lb">'+esc(A.lab||'The real estimate')+'</span><span class="bar"><i style="--w:'+pct(A.n)+'%"></i></span><span class="v">'+esc(cfg.aboutT||'about')+' '+esc(words(A.n))+'</span></div>'
+      +(CP?'<div class="br cmp"><span class="lb">'+esc(CP.lab||'')+'</span><span class="bar"><i style="--w:'+pct(CP.n)+'%"></i></span><span class="v">'+esc(CP.n.toLocaleString('en-US'))+'</span></div>':'')+'</div>'
+      +'<p class="say"></p><p class="cap">'+esc(A.cap||'')+'</p>'
+      +(cfg.photo?'<figure class="spk-estfig"><img alt="'+esc(cfg.photo.alt||'')+'"><figcaption>'+esc(cfg.photo.cap||'')+'</figcaption></figure>':'')
+      +(Q?'<div class="spk-step" data-q="q"><div class="lab">'+esc(Q.q)+'</div><div class="spk-opts">'+Q.opts.map(function(o){ return '<button type="button" class="spk-opt" data-v="'+esc(o.id)+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>':'')
+      +'<p class="spk-miss"></p></div><p class="spk-si-gate last"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    if(cfg.photo){ var im=g.querySelector('.spk-estfig img'); im.addEventListener('error',function(){ var f=im.closest('figure'); if(f) f.remove(); }); im.src=IMG+cfg.photo.src; }
+    var sl=g.querySelector('.sl'), num=g.querySelector('.big .num'), miss=g.querySelector('.rev .spk-miss');
+    sl.value=S.est.v!=null?S.est.v:((LO+HI)/2);
+    function paint(){ var hot=hotDone(), v=+sl.value, n=nice(v);
+      g.classList.toggle('wait',!hot); sl.disabled=!hot||S.est.lock; g.querySelector('.lock').disabled=!hot||S.est.lock; g.querySelector('.lock').classList.toggle('spk-hide',S.est.lock);
+      num.textContent=hot||S.est.lock?words(S.est.lock?nice(S.est.v):n):'?';
+      g.querySelector('.gate').textContent=hot?'':(cfg.hotT||'First, tap every gold number on the photo above. Then you can guess.');
+      var rv=g.querySelector('.rev'); rv.classList.toggle('on',S.est.lock);
+      if(S.est.lock){ var gn=nice(S.est.v); rv.querySelector('.you i').style.setProperty('--w',pct(gn)+'%'); rv.querySelector('.you .v').textContent=words(gn);
+        var r=gn/A.n; rv.querySelector('.say').innerHTML=esc(r>=0.7&&r<=1.4?(cfg.closeT||'Wow, you were close!'):r<0.7?(cfg.lowT||'More people came than you guessed!'):(cfg.highT||'You guessed high. Still, that is a huge crowd.'));
+        var st=rv.querySelector('[data-q="q"]'); if(st) st.querySelectorAll('.spk-opt').forEach(function(b){ b.classList.toggle('on',b.dataset.v===S.est.a&&qOk()); }); }
+      var gate=''; if(mine()&&R.reading&&!R.reading.done()) gate=cfg.readT||'Last step: finish Learn the Story at the top of this tab.';
+      g.querySelector('.last').textContent=gate;
+      var d=done(); g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    sl.addEventListener('input',function(){ S.est.v=+sl.value; paint(); });
+    sl.addEventListener('change',function(){ S.est.v=+sl.value; save(); sfx('click'); });
+    g.querySelector('.lock').addEventListener('click',function(){ if(hotDone()){ ack('explore'); S.est.v=+sl.value; S.est.lock=true; save(); sfx('thud'); setTimeout(function(){ sfx('win'); },380); paint(); refreshFile(); refreshVoice(); refreshVoiceAnchors(); } });
+    g.addEventListener('click',function(e){ var o=e.target.closest('.spk-step .spk-opt'); if(!o||!Q||!S.est.lock||qOk()) return;
+      var opt=find(Q.opts,o.dataset.v); if(!opt) return;
+      if(opt.ok){ S.est.a=opt.id; save(); miss.textContent=''; sfx('click'); paint(); refreshFile(); refreshVoice(); }
+      else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||''; missBeat(opt.miss||''); } });
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, journal:function(e,NA){ if(!S.est.lock) return NA; return '<p class="a"><b>'+esc(cfg.youT||'Your guess')+':</b> '+e(words(nice(S.est.v)))+' · <b>'+esc(A.lab||'The real estimate')+':</b> '+esc(cfg.aboutT||'about')+' '+e(words(A.n))+(qOk()&&Q&&S.est.a?'<br><b>'+e(Q.q)+'</b> '+e(find(Q.opts,S.est.a).t):'')+'</p>'; }};
+  };
+  /* voice notes anchored to 'estdone' wait for the estimate reveal (WHEN.estimated); this re-checks them when it opens */
+  function refreshVoiceAnchors(){ document.querySelectorAll('.spk-vn').forEach(function(n){ if(n.__when) n.classList.toggle('spk-wait',!n.__when()); }); }
+
+  /* ---- Planner · Mission patch (4.10.08): a round mission patch in three parts — the cause, the effect, why it still matters.
+     Each choice stitches one part of the patch; when all three are stitched the patch is done. Notes only — the student writes.
+     DATA: rows [{id,lab,short,opts:[{t,ok,miss}]}], center (emoji), ring (text around the patch) ---- */
+  MOD.missionpatch=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var RW=cfg.rows||[], N=RW.length; S.mp=S.mp||{};
+    var done=function(){ return N>0&&RW.every(function(r){ return S.mp[r.id]!=null; }); };
+    var cx=90, cy=90, R0=78, R1=34;
+    function sector(k){ var a0=(-90+k*360/N)*Math.PI/180, a1=(-90+(k+1)*360/N)*Math.PI/180, big=360/N>180?1:0;
+      var p=function(r,a){ return (cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1); };
+      return 'M'+p(R1,a0)+' L'+p(R0,a0)+' A'+R0+','+R0+' 0 '+big+' 1 '+p(R0,a1)+' L'+p(R1,a1)+' A'+R1+','+R1+' 0 '+big+' 0 '+p(R1,a0)+'Z'; }
+    function lab(k){ var a=(-90+(k+.5)*360/N)*Math.PI/180, r=(R0+R1)/2; return [(cx+r*Math.cos(a)).toFixed(1),(cy+r*Math.sin(a)).toFixed(1)]; }
+    var svg='<svg class="mpsvg" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+esc(cfg.alt||'A round mission patch in three parts')+'"><circle cx="90" cy="90" r="86" class="rim"/>'
+      +RW.map(function(r,k){ var L=lab(k); return '<path d="'+sector(k)+'" class="sec" data-k="'+k+'"/><text x="'+L[0]+'" y="'+(+L[1]+4)+'" text-anchor="middle" class="sl">'+esc(r.short||r.lab)+'</text>'; }).join('')
+      +'<circle cx="90" cy="90" r="'+R1+'" class="core"/><text x="90" y="100" text-anchor="middle" class="ctr">'+esc(cfg.center||'🚀')+'</text><circle cx="90" cy="90" r="84" class="stitch"/></svg>';
+    var b=el('div','spk spk-builder spk-mpch');
+    b.innerHTML=voice(cfg.voice,cfg)
+      +'<div class="spk-mpch-wrap"><div class="patch">'+svg+'</div><div class="rows">'+RW.map(function(r,k){ return '<div class="fr" data-r="'+esc(r.id)+'" data-k="'+k+'"><div class="lab"><span class="n">'+(k+1)+'</span> '+esc(r.lab)+'</div><div class="spk-opts">'+r.opts.map(function(o,i){ return '<button type="button" class="spk-opt" data-i="'+i+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="pick"></p></div>'; }).join('')+'</div></div>'
+      +'<p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Your mission patch is stitched. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ return RW.filter(function(r){ return S.mp[r.id]!=null; }).map(function(r){ return [r.short||r.lab, r.opts[S.mp[r.id]].t]; }); }
+    function paint(anim){ var nxt=-1;
+      RW.forEach(function(r,k){ var fr=b.querySelector('.fr[data-r="'+r.id+'"]'), v=S.mp[r.id]; if(v==null&&nxt<0) nxt=k;
+        fr.classList.toggle('set',v!=null); fr.classList.toggle('locked',v==null&&nxt>=0&&nxt<k); fr.querySelector('.pick').textContent=v!=null?r.opts[v].t:'';
+        fr.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',+o.dataset.i===v); });
+        var sc=b.querySelector('.sec[data-k="'+k+'"]'); sc.classList.toggle('on',v!=null); if(anim===k){ sc.classList.remove('new'); void sc.getBoundingClientRect(); sc.classList.add('new'); } });
+      var d=done(); b.classList.toggle('done',d);
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var fr=o.closest('.fr'); if(!fr||fr.classList.contains('locked')) return;
+      var k=+fr.dataset.k, r=RW[k], i=+o.dataset.i, opt=r.opts[i], miss=b.querySelector('.spk-miss');
+      if(opt.ok===false){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||cfg.missT||'Not quite. Look back at the reading.'; return; }
+      var wasDone=done(); S.mp[r.id]=i; save(); miss.textContent=''; sfx('pluck'); paint(k); if(!wasDone&&done()) setTimeout(function(){ sfx('win'); },250); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Turn the Ferris wheel (4.10.08, tour = to turn): a Ferris wheel with one car for each word. Hear each word
+     (g4ss-<lesson>-<root>-<n>.mp3); each meaning matched turns the wheel and lights one more car, until the whole wheel turns
+     and every car is lit. ---- */
+  MOD.ferriswheel=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'tour', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.fw=S.fw||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.fw.set.length===N; };
+    var CX=180, CY=82, RR=56, cars='', spokes='';
+    for(var i=0;i<N;i++){ var a=(-90+i*360/N)*Math.PI/180, x=CX+RR*Math.cos(a), y=CY+RR*Math.sin(a); spokes+='<line x1="'+CX+'" y1="'+CY+'" x2="'+x.toFixed(1)+'" y2="'+y.toFixed(1)+'" class="spoke"/>';
+      cars+='<g class="car" data-i="'+i+'" style="--x:'+x.toFixed(1)+'px;--y:'+y.toFixed(1)+'px"><g class="hang"><line x1="'+x.toFixed(1)+'" y1="'+y.toFixed(1)+'" x2="'+x.toFixed(1)+'" y2="'+(y+7).toFixed(1)+'" class="rod"/><rect x="'+(x-9).toFixed(1)+'" y="'+(y+6).toFixed(1)+'" width="18" height="12" rx="4" class="cab"/></g></g>'; }
+    var g=el('div','spk spk-fw');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Turn the wheel')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-fwscene"><svg viewBox="0 0 360 170" aria-hidden="true"><rect width="360" height="170" class="sky"/>'+[30,70,290,330].map(function(x,i){ return '<circle cx="'+x+'" cy="'+(20+(i%2)*14)+'" r="1.5" class="star"/>'; }).join('')+'<rect y="150" width="360" height="20" class="grass"/>'
+      +'<path d="M'+(CX-34)+',152 L'+CX+','+CY+' L'+(CX+34)+',152" class="legs"/><g class="wheel">'+'<circle cx="'+CX+'" cy="'+CY+'" r="'+RR+'" class="ring"/><circle cx="'+CX+'" cy="'+CY+'" r="'+(RR-10)+'" class="ring in"/>'+spokes+cars+'</g><circle cx="'+CX+'" cy="'+CY+'" r="6" class="hub"/>'
+      +'<rect class="haze" width="360" height="170"/></svg><div class="board"><span class="lb">'+esc(cfg.boardT||'Cars lit')+'</span><span class="num"></span></div></div>'
+      +'<div class="wds spk-fwwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-fw-ct"></p><div class="spk-chips spk-fwmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-fwmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-fwwds'), sel=null, AU={}, wheel=g.querySelector('.wheel');
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-fwmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.fw.heard.length===N, k=S.fw.set.length, sc=g.querySelector('.spk-fwscene');
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.fw.heard.indexOf(i)>=0, u=S.fw.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      sc.querySelectorAll('.car').forEach(function(it){ it.classList.toggle('lit',+it.dataset.i<k); });
+      wheel.style.setProperty('--turn',(k*360/Math.max(1,N))+'deg'); sc.classList.toggle('spin',done());
+      g.querySelector('.board .num').textContent=k+' / '+N; g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-fwmean').forEach(function(t){ var f=S.fw.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-fw-ct').innerHTML=!allH?'<b>'+S.fw.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'cars lit. Each match turns the wheel and lights one more car.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.fw.set.indexOf(i)>=0||S.fw.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.fw.set.push(i); save(); sel=null; miss.textContent=''; sfx('slide'); setTimeout(function(){ sfx('clink'); },380); if(done()) setTimeout(function(){ sfx('win'); },760); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.fw.heard.length===N){ attempt(sel,c); return; }
+      if(S.fw.heard.indexOf(i)<0){ S.fw.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-fwmean'); if(!t) return; if(S.fw.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-fwmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-fwmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-fwmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-fwmean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -6690,7 +6945,7 @@
 
   /* ================================================================ VOICE NOTES — the teacher's audio guides.
      Never read the page, never give an answer. Hidden until the .mp3 exists (?review shows empty slots).
-     DATA.voice: [{slot,label,at:'scene1'|'s1done'|'explore'|'afterread'|'evidence'|'mapdone'|'plan'|'write'|'score',when:'perfect'|'review',script}]
+     DATA.voice: [{slot,label,at:'scene1'|'s1done'|'explore'|'afterread'|'evidence'|'estdone'|'mapdone'|'plan'|'write'|'score',when:'perfect'|'review'|'estimated',script}]
      Multi-part (plays in a row, e.g. teacher → historical voice → teacher):
        {label,at,parts:[{slot,who,script},…]} → files g4ss-<lesson>-<slot>.mp3; shown only when every part loads. */
   var AT={
@@ -6700,13 +6955,15 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq, #panel-explore .spk-est'); return d&&[d,'before']; },
+    estdone:function(){ var r=document.querySelector('#panel-explore .spk-est .rev'); return r&&[r,'after']; },
     readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
   function quizTotal(){ return document.querySelectorAll('#panel-check .quiz-q').length||3; }
-  var WHEN={ perfect:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()===quizTotal(); },
+  var WHEN={ estimated:function(){ return !!(S.est&&S.est.lock); },
+             perfect:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()===quizTotal(); },
              review:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()!==quizTotal(); } };
   /* ═══ Spotlight: page parts light up, pop, point and reveal exactly when the recorded voice names them (PowerPoint-style).
      Ported from the G4 Science Field Station layer (fs-sparkle.js cueRunner), 22 Oct 2026.

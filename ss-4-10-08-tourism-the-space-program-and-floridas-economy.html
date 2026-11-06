@@ -1784,6 +1784,1065 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.10.08",
+ "title": "Tourism, the Space Program, and Florida's Economy",
+ "quiet": false,
+ "file": {
+  "n": 10,
+  "title": "Modern Florida",
+  "label": "Modern Florida",
+  "seals": [
+   "🍊",
+   "🏖️",
+   "🚀"
+  ]
+ },
+ "prevFile": "Florida During the Great Depression and World War II",
+ "connector": "Last time, Florida came through the Depression and World War II. Today, find out how tourists and rockets helped Florida's economy take off.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time the lights dimmed, and a thin line of light showed under one door. Today a clock appears over that door, and it's counting down.",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Plan a 1971 trip",
+   "why": "Plan a family trip to Florida in 1971, and find out how many people earned money because you came."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Grow the effect tree",
+   "why": "Open each part of the story and grow a tree of effects. Then study a real NASA photo and guess how many people came to watch a launch."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian's Notebook",
+   "t": "Stitch your mission patch",
+   "why": "Answer three questions. Fill your mission patch with a cause, an effect, and why it still matters. Then write your Source Study."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it's me, your teacher. A clock just appeared over the lit-up door, and it's counting down!",
+  "opening": [
+   "Remember the line of light under that door? Now there's a clock above it, counting down like a rocket launch.",
+   "Start in the Learn tab (tab 1). Scroll down to plan a family trip to Florida in 1971.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let's plan the trip",
+      "go": true,
+      "reply": "Drag each stop onto a day of your trip. Watch the jobs jar: it shows who earned money because your family came."
+     },
+     {
+      "t": "Why 1971?",
+      "reply": "Walt Disney World opened near Orlando on October 1, 1971. Families were already driving to Florida's beaches, and now they had one more reason to come."
+     },
+     {
+      "t": "What does courage have to do with it?",
+      "reply": "Courage means doing something hard even when it scares you. Building a giant park on swampy land, or sending people to the moon, took a lot of courage."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What's next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Tap the button to open the first part of the story and start growing the tree."
+     },
+     {
+      "t": "Did tourists really spend that much?",
+      "reply": "Yes. Every family paid for a room, food, gas, and tickets. That money paid the workers, and the workers spent it in their own towns too."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren't graded."
+     },
+     {
+      "t": "Do rockets still launch from Florida?",
+      "reply": "Yes! Rockets still launch from Cape Canaveral and the Kennedy Space Center, and people still come to watch."
+     }
+    ]
+   },
+   "cracked": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What's behind the door?",
+      "reply": "I don't know yet. But now I can see its number: 13. I think it's the way out. Next time we start File 11 and figure out how to open it."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye. Don't forget to copy or download your work and turn it in on Canvas. I'll text you from the next room."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Look at that jobs jar! One family trip paid all those workers. Now picture millions of families. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Your tree is full of effects! The clock over the door just ticked down again. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian's Notebook tab (tab 4), answer three questions. Then fill your mission patch and write your Source Study."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you did it! The countdown clock stopped at 3, and I can finally read the number on the door: 13. File 10 is closed. Your Historian's Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "cracked"
+    }
+   ]
+  }
+ },
+ "lens": "Courage means doing something hard even when it scares you. Today you are an economic historian, someone who studies how people in a place earn a living and how new businesses change it.",
+ "scene1": {
+  "type": "tripstrip",
+  "kicker": "Plan a 1971 trip",
+  "h": "Drag four stops onto your trip. Then see who you helped.",
+  "voice": "Drag each stop onto a day, or tap a stop and then a day. Watch who your family pays at every stop.",
+  "alt": "A Florida highway by the beach in 1971, with a station wagon and a signpost for each day of the trip",
+  "why": {
+   "icon": "🚗",
+   "q": "Why a road trip?",
+   "t": "After World War II, millions of families drove to Florida for vacation on new highways. At every stop, a family pays someone: the motel clerk, the cook, the tour guide. That pay is a job. That's why you plan a trip and watch the jobs jar fill up."
+  },
+  "stops": [
+   {
+    "id": "motel",
+    "ico": "🏖️",
+    "t": "A beach motel in Daytona Beach",
+    "fact": "After the war, beach towns filled with new motels for visiting families.",
+    "jobs": [
+     "Desk clerk",
+     "Housekeeper",
+     "Diner cook"
+    ]
+   },
+   {
+    "id": "ksc",
+    "ico": "🚀",
+    "t": "The Kennedy Space Center bus tour",
+    "fact": "Starting in 1966, visitors could ride a bus around NASA's Kennedy Space Center and see the giant building where moon rockets were put together.",
+    "jobs": [
+     "Tour guide",
+     "Bus driver",
+     "Gift shop clerk"
+    ]
+   },
+   {
+    "id": "disney",
+    "ico": "🎢",
+    "t": "Walt Disney World, in its first year",
+    "fact": "Walt Disney World opened near Orlando on October 1, 1971. It created thousands of jobs.",
+    "jobs": [
+     "Ride operator",
+     "Ticket seller",
+     "Restaurant cook"
+    ]
+   },
+   {
+    "id": "orange",
+    "ico": "🍊",
+    "t": "A roadside orange stand",
+    "fact": "Fruit stands along the highways sold fresh oranges and juice to tourists driving by.",
+    "jobs": [
+     "Orange grower",
+     "Fruit stand seller"
+    ]
+   }
+  ],
+  "dayT": "Day",
+  "emptyT": "Drop a stop here",
+  "jarT": "Jobs we made",
+  "paidT": "Your family paid:",
+  "countT": "days planned. Drag a stop onto a day, or tap a stop and then a day.",
+  "fullT": "Your trip is planned.",
+  "nowT": "Now answer one question.",
+  "ask": {
+   "q": "Who got jobs because of tourism and the space program?",
+   "opts": [
+    {
+     "t": "Only astronauts and people in costumes",
+     "miss": "Look in your jobs jar. Who did your family pay at the motel and the orange stand?"
+    },
+    {
+     "t": "Lots of people: clerks, cooks, guides, drivers, and growers",
+     "ok": true,
+     "reply": "Right! Tourists and the space program made jobs for all kinds of Floridians."
+    },
+    {
+     "t": "Nobody new, just the same farm jobs",
+     "miss": "Look in your jobs jar. Which of those jobs are new kinds of work for visitors?"
+    }
+   ]
+  },
+  "win": "🎟️ <b>Your trip is planned, and your jobs jar is full.</b> One family trip paid eleven workers. In 1971, millions of visitors did the same, and that money became paychecks all over Florida.",
+  "jT": "My 1971 trip:"
+ },
+ "explore": {
+  "reading": {
+   "type": "effecttree",
+   "activity": "Sunshine, Rockets, and a New Economy",
+   "mid": "space",
+   "trunks": [
+    "Visitors",
+    "Disney",
+    "Space"
+   ],
+   "alt": "A tree of effects with three trunks: visitors, Disney, and the space program",
+   "why": {
+    "icon": "🌳",
+    "q": "Why a tree?",
+    "t": "A <b>cause</b> is what makes something happen. An <b>effect</b> is what happens because of it. One cause can have many effects, the way one trunk grows many branches. That's why each part of the story grows a branch, and each leaf is an effect."
+   },
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Visitors pour in"
+    },
+    {
+     "id": "p2",
+     "match": "^Disney comes to Florida"
+    },
+    {
+     "id": "p3",
+     "match": "^Rockets on the coast"
+    },
+    {
+     "id": "p4",
+     "match": "^The Space Coast grows"
+    },
+    {
+     "id": "p5",
+     "match": "^A new economy"
+    }
+   ],
+   "parts": [
+    {
+     "id": "visitors",
+     "t": "Visitors pour in",
+     "ico": "🏖️",
+     "act": "Grow the visitors trunk",
+     "trunk": 0,
+     "paras": [
+      "p1"
+     ],
+     "leaves": [
+      "Motels and hotels",
+      "New highways",
+      "Beach towns grow"
+     ]
+    },
+    {
+     "id": "disney",
+     "t": "Disney comes to Florida",
+     "ico": "🎢",
+     "trunk": 1,
+     "paras": [
+      "p2"
+     ],
+     "leaves": [
+      "Thousands of jobs",
+      "Orlando grows",
+      "More theme parks"
+     ],
+     "ask": {
+      "q": "Before you read: did tourists come to Florida before Walt Disney World opened?",
+      "opts": [
+       {
+        "t": "No. Disney World started Florida tourism.",
+        "miss": "Look back at part 1: railroads, the 1920s boom, soldiers coming back, beach towns full of motels. All of that came first."
+       },
+       {
+        "t": "Yes. Tourism was already big before 1971.",
+        "ok": true
+       }
+      ]
+     },
+     "img": {
+      "src": "source-4-10-08-disney-announcement-1965.jpg",
+      "alt": "Walt Disney, Governor Haydon Burns and Roy Disney at a table with microphones, under a sign that says Florida Welcomes Walt Disney",
+      "cap": "November 15, 1965, Orlando: Walt Disney (left), Governor Haydon Burns, and Roy Disney announce the Florida project. State Archives of Florida, public domain."
+     },
+     "img2": {
+      "src": "source-4-10-08-disney-job-letter-1966.jpg",
+      "alt": "A typed letter from 1966 to Governor Haydon Burns",
+      "cap": "May 13, 1966: a Navy officer in Jacksonville writes to the governor, \"I would like very much to become associated with the Disney project.\" He wanted a job there. State Archives of Florida."
+     }
+    },
+    {
+     "id": "space",
+     "t": "Rockets on the coast",
+     "ico": "🚀",
+     "act": "Grow the space trunk",
+     "trunk": 2,
+     "paras": [
+      "p3"
+     ],
+     "leaves": [
+      "Launches over the ocean",
+      "Moon landing, 1969"
+     ]
+    },
+    {
+     "id": "coast",
+     "t": "The Space Coast grows",
+     "ico": "🏘️",
+     "trunk": 2,
+     "paras": [
+      "p4"
+     ],
+     "leaves": [
+      "Brevard: 10 times bigger",
+      "Jobs for builders, teachers, cooks"
+     ],
+     "counter": {
+      "lab": "People in Brevard County",
+      "from": 23653,
+      "to": 230006,
+      "yr": "1950 → 1970"
+     },
+     "ask": {
+      "q": "Before you read on: where did the Apollo rockets launch from?",
+      "opts": [
+       {
+        "t": "Houston, Texas",
+        "miss": "Houston was Mission Control, the team that guided each flight from the ground. Reread part 3: where did Apollo 11 launch from?"
+       },
+       {
+        "t": "The Kennedy Space Center in Florida",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "economy",
+     "t": "A new economy",
+     "ico": "⭐",
+     "act": "See the whole tree",
+     "trunk": null,
+     "paras": [
+      "p5"
+     ],
+     "leaves": [
+      "Tourism and technology",
+      "A place where the future is built"
+     ]
+    }
+   ],
+   "allT": "The whole tree has grown. Every leaf is an effect of tourism or the space program.",
+   "countT": "parts open. Tap the button to open the next part and grow the tree."
+  },
+  "evidence": {
+   "type": "estimate",
+   "kicker": "Count, then estimate",
+   "h": "How many people came to the Space Coast to watch Apollo 11 launch?",
+   "voice": "First, tap every gold number on the photo. Then slide to make your guess, and lock it in.",
+   "why": {
+    "icon": "🔢",
+    "q": "Why guess?",
+    "t": "Historians often have to estimate, which means make a careful guess from clues. On July 16, 1969, nobody could count every person who came to watch Apollo 11, so local officials made an estimate. That's why you count the clues in the photo and make your own guess first."
+   },
+   "askT": "How many people do you think came?",
+   "min": 1000,
+   "max": 10000000,
+   "answer": {
+    "n": 1000000,
+    "lab": "Officials' estimate",
+    "cap": "Brevard County officials estimated that about one million people came to the area to watch Apollo 11 launch. That's more than four times as many people as lived in the whole county. They camped on beaches and along the roads for miles."
+   },
+   "compare": {
+    "n": 230006,
+    "lab": "People who lived in Brevard (1970)"
+   },
+   "photo": {
+    "src": "source-4-10-08-apollo11-campers-1969.jpg",
+    "alt": "Tents, campers, and station wagons crowded onto a sandy field",
+    "cap": "NASA photo, July 16, 1969: some of the thousands of families who camped on beaches and roads near the Kennedy Space Center to watch Apollo 11 launch (KSC-69P-0623, public domain)."
+   },
+   "q": {
+    "q": "What did all those visitors mean for Brevard County's businesses?",
+    "opts": [
+     {
+      "id": "spend",
+      "t": "They spent money on gas, food, motels, and camping gear",
+      "ok": true
+     },
+     {
+      "id": "nothing",
+      "t": "Nothing. They only watched the sky.",
+      "miss": "Look at the camp photo. What did every one of those families need to buy?"
+     },
+     {
+      "id": "closed",
+      "t": "Stores had to close",
+      "miss": "Think about it: a million hungry visitors. Did stores close, or get busy?"
+     }
+    ]
+   },
+   "hotT": "First, tap every gold number on the photo above. Then you can guess.",
+   "lockT": "🔒 Lock in my guess",
+   "youT": "Your guess",
+   "aboutT": "about",
+   "closeT": "Wow, you were close!",
+   "lowT": "Even more people came than you guessed!",
+   "highT": "You guessed high. Still, that was a huge crowd.",
+   "win": "🚀 <b>About one million visitors!</b> The space program didn't just make jobs at NASA. It brought tourists too, and they spent money all over the Space Coast. Now read the three questions below."
+  },
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "In Learn the Story, tap the button to open each part. Watch the tree grow.",
+    "Tap every gold number on the photo to see what each part shows.",
+    "Slide to make your guess: how many people came to watch? Lock it in.",
+    "Answer the question, then read the three questions under the photo."
+   ]
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 56,
+    "y": 22,
+    "title": "The rocket lifting off.",
+    "t": "That thin white streak is the Saturn V rocket carrying Apollo 11, rising off its launch pad more than three miles away."
+   },
+   {
+    "n": "2",
+    "x": 40,
+    "y": 32,
+    "title": "Clouds of smoke and steam.",
+    "t": "The rocket's engines blast so hard that huge clouds of steam and smoke roll out from the launch pad."
+   },
+   {
+    "n": "3",
+    "x": 73,
+    "y": 30,
+    "title": "The launch tower.",
+    "t": "The tall tower held the rocket before launch. Now it stands empty."
+   },
+   {
+    "n": "4",
+    "x": 35,
+    "y": 44,
+    "title": "Water in between.",
+    "t": "A wide stretch of water lies between the crowd and the launch pad. Rockets launch near the coast and fly out over the ocean."
+   },
+   {
+    "n": "5",
+    "x": 15,
+    "y": 49,
+    "title": "A long line of watchers.",
+    "t": "Look at the far shore: a line of people stretches all the way across the photo."
+   },
+   {
+    "n": "6",
+    "x": 50,
+    "y": 78,
+    "title": "Cameras up.",
+    "t": "Many people in front hold up cameras. They were news reporters from all over the world."
+   },
+   {
+    "n": "7",
+    "x": 75,
+    "y": 95,
+    "title": "The sign.",
+    "t": "The sign says John F. Kennedy Space Center. NASA named its Florida launch center for the president who set the moon goal."
+   }
+  ]
+ },
+ "planner": {
+  "type": "missionpatch",
+  "center": "🚀",
+  "voice": "Pick one for each part of your patch. These are just notes. You'll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🧵",
+   "q": "Why a mission patch?",
+   "t": "Every NASA crew wore a round patch that showed their mission. Your patch shows your mission too: a cause, an effect, and why it still matters. Those are the three parts of a strong Source Study answer."
+  },
+  "rows": [
+   {
+    "id": "cause",
+    "lab": "The cause: what started the change?",
+    "short": "Cause",
+    "opts": [
+     {
+      "t": "Rockets launched from Florida's east coast"
+     },
+     {
+      "t": "New highways, cheap flights, and air conditioning brought visitors"
+     },
+     {
+      "t": "Walt Disney World opened near Orlando in 1971"
+     }
+    ]
+   },
+   {
+    "id": "effect",
+    "lab": "The effect: what happened because of it?",
+    "short": "Effect",
+    "opts": [
+     {
+      "t": "Towns like Cocoa Beach and Titusville grew fast"
+     },
+     {
+      "t": "Thousands of new jobs for Floridians"
+     },
+     {
+      "t": "Millions of visitors spent money in Florida"
+     }
+    ]
+   },
+   {
+    "id": "matters",
+    "lab": "Why it still matters today",
+    "short": "Today",
+    "opts": [
+     {
+      "t": "Tourism is still Florida's biggest industry"
+     },
+     {
+      "t": "Rockets still launch from the Space Coast"
+     },
+     {
+      "t": "Florida is known as a place where the future is built"
+     }
+    ]
+   }
+  ],
+  "doneT": "Your mission patch is stitched. Now write in Step 3: what the photo shows, a cause, an effect, and why it matters.",
+  "emptyT": "Your plan will show up here as you choose."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what the photo shows",
+    "rx": "photo|picture|source|crowd|people|reporter|camera|rocket|smoke|launch|tower|watch|sign"
+   },
+   {
+    "t": "a cause",
+    "rx": "rocket|launch|space|nasa|apollo|disney|theme park|highway|air condition|flight|plane|tourism|tourist|visitor|soldier"
+   },
+   {
+    "t": "an effect",
+    "rx": "job|work|grew|grow|town|money|spend|spent|business|motel|hotel|visitor|tourist|million|economy|identity|famous|known"
+   },
+   {
+    "t": "because / so",
+    "rx": "because|caused|cause|so |led|helped|help|made|brought|that.?s why|since"
+   }
+  ],
+  "lines": [
+   "Start with the photo: “This photo shows…”",
+   "Good. Now a cause: “The space program (or tourism)…”",
+   "Add an effect: “Because of this, Florida…”",
+   "Say why it matters today.",
+   "Read it over once. Did you use your own words?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use your trip, the tree you grew, and the photo."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill your mission patch: a cause, an effect, and why it matters."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Source Study about the photo and how tourism and space changed Florida. Then your Historian's Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Source Study"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Source Study and check off the whole list.",
+ "vocab": {
+  "type": "ferriswheel",
+  "kicker": "Turn the wheel",
+  "h": "tour = to turn",
+  "root": "tour",
+  "hl": "tour|turn",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match turns the wheel and lights one more car.",
+  "why": {
+   "icon": "🎡",
+   "q": "Why a Ferris wheel?",
+   "t": "<b>Tour</b> comes from a Latin word that means to turn. A tour turns around and brings you back home, the way a Ferris wheel turns and brings riders back to where they started. That's why each match turns the wheel."
+  },
+  "words": [
+   {
+    "w": "tourist",
+    "m": "a person who travels for fun",
+    "miss": "Millions of tourists visit Florida. A tourist is…",
+    "say": "Tourist. A person who travels for fun."
+   },
+   {
+    "w": "tour",
+    "m": "a trip that visits places and comes back",
+    "miss": "Visitors took a bus tour of the Space Center. A tour is…",
+    "say": "Tour. A trip that visits places and comes back."
+   },
+   {
+    "w": "detour",
+    "m": "a different way around when the road is blocked",
+    "miss": "When a road is closed, you take a detour. A detour is…",
+    "say": "Detour. A different way around when the road is blocked."
+   },
+   {
+    "w": "return",
+    "m": "to turn back and come home",
+    "miss": "After vacation, families return home. Return means…",
+    "say": "Return. To turn back and come home."
+   }
+  ],
+  "boardT": "Cars lit",
+  "win": "🎡 The whole wheel is turning!"
+ },
+ "cabinet": {
+  "n": 10
+ },
+ "notes": {
+  "learned": [
+   "Tourists came to Florida long before Disney World, but after World War II tourism grew faster than ever: soldiers came back, new highways like Interstate 4 were built, flights got cheaper, and air conditioning made summers comfortable.",
+   "Walt Disney announced his Florida project in Orlando on November 15, 1965, and Walt Disney World opened on October 1, 1971. It created thousands of jobs.",
+   "Rockets launched from Cape Canaveral because they could fly east over the ocean. NASA's Kennedy Space Center launched Apollo 11 on July 16, 1969, and astronauts walked on the moon on July 20.",
+   "Houston, Texas was Mission Control, but the rockets launched from Florida.",
+   "Brevard County, the Space Coast, grew from about 23,600 people in 1950 to about 230,000 in 1970. Builders, teachers, and motel and restaurant workers got new jobs too.",
+   "About one million people came to the Space Coast to watch Apollo 11 launch.",
+   "Today tourism is still Florida's biggest industry, and rockets still launch from the Space Coast."
+  ],
+  "vocab": [
+   [
+    "tourism",
+    "people traveling for fun and spending money where they visit"
+   ],
+   [
+    "economy",
+    "the way people in a place earn and spend money"
+   ],
+   [
+    "industry",
+    "a kind of business"
+   ],
+   [
+    "hospitality",
+    "hotels, restaurants, and parks that take care of visitors"
+   ],
+   [
+    "theme park",
+    "an amusement park built around stories and ideas"
+   ],
+   [
+    "NASA",
+    "the United States space agency, started in 1958"
+   ],
+   [
+    "launch",
+    "to send a rocket up into the sky"
+   ],
+   [
+    "Mission Control",
+    "the team in Houston, Texas that guided each spaceflight from the ground"
+   ],
+   [
+    "Space Coast",
+    "Brevard County, Florida, where the Kennedy Space Center is"
+   ],
+   [
+    "cause",
+    "what makes something happen"
+   ],
+   [
+    "effect",
+    "what happens because of a cause"
+   ],
+   [
+    "estimate",
+    "a careful guess made from clues"
+   ],
+   [
+    "tour (word root)",
+    "to turn"
+   ],
+   [
+    "tourist",
+    "a person who travels for fun"
+   ],
+   [
+    "detour",
+    "a different way around when the road is blocked"
+   ],
+   [
+    "return",
+    "to turn back and come home"
+   ]
+  ],
+  "wordParts": "The Latin word tornare (to turn) gives us tour and turn. You can find it in tourist, tour, detour and return."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a reason tourism grew",
+    "rx": "highway|road|interstate|i-4|car|drive|flight|plane|fly|air condition|\\bac\\b|soldier|war|weather|warm|sun|beach|ocean|disney|theme park|park|cheap|motel|hotel",
+    "n": 1
+   },
+   {
+    "t": "a second reason",
+    "rx": "highway|road|interstate|car|drive|flight|plane|fly|air condition|soldier|war|weather|warm|sun|beach|disney|theme park|cheap|motel|hotel",
+    "n": 2
+   },
+   {
+    "t": "after World War II",
+    "rx": "war|after|1945|soldier|veteran|1950|1960|1971|came back",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "NASA or Apollo",
+    "rx": "nasa|apollo|rocket|space|launch|kennedy|cape|astronaut|moon",
+    "n": 1
+   },
+   {
+    "t": "what changed for towns",
+    "rx": "grew|grow|bigger|town|city|cocoa|titusville|melbourne|brevard|house|home|school|road|people moved|moved|population|23|230",
+    "n": 1
+   },
+   {
+    "t": "workers or jobs",
+    "rx": "job|work|engineer|scientist|builder|teacher|motel|restaurant|store|family|families|paid|pay|business",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "tourism today",
+    "rx": "tourism|tourist|visitor|disney|theme park|vacation|biggest|largest|industry|hotel",
+    "n": 1
+   },
+   {
+    "t": "space today",
+    "rx": "rocket|launch|space|nasa|still|today|now|future|technology|science",
+    "n": 1
+   },
+   {
+    "t": "economy or identity",
+    "rx": "econom|money|job|work|known|famous|identity|future|business|earn|spend|industry",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at your 1971 trip and part 1 of Learn the Story.",
+   "What helped people get to Florida, and what made it comfortable once they got there?",
+   "Try this shape: “After World War II, tourism grew because ___ and ___.”"
+  ],
+  "journal-q2": [
+   "Look back at parts 3 and 4 of Learn the Story, and the Brevard County counter.",
+   "Who moved to the Space Coast? What did towns like Cocoa Beach need once they came?",
+   "Try this shape: “The space program brought ___ to the Space Coast. Towns ___.”"
+  ],
+  "journal-q3": [
+   "Look back at part 5 of Learn the Story and the top of your tree.",
+   "Is tourism still big today? Do rockets still launch? What is Florida known for?",
+   "Try this shape: “Today, tourism ___. The space program ___. Florida is known as ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: which do you think helped tourism most, highways or air conditioning? Why?",
+  "journal-q2": "Go further: why might a teacher or a builder move to the Space Coast, even though they never worked for NASA?",
+  "journal-q3": "Go further: how did launches make the space program and tourism work together?"
+ },
+ "quizMiss": [
+  {
+   "a": "1955 is when Disneyland opened in California. Reread part 2: when did Walt Disney World open in Florida?",
+   "c": "1986 is too late. Reread part 2 of Learn the Story for the opening date."
+  },
+  {
+   "a": "Washington, D.C. is far from Florida's coast. Reread part 3: which way do rockets fly, and over what?",
+   "c": "Florida is warm, not cold. Reread part 3: why was the east coast a good launch site?"
+  },
+  {
+   "a": "Farming didn't disappear. Tourism and space added new kinds of jobs. Reread part 5.",
+   "c": "Tourism and space made a huge difference. Think about your jobs jar and the Brevard County counter."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "My family's road trip",
+   "at": "scene1",
+   "script": "When I was little, my family drove to the beach every summer. We paid for a motel, gas, and a lot of ice cream! In 1971, families drove to Florida on brand-new highways. Plan your trip: drag each stop onto a day, and watch the jobs jar fill up."
+  },
+  {
+   "slot": "guide2",
+   "label": "Count the jobs",
+   "at": "s1done",
+   "script": "Pause me and count the jobs in your jar. That's how many people earned money because one family came to Florida. Now picture millions of families doing the same thing. That's how tourism grows an economy. Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Three trunks",
+   "at": "explore",
+   "script": "This story has three trunks: visitors, Disney, and the space program. Tap the button to open each part. Each part grows a branch, and each leaf is an effect, something that happened because of it. Watch the whole tree fill in."
+  },
+  {
+   "slot": "guide4",
+   "label": "Houston or Florida?",
+   "at": "readmid",
+   "script": "Here's a mix-up I hear a lot: the rockets launched from Houston. Not true! Houston was Mission Control, the team on the ground. The rockets launched right here in Florida, out over the ocean. Hold on to that, because the next part asks you."
+  },
+  {
+   "slot": "guide5",
+   "label": "Count the clues",
+   "at": "evidence",
+   "script": "Look at this photo from the morning of July 16, 1969. Tap every gold number first: the rocket, the smoke, the tower, and the crowd. Then make your guess. How many people do you think came to the Space Coast to watch Apollo 11 launch?"
+  },
+  {
+   "label": "Hear the real launch",
+   "at": "estdone",
+   "when": "estimated",
+   "parts": [
+    {
+     "slot": "guide6a",
+     "script": "One million people! And this is what they heard that morning. It's the real NASA recording. The announcer is a man named Jack King. Listen for the countdown."
+    },
+    {
+     "slot": "guide6b",
+     "who": "NASA launch commentary by Jack King, Apollo 11, July 16, 1969 (the real recording)",
+     "script": "T-minus 15 seconds, guidance is internal. 12, 11, 10, 9, ignition sequence start. 6, 5, 4, 3, 2, 1, zero, all engines running. We have a liftoff. Liftoff on Apollo 11."
+    },
+    {
+     "slot": "guide6c",
+     "script": "Every one of those visitors needed gas, food, and a place to sleep. That's the space program and tourism working together. Now answer the question below."
+    }
+   ]
+  },
+  {
+   "slot": "guide7",
+   "label": "Stitch the patch",
+   "at": "plan",
+   "script": "When I plan a story about change, I think like a mission patch: what started it, what happened because of it, and why it still matters today. Pick one for each part of your patch. These are notes. You'll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^highways$",
+    "sel": ".spk-tripscene .road",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^drag$",
+    "sel": ".spk-triptray",
+    "fx": "pop"
+   },
+   {
+    "at": "^day$",
+    "sel": ".spk-tripdays .day",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^jobs$",
+    "sel": ".spk-tripjar",
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^jobs$",
+    "sel": ".spk-tripjar .tok",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^millions$",
+    "sel": ".spk-tripjar .jar",
+    "fx": "pop"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^trunks$",
+    "sel": ".spk-etscene",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^button$",
+    "sel": ".spk-etctl",
+    "fx": "point"
+   },
+   {
+    "at": "^leaf$",
+    "sel": ".spk-etleaves",
+    "fx": "glow"
+   },
+   {
+    "at": "^tree$",
+    "sel": ".spk-etsvg",
+    "fx": "pop"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^Houston$",
+    "sel": ".spk-etp[data-i=\"2\"] .txt p",
+    "fx": "trace"
+   },
+   {
+    "at": "^Florida$",
+    "sel": ".spk-etsvg .pt[data-t=\"2\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^asks$",
+    "sel": ".spk-etctl",
+    "fx": "point"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "reveal",
+    "scroll": true
+   },
+   {
+    "at": "^rocket$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^tower$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"2\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^crowd$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"4\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^guess$",
+    "sel": ".spk-est .guess",
+    "fx": "point"
+   }
+  ],
+  "guide6a": [
+   {
+    "at": "^million$",
+    "sel": ".spk-est .br.real",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^morning$",
+    "sel": ".spk-estfig",
+    "fx": "glow"
+   }
+  ],
+  "guide6b": [
+   {
+    "at": "^ignition$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^liftoff$",
+    "sel": ".source-image-placeholder .spk-hot[data-i=\"0\"]",
+    "fx": "pop"
+   }
+  ],
+  "guide6c": [
+   {
+    "at": "^gas$",
+    "sel": ".spk-estfig",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-est [data-q=\"q\"]",
+    "fx": "point"
+   }
+  ],
+  "guide7": [
+   {
+    "at": "^started$",
+    "sel": ".spk-mpch .sec[data-k=\"0\"]",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^happened$",
+    "sel": ".spk-mpch .sec[data-k=\"1\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^matters$",
+    "sel": ".spk-mpch .sec[data-k=\"2\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^patch$",
+    "sel": ".spk-mpch .patch",
+    "fx": "pop"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,124 +3081,67 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Tourism, the Space Program, and Florida’s Economy ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1008sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#4a9edc"/>
-    <stop offset="60%" stop-color="#7ec8f0"/>
-    <stop offset="100%" stop-color="#c8e8f8"/>
-  </linearGradient>
-  <style>
-    .h1008flame { animation: h1008flame 1.5s ease-in-out infinite; }
-    @keyframes h1008flame { 0%,100% { opacity: 0.7; transform: scaleY(1); } 50% { opacity: 1; transform: scaleY(1.15); } }
-    .h1008cloud { animation: h1008cloud 14s ease-in-out infinite; }
-    @keyframes h1008cloud { 0%,100% { transform: translateX(0); } 50% { transform: translateX(20px); } }
-    .h1008palm { animation: h1008palm 5s ease-in-out infinite; transform-origin: bottom center; }
-    @keyframes h1008palm { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
-  </style>
-</defs>
-<!-- sky -->
-<rect width="920" height="260" fill="url(#h1008sky)"/>
-<!-- ocean -->
-<rect x="0" y="190" width="920" height="20" fill="#3a8abf" opacity="0.5"/>
-<!-- beach -->
-<rect x="0" y="200" width="920" height="60" fill="#f0dca0"/>
-<rect x="0" y="210" width="920" height="50" fill="#e8d090"/>
-
-<!-- clouds -->
-<g transform="translate(150,35)">
-  <g class="h1008cloud">
-    <ellipse cx="0" cy="0" rx="45" ry="16" fill="white" opacity="0.7"/>
-    <ellipse cx="25" cy="-5" rx="30" ry="12" fill="white" opacity="0.6"/>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Dawn over Florida's Space Coast: tents and station wagons on a beach, and across the water a rocket on its launch pad with a faint trail rising">
+  <defs>
+    <linearGradient id="b1008sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2C3E78"/><stop offset=".45" stop-color="#C0688A"/><stop offset=".75" stop-color="#F6A867"/><stop offset="1" stop-color="#FFD9A0"/>
+    </linearGradient>
+    <linearGradient id="b1008sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7A47C"/><stop offset="1" stop-color="#5B6FA0"/></linearGradient>
+    <linearGradient id="b1008sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9C99A"/><stop offset="1" stop-color="#C79B6A"/></linearGradient>
+    <radialGradient id="b1008sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4C8"/><stop offset=".5" stop-color="#FFD27A" stop-opacity=".9"/><stop offset="1" stop-color="#FFB45A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="b1008trail" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FFF6E0" stop-opacity=".9"/><stop offset="1" stop-color="#FFF6E0" stop-opacity="0"/></linearGradient>
+    <style>
+      .b1008-glow{animation:b1008glow 7s ease-in-out infinite alternate}
+      .b1008-trail{transform-box:fill-box;transform-origin:50% 100%;animation:b1008rise 9s ease-in-out infinite}
+      .b1008-bird{animation:b1008glide 26s linear infinite}
+      .b1008-bird2{animation:b1008glide 34s linear infinite;animation-delay:-12s}
+      .b1008-shim{animation:b1008shim 5s ease-in-out infinite alternate}
+      @keyframes b1008glow{from{opacity:.75}to{opacity:1}}
+      @keyframes b1008rise{0%,100%{transform:scaleY(.85);opacity:.55}50%{transform:scaleY(1);opacity:.9}}
+      @keyframes b1008glide{from{transform:translateX(-80px)}to{transform:translateX(1000px)}}
+      @keyframes b1008shim{from{opacity:.25}to{opacity:.6}}
+      @media (prefers-reduced-motion: reduce){.b1008-glow,.b1008-trail,.b1008-bird,.b1008-bird2,.b1008-shim{animation:none}}
+    </style>
+  </defs>
+  <rect width="920" height="200" fill="url(#b1008sky)"/>
+  <circle class="b1008-glow" cx="170" cy="112" r="70" fill="url(#b1008sun)"/>
+  <circle cx="170" cy="112" r="20" fill="#FFF1C4"/>
+  <!-- far shore and the launch complex -->
+  <path d="M0,112 C140,108 260,110 420,109 C560,108 700,110 920,107 L920,121 L0,121Z" fill="#4A4766"/>
+  <g fill="#3B3858">
+    <rect x="652" y="58" width="18" height="52"/>
+    <g stroke="#3B3858" stroke-width="1.5"><line x1="652" y1="66" x2="670" y2="74"/><line x1="652" y1="78" x2="670" y2="86"/><line x1="652" y1="90" x2="670" y2="98"/><line x1="670" y1="66" x2="652" y2="74"/><line x1="670" y1="78" x2="652" y2="86"/><line x1="670" y1="90" x2="652" y2="98"/></g>
+    <rect x="670" y="70" width="10" height="3"/><rect x="670" y="84" width="10" height="3"/>
+    <path d="M684,110 L684,58 Q688,46 692,58 L692,110Z"/>
+    <rect x="681" y="96" width="14" height="14"/>
+    <rect x="560" y="80" width="40" height="30"/>
   </g>
-</g>
-<g transform="translate(550,25)">
-  <g class="h1008cloud">
-    <ellipse cx="0" cy="0" rx="55" ry="18" fill="white" opacity="0.65"/>
-    <ellipse cx="-30" cy="-4" rx="35" ry="13" fill="white" opacity="0.55"/>
+  <path class="b1008-trail" d="M686,58 C684,40 690,22 686,0 L694,0 C690,22 694,40 690,58Z" fill="url(#b1008trail)"/>
+  <!-- water -->
+  <rect y="121" width="920" height="34" fill="url(#b1008sea)"/>
+  <path class="b1008-shim" d="M120,130 h90 M300,138 h120 M520,131 h70 M640,141 h110 M780,133 h80" stroke="#FFE2B8" stroke-width="2" stroke-linecap="round"/>
+  <path class="b1008-shim" d="M150,126 h40 M690,126 h30" stroke="#FFF1C4" stroke-width="3" stroke-linecap="round"/>
+  <!-- near beach with the camp -->
+  <path d="M0,152 C200,146 420,150 920,146 L920,200 L0,200Z" fill="url(#b1008sand)"/>
+  <!-- tents -->
+  <path d="M60,176 L92,150 L124,176Z" fill="#C2453A"/><path d="M92,150 L92,176" stroke="#7A2A22" stroke-width="2"/>
+  <path d="M250,180 L286,152 L322,180Z" fill="#2F8F7B"/><path d="M286,152 L304,180 L286,180Z" fill="#257363"/>
+  <path d="M720,178 L748,156 L776,178Z" fill="#E0A93B"/>
+  <path d="M846,182 L878,158 L910,182Z" fill="#3C7FD0"/><path d="M878,158 L878,182" stroke="#24508A" stroke-width="2"/>
+  <!-- station wagons -->
+  <g transform="translate(150,166)"><rect x="0" y="6" width="72" height="16" rx="4" fill="#5E7FA6"/><path d="M8,6 L16,-6 L62,-6 L66,6Z" fill="#7E9CC0"/><rect x="2" y="12" width="68" height="3" fill="#8A5A2E"/><rect x="14" y="-10" width="40" height="4" rx="1" fill="#D9A441"/><circle cx="16" cy="24" r="6" fill="#2A2A2A"/><circle cx="58" cy="24" r="6" fill="#2A2A2A"/></g>
+  <g transform="translate(560,166)"><rect x="0" y="6" width="74" height="16" rx="4" fill="#B8573E"/><path d="M8,6 L16,-6 L64,-6 L68,6Z" fill="#D98B6A"/><rect x="2" y="12" width="70" height="3" fill="#7A4A26"/><circle cx="16" cy="24" r="6" fill="#2A2A2A"/><circle cx="60" cy="24" r="6" fill="#2A2A2A"/></g>
+  <!-- folding chair and cooler -->
+  <g fill="none" stroke="#6B4E2E" stroke-width="2.5"><path d="M400,186 L412,166 L424,186 M404,176 L420,176"/></g>
+  <rect x="430" y="176" width="22" height="12" rx="2" fill="#3C7FD0"/><rect x="430" y="174" width="22" height="4" rx="1" fill="#E8EDF4"/>
+  <!-- palms -->
+  <g stroke="#2B3A2F" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M18,200 Q24,160 16,128"/><path d="M16,128 q-22,-6 -34,6 M16,128 q22,-8 34,4 M16,128 q-8,-16 2,-28 M16,128 q14,-14 28,-14"/>
+    <path d="M500,200 Q506,170 498,146"/><path d="M498,146 q-18,-5 -28,5 M498,146 q18,-6 28,3 M498,146 q-6,-13 2,-23 M498,146 q12,-11 22,-11"/>
   </g>
-</g>
-
-<!-- sun -->
-<circle cx="820" cy="50" r="35" fill="#ffe066" opacity="0.8"/>
-<circle cx="820" cy="50" r="25" fill="#fff4a0"/>
-
-<!-- rocket on launch pad -->
-<rect x="100" y="170" width="60" height="10" fill="#888"/>
-<rect x="108" y="175" width="5" height="25" fill="#777"/>
-<rect x="147" y="175" width="5" height="25" fill="#777"/>
-<!-- rocket body -->
-<rect x="118" y="90" width="24" height="80" fill="#e8e8e8" rx="2"/>
-<!-- nose cone -->
-<polygon points="118,90 130,55 142,90" fill="#e06040"/>
-<!-- fins -->
-<polygon points="118,155 108,170 118,165" fill="#e06040"/>
-<polygon points="142,155 152,170 142,165" fill="#e06040"/>
-<!-- window -->
-<circle cx="130" cy="110" r="6" fill="#4a9edc" stroke="#ccc" stroke-width="1.5"/>
-<!-- flame -->
-<g transform="translate(130,175)">
-  <g class="h1008flame">
-    <ellipse cx="0" cy="10" rx="8" ry="18" fill="#ff6020" opacity="0.8"/>
-    <ellipse cx="0" cy="8" rx="5" ry="12" fill="#ffaa30" opacity="0.9"/>
-    <ellipse cx="0" cy="5" rx="3" ry="7" fill="#ffe060"/>
-  </g>
-</g>
-
-<!-- hotel building -->
-<rect x="330" y="120" width="80" height="80" fill="#f0f0f0" rx="2"/>
-<rect x="335" y="100" width="70" height="25" fill="#e0e0e0" rx="2"/>
-<!-- hotel windows -->
-<rect x="340" y="130" width="12" height="12" fill="#80c0e0"/>
-<rect x="358" y="130" width="12" height="12" fill="#80c0e0"/>
-<rect x="376" y="130" width="12" height="12" fill="#80c0e0"/>
-<rect x="394" y="130" width="12" height="12" fill="#80c0e0"/>
-<rect x="340" y="150" width="12" height="12" fill="#80c0e0"/>
-<rect x="358" y="150" width="12" height="12" fill="#80c0e0"/>
-<rect x="376" y="150" width="12" height="12" fill="#80c0e0"/>
-<rect x="394" y="150" width="12" height="12" fill="#80c0e0"/>
-<rect x="340" y="170" width="12" height="12" fill="#80c0e0"/>
-<rect x="358" y="170" width="12" height="12" fill="#80c0e0"/>
-<rect x="376" y="170" width="12" height="12" fill="#80c0e0"/>
-<rect x="394" y="170" width="12" height="12" fill="#80c0e0"/>
-<!-- door -->
-<rect x="362" y="185" width="16" height="15" fill="#6aa0c0" rx="1"/>
-
-<!-- theme park castle silhouette -->
-<rect x="550" y="130" width="70" height="70" fill="#c0a0d0" opacity="0.6"/>
-<rect x="555" y="110" width="15" height="25" fill="#c0a0d0" opacity="0.6"/>
-<rect x="595" y="110" width="15" height="25" fill="#c0a0d0" opacity="0.6"/>
-<polygon points="555,110 562,85 570,110" fill="#c0a0d0" opacity="0.6"/>
-<polygon points="595,110 602,85 610,110" fill="#c0a0d0" opacity="0.6"/>
-<!-- center tower -->
-<rect x="573" y="100" width="20" height="35" fill="#c0a0d0" opacity="0.6"/>
-<polygon points="573,100 583,70 593,100" fill="#c0a0d0" opacity="0.6"/>
-<!-- flag -->
-<line x1="583" y1="70" x2="583" y2="60" stroke="#c0a0d0" stroke-width="1.5" opacity="0.6"/>
-<polygon points="583,60 595,64 583,68" fill="#e0c0f0" opacity="0.5"/>
-
-<!-- palm tree left -->
-<g transform="translate(470,200)">
-  <rect x="-3" y="-60" width="6" height="60" fill="#8b6f40" rx="2"/>
-  <g class="h1008palm">
-    <ellipse cx="-20" cy="-65" rx="25" ry="8" fill="#3a8a3a" transform="rotate(-25)"/>
-    <ellipse cx="15" cy="-68" rx="22" ry="7" fill="#4a9a4a" transform="rotate(15)"/>
-    <ellipse cx="-5" cy="-72" rx="20" ry="6" fill="#3a8a3a" transform="rotate(-5)"/>
-    <ellipse cx="25" cy="-58" rx="20" ry="6" fill="#4a9a4a" transform="rotate(30)"/>
-  </g>
-</g>
-<!-- palm tree right -->
-<g transform="translate(760,200)">
-  <rect x="-3" y="-55" width="6" height="55" fill="#8b6f40" rx="2"/>
-  <g class="h1008palm">
-    <ellipse cx="-18" cy="-60" rx="22" ry="7" fill="#3a8a3a" transform="rotate(-20)"/>
-    <ellipse cx="18" cy="-62" rx="20" ry="6" fill="#4a9a4a" transform="rotate(20)"/>
-    <ellipse cx="0" cy="-66" rx="18" ry="6" fill="#3a8a3a"/>
-  </g>
-</g>
-
-<!-- wave lines -->
-<path d="M0,195 Q40,190 80,195 Q120,200 160,195 Q200,190 240,195 Q280,200 320,195 Q360,190 400,195 Q440,200 480,195 Q520,190 560,195 Q600,200 640,195 Q680,190 720,195 Q760,200 800,195 Q840,190 880,195 Q900,198 920,195" fill="none" stroke="#3a8abf" stroke-width="1.5" opacity="0.4"/>
+  <!-- pelicans -->
+  <g class="b1008-bird" fill="none" stroke="#2C2A44" stroke-width="2.2" stroke-linecap="round"><path d="M0,60 q8,-7 16,0 q8,-7 16,0"/><path d="M40,72 q6,-5 12,0 q6,-5 12,0"/></g>
+  <g class="b1008-bird2" fill="none" stroke="#2C2A44" stroke-width="2" stroke-linecap="round"><path d="M0,40 q7,-6 14,0 q7,-6 14,0"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -2186,7 +3188,7 @@ body.tx-active .tx-toggle-label {
     <span class="canvas-sticky-head-label">Message from Inside Canvas</span>
   </div>
   <div class="canvas-sticky-body">
-    <p>I’m getting closer to a message — and there’s a whole wall of postcards nearby showing beaches, rockets, and theme parks. These aren’t just souvenirs. They’re clues about how tourism and space exploration shaped Florida’s economy. Help me explain their effects.</p>
+    <p>Remember the thin line of light under that one door? Now a clock has appeared above it, counting down like a rocket launch. There’s a wall of old postcards here too: beaches, rockets, and theme parks. Help me figure out how tourism and the space program changed Florida, and maybe we’ll find out what’s behind this door.</p>
   </div>
   <div class="canvas-sticky-byline">— Your teacher, from somewhere inside Module 10</div>
 </div>
@@ -2318,7 +3320,7 @@ body.tx-active .tx-toggle-label {
       <span class="canvas-file-card-head-text">The Tourism and Space File</span>
     </div>
     <div class="canvas-file-card-body">
-      <p>This file contains clues about beaches, hotels, rockets, visitors, and economic growth. Connect the dots between tourism, the space program, and Florida’s modern economy.</p>
+      <p>Plan a family trip to Florida in 1971. Pick a stop for each day, then find out who earned money because your family came.</p>
       <div class="canvas-file-card-visual">
         <p style="font-size:14px;color:#6E5215;padding:12px;">📂 This file contains clues about beaches, hotels, rockets, visitors, and economic growth. Connect the dots between tourism, the space program, and Florida’s modern economy.</p>
       </div>
@@ -3650,5 +4652,9 @@ function toggleTX() {
 })();
 </script>
 
+
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
