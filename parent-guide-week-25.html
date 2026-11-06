@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 25 Family Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 25: Hard Years and New Jobs</h1>
+      <div class="sub">Unit 10: Modern Florida Takes Shape · Lessons 4.10.07–4.10.08</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Real primary sources</span>
+        <span class="chip">Florida File 10 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-10-08-press-site-apollo11-1969.jpg');background-position:center 45%;background-color:#D8D8D0;" role="img" aria-label="A 1969 NASA photograph: a crowd at the Kennedy Space Center press site watches the Apollo 11 rocket lift off across the water"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four tabs, in order:</strong> Learn → Explore → Check → Assignment. A button at the bottom of each tab moves to the next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> The bottom of the Assignment tab collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Download as PDF</strong> (or Copy) saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Listen</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>Last week your student studied a war and a land boom that went bust. This week they follow Florida through hard years and into a new kind of economy (the way people in a place earn and spend money). In Lesson 7 they learn how the <strong>Great Depression</strong> hurt Florida, how <strong>New Deal</strong> programs gave people work, and how <strong>World War II</strong> filled Florida with training bases and shipyards. In Lesson 8 they see how <strong>tourism</strong> and the <strong>space program</strong> brought visitors and jobs after the war. The big idea: <strong>hard times and new industries can change a place, and one cause can have many effects.</strong> This week closes Unit 10.</p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Cause and effect.</strong> Your student traces what happened because of the Depression, the war, Walt Disney World and the space program, and backs it up with real photos.</div>
+      <div class="box b-green"><div class="box-label">Virtue this week</div><strong>Courage.</strong> Families who kept going through hard times, and people who took big risks, like building a giant park on swampy land or sending astronauts to the moon.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> Lesson 7 tells how, on April 10, 1942, a German submarine sank the oil tanker <em>Gulfamerica</em> close enough to see from Jacksonville Beach, and your student hears two lines from the U.S. Navy’s own war diary for that night. Lesson 8 includes a real NASA recording of the Apollo 11 countdown.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.10.07<span>Lesson 7</span></td>
+          <td><span class="ch">Florida During the Great Depression and World War II</span><br>In 1929 the <strong>stock market</strong> (where people buy and sell small pieces of companies) crashed, and the <strong>Great Depression</strong> began. Florida was already hurting from the land bust and the 1928 hurricane around Lake Okeechobee; now tourists stopped coming and many people lost their jobs, savings and homes. President Franklin Roosevelt’s <strong>New Deal</strong> gave people work: the <strong>CCC</strong> (Civilian Conservation Corps) built state parks, planted trees and fixed roads, and the <strong>WPA</strong> built schools and bridges. In 1941 the United States entered <strong>World War II</strong>. Florida’s warm weather and flat land were good for training all year, so the military built bases like NAS Jacksonville, Eglin Field and MacDill Field. In 1942 enemy submarines sank ships near the coast, and towns dimmed their lights at night. Shipyards in Jacksonville, Tampa and Panama City built ships, women took factory jobs, and families used ration books. After the war, many soldiers who had trained in Florida came back to live.<br><span class="pill p-source">Source: CCC workers building a dining hall at the camp that became O’Leno State Park, July 1935 (State Archives of Florida)</span><span class="pill p-virtue">Virtue: Courage</span><span class="pill p-new">Word root: serv = to serve or keep safe</span></td>
+          <td><strong>Historian’s Notebook entry</strong> (3–5 sentences): one way the Depression hurt Florida and one New Deal or wartime change that helped, plus a Historian’s Sentence.</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.10.08<span>Lesson 8</span></td>
+          <td><span class="ch">Tourism, the Space Program, and Florida’s Economy</span><br>Tourists came to Florida long before Walt Disney World, but after World War II <strong>tourism</strong> grew faster than ever: soldiers came back with their families, new highways like Interstate 4 (finished in 1965) made driving easier, flights got cheaper, and air conditioning made summers comfortable. On November 15, 1965, Walt Disney and Governor Haydon Burns announced the Florida project in Orlando, and <strong>Walt Disney World</strong> opened on October 1, 1971, with thousands of new jobs. The first rocket launched from Cape Canaveral in 1950. NASA’s Kennedy Space Center launched <strong>Apollo 11</strong> on July 16, 1969, and astronauts walked on the moon on July 20. Houston, Texas was Mission Control, but the rockets launched from Florida. Brevard County, the <strong>Space Coast</strong>, grew from about 23,600 people in 1950 to about 230,000 in 1970, and local officials estimated that about one million people came to watch Apollo 11 launch.<br><span class="pill p-source">Source: news reporters watching Apollo 11 lift off, July 16, 1969 (NASA)</span><span class="pill p-virtue">Virtue: Courage</span><span class="pill p-new">Word root: tour = to turn</span></td>
+          <td><strong>Source Study</strong> (about 30 words or more): what the photo shows and how tourism and the space program changed Florida, plus a Historian’s Sentence.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>The teacher is still stuck inside Canvas, and the room keeps changing. In Lesson 4.10.07 the lights dim, like someone is saving power. Your student turns off the lights along a Florida beach the way towns really did in 1942 and sees a ship burning offshore, hears lines from the Navy’s war diary for that night, and follows one Florida clearing through the hard times, the New Deal and the war. They sort what a CCC project did for the workers and for the community, and match a hard-times card to a comeback card. A thin line of light shows under one door. In Lesson 4.10.08 a countdown clock appears over that door. Your student plans a family trip to Florida in 1971 and watches a jar fill with the jobs their family paid for, grows a tree of effects for tourism, Disney and the space program, then studies a NASA photo, guesses how many people came to watch Apollo 11, and hears the real countdown. They plan their writing as a mission patch. When they finish, the clock stops at 3 and the door shows the number 13. File 10 is closed.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>Great Depression</b><span>a time starting in 1929 when many people lost their jobs and their savings</span></div>
+      <div class="word"><b>New Deal</b><span>President Roosevelt’s programs that gave people work in hard times</span></div>
+      <div class="word"><b>ration book</b><span>a book of tickets that limited how much sugar, gas, or meat a family could buy</span></div>
+      <div class="word"><b>conserve</b><span>to keep something safe from harm (serv = to keep safe)</span></div>
+      <div class="word"><b>economy</b><span>the way people in a place earn and spend money</span></div>
+      <div class="word"><b>tourism</b><span>people traveling for fun and spending money where they visit</span></div>
+      <div class="word"><b>Space Coast</b><span>Brevard County, Florida, where the Kennedy Space Center is</span></div>
+      <div class="word"><b>tourist</b><span>a person who travels for fun (tour = to turn)</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">How did the New Deal help Florida?</span><span class="listen">Listen for: programs like the CCC and WPA paid people to build parks, roads, schools and bridges, so families had a paycheck.</span></li>
+      <li><span class="q">Why did Florida towns turn their lights off at night in 1942?</span><span class="listen">Listen for: enemy submarines were near the coast, and bright lights on shore made ships easy to see.</span></li>
+      <li><span class="q">Did tourism in Florida start with Disney World?</span><span class="listen">Listen for: no. Tourists came long before 1971; after World War II highways, cheaper flights and air conditioning brought even more.</span></li>
+      <li><span class="q">Did the Apollo rockets launch from Houston?</span><span class="listen">Listen for: no. Houston was Mission Control; the rockets launched from the Kennedy Space Center in Florida.</span></li>
+      <li><span class="q">Who got jobs because of tourism and the space program?</span><span class="listen">Listen for: lots of people, like motel clerks, cooks, tour guides, builders, teachers and orange growers, not only astronauts.</span></li>
+    </ol>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a writing task, and a Historian’s Sentence, submitted in Canvas</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> specific details (like the CCC building state parks, or Brevard County growing from about 23,600 to about 230,000 people) and cause-and-effect words: “because,” “this led to,” “so.”</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Count the jobs.</strong> Think of your last trip or outing. Who did your family pay along the way? Each one is a job.</li>
+        <li><strong>One cause, many effects.</strong> Pick something new in your town, like a store or a road. What changed because of it?</li>
+        <li><strong>Find the root.</strong> Conserve, service, and preserve share a part that means “keep safe.” What do tourist, detour, and return share?</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🚀</div>
+      <div><p>Many Florida state parks were built by the CCC in the 1930s, including <strong>O’Leno State Park</strong> near High Springs, where CCC workers built many of the buildings still in the park today. On the Space Coast, the <strong>Kennedy Space Center Visitor Complex</strong> tells the story of the moon missions, and you can sometimes watch a real launch from the beaches nearby. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 26</h2></div>
+    <p><strong>A new unit.</strong> Next week your student begins Unit 11 and learns about Florida’s role in the civil rights movement and the community leaders who worked to make Florida fairer for everyone.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 25 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
