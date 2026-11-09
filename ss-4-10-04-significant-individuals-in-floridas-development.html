@@ -6108,5 +6108,51 @@ function toggleTX() {
 <!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
 <link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
 <script src="assets/sparkle/ff-sparkle.js"></script>
+<!-- OAO-STD-TIPS v1 -->
+<style id="oao-std-tips-css">
+.std-tip{border-bottom:1.5px dotted currentColor;cursor:help;border-radius:3px;outline:none;padding:0 1px}
+.std-tip:hover,.std-tip:focus,.std-tip.std-on{background:rgba(255,214,102,.35)}
+.std-tip:focus-visible{box-shadow:0 0 0 2px #2563eb}
+.std-pop{position:fixed;z-index:2147483000;display:none;max-width:320px;background:#1f2937;color:#fff;font:13.5px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;padding:9px 12px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.25);text-align:left;letter-spacing:0;text-transform:none;font-weight:400}
+.std-pop-row+.std-pop-row{margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.18)}
+.std-pop b{color:#fde68a;font-weight:700;white-space:nowrap}
+</style>
+<script id="oao-std-tips">
+(function(){
+if(window.__oaoStdTips)return;window.__oaoStdTips=1;
+var D={"SS.4.A.6.1": "Students describe how Florida's major industries grew.", "SS.4.A.6.2": "Students summarize what immigrant groups have contributed to Florida.", "SS.4.A.6.3": "Students describe how important individuals contributed to Florida.", "SS.4.A.6.4": "Students describe how the Spanish-American War affected Florida.", "SS.4.A.7.1": "Students describe the causes and effects of Florida's 1920s land boom and bust.", "SS.4.A.7.2": "Students summarize the challenges Floridians faced during the Great Depression.", "SS.4.A.7.3": "Students identify Florida's role in World War II.", "SS.4.A.8.3": "Students describe how the U.S. space program shaped Florida's economy and growth.", "SS.4.A.8.4": "Students explain how tourism affects Florida's economy and growth."},S={"A": "American History", "AA": "African American History", "CG": "Civics and Government", "E": "Economics", "G": "Geography", "FL": "Financial Literacy", "HE": "Holocaust Education"},G=4;
+function codesFor(tok){var m=tok.match(/^SS\.(\d)\.([A-Z]+)(?:\.(\d+)\.(\d+)(.*))?$/);if(!m)return null;
+ if(!m[3])return{strand:m[2],g:m[1]};var out=['SS.'+m[1]+'.'+m[2]+'.'+m[3]+'.'+m[4]],rest=m[5]||'',r=rest.match(/^\s*[–-]\s*(\d+)\.(\d+)/);
+ if(r){for(var x=+m[4]+1;x<=+r[2];x++)out.push('SS.'+m[1]+'.'+m[2]+'.'+r[1]+'.'+x);}
+ rest.replace(/,\s*(\d+)\.(\d+)/g,function(_,a,b){out.push('SS.'+m[1]+'.'+m[2]+'.'+a+'.'+b);});return{codes:out};}
+var pop=null,cur=null,shownAt=0;
+function hide(){if(pop)pop.style.display='none';if(cur){cur.removeAttribute('aria-describedby');cur.classList.remove('std-on');}cur=null;}
+function show(el){if(!pop){pop=document.createElement('div');pop.className='std-pop';pop.id='std-pop';pop.setAttribute('role','tooltip');document.body.appendChild(pop);}
+ if(cur&&cur!==el)hide();pop.textContent='';var items=JSON.parse(el.getAttribute('data-items')||'[]');
+ items.forEach(function(it){var row=document.createElement('div');row.className='std-pop-row';var b=document.createElement('b');b.textContent=it[0];row.appendChild(b);row.appendChild(document.createTextNode(' '+it[1]));pop.appendChild(row);});
+ pop.style.display='block';pop.style.left='0px';pop.style.top='0px';
+ var r=el.getBoundingClientRect(),w=pop.offsetWidth,h=pop.offsetHeight,vw=document.documentElement.clientWidth,vh=window.innerHeight;
+ var left=Math.min(Math.max(8,r.left),vw-w-8),top=r.bottom+6;if(top+h>vh-8&&r.top-h-6>8)top=r.top-h-6;
+ pop.style.left=left+'px';pop.style.top=top+'px';cur=el;shownAt=Date.now();el.setAttribute('aria-describedby','std-pop');el.classList.add('std-on');}
+function wrap(v){if(!v||v.querySelector('.std-tip'))return;
+ var parts=v.textContent.split(/(\s*[·;]\s*)/);if(!parts.some(function(p){return codesFor(p.trim());}))return;v.textContent='';
+ parts.forEach(function(p){var t=p.trim(),c=t&&codesFor(t);if(!c){v.appendChild(document.createTextNode(p));return;}
+  var items=c.strand?[[t,'Capstone review: brings together the Grade '+c.g+' '+(S[c.strand]||c.strand)+' standards taught this year.']]:c.codes.map(function(k){return[k,D[k]||'Florida social studies standard '+k+'.'];});
+  var s=document.createElement('span');s.className='std-tip';s.tabIndex=0;s.textContent=t;s.setAttribute('data-items',JSON.stringify(items));
+  s.setAttribute('aria-label',t+': '+items.map(function(i){return i[1];}).join(' '));v.appendChild(s);});}
+function run(){var ls=document.querySelectorAll('.info-label');for(var i=0;i<ls.length;i++){if(ls[i].textContent.trim()==='Standards'){var v=ls[i].nextElementSibling;while(v&&!(v.classList&&v.classList.contains('info-value')))v=v.nextElementSibling;wrap(v);}}
+ var bs=document.querySelectorAll('.spk-hd-panel .row > b');for(var j=0;j<bs.length;j++){if(bs[j].textContent.trim()==='Standards'){var n=bs[j].nextElementSibling;if(n&&!n.classList.contains('tx-standards'))wrap(n);}}}
+function tipOf(e){return e.target&&e.target.closest?e.target.closest('.std-tip'):null;}
+document.addEventListener('mouseover',function(e){var t=tipOf(e);if(t&&t!==cur)show(t);});
+document.addEventListener('mouseout',function(e){var t=tipOf(e);if(t&&t===cur&&!t.contains(e.relatedTarget)&&document.activeElement!==t)hide();});
+document.addEventListener('focusin',function(e){var t=tipOf(e);if(t)show(t);});
+document.addEventListener('focusout',function(e){var t=tipOf(e);if(t&&t===cur)hide();});
+document.addEventListener('click',function(e){var t=tipOf(e);if(!t){hide();return;}if(cur===t){if(Date.now()-shownAt>450)hide();}else show(t);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')hide();});window.addEventListener('scroll',hide,true);window.addEventListener('resize',hide);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(run,2500);});
+})();
+</script>
+<!-- /OAO-STD-TIPS -->
 </body>
 </html>
