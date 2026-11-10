@@ -7219,3 +7219,105 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', hook);
   else hook();
 })();
+
+
+/* ══ OAO-CLARITY v1 (Nov 2026) ═══════════════════════════════════════════
+   Carried over from the G3 pilot review ("hard to see the slider", "the
+   button didn't work", "make it clear what to click"):
+   1. 👆 on every simple button a student can tap (only while the layer is on;
+      a leading emoji on the button is hidden, not removed, so the plain page is unchanged)
+   2. a key line under the header that says what each mark means
+   3. a greyed-out button is never silent: tapping it says what is missing
+   4. every slider gets a big, easy-to-see knob
+   5. "Watch this first · How to use your lesson" video card at the top of the first tab
+   Grade settings live in OAO_CLARITY below. Nothing here holds lesson content. ── */
+(function(){
+  var C = {"root": "spk-on", "header": ".header", "skip": ".spk-hd-panel", "key": ["<b>👆</b> You can tap it.", "<b>🔊</b> You can listen.", "<b>📱</b> Messages: texts from your teacher.", "<b class=\"oao-knob\" aria-hidden=\"true\"></b> Drag the knob.", "Tap a tab to go to that part. <b class=\"oao-ok\">✓</b> means done."], "hand": ".tab-panel button, .spk-name-card button, button.mini", "noHand": ".spk-tab, .spk-pill, .spk-who, .dot, .play, .stop, .tab-btn, .spk-mail", "why": [[".spk-name-card button.go", "Type your first name first."], [".spk-link", "Finish at least two of the lines above first (3 words each)."], [".spk-mcgo", "Answer every part first."], [".spk-pnhgo", "Make a guess on every card first."], [".spk-step .spk-opt", "You picked the most you can. Tap one you picked to unpick it."], ["input[type=range]", "Finish the step above first."]], "noWhy": ".dot.on, .back, .play, .stop, .spk-nudge, [class*=nudge], .spk-whalf, .spk-tmbtns .spk-opt, .spk-tab", "whyArea": ".tab-panel, .spk-name-card", "whyDefault": "Finish the step before this one first.", "howto": {"panel": "#panel-scene", "before": null, "src": "assets/video/g4ss-howto.mp4", "poster": "assets/video/g4ss-howto.jpg", "face": "👩‍🏫"}};
+  var root = document.documentElement;
+  function on(){ return root.classList.contains(C.root); }
+  function $(s, r){ return (r||document).querySelector(s); }
+  function $$(s, r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+  var LEADING = /^\s*((?:(?:\p{Extended_Pictographic}|[←-⇿■-◿☀-➿])️?‍?\s*)+)/u;
+
+  /* 1 · the hand */
+  function simple(b){
+    if (b.closest(C.noHand)) return false;
+    if (b.querySelector('img,svg,div,p,figure,canvas,video,ul,ol,table,h1,h2,h3,h4,h5')) return false;
+    var t = (b.textContent||'').replace(/[^A-Za-z0-9]/g,'');
+    return t.length >= 3;
+  }
+  function markTaps(){
+    $$(C.hand).forEach(function(b){
+      if (b.querySelector('.oao-hand') || !simple(b)) return;
+      var t = b.firstChild;
+      if (t && t.nodeType === 3) { var m = t.nodeValue.match(LEADING); if (m) { t.nodeValue = t.nodeValue.slice(m[0].length); var w = document.createElement('span'); w.className = 'oao-was'; w.textContent = m[1]; b.insertBefore(w, t); } }
+      var h = document.createElement('span'); h.className = 'oao-hand'; h.setAttribute('aria-hidden','true'); h.textContent = '👆';
+      // a card-style button (its parts stack in lines) gets the hand in its corner instead of on a line of its own
+      var stacked = Array.prototype.some.call(b.children, function(c){ var d = getComputedStyle(c).display; return d === 'block' || d === 'flex' || d === 'grid'; });
+      if (stacked) { var cs = getComputedStyle(b); h.classList.add('corner'); if (cs.position === 'static') b.style.position = 'relative'; b.style.paddingRight = (parseFloat(cs.paddingRight)||0) + 20 + 'px'; }
+      b.insertBefore(h, b.firstChild);
+    });
+  }
+
+  /* 2 · the key line */
+  function buildKey(){
+    if ($('.oao-tapkey')) return;
+    var hd = $(C.header); if (!hd) return;
+    var k = document.createElement('div'); k.className = 'oao-tapkey'; k.setAttribute('role','note');
+    k.innerHTML = C.key.map(function(x){ return '<span>'+x+'</span>'; }).join('');
+    var n = hd; while (C.skip && n.nextElementSibling && n.nextElementSibling.matches(C.skip)) n = n.nextElementSibling;
+    n.parentNode.insertBefore(k, n.nextSibling);
+  }
+
+  /* 3 · say why a greyed-out button won't work yet */
+  var tip = null, tipT = 0;
+  function why(b){
+    for (var i = 0; i < C.why.length; i++) if (b.matches(C.why[i][0])) return C.why[i][1];
+    if (C.noWhy && b.closest(C.noWhy)) return '';
+    return b.closest(C.whyArea) ? C.whyDefault : '';
+  }
+  function showWhy(b, msg){
+    if (!tip) { tip = document.createElement('div'); tip.className = 'oao-why'; tip.setAttribute('role','status'); tip.setAttribute('aria-live','polite'); document.body.appendChild(tip); }
+    tip.textContent = '🔎 ' + msg;
+    var r = b.getBoundingClientRect();
+    tip.style.left = Math.max(8, Math.min(window.innerWidth - 300, r.left + r.width/2 - 140)) + 'px';
+    tip.style.top = (window.scrollY + r.top - 10) + 'px';
+    tip.classList.add('show'); clearTimeout(tipT); tipT = setTimeout(function(){ tip.classList.remove('show'); }, 3600);
+  }
+  function hookWhy(){
+    document.addEventListener('pointerup', function(e){
+      if (!on()) return;
+      var b = e.target && e.target.closest && e.target.closest('button:disabled, input[type=range]:disabled');
+      if (!b) return;
+      var m = why(b); if (m) showWhy(b, m);
+    }, true);
+  }
+
+  /* 5 · how-to video card */
+  function buildHowTo(){
+    if (!C.howto || $('.oao-howto')) return;
+    var panel = $(C.howto.panel); if (!panel) return;
+    var c = document.createElement('section'); c.className = 'oao-howto oao-only';
+    c.innerHTML = '<div class="oao-howto-h">' + (C.howto.face ? (/[\/.]/.test(C.howto.face) ? '<img alt="" src="'+C.howto.face+'">' : '<span class="oao-howto-e" aria-hidden="true">'+C.howto.face+'</span>') : '') +
+      '<div><div class="oao-howto-k">Watch this first</div><div class="oao-howto-t">How to use your lesson</div></div></div>' +
+      '<video controls preload="metadata" playsinline></video>';
+    var v = c.querySelector('video');
+    v.poster = window.OAO_HOWTO_POSTER || C.howto.poster; v.src = window.OAO_HOWTO_SRC || C.howto.src;
+    v.addEventListener('play', function(){ $$('audio').forEach(function(a){ if (!a.paused) a.pause(); }); });
+    v.addEventListener('error', function(){ c.hidden = true; });
+    var before = C.howto.before ? $(C.howto.before, panel) : null;
+    if (before && before.parentNode) before.parentNode.insertBefore(c, before); else panel.insertBefore(c, panel.firstChild);
+  }
+
+  function init(){
+    try { buildKey(); } catch(e){ console.error('oao key', e); }
+    try { buildHowTo(); } catch(e){ console.error('oao howto', e); }
+    try { markTaps(); } catch(e){ console.error('oao taps', e); }
+    hookWhy();
+    if (window.MutationObserver) { var tt = null;
+      new MutationObserver(function(){ clearTimeout(tt); tt = setTimeout(function(){ try { markTaps(); } catch(e){} }, 40); })
+        .observe(document.body, {childList:true, subtree:true}); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(init, 0); });
+  else setTimeout(init, 0);
+})();
