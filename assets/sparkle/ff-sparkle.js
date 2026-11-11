@@ -7077,6 +7077,8 @@
   /* ================================================================ the Learning Journal: a page to keep */
   var TEXTS=[];
   function setText(n,t){ if(!n) return; TEXTS.push([n,n.innerHTML]); n.innerHTML=t; }
+  /* the base page's Continue buttons still say Explore / Signal Check / Assignment: name the real tab instead */
+  function relabelNext(){ if(!STAGES.length) return; document.querySelectorAll('.tab-next-btn').forEach(function(btn){ var m=(btn.getAttribute('onclick')||'').match(/switchTab\(['"]([a-z]+)['"]\)/); if(!m) return; var i=STAGES.map(function(s){return s.tab;}).indexOf(m[1]); if(i<0||!STAGES[i].r) return; setText(btn,'Continue to tab '+(i+1)+': '+esc(STAGES[i].r)+' →'); }); }
   function journalHTML(){ var e=function(s){ return esc(s==null?'':s); }, NA='<p class="na">(not answered yet)</p>', box=function(v){ v=(v||'').trim(); return v?'<p class="a">'+e(v).replace(/\n/g,'<br>')+'</p>':NA; };
     var bq=document.querySelector('.theme-question .intro-card-body p'), cells=[].map.call(document.querySelectorAll('.info-strip .info-value'),function(c){ return c.textContent.trim(); });
     var N=DATA.notes||{}, h='', st=function(i){ return STAGES[i]?STAGES[i].r:''; };
@@ -7183,7 +7185,7 @@
     document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
     fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; R={}; unread=0; }
   function build(){ try{ P=loadProfile(); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
-    buildTop(); buildPhone(); buildOpening(); buildFile(); dockPhone(); buildStory(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
+    buildTop(); buildPhone(); buildOpening(); buildFile(); relabelNext(); dockPhone(); buildStory(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
