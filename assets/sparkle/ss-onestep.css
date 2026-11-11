@@ -1,0 +1,18 @@
+/* One part at a time for social studies (ss-onestep.css), 11 Nov 2026. Only while the grade's layer is on. */
+html.ms-on.ssos .ssos-hide, html.spk-on.ssos .ssos-hide, html.rg-on.ssos .ssos-hide { display: none !important; }
+.ssos-bar { display: none; }
+html.ms-on.ssos .ssos-bar, html.spk-on.ssos .ssos-bar, html.rg-on.ssos .ssos-bar {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 22px 0 18px; padding: 12px 16px;
+  background: #FFF9EA; border: 2px solid #E7D29A; border-radius: 16px; box-shadow: 0 4px 14px rgba(20, 30, 60, .10); }
+.ssos-dots { flex: 1; display: flex; gap: 7px; justify-content: center; min-width: 60px; }
+.ssos-dot { width: 11px; height: 11px; border-radius: 999px; background: #E2DCC8; }
+.ssos-dot.on { background: #C8A850; }
+.ssos-count { font: 800 14px Nunito, system-ui, sans-serif; color: #5B4A1E; white-space: nowrap; }
+.ssos-back { border: 0; background: none; color: #4A5578; font: 800 15px Nunito, system-ui, sans-serif; cursor: pointer; padding: 10px 6px; min-height: 44px; }
+.ssos-next { border: 0; border-radius: 999px; background: #0E1C42; color: #fff; font: 800 17px Nunito, system-ui, sans-serif;
+  cursor: pointer; padding: 12px 22px; min-height: 48px; box-shadow: 0 4px 0 #060d24; }
+.ssos-next:hover { background: #17306b; }
+.ssos-next:focus-visible, .ssos-back:focus-visible { outline: 3px solid #C8A850; outline-offset: 3px; }
+.ssos-next[hidden] { display: none; }
+.ssos-hand { margin-right: 8px; }
+@media (max-width: 520px) { .ssos-dots { order: 3; flex-basis: 100%; } .ssos-next { margin-left: auto; } }

@@ -7077,6 +7077,18 @@
   /* ================================================================ the Learning Journal: a page to keep */
   var TEXTS=[];
   function setText(n,t){ if(!n) return; TEXTS.push([n,n.innerHTML]); n.innerHTML=t; }
+  /* one part of a tab at a time (ss-onestep.js, 11 Nov 2026): tabs 1 and 2 only; tab 3 is one card and tab 4 has its own four steps. ?steps=0 turns it off */
+  function oneStep(){
+    if(/[?&]steps=0\b/.test(location.search)||window.SS_ONESTEP) return;
+    window.SS_ONESTEP={ root:'spk-on', panels:'#panel-scene, #panel-explore', always:'.spk-scene', word:'Part', pad:104,
+      glueNext:'.oao-howto, .step-badge, .spk-directive, .video-wrap, .spk-vn',   // the how-to video stays with the first job, so "scroll down past the welcome video" is still true
+      gluePrev:'.callout, .vocab-grid, .canvas-glitch-note, .timeline-card, .owl-buddy, .tab-next-wrap',
+      door:'.tab-next-wrap', title:'.activity-title, .source-card-header-title, .oao-howto-t',
+      names:[['.canvas-file-card','Your first job'],['.step-badge',null]] };
+    var base=(document.querySelector('script[src*="ff-sparkle.js"]')||{src:''}).src.replace(/ff-sparkle\.js.*$/,'');
+    var l=document.createElement('link'); l.rel='stylesheet'; l.href=base+'ss-onestep.css'; document.head.appendChild(l);
+    var s=document.createElement('script'); s.src=base+'ss-onestep.js'; document.body.appendChild(s);
+  }
   /* the base page's Continue buttons still say Explore / Signal Check / Assignment: name the real tab instead */
   function relabelNext(){ if(!STAGES.length) return; document.querySelectorAll('.tab-next-btn').forEach(function(btn){ var m=(btn.getAttribute('onclick')||'').match(/switchTab\(['"]([a-z]+)['"]\)/); if(!m) return; var i=STAGES.map(function(s){return s.tab;}).indexOf(m[1]); if(i<0||!STAGES[i].r) return; setText(btn,'Continue to tab '+(i+1)+': '+esc(STAGES[i].r)+' →'); }); }
   function journalHTML(){ var e=function(s){ return esc(s==null?'':s); }, NA='<p class="na">(not answered yet)</p>', box=function(v){ v=(v||'').trim(); return v?'<p class="a">'+e(v).replace(/\n/g,'<br>')+'</p>':NA; };
@@ -7185,7 +7197,7 @@
     document.querySelectorAll('[class*="spk-"]').forEach(function(n){ [].slice.call(n.classList).forEach(function(c){ if(c.indexOf('spk-')===0) n.classList.remove(c); }); });
     fileEl=cabEl=lockEl=phoneEl=mailEl=toastEl=stepperEl=null; R={}; unread=0; }
   function build(){ try{ P=loadProfile(); var h=document.documentElement; h.classList.add('spk-on'); if(QUIET) h.classList.add('spk-quiet');
-    buildTop(); buildPhone(); buildOpening(); buildFile(); relabelNext(); dockPhone(); buildStory(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); }catch(e){ console.warn('sparkle layer:',e); } }
+    buildTop(); buildPhone(); buildOpening(); buildFile(); relabelNext(); dockPhone(); buildStory(); if(openingWaiting) showNameCard(false); buildScenes(); buildLens(); buildModules(); buildCheck(); buildCoach(); buildSteps(); buildVoice(); buildMedia(); buildQuizSteps(); buildOpti(); buildHelp(); buildQuizMiss(); buildJournal(); buildKey(); buildCabinet(); refreshFile(); render(); oneStep(); }catch(e){ console.warn('sparkle layer:',e); } }
   window.__ffSparkleAPI={teardown:teardown,build:build,data:DATA};
   function go(){ build(); buildReviewBar(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',go); else go();
