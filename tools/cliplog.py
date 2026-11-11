@@ -64,7 +64,7 @@ TKEY = r'"(?:script|text|prompt|say|line|transcript|t|vo|narration)"'
 
 def code_tuples(path):
     return [tuple(int(x) for x in re.split(r'[-._]', m)) for m in re.findall(r'\d+(?:[-._]\d+)+', path)] + \
-           [(int(m),) for m in re.findall(r'(?:week|wk|vr|unit)[-_ ]?(\d+)', path, re.I)]
+           [(int(m),) for m in re.findall(r'(?:weeks?|wk|vr|unit)[-_ /]?(\d+)', path, re.I)]
 
 def clip_code_slot(rel):
     """('g4ss', (4,10,4), 'guide5a') from g4ss-4-10-04-guide5a.mp3; falls back to the folder for names like opti-step1.mp3"""
@@ -74,7 +74,7 @@ def clip_code_slot(rel):
         return tuple(int(x) for x in m.group(2).strip('-').split('-')), m.group(3)
     folder = os.path.dirname(rel)
     ct = code_tuples(folder)
-    slot = re.sub(r'^(audio-|\d+-\d+-)', '', stem)
+    slot = re.sub(r'^(audio-)?(\d+-\d+-)?', '', stem)
     return (ct[-1] if ct else None), slot
 
 def say_key(t):
@@ -131,12 +131,36 @@ class Scope:
                 ws = re.findall(r'class="fc-word"[^>]*>\s*([^<]+?)\s*<', self.raw(f))
                 if len(ws) >= int(m.group(1)): return ws[int(m.group(1)) - 1], f + ' (card word only)'
             return None
-        slots = [slot] + ([slot.split('-', 1)[1]] if '-' in slot else []) + ([re.sub(r'-?\d+$', '', slot)] if re.search(r'[a-z]-?1$', slot) else [])
+        # vocabulary-game word clips: <game>-<N> is the Nth word's "say" line in the lesson's "vocab" block
+        m = re.match(r'[a-z]+-(\d+)$', slot)
+        if m:
+            for f in files:
+                raw = self.raw(f); i = raw.find('"vocab"')
+                if i < 0: continue
+                j = raw.find('"words"', i)
+                if j < 0 or j - i > 3000: continue
+                k = raw.find('[', j); depth = 0; e = k; instr = False
+                while 0 <= e < min(len(raw), k + 20000):
+                    ch = raw[e]
+                    if instr:
+                        if ch == '\\': e += 1
+                        elif ch == '"': instr = False
+                    elif ch == '"': instr = True
+                    elif ch == '[': depth += 1
+                    elif ch == ']':
+                        depth -= 1
+                        if depth == 0: break
+                    e += 1
+                says = re.findall(r'"say"\s*:\s*' + STR, raw[k:e])
+                if len(says) >= int(m.group(1)): return unq(says[int(m.group(1)) - 1]).strip(), f
+        slots = [slot] + ([slot.split('-', 1)[1]] if '-' in slot and not slot.split('-', 1)[1].isdigit() else []) + ([re.sub(r'-?\d+$', '', slot)] if re.search(r'[a-z]-?1$', slot) else [])
+        if slots[-1] == 'welcome' or slot == 'welcome': slots.append('warm')
         for sl in slots:
             q = re.escape(sl)
             pats = [r'"(?:slot|id|key|clip|name)"\s*:\s*"%s"(?:(?!"(?:slot|id|key|clip|name)"\s*:)[\s\S]){0,1500}?%s\s*:\s*%s' % (q, TKEY, STR),
                     r'"%s"\s*:\s*\{[^{}]{0,800}?%s\s*:\s*%s' % (q, TKEY, STR),
-                    r'"%s"\s*:\s*%s' % (q, STR)]
+                    r'"%s"\s*:\s*%s' % (q, STR),
+                    r'"(?:text|how|say|script|line)"\s*:\s*%s\s*,\s*"(?:voice|clip|audio|howClip|sayClip)"\s*:\s*"%s"' % (STR, q)]
             for f in files:
                 raw = self.raw(f)
                 for p in pats:
@@ -148,7 +172,26 @@ class Scope:
                 if cands: break
             if cands: break
         if len(cands) == 1: return list(cands.values())[0]
+        if cands: return None
+        # an element on the lesson page that carries the slot: <div data-slot="warm-1">words…</div>
+        for f in files:
+            if not f.endswith('.html'): continue
+            for mm in re.finditer(r'data-slot="%s"[^>]*>([\s\S]{12,2500}?)</div>' % re.escape(slot), self.raw(f)):
+                t = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', mm.group(1))).strip()
+                if len(t) >= 12: cands.setdefault(norm(t), (t, f))
+        if len(cands) == 1: return list(cands.values())[0]
         return None
+    def find_by_name(self, base):
+        """a JS/JSON line that names the file and its words: {audio: 'hemiunu-w1-01.mp3', say: '…'}"""
+        q = re.escape(base); cands = {}
+        pat = r'[\'"/]%s[\'"][^{}]{0,400}?\b(?:say|text|script|line|t)[\'"]?\s*:\s*([\'"])((?:(?!\1)[^\\]|\\.)*)\1' % q
+        for f, _ in self.files:
+            raw = self.raw(f)
+            if base not in raw: continue
+            for mm in re.finditer(pat, raw):
+                t = re.sub(r'\\(.)', r'\1', mm.group(2)).strip()
+                if len(t) >= 6: cands.setdefault(norm(t), (t, f))
+        return list(cands.values())[0] if len(cands) == 1 else None
 
 def collect_scripts(root, grade):
     """stem -> (text, source). Later sources never overwrite earlier ones."""
@@ -315,7 +358,7 @@ def build(root):
         stem = os.path.splitext(x)[0]
         parts = rel.split('/')
         kind = 'speech'
-        if any(p in NOT_SPEECH_DIRS + ('music', 'sfx', 'beds', 'sound') for p in parts[:-1]) and not stem.startswith('news-') or stem.startswith(NOT_SPEECH_PREFIX): kind = 'not-speech'
+        if any(p in NOT_SPEECH_DIRS + ('music', 'sfx', 'beds', 'sound') for p in parts[:-1]) and not stem.startswith('news-') or stem.startswith(NOT_SPEECH_PREFIX) or stem == 'music' or re.search(r'bach-|home-on-the-range|-bed-|^bed-', stem): kind = 'not-speech'
         text, src = S.get(stem, ('', ''))
         if not text:
             m = re.match(r'g\d[a-z]+-word-(.+)$', stem)
@@ -332,6 +375,7 @@ def build(root):
         if r['text'] or r['kind'] != 'speech': continue
         code, slot = clip_code_slot(r['file'])
         hit = sc.find(code, slot)
+        if not hit: hit = sc.find_by_name(os.path.basename(r['file']))
         if not hit and re.match(r'(audio-)?word-', os.path.basename(r['file'])):
             w = re.sub(r'^(audio-)?word-', '', os.path.splitext(os.path.basename(r['file']))[0]); hit = (w.replace('-', ' '), 'file name')
         if hit:
