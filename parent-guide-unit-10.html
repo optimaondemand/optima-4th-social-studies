@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 Family Guide · 4th Grade Social Studies · Optima Academy Online</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Unit 10: Modern Florida Takes Shape</h1>
+      <div class="sub">Weeks 22–25 · Railroads to rockets, the 1880s to the 1970s</div>
+      <div class="chips">
+        <span class="chip">4 weeks</span>
+        <span class="chip">8 lessons</span>
+        <span class="chip">Real primary sources</span>
+        <span class="chip">1 unit assessment</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-10-01-florida-railroad-original.jpg');background-position:center center;background-color:#D8D2C2;" role="img" aria-label="Panorama photo of the first train arriving in Key West, 1912"></div>
+  </header>
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four numbered tabs, in order.</strong> Each lesson names its own. Tab 3 is always the Self-Check, and tab 4 is where your student writes. The teacher’s texts (the Messages button) say what to do next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> Step 4 of the last tab, Review &amp; turn in, collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Copy</strong> or <strong>Download your journal</strong> saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Read aloud</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">⭐</span><h2>About This Unit</h2></div>
+    <p>In Unit 9 your student pulled together Florida’s story from 1821 to 1877. Unit 10 opens the door to <strong>modern Florida</strong>. Over four weeks your student follows the state from a frontier of swamp and forest to a place of railroads, cigar factories, army camps, land sales, state parks, theme parks, and rocket launches.</p>
+    <p>The skill all unit long is <strong>cause and effect</strong>: a railroad, a war, a hurricane, or a new industry causes something else to change. Your student also practices reading a real source like a historian, sorting what it shows for sure from what it can only suggest, and asking “Where is the evidence?” when a story sounds too good.</p>
+    <p class="quote">“Courage isn’t always about battles. Sometimes it’s about believing a big idea can work.”<small>From the virtue note in Lesson 4.10.01</small></p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>The Unit’s Timeline</h2><span class="tag">Quick reference</span></div>
+    <ul class="tl">
+      <li><b>1885</b><span>Vicente Martinez Ybor builds Ybor City in Tampa. Cuban, Spanish, and Italian workers make it a cigar capital.</span></li>
+      <li><b>1896</b><span>Henry Flagler’s first passenger train reaches Miami, after Julia Tuttle offers him land. Miami becomes a city that July.</span></li>
+      <li><b>1898</b><span>About 30,000 soldiers gather in Tampa for the Spanish-American War. The battles are fought outside Florida.</span></li>
+      <li><b>1904</b><span>Mary McLeod Bethune opens a school in Daytona with $1.50 and five girls. It grows into Bethune-Cookman University.</span></li>
+      <li><b>1912</b><span>The first train reaches Key West, crossing the Florida Keys island to island on long bridges.</span></li>
+      <li><b>1926</b><span>A hurricane hits Miami on September 18 and ends the 1920s land boom. The Great Depression begins in 1929.</span></li>
+      <li><b>1942</b><span>World War II: training bases, shipyards, and enemy submarines off the coast. Towns dim their lights at night.</span></li>
+      <li><b>1969</b><span>Apollo 11 launches from Kennedy Space Center on July 16. Walt Disney World opens in 1971.</span></li>
+    </ul>
+    <p class="small" style="margin-top:12px;">The chain your student traces: new railroads and roads brought people and towns. Warm weather, a long coast, and a place far south grew industries. Booms, a bust, hard years, and a war each changed how Floridians earned a living, and tourism and the space program brought new jobs after the war.</p>
+  </section>
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>About the Story: The Florida Files</h2></div>
+    <p>The whole course runs on one story. Your student’s teacher is <strong>stuck inside Canvas</strong>. She can find old Florida files in there, but she can’t open them, so each lesson she sends a message asking for help. Your student does the history work, and the file unlocks. There are <strong>13 files, one for each unit</strong>. Unit 10 is File 10, the first file past the checkpoint door, and the room starts to change in every lesson.</p>
+    <div class="grid2">
+      <div class="box "><div class="box-label">Week 22</div>The teacher steps through the checkpoint door into modern Florida and hears a train whistle.</div>
+      <div class="box "><div class="box-label">Week 23</div>A wall of blurry names comes into focus as your student learns about each person.</div>
+      <div class="box "><div class="box-label">Week 24</div>A ship’s horn and a map with Tampa circled. Then shiny new doors pop up too fast, and half of them vanish.</div>
+      <div class="box "><div class="box-label">Week 25</div>The lights dim, and a line of light shows under one door. A countdown clock stops at 3, the door shows 13, and File 10 is closed.</div>
+    </div>
+    <p class="small" style="margin-top:12px;color:#D6DEF0;"><strong style="color:#fff;">Play along:</strong> ask, “What changed in her room today?” It’s an easy way into the lesson. Door 13 matters later in the year.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🔍</span><h2>This Unit’s Virtues</h2></div>
+    <p>Each lesson has its own virtue. Courage comes back the most.</p>
+    <div class="vl">
+      <div><i>Week 22</i><b>Courage &amp; Service</b>Builders who risked fortunes on railroads, and industries that serve visitors and families.</div>
+      <div><i>Week 23</i><b>Perseverance &amp; Self-governance</b>Immigrants who kept going in a new land, and Bethune, who started fixing a problem herself.</div>
+      <div><i>Week 24</i><b>Courage &amp; Honesty</b>Soldiers who left home, and sellers who should have told the truth about risk.</div>
+      <div><i>Week 25</i><b>Courage</b>Families who kept going through hard years, and people who took big risks on new ideas.</div>
+    </div>
+    <p class="small" style="margin-top:12px;">The unit assessment asks about <strong>perseverance</strong>: your student describes a person or community from Unit 10 who kept going when things were very hard.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🗓️</span><h2>How a Week Works</h2></div>
+    <p>Every week has <strong>two lessons</strong>. Each lesson has four numbered tabs, so your student always knows what comes next:</p>
+    <div class="rhythm">
+      <div><b>1 · Start</b>The teacher’s texts, today’s question, the virtue, and a hands-on warm-up</div>
+      <div><b>2 · Story &amp; source</b>Read the history one part at a time and study a real source</div>
+      <div><b>3 · Self-Check</b>3 quick questions, not graded</div>
+      <div><b>4 · Notebook</b>Answer, write, and turn in</div>
+    </div>
+    <ul class="routines">
+      <li><span>📜</span><strong>A real source every lesson:</strong> photos and records from the Library of Congress, the National Archives, the State Archives of Florida, and NASA</li>
+      <li><span>🔤</span><strong>A word root:</strong> like <em>mot</em> (to move), <em>lect</em> (to read), <em>spec</em> (to look), and <em>tour</em> (to turn)</li>
+      <li><span>❓</span><strong>3 evidence questions</strong> answered with details from the lesson</li>
+      <li><span>📓</span><strong>One longer piece:</strong> a Historian’s Notebook entry (Lessons 1, 3, 5, 7) or a source study response (Lessons 2, 4, 6, 8)</li>
+      <li><span>✏️</span><strong>Historian’s Sentence</strong> in your student’s own words</li>
+      <li><span>📬</span><strong>Review &amp; turn in</strong> at the end, ending with submitting in Canvas</li>
+    </ul>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🗺️</span><h2>The Unit, Week by Week</h2></div>
+    <div class="weeks">
+      <div class="wk"><div class="wk-n"><b>22</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.10.01–02</span><span class="theme">Rails and industries</span></div>
+        <p class="wk-sum">Railroads, roads, and wires change where people live, from Plant’s line to Tampa to Flagler’s railroad to Key West. Then Florida’s big industries (tourism, farming, fishing and trade, and space) and how geography helps decide which jobs grow.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>cause &amp; effect</span><span class="sk"><i>Source</i>1912 Key West panorama, Apollo 11 launch photo</span><span class="sk"><i>Virtue</i>courage, service</span></div>
+        <a class="wk-link" href="parent-guide-week-22.html">Open the Week 22 guide →</a>
+      </div></div>
+      <div class="wk"><div class="wk-n"><b>23</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.10.03–04</span><span class="theme">The people who built it</span></div>
+        <p class="wk-sum">Immigrant communities that still shape Florida: Ybor City’s cigar workers, Greek sponge divers in Tarpon Springs, Bahamian and Minorcan families. Then four individuals: Henry Flagler, Julia Tuttle, Mary McLeod Bethune, and Marjory Stoneman Douglas.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>says, infer, question</span><span class="sk"><i>Source</i>Lewis Hine’s 1909 cigar factory photo, Bethune and her students, 1905</span><span class="sk"><i>Virtue</i>perseverance, self-governance</span></div>
+        <a class="wk-link" href="parent-guide-week-23.html">Open the Week 23 guide →</a>
+      </div></div>
+      <div class="wk"><div class="wk-n"><b>24</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.10.05–06</span><span class="theme">Turning points</span></div>
+        <p class="wk-sum">Why the Army gathered in Tampa for the Spanish-American War in 1898. Then the 1920s land boom, speculation, and the bust, and why a careful buyer asks what something is really worth.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>cause &amp; effect, what a source can prove</span><span class="sk"><i>Source</i>troop ships in Tampa Bay, a 1922 billboard</span><span class="sk"><i>Virtue</i>courage, honesty</span></div>
+        <a class="wk-link" href="parent-guide-week-24.html">Open the Week 24 guide →</a>
+      </div></div>
+      <div class="wk"><div class="wk-n"><b>25</b><span>Week</span></div><div class="wk-body">
+        <div class="wk-top"><span class="wk-ch">Lessons 4.10.07–08</span><span class="theme">Hard years and new jobs</span></div>
+        <p class="wk-sum">The Great Depression, the New Deal, and World War II in Florida. Then tourism and the space program after the war, and all the jobs they brought. Ends with the Unit 10 Assessment.</p>
+        <div class="skills"><span class="sk"><i>Skill</i>one cause, many effects</span><span class="sk"><i>Source</i>CCC workers at O’Leno, 1935; NASA’s Apollo 11 press-site photo</span><span class="sk"><i>Virtue</i>courage</span></div>
+        <a class="wk-link" href="parent-guide-week-25.html">Open the Week 25 guide →</a>
+      </div></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📋</span><h2>How Learning Is Checked</h2></div>
+    <div class="grid2">
+      <div class="box b-sky"><div class="box-label">Every lesson</div>Evidence questions, a Historian’s Notebook entry or source study response, and a Historian’s Sentence, submitted in Canvas. The self-check in each lesson isn’t graded.</div>
+      <div class="box b-gold"><div class="box-label">End of unit</div><strong>Unit 10 Assessment</strong> (about 45 minutes): 8 multiple-choice questions, three short questions about a cigar factory in Ybor City, two longer answers (two people who helped Florida grow, and what boom, bust, and recovery teach about how economies change), and a reflection on perseverance.</div>
+    </div>
+    <p class="small" style="margin-top:12px;"><strong>What strong writing looks like:</strong> two specific details (like Flagler’s train reaching Key West in 1912, or Miami growing from 29,571 to 110,637 people in the 1920s) and cause-and-effect words: “because,” “this led to,” “so.”</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">💛</span><h2>Good to Know Ahead of Time</h2></div>
+    <div class="grid2">
+      <div class="box b-rose"><div class="box-label">Weeks 24–25 · Hard history</div>A war, the 1926 Miami hurricane (the Red Cross counted 372 people killed), families losing jobs and homes in the Depression, and a 1942 submarine attack on a tanker seen from Jacksonville Beach. The pages tell these calmly, with no graphic images.</div>
+      <div class="box b-plum"><div class="box-label">Stories vs. evidence</div>Your student learns that some famous stories aren’t proven: no one knows for sure what blew up the battleship <em>Maine</em>, and historians still question the story of Julia Tuttle mailing Flagler orange blossoms. They also learn that tourism started long before Disney, and that Apollo rockets launched from Florida, not Houston.</div>
+      <div class="box b-sky"><div class="box-label">Week 22 · Up-to-date facts</div>Florida grew a record 244 million boxes of oranges in 1997–98, but disease and hurricanes cut the crop to about 12 million boxes in 2024–25. California now grows more. Tourism is Florida’s number one industry.</div>
+      <div class="box b-green"><div class="box-label">Week 25 · Real voices</div>Your student hears two lines from the U.S. Navy’s war diary for April 10, 1942, and NASA’s real recording of the Apollo 11 countdown.</div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">🤝</span><h2>How to Help (Without Doing It for Them)</h2></div>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px;">Try this</h3>
+      <ul class="check">
+        <li>Ask “What did that lead to?” to help your student link a cause to its effects.</li>
+        <li>Ask “How do we know?” when a story sounds too good. It’s the question the unit practices.</li>
+        <li>Ask the questions in each week’s guide. Talking first makes the writing easier.</li>
+        <li>Look at the lesson’s real photo together. What does it show for sure? What can you guess?</li>
+      </ul>
+      </div>
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px;">Try to avoid</h3>
+      <ul class="check dont">
+        <li>Typing or wording answers for them. Teachers need to see your student’s own thinking.</li>
+        <li>Doing the hands-on parts for them. The games are how the lesson teaches.</li>
+        <li>Skipping the submit step. Work isn’t turned in until it’s in Canvas.</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="grid3">
+      <div class="box b-teal"><div class="box-label">Palm Beach</div><strong>The Flagler Museum,</strong> Henry Flagler’s home, with one of his private railroad cars.</div>
+      <div class="box b-teal"><div class="box-label">Tampa</div><strong>Ybor City Museum State Park,</strong> the story of the cigar city, and the <strong>Henry B. Plant Museum,</strong> where Army leaders stayed in 1898.</div>
+      <div class="box b-teal"><div class="box-label">Tarpon Springs</div><strong>The Sponge Docks,</strong> where Greek divers’ families still sell natural sponges.</div>
+      <div class="box b-teal"><div class="box-label">Daytona Beach</div><strong>Mary McLeod Bethune’s home,</strong> a museum on the Bethune-Cookman University campus.</div>
+      <div class="box b-teal"><div class="box-label">Near High Springs</div><strong>O’Leno State Park,</strong> where CCC workers built many of the buildings still in the park.</div>
+      <div class="box b-teal"><div class="box-label">Merritt Island</div><strong>Kennedy Space Center Visitor Complex,</strong> near the pad Apollo 11 left from.</div>
+    </div>
+    <p class="small" style="margin-top:12px;">Check dates and hours before you go.</p>
+  </section>
+  <p class="foot"><a href="parent-guide-unit-9.html">← Back to Unit 9: Florida at a Crossroads</a><br><br>Optima Academy Online · 4th Grade Social Studies · Unit 10 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
