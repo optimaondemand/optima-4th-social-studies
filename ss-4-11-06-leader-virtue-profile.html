@@ -1784,6 +1784,1254 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.11.06",
+ "title": "Leader Virtue Profile",
+ "quiet": false,
+ "file": {
+  "n": 11,
+  "title": "Civil Rights & Citizens",
+  "label": "Civil Rights & Citizens",
+  "seals": [
+   "🚌",
+   "🗳️",
+   "⚖️"
+  ]
+ },
+ "prevFile": "Voting, Public Service, and Volunteerism",
+ "connector": "Last time, we learned how citizens vote, serve, and volunteer.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, everyone stuck inside voted on a way out, and your vote broke the tie. Now a card reader has lit up next to the door with 13.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Who am I?",
+   "why": "Read the clues. Name three mystery leaders and the virtue each one showed."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Make the case",
+   "why": "Put Bethune’s virtues on trial with real evidence. Then stamp the proof on two real photos."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Nominate a leader",
+   "why": "Answer three questions. Fill out a Hall of Fame nomination. Then write your profile."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Something new just lit up next to the door with 13!",
+  "opening": [
+   {
+    "t": "Last time, you broke the tie. We’re taking {route}. I wrote it down so I won’t forget.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "Last time, everyone in here voted on a way out. I wrote down the result.",
+    "ifRoute": "none"
+   },
+   "Now a card reader just lit up next to the door with 13. Canvas says it only reads cards that show proof.",
+   "Today’s file is about character: the virtues leaders showed, and the evidence that proves them. Start in the Learn tab (tab 1). Scroll down to meet three mystery leaders.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s meet the mystery leaders",
+      "go": true,
+      "reply": "Read the first clue. Guess who it is whenever you’re ready. A wrong guess just shows you another clue."
+     },
+     {
+      "t": "What’s a card reader?",
+      "reply": "It’s a little box that opens a door when you hold up the right card, like a hotel key card. Canvas says this one needs a card with proof on it."
+     },
+     {
+      "t": "What’s a virtue?",
+      "reply": "A virtue is a strong, good character trait, like courage, service, or perseverance. Today we connect what leaders did to the virtues they showed."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Bethune’s virtues go on trial. Only real evidence gets into court."
+     },
+     {
+      "t": "Did Walls really lose his seat twice?",
+      "reply": "Yes. Twice, the person he ran against said the election was unfair, and Walls was removed from Congress. He kept working for Florida anyway. Leaders were not perfect, and they did not always win."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who took those photos?",
+      "reply": "Gordon Parks, a famous photographer, took them in Daytona in 1943 for the U.S. government. The Library of Congress keeps them, so anyone can study them."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What rules?",
+      "reply": "Next we study how Florida’s government works: the rules it is built on and who makes them. We’re still taking {route}, so stay with me."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You found all three mystery leaders and the virtue each one showed. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Case proven, and every true detail got its stamp. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill out a Hall of Fame nomination and write your profile."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file, and all of Unit 11! I held your profile up to the card reader. Look what came out:"
+    },
+    {
+     "card": {
+      "from": "Canvas card reader",
+      "h": "KEY CARD · FILE 11",
+      "sub": "Proof found on this card:",
+      "lines": "planner",
+      "stamp": "ACCEPTED"
+     }
+    },
+    {
+     "t": "The light turned green, but then a sign popped up: “Canvas follows rules. Learn the rules, and you can ask the right way.” I think the next file is about rules. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "done"
+    }
+   ]
+  }
+ },
+ "lens": "Courtesy means treating every person with dignity and respect, even when you disagree. Today you are a virtue profile builder, someone who connects what leaders did to the kind of people they were.",
+ "scene1": {
+  "type": "whoami",
+  "kicker": "Who am I?",
+  "h": "Three mystery leaders from this unit. Read the clues, then name each one.",
+  "voice": "Read the clue on the card. Tap a name when you think you know. A wrong guess shows you another clue. Then pick the virtue the clues show.",
+  "why": {
+   "icon": "🕵️",
+   "q": "Why mystery cards?",
+   "t": "A <b>virtue</b> is a strong, good character trait, like courage or service. Each clue is something a leader really did, an action. If the actions are clear enough, you can tell who it is, and what kind of person they were. That’s why you read the clues first and name the virtue last."
+  },
+  "names": [
+   "Mary McLeod Bethune",
+   "Josiah T. Walls",
+   "Harry T. Moore",
+   "Zora Neale Hurston"
+  ],
+  "cardT": "Mystery leader",
+  "askT": "Who am I? Tap a name, or read another clue.",
+  "moreT": "🔎 Show the next clue",
+  "cards": [
+   {
+    "name": "Josiah T. Walls",
+    "tag": "Congress, 1871",
+    "img": "scene-4-11-06-josiah-walls.jpg",
+    "credit": "Brady-Handy Collection, Library of Congress",
+    "reveal": "(1842–1905) was born enslaved and became Florida’s first Black member of Congress.",
+    "clues": [
+     "I was born enslaved in Virginia in 1842.",
+     "After the Civil War, I made my home in Alachua County, Florida.",
+     "In 1871, I became Florida’s first Black member of the U.S. Congress.",
+     "Twice, the person I ran against said my election was unfair, and I lost my seat. Each time, I kept working for Florida."
+    ],
+    "miss": "Not this leader. Read the new clue.",
+    "virtue": {
+     "q": "Which virtue do the clues show?",
+     "opts": [
+      {
+       "t": "Perseverance: he lost his seat twice and kept going.",
+       "ok": true,
+       "reply": "Yes. Losing twice and still working for Florida is perseverance."
+      },
+      {
+       "t": "Wealth: he had a lot of money.",
+       "miss": "Wealth is not a virtue, and the clues say nothing about money. What did he keep doing?"
+      },
+      {
+       "t": "Courage: he ran for Congress only a few years after slavery ended.",
+       "ok": true,
+       "reply": "Yes. Running for Congress so soon after slavery ended took courage."
+      }
+     ]
+    }
+   },
+   {
+    "name": "Harry T. Moore",
+    "tag": "voting rights, 1930s–1951",
+    "img": "source-4-11-01-harry-t-moore.jpg",
+    "credit": "State Archives of Florida",
+    "reveal": "(1905–1951) was a teacher who led the fight for Black Floridians’ voting rights.",
+    "clues": [
+     "I was a teacher in Brevard County, Florida.",
+     "In 1934, I started a Brevard County branch of the NAACP, a group that works for the rights of Black Americans.",
+     "I lost my teaching job after I fought for equal pay for Black teachers.",
+     "I helped thousands of Black Floridians sign up to vote."
+    ],
+    "miss": "Not this leader. Read the new clue.",
+    "virtue": {
+     "q": "Which virtue do the clues show?",
+     "opts": [
+      {
+       "t": "Popularity: everyone liked him.",
+       "miss": "Being liked is not a virtue, and the clues don’t say it. Look at what he did after losing his job."
+      },
+      {
+       "t": "Courage: he kept fighting for fair pay and voting rights even after he lost his job.",
+       "ok": true,
+       "reply": "Yes. Standing up when it cost him his job took courage."
+      },
+      {
+       "t": "Service: he helped thousands of people sign up to vote.",
+       "ok": true,
+       "reply": "Yes. Helping thousands of people vote was service."
+      }
+     ]
+    }
+   },
+   {
+    "name": "Zora Neale Hurston",
+    "tag": "writer, Eatonville",
+    "img": "scene-4-11-06-zora-neale-hurston.jpg",
+    "credit": "State Archives of Florida",
+    "reveal": "(1891–1960) was a writer who saved Florida’s folk tales and songs.",
+    "clues": [
+     "I grew up in Eatonville, one of the first towns in America started and run by Black citizens.",
+     "I traveled across Florida writing down folk tales and songs, so they would not be lost.",
+     "In 1937, I wrote a novel called Their Eyes Were Watching God.",
+     "In 1938 and 1939, I worked for the Florida Federal Writers’ Project, a government program that hired writers to record the stories of everyday Floridians."
+    ],
+    "miss": "Not this leader. Read the new clue.",
+    "virtue": {
+     "q": "Which virtue do the clues show?",
+     "opts": [
+      {
+       "t": "Being famous: lots of people know her name.",
+       "miss": "Being famous is not a virtue. What did she do for other people’s stories?"
+      },
+      {
+       "t": "Service: she saved Florida’s stories and songs for everyone.",
+       "ok": true,
+       "reply": "Yes. Saving other people’s stories so they wouldn’t be lost was service."
+      },
+      {
+       "t": "Wealth: she earned a lot from her books.",
+       "miss": "The clues say nothing about money, and wealth is not a virtue. Look at clue 2."
+      }
+     ]
+    }
+   }
+  ],
+  "win": "<b>You named all three.</b> Actions are what they did. Virtues are who they were."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Prove each claim in Learn the Story with real evidence.",
+    "Tap every gold number on the two photos.",
+    "Stamp each detail card with the virtue it proves, or No proof. Then answer one question."
+   ]
+  },
+  "reading": {
+   "type": "makecase",
+   "activity": "Character in Action",
+   "why": {
+    "icon": "⚖️",
+    "q": "Why a courtroom?",
+    "t": "In a court, a judge does not accept an opinion as proof. Every claim needs <b>evidence</b>: a real fact that anyone can check. A virtue profile works the same way. That’s why each claim about Bethune goes on trial."
+   },
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^A virtue profile is more than"
+    },
+    {
+     "id": "p2",
+     "match": "^Let's look at Mary"
+    },
+    {
+     "id": "p3",
+     "match": "^What virtues did Bethune"
+    },
+    {
+     "id": "p4",
+     "match": "^To build your own"
+    },
+    {
+     "id": "p5",
+     "match": "^Leaders were not perfect"
+    }
+   ],
+   "parts": [
+    {
+     "id": "def",
+     "t": "What is a virtue profile?",
+     "ico": "📋",
+     "paras": [
+      "p1"
+     ],
+     "act": "🔨 Open court"
+    },
+    {
+     "id": "courage",
+     "t": "The case for courage",
+     "ico": "🦁",
+     "paras": [
+      "p2"
+     ],
+     "claim": "Claim: Mary McLeod Bethune showed courage.",
+     "exhibit": "In 1904 she opened a school with five girls, her son, and $1.50.",
+     "ask": {
+      "q": "Which evidence proves it? Pick one to admit to the court.",
+      "opts": [
+       {
+        "t": "She seems like a brave person.",
+        "miss": "Objection! That’s an opinion, not proof. Pick a real event."
+       },
+       {
+        "t": "In 1904, she opened a school in a rented house with five girls, her son, and $1.50.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "service",
+     "t": "The case for service and perseverance",
+     "ico": "🤝",
+     "paras": [
+      "p3"
+     ],
+     "claim": "Claim: She showed service and perseverance.",
+     "exhibit": "She sold sweet potato pies to keep her school going, and it is still open today.",
+     "ask": {
+      "q": "Which evidence proves it?",
+      "opts": [
+       {
+        "t": "She sold sweet potato pies to keep her school going, and the school is still open today.",
+        "ok": true
+       },
+       {
+        "t": "She probably never got tired.",
+        "miss": "Objection! That’s a guess. Nobody can prove it."
+       }
+      ]
+     }
+    },
+    {
+     "id": "how",
+     "t": "How to build your own profile",
+     "ico": "🧩",
+     "paras": [
+      "p4"
+     ],
+     "act": "⚖️ Hear the next part"
+    },
+    {
+     "id": "perfect",
+     "t": "Leaders were not perfect",
+     "ico": "🌱",
+     "paras": [
+      "p5"
+     ],
+     "claim": "Claim: A good leader is perfect and never struggles.",
+     "exhibit": "Leaders struggle too. A profile shows real evidence, not a perfect person.",
+     "ask": {
+      "q": "Does the evidence prove this claim?",
+      "opts": [
+       {
+        "t": "Yes. Great leaders never have problems.",
+        "miss": "Objection! The evidence shows Bethune had money troubles. She sold pies to keep going."
+       },
+       {
+        "t": "No. Leaders struggle too. Bethune had to sell pies to keep her school open.",
+        "ok": true
+       }
+      ]
+     }
+    }
+   ],
+   "allT": "Case proven! Every claim has evidence.",
+   "countT": "parts open. Prove the claim below to open the next one."
+  },
+  "evidence": {
+   "type": "stampproof",
+   "kicker": "Stamp the proof",
+   "h": "First tap every gold number. Then stamp each card with the virtue it proves.",
+   "voice": "Tap every gold number on the photos first. Then tap a stamp and tap the card it proves. You can also drag the stamp.",
+   "why": {
+    "icon": "🔖",
+    "q": "Why stamps?",
+    "t": "An official stamp means “checked and approved.” Here, a virtue stamp can only go on a detail that really proves it. Some details have no proof at all, so they get the No proof stamp. That’s why you stamp the proof."
+   },
+   "stamps": [
+    {
+     "id": "courage",
+     "t": "Courage",
+     "ico": "🦁"
+    },
+    {
+     "id": "service",
+     "t": "Service",
+     "ico": "🤝"
+    },
+    {
+     "id": "persev",
+     "t": "Perseverance",
+     "ico": "🧗"
+    },
+    {
+     "id": "none",
+     "t": "No proof",
+     "ico": "❌",
+     "none": true
+    }
+   ],
+   "cards": [
+    {
+     "n": "1",
+     "t": "Label 1 and the caption: Bethune sold sweet potato pies to make a down payment (the first part of the price) on her school.",
+     "ok": [
+      "persev",
+      "service"
+     ],
+     "why": "She kept going when there was no money.",
+     "miss": {
+      "courage": "Maybe, but this card is about money troubles. Which virtue means keeping going?",
+      "none": "This one does have proof: the Library of Congress caption says it."
+     }
+    },
+    {
+     "n": "4",
+     "t": "Label 4: A big group of students came to say goodbye when she stepped down as president.",
+     "ok": [
+      "service"
+     ],
+     "why": "She spent years serving her students.",
+     "miss": {
+      "courage": "Look at who came to say goodbye. What had she given them for years?",
+      "persev": "This card is about the students she served. Try another stamp.",
+      "none": "The photo shows it. That’s proof."
+     }
+    },
+    {
+     "n": "6",
+     "t": "Label 6: The sign over the door says ENTER TO LEARN. The college motto is “Enter to Learn, Depart to Serve.”",
+     "ok": [
+      "service"
+     ],
+     "why": "She built a school that teaches students to serve others.",
+     "miss": {
+      "courage": "Read the motto again. What should students do when they leave?",
+      "persev": "Read the motto again. What should students do when they leave?",
+      "none": "The sign is right there in the photo. That’s proof."
+     }
+    },
+    {
+     "n": "5",
+     "t": "Label 5: The school that began in a small rented house now had big brick buildings like White Hall.",
+     "ok": [
+      "persev"
+     ],
+     "why": "Years of hard work made it grow.",
+     "miss": {
+      "courage": "This card is about growing over many years. Which virtue means keeping going?",
+      "service": "This card is about how the school grew. Which virtue means keeping going year after year?",
+      "none": "The photo shows White Hall. That’s proof."
+     }
+    },
+    {
+     "n": "",
+     "t": "From the reading: In 1904 she opened a school with five girls, her son, and $1.50.",
+     "ok": [
+      "courage",
+      "persev"
+     ],
+     "why": "Starting with almost nothing took courage.",
+     "miss": {
+      "service": "Close, but this card is about taking a big risk. Try again.",
+      "none": "The reading tells us this. It’s a real fact."
+     }
+    },
+    {
+     "n": "?",
+     "t": "A claim: Bethune never had a single problem or doubt.",
+     "ok": [
+      "none"
+     ],
+     "why": "The pies show she had money troubles. Leaders weren’t perfect.",
+     "miss": {
+      "courage": "Is that statement proven? Look at label 1 and the caption: she had to sell pies.",
+      "service": "Is that statement proven? Look at label 1 and the caption: she had to sell pies.",
+      "persev": "Is that statement proven? Look at label 1 and the caption: she had to sell pies."
+     }
+    },
+    {
+     "n": "?",
+     "t": "A claim: Bethune was the richest woman in Florida.",
+     "ok": [
+      "none"
+     ],
+     "why": "Nothing shows that. She sold pies for money!",
+     "miss": {
+      "courage": "Does anything in the photos prove she was rich? Look again.",
+      "service": "Does anything in the photos prove she was rich? Look again.",
+      "persev": "Does anything in the photos prove she was rich? Look again."
+     }
+    }
+   ],
+   "hotT": "First, tap every gold number on the photos above.",
+   "firstT": "Tap a stamp first. Then tap the card it proves.",
+   "ask": {
+    "q": "Did Bethune have to be perfect to show perseverance?",
+    "opts": [
+     {
+      "t": "Yes. Leaders with virtues never struggle.",
+      "miss": "Look at the pie card. She had money troubles and kept going."
+     },
+     {
+      "t": "No. Perseverance means she kept going through hard times, like selling pies.",
+      "ok": true,
+      "reply": "Right. Virtues show in hard times, not in a perfect life."
+     }
+    ]
+   },
+   "win": "<b>Every detail is stamped.</b> Real proof gets a virtue. Opinions and guesses get No proof."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photos to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 37.1,
+    "y": 23.5,
+    "title": "Mary McLeod Bethune.",
+    "t": "She was 67 when this photo was taken in January 1943. The Library of Congress caption says she and her friend are remembering when she sold sweet potato pies to raise money for her school."
+   },
+   {
+    "n": "2",
+    "x": 5.8,
+    "y": 21.9,
+    "title": "Mrs. Davis, a lifelong friend.",
+    "t": "She knew Bethune in the early days, when the school had almost no money."
+   },
+   {
+    "n": "3",
+    "x": 69.6,
+    "y": 83.9,
+    "title": "Bethune with her cane.",
+    "t": "She is saying goodbye to students. She had just stepped down as president of Bethune-Cookman College."
+   },
+   {
+    "n": "4",
+    "x": 53.5,
+    "y": 35.8,
+    "title": "Students of Bethune-Cookman College.",
+    "t": "By 1943, the school that started with five girls had become a college."
+   },
+   {
+    "n": "5",
+    "x": 73.1,
+    "y": 8.7,
+    "title": "White Hall.",
+    "t": "One of the college’s main buildings, with brick walls and tall columns. Compare it to the small rented house where the school began."
+   },
+   {
+    "n": "6",
+    "x": 78.7,
+    "y": 28.7,
+    "title": "A sign: ENTER TO LEARN.",
+    "t": "The college’s motto, a short saying that tells what a group believes, is “Enter to Learn, Depart to Serve.” Students come to learn, then leave to serve others."
+   }
+  ]
+ },
+ "planner": {
+  "type": "nomination",
+  "head": "FLORIDA CIVIL RIGHTS HALL OF FAME",
+  "printT": "NOMINATION · PRACTICE FORM",
+  "alt": "A Hall of Fame nomination form",
+  "voice": "Fill in each line of your nomination. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🏅",
+   "q": "Why a nomination?",
+   "t": "In 2010 the Florida Legislature created the Florida Civil Rights Hall of Fame in the Capitol. Each year, people send in nominations, and the governor chooses the new members. A nomination says who the person is, what they did, and why they deserve it. Your profile needs the same parts, so you fill out a nomination form."
+  },
+  "rows": [
+   {
+    "id": "who",
+    "lab": "Which Unit 11 leader do you nominate?",
+    "short": "Leader",
+    "opts": [
+     {
+      "id": "bethune",
+      "t": "Mary McLeod Bethune"
+     },
+     {
+      "id": "moore",
+      "t": "Harry T. Moore"
+     },
+     {
+      "id": "steele",
+      "t": "Rev. C. K. Steele"
+     },
+     {
+      "id": "walls",
+      "t": "Josiah T. Walls"
+     }
+    ]
+   },
+   {
+    "id": "did",
+    "lab": "What did they do?",
+    "short": "What they did",
+    "by": {
+     "bethune": [
+      {
+       "t": "Started a school in Daytona in 1904"
+      },
+      {
+       "t": "Led the 1956 Tallahassee bus boycott",
+       "ok": false,
+       "miss": "That was Rev. C. K. Steele. What did Bethune start in Daytona?"
+      }
+     ],
+     "moore": [
+      {
+       "t": "Became Florida’s first Black member of Congress",
+       "ok": false,
+       "miss": "That was Josiah T. Walls. Look back at the mystery cards on tab 1."
+      },
+      {
+       "t": "Helped thousands of Black Floridians register to vote"
+      }
+     ],
+     "steele": [
+      {
+       "t": "Led the 1956 Tallahassee bus boycott"
+      },
+      {
+       "t": "Wrote Their Eyes Were Watching God",
+       "ok": false,
+       "miss": "That was Zora Neale Hurston. What did Rev. Steele lead in Tallahassee?"
+      }
+     ],
+     "walls": [
+      {
+       "t": "Became Florida’s first Black member of Congress in 1871"
+      },
+      {
+       "t": "Started a school with $1.50",
+       "ok": false,
+       "miss": "That was Mary McLeod Bethune. Look back at the mystery cards on tab 1."
+      }
+     ]
+    }
+   },
+   {
+    "id": "virtue",
+    "lab": "Which virtue did they show?",
+    "short": "Virtue",
+    "by": {
+     "bethune": [
+      {
+       "t": "Courage"
+      },
+      {
+       "t": "Service"
+      },
+      {
+       "t": "Perseverance"
+      },
+      {
+       "t": "Being rich",
+       "ok": false,
+       "miss": "Being rich is not a virtue, and she sold pies for money. Pick a character trait."
+      }
+     ],
+     "moore": [
+      {
+       "t": "Courage"
+      },
+      {
+       "t": "Service"
+      },
+      {
+       "t": "Being famous",
+       "ok": false,
+       "miss": "Being famous is not a virtue. Pick a character trait his actions showed."
+      }
+     ],
+     "steele": [
+      {
+       "t": "Courage"
+      },
+      {
+       "t": "Perseverance"
+      },
+      {
+       "t": "Being popular",
+       "ok": false,
+       "miss": "Being popular is not a virtue. Pick a character trait his actions showed."
+      }
+     ],
+     "walls": [
+      {
+       "t": "Perseverance"
+      },
+      {
+       "t": "Courage"
+      },
+      {
+       "t": "Being rich",
+       "ok": false,
+       "miss": "Being rich is not a virtue. Pick a character trait his actions showed."
+      }
+     ]
+    }
+   },
+   {
+    "id": "proof",
+    "lab": "What is your evidence?",
+    "short": "Evidence",
+    "by": {
+     "bethune": [
+      {
+       "t": "She opened the school with $1.50 and five girls, and sold pies to keep it going."
+      },
+      {
+       "t": "Everyone liked her.",
+       "ok": false,
+       "miss": "That’s an opinion. Give a real event, decision, or result."
+      }
+     ],
+     "moore": [
+      {
+       "t": "He was a nice man.",
+       "ok": false,
+       "miss": "That’s an opinion. Give a real event, decision, or result."
+      },
+      {
+       "t": "He kept fighting for fair pay and voting rights after he lost his job."
+      }
+     ],
+     "steele": [
+      {
+       "t": "He led the boycott while people walked and carpooled for about seven months."
+      },
+      {
+       "t": "He was famous.",
+       "ok": false,
+       "miss": "Being famous is not proof of a virtue. Give a real event."
+      }
+     ],
+     "walls": [
+      {
+       "t": "He was very smart.",
+       "ok": false,
+       "miss": "Maybe, but that’s not proof. Give a real event, decision, or result."
+      },
+      {
+       "t": "He lost his seat in Congress twice and kept working for Florida."
+      }
+     ]
+    }
+   }
+  ],
+  "doneT": "Your nomination is ready. Now write your profile in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a leader",
+    "rx": "bethune|walls|moore|steele|hurston|johnson|randolph|leader"
+   },
+   {
+    "t": "what they did",
+    "rx": "start|opened|school|led|boycott|congress|vote|register|wrote|naacp|teach|fought|help"
+   },
+   {
+    "t": "a virtue",
+    "rx": "courage|brave|service|serv|persever|kept going|never gave up|didn.?t give up|honest|courtesy|self.?govern"
+   },
+   {
+    "t": "specific evidence",
+    "rx": "1904|1871|1934|1956|1937|\\$1\\.50|1\\.50|five|pies|seven months|lost (his|her) (seat|job)|thousands|eatonville|daytona|tallahassee|brevard|bethune-cookman"
+   }
+  ],
+  "lines": [
+   "Start with the leader: “______ was a Florida leader who…”",
+   "Good. Now say what they did.",
+   "Name the virtue their actions showed.",
+   "Give specific evidence: a date, an event, or a result.",
+   "Read it over once. Is every claim backed by proof?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the mystery leaders, the courtroom, and the two photos."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill out a Hall of Fame nomination: leader, what they did, a virtue, and evidence."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Leader Virtue Profile with specific evidence. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Leader Virtue Profile"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your profile and check off the whole list.",
+ "closing": {
+  "k": "File 11 · closed",
+  "h": "You finished Unit 11",
+  "t": [
+   "Civil rights leaders, community builders, new neighbors, citizens who spoke up, voters, and volunteers: you studied them all, and you proved their virtues with evidence.",
+   "The way out: {route}. Next is File 12, the rules of Florida’s government."
+  ]
+ },
+ "vocab": {
+  "type": "dignhall",
+  "kicker": "Hall of honor",
+  "h": "dign = worthy",
+  "root": "dign",
+  "hl": "dign",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match hangs a portrait in the hall.",
+  "why": {
+   "icon": "🖼️",
+   "q": "Why a hall of portraits?",
+   "t": "<b>Dign</b> comes from the Latin word <i>dignus</i>, “worthy.” Florida’s Capitol has a Hall of Fame to honor people who are worthy of respect. That’s why each word you match hangs a portrait in a hall of honor."
+  },
+  "boardT": "Portraits hung",
+  "words": [
+   {
+    "w": "dignity",
+    "m": "the worth every person has, which means they deserve respect",
+    "miss": "Courtesy means treating every person with…",
+    "say": "Dignity. The worth every person has, which means they deserve respect."
+   },
+   {
+    "w": "dignified",
+    "m": "calm, serious, and worthy of respect",
+    "miss": "Someone who stays calm and serious, even in a hard moment, is…",
+    "say": "Dignified. Calm, serious, and worthy of respect."
+   },
+   {
+    "w": "dignitary",
+    "m": "an important person, like a leader or official, at a special event",
+    "miss": "A governor visiting a school ceremony is a…",
+    "say": "Dignitary. An important person, like a leader or official, at a special event."
+   },
+   {
+    "w": "indignant",
+    "m": "angry because something is unfair",
+    "miss": "When something unfair happens, people feel…",
+    "say": "Indignant. Angry because something is unfair."
+   }
+  ],
+  "win": "The hall is full. Every portrait is lit."
+ },
+ "cabinet": {
+  "n": 11
+ },
+ "notes": {
+  "learned": [
+   "An action is what a leader did. A virtue is the strong character trait the action showed, like courage, service, or perseverance.",
+   "A virtue profile needs evidence: a real event, decision, or result, not an opinion or a guess.",
+   "Mary McLeod Bethune opened a school in Daytona in 1904 with five girls, her son, and $1.50, and sold sweet potato pies to raise money. It grew into Bethune-Cookman University.",
+   "Josiah T. Walls, born enslaved, became Florida’s first Black member of Congress in 1871. He lost his seat twice after election challenges and kept working for Florida.",
+   "Harry T. Moore started the Brevard County NAACP in 1934, lost his teaching job after fighting for equal pay, and helped thousands of Black Floridians register to vote.",
+   "Zora Neale Hurston grew up in Eatonville, collected Florida folk tales and songs, wrote Their Eyes Were Watching God (1937), and worked for the Florida Federal Writers’ Project in 1938–39.",
+   "Leaders were not perfect. They struggled and sometimes lost. Their virtues show in how they kept going.",
+   "The Florida Civil Rights Hall of Fame, created by the Legislature in 2010, honors Floridians like Bethune and Rev. C. K. Steele, two of its first members in 2012.",
+   "Two real photos by Gordon Parks (1943): Bethune remembering when she sold pies for her school, and Bethune saying goodbye to students at White Hall."
+  ],
+  "vocab": [
+   [
+    "virtue",
+    "a strong, good character trait, like courage or service"
+   ],
+   [
+    "biography",
+    "the story of a person’s life"
+   ],
+   [
+    "perseverance",
+    "keeping going even when things go wrong"
+   ],
+   [
+    "evidence",
+    "a real fact that proves a claim"
+   ],
+   [
+    "self-governance",
+    "making good choices and following rules without being told"
+   ],
+   [
+    "motto",
+    "a short saying that tells what a group believes"
+   ],
+   [
+    "nomination",
+    "a request to choose someone for an honor"
+   ],
+   [
+    "dignity",
+    "the worth every person has, which means they deserve respect"
+   ],
+   [
+    "dignified",
+    "calm, serious, and worthy of respect"
+   ],
+   [
+    "dignitary",
+    "an important person, like a leader or official, at a special event"
+   ],
+   [
+    "indignant",
+    "angry because something is unfair"
+   ]
+  ],
+  "wordParts": "dign = worthy (from the Latin dignus): dignity, dignified, dignitary, indignant"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what a leader did (the action)",
+    "rx": "did|do|action|event|start|built|led|wrote|open|made|what (a|the|they)|happen",
+    "n": 1
+   },
+   {
+    "t": "the virtue (their character)",
+    "rx": "virtue|character|trait|courage|brave|service|persever|who they|kind of person|inside|why",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a virtue",
+    "rx": "courage|brave|service|serv|persever|kept going|never gave up|honest|courtesy|self.?govern",
+    "n": 1
+   },
+   {
+    "t": "specific evidence",
+    "rx": "1904|1871|1934|1956|1937|\\$?1\\.50|five|pie|school|congress|vote|boycott|bus|naacp|job|seat|story|stories|eatonville|daytona|tallahassee",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a virtue",
+    "rx": "courage|brave|service|serv|persever|kept going|never give up|honest|courtesy|kind|respect|help",
+    "n": 1
+   },
+   {
+    "t": "something you can do",
+    "rx": "i can|i could|i will|i would|my|me |myself|school|class|friend|family|try|practice|stand up|keep going|help",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at part 1 of Learn the Story, and the why card on the mystery leaders.",
+   "An action is what someone did. A virtue is the kind of person the action shows they were.",
+   "Try this shape: “Describing what a leader did tells ___. Explaining the virtue tells ___.”"
+  ],
+  "journal-q2": [
+   "Pick one leader: Bethune, Walls, Moore, Hurston, or Steele.",
+   "Name one virtue, then one real event that proves it, with a date or a number if you can.",
+   "Try this shape: “I think ___ was most important for ___ because in ___, they ___.”"
+  ],
+  "journal-q3": [
+   "Look back at the last part of Learn the Story: leaders were not perfect.",
+   "Which virtue could you practice at school or at home? When?",
+   "Try this shape: “Studying ___ helps me because I can ___ when ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: can the same action show two different virtues? Give an example.",
+  "journal-q2": "Go further: what evidence would make your profile even stronger?",
+  "journal-q3": "Go further: which leader from this unit would you most like to meet, and what would you ask?"
+ },
+ "quizMiss": [
+  {
+   "a": "A list of things someone owned says nothing about character. Look at part 1 of Learn the Story.",
+   "c": "A timeline shows when things happened, not which virtues they showed. Look at part 1 of Learn the Story."
+  },
+  {
+   "a": "Bethune had only $1.50. Look at the courage case in Learn the Story.",
+   "c": "Being popular isn’t a virtue. Look at the courage case in Learn the Story."
+  },
+  {
+   "b": "Opinions with no examples get “Objection!” in the courtroom. What did the judge accept?",
+   "c": "A long list with no proof isn’t strong. Look at the Stamp the proof game."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Mystery leaders",
+   "at": "scene1",
+   "script": "When I was your age, I loved mystery games. So here is one. Read the first clue on the card. If you think you know the leader, tap a name. If not, tap for another clue. Then pick the virtue the clues show."
+  },
+  {
+   "slot": "guide2",
+   "label": "Not perfect, still strong",
+   "at": "s1done",
+   "script": "You found Walls, Moore, and Hurston. Notice something: none of them was perfect. Walls lost his seat twice. Moore lost his job. Their virtues show in how they kept going. Next, go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Order in the court",
+   "at": "explore",
+   "script": "In a courtroom, a judge wants proof, not opinions. Each part of the reading starts with a claim about Bethune. Pick the real evidence, and it goes on the evidence table. If you pick an opinion, you will hear objection."
+  },
+  {
+   "label": "Two real photos",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "script": "These two photos were taken in Daytona in 1943 by Gordon Parks. Tap every gold number. Then listen to what the Library of Congress wrote about the first photo."
+    },
+    {
+     "slot": "guide4b",
+     "who": "The Library of Congress caption for the 1943 photo (LCCN 2017843215), read by a narrator",
+     "script": "Daytona Beach, Florida. Bethune-Cookman College. Dr. Bethune and Mrs. Davis, a life-long friend, talking of the times when Dr. Bethune sold sweet potato pies to make a down payment on the institution known now as Bethune-Cookman College."
+    },
+    {
+     "slot": "guide4c",
+     "script": "Now tap a stamp, then tap the card it proves. Some cards have no proof at all. Those get the no proof stamp."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Nominate a leader",
+   "at": "plan",
+   "script": "Every year, Floridians can nominate people for the Florida Civil Rights Hall of Fame. Fill out your form: pick a leader, what they did, a virtue, and the evidence. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^card$",
+    "sel": ".spk-wa-card",
+    "fx": "point",
+    "scroll": true
+   },
+   {
+    "at": "^name$",
+    "sel": ".spk-wa-names",
+    "fx": "glow"
+   },
+   {
+    "at": "^clue$",
+    "sel": ".spk-wa-more",
+    "fx": "pop"
+   },
+   {
+    "at": "^virtue$",
+    "sel": ".spk-wa-tabs",
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^Walls$",
+    "sel": ".spk-wa-all figure",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^Moore$",
+    "sel": ".spk-wa-all figure",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^Hurston$",
+    "sel": ".spk-wa-all figure",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^judge$",
+    "sel": ".spk-mcs-room",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^claim$",
+    "sel": ".spk-mcs-ctl",
+    "fx": "point"
+   },
+   {
+    "at": "^table$",
+    "sel": ".spk-mcs-room .table",
+    "fx": "glow"
+   },
+   {
+    "at": "^objection$",
+    "sel": ".spk-mcs-ctl",
+    "fx": "glow"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^photos$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Parks$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "trace"
+   },
+   {
+    "at": "^number$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "point"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^Davis$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 1,
+    "fx": "glow"
+   },
+   {
+    "at": "^pies$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "glow"
+   },
+   {
+    "at": "^institution$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 4,
+    "fx": "glow"
+   }
+  ],
+  "guide4c": [
+   {
+    "at": "^stamp$",
+    "sel": ".spk-spf-pad",
+    "fx": "point"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-spf-cards",
+    "fx": "glow"
+   },
+   {
+    "at": "^no$",
+    "sel": ".spk-spf-s.none",
+    "fx": "pop"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^Hall$",
+    "sel": ".spk-nom .mkw",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^leader$",
+    "sel": ".spk-nom .fr",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^virtue$",
+    "sel": ".spk-nom .fr",
+    "i": 2,
+    "fx": "glow"
+   },
+   {
+    "at": "^evidence$",
+    "sel": ".spk-nom .fr",
+    "i": 3,
+    "fx": "glow"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,88 +3270,66 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Leader Virtue Profile ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1106sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#c0a050"/>
-    <stop offset="40%" stop-color="#e0cfa0"/>
-    <stop offset="100%" stop-color="#d8c890"/>
-  </linearGradient>
-  <linearGradient id="h1106medal" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#e0c040"/>
-    <stop offset="100%" stop-color="#c0a020"/>
-  </linearGradient>
-  <style>
-    .h1106glow { animation: h1106glow 3s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1106glow { 0%,100% { opacity: 0.5; filter: brightness(1); } 50% { opacity: 1; filter: brightness(1.3); } }
-    .h1106drift { animation: h1106drift 10s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1106drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
-    .h1106float { animation: h1106float 5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1106float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-  </style>
-</defs>
-<rect width="920" height="260" fill="url(#h1106sky)"/>
-<rect y="180" width="920" height="80" fill="#c4a870"/>
-<rect y="195" width="920" height="65" fill="#b09860"/>
-<!-- Clouds -->
-<g transform="translate(150,30)">
-  <g class="h1106drift">
-    <ellipse cx="0" cy="0" rx="50" ry="16" fill="#f0e8d0" opacity="0.5"/>
-    <ellipse cx="30" cy="-5" rx="35" ry="12" fill="#f0e8d0" opacity="0.4"/>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A quiet hall of honor inside Florida's Capitol: a row of bronze plaques on a marble wall under a tall arched window, a beam of sunlight crossing them, and one empty space on the wall waiting for a new plaque.">
+  <defs>
+    <linearGradient id="b1106wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDE4D3"/><stop offset="1" stop-color="#D9CBB0"/></linearGradient>
+    <linearGradient id="b1106floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9A688"/><stop offset="1" stop-color="#8E7A5C"/></linearGradient>
+    <linearGradient id="b1106bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C79A55"/><stop offset=".55" stop-color="#9C6E33"/><stop offset="1" stop-color="#7A5222"/></linearGradient>
+    <linearGradient id="b1106beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF4C8" stop-opacity=".85"/><stop offset="1" stop-color="#FFF4C8" stop-opacity="0"/></linearGradient>
+    <radialGradient id="b1106empty" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#FFE7A8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE7A8" stop-opacity="0"/></radialGradient>
+    <style>
+      .b1106beam { animation: b1106shine 7s ease-in-out infinite; }
+      @keyframes b1106shine { 0%, 100% { opacity: .55; } 50% { opacity: .95; } }
+      .b1106dust circle { animation: b1106float 9s linear infinite; }
+      .b1106dust circle:nth-child(2) { animation-delay: -3s; } .b1106dust circle:nth-child(3) { animation-delay: -6s; }
+      @keyframes b1106float { 0% { transform: translate(0,0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translate(60px,40px); opacity: 0; } }
+      .b1106glow { animation: b1106pulse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes b1106pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .b1106beam, .b1106dust circle, .b1106glow { animation: none; } }
+    </style>
+  </defs>
+  <rect width="920" height="200" fill="url(#b1106wall)"/>
+  <!-- marble panels -->
+  <g stroke="#CDBE9F" stroke-width="1" fill="none" opacity=".7">
+    <line x1="0" y1="40" x2="920" y2="40"/><line x1="0" y1="152" x2="920" y2="152"/>
+    <path d="M60,60 q40,30 10,70"/><path d="M380,50 q-30,40 20,80"/><path d="M720,55 q30,30 -10,70"/>
   </g>
-</g>
-<g transform="translate(750,40)">
-  <g class="h1106drift">
-    <ellipse cx="0" cy="0" rx="40" ry="13" fill="#f0e8d0" opacity="0.45"/>
+  <!-- columns -->
+  <g fill="#E8DECB" stroke="#C9B994">
+    <rect x="10" y="20" width="34" height="140"/><rect x="876" y="20" width="34" height="140"/>
+    <rect x="4" y="14" width="46" height="10"/><rect x="870" y="14" width="46" height="10"/>
   </g>
-</g>
-<!-- Open book -->
-<g transform="translate(120,110)">
+  <g stroke="#D3C5A6" stroke-width="2"><line x1="20" y1="26" x2="20" y2="158"/><line x1="34" y1="26" x2="34" y2="158"/><line x1="886" y1="26" x2="886" y2="158"/><line x1="900" y1="26" x2="900" y2="158"/></g>
+  <!-- tall arched window -->
+  <g transform="translate(410 26)">
+    <path d="M0,44 L0,10 Q50,-22 100,10 L100,44Z" fill="#BFE0F0" stroke="#B8A47E" stroke-width="4"/>
+    <line x1="50" y1="-6" x2="50" y2="44" stroke="#B8A47E" stroke-width="3"/><line x1="0" y1="22" x2="100" y2="22" stroke="#B8A47E" stroke-width="3"/>
+  </g>
+  <!-- sunbeam from the window across the plaques -->
+  <path class="b1106beam" d="M418,70 L510,70 L720,160 L320,160Z" fill="url(#b1106beam)"/>
+  <!-- bronze plaques -->
   <g>
-    <path d="M0,0 Q-5,-5 -60,-3 L-65,70 Q-5,68 0,72 Z" fill="#f5f0e0" stroke="#c0b090" stroke-width="1"/>
-    <path d="M0,0 Q5,-5 60,-3 L65,70 Q5,68 0,72 Z" fill="#f0ead8" stroke="#c0b090" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="72" stroke="#a09070" stroke-width="1.5"/>
-    <line x1="-50" y1="15" x2="-10" y2="15" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="-48" y1="25" x2="-12" y2="25" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="-46" y1="35" x2="-14" y2="35" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="-44" y1="45" x2="-16" y2="45" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="10" y1="15" x2="50" y2="15" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="12" y1="25" x2="48" y2="25" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="14" y1="35" x2="46" y2="35" stroke="#c0b090" stroke-width="0.8"/>
+    <g transform="translate(80 70)"><rect width="64" height="72" rx="4" fill="url(#b1106bronze)" stroke="#6A4618" stroke-width="2"/><circle cx="32" cy="26" r="13" fill="#B48444" stroke="#6A4618"/><g fill="#6A4618" opacity=".7"><rect x="12" y="46" width="40" height="3"/><rect x="16" y="53" width="32" height="3"/><rect x="20" y="60" width="24" height="3"/></g></g>
+    <g transform="translate(170 70)"><rect width="64" height="72" rx="4" fill="url(#b1106bronze)" stroke="#6A4618" stroke-width="2"/><circle cx="32" cy="26" r="13" fill="#B48444" stroke="#6A4618"/><g fill="#6A4618" opacity=".7"><rect x="12" y="46" width="40" height="3"/><rect x="16" y="53" width="32" height="3"/><rect x="20" y="60" width="24" height="3"/></g></g>
+    <g transform="translate(260 70)"><rect width="64" height="72" rx="4" fill="url(#b1106bronze)" stroke="#6A4618" stroke-width="2"/><circle cx="32" cy="26" r="13" fill="#B48444" stroke="#6A4618"/><g fill="#6A4618" opacity=".7"><rect x="12" y="46" width="40" height="3"/><rect x="16" y="53" width="32" height="3"/><rect x="20" y="60" width="24" height="3"/></g></g>
+    <g transform="translate(560 70)"><rect width="64" height="72" rx="4" fill="url(#b1106bronze)" stroke="#6A4618" stroke-width="2"/><circle cx="32" cy="26" r="13" fill="#B48444" stroke="#6A4618"/><g fill="#6A4618" opacity=".7"><rect x="12" y="46" width="40" height="3"/><rect x="16" y="53" width="32" height="3"/><rect x="20" y="60" width="24" height="3"/></g></g>
+    <g transform="translate(650 70)"><rect width="64" height="72" rx="4" fill="url(#b1106bronze)" stroke="#6A4618" stroke-width="2"/><circle cx="32" cy="26" r="13" fill="#B48444" stroke="#6A4618"/><g fill="#6A4618" opacity=".7"><rect x="12" y="46" width="40" height="3"/><rect x="16" y="53" width="32" height="3"/><rect x="20" y="60" width="24" height="3"/></g></g>
   </g>
-</g>
-<!-- Profile card frame -->
-<g transform="translate(340,85)">
-  <g>
-    <rect x="0" y="0" width="80" height="100" fill="#f5f0e0" stroke="#c0a060" stroke-width="2" rx="5"/>
-    <rect x="10" y="10" width="60" height="40" fill="#e0d8c0" stroke="#c0b090" stroke-width="1" rx="3"/>
-    <line x1="15" y1="60" x2="65" y2="60" stroke="#c0b090" stroke-width="1"/>
-    <line x1="20" y1="70" x2="60" y2="70" stroke="#c0b090" stroke-width="0.8"/>
-    <line x1="25" y1="80" x2="55" y2="80" stroke="#c0b090" stroke-width="0.8"/>
+  <!-- the empty space, waiting -->
+  <g transform="translate(740 70)">
+    <rect x="-14" y="-12" width="92" height="96" fill="url(#b1106empty)" class="b1106glow"/>
+    <rect width="64" height="72" rx="4" fill="none" stroke="#B8A47E" stroke-width="2" stroke-dasharray="5 5"/>
+    <circle cx="8" cy="8" r="2.5" fill="#9C8A66"/><circle cx="56" cy="8" r="2.5" fill="#9C8A66"/>
   </g>
-</g>
-<!-- Medal/badge -->
-<g transform="translate(540,100)">
-  <g class="h1106glow">
-    <polygon points="-12,-15 12,-15 8,0 -8,0" fill="#8a3a3a" opacity="0.8"/>
-    <circle cx="0" cy="15" r="22" fill="url(#h1106medal)" stroke="#a08020" stroke-width="1.5"/>
-    <polygon points="0,-10 3,-3 10,-3 5,2 7,9 0,5 -7,9 -5,2 -10,-3 -3,-3" fill="#f0e080" opacity="0.8"/>
-  </g>
-</g>
-<!-- Podium -->
-<g transform="translate(680,120)">
-  <g>
-    <polygon points="0,60 80,60 75,0 5,0" fill="#8a6a40" stroke="#6a5030" stroke-width="1.5"/>
-    <rect x="20" y="15" width="40" height="5" fill="#a08050" rx="1"/>
-    <rect x="25" y="30" width="30" height="3" fill="#a08050" rx="1"/>
-  </g>
-</g>
-<!-- Florida outline -->
-<g transform="translate(830,90)">
-  <g class="h1106float">
-    <path d="M0,0 L30,0 L35,5 L38,20 L40,35 L35,45 L28,50 L25,47 L22,40 L15,30 L10,15 L5,7 Z" fill="#c4a060" stroke="#a08040" stroke-width="1" opacity="0.7"/>
-  </g>
-</g>
+  <!-- dust in the light -->
+  <g class="b1106dust" fill="#FFF6D8"><circle cx="470" cy="90" r="1.6"/><circle cx="500" cy="80" r="1.2"/><circle cx="450" cy="110" r="1.4"/></g>
+  <!-- floor -->
+  <rect y="160" width="920" height="40" fill="url(#b1106floor)"/>
+  <g stroke="#A8936F" stroke-width="1"><line x1="0" y1="172" x2="920" y2="172"/><line x1="0" y1="186" x2="920" y2="186"/></g>
+  <path d="M340,160 L700,160 L760,200 L280,200Z" fill="#FFF4C8" opacity=".18"/>
+  <!-- a velvet rope and stands -->
+  <g><rect x="120" y="140" width="5" height="30" fill="#B8902E"/><rect x="380" y="140" width="5" height="30" fill="#B8902E"/><path d="M123,144 Q252,172 382,144" stroke="#8E1F2A" stroke-width="5" fill="none"/>
+    <rect x="114" y="168" width="17" height="4" rx="2" fill="#8A6A1E"/><rect x="374" y="168" width="17" height="4" rx="2" fill="#8A6A1E"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3612,6 +4838,9 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 <!-- OAO-STD-TIPS v1 -->
 <style id="oao-std-tips-css">
 .std-tip{border-bottom:1.5px dotted currentColor;cursor:help;border-radius:3px;outline:none;padding:0 1px}
