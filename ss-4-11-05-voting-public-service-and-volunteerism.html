@@ -1784,6 +1784,1233 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.11.05",
+ "title": "Voting, Public Service, and Volunteerism",
+ "quiet": false,
+ "file": {
+  "n": 11,
+  "title": "Civil Rights & Citizens",
+  "label": "Civil Rights & Citizens",
+  "seals": [
+   "🚌",
+   "🗳️",
+   "⚖️"
+  ]
+ },
+ "prevFile": "Citizens Solving Problems with Local and State Government",
+ "connector": "Last time, we sent a polite request to Canvas, and the Help Desk answered.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, you helped her send a polite request, and the Canvas Help Desk answered. Now Canvas says there are two ways out, and everyone stuck inside gets a vote.",
+ "routeFallback": "our route",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "The age ruler",
+   "why": "Guess when each way of helping can start. Then slide the kid along the ruler to check."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "One town, one storm",
+   "why": "Follow one Florida town through a hurricane. Then pin a badge on each helper in two real photos."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Forge three keys",
+   "why": "Answer three questions. Forge three keys. Then write your notebook entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Canvas answered our request, and it gave us a choice!",
+  "opening": [
+   "Canvas answered our request! It says there are two ways out of this hallway, and everyone stuck in here gets a vote.",
+   "Before we vote, I want to understand what voting really means, and serving, and volunteering. Start in the Learn tab (tab 1). Scroll down to the age ruler.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s try the age ruler",
+      "go": true,
+      "reply": "Pin each card on the age where you think it starts. Then slide the kid along the ruler to check."
+     },
+     {
+      "t": "What are the two ways out?",
+      "reply": "The Main Hall and the Back Stairs. I’ll tell you more at the end of this file. First, let’s learn how a fair vote works."
+     },
+     {
+      "t": "Can kids vote?",
+      "reply": "Not in real elections. In Florida you have to be 18. But in here, Canvas says everyone gets a vote, even you!"
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Move Hurricane Charley across Florida, then watch who comes to help one town."
+     },
+     {
+      "t": "Why 30 for governor?",
+      "reply": "Florida’s constitution, the state’s big rulebook, says the governor must be at least 30 years old."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "What’s a Fire Explorer?",
+      "reply": "It’s a program for teens, often starting at 14, run by many fire departments. Explorers learn about firefighting and help their community, like loading ice and water after a storm."
+     }
+    ]
+   },
+   "vote": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "🚪 The Main Hall: slower, but everyone comes with us",
+      "end": true,
+      "save": {
+       "route": "hall",
+       "name": "the Main Hall"
+      },
+      "reply": "You voted for the Main Hall. Counting the votes…",
+      "then": [
+       {
+        "board": {
+         "from": "Canvas vote board",
+         "h": "Final count",
+         "rows": [
+          {
+           "t": "The Main Hall",
+           "ico": "🚪",
+           "who": [
+            "Room 8",
+            "Your teacher",
+            "You"
+           ],
+           "win": true
+          },
+          {
+           "t": "The Back Stairs",
+           "ico": "🪜",
+           "who": [
+            "Room 4",
+            "Room 12"
+           ]
+          }
+         ],
+         "foot": "3 votes to 2. The Main Hall wins.",
+         "stamp": "DECIDED"
+        }
+       },
+       {
+        "t": "The Main Hall wins, 3 to 2! Rooms 4 and 12 wanted the stairs, but they say they’ll come with us. That’s what a fair vote looks like: everyone votes, and everyone respects the result. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+        "choice": "done"
+       }
+      ]
+     },
+     {
+      "t": "🪜 The Back Stairs: faster, and you send help back",
+      "end": true,
+      "save": {
+       "route": "stairs",
+       "name": "the Back Stairs"
+      },
+      "reply": "You voted for the Back Stairs. Counting the votes…",
+      "then": [
+       {
+        "board": {
+         "from": "Canvas vote board",
+         "h": "Final count",
+         "rows": [
+          {
+           "t": "The Main Hall",
+           "ico": "🚪",
+           "who": [
+            "Room 8",
+            "Your teacher"
+           ]
+          },
+          {
+           "t": "The Back Stairs",
+           "ico": "🪜",
+           "who": [
+            "Room 4",
+            "Room 12",
+            "You"
+           ],
+           "win": true
+          }
+         ],
+         "foot": "3 votes to 2. The Back Stairs win.",
+         "stamp": "DECIDED"
+        }
+       },
+       {
+        "t": "The Back Stairs win, 3 to 2! Room 8 and I wanted the Main Hall, but a fair vote is a fair vote. I’ll go first and send help back for everyone. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+        "choice": "done"
+       }
+      ]
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What happens next?",
+      "reply": "Next time, Canvas wants to know what makes a good leader. Don’t worry, I wrote down our vote. We’re taking {route}."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You found the real age for every card. Voting waits until 18, but helping can start right now. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "You followed Punta Gorda through the storm and pinned a badge on every helper. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then forge three keys and write your entry."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file! Now it’s time to vote. Canvas set up a vote board. Rooms 4, 8, and 12 already voted, and so did I. Look:"
+    },
+    {
+     "board": {
+      "from": "Canvas vote board",
+      "h": "How should we get out of this hallway?",
+      "rows": [
+       {
+        "t": "The Main Hall",
+        "ico": "🚪",
+        "who": [
+         "Room 8",
+         "Your teacher"
+        ]
+       },
+       {
+        "t": "The Back Stairs",
+        "ico": "🪜",
+        "who": [
+         "Room 4",
+         "Room 12"
+        ]
+       }
+      ],
+      "foot": "2 votes to 2. It’s a tie. One vote is left: yours."
+     }
+    },
+    {
+     "t": "The Main Hall is slower: we go room by room, so everyone in Rooms 4, 8, and 12 comes with us. The Back Stairs are faster: I go first and send help back. It’s a tie, so your vote decides. Which way?",
+     "choice": "vote"
+    }
+   ]
+  }
+ },
+ "lens": "Courtesy means being polite and respectful, like waiting your turn in line to vote or thanking a volunteer. Today you are a civic action historian, someone who studies how citizens take care of their communities.",
+ "scene1": {
+  "type": "ageruler",
+  "kicker": "The age ruler",
+  "h": "When can you start? Pin each card on an age. Then slide to check.",
+  "voice": "Tap a card, then tap the age where you think it starts. You can also drag it. When every card is pinned, slide the kid along the ruler.",
+  "why": {
+   "icon": "📏",
+   "q": "Why a ruler?",
+   "t": "Some ways of serving your community have an age rule. In Florida you must be 18 to vote, and the governor must be at least 30. But many ways to help have no age rule at all. That’s why you line them up on a ruler, from your age now to 30."
+  },
+  "startAge": 9,
+  "endAge": 30,
+  "sliderT": "The kid’s age",
+  "stops": [
+   {
+    "id": "now",
+    "age": 9,
+    "t": "Now",
+    "tick": "Now",
+    "sub": "age 9 or 10, like you"
+   },
+   {
+    "id": "14",
+    "age": 14,
+    "t": "Age 14",
+    "tick": "14",
+    "sub": "a teenager"
+   },
+   {
+    "id": "16",
+    "age": 16,
+    "t": "Age 16",
+    "tick": "16",
+    "sub": "in high school"
+   },
+   {
+    "id": "18",
+    "age": 18,
+    "t": "Age 18",
+    "tick": "18",
+    "sub": "a grown-up"
+   },
+   {
+    "id": "30",
+    "age": 30,
+    "t": "Age 30",
+    "tick": "30",
+    "sub": "a grown-up for a while"
+   }
+  ],
+  "cards": [
+   {
+    "t": "Pick up litter at a beach cleanup, with a grown-up",
+    "ico": "🏖️",
+    "at": "now",
+    "fact": "No age rule. Many Florida beach cleanups welcome kids who come with a grown-up."
+   },
+   {
+    "t": "Read with a younger student at school",
+    "ico": "📚",
+    "at": "now",
+    "fact": "No age rule. Helping a younger reader is volunteering."
+   },
+   {
+    "t": "Collect canned food for a food pantry",
+    "ico": "🥫",
+    "at": "now",
+    "fact": "No age rule. A class food drive counts as volunteering."
+   },
+   {
+    "t": "Join a Fire Explorer program",
+    "ico": "🚒",
+    "at": "14",
+    "fact": "Many Florida fire departments start Fire Explorers at 14, like the volunteer in the 2005 photo on tab 2."
+   },
+   {
+    "t": "Pre-register to vote",
+    "ico": "📝",
+    "at": "16",
+    "fact": "In Florida you can pre-register (sign up early) at 16. Then you’re ready to vote at 18."
+   },
+   {
+    "t": "Vote in an election",
+    "ico": "🗳️",
+    "at": "18",
+    "fact": "In Florida you must be at least 18 and registered to vote."
+   },
+   {
+    "t": "Run for governor of Florida",
+    "ico": "⭐",
+    "at": "30",
+    "fact": "Florida’s constitution, the state’s main set of rules, says the governor must be at least 30 years old."
+   }
+  ],
+  "guessT": "You guessed {g}.",
+  "ageT": "Age {a}",
+  "lockT": "Pin every card first. Then the slider turns on.",
+  "allT": "Every card found its real age.",
+  "ask": {
+   "q": "So, can a 4th grader serve their community?",
+   "opts": [
+    {
+     "t": "No. You have to be a grown-up first.",
+     "miss": "Look at the Now stop on the ruler. Three cards are there."
+    },
+    {
+     "t": "Yes, right now, by volunteering.",
+     "ok": true,
+     "reply": "Right! Voting waits until 18, but serving can start today."
+    }
+   ]
+  },
+  "win": "<b>Every card found its real age.</b> Voting has an age rule. Helping your community doesn’t."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Move Hurricane Charley across Florida, then open each part of Learn the Story.",
+    "Tap every gold number on the two photos.",
+    "Pin a badge on each numbered person, then answer one question."
+   ]
+  },
+  "reading": {
+   "type": "stormtrack",
+   "activity": "Citizens in Action",
+   "alt": "A map of Florida. A red line shows the path of Hurricane Charley in 2004, from the Gulf of Mexico past Punta Gorda, across the middle of the state, and out near Daytona Beach.",
+   "why": {
+    "icon": "🌀",
+    "q": "Why a hurricane?",
+    "t": "Florida gets hit by hurricanes. After a big storm you can see every kind of citizen at work: the leaders voters chose, people in public service jobs, and volunteers. Hurricane Charley hit Punta Gorda on August 13, 2004. The red line follows its real path, from the National Hurricane Center’s report. That’s why you follow one town through one storm."
+   },
+   "stormIco": "🌀",
+   "town": {
+    "t": "Punta Gorda",
+    "lon": -82.05,
+    "lat": 26.93
+   },
+   "track": [
+    [
+     -82.9,
+     25.7
+    ],
+    [
+     -82.5,
+     26.3
+    ],
+    [
+     -82.25,
+     26.69
+    ],
+    [
+     -82.05,
+     26.93
+    ],
+    [
+     -81.86,
+     27.22
+    ],
+    [
+     -81.6,
+     27.85
+    ],
+    [
+     -81.38,
+     28.54
+    ],
+    [
+     -81.06,
+     29.29
+    ],
+    [
+     -80.8,
+     29.9
+    ]
+   ],
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Voting is one of"
+    },
+    {
+     "id": "p2",
+     "match": "^Voting was not always"
+    },
+    {
+     "id": "p3",
+     "match": "^Some citizens serve"
+    },
+    {
+     "id": "p4",
+     "match": "^Volunteerism is service"
+    },
+    {
+     "id": "p5",
+     "match": "^You don"
+    },
+    {
+     "id": "p6",
+     "match": "^Voting, public service, and volunteering are"
+    }
+   ],
+   "steps": [
+    {
+     "id": "vote",
+     "t": "Before the storm: voters choose leaders",
+     "ico": "🗳️",
+     "paras": [
+      "p1"
+     ],
+     "ask": {
+      "q": "Before you read: can one vote make a difference?",
+      "opts": [
+       {
+        "t": "No. One vote is too small to matter.",
+        "miss": "Some elections are decided by just a few votes. Try again, then read part 1 to see a real one."
+       },
+       {
+        "t": "Yes. Some elections are decided by just a few votes.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "notall",
+     "t": "Not everyone could always vote",
+     "ico": "📜",
+     "paras": [
+      "p2"
+     ],
+     "ask": {
+      "q": "Before you read: in 1900, could women vote in Florida elections?",
+      "opts": [
+       {
+        "t": "Yes. Every grown-up could always vote.",
+        "miss": "Not true. Women across the U.S. won the right to vote in 1920. Try again, then read part 2."
+       },
+       {
+        "t": "No. Women won the right to vote in 1920.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "storm",
+     "t": "The storm hits: public servants rush in",
+     "ico": "🚒",
+     "storm": true,
+     "act": "🌀 Move Hurricane Charley across Florida",
+     "paras": [
+      "p3"
+     ]
+    },
+    {
+     "id": "vols",
+     "t": "Volunteers arrive",
+     "ico": "🤝",
+     "act": "🤝 Send in the volunteers",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "kids",
+     "t": "Kids can help too",
+     "ico": "🧒",
+     "paras": [
+      "p5"
+     ],
+     "ask": {
+      "q": "Before you read: can a 10-year-old help after a storm?",
+      "opts": [
+       {
+        "t": "No. Only grown-ups can help.",
+        "miss": "Kids can help too, with a grown-up they trust. Look back at the Now stop on the age ruler (tab 1)."
+       },
+       {
+        "t": "Yes, with a grown-up, like collecting water or making thank-you cards for helpers.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "together",
+     "t": "Everyone does their part",
+     "ico": "⭐",
+     "act": "⭐ Open the last part",
+     "paras": [
+      "p6"
+     ]
+    }
+   ],
+   "allT": "Every part is open. Voters, public servants, volunteers, and kids all helped one Florida town.",
+   "countT": "parts open. Do the step below to open the next one."
+  },
+  "evidence": {
+   "type": "badges",
+   "kicker": "Pin the badges",
+   "h": "First tap every gold number. Then pin a badge on each numbered person.",
+   "voice": "Tap every gold number on the photos first. Then tap a badge and tap the person it belongs to. You can also drag the badge.",
+   "why": {
+    "icon": "🏷️",
+    "q": "Why badges?",
+    "t": "Helpers often wear something that shows their job, like a firefighter’s helmet or a volunteer’s T-shirt. Most people in these photos don’t, so you decide what each person is doing, using the gold labels. A public servant is someone who works in a public service job. That’s why you pin a badge on each one."
+   },
+   "badges": [
+    {
+     "id": "voter",
+     "t": "Voter",
+     "ico": "🗳️"
+    },
+    {
+     "id": "servant",
+     "t": "Public servant",
+     "ico": "🏛️"
+    },
+    {
+     "id": "volunteer",
+     "t": "Volunteer",
+     "ico": "🤝"
+    }
+   ],
+   "people": [
+    {
+     "n": "1",
+     "t": "The people in line at City Hall (1957)",
+     "ok": "voter",
+     "why": "They came to sign up so they can vote.",
+     "miss": {
+      "servant": "They don’t work at City Hall. They came to sign up. Look at label 1 again.",
+      "volunteer": "They aren’t helping anyone else here. They came to sign up to vote. Look at label 1 again."
+     }
+    },
+    {
+     "n": "2",
+     "t": "The woman behind the counter (1957)",
+     "ok": "servant",
+     "why": "She works at City Hall, serving the people who come to her window.",
+     "miss": {
+      "voter": "She is behind the counter, working. Look at label 2 again.",
+      "volunteer": "Look at label 2: she works at City Hall. That’s her job."
+     }
+    },
+    {
+     "n": "3",
+     "t": "The city manager, whose office is at label 3 (1957)",
+     "ok": "servant",
+     "why": "The city manager runs the city’s daily work. It’s a public service job.",
+     "miss": {
+      "voter": "Look at label 3: the city manager has a job running the city.",
+      "volunteer": "Look at label 3: running the city is the city manager’s job."
+     }
+    },
+    {
+     "n": "4",
+     "t": "Jessica Hope, in her Fire Explorer shirt (2005)",
+     "ok": "volunteer",
+     "why": "The photo’s caption, from FEMA (the part of the national government that helps after disasters), calls her a volunteer. She is loading ice and water for her neighbors.",
+     "miss": {
+      "voter": "She isn’t voting. Look at labels 4, 5 and 6: what is she doing?",
+      "servant": "Fire Explorers aren’t paid firefighters. Look at label 4 again."
+     }
+    }
+   ],
+   "hotT": "First, tap every gold number on the photos above.",
+   "firstT": "Tap a badge first. Then tap the person it belongs to.",
+   "ask": {
+    "q": "Which of these could a 4th grader do right now?",
+    "opts": [
+     {
+      "t": "Sign up to vote, like the people at label 1",
+      "miss": "Not yet. In Florida you can pre-register at 16 and vote at 18."
+     },
+     {
+      "t": "Work at City Hall, like labels 2 and 3",
+      "miss": "Those are grown-up jobs. Look for the helper who isn’t paid."
+     },
+     {
+      "t": "Volunteer, like label 4, with a grown-up’s help",
+      "ok": true,
+      "reply": "Yes! Fire Explorers start as teens, and kids your age can help at a supply drive with a grown-up."
+     }
+    ]
+   },
+   "win": "<b>Every helper has a badge.</b> Voters choose leaders, public servants work for everyone, and volunteers help because they choose to."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photos to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 25.6,
+    "y": 40.6,
+    "title": "People in line to sign up to vote.",
+    "t": "Black and white citizens wait in the same line at Tallahassee City Hall on January 24, 1957. Before you can vote, you have to register, or sign up."
+   },
+   {
+    "n": "2",
+    "x": 6.2,
+    "y": 23.4,
+    "title": "A city worker behind the counter.",
+    "t": "She works at City Hall, helping the people who come to her window."
+   },
+   {
+    "n": "3",
+    "x": 33.0,
+    "y": 8.6,
+    "title": "The City Manager’s office.",
+    "t": "The sign on the glass says CITY MANAGER. A city manager runs the city’s daily work for the city commission, the leaders voters choose."
+   },
+   {
+    "n": "4",
+    "x": 86.9,
+    "y": 33.8,
+    "title": "A Fire Explorer’s shirt.",
+    "t": "Her shirt says Hollywood and Explorer. The Hollywood Fire Department had an Explorer program for teens."
+   },
+   {
+    "n": "5",
+    "x": 62.3,
+    "y": 40.3,
+    "title": "Bags of ice.",
+    "t": "Hurricane Wilma hit Florida on October 24, 2005, and millions of homes and businesses lost power. Ice kept food and medicine cold."
+   },
+   {
+    "n": "6",
+    "x": 52.5,
+    "y": 81.3,
+    "title": "A neighbor’s car.",
+    "t": "People drove to a distribution center, a place where supplies were handed out, at Oakwood Plaza in Hollywood. They picked up free ice and water, and volunteers loaded it into their cars."
+   }
+  ]
+ },
+ "planner": {
+  "type": "keyring",
+  "alt": "A key ring with three blank keys",
+  "voice": "Forge one key for each part of your entry. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🔑",
+   "q": "Why keys?",
+   "t": "Your teacher needs a way out of Canvas, and your notebook entry needs three parts: voting, public service, and volunteering. Each part is one key. That’s why you forge three keys on one ring."
+  },
+  "rows": [
+   {
+    "id": "vote",
+    "lab": "Key 1 · Why does voting matter?",
+    "short": "Voting",
+    "ico": "🗳️",
+    "opts": [
+     {
+      "t": "Voters choose the leaders who make decisions for everyone."
+     },
+     {
+      "t": "Voting is fun to watch on TV.",
+      "ok": false,
+      "miss": "That isn’t why it matters. Look at part 1 of Learn the Story: who do voters choose?"
+     },
+     {
+      "t": "Close elections, like Florida’s 537-vote race in 2000, show every vote counts."
+     }
+    ]
+   },
+   {
+    "id": "job",
+    "lab": "Key 2 · Which public service job, and how does it serve?",
+    "short": "Public service",
+    "ico": "🚒",
+    "opts": [
+     {
+      "t": "Firefighters rush to help people in emergencies, like after Hurricane Charley."
+     },
+     {
+      "t": "Teachers help students learn and grow every day."
+     },
+     {
+      "t": "A movie star entertains people.",
+      "ok": false,
+      "miss": "That’s a job, but not public service. Look at part 3 of Learn the Story."
+     },
+     {
+      "t": "A city worker helps the people who come to City Hall, like label 2."
+     }
+    ]
+   },
+   {
+    "id": "vol",
+    "lab": "Key 3 · How could you volunteer right now?",
+    "short": "Volunteering",
+    "ico": "🤝",
+    "opts": [
+     {
+      "t": "Collect canned food for a food pantry."
+     },
+     {
+      "t": "Read with a younger student at school."
+     },
+     {
+      "t": "Vote for mayor.",
+      "ok": false,
+      "miss": "Not until you’re 18. Look at the Now stop on the age ruler (tab 1)."
+     },
+     {
+      "t": "Pick up litter at a beach cleanup, with a grown-up."
+     }
+    ]
+   }
+  ],
+  "doneT": "Your key ring is ready. Now write in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "voting",
+    "rx": "vot|elect|ballot|choos|leader|regist"
+   },
+   {
+    "t": "a public service job",
+    "rx": "firefight|fire fight|fireman|police|officer|teacher|military|national guard|soldier|nurse|mayor|governor|council|official|city worker|public service|librarian|paramedic|doctor"
+   },
+   {
+    "t": "volunteering",
+    "rx": "volunt|food bank|pantry|clean ?up|litter|trash|tutor|read (with|to)|supply drive|canned|habitat|for free|no pay|without (pay|being paid)|donat"
+   },
+   {
+    "t": "a specific example",
+    "rx": "charley|punta gorda|hurricane|wilma|537|2000|1957|tallahassee|bethune|1920|1969|explorer|beach|food|school|tarp|storm"
+   }
+  ],
+  "lines": [
+   "Start with voting: “Voting matters because…”",
+   "Good. Now name a public service job and how it serves.",
+   "Add a volunteer action someone your age could do.",
+   "Give a specific example from the lesson.",
+   "Read it over once. Did you cover all three?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the age ruler, the storm track, and the two photos."
+  },
+  {
+   "t": "Plan",
+   "w": "Forge three keys: why voting matters, a public service job, and a way you could volunteer."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Historian’s Notebook entry with one example of each. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Historian’s Notebook entry"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your notebook entry and check off the whole list.",
+ "vocab": {
+  "type": "raisehands",
+  "kicker": "Raise your hand",
+  "h": "vol = I want, I choose",
+  "root": "vol",
+  "hl": "vol",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match raises more hands.",
+  "why": {
+   "icon": "🙋",
+   "q": "Why raised hands?",
+   "t": "<b>Vol</b> comes from the Latin word <i>volo</i>, “I want” or “I choose.” When someone asks “Who wants to help?”, a volunteer is the person who raises a hand. That’s why each word you match raises more hands."
+  },
+  "signT": "Who wants to help?",
+  "boardT": "Hands up",
+  "words": [
+   {
+    "w": "volunteer",
+    "m": "a person who chooses to help without being paid",
+    "miss": "Jessica Hope in the 2005 photo was one. A volunteer is…",
+    "say": "Volunteer. A person who chooses to help without being paid."
+   },
+   {
+    "w": "voluntary",
+    "m": "done because you choose to, not because you have to",
+    "miss": "If nobody makes you do it, it is…",
+    "say": "Voluntary. Done because you choose to, not because you have to."
+   },
+   {
+    "w": "involuntary",
+    "m": "done without choosing, like a sneeze or a hiccup",
+    "miss": "In- means not. Not chosen, like a sneeze…",
+    "say": "Involuntary. Done without choosing, like a sneeze or a hiccup."
+   },
+   {
+    "w": "benevolent",
+    "m": "wanting good things for other people; kind",
+    "miss": "Bene means good. Wanting good things for others is…",
+    "say": "Benevolent. Wanting good things for other people. Kind."
+   }
+  ],
+  "win": "Every hand is up. Lots of volunteers!"
+ },
+ "cabinet": {
+  "n": 11
+ },
+ "notes": {
+  "learned": [
+   "Voting lets citizens choose the leaders who make decisions about schools, roads, parks, laws, and safety.",
+   "In Florida you must be 18 and registered to vote. You can pre-register at 16, and you must register at least 29 days before an election.",
+   "Close elections show every vote matters: in 2000, the race for president was decided in Florida by 537 votes.",
+   "Women won the right to vote in 1920 (the 19th Amendment). Mary McLeod Bethune helped Black women in Daytona register that fall, even when the Ku Klux Klan tried to scare them. Florida’s lawmakers voted yes on the amendment only on May 13, 1969.",
+   "Public service jobs, like firefighters, police officers, teachers, the military, and elected officials, serve the whole community. They helped Punta Gorda after Hurricane Charley (August 13, 2004).",
+   "Volunteers help without being paid: they cooked meals, sorted clothes, and covered damaged roofs after Charley.",
+   "Kids can serve right now with a grown-up: reading with younger students, food drives, and cleanups. Many fire departments start Fire Explorers at 14.",
+   "Two real photos: citizens in line to register to vote at Tallahassee City Hall (1957) and a Fire Explorer volunteer after Hurricane Wilma (2005)."
+  ],
+  "vocab": [
+   [
+    "citizen",
+    "a person who belongs to a city, state, or country"
+   ],
+   [
+    "elected official",
+    "a leader voters choose"
+   ],
+   [
+    "register",
+    "to sign up with your county’s elections office so you can vote"
+   ],
+   [
+    "pre-register",
+    "to sign up early, at 16, so you’re ready to vote at 18"
+   ],
+   [
+    "19th Amendment",
+    "the 1920 change to the U.S. Constitution that gave women the right to vote"
+   ],
+   [
+    "public service",
+    "work that helps the whole community, often for a city, county, state, or the country"
+   ],
+   [
+    "volunteer",
+    "a person who chooses to help without being paid"
+   ],
+   [
+    "mentor",
+    "to help and teach someone younger"
+   ],
+   [
+    "Category 4",
+    "one of the strongest kinds of hurricane"
+   ],
+   [
+    "taking responsibility",
+    "doing your part without waiting to be asked"
+   ],
+   [
+    "voluntary",
+    "done because you choose to"
+   ],
+   [
+    "involuntary",
+    "done without choosing, like a sneeze"
+   ],
+   [
+    "benevolent",
+    "wanting good things for other people; kind"
+   ]
+  ],
+  "wordParts": "vol = I want, I choose (from the Latin volo): volunteer, voluntary, involuntary, benevolent"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what voting does",
+    "rx": "choos|chose|pick|elect|decid|leader|official|mayor|governor|president|say|voice",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "matter|important|count|differen|chang|close|537|everyone|community|fair|affect|rule|law|school|road|park|safe",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a public service job",
+    "rx": "firefight|fire fight|fireman|firemen|police|cop|officer|teacher|military|army|navy|national guard|soldier|nurse|mayor|governor|council|official|city worker|librarian|paramedic|doctor|judge|mail",
+    "n": 1
+   },
+   {
+    "t": "how it serves",
+    "rx": "help|serv|protect|safe|teach|rescue|save|emergenc|fire|keep|care|learn|clean|fix|decid|law",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a volunteer action",
+    "rx": "litter|trash|clean|read|tutor|food|can|pantry|drive|suppl|collect|donat|help|plant|card|water|garden|pick up|welcome|event|cook|sort",
+    "n": 1
+   },
+   {
+    "t": "where or who it helps",
+    "rx": "school|neighbor|community|park|beach|pantry|famil|kid|student|people|town|city|church|shelter|animal|older|younger|class|home|street",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at part 1 of Learn the Story, and at the age ruler.",
+   "What do voters choose? What did the 2000 election in Florida show?",
+   "Try this shape: “Voting matters because citizens choose ___. Every vote counts, like ___.”"
+  ],
+  "journal-q2": [
+   "Look back at part 3 of Learn the Story (the storm hits), and labels 2 and 3 on the photo.",
+   "Pick one job: firefighter, police officer, teacher, a city worker… What does that person do for others?",
+   "Try this shape: “A ___ serves the community by ___.”"
+  ],
+  "journal-q3": [
+   "Look back at the Now stop on the age ruler, and part 5 of Learn the Story.",
+   "Pick one thing a kid can do with a grown-up. Who does it help?",
+   "Try this shape: “A 4th grader could ___ to help ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why do you think Florida asks voters to register 29 days before an election?",
+  "journal-q2": "Go further: which public service job would you like to try someday, and why?",
+  "journal-q3": "Go further: what is one problem at your school that student volunteers could help fix?"
+ },
+ "quizMiss": [
+  {
+   "a": "16 is when you can pre-register (sign up early). Look at the age ruler on tab 1: when can you vote?",
+   "c": "21 is too old. Look at the age ruler on tab 1: when can you vote?"
+  },
+  {
+   "b": "A tourist is visiting, not serving. Look at part 3 of Learn the Story: who rushed to help?",
+   "c": "Playing games isn’t serving anyone. Look at part 3 of Learn the Story."
+  },
+  {
+   "a": "You must be at least 30 to run for governor. Look at the age ruler on tab 1.",
+   "c": "Joining the military waits until you’re older. Look at the Now stop on the age ruler."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "When can I start?",
+   "at": "scene1",
+   "script": "When I was in fourth grade, I thought you had to be a grown-up to help your town. I was wrong. Pin each card on the age where you think it starts. Then slide the kid along the ruler and see which cards light up."
+  },
+  {
+   "slot": "guide2",
+   "label": "Helping starts now",
+   "at": "s1done",
+   "script": "Voting waits until you’re 18, and running for governor waits until 30. But look at the Now stop. You can start helping today. Next, go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One town, one storm",
+   "at": "explore",
+   "script": "This red line is the real path of Hurricane Charley in 2004. Punta Gorda is the blue dot. Answer each question, then open each part. After the storm passes, watch who comes to help the town."
+  },
+  {
+   "label": "Two real photos",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "script": "These are two real photos. The left one is from Tallahassee in 1957. The right one is from Hollywood, Florida, in 2005. Tap every gold number. Then listen to what the State Archives called the first photo."
+    },
+    {
+     "slot": "guide4b",
+     "who": "The State Archives of Florida’s title for the 1957 photo (Florida Memory TD00231), read by a narrator",
+     "script": "African-Americans and whites registering to vote at City Hall in Tallahassee, Florida. January 24, 1957."
+    },
+    {
+     "slot": "guide4c",
+     "script": "Registering means signing up to vote. Now tap a badge, then tap the person it belongs to: voter, public servant, or volunteer."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Three keys",
+   "at": "plan",
+   "script": "Your entry needs three keys: why voting matters, a public service job, and a way you could volunteer. Forge one key for each. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^grown",
+    "sel": ".spk-ag-stop",
+    "i": 3,
+    "fx": "glow"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-ag-cards",
+    "fx": "point",
+    "scroll": true
+   },
+   {
+    "at": "^age$",
+    "sel": ".spk-ag-stops",
+    "fx": "glow"
+   },
+   {
+    "at": "^slide$",
+    "sel": ".spk-ag-ruler",
+    "fx": "pop"
+   },
+   {
+    "at": "^light$",
+    "sel": ".spk-ag-stop",
+    "i": 0,
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^18$",
+    "sel": ".spk-ag-stop",
+    "i": 3,
+    "fx": "pop"
+   },
+   {
+    "at": "^30$",
+    "sel": ".spk-ag-stop",
+    "i": 4,
+    "fx": "pop"
+   },
+   {
+    "at": "^Now$",
+    "sel": ".spk-ag-stop",
+    "i": 0,
+    "fx": "glow"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^red$",
+    "sel": ".spk-stk-map .trk-ghost",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Punta$",
+    "sel": ".spk-stk-map .twn",
+    "fx": "glow"
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-stk-ctl",
+    "fx": "point"
+   },
+   {
+    "at": "^help$",
+    "sel": ".spk-stk-map .helpers",
+    "fx": "glow"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^photos$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Tallahassee$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^Hollywood",
+    "sel": "#panel-explore .spk-hot",
+    "i": 3,
+    "fx": "point"
+   },
+   {
+    "at": "^Archives$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "trace"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^registering$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "glow"
+   },
+   {
+    "at": "^City$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 2,
+    "fx": "glow"
+   }
+  ],
+  "guide4c": [
+   {
+    "at": "^badge$",
+    "sel": ".spk-bdg-tray",
+    "fx": "point"
+   },
+   {
+    "at": "^person$",
+    "sel": ".spk-bdg-rows",
+    "fx": "glow"
+   },
+   {
+    "at": "^volunteer$",
+    "sel": ".spk-bdg-b",
+    "i": 2,
+    "fx": "pop"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^keys$",
+    "sel": ".spk-kr-art",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^voting$",
+    "sel": ".spk-kr .fr",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^public$",
+    "sel": ".spk-kr .fr",
+    "i": 1,
+    "fx": "glow"
+   },
+   {
+    "at": "^volunteer$",
+    "sel": ".spk-kr .fr",
+    "i": 2,
+    "fx": "glow"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,111 +3249,99 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Voting, Public Service, and Volunteerism ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1105sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#6888b0"/>
-    <stop offset="60%" stop-color="#a0bcd4"/>
-    <stop offset="100%" stop-color="#c8c0a0"/>
-  </linearGradient>
-  <style>
-    .h1105sway { animation: h1105sway 4s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
-    @keyframes h1105sway { 0%,100% { transform: rotate(0deg); } 50% { transform: rotate(3deg); } }
-    .h1105glow { animation: h1105glow 3.5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1105glow { 0%,100% { opacity: 0.3; } 50% { opacity: 0.9; } }
-    .h1105drop { animation: h1105drop 5s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1105drop { 0%,80% { transform: translateY(0); opacity: 1; } 90% { transform: translateY(8px); opacity: 0.5; } 100% { transform: translateY(0); opacity: 1; } }
-  </style>
-</defs>
-<rect width="920" height="260" fill="url(#h1105sky)"/>
-<rect y="180" width="920" height="80" fill="#b8b090"/>
-<rect y="195" width="920" height="65" fill="#88a868"/>
-<!-- Ballot box -->
-<g transform="translate(150,105)">
-  <g>
-    <rect x="0" y="0" width="70" height="55" fill="#8a3a3a" stroke="#6a2a2a" stroke-width="1.5" rx="3"/>
-    <rect x="20" y="-3" width="30" height="5" fill="#6a2a2a" rx="1"/>
-    <rect x="10" y="15" width="50" height="2" fill="#a04a4a" opacity="0.4"/>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A Florida street the morning after a hurricane: blue tarps cover holes in the roofs of small houses, the fire station's big doors are open with a red fire truck inside, a white tent holds cases of water and bags of ice, a fallen palm frond lies by a puddle, and the sun breaks through the last storm clouds.">
+  <defs>
+    <linearGradient id="b1105sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FA3BF"/><stop offset=".55" stop-color="#CFE3EA"/><stop offset="1" stop-color="#F7E7C2"/></linearGradient>
+    <linearGradient id="b1105road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E8E86"/><stop offset="1" stop-color="#6E6E68"/></linearGradient>
+    <linearGradient id="b1105grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9CC27A"/><stop offset="1" stop-color="#6F9E52"/></linearGradient>
+    <radialGradient id="b1105sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6C8"/><stop offset=".55" stop-color="#FFD873"/><stop offset="1" stop-color="#FFD873" stop-opacity="0"/></radialGradient>
+    <style>
+      .b1105rays { transform-box: fill-box; transform-origin: center; animation: b1105pulse 6s ease-in-out infinite; }
+      @keyframes b1105pulse { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: .9; transform: scale(1.06); } }
+      .b1105cl1 { animation: b1105left 18s ease-in-out infinite alternate; }
+      .b1105cl2 { animation: b1105right 22s ease-in-out infinite alternate; }
+      @keyframes b1105left { to { transform: translateX(-38px); } }
+      @keyframes b1105right { to { transform: translateX(42px); } }
+      .b1105palm { transform-box: fill-box; transform-origin: 50% 100%; animation: b1105sway 5s ease-in-out infinite; }
+      @keyframes b1105sway { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(2deg); } }
+      .b1105glint { animation: b1105glint 3.5s ease-in-out infinite; }
+      @keyframes b1105glint { 0%, 100% { opacity: .25; } 50% { opacity: .75; } }
+      .b1105tarp { animation: b1105flap 4s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 0; }
+      @keyframes b1105flap { 0%, 100% { transform: skewX(0); } 50% { transform: skewX(-2deg); } }
+      @media (prefers-reduced-motion: reduce) { .b1105rays, .b1105cl1, .b1105cl2, .b1105palm, .b1105glint, .b1105tarp { animation: none; } }
+    </style>
+  </defs>
+  <rect width="920" height="200" fill="url(#b1105sky)"/>
+  <!-- the sun breaking through -->
+  <g transform="translate(470 58)">
+    <g class="b1105rays" opacity=".7" fill="#FFE9A0">
+      <path d="M0,0 L-160,-80 L-150,-60Z"/><path d="M0,0 L-90,-110 L-70,-104Z"/><path d="M0,0 L10,-130 L28,-126Z"/><path d="M0,0 L110,-100 L124,-86Z"/><path d="M0,0 L180,-50 L184,-30Z"/><path d="M0,0 L-200,-20 L-196,0Z"/>
+    </g>
+    <circle r="64" fill="url(#b1105sun)"/><circle r="22" fill="#FFF3C0"/>
   </g>
-</g>
-<!-- Ballot dropping -->
-<g transform="translate(180,85)">
-  <g class="h1105drop">
-    <rect x="0" y="0" width="20" height="28" fill="#f0e8d8" stroke="#c0b090" stroke-width="0.8" rx="1"/>
-    <line x1="4" y1="6" x2="16" y2="6" stroke="#888" stroke-width="0.5"/>
-    <line x1="4" y1="10" x2="16" y2="10" stroke="#888" stroke-width="0.5"/>
-    <circle cx="10" cy="20" r="3" fill="none" stroke="#3a5a8c" stroke-width="1"/>
+  <!-- the last storm clouds, parting -->
+  <g class="b1105cl1" fill="#5F7690" opacity=".85"><ellipse cx="300" cy="44" rx="120" ry="26"/><ellipse cx="230" cy="34" rx="70" ry="22"/><ellipse cx="360" cy="30" rx="60" ry="20"/><ellipse cx="130" cy="50" rx="90" ry="22"/></g>
+  <g class="b1105cl2" fill="#6B819A" opacity=".85"><ellipse cx="660" cy="40" rx="110" ry="24"/><ellipse cx="740" cy="30" rx="80" ry="22"/><ellipse cx="840" cy="46" rx="100" ry="22"/></g>
+  <g fill="#FFFFFF" opacity=".55"><ellipse cx="560" cy="22" rx="40" ry="9"/><ellipse cx="400" cy="74" rx="34" ry="7"/></g>
+  <!-- far tree line -->
+  <path d="M0,118 Q40,104 80,114 T160,110 T250,116 T340,108 T430,114 T520,108 T610,116 T700,108 T790,114 T880,108 T920,112 V140 H0Z" fill="#7FA46A" opacity=".7"/>
+  <rect y="132" width="920" height="68" fill="url(#b1105grass)"/>
+  <!-- house 1, blue tarp -->
+  <g transform="translate(36 96)">
+    <rect x="0" y="28" width="96" height="44" fill="#F2E4C6" stroke="#B89E70"/>
+    <path d="M-8,30 L48,0 L104,30Z" fill="#9A6B4A"/>
+    <path class="b1105tarp" d="M20,18 L52,4 L84,20 L56,30Z" fill="#2F6FC4" stroke="#1F4F94"/>
+    <rect x="14" y="40" width="18" height="16" fill="#8FB8D0" stroke="#7E6A48"/><rect x="62" y="40" width="18" height="16" fill="#8FB8D0" stroke="#7E6A48"/>
+    <rect x="40" y="46" width="14" height="26" fill="#6E4E2E"/>
   </g>
-</g>
-<!-- Fire station -->
-<g transform="translate(380,100)">
-  <g>
-    <rect x="0" y="0" width="100" height="80" fill="#c46050" stroke="#a04840" stroke-width="1.5"/>
-    <polygon points="-5,0 50,-20 105,0" fill="#a04840"/>
-    <rect x="15" y="35" width="70" height="45" fill="#e8e0d0" stroke="#a04840" stroke-width="1" rx="2"/>
-    <line x1="15" y1="50" x2="85" y2="50" stroke="#c0b8a0" stroke-width="0.5"/>
-    <line x1="15" y1="60" x2="85" y2="60" stroke="#c0b8a0" stroke-width="0.5"/>
-    <circle cx="50" cy="25" r="6" fill="#e0d080" opacity="0.4" stroke="#a04840" stroke-width="0.5"/>
+  <!-- palm with one frond down -->
+  <g transform="translate(150 70)">
+    <path d="M10,86 Q6,50 14,6" stroke="#8A6A40" stroke-width="6" fill="none"/>
+    <g class="b1105palm" fill="#3F7A3A"><path d="M14,6 Q-20,-4 -34,14 Q-10,2 14,8Z"/><path d="M14,6 Q44,-8 62,8 Q38,0 14,9Z"/><path d="M14,6 Q4,-22 -10,-26 Q8,-12 15,7Z"/><path d="M14,6 Q34,-24 50,-22 Q30,-12 15,8Z"/></g>
+    <path d="M30,88 Q52,80 74,90 Q50,86 32,92Z" fill="#7E8F3A"/>
   </g>
-</g>
-<!-- Fire station lamp glow -->
-<g transform="translate(430,125)">
-  <g class="h1105glow">
-    <circle cx="0" cy="0" r="8" fill="#f5e8a0"/>
+  <!-- fire station, doors open -->
+  <g transform="translate(250 78)">
+    <rect x="0" y="12" width="170" height="74" fill="#C8574A" stroke="#8E3A30"/>
+    <rect x="-6" y="4" width="182" height="12" fill="#8E3A30"/>
+    <rect x="66" y="-14" width="38" height="20" fill="#C8574A" stroke="#8E3A30"/><circle cx="85" cy="-4" r="6" fill="#F3E6C8" stroke="#8E3A30"/>
+    <rect x="14" y="32" width="64" height="54" fill="#3A3A3A"/><rect x="92" y="32" width="64" height="54" fill="#3A3A3A"/>
+    <g transform="translate(18 52)"><rect x="0" y="8" width="56" height="22" rx="3" fill="#D62E2E"/><rect x="38" y="0" width="18" height="14" rx="2" fill="#D62E2E"/><rect x="41" y="3" width="11" height="7" fill="#BFE0F0"/><line x1="4" y1="6" x2="34" y2="6" stroke="#C9CED6" stroke-width="3"/><circle cx="12" cy="31" r="5" fill="#222"/><circle cx="46" cy="31" r="5" fill="#222"/></g>
+    <rect x="14" y="22" width="64" height="8" fill="#B6B0A0"/><rect x="92" y="22" width="64" height="8" fill="#B6B0A0"/>
   </g>
-</g>
-<!-- Food bank boxes -->
-<g transform="translate(580,140)">
-  <g>
-    <rect x="0" y="0" width="30" height="25" fill="#c49060" stroke="#a07040" stroke-width="1" rx="2"/>
-    <rect x="35" y="5" width="28" height="20" fill="#b48050" stroke="#a07040" stroke-width="1" rx="2"/>
-    <rect x="15" y="-20" width="25" height="22" fill="#d4a070" stroke="#a07040" stroke-width="1" rx="2"/>
-    <line x1="5" y1="12" x2="25" y2="12" stroke="#a07040" stroke-width="0.5"/>
-    <line x1="40" y1="15" x2="58" y2="15" stroke="#a07040" stroke-width="0.5"/>
+  <!-- road -->
+  <path d="M0,170 L920,158 L920,200 L0,200Z" fill="url(#b1105road)"/>
+  <path d="M0,184 L920,176" stroke="#F3E6C8" stroke-width="3" stroke-dasharray="26 22"/>
+  <!-- puddle -->
+  <ellipse cx="200" cy="168" rx="46" ry="5" fill="#B7D6E4" opacity=".85"/><ellipse class="b1105glint" cx="210" cy="167" rx="16" ry="1.6" fill="#FFFFFF"/>
+  <!-- supply tent: water and ice -->
+  <g transform="translate(470 104)">
+    <path d="M0,22 L60,0 L120,22Z" fill="#FFFFFF" stroke="#C9CED6"/>
+    <path d="M0,22 L120,22 L120,26 L0,26Z" fill="#2F6FC4"/>
+    <line x1="4" y1="26" x2="4" y2="62" stroke="#8A8F98" stroke-width="3"/><line x1="116" y1="26" x2="116" y2="62" stroke="#8A8F98" stroke-width="3"/>
+    <rect x="12" y="44" width="96" height="6" fill="#A77F2C"/>
+    <g fill="#6FB2E0" stroke="#3E7FAF"><rect x="16" y="32" width="18" height="12" rx="1"/><rect x="36" y="32" width="18" height="12" rx="1"/><rect x="26" y="22" width="18" height="10" rx="1"/></g>
+    <g fill="#EAF6FB" stroke="#9FC9DD"><path d="M64,44 q-2,-14 6,-16 q8,2 6,16z"/><path d="M80,44 q-2,-14 6,-16 q8,2 6,16z"/><path d="M96,44 q-2,-12 5,-14 q7,2 5,14z"/></g>
+    <g fill="#C9A26A" stroke="#8A6A40"><rect x="20" y="52" width="22" height="10"/><rect x="44" y="52" width="22" height="10"/><rect x="68" y="52" width="22" height="10"/></g>
   </g>
-</g>
-<!-- Garden bed -->
-<g transform="translate(720,155)">
-  <g>
-    <rect x="0" y="20" width="80" height="8" fill="#7a5a3a" rx="2"/>
+  <!-- houses 2 and 3 -->
+  <g transform="translate(624 100)">
+    <rect x="0" y="26" width="88" height="42" fill="#E9EEF0" stroke="#A4AEB4"/>
+    <path d="M-8,28 L44,0 L96,28Z" fill="#7A8A96"/>
+    <path class="b1105tarp" d="M48,4 L84,22 L58,28 L36,12Z" fill="#2F6FC4" stroke="#1F4F94"/>
+    <rect x="12" y="38" width="16" height="14" fill="#8FB8D0"/><rect x="60" y="38" width="16" height="14" fill="#8FB8D0"/><rect x="36" y="42" width="14" height="26" fill="#3E5A6E"/>
   </g>
-</g>
-<!-- Plants with sway -->
-<g transform="translate(735,175)">
-  <g class="h1105sway">
-    <line x1="0" y1="0" x2="0" y2="-25" stroke="#4a8a3a" stroke-width="2.5"/>
-    <ellipse cx="-5" cy="-22" rx="7" ry="5" fill="#5aaa4a"/>
-    <ellipse cx="5" cy="-27" rx="6" ry="5" fill="#6aba5a"/>
+  <g transform="translate(750 96)">
+    <rect x="0" y="30" width="104" height="44" fill="#F4D9B8" stroke="#BE9A6E"/>
+    <path d="M-8,32 L52,2 L112,32Z" fill="#A65B3E"/>
+    <path class="b1105tarp" d="M14,22 L40,8 L66,20 L38,30Z" fill="#2F6FC4" stroke="#1F4F94"/>
+    <rect x="16" y="44" width="18" height="16" fill="#8FB8D0"/><rect x="70" y="44" width="18" height="16" fill="#8FB8D0"/><rect x="44" y="48" width="14" height="26" fill="#6E4E2E"/>
+    <g transform="translate(118 18)"><path d="M6,58 Q4,30 10,4" stroke="#8A6A40" stroke-width="5" fill="none"/><g class="b1105palm" fill="#3F7A3A"><path d="M10,4 Q-14,-6 -26,8 Q-8,-2 10,6Z"/><path d="M10,4 Q34,-8 46,6 Q28,-2 10,7Z"/><path d="M10,4 Q2,-18 -8,-20 Q6,-8 11,5Z"/></g></g>
   </g>
-</g>
-<g transform="translate(760,175)">
-  <g class="h1105sway">
-    <line x1="0" y1="0" x2="0" y2="-30" stroke="#4a8a3a" stroke-width="2.5"/>
-    <ellipse cx="-6" cy="-28" rx="8" ry="5" fill="#5aaa4a"/>
-    <ellipse cx="6" cy="-32" rx="7" ry="6" fill="#7aca6a"/>
-    <circle cx="3" cy="-35" r="3" fill="#d04040" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(785,175)">
-  <g class="h1105sway">
-    <line x1="0" y1="0" x2="0" y2="-18" stroke="#4a8a3a" stroke-width="2"/>
-    <ellipse cx="0" cy="-20" rx="6" ry="4" fill="#5aaa4a"/>
-  </g>
-</g>
-<!-- Flag -->
-<g transform="translate(85,60)">
-  <g>
-    <line x1="0" y1="0" x2="0" y2="100" stroke="#888" stroke-width="2"/>
-    <circle cx="0" cy="0" r="2.5" fill="#c0a000"/>
-  </g>
-</g>
-<g transform="translate(85,63)">
-  <g class="h1105sway">
-    <rect x="0" y="0" width="35" height="22" fill="#3a5a8c"/>
-    <rect x="0" y="7" width="35" height="3" fill="#c04040"/>
-    <rect x="0" y="15" width="35" height="3" fill="#c04040"/>
-  </g>
-</g>
+  <!-- branches and a stack of cut limbs by the curb -->
+  <g stroke="#7A5A34" stroke-width="3" stroke-linecap="round"><line x1="560" y1="166" x2="600" y2="160"/><line x1="572" y1="167" x2="588" y2="156"/><line x1="590" y1="165" x2="612" y2="168"/></g>
+  <!-- a gull over the clearing sky -->
+  <path d="M600,86 q6,-6 12,0 q6,-6 12,0" stroke="#4A4A4A" stroke-width="1.8" fill="none"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3627,6 +4842,9 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 <!-- OAO-STD-TIPS v1 -->
 <style id="oao-std-tips-css">
 .std-tip{border-bottom:1.5px dotted currentColor;cursor:help;border-radius:3px;outline:none;padding:0 1px}
