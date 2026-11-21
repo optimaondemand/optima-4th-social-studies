@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 26 Family Guide · 4th Grade Social Studies</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 26: Standing Up and Serving</h1>
+      <div class="sub">Unit 11: Civil Rights, Community Leaders, and Contemporary Florida · Lessons 4.11.01–4.11.02</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Real primary sources</span>
+        <span class="chip">Florida File 11 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-11-01-steele-harris-bus-1956-original.jpg');background-position:center 40%;background-color:#D8D8D0;" role="img" aria-label="A 1956 photograph from the State Archives of Florida: Reverend C. K. Steele and Reverend H. McNeal Harris sit in the middle of a Tallahassee city bus"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four numbered tabs, in order.</strong> Each lesson names its own. Tab 3 is always the Self-Check, and tab 4 is where your student writes. The teacher’s texts (the Messages button) say what to do next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> Step 4 of the last tab, Review &amp; turn in, collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Copy</strong> or <strong>Download your journal</strong> saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Read aloud</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>A new unit begins. In Lesson 1 your student learns how people in Florida worked for <strong>civil rights</strong> (the rights every citizen should have, like voting and fair treatment under the law) at a time when Florida was <strong>segregated</strong>, meaning Black and white people were kept apart by law. In Lesson 2 they meet five African American leaders who served Florida in different ways: a teacher, a songwriter, a union leader, a congressman, and a writer. The big idea: <strong>change came from many people working together, over many years, and there are many ways to serve a community.</strong></p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Reading a photo like a historian.</strong> Your student makes guesses about a real photo first, then checks them against the archive’s own caption. In Lesson 2 they read the signs in a real photo from 1963.</div>
+      <div class="box b-green"><div class="box-label">Virtue this week</div><strong>Courtesy.</strong> Treating every person with dignity and respect, the very thing segregation took away, and telling real people’s stories with care.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> Both lessons are taught calmly, with no graphic images. Lesson 1 tells, in one sentence, that Harry T. and Harriette V. Moore died after a bomb exploded under their home on Christmas night in 1951. It also tells how two college students were arrested on a Tallahassee bus in 1956. Lesson 2 says that James Weldon Johnson worked to stop mob violence against Black Americans.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.11.01<span>Lesson 1</span></td>
+          <td><span class="ch">Florida’s Role in the Civil Rights Movement</span><br>Under <strong>Jim Crow laws</strong>, Black Floridians had to use separate schools, restaurants, water fountains, and bus seats. Harry T. and Harriette V. Moore, teachers in Mims, led the <strong>NAACP</strong> (a group that works for equal rights) and helped thousands of Black citizens register to vote. In May 1956, two Florida A&amp;M students, Wilhelmina Jakes and Carrie Patterson, were arrested after sitting in the only open seats, next to a white woman. Led by Reverend C. K. Steele and the Inter-Civic Council, Black residents <strong>boycotted</strong> the buses, walking and sharing rides for about seven months. In 1960 young people held <strong>sit-ins</strong> at lunch counters in Tallahassee and Jacksonville, and in 1963 and 1964 people marched in St. Augustine. Actions like these helped lead to the <strong>Civil Rights Act of 1964</strong>, which made segregation illegal in public places, and the work kept going after that.<br><span class="pill p-source">Source: Reverend C. K. Steele and Reverend H. McNeal Harris sitting in the middle of a Tallahassee bus, December 24, 1956, the day the boycott ended (State Archives of Florida)</span><span class="pill p-virtue">Virtue: Courtesy</span><span class="pill p-new">Word root: voc = voice, to call</span></td>
+          <td><strong>Historian’s Notebook entry</strong> (about 25 words or more): one person or event, what they did, and how it helped create change, plus a Historian’s Sentence.</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.11.02<span>Lesson 2</span></td>
+          <td><span class="ch">African American Community Leaders in Florida</span><br><strong>Mary McLeod Bethune</strong> opened a school for Black girls in Daytona Beach in 1904 that grew into Bethune-Cookman University, and later advised President Franklin Roosevelt. <strong>James Weldon Johnson</strong>, principal of Stanton School in Jacksonville, wrote the words to “Lift Every Voice and Sing” in 1900; his brother J. Rosamond Johnson wrote the music, and about 500 students sang it first. <strong>A. Philip Randolph</strong>, born in Crescent City, started the Brotherhood of Sleeping Car Porters, a <strong>labor union</strong>, in 1925 and led the 1963 March on Washington for Jobs and Freedom. <strong>Josiah Walls</strong>, born enslaved, became Florida’s first Black member of Congress in 1871. <strong>Zora Neale Hurston</strong> grew up in Eatonville and wrote books and collected Florida <strong>folklore</strong> (old stories, songs, and sayings). Their work spans almost 100 years.<br><span class="pill p-source">Source: leaders of the March on Washington, including A. Philip Randolph, August 28, 1963 (U.S. National Archives)</span><span class="pill p-virtue">Virtue: Courtesy</span><span class="pill p-new">Word root: uni = one</span></td>
+          <td><strong>Source Study</strong> (about 25 words or more): what the photo shows and how one or two leaders served Florida, plus a Historian’s Sentence.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>The teacher is still stuck inside Canvas. Last week a door with the number 13 appeared. In Lesson 4.11.01 she pushes on that door by herself, and it won’t move. Your student guesses who two men on a 1956 bus are and seals the guesses in an envelope. They build a network of people across a map of Florida, from the Moores in Mims to the boycott in Tallahassee, the sit-ins, and St. Augustine. Then they open the envelope and check each guess against the State Archives’ caption, and plan their writing as a Florida historical marker. The teacher realizes the door won’t open for one person alone. In Lesson 4.11.02 new name plates appear on her wall of names. Your student fills a 500-voice choir to learn the story of “Lift Every Voice and Sing,” opens each leader’s gift (a school bell, a song, a union card, a vote, a book), lines the gifts up by year, reads the signs in a real 1963 photo, and plans a name plate for one leader. Five plates come clear, and one stays blank for leaders still to come.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>segregated</b><span>kept apart by race, by law</span></div>
+      <div class="word"><b>civil rights</b><span>the rights every citizen should have, like voting and fair treatment under the law</span></div>
+      <div class="word"><b>boycott</b><span>refusing to buy or use something as a protest</span></div>
+      <div class="word"><b>sit-in</b><span>a protest where people sit at a counter that won’t serve them and calmly ask to be served</span></div>
+      <div class="word"><b>advocate</b><span>a person who speaks up for others (voc = voice, to call)</span></div>
+      <div class="word"><b>labor union</b><span>a group of workers who join together to ask for fair pay and fair treatment</span></div>
+      <div class="word"><b>folklore</b><span>old stories, songs, and sayings that families pass down</span></div>
+      <div class="word"><b>unite</b><span>to join together as one (uni = one)</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">What was the Tallahassee Bus Boycott?</span><span class="listen">Listen for: in 1956, Black residents stayed off the city buses for about seven months to protest unfair seating rules. They walked and shared rides instead.</span></li>
+      <li><span class="q">Did one hero change the laws all alone?</span><span class="listen">Listen for: no. Many people in many places worked together: students, churches, carpool drivers, voters, marchers.</span></li>
+      <li><span class="q">Did the Civil Rights Act of 1964 make everything fair right away?</span><span class="listen">Listen for: no. It was a big step, and people kept working for years to make sure it was followed.</span></li>
+      <li><span class="q">Where was “Lift Every Voice and Sing” first sung?</span><span class="listen">Listen for: at Stanton School in Jacksonville in 1900, by about 500 students.</span></li>
+      <li><span class="q">Pick one leader from Lesson 2. What was their gift to Florida?</span><span class="listen">Listen for: a school (Bethune), a song (Johnson), a union and a march (Randolph), a voice in Congress (Walls), or books and folklore (Hurston).</span></li>
+    </ol>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a writing task, and a Historian’s Sentence, submitted in Canvas</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> a real person or event by name (like the Tallahassee Bus Boycott, or A. Philip Randolph), what they did, and how it helped, written with respect.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Guess, then check.</strong> Find an old family photo. Guess who, where, and when. Then ask someone who knows.</li>
+        <li><strong>Many hands.</strong> Name one thing your family or neighborhood did together. Could one person have done it alone?</li>
+        <li><strong>Find the root.</strong> Voice, vocal, and advocate share a part that means “voice.” What do union, unite, and uniform share?</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🏛️</div>
+      <div><p>In Mims, the <strong>Harry T. &amp; Harriette V. Moore Cultural Complex</strong> stands where the Moores lived. In Tallahassee, the city bus station is named <strong>C. K. Steele Plaza</strong>. St. Augustine’s <strong>ACCORD Freedom Trail</strong> has markers about the marchers of 1963 and 1964. In Daytona Beach, Bethune’s home on the Bethune-Cookman University campus is a museum, and in Eatonville, <strong>The Hurston</strong> (the Zora Neale Hurston National Museum of Fine Arts) honors Zora Neale Hurston. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 27</h2></div>
+    <p>Next week your student learns how immigration shapes Florida today, and how citizens work with their local and state governments to solve problems.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 26 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
