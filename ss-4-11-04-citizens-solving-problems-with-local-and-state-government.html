@@ -1784,6 +1784,1233 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.11.04",
+ "title": "Citizens Solving Problems with Local and State Government",
+ "quiet": false,
+ "file": {
+  "n": 11,
+  "title": "Civil Rights & Citizens",
+  "label": "Civil Rights & Citizens",
+  "seals": [
+   "🚌",
+   "🗳️",
+   "⚖️"
+  ]
+ },
+ "prevFile": "How Immigration Impacts Florida Today",
+ "connector": "Last time, you learned how families from many places shape Florida today. Today, learn how citizens work with their government to fix problems.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, messages from other rooms came through the walls. She isn’t alone anymore, but the door with 13 still won’t open.",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Make the call",
+   "why": "Pick a problem, then call the office that can fix it."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "A problem’s journey",
+   "why": "Move one problem along the path to Solved. Then write the minutes for a real town hall meeting."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill out a speaker card",
+   "why": "Answer three questions. Fill out a speaker card. Then write your Source Study."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I have a problem, and I think you can help.",
+  "opening": [
+   "The door with 13 still won’t open. I keep thinking: when citizens have a problem, they don’t just complain. They ask the right people.",
+   "Today’s file is about how regular people get problems fixed. Start in the Learn tab (tab 1). Scroll down to the phone.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s make some calls",
+      "go": true,
+      "reply": "Pick a problem card, then dial the office you think can fix it. The right office will pick up."
+     },
+     {
+      "t": "What does courtesy have to do with it?",
+      "reply": "When you ask for help, being polite and clear makes people want to listen. Courtesy keeps the conversation going, even when people disagree."
+     },
+     {
+      "t": "Who do YOU need to call?",
+      "reply": "That’s my question too! I don’t know who’s in charge of doors in Canvas yet. Maybe today’s file will help me find out."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Move one problem along the path. Watch out for the trap space."
+     },
+     {
+      "t": "Can kids really speak at meetings?",
+      "reply": "Yes. Florida’s Sunshine Law keeps most government meetings open to the public, and boards have to give people a chance to speak. Kids can listen, write letters, and speak up too."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "What’s FEMA?",
+      "reply": "FEMA is part of the national government. It helps people after disasters like hurricanes. At that meeting, State of Florida officials came too."
+     }
+    ]
+   },
+   "req1": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "“OPEN THE DOOR RIGHT NOW!”",
+      "reply": "Whoa. That isn’t courteous, and it doesn’t say what’s wrong. Let’s start by naming the problem politely."
+     },
+     {
+      "t": "Start with the problem: “The door with 13 won’t open, so I can’t get out of Canvas.”",
+      "go": true,
+      "reply": "Clear and polite. Next: who can fix it?",
+      "next": "req2"
+     },
+     {
+      "t": "Maybe we should just wait.",
+      "reply": "I’ve waited a long time. Waiting and complaining doesn’t fix problems. Let’s name the problem."
+     }
+    ]
+   },
+   "req2": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "“To whoever. I don’t care who reads this.”",
+      "reply": "If we don’t pick the right office, our request might never get there. Who is in charge of doors?"
+     },
+     {
+      "t": "Send it to the right office: “To the Canvas office in charge of doors:”",
+      "go": true,
+      "reply": "Yes, the right office, like calling City Hall about a pothole. Last part: our plan.",
+      "next": "req3"
+     }
+    ]
+   },
+   "req3": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "“Fix it, or else!”",
+      "reply": "That’s a threat, not a plan. Courteous requests get better answers. What could we offer to do?"
+     },
+     {
+      "t": "Add a plan: “We will follow your rules, and the people in Rooms 4, 8, and 12 want to help. Thank you for reading.”",
+      "go": true,
+      "reply": "Perfect: the problem, the right office, a plan, and a thank-you. Sending it now…",
+      "then": [
+       {
+        "room": "Canvas Help Desk",
+        "t": "REQUEST RECEIVED. Your request has been sent to the right office. Please wait for an answer.",
+        "stamp": "RECEIVED"
+       },
+       {
+        "t": "They answered! The door isn’t open yet, but someone is listening. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+        "choice": "done"
+       }
+      ]
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "What happens next?",
+      "reply": "Next time we learn about voting and serving others. I have a feeling Canvas might let us choose something. See you in the next room."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You found the right office for every problem. And anyone can call or write, even kids. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The problem made it all the way to Solved, and you wrote the minutes for a real meeting. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill out a speaker card and write your Source Study."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file! Now I want to try what you learned. Will you help me write a polite request to Canvas, the way a citizen would? Pick each part.",
+     "choice": "req1"
+    }
+   ]
+  }
+ },
+ "lens": "Courtesy means being polite and respectful, even when people disagree. Today you are a civic participation analyst, someone who studies how citizens work with their government to solve problems.",
+ "scene1": {
+  "type": "makecall",
+  "kicker": "Make the call",
+  "h": "Pick a problem card. Then dial the office that can fix it.",
+  "voice": "Tap a problem card first. Then tap the office on the phone that you think can fix it. You can also drag the card onto the phone.",
+  "why": {
+   "icon": "☎️",
+   "q": "Why a phone?",
+   "t": "When you have a problem, the first step is finding out who can fix it. Florida has layers of government: your city, your county, and the state in Tallahassee. Each one handles different jobs. That’s why you call the office that’s in charge of each problem."
+  },
+  "phoneT": "A desk phone with three offices to call",
+  "idleT": "Pick a problem card first.",
+  "pickT": "Now dial the office that can fix this:",
+  "allT": "Every problem reached the right office.",
+  "offices": [
+   {
+    "id": "city",
+    "t": "City Hall",
+    "sub": "the mayor and city council",
+    "ico": "🏛️"
+   },
+   {
+    "id": "county",
+    "t": "The County",
+    "sub": "the county commission",
+    "ico": "🏢"
+   },
+   {
+    "id": "state",
+    "t": "Tallahassee",
+    "sub": "the governor and the state legislature",
+    "ico": "⭐"
+   }
+  ],
+  "problems": [
+   {
+    "t": "A big pothole on your city street",
+    "ico": "🕳️",
+    "office": "city",
+    "reply": "City streets are our job. We’ll send a road crew.",
+    "miss": {
+     "county": "That street belongs to the city, not the county. Try City Hall.",
+     "state": "This is the Governor’s office. The state doesn’t fix city streets. Try City Hall!"
+    }
+   },
+   {
+    "t": "Your county library closes too early",
+    "ico": "📚",
+    "office": "county",
+    "reply": "The county library is ours. The county commission can talk about longer hours at its next meeting.",
+    "miss": {
+     "city": "That library is run by the county, not the city. Try the county.",
+     "state": "The state doesn’t run your library. Try the county."
+    }
+   },
+   {
+    "t": "A crosswalk is needed on the county road by your school",
+    "ico": "🚸",
+    "office": "county",
+    "reply": "County roads are ours. We’ll study a crosswalk by the school.",
+    "miss": {
+     "city": "That’s a county road, so it isn’t ours. Try the county.",
+     "state": "County roads belong to the county. Try the county."
+    }
+   },
+   {
+    "t": "A new rule about bike helmets for all of Florida",
+    "ico": "🚲",
+    "office": "state",
+    "reply": "Laws for all of Florida come from the state legislature. Write to your state legislator!",
+    "miss": {
+     "city": "We make rules just for our city, not all of Florida. Try Tallahassee.",
+     "county": "We make rules just for our county, not all of Florida. Try Tallahassee."
+    }
+   },
+   {
+    "t": "Plastic straws littering your city’s beach",
+    "ico": "🏖️",
+    "office": "city",
+    "reply": "In St. Petersburg, citizens asked their City Council, and it voted to cut down on plastic straws. Come speak at our next meeting!",
+    "miss": {
+     "county": "That beach is in the city, so start with the city council. Try City Hall.",
+     "state": "The state doesn’t make rules for one town’s beach. Try City Hall."
+    }
+   }
+  ],
+  "ask": {
+   "q": "Who is allowed to call or write to these offices?",
+   "opts": [
+    {
+     "t": "Only adults who vote",
+     "miss": "Anyone can! Kids write letters to mayors and speak at meetings too."
+    },
+    {
+     "t": "Anyone, even kids",
+     "ok": true,
+     "reply": "Right. You don’t have to be an adult to speak up. You just have to be polite and clear."
+    }
+   ]
+  },
+  "win": "Every problem found its office."
+ },
+ "explore": {
+  "reading": {
+   "type": "journey",
+   "activity": "Citizens and Government Working Together",
+   "alt": "A board game path with five spaces from a problem to Solved, and a trap space off to the side",
+   "why": {
+    "icon": "🎲",
+    "q": "Why a board game?",
+    "t": "Solving a problem is like moving along a path: you notice it, find out who’s in charge, speak up, and work with the government until it’s fixed. Skip a step and you get stuck. That’s why one problem moves space by space, and each space opens one part of the story."
+   },
+   "tokenIco": "🗑️",
+   "start": {
+    "t": "Notice a problem: trash on the beach",
+    "short": "Notice",
+    "ico": "🏖️"
+   },
+   "trap": {
+    "t": "Just complain and wait",
+    "ico": "😴"
+   },
+   "allT": "Problem solved! Notice → find who’s in charge → speak up → work together → result.",
+   "countT": "spaces done. Do the step below to move.",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Florida has layers of government"
+    },
+    {
+     "id": "p2",
+     "match": "^At the state level"
+    },
+    {
+     "id": "p3",
+     "match": "^Citizens don"
+    },
+    {
+     "id": "p4",
+     "match": "^Real examples show"
+    },
+    {
+     "id": "p5",
+     "match": "^The pattern is the same"
+    }
+   ],
+   "spaces": [
+    {
+     "id": "local",
+     "t": "Find out who’s in charge nearby",
+     "short": "Who’s nearby?",
+     "ico": "🏛️",
+     "act": "🎲 Move to space 1",
+     "paras": [
+      "p1"
+     ]
+    },
+    {
+     "id": "state",
+     "t": "Find out who’s in charge of all of Florida",
+     "short": "Who runs Florida?",
+     "ico": "⭐",
+     "paras": [
+      "p2"
+     ],
+     "ask": {
+      "q": "Before you move: who fixes the potholes on your city street?",
+      "opts": [
+       {
+        "t": "The governor",
+        "miss": "The governor leads all of Florida, but city streets are the city’s job. Try again."
+       },
+       {
+        "t": "The city",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "speak",
+     "t": "Speak up",
+     "short": "Speak up",
+     "ico": "📣",
+     "paras": [
+      "p3"
+     ],
+     "ask": {
+      "q": "Before you move: you see the trash on the beach. What do you do next?",
+      "opts": [
+       {
+        "t": "Complain at home and wait for someone else",
+        "trap": true,
+        "miss": "Oops! That’s the Just complain and wait space. Nothing gets fixed there. Pick a step that reaches the government."
+       },
+       {
+        "t": "Go to a meeting, write a letter, or sign a petition",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "work",
+     "t": "Work with the government",
+     "short": "Work together",
+     "ico": "🤝",
+     "act": "🎲 Move to space 4",
+     "paras": [
+      "p4"
+     ]
+    },
+    {
+     "id": "result",
+     "t": "Problem solved: the pattern",
+     "short": "Solved!",
+     "ico": "✅",
+     "paras": [
+      "p5"
+     ],
+     "ask": {
+      "q": "Before the last move: who can start solving a problem?",
+      "opts": [
+       {
+        "t": "Only adults and politicians",
+        "miss": "Not just them. You don’t have to be an adult to start. Try again."
+       },
+       {
+        "t": "Anyone who pays attention and speaks up, even kids",
+        "ok": true
+       }
+      ]
+     }
+    }
+   ]
+  },
+  "evidence": {
+   "type": "minutes",
+   "kicker": "Meeting minutes",
+   "h": "First tap every gold number. Then write the minutes, one line at a time.",
+   "voice": "Tap every gold number on the photo first. Then pick the true entry for each line of the minutes.",
+   "why": {
+    "icon": "📝",
+    "q": "Why minutes?",
+    "t": "Florida’s Sunshine Law (1967) says city, county, and state boards must meet in the open, and someone must write down what happened. Those notes are called minutes. Town hall meetings like this one are open to everyone too. That’s why today you’re the secretary who writes the minutes."
+   },
+   "head": "MINUTES · TOWN HALL MEETING",
+   "sub": "Port Charlotte, Florida",
+   "stampT": "RECORDED",
+   "hotT": "First, tap every gold number on the photo above.",
+   "readT": "Last step: move the problem all the way to Solved in Learn the Story at the top of this tab.",
+   "lines": [
+    {
+     "lab": "Date and place:",
+     "q": "When and where was this meeting? Read the label bar under the photo.",
+     "opts": [
+      {
+       "t": "July 4, 1776, in Philadelphia",
+       "miss": "That’s when the Declaration of Independence was signed. Read the label bar under the photo."
+      },
+      {
+       "t": "March 28, 2005, in Port Charlotte, Florida",
+       "ok": true
+      },
+      {
+       "t": "Last week, in Tallahassee",
+       "miss": "Read the label bar under the photo. It gives the date and the town."
+      }
+     ]
+    },
+    {
+     "lab": "The problem:",
+     "q": "What problem brought people to this meeting?",
+     "opts": [
+      {
+       "t": "Homes damaged by the 2004 hurricanes; families needed help",
+       "ok": true
+      },
+      {
+       "t": "A new school mascot",
+       "miss": "Tap number 1 again. Why were residents asking questions?"
+      },
+      {
+       "t": "A broken stoplight",
+       "miss": "Tap number 1 again. Why were residents asking questions?"
+      }
+     ]
+    },
+    {
+     "lab": "Who spoke:",
+     "q": "Who is speaking at the microphone?",
+     "opts": [
+      {
+       "t": "Only the officials are allowed to speak",
+       "miss": "Look at numbers 1 and 2. At a town hall, citizens ask the questions."
+      },
+      {
+       "t": "A resident who lives in the area",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "lab": "Who answered:",
+     "q": "Who came to answer questions?",
+     "opts": [
+      {
+       "t": "Nobody. They just listened.",
+       "miss": "Tap number 3. Officials sat at the table to answer."
+      },
+      {
+       "t": "FEMA and State of Florida officials",
+       "ok": true
+      },
+      {
+       "t": "Players from a sports team",
+       "miss": "Tap number 3. Who sat at the table?"
+      }
+     ]
+    },
+    {
+     "lab": "Levels of government there:",
+     "q": "Which levels of government came? Look at the two flags.",
+     "opts": [
+      {
+       "t": "State and national",
+       "ok": true
+      },
+      {
+       "t": "Only the city",
+       "miss": "Tap numbers 5 and 6: the Florida flag and the U.S. flag. Which levels do they stand for?"
+      },
+      {
+       "t": "None",
+       "miss": "Tap number 3. The people at the table work for the government."
+      }
+     ]
+    },
+    {
+     "lab": "Next step:",
+     "q": "What happened after the questions?",
+     "opts": [
+      {
+       "t": "Everyone went home and forgot about it",
+       "miss": "Real meetings lead to next steps. FEMA’s photos from this same meeting show workers helping residents with housing questions."
+      },
+      {
+       "t": "Workers helped each family with its housing questions",
+       "ok": true
+      }
+     ]
+    }
+   ],
+   "win": "Minutes recorded! A real problem, real citizens speaking up, and the government listening."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photo to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 34.7,
+    "y": 41.7,
+    "title": "A resident asking a question.",
+    "t": "She lives in the area. After the 2004 hurricanes, many people here needed help with their homes."
+   },
+   {
+    "n": "2",
+    "x": 18.3,
+    "y": 39.2,
+    "title": "The meeting’s leader, with the microphone.",
+    "t": "This is Congressman Connie Mack, who ran the meeting. He holds the microphone so everyone can hear her question."
+   },
+   {
+    "n": "3",
+    "x": 55.6,
+    "y": 25.0,
+    "title": "Officials at the table.",
+    "t": "FEMA and State of Florida officials came to answer questions. FEMA is the part of the national government that helps after disasters."
+   },
+   {
+    "n": "4",
+    "x": 36.7,
+    "y": 5.8,
+    "title": "The banner.",
+    "t": "It says Town Hall Meeting. At a town hall meeting, people ask their leaders questions in person."
+   },
+   {
+    "n": "5",
+    "x": 85.8,
+    "y": 20.8,
+    "title": "The Florida flag.",
+    "t": "It stands for the state. State officials were part of this meeting."
+   },
+   {
+    "n": "6",
+    "x": 22.2,
+    "y": 14.2,
+    "title": "The U.S. flag.",
+    "t": "It stands for the whole country. The national government (FEMA and Congress) was here too."
+   },
+   {
+    "n": "7",
+    "x": 66.7,
+    "y": 71.7,
+    "title": "Residents listening.",
+    "t": "Neighbors came to listen and wait their turn to ask. The meeting was open to everyone."
+   }
+  ]
+ },
+ "planner": {
+  "type": "speakercard",
+  "head": "PUBLIC COMMENT CARD",
+  "printT": "Please print. Hand this card to the clerk.",
+  "stampT": "RECEIVED",
+  "voice": "Fill in each line of your card. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🪪",
+   "q": "Why a speaker card?",
+   "t": "At many Florida city and county meetings, you fill out a short card before you speak at public comment, the time when citizens talk to the board. It asks your topic and what you want. Your Source Study needs the same parts: a level of government, how citizens connect with it, and an example. That’s why you fill out a speaker card."
+  },
+  "rows": [
+   {
+    "id": "topic",
+    "lab": "Topic: what problem will you speak about?",
+    "short": "Topic",
+    "opts": [
+     {
+      "id": "straws",
+      "t": "Plastic litter on the beach"
+     },
+     {
+      "id": "parks",
+      "t": "More parks and wild land"
+     },
+     {
+      "id": "hurricane",
+      "t": "Help for homes after hurricanes"
+     },
+     {
+      "id": "safety",
+      "t": "Safety at our schools"
+     }
+    ]
+   },
+   {
+    "id": "board",
+    "lab": "Which level of government will hear you?",
+    "short": "Board",
+    "by": {
+     "straws": [
+      {
+       "t": "City: the St. Petersburg City Council"
+      },
+      {
+       "t": "The U.S. Congress",
+       "ok": false,
+       "miss": "A city’s beach rules start close to home. Look at space 4 in Learn the Story."
+      }
+     ],
+     "parks": [
+      {
+       "t": "The U.S. Congress",
+       "ok": false,
+       "miss": "Which Florida county voted for a parks tax? Look at space 4 in Learn the Story."
+      },
+      {
+       "t": "County: Alachua County and its voters"
+      }
+     ],
+     "hurricane": [
+      {
+       "t": "State and national: a town hall with officials"
+      },
+      {
+       "t": "The school lunch staff",
+       "ok": false,
+       "miss": "Look at the photo on tab 2. Who answered questions after the hurricanes?"
+      }
+     ],
+     "safety": [
+      {
+       "t": "Local: the county school board"
+      },
+      {
+       "t": "The governor only",
+       "ok": false,
+       "miss": "School safety plans came from school board meetings. Look at space 4 in Learn the Story."
+      }
+     ]
+    }
+   },
+   {
+    "id": "ask",
+    "lab": "What are you asking for?",
+    "short": "Asking for",
+    "by": {
+     "straws": [
+      {
+       "t": "A rule to cut down on plastic straws"
+      },
+      {
+       "t": "City help with beach cleanups"
+      }
+     ],
+     "parks": [
+      {
+       "t": "A small tax for parks and wild land"
+      },
+      {
+       "t": "Citizens who check how the money is spent"
+      }
+     ],
+     "hurricane": [
+      {
+       "t": "Answers about housing help"
+      },
+      {
+       "t": "Workers to help each family"
+      }
+     ],
+     "safety": [
+      {
+       "t": "A new school safety plan"
+      },
+      {
+       "t": "A chance for parents and teachers to speak"
+      }
+     ]
+    }
+   },
+   {
+    "id": "how",
+    "lab": "How did citizens connect with government?",
+    "short": "How",
+    "opts": [
+     {
+      "t": "They spoke at a public meeting"
+     },
+     {
+      "t": "They wrote letters to leaders"
+     },
+     {
+      "t": "They signed a petition"
+     },
+     {
+      "t": "They voted on it"
+     },
+     {
+      "t": "They complained at home and waited",
+      "ok": false,
+      "miss": "That’s the trap space! Pick a way that reaches the government."
+     }
+    ]
+   }
+  ],
+  "doneT": "Card stamped! Now write your Source Study in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a level of government",
+    "rx": "city|county|state|council|commission|legislat|governor|mayor|tallahassee|school board|local"
+   },
+   {
+    "t": "how citizens connect",
+    "rx": "meeting|letter|petition|speak|vote|board|write|sign|ask|town hall|call|testif"
+   },
+   {
+    "t": "a specific example",
+    "rx": "petersburg|straw|plastic|alachua|park|beach|school|pothole|town hall|port charlotte|hurricane|library|crosswalk|tax"
+   },
+   {
+    "t": "what happened",
+    "rx": "result|solv|fix|voted|chang|built|better|clean|help|answer|listen|plan"
+   }
+  ],
+  "lines": [
+   "Start with a level of government: “In Florida, the city council…”",
+   "Good. Now say how citizens connect with it.",
+   "Give a specific example from the lesson.",
+   "Say what happened as a result.",
+   "Read it over once. Is it clear and polite?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the phone calls, the journey, and the town hall photo."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill out a speaker card: topic, which government, what you’re asking for, and how citizens connected."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Source Study with one specific example. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Source Study"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your Source Study and check off the whole list.",
+ "vocab": {
+  "type": "chamber",
+  "kicker": "Fill the chamber",
+  "h": "civ / cit = citizen, city",
+  "root": "civ",
+  "hl": "civ|cit",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match seats more citizens in the council chamber.",
+  "why": {
+   "icon": "🪑",
+   "q": "Why seats?",
+   "t": "<b>Civ<\/b> and <b>cit<\/b> come from Latin words for citizen and city. Because of Florida’s Sunshine Law, most government meetings are open, and the seats are for citizens like you. That’s why each word you match seats more citizens in the council chamber."
+  },
+  "words": [
+   {
+    "w": "citizen",
+    "m": "a person who belongs to a city, state, or country",
+    "miss": "You are one of these in Florida. A citizen is…",
+    "say": "Citizen. A person who belongs to a city, state, or country."
+   },
+   {
+    "w": "city",
+    "m": "a large town with its own government",
+    "miss": "Miami and Tampa are each a…",
+    "say": "City. A large town with its own government."
+   },
+   {
+    "w": "civic",
+    "m": "having to do with citizens and their community",
+    "miss": "Civic participation means citizens taking part. Civic means…",
+    "say": "Civic. Having to do with citizens and their community."
+   },
+   {
+    "w": "civil",
+    "m": "polite and respectful, the way citizens should treat each other",
+    "miss": "Waiting your turn and speaking politely is being…",
+    "say": "Civil. Polite and respectful, the way citizens should treat each other."
+   }
+  ],
+  "boardT": "Seats filled",
+  "win": "The chamber is full. The meeting is open!"
+ },
+ "cabinet": {
+  "n": 11
+ },
+ "notes": {
+  "learned": [
+   "Florida has layers of government: local (city and county) and state.",
+   "Cities have a mayor and a city council. Counties have a county commission. Local governments handle roads, parks, libraries, fire departments, and public safety.",
+   "The state has three branches: the governor (executive branch), the legislature (Senate and House), and the courts.",
+   "Citizens take part by speaking at meetings, writing letters, signing petitions, serving on advisory boards, and voting.",
+   "In 2018, after many citizens asked, St. Petersburg’s City Council voted to cut down on plastic straws and foam containers.",
+   "Alachua County voters approved a small sales tax for parks and wild land in 2008, 2016, and 2022.",
+   "Florida’s Sunshine Law (1967) keeps most government meetings open to the public, with minutes kept.",
+   "The pattern: notice a problem, take action, work with government, get a result."
+  ],
+  "vocab": [
+   [
+    "local government",
+    "the government of your own city or county"
+   ],
+   [
+    "mayor",
+    "the leader of a city"
+   ],
+   [
+    "city council",
+    "a group of people elected to make a city’s rules"
+   ],
+   [
+    "county commission",
+    "a group elected to run a county"
+   ],
+   [
+    "executive branch",
+    "the part of government that carries out the laws"
+   ],
+   [
+    "legislature",
+    "the group that writes and passes state laws"
+   ],
+   [
+    "petition",
+    "a letter that many people sign to ask for a change"
+   ],
+   [
+    "advisory board",
+    "a volunteer group that gives leaders advice"
+   ],
+   [
+    "school board",
+    "the group that runs a county’s public schools"
+   ],
+   [
+    "civic participation",
+    "citizens taking part in their community and its government"
+   ],
+   [
+    "self-governance",
+    "citizens helping run their own communities"
+   ],
+   [
+    "common good",
+    "what is best for everyone"
+   ],
+   [
+    "town hall meeting",
+    "a meeting where people ask their leaders questions in person"
+   ],
+   [
+    "minutes",
+    "written notes of what happened at a meeting"
+   ],
+   [
+    "courtesy",
+    "being polite and respectful, even when people disagree"
+   ],
+   [
+    "civ / cit (word root)",
+    "citizen, city"
+   ],
+   [
+    "citizen",
+    "a person who belongs to a city, state, or country"
+   ],
+   [
+    "city",
+    "a large town with its own government"
+   ],
+   [
+    "civic",
+    "having to do with citizens and their community"
+   ],
+   [
+    "civil",
+    "polite and respectful, the way citizens should treat each other"
+   ]
+  ],
+  "wordParts": "The Latin words civis (citizen) and civitas (city) give us civ and cit. You can find them in citizen, city, civic, and civil."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "local government",
+    "rx": "city|cities|county|counties|local|mayor|council|commission|town",
+    "n": 1
+   },
+   {
+    "t": "state government",
+    "rx": "state|governor|legislat|tallahassee|senate|house|whole|all of florida",
+    "n": 1
+   },
+   {
+    "t": "what they do",
+    "rx": "road|street|park|librar|fire|safe|pothole|law|rule|decide|run|fix|handle|make|serv|school|trash|beach",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "one way",
+    "rx": "meeting|letter|write|petition|sign|speak|board|volunteer|call|email|town hall|council|testif|ask|protest|march",
+    "n": 1
+   },
+   {
+    "t": "a second way",
+    "rx": "meeting|letter|write|petition|sign|speak|board|volunteer|call|email|town hall|testif|ask|protest|march",
+    "n": 2
+   },
+   {
+    "t": "who they reach",
+    "rx": "city|county|state|council|commission|mayor|legislat|government|leader|official|governor|board",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "when citizens get involved",
+    "rx": "involve|speak|help|participat|take part|show up|vote|act|work together|care|go to|join",
+    "n": 1
+   },
+   {
+    "t": "what happens",
+    "rx": "fix|solv|better|change|improv|safe|clean|listen|heard|problem|done",
+    "n": 1
+   },
+   {
+    "t": "if they don’t",
+    "rx": "don't|dont|do not|not |nobody|no one|ignore|stay|worse|never|wouldn|won't|wont|without|nothing",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the phone on tab 1 and spaces 1 and 2 of the journey.",
+   "What does a city or county take care of? What does the state do for all of Florida?",
+   "Try this shape: “Local government, like a city, takes care of ___. State government ___ for all of Florida.”"
+  ],
+  "journal-q2": [
+   "Look back at space 3, Speak up.",
+   "Name two ways: meetings, letters, petitions, advisory boards…",
+   "Try this shape: “Citizens can ___ and ___ to make their voices heard by their ___.”"
+  ],
+  "journal-q3": [
+   "Look back at the last space, and at the trap space.",
+   "What happens when people speak up? What happens if everyone just waits?",
+   "Try this shape: “When citizens get involved, ___. If they don’t, ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why do you think a pothole is fixed by the city instead of the state?",
+  "journal-q2": "Go further: which way of taking part do you think works best, and why?",
+  "journal-q3": "Go further: what is one problem at your school that students could help solve?"
+ },
+ "quizMiss": [
+  {
+   "a": "The governor leads all of Florida, not one county. Think about the phone on tab 1: who runs a county?",
+   "c": "The U.S. Congress makes laws for the whole country. Who runs a Florida county?"
+  },
+  {
+   "b": "Moving away doesn’t help your community. Look at space 3 of the journey: Speak up.",
+   "c": "Ignoring a problem is the Just complain and wait trap! Look at space 3 of the journey."
+  },
+  {
+   "a": "That’s the trap space. Look at the last space of the journey.",
+   "c": "Waiting for someone else is the trap too. Look at the last space of the journey."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Who do I call?",
+   "at": "scene1",
+   "script": "Last month a streetlight on my street went out, and I didn’t know who to call. So I looked it up. Pick a problem card. Then tap the office you think can fix it. If you call the wrong one, they’ll politely tell you where to try."
+  },
+  {
+   "slot": "guide2",
+   "label": "Anyone can call",
+   "at": "s1done",
+   "script": "Every problem found its office. And remember, anyone can call or write, even kids. Now go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "One problem, one path",
+   "at": "explore",
+   "script": "One problem, one path. Our problem is trash on the beach. Tap the button to move it to the next space. Some spaces ask a question first. And watch out for the space that says just complain and wait."
+  },
+  {
+   "label": "A real town hall",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "script": "This is a real town hall meeting in Port Charlotte, Florida, in 2005. Tap every gold number. Then listen to what FEMA wrote about this photo."
+    },
+    {
+     "slot": "guide4b",
+     "who": "FEMA’s caption for this photo (FEMA 12671), read by a narrator",
+     "script": "Port Charlotte, Florida, March 28, 2005. Congressman Connie Mack acts as a moderator at a Port Charlotte Town Hall meeting where FEMA and State officials field questions from hurricane victims."
+    },
+    {
+     "slot": "guide4c",
+     "script": "A moderator runs the meeting. FEMA is the part of the national government that helps after disasters. Now you’re the secretary. Fill in the minutes, one line at a time."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Your speaker card",
+   "at": "plan",
+   "script": "At many Florida meetings, you fill out a card before you speak. Fill out yours: your topic, which government, what you’re asking for, and how citizens connected. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^card$",
+    "sel": ".spk-mc-cards",
+    "fx": "point",
+    "scroll": true
+   },
+   {
+    "at": "^office$",
+    "sel": ".spk-mc-phone",
+    "fx": "pop"
+   },
+   {
+    "at": "^wrong$",
+    "sel": ".spk-mc-phone .scr",
+    "fx": "glow"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^office$",
+    "sel": ".spk-mc-log",
+    "fx": "glow"
+   },
+   {
+    "at": "^anyone$",
+    "sel": ".spk-mc-ask",
+    "fx": "trace"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^path$",
+    "sel": ".spk-jr-board",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^beach$",
+    "sel": ".spk-jr-start",
+    "fx": "pop"
+   },
+   {
+    "at": "^button$",
+    "sel": ".spk-jr-ctl",
+    "fx": "point"
+   },
+   {
+    "at": "^wait$",
+    "sel": ".spk-jr-trap",
+    "fx": "wiggle"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^meeting$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^number$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^FEMA$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "trace"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^moderator$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 1,
+    "fx": "glow"
+   },
+   {
+    "at": "^officials$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 2,
+    "fx": "glow"
+   },
+   {
+    "at": "^victims$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 6,
+    "fx": "glow"
+   }
+  ],
+  "guide4c": [
+   {
+    "at": "^moderator$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^secretary$",
+    "sel": ".spk-mn-card",
+    "fx": "glow"
+   },
+   {
+    "at": "^line$",
+    "sel": ".spk-mn-q",
+    "fx": "point"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^card$",
+    "sel": ".spk-spc .mkw",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^topic$",
+    "sel": ".spk-spc .fr",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^government$",
+    "sel": ".spk-spc .fr",
+    "i": 1,
+    "fx": "glow"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,112 +3249,63 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Citizens Solving Problems with Local and State Government ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1104sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#6a9ec4"/>
-    <stop offset="60%" stop-color="#a8cce0"/>
-    <stop offset="100%" stop-color="#d4c8a0"/>
-  </linearGradient>
-  <style>
-    .h1104flag { animation: h1104flag 3s ease-in-out infinite; transform-box: fill-box; transform-origin: left center; }
-    @keyframes h1104flag { 0%,100% { transform: skewY(0deg); } 50% { transform: skewY(2deg); } }
-    .h1104glow { animation: h1104glow 4s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1104glow { 0%,100% { opacity: 0.3; } 50% { opacity: 0.85; } }
-    .h1104drift { animation: h1104drift 9s ease-in-out infinite; transform-box: fill-box; }
-    @keyframes h1104drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
-  </style>
-</defs>
-<rect width="920" height="260" fill="url(#h1104sky)"/>
-<rect y="180" width="920" height="80" fill="#c4b896"/>
-<rect y="195" width="920" height="65" fill="#8aaa6a"/>
-<!-- Clouds -->
-<g transform="translate(200,25)">
-  <g class="h1104drift">
-    <ellipse cx="0" cy="0" rx="55" ry="18" fill="white" opacity="0.5"/>
-    <ellipse cx="35" cy="-6" rx="35" ry="12" fill="white" opacity="0.4"/>
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="One road winding across Florida: it starts at a small city hall with a clock and a flag, passes a domed county courthouse, and ends far away at Florida's Capitol in Tallahassee, with the tall Capitol tower behind it.">
+  <defs>
+    <linearGradient id="b1104sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CC8E0"/><stop offset=".7" stop-color="#DDEFF2"/><stop offset="1" stop-color="#F3EBD2"/></linearGradient>
+    <linearGradient id="b1104grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9CF86"/><stop offset="1" stop-color="#7DAE5E"/></linearGradient>
+    <style>
+      .b1104dash { stroke-dasharray: 10 12; animation: b1104go 3s linear infinite; }
+      @keyframes b1104go { to { stroke-dashoffset: -44; } }
+      .b1104flag { transform-box: fill-box; transform-origin: 0 50%; animation: b1104wave 2.6s ease-in-out infinite; }
+      .b1104flag.f2 { animation-delay: -1s; } .b1104flag.f3 { animation-delay: -1.8s; }
+      @keyframes b1104wave { 0%, 100% { transform: skewY(0deg) scaleX(1); } 50% { transform: skewY(4deg) scaleX(.92); } }
+      .b1104cloud { animation: b1104drift 40s linear infinite; }
+      @keyframes b1104drift { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+      @media (prefers-reduced-motion: reduce) { .b1104dash, .b1104flag, .b1104cloud { animation: none !important; } }
+    </style>
+  </defs>
+  <rect width="920" height="200" fill="url(#b1104sky)"/>
+  <g class="b1104cloud" fill="#FFFFFF" opacity=".85"><ellipse cx="300" cy="38" rx="46" ry="12"/><ellipse cx="330" cy="30" rx="30" ry="12"/><ellipse cx="640" cy="26" rx="38" ry="10"/><ellipse cx="900" cy="44" rx="40" ry="11"/></g>
+  <!-- far hills -->
+  <path d="M0,118 Q160,96 330,110 T660,98 T920,104 V200 H0Z" fill="#BFD9A2"/>
+  <path d="M0,140 Q220,118 460,132 T920,124 V200 H0Z" fill="url(#b1104grass)"/>
+  <!-- the road: wide in front, narrow in the distance -->
+  <path d="M40,200 C160,170 300,168 420,150 S640,122 780,108 L800,108 C660,126 460,160 330,176 S180,196 150,200Z" fill="#CFC3A6"/>
+  <path class="b1104dash" d="M95,200 C220,176 330,170 430,155 S650,126 790,108" fill="none" stroke="#FFFDF5" stroke-width="2.5"/>
+  <!-- distant: Florida's Capitol (tall tower behind the historic capitol with its dome and striped awnings) -->
+  <g transform="translate(772 22) scale(1.5)">
+    <rect x="18" y="0" width="22" height="56" fill="#E9E3D2"/><rect x="14" y="4" width="30" height="5" fill="#D6CEB8"/>
+    <g fill="#9AA7B4"><rect x="22" y="12" width="3" height="40"/><rect x="28" y="12" width="3" height="40"/><rect x="34" y="12" width="3" height="40"/></g>
+    <rect x="0" y="36" width="58" height="22" fill="#FFFFFF"/><path d="M14,36 Q29,20 44,36Z" fill="#FFFFFF"/><circle cx="29" cy="24" r="2" fill="#C9A24A"/>
+    <g fill="#C2453A"><rect x="3" y="42" width="4" height="4"/><rect x="11" y="42" width="4" height="4"/><rect x="43" y="42" width="4" height="4"/><rect x="51" y="42" width="4" height="4"/></g>
+    <rect x="22" y="44" width="14" height="14" fill="#D9D2BE"/>
+    <line x1="29" y1="20" x2="29" y2="10" stroke="#555" stroke-width="1"/><path class="b1104flag f3" d="M29,10 h8 v5 h-8z" fill="#C2453A"/>
   </g>
-</g>
-<g transform="translate(700,35)">
-  <g class="h1104drift">
-    <ellipse cx="0" cy="0" rx="45" ry="15" fill="white" opacity="0.45"/>
+  <g fill="#3E8A4A"><circle cx="770" cy="104" r="6"/><circle cx="862" cy="106" r="7"/></g>
+  <!-- middle: a county courthouse with a dome and columns -->
+  <g transform="translate(470 76)">
+    <rect x="0" y="34" width="110" height="46" fill="#F1E3C2" stroke="#C9B48A"/>
+    <path d="M-6,34 L55,14 L116,34Z" fill="#E6D2A6" stroke="#C9B48A"/>
+    <rect x="40" y="0" width="30" height="16" fill="#F1E3C2" stroke="#C9B48A"/><path d="M38,2 Q55,-20 72,2Z" fill="#C9A24A"/>
+    <line x1="55" y1="-14" x2="55" y2="-26" stroke="#555" stroke-width="1.2"/><path class="b1104flag f2" d="M55,-26 h12 v7 h-12z" fill="#C2453A"/>
+    <g fill="#FFFDF5" stroke="#C9B48A"><rect x="12" y="38" width="8" height="40"/><rect x="32" y="38" width="8" height="40"/><rect x="70" y="38" width="8" height="40"/><rect x="90" y="38" width="8" height="40"/></g>
+    <rect x="48" y="52" width="14" height="28" fill="#6E4E2E"/>
+    <rect x="-10" y="80" width="130" height="6" fill="#D9CFB9"/>
   </g>
-</g>
-<!-- City Hall -->
-<g transform="translate(300,70)">
-  <g>
-    <rect x="0" y="40" width="140" height="90" fill="#e8e0d0" stroke="#b0a890" stroke-width="1.5"/>
-    <polygon points="-10,40 70,5 150,40" fill="#d8d0c0" stroke="#b0a890" stroke-width="1.5"/>
-    <rect x="15" y="40" width="8" height="90" fill="#f0e8d8" stroke="#c0b8a0" stroke-width="0.8" rx="2"/>
-    <rect x="45" y="40" width="8" height="90" fill="#f0e8d8" stroke="#c0b8a0" stroke-width="0.8" rx="2"/>
-    <rect x="87" y="40" width="8" height="90" fill="#f0e8d8" stroke="#c0b8a0" stroke-width="0.8" rx="2"/>
-    <rect x="117" y="40" width="8" height="90" fill="#f0e8d8" stroke="#c0b8a0" stroke-width="0.8" rx="2"/>
-    <rect x="55" y="90" width="30" height="40" fill="#6a5040" rx="3"/>
-    <rect x="40" y="130" width="60" height="6" fill="#d0c8b8"/>
-    <rect x="35" y="136" width="70" height="6" fill="#c8c0b0"/>
+  <!-- palms -->
+  <g stroke="#8A6A3A" stroke-width="4" fill="none"><path d="M610,140 q3,-30 -2,-56"/><path d="M380,160 q-3,-40 4,-74"/></g>
+  <g fill="#3E8A4A"><path d="M608,84 q-18,-4 -28,8 q14,-6 28,-6z"/><path d="M608,84 q16,-12 30,-6 q-14,0 -30,8z"/><path d="M608,84 q-6,-16 6,-22 q-4,10 -6,22z"/><path d="M384,86 q-22,-4 -34,10 q18,-7 34,-8z"/><path d="M384,86 q20,-14 36,-6 q-18,0 -36,10z"/><path d="M384,86 q-8,-20 8,-28 q-5,12 -8,28z"/></g>
+  <!-- foreground: a small city hall with a clock tower -->
+  <g transform="translate(150 70)">
+    <rect x="0" y="40" width="150" height="80" fill="#F6E9D0" stroke="#C9B48A"/>
+    <rect x="58" y="0" width="34" height="44" fill="#F6E9D0" stroke="#C9B48A"/><path d="M54,2 L75,-18 L96,2Z" fill="#B85A3A"/>
+    <circle cx="75" cy="20" r="10" fill="#FFFDF5" stroke="#6E4E2E" stroke-width="2"/><line x1="75" y1="20" x2="75" y2="13" stroke="#333" stroke-width="1.8"/><line x1="75" y1="20" x2="80" y2="22" stroke="#333" stroke-width="1.8"/>
+    <line x1="75" y1="-18" x2="75" y2="-34" stroke="#555" stroke-width="1.5"/><path class="b1104flag" d="M75,-34 h18 v10 h-18z" fill="#C2453A"/><path class="b1104flag" d="M75,-34 h18 v3 h-18z" fill="#FFFFFF" opacity=".9"/>
+    <g fill="#8CB8D8" stroke="#6E4E2E"><rect x="14" y="56" width="18" height="22"/><rect x="40" y="56" width="18" height="22"/><rect x="92" y="56" width="18" height="22"/><rect x="118" y="56" width="18" height="22"/></g>
+    <rect x="62" y="80" width="26" height="40" fill="#6E4E2E"/><path d="M58,80 h34 l-4,-8 h-26z" fill="#B85A3A"/>
+    <rect x="50" y="120" width="50" height="6" fill="#D9CFB9"/>
   </g>
-</g>
-<!-- Flag on pole -->
-<g transform="translate(260,60)">
-  <g>
-    <line x1="0" y1="0" x2="0" y2="120" stroke="#888" stroke-width="2"/>
-    <circle cx="0" cy="0" r="3" fill="#c0a000"/>
-  </g>
-</g>
-<g transform="translate(260,63)">
-  <g class="h1104flag">
-    <rect x="0" y="0" width="30" height="18" fill="#3a5a8c"/>
-    <line x1="0" y1="6" x2="30" y2="6" stroke="#c04040" stroke-width="2"/>
-    <line x1="0" y1="12" x2="30" y2="12" stroke="#c04040" stroke-width="2"/>
-  </g>
-</g>
-<!-- Capitol dome -->
-<g transform="translate(620,80)">
-  <g>
-    <rect x="0" y="40" width="100" height="80" fill="#ddd8c8" stroke="#b0a890" stroke-width="1"/>
-    <ellipse cx="50" cy="40" rx="50" ry="25" fill="#d0c8b8" stroke="#b0a890" stroke-width="1"/>
-    <ellipse cx="50" cy="28" rx="15" ry="15" fill="#c8c0b0" stroke="#b0a890" stroke-width="1"/>
-    <rect x="47" y="10" width="6" height="18" fill="#b0a890"/>
-    <circle cx="50" cy="8" r="4" fill="#c0a000"/>
-    <rect x="15" y="55" width="12" height="16" fill="#a8cce0" stroke="#b0a890" stroke-width="0.5" rx="1"/>
-    <rect x="44" y="55" width="12" height="16" fill="#a8cce0" stroke="#b0a890" stroke-width="0.5" rx="1"/>
-    <rect x="73" y="55" width="12" height="16" fill="#a8cce0" stroke="#b0a890" stroke-width="0.5" rx="1"/>
-  </g>
-</g>
-<!-- Window glow -->
-<g transform="translate(664,135)">
-  <g class="h1104glow">
-    <rect x="0" y="0" width="12" height="16" fill="#f5e8a0" rx="1"/>
-  </g>
-</g>
-<!-- Ballot box -->
-<g transform="translate(140,140)">
-  <g>
-    <rect x="0" y="0" width="50" height="40" fill="#5a7a9e" stroke="#3a5a7e" stroke-width="1.5" rx="3"/>
-    <rect x="15" y="-2" width="20" height="4" fill="#3a5a7e" rx="1"/>
-    <rect x="20" y="-10" width="10" height="12" fill="#f0e8d8" stroke="#c0b8a0" stroke-width="0.5"/>
-  </g>
-</g>
-<!-- Gavel -->
-<g transform="translate(800,155)">
-  <g>
-    <rect x="0" y="0" width="30" height="10" fill="#8a6a4a" rx="3"/>
-    <rect x="10" y="10" width="10" height="25" fill="#a08060" rx="2"/>
-    <ellipse cx="15" cy="38" rx="20" ry="5" fill="#c4b090" opacity="0.5"/>
-  </g>
-</g>
-<!-- Community garden -->
-<g transform="translate(50,175)">
-  <g>
-    <rect x="0" y="0" width="60" height="8" fill="#7a5a3a" rx="2"/>
-    <line x1="10" y1="0" x2="10" y2="-15" stroke="#5a8a3a" stroke-width="2"/>
-    <ellipse cx="10" cy="-18" rx="6" ry="5" fill="#6aaa4a"/>
-    <line x1="30" y1="0" x2="30" y2="-20" stroke="#5a8a3a" stroke-width="2"/>
-    <ellipse cx="30" cy="-23" rx="7" ry="6" fill="#7aba5a"/>
-    <line x1="50" y1="0" x2="50" y2="-12" stroke="#5a8a3a" stroke-width="2"/>
-    <ellipse cx="50" cy="-15" rx="5" ry="4" fill="#6aaa4a"/>
-  </g>
-</g>
+  <g fill="#4E9A58"><circle cx="128" cy="184" r="12"/><circle cx="318" cy="184" r="11"/><circle cx="110" cy="190" r="9"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3627,6 +4805,9 @@ function toggleTX() {
 })();
 </script>
 
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 <!-- OAO-STD-TIPS v1 -->
 <style id="oao-std-tips-css">
 .std-tip{border-bottom:1.5px dotted currentColor;cursor:help;border-radius:3px;outline:none;padding:0 1px}
