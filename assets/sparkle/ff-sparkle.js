@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast | tripstrip | sealguess | choir
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform | effecttree | network | gifts
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast | tripstrip | sealguess | choir | zoomout
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform | effecttree | network | gifts | shutters
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
      explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots) | estimate (tap the gold numbers, then slide a guess and see the real number; uses source.hotspots) | envelope (tap the gold numbers, read the archive caption, then open the sealed Scene 1 guesses and judge each; uses source.hotspots + DATA.scene1.cards) | readsigns (tap the gold numbers, pick what each numbered sign asks for, then one question; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch | marker | nameplate
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel | voices | armlink
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch | marker | nameplate | shopsigns
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel | voices | armlink | hellowindow
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -121,7 +121,8 @@
   /* every reply option can be sent: after one, the ones not asked yet stay offered (an option with "end":true closes the set) */
   function asked(k){ S.asked=S.asked||{}; return S.asked[k]=S.asked[k]||[]; }
   function choicesHTML(){ var cs=pendingKey&&CHOICES[pendingKey]; if(!cs) return ''; var a=asked(pendingKey); return '<div class="spk-choices">'+cs.map(function(c,i){ return a.indexOf(i)!==-1?'':'<button type="button" class="spk-choice'+(c.go?' go':'')+'" data-key="'+pendingKey+'" data-i="'+i+'">'+esc(c.t)+'</button>'; }).join('')+'</div>'; }
-  function msgHTML(m){ if(m.f!=='t') return '<div class="spk-msg '+m.f+'">'+esc(m.t)+'</div>'; var k=m.k||sayKey(m.t); probeSay(k); return '<div class="spk-msg t">'+esc(m.t)+'<button type="button" class="spk-say'+(SAY[k]?' ok':'')+(SAYNOW===k?' playing':'')+'" data-k="'+k+'" aria-label="Listen to this text">'+(SAYNOW===k?'❚❚':'▶')+'</button></div>'; }
+  function msgHTML(m){ if(m.f==='r') return '<div class="spk-msg r'+(m.sh?' show':'')+'"><span class="from">'+esc(m.from||'Another room')+'</span><span class="og">'+esc(m.t)+'</span>'+(m.en?'<button type="button" class="spk-rtr" data-ts="'+esc(m.ts)+'">'+(m.sh?'In English:':'🔤 Tap to see it in English')+'</button><span class="en">'+esc(m.en)+'</span>':'')+'</div>';
+    if(m.f!=='t') return '<div class="spk-msg '+m.f+'">'+esc(m.t)+'</div>'; var k=m.k||sayKey(m.t); probeSay(k); return '<div class="spk-msg t">'+esc(m.t)+'<button type="button" class="spk-say'+(SAY[k]?' ok':'')+(SAYNOW===k?' playing':'')+'" data-k="'+k+'" aria-label="Listen to this text">'+(SAYNOW===k?'❚❚':'▶')+'</button></div>'; }
   /* ---- the teacher reads her texts aloud: a ▶ appears on a text when its clip exists (g4ss-<lesson>-txt-<key>.mp3).
      key = FNV-1a of the text with the student's name taken out, lower-case letters and digits only (first 6 hex). ---- */
   var SAY={}, SAYP={}, SAYNOW=null, SAYAU=null;
@@ -154,7 +155,11 @@
   Object.keys(T.choices||{}).forEach(function(k){ var c=T.choices[k], list=(c.list||[]).slice(); list.scene=c.scene||'scene'; CHOICES[k]=list; });
   /* DATA.texts.beats = { s1Done|s2Done|quizDone|cracked: [{t, choice, quiet}] } — the scene defaults to where it happened */
   var BEAT_SCENE={s1Done:'scene',s2Done:'explore',quizDone:'check',cracked:'assignment'};
-  function beat(k){ if(S.seen[k]) return; S.seen[k]=true; save(); var b=(T.beats||{})[k]; if(!b) return; [].concat(b).forEach(function(m){ if(typeof m==='string') m={t:m}; teacher(m.t,m.choice||null,{scene:m.scene||BEAT_SCENE[k],quiet:!!m.quiet}); }); }
+  /* a beat line with "room" is a message from another room inside Canvas (4.11.03): {room:'Room 4', t:'original words', en:'English'}.
+     It shows with its sender and a "Tap to see it in English" button; the teacher's own lines stay as before. */
+  function room(m,sc){ push({f:'r',from:m.room,t:m.t,en:m.en||'',scene:sc,ts:Date.now()+Math.random()}); if(!m.quiet){ unread++; toast((m.room||'Another room')+': '+m.t); } render(); }
+  if(!window.__spkTr){ window.__spkTr=true; document.addEventListener('click',function(e){ var b=e.target.closest&&e.target.closest('.spk-rtr'); if(!b||!document.documentElement.classList.contains('spk-on')) return; e.stopPropagation(); var ts=b.dataset.ts; (S.thread||[]).forEach(function(m){ if(m.f==='r'&&String(m.ts)===ts) m.sh=!m.sh; }); save(); render(); if(typeof sfx==='function') sfx('click'); },true); }
+  function beat(k){ if(S.seen[k]) return; S.seen[k]=true; save(); var b=(T.beats||{})[k]; if(!b) return; [].concat(b).forEach(function(m){ if(typeof m==='string') m={t:m}; if(m.room){ room(m,m.scene||BEAT_SCENE[k]); return; } teacher(m.t,m.choice||null,{scene:m.scene||BEAT_SCENE[k],quiet:!!m.quiet}); }); }
   var missStreak=0;
   function missBeat(hint){ missStreak++; if(missStreak===2){ missStreak=0; teacher('That’s two misses in a row. Here’s a hint: '+hint,null,{scene:'scene'}); } }
 
@@ -7264,6 +7269,170 @@
     means.addEventListener('dragend',function(){ arm(false); });
     wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
     wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-almean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
+  /* ---- Scene 1 · Zoom out on a real photo (4.11.03): the photo opens zoomed in on one detail. Each right answer zooms out
+     one step (the photo glides to its next view) and adds a "found" line under it, until the whole picture shows. Wrong
+     ideas bounce with a hint. DATA: img, imgAlt, cap, steps [{x,y,s,lab,q,opts:[{t,ok,miss}],found}] (x,y = % focus) ---- */
+  MOD.zoomout=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var ST=cfg.steps||[], N=ST.length; S.zo=S.zo||{k:0,a:{}}; var was=null;
+    var done=function(){ return N>0&&S.zo.k>=N; };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-zo');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Zoom out')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<figure class="spk-zo-fig"><div class="spk-zo-frame"><img alt="'+esc(cfg.imgAlt||'')+'" src="'+IMG+esc(cfg.img||'')+'"><span class="lens" aria-hidden="true"></span><span class="zl"></span></div><figcaption>'+esc(cfg.cap||'')+'</figcaption></figure>'
+      +'<div class="spk-zo-meter" aria-hidden="true">'+ST.map(function(s,i){ return '<i data-i="'+i+'"></i>'; }).join('')+'</div>'
+      +'<div class="spk-zo-q"></div><p class="spk-miss"></p><ol class="spk-zo-facts"></ol><div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var img=g.querySelector('.spk-zo-frame img'), qEl=g.querySelector('.spk-zo-q'), miss=g.querySelector('.spk-miss'), facts=g.querySelector('.spk-zo-facts');
+    function view(){ var k=Math.min(S.zo.k,N-1), s=done()?{x:50,y:50,s:1}:ST[k]; img.style.transformOrigin=(s.x||50)+'% '+(s.y||50)+'%'; img.style.transform='scale('+(s.s||1)+')';
+      g.querySelector('.spk-zo-frame').classList.toggle('full',done()||(s.s||1)<=1.01); g.querySelector('.zl').textContent=done()?(cfg.fullT||'The whole picture'):(s.lab||''); }
+    function paint(anim){ var k=S.zo.k, cur=ST[k]; view();
+      g.querySelectorAll('.spk-zo-meter i').forEach(function(m){ var i=+m.dataset.i; m.classList.toggle('on',i<k); m.classList.toggle('cur',i===k); });
+      qEl.innerHTML=cur?'<p class="ct"><b>'+esc((cfg.stepT||'Zoom')+' '+(k+1)+' of '+N)+'</b></p><p class="q">'+esc(cur.q)+'</p><div class="spk-opts">'+cur.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-k="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div>':'';
+      facts.innerHTML=ST.slice(0,k).map(function(s,i){ return '<li class="'+(i===anim?'new':'')+'"><b>'+esc(s.lab||'')+'</b> '+esc(s.found||'')+'</li>'; }).join('');
+      var d=done(); if(d&&was===false) sfx('win'); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    qEl.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o||done()) return; var k=S.zo.k, opt=ST[k].opts[+o.dataset.k];
+      if(opt.ok){ ack('open'); S.zo.a[k]=+o.dataset.k; S.zo.k++; save(); miss.textContent=''; sfx('click'); paint(k); refreshFile(); refreshVoice(); }
+      else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||'Look closer at the photo.'; missBeat(miss.textContent); } });
+    paint();
+    return {done:done, journal:function(e,NA){ if(!S.zo.k) return NA; return '<p class="a">'+ST.slice(0,S.zo.k).map(function(s){ return '<b>'+e(s.lab||'')+'</b> '+e(s.found||''); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · Roll up the shutters (4.11.03): one street of shops at opening time. Each shop's metal shutter
+     rolls up to open one part of the reading, with tags for its community, work and traditions. Some shops ask a question
+     first that meets a mix-up. Optional: a dot counter in one part (counter {n,on,t}) and a small Florida map whose pins
+     light as their shops open (map {t, pins:[{id,label,lon,lat,dx,dy,la}], region:{lon,lat,rx,ry,label}}).
+     DATA: activity, paras [{id,match}], shops [{id,t,ico,c,act,paras,tags:[{k,t}],ask:{q,opts},pin,counter}] ---- */
+  MOD.shutters=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var SH=cfg.shops||[], N=SH.length; if(S.su==null) S.su=0;
+    var done=function(){ return N>0&&S.su>=N; };
+    var W=120, svg='<svg class="spk-shutstreet" viewBox="0 0 '+(N*W)+' 170" role="img" aria-label="'+esc(cfg.alt||'A street of shops with metal shutters')+'"><rect width="'+(N*W)+'" height="170" class="sky"/><rect y="150" width="'+(N*W)+'" height="20" class="walk"/>';
+    SH.forEach(function(s,i){ var x=i*W; svg+='<g class="shop" data-i="'+i+'" style="--c:'+esc(s.c||'#E8B04A')+'"><rect x="'+(x+6)+'" y="34" width="'+(W-12)+'" height="116" class="wall"/><rect x="'+(x+14)+'" y="40" width="'+(W-28)+'" height="18" rx="3" class="board"/><text x="'+(x+W/2)+'" y="53" text-anchor="middle" class="nm">'+esc(s.sign||s.t)+'</text>'
+      +'<path d="M'+(x+8)+',62 h'+(W-16)+' l-6,14 h-'+(W-28)+'z" class="awn"/><clipPath id="spkSuC'+i+'"><rect x="'+(x+16)+'" y="78" width="'+(W-32)+'" height="72"/></clipPath><rect x="'+(x+16)+'" y="78" width="'+(W-32)+'" height="72" class="win"/><text x="'+(x+W/2)+'" y="126" text-anchor="middle" class="ico">'+esc(s.ico||'🏪')+'</text>'
+      +'<g clip-path="url(#spkSuC'+i+')"><g class="sh"><rect x="'+(x+16)+'" y="78" width="'+(W-32)+'" height="72" class="metal"/>';
+      for(var r=0;r<9;r++) svg+='<line x1="'+(x+16)+'" x2="'+(x+W-16)+'" y1="'+(84+r*8)+'" y2="'+(84+r*8)+'" class="rib"/>';
+      svg+='<rect x="'+(x+W/2-9)+'" y="143" width="18" height="4" rx="2" class="hdl"/></g></g><rect x="'+(x+14)+'" y="74" width="'+(W-28)+'" height="6" rx="2" class="roll"/></g>'; });
+    svg+='</svg>';
+    var M=cfg.map, mapSvg='';
+    if(M&&M.pins){ mapSvg='<div class="spk-shutmap"><div class="k">'+esc(M.t||'Where they live')+'</div><svg viewBox="0 0 300 300" role="img" aria-label="'+esc(M.alt||'Map of Florida')+'">'+floridaBase('Su');
+      if(M.region){ var rp=project(M.region.lon,M.region.lat); mapSvg+='<g class="rg" data-shop="'+esc(M.region.shop||'')+'"><ellipse cx="'+rp[0].toFixed(1)+'" cy="'+rp[1].toFixed(1)+'" rx="'+(M.region.rx||18)+'" ry="'+(M.region.ry||30)+'"/><text x="'+(rp[0]+(M.region.dx||0)).toFixed(1)+'" y="'+(rp[1]+(M.region.dy||0)).toFixed(1)+'" text-anchor="'+(M.region.la||'end')+'">'+esc(M.region.label||'')+'</text></g>'; }
+      M.pins.forEach(function(p){ var q=project(p.lon,p.lat); mapSvg+='<g class="pin" data-shop="'+esc(p.shop||'')+'"><circle cx="'+q[0].toFixed(1)+'" cy="'+q[1].toFixed(1)+'" r="6"/><text x="'+(q[0]+(p.dx||0)).toFixed(1)+'" y="'+(q[1]+(p.dy||0)).toFixed(1)+'" text-anchor="'+(p.la||'end')+'">'+esc(p.label)+'</text></g>'; });
+      mapSvg+='</svg></div>'; }
+    var w=el('div','spk spk-shut'); w.innerHTML=whyCard(cfg.why)+'<div class="spk-shutwrap">'+svg+mapSvg+'</div><p class="spk-ys-ct spk-shutct"></p><div class="spk-ptxctl spk-shutctl"></div><p class="spk-miss"></p><div class="spk-shutparts"></div>';
+    before(first,w);
+    var street=w.querySelector('.spk-shutstreet'), parts=w.querySelector('.spk-shutparts'), ctl=w.querySelector('.spk-shutctl'), miss=w.querySelector('.spk-miss'), boxes={};
+    SH.forEach(function(s,i){ var b=el('div','spk-ptxp spk-shutp'); b.dataset.i=i;
+      var C=s.counter, dots=''; if(C){ for(var d=0;d<(C.n||20);d++) dots+='<i class="'+(d<(C.on||0)?'on':'')+'" style="--d:'+d+'"></i>'; }
+      b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span> <span aria-hidden="true">'+esc(s.ico||'🏪')+'</span> '+esc(s.t)+'</div>'
+        +(s.tags?'<div class="tags">'+s.tags.map(function(t){ return '<span class="tg"><b>'+esc(t.k)+'</b> '+esc(t.t)+'</span>'; }).join('')+'</div>':'')
+        +'<div class="txt"></div>'+(C?'<div class="spk-shutdots"><div class="dots">'+dots+'</div><p>'+esc(C.t||'')+'</p></div>':'');
+      (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.querySelector('.txt').appendChild(nd); }); });
+      parts.appendChild(b); boxes[i]=b; });
+    function paint(anim){ var k=S.su, cur=SH[k];
+      street.querySelectorAll('.shop').forEach(function(sh){ var i=+sh.dataset.i; sh.classList.toggle('open',i<k); sh.classList.toggle('cur',i===k); sh.classList.toggle('new',i===anim); });
+      w.querySelectorAll('.spk-shutmap [data-shop]').forEach(function(p){ var id=p.dataset.shop, idx=-1; SH.forEach(function(s,i){ if(s.id===id) idx=i; }); p.classList.toggle('on',idx>=0&&idx<k); p.classList.toggle('new',idx===anim); });
+      SH.forEach(function(s,i){ boxes[i].classList.toggle('on',i<k); });
+      ctl.innerHTML=cur?(cur.ask?'<p class="q"><span class="n">'+(k+1)+'</span> '+esc(cur.ask.q)+'</p><div class="spk-opts">'+cur.ask.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-k="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div>'
+        :'<button type="button" class="spk-ptxgo">'+esc(cur.act||'⬆ Roll up the shutter')+'</button>'):'';
+      w.querySelector('.spk-shutct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every shop is open.')+'</b>':'<b>'+k+' of '+N+'</b> '+esc(cfg.countT||'shops open. Do the step below to open the next one.');
+      w.classList.toggle('all',done()); var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function advance(){ var k=S.su; S.su++; save(); ack('explore'); miss.textContent=''; sfx('click'); paint(k); refreshFile(); refreshVoice();
+      var b=boxes[k]; if(b&&!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ try{ b.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },600); }
+    ctl.addEventListener('click',function(e){ var cur=SH[S.su]; if(!cur) return;
+      if(e.target.closest('.spk-ptxgo')){ advance(); return; } var o=e.target.closest('.spk-opt'); if(!o||!cur.ask) return; var opt=cur.ask.opts[+o.dataset.k];
+      if(opt.ok) advance(); else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||'Think again.'; missBeat(miss.textContent); } });
+    street.addEventListener('click',function(e){ var sh=e.target.closest('.shop'); if(!sh) return; var i=+sh.dataset.i; if(i===S.su&&!SH[i].ask) advance(); else if(i<S.su&&boxes[i]) try{ boxes[i].scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(err){} });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<SH.length;i++) if(SH[i].id===id) return boxes[i].classList.contains('on')?boxes[i]:street; return null; },
+      journal:function(){ return '<p class="a">'+SH.slice(0,S.su).map(function(s){ return esc(s.t)+(s.tags?': '+s.tags.map(function(t){ return esc(t.t); }).join(' · '):''); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Planner · Two shop signs (4.11.03): two storefronts, one per example. For each: pick the community, where they
+     live (choices depend on the community), and one thing they add (a job or a tradition). The second sign must be a
+     different community. A finished sign's awning drops and its window lights. Notes only: the student writes in Step 3.
+     DATA: signs [{lab}], rows [{id,lab,short,opts:[{id,t,sign}]} | {id,lab,short,by:{<opt id>:[{t,ok:false?,miss}]}}] ---- */
+  MOD.shopsigns=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var SG=cfg.signs||[{lab:'Example 1'},{lab:'Example 2'}], RW=cfg.rows||[]; S.ss=S.ss||[{},{}];
+    function opts(n,r){ if(r.opts) return r.opts; var k=S.ss[n][RW[0].id]; var o=k!=null&&RW[0].opts[k]; return (o&&r.by&&r.by[o.id])||[]; }
+    var signDone=function(n){ return RW.every(function(r){ return S.ss[n][r.id]!=null; }); };
+    var done=function(){ return RW.length>0&&SG.every(function(s,n){ return signDone(n); }); };
+    var b=el('div','spk spk-builder spk-shs');
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-shswrap">'+SG.map(function(sg,n){ return '<div class="sgn" data-n="'+n+'"><svg viewBox="0 0 220 150" class="front" role="img" aria-label="'+esc(sg.lab)+' storefront"><rect x="6" y="20" width="208" height="126" class="wall"/><rect x="20" y="6" width="180" height="30" rx="5" class="board"/><text x="110" y="26" text-anchor="middle" class="nm"></text>'
+      +'<g class="awn"><path d="M10,40 h200 l-10,22 h-180z"/>'+[0,1,2,3,4].map(function(i){ return '<path d="M'+(10+i*40)+',40 h20 l-2,22 h-20z" class="st"/>'; }).join('')+'</g><rect x="22" y="70" width="110" height="70" class="win"/><rect x="146" y="70" width="52" height="76" class="door"/><g class="glow"><rect x="22" y="70" width="110" height="70"/></g><text x="77" y="114" text-anchor="middle" class="ico"></text></svg>'
+      +'<div class="lab">'+esc(sg.lab)+'</div><div class="rows">'+RW.map(function(r,k){ return '<div class="fr" data-r="'+esc(r.id)+'" data-k="'+k+'"><div class="rl"><span class="n">'+(k+1)+'</span> '+esc(r.lab)+'</div><div class="spk-opts"></div><p class="pick"></p></div>'; }).join('')+'</div></div>'; }).join('')+'</div>'
+      +'<p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Both signs are up. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    function lines(){ var out=[]; SG.forEach(function(sg,n){ var t=RW.filter(function(r){ var v=S.ss[n][r.id]; return v!=null&&opts(n,r)[v]; }).map(function(r){ return opts(n,r)[S.ss[n][r.id]].t; }); if(t.length) out.push([sg.lab+':',t.join(' · ')]); }); return out; }
+    function paint(anim){
+      SG.forEach(function(sg,n){ var box=b.querySelector('.sgn[data-n="'+n+'"]'), nxt=-1;
+        RW.forEach(function(r,k){ var fr=box.querySelector('.fr[data-k="'+k+'"]'), v=S.ss[n][r.id], O=opts(n,r); if(v==null&&nxt<0) nxt=k;
+          var locked=v==null&&nxt>=0&&nxt<k; fr.classList.toggle('set',v!=null); fr.classList.toggle('locked',locked);
+          fr.querySelector('.spk-opts').innerHTML=locked?'':O.map(function(o,i){ return '<button type="button" class="spk-opt'+(i===v?' on':'')+'" data-i="'+i+'">'+esc(o.t)+'</button>'; }).join('');
+          fr.querySelector('.pick').textContent=v!=null&&O[v]?O[v].t:''; });
+        var w0=S.ss[n][RW[0].id], o0=w0!=null&&RW[0].opts[w0];
+        box.querySelector('.nm').textContent=o0?(o0.sign||o0.t):'';
+        box.querySelector('.ico').textContent=o0?(o0.ico||''):'';
+        var d=signDone(n); box.classList.toggle('done',d); if(anim===n&&d){ box.classList.remove('new'); void box.offsetWidth; box.classList.add('new'); } });
+      b.classList.toggle('done',done());
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you choose.'); updateStepper(); }
+    b.addEventListener('click',function(e){ var o=e.target.closest('.spk-opt'); if(!o) return; var fr=o.closest('.fr'), box=o.closest('.sgn'); if(!fr||!box||fr.classList.contains('locked')) return;
+      var n=+box.dataset.n, k=+fr.dataset.k, r=RW[k], i=+o.dataset.i, opt=opts(n,r)[i], miss=b.querySelector('.spk-miss'); if(!opt) return;
+      if(opt.ok===false){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||'Not quite. Look back at the reading.'; return; }
+      if(k===0){ var other=S.ss[1-n]&&S.ss[1-n][r.id]; if(other===i&&SG.length>1){ o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=cfg.sameT||'Your other sign already uses that community. Pick a different one, so you have two different examples.'; return; }
+        if(S.ss[n][r.id]!==i) RW.slice(1).forEach(function(x){ if(x.by) delete S.ss[n][x.id]; }); }
+      var wasDone=signDone(n); S.ss[n][r.id]=i; save(); miss.textContent=''; sfx('click'); paint(!wasDone&&signDone(n)?n:-1); if(!wasDone&&signDone(n)) setTimeout(function(){ sfx(done()?'win':'click'); },250); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Hello in the window (4.11.03, lingu = tongue, language): hear each word (g4ss-<lesson>-<root>-<n>.mp3);
+     each meaning matched adds one more "hello" bubble, in a new language, to a shop window. When all are matched, a
+     welcome sign in every language lights up. DATA: words [{w,m,miss}], bubbles [{t,lang}], welcome [..] ---- */
+  MOD.hellowindow=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'lingu', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length, BB=cfg.bubbles||[], WEL=cfg.welcome||[]; S.hw=S.hw||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.hw.set.length===N; };
+    var POS=[[100,50],[258,46],[110,102],[250,98],[180,74]];
+    var g=el('div','spk spk-hw');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Hello in the window')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-hwscene"><svg viewBox="0 0 360 170" aria-hidden="true"><rect width="360" height="170" class="wall"/><rect x="24" y="14" width="312" height="132" rx="6" class="frame"/><rect x="32" y="22" width="296" height="116" rx="3" class="glass"/><line x1="180" y1="22" x2="180" y2="138" class="mull"/><rect x="0" y="150" width="360" height="20" class="sill"/>'
+      +BB.map(function(x,i){ var p=POS[i%POS.length], wd=Math.max(56,x.t.length*11+18); return '<g class="bb" data-i="'+i+'" style="--i:'+i+'"><rect x="'+(p[0]-wd/2)+'" y="'+(p[1]-16)+'" width="'+wd+'" height="30" rx="15" class="bub"/><path d="M'+(p[0]-6)+','+(p[1]+13)+' l-4,10 l12,-10z" class="bub"/><text x="'+p[0]+'" y="'+(p[1]+5)+'" text-anchor="middle" class="hi">'+esc(x.t)+'</text><text x="'+p[0]+'" y="'+(p[1]+28)+'" text-anchor="middle" class="lg">'+esc(x.lang||'')+'</text></g>'; }).join('')
+      +'<g class="wel"><rect x="50" y="151" width="260" height="17" rx="4"/><text x="180" y="163.5" text-anchor="middle">'+esc(WEL.join(' · '))+'</text></g></svg><div class="board"><span class="lb">'+esc(cfg.boardT||'Hellos in the window')+'</span><span class="num"></span></div></div>'
+      +'<div class="wds spk-fwwds spk-hwwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-hw-ct"></p><div class="spk-chips spk-fwmeans spk-hwmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-hwmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-hwwds'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-fwmean spk-hwmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.hw.heard.length===N, k=S.hw.set.length, sc=g.querySelector('.spk-hwscene');
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.hw.heard.indexOf(i)>=0, u=S.hw.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      sc.querySelectorAll('.bb').forEach(function(m){ var i=+m.dataset.i; m.classList.toggle('on',i<k); });
+      sc.classList.toggle('full',done());
+      g.querySelector('.board .num').textContent=k+' / '+N; g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-hwmean').forEach(function(t){ var f=S.hw.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-hw-ct').innerHTML=!allH?'<b>'+S.hw.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Each match adds a hello in a new language.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.hw.set.indexOf(i)>=0||S.hw.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.hw.set.push(i); save(); sel=null; miss.textContent=''; sfx('click'); if(done()) setTimeout(function(){ sfx('win'); },600); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.hw.heard.length===N){ attempt(sel,c); return; }
+      if(S.hw.heard.indexOf(i)<0){ S.hw.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-hwmean'); if(!t) return; if(S.hw.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-hwmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-hwmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-hwmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-hwmean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
     paint(); return {done:done};
   };
 
