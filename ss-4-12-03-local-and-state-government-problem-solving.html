@@ -1784,6 +1784,1467 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.12.03",
+ "title": "Local and State Government Problem-Solving",
+ "quiet": false,
+ "file": {
+  "n": 12,
+  "title": "Government & Money",
+  "label": "Government & Money",
+  "seals": [
+   "📜",
+   "⚖️",
+   "💰"
+  ]
+ },
+ "prevFile": "Branches and Functions of Florida Government",
+ "connector": "Last time, we opened the three locks, one for each branch of Florida’s government.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, all three locks on the door with 13 opened, top to bottom. But the door still hasn’t opened.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Size the storm’s problems",
+   "why": "After a big storm, problems come in all sizes. Stretch a ring over each one to find out who should fix it."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Build the county map",
+   "why": "Build a map one piece at a time to read who does what. Then find the proof in two real photos and send the right crew."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Address two letters",
+   "why": "Answer three questions. Address two envelopes. Then write your notebook entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Our plan hit a snag!",
+  "opening": [
+   {
+    "t": "We’re still taking {route}, but this morning our plan hit a snag.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "This morning our plan hit a snag.",
+    "ifRoute": "none"
+   },
+   "All three locks were open. But when I pushed the door with 13, one lock slid shut again and jammed.",
+   "I don’t know who to ask for help. Today’s file is about that same question in Florida: when something breaks, do you ask local government or state government? Start in the Learn tab (tab 1). Scroll down to the file card and size up some real storm problems.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s size them up",
+      "go": true,
+      "reply": "Read the problem card. Then stretch the ring until it covers everyone the problem touches, and lock it in."
+     },
+     {
+      "t": "What storm?",
+      "reply": "Tropical Storm Fay, in August 2008. It crossed Florida slowly and dropped more than 20 inches of rain in some places. Roads flooded all over the state."
+     },
+     {
+      "t": "Which lock jammed?",
+      "reply": "The top one, MAKE THE PLAN. It’s just one lock on one door. I’ll ask you who should fix it at the end of this file."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). You’ll build a county map one piece at a time. Then you’ll look for proof in two real photos."
+     },
+     {
+      "t": "Did Fay really do that?",
+      "reply": "Yes. Three of those problems are real. A photographer took pictures of two of the flooded roads in 2008, and you’ll study them in tab 2."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Who took the photos?",
+      "reply": "George Armstrong. He took pictures for FEMA, the national government’s disaster-help agency. The national government is a third level, bigger than the state."
+     }
+    ]
+   },
+   "fix": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "The Help Desk for your hallway",
+      "end": true,
+      "reply": "That’s what Florida taught me, too. A small problem goes to the closest helper first. I asked the Help Desk, and look what came back:",
+      "then": [
+       {
+        "card": {
+         "from": "Canvas Help Desk · Hallway 13",
+         "h": "REPAIR TICKET · FILE 12",
+         "sub": "One jammed lock",
+         "lines": [
+          [
+           "Problem",
+           "One lock on the door with 13 is stuck"
+          ],
+          [
+           "Size",
+           "One door in one hallway"
+          ],
+          [
+           "Sent to",
+           "The hallway Help Desk, the closest helper"
+          ]
+         ],
+         "stamp": "FIXED",
+         "style": "order"
+        }
+       },
+       {
+        "t": "The lock clicked open! As soon as the door opens, every room is coming with me down the Main Hall.",
+        "ifRoute": "hall"
+       },
+       {
+        "t": "The lock clicked open! As soon as the door opens, I’ll go down the Back Stairs first and send help back.",
+        "ifRoute": "stairs"
+       },
+       {
+        "t": "The lock clicked open!",
+        "ifRoute": "none"
+       },
+       {
+        "t": "Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+        "choice": "done"
+       }
+      ]
+     },
+     {
+      "t": "The Main Office for all of Canvas",
+      "end": true,
+      "reply": "I tried that. The Main Office wrote back: “One lock on one door is a job for your hallway’s Help Desk. We fix problems that touch every course.” So I asked the Help Desk, and look what came back:",
+      "then": [
+       {
+        "card": {
+         "from": "Canvas Help Desk · Hallway 13",
+         "h": "REPAIR TICKET · FILE 12",
+         "sub": "One jammed lock",
+         "lines": [
+          [
+           "Problem",
+           "One lock on the door with 13 is stuck"
+          ],
+          [
+           "Size",
+           "One door in one hallway"
+          ],
+          [
+           "Sent to",
+           "The hallway Help Desk, the closest helper"
+          ]
+         ],
+         "stamp": "FIXED",
+         "style": "order"
+        }
+       },
+       {
+        "t": "The lock clicked open! As soon as the door opens, every room is coming with me down the Main Hall.",
+        "ifRoute": "hall"
+       },
+       {
+        "t": "The lock clicked open! As soon as the door opens, I’ll go down the Back Stairs first and send help back.",
+        "ifRoute": "stairs"
+       },
+       {
+        "t": "The lock clicked open!",
+        "ifRoute": "none"
+       },
+       {
+        "t": "Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+        "choice": "done"
+       }
+      ]
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Is the door open now?",
+      "reply": "Not yet. Canvas wants to know one more thing before it opens: can we make wise choices with money? That’s next time, so stay with me."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You sized every problem. The small ones went to the city or the county. The ones that crossed county lines went to the state. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The map is built, you found the proof in both photos, and every crew went to the right road. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then address two envelopes and write your entry."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file! Now help me with my jammed lock. It’s one lock, on one door, in one hallway of Canvas. Who should I ask to fix it?",
+     "choice": "fix"
+    }
+   ]
+  }
+ },
+ "lens": "Service means stepping up when your community needs help. Today you are a government problem-solving analyst, someone who studies which level of government handles a problem and how citizens can help.",
+ "scene1": {
+  "type": "sizering",
+  "kicker": "Size the storm’s problems",
+  "h": "In August 2008, Tropical Storm Fay flooded Florida. Who should fix each problem? First find out how big it is.",
+  "voice": "Read the problem card. Drag the slider (or tap a size) to stretch the ring over everyone the problem touches. Then tap Lock in this size.",
+  "why": {
+   "icon": "⭕",
+   "q": "Why a ring?",
+   "t": "A problem that touches one neighborhood needs a different helper than a problem that touches the whole state. <b>Local</b> government, your city or county, is the government closest to home. <b>State</b> government works for all of Florida. So before you ask for help, size the problem. That’s why you stretch a ring over everyone it touches."
+  },
+  "alt": "A map of Florida. A ring grows around a pin to show how many people a problem touches.",
+  "sizes": [
+   {
+    "t": "One neighborhood",
+    "sub": "a few streets"
+   },
+   {
+    "t": "One city",
+    "sub": "everyone in one city or town"
+   },
+   {
+    "t": "One county",
+    "sub": "a whole county, inside and outside its cities"
+   },
+   {
+    "t": "Many counties",
+    "sub": "more than one county"
+   },
+   {
+    "t": "All of Florida",
+    "sub": "people all across the state"
+   }
+  ],
+  "radii": [
+   4,
+   8,
+   14,
+   30,
+   0
+  ],
+  "probs": [
+   {
+    "id": "tree",
+    "tag": "Imagine",
+    "place": "Tallahassee",
+    "lon": -84.28,
+    "lat": 30.44,
+    "size": 0,
+    "who": "the city",
+    "ico": "🌳",
+    "t": "A tree falls across one street in a Tallahassee neighborhood. The families on that street can’t drive out.",
+    "reply": "A blocked city street is the city’s job. A neighbor can call City Hall.",
+    "high": "Too big. Only the families on a few streets are stuck. Pull the ring in."
+   },
+   {
+    "id": "water",
+    "tag": "Imagine",
+    "place": "Melbourne",
+    "lon": -80.61,
+    "lat": 28.08,
+    "size": 1,
+    "who": "the city",
+    "ico": "🚰",
+    "t": "In Melbourne, the storm knocks out the power at the city’s water plant. Nobody in the whole city has clean tap water.",
+    "reply": "Clean water for a city is the city’s job, so the city fixes its water plant.",
+    "low": "Too small. Every home in the city lost its water, not just one neighborhood.",
+    "high": "Too big. The water plant serves one city. Pull the ring in."
+   },
+   {
+    "id": "leon",
+    "tag": "Real · 2008",
+    "place": "Leon County",
+    "lon": -84.28,
+    "lat": 30.46,
+    "size": 2,
+    "who": "the county",
+    "ico": "🚜",
+    "t": "Flooding damages the drains along a county road in Leon County. County roads run all over a county, inside and outside its cities.",
+    "reply": "A county road is the county’s job. Leon County sent its own road crew.",
+    "low": "Too small. County roads run all over the county, not just inside one city. Stretch the ring wider.",
+    "high": "Too big. This road is inside one county. Pull the ring in."
+   },
+   {
+    "id": "sr46",
+    "tag": "Real · 2008",
+    "place": "State Road 46",
+    "lon": -81.05,
+    "lat": 28.76,
+    "size": 3,
+    "who": "the state",
+    "ico": "🚧",
+    "t": "State Road 46 is under water and closed near the town of Geneva. This road crosses four counties, and drivers from all of them use it.",
+    "reply": "A road that crosses county lines is too big for one county. State roads are the state’s job.",
+    "low": "Too small. This road crosses four counties. Stretch the ring wider.",
+    "high": "Not quite that big. This road crosses four counties, not the whole state."
+   },
+   {
+    "id": "all",
+    "tag": "Real · 2008",
+    "place": "Florida",
+    "lon": -81.7,
+    "lat": 28.2,
+    "size": 4,
+    "who": "the state",
+    "ico": "🏛️",
+    "t": "Fay floods homes and roads all across Florida at the same time. Many counties need help at once.",
+    "reply": "When many counties need help at once, the governor and the state’s emergency team send help where it is needed most.",
+    "low": "Too small. Fay crossed the whole state. Stretch the ring all the way."
+   }
+  ],
+  "ask": {
+   "q": "So how can you tell which government to ask?",
+   "opts": [
+    {
+     "t": "Always start with the governor. The governor is in charge of everything.",
+     "miss": "The governor leads the state, but a fallen tree on one street is the city’s job. Look at your list again."
+    },
+    {
+     "t": "Think about how many people the problem touches. Close to home is local. Across many counties is the state.",
+     "ok": true,
+     "reply": "Yes. Size the problem first. The closer to home it is, the more local the helper."
+    },
+    {
+     "t": "It doesn’t matter. Any government can fix any problem.",
+     "miss": "Each level has its own jobs. Look at your list: the city, the county, and the state each fixed something different."
+    }
+   ]
+  },
+  "win": "<b>Size it first.</b> A problem close to home goes to the city or the county. A problem that crosses county lines goes to the state."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Build the county map in Learn the Story. Each piece opens its part of the reading.",
+    "Find the proof: tap the thing in each photo that proves whose job it is. Then tap every gold number.",
+    "Send the crew: tap a crew, then the job it should take. Then answer one question."
+   ]
+  },
+  "reading": {
+   "type": "countymap",
+   "activity": "Matching Problems to the Right Level",
+   "why": {
+    "icon": "🗺️",
+    "q": "Why build a map?",
+    "t": "Florida has 67 counties. Each county holds cities and towns, plus land that is outside any city. This map shows one made-up county, so you can see how the pieces fit. City streets, county roads, and a state highway each belong to a different government. That’s why you build the map one piece at a time."
+   },
+   "alt": "A map of one made-up Florida county. It gets a county line, a city, a house outside the city, a county road, and a state highway, one piece at a time.",
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Florida has one state government"
+    },
+    {
+     "id": "p2",
+     "match": "^City government"
+    },
+    {
+     "id": "p3",
+     "match": "^County government"
+    },
+    {
+     "id": "p4",
+     "match": "^State government"
+    },
+    {
+     "id": "p5",
+     "match": "^How citizens take part"
+    },
+    {
+     "id": "p6",
+     "match": "^Why it matters"
+    }
+   ],
+   "parts": [
+    {
+     "id": "county",
+     "t": "One state, many local governments",
+     "ico": "🧭",
+     "paras": [
+      "p1"
+     ],
+     "act": "✏️ Draw the county line",
+     "post": [
+      "county"
+     ]
+    },
+    {
+     "id": "city",
+     "t": "City government",
+     "ico": "🏙️",
+     "paras": [
+      "p2"
+     ],
+     "ask": {
+      "q": "A city is going on the map. Which of these does a city take care of?",
+      "opts": [
+       {
+        "t": "Every road in Florida.",
+        "miss": "That’s far too much for one city. A city takes care of what is inside its own limits."
+       },
+       {
+        "t": "The streets, streetlights, and parks inside the city.",
+        "ok": true
+       },
+       {
+        "t": "Nothing. The state does it all.",
+        "miss": "The state handles big problems that touch all of Florida. Who takes care of the street in front of a house in the city?"
+       }
+      ]
+     },
+     "post": [
+      "city"
+     ]
+    },
+    {
+     "id": "cnty",
+     "t": "County government",
+     "ico": "🏡",
+     "paras": [
+      "p3"
+     ],
+     "pre": [
+      "house"
+     ],
+     "focus": "house",
+     "ask": {
+      "q": "Look at the house on the map. This family lives outside the city limits. Who is their local government?",
+      "opts": [
+       {
+        "t": "They don’t have one. Only people in cities have local government.",
+        "miss": "Every Floridian has a local government. Look at the map: what is this house still inside?"
+       },
+       {
+        "t": "The county.",
+        "ok": true
+       },
+       {
+        "t": "The city anyway, because it is close.",
+        "miss": "The city’s line stops before this house. What bigger area is the house still inside?"
+       }
+      ]
+     },
+     "post": [
+      "croad"
+     ]
+    },
+    {
+     "id": "state",
+     "t": "State government",
+     "ico": "🛣️",
+     "paras": [
+      "p4"
+     ],
+     "ask": {
+      "q": "One more road is going in. It runs across this county and on into other counties. Who should build it and fix it?",
+      "opts": [
+       {
+        "t": "The city, because the road passes near it.",
+        "miss": "This road leaves the city and even leaves the county. Who works for all the counties?"
+       },
+       {
+        "t": "This county, all the way to the end.",
+        "miss": "A county’s work stops at the county line. This road keeps going."
+       },
+       {
+        "t": "The state.",
+        "ok": true
+       }
+      ]
+     },
+     "post": [
+      "hwy"
+     ]
+    },
+    {
+     "id": "act",
+     "t": "How citizens take part",
+     "ico": "🗣️",
+     "paras": [
+      "p5"
+     ],
+     "taps": {
+      "q": "A streetlight is out on a city street. Tap the place on the map where you would take that problem.",
+      "need": [
+       "cityhall"
+      ],
+      "miss": {
+       "county": "The county building takes care of county roads and the library. This streetlight is on a city street.",
+       "capitol": "Tallahassee handles problems that touch the whole state. This is one streetlight on one city street.",
+       "house": "That’s a family’s house. Which building works for the whole city?"
+      }
+     }
+    },
+    {
+     "id": "why",
+     "t": "Why it matters",
+     "ico": "🙋",
+     "paras": [
+      "p6"
+     ],
+     "taps": {
+      "q": "Tap all three places to see who speaks for you there: City Hall, the County building, and the sign to Tallahassee.",
+      "need": [
+       "cityhall",
+       "county",
+       "capitol"
+      ],
+      "missT": "That’s a family’s house. Tap City Hall, the County building, and the sign to Tallahassee.",
+      "countT": "places tapped.",
+      "whoT": "Who speaks for me?",
+      "who": {
+       "cityhall": [
+        "City Hall",
+        "your mayor and your city council"
+       ],
+       "county": [
+        "County building",
+        "your county commissioners, the people on the county commission"
+       ],
+       "capitol": [
+        "Tallahassee",
+        "your state representative, your state senator, and the governor"
+       ]
+      }
+     },
+     "post": [
+      "people"
+     ]
+    }
+   ],
+   "allT": "The map is finished: one city, one county, and one state highway, each with its own government.",
+   "countT": "pieces on the map. Each step opens its part of the reading.",
+   "mid": "cnty"
+  },
+  "evidence": {
+   "type": "proofcrew",
+   "orig": "source-4-12-03-fay-two-roads-2008-original.jpg",
+   "proofK": "Find the proof",
+   "proofAllT": "You found the proof in both photos. Now the gold numbers are on. Tap each one.",
+   "proofs": [
+    {
+     "q": "Left photo: tap the thing that proves this flooded road is a job for the state.",
+     "zone": [
+      17.8,
+      39.9,
+      12.1,
+      27.3
+     ],
+     "side": [
+      0.5,
+      1.5,
+      49.2,
+      90.5
+     ],
+     "sideT": "That’s the right-hand photo. Look at the left one, the flooded road.",
+     "img": "source-4-12-03-proof-trooper.jpg",
+     "okT": "It says STATE TROOPER.",
+     "cap": "The words are painted on the car, and even the license plate says so. State troopers are police officers who work for the Florida Highway Patrol, part of Florida’s state government.",
+     "pickT": "The car in the water",
+     "misses": [
+      {
+       "zone": [
+        35.9,
+        49.2,
+        5.1,
+        15.5
+       ],
+       "t": "A detour sign sends drivers another way. It doesn’t say whose road this is. Look for words painted on something bigger.",
+       "pickT": "A DETOUR sign"
+      },
+      {
+       "zone": [
+        11.7,
+        47.4,
+        5.1,
+        9.3
+       ],
+       "t": "A detour sign sends drivers another way. It doesn’t say whose road this is. Look for words painted on something bigger.",
+       "pickT": "The water"
+      }
+     ],
+     "missT": "Water, sky, and power lines can’t tell you who is in charge. Look for words painted on something."
+    },
+    {
+     "q": "Right photo: tap the thing that proves a local government sent this crew.",
+     "zone": [
+      50.3,
+      17.6,
+      14.3,
+      39.7
+     ],
+     "side": [
+      50.3,
+      1.5,
+      49.2,
+      90.5
+     ],
+     "sideT": "That’s the left-hand photo. Look at the right one, the trucks.",
+     "img": "source-4-12-03-proof-seal.jpg",
+     "okT": "The seal says LEON.",
+     "cap": "The round seal on the truck door shows Florida’s shape and the word LEON. These trucks belong to Leon County, a local government.",
+     "pickT": "The front truck’s door",
+     "misses": [
+      {
+       "zone": [
+        74.9,
+        33.1,
+        20.5,
+        26.0
+       ],
+       "t": "A digging machine could belong to anyone. Look for a seal or a name painted on a door.",
+       "pickT": "The digging machine"
+      },
+      {
+       "zone": [
+        64.6,
+        60.0,
+        35.0,
+        32.0
+       ],
+       "t": "Grass and water can’t tell you who is in charge. Look for a seal painted on a door.",
+       "pickT": "The ditch"
+      }
+     ],
+     "missT": "Trees and sky can’t tell you who is in charge. Look for a seal painted on a door."
+    }
+   ],
+   "kicker": "Send the crew",
+   "h": "One storm, two real roads, and one more. Send each crew to the road that belongs to its government.",
+   "voice": "Tap a crew, then tap its job (or drag the crew there). A wrong crew turns around and tells you why.",
+   "why": {
+    "icon": "🚧",
+    "q": "Why crews?",
+    "t": "A <b>crew</b> is a team of workers. Cities, counties, and the state each have their own road crews, with their own trucks. After a storm, each crew fixes the roads that belong to its government. That’s why you send each crew to its own road."
+   },
+   "crews": [
+    {
+     "id": "city",
+     "ico": "🚛",
+     "t": "City crew",
+     "sub": "works for one city"
+    },
+    {
+     "id": "county",
+     "ico": "🚜",
+     "t": "County road crew",
+     "sub": "works for one county"
+    },
+    {
+     "id": "state",
+     "ico": "🚧",
+     "t": "State road crew",
+     "sub": "Florida Department of Transportation"
+    }
+   ],
+   "jobs": [
+    {
+     "id": "j46",
+     "t": "Photo 1 · State Road 46",
+     "sub": "Under water and closed near Geneva.",
+     "crew": "state",
+     "reply": "State roads belong to the state, so the state’s road crews fix them.",
+     "miss": {
+      "city": "The city crew turns around. State Road 46 isn’t a city street. Look at label 1: who is already there?",
+      "county": "The county crew turns around. This road crosses four counties. Look at label 1: who is already there?"
+     }
+    },
+    {
+     "id": "jleon",
+     "t": "Photo 2 · A Leon County road",
+     "sub": "The flood damaged its drains.",
+     "crew": "county",
+     "reply": "County roads belong to the county. Leon County sent its own trucks.",
+     "miss": {
+      "city": "The city crew turns around. This is a county road. Look at label 4: whose seal is on the truck?",
+      "state": "The state crew turns around. This is a county road, not a state road. Look at label 4: whose seal is on the truck?"
+     }
+    },
+    {
+     "id": "jtree",
+     "t": "No photo · One city street",
+     "sub": "Imagine a tree has fallen across a neighborhood street.",
+     "crew": "city",
+     "reply": "A city street belongs to the city, so a city crew clears it.",
+     "miss": {
+      "county": "The county crew turns around. A street inside a city belongs to the city.",
+      "state": "The state crew turns around. One neighborhood street is far too small for the state."
+     }
+    }
+   ],
+   "ask": {
+    "q": "Tropical Storm Fay damaged roads all over Florida. Did only one level of government go to work?",
+    "opts": [
+     {
+      "t": "Yes. The state fixed every road.",
+      "miss": "Look at photo 2. Whose trucks are those?"
+     },
+     {
+      "t": "No. City, county, and state workers each took care of their own roads.",
+      "ok": true,
+      "reply": "Yes. Each level did its own part. No one government had to fix everything."
+     },
+     {
+      "t": "Yes. Each county fixed everything inside its lines.",
+      "miss": "Look at photo 1. Who is on State Road 46?"
+     }
+    ]
+   },
+   "win": "<b>The proof is in the picture.</b> A state trooper on a state road, and a county seal on a county truck. Each level of government took care of its own."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photos to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 23.8,
+    "y": 71.5,
+    "title": "A State Trooper’s car.",
+    "t": "The words STATE TROOPER are painted on the car. State troopers are police officers who work for the Florida Highway Patrol, part of Florida’s state government."
+   },
+   {
+    "n": "2",
+    "x": 42.4,
+    "y": 56.0,
+    "title": "DETOUR signs.",
+    "t": "A detour is a different way around. These signs tell drivers the road is closed and send them another way."
+   },
+   {
+    "n": "3",
+    "x": 9.0,
+    "y": 77.1,
+    "title": "Water over the road.",
+    "t": "This is State Road 46 near Geneva. FEMA’s caption says Tropical Storm Fay dumped 20 inches of rain farther up the St. Johns River, and the water rose over the road."
+   },
+   {
+    "n": "4",
+    "x": 57.9,
+    "y": 43.0,
+    "title": "The seal on the door.",
+    "t": "The round seal shows Florida’s shape and the word LEON. These dump trucks belong to Leon County, a local government."
+   },
+   {
+    "n": "5",
+    "x": 90.7,
+    "y": 37.4,
+    "title": "A long digging arm.",
+    "t": "A machine reaches its long arm into the ditch beside the road. The crew is repairing what the flood damaged."
+   },
+   {
+    "n": "6",
+    "x": 95.2,
+    "y": 77.1,
+    "title": "The ditch.",
+    "t": "Ditches and drains carry rainwater away from a road. FEMA’s caption says the flood damaged the drains along this Leon County road."
+   }
+  ]
+ },
+ "planner": {
+  "type": "twoletters",
+  "voice": "Fill the first envelope: a local problem, who it goes to, and how a citizen could send it. Then do the same for a state problem. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "✉️",
+   "q": "Why envelopes?",
+   "t": "A letter only gets where it is going if the address is right. A problem works the same way: it gets solved faster when a citizen takes it to the right level of government. A letter with the wrong address comes back stamped RETURN TO SENDER. That’s why you address two envelopes before you write."
+  },
+  "envs": [
+   {
+    "id": "local",
+    "lab": "Envelope 1 · a local problem",
+    "planP": "Local problem",
+    "ico": "🏙️",
+    "q": "👆 Pick a LOCAL problem for envelope 1: one that a city or a county takes care of."
+   },
+   {
+    "id": "state",
+    "lab": "Envelope 2 · a state problem",
+    "planP": "State problem",
+    "ico": "🏛️",
+    "q": "👆 Pick a STATE problem for envelope 2: one that touches people all across Florida."
+   }
+  ],
+  "probs": [
+   {
+    "id": "light",
+    "t": "A streetlight is out on my street",
+    "lvl": "local",
+    "to": "city",
+    "why": "A streetlight on one street is a close-to-home problem. It goes in the local envelope.",
+    "missTo": {
+     "county": "A streetlight on a city street belongs to the city. Try again.",
+     "state": "Tallahassee handles problems that touch the whole state. This is one streetlight."
+    }
+   },
+   {
+    "id": "play",
+    "t": "The playground at the city park is broken",
+    "lvl": "local",
+    "to": "city",
+    "why": "A city park is close to home. It goes in the local envelope.",
+    "missTo": {
+     "county": "This is a city park, so the city takes care of it.",
+     "state": "A city park belongs to the city, not the state."
+    }
+   },
+   {
+    "id": "lib",
+    "t": "The county library should stay open later",
+    "lvl": "local",
+    "to": "county",
+    "why": "A county library serves one county. It goes in the local envelope.",
+    "missTo": {
+     "city": "This is the county’s library. Who runs the county?",
+     "state": "One county’s library is a local problem. Who runs the county?"
+    }
+   },
+   {
+    "id": "bridge",
+    "t": "A bridge on a state highway needs repair",
+    "lvl": "state",
+    "to": "state",
+    "why": "State highways and bridges belong to the state. This one goes in the state envelope."
+   },
+   {
+    "id": "learn",
+    "t": "What every Florida fourth grader learns in math should change",
+    "lvl": "state",
+    "to": "state",
+    "why": "The standards are the same all across Florida. This one goes in the state envelope."
+   },
+   {
+    "id": "park",
+    "t": "A state park needs better trails",
+    "lvl": "state",
+    "to": "state",
+    "why": "State parks belong to the state. This one goes in the state envelope."
+   }
+  ],
+  "addr": [
+   {
+    "id": "city",
+    "t": "City Hall",
+    "sub": "the mayor and city council",
+    "miss": "City Hall works for one city. This problem is bigger than that. Who takes care of it?"
+   },
+   {
+    "id": "county",
+    "t": "The county commission",
+    "sub": "elected to run the county",
+    "miss": "The county commission works for one county. Who takes care of this problem?"
+   },
+   {
+    "id": "state",
+    "t": "Tallahassee",
+    "sub": "your state lawmakers and the governor",
+    "miss": "Tallahassee handles problems that touch the whole state. This one is close to home."
+   },
+   {
+    "id": "dc",
+    "t": "Washington, D.C.",
+    "sub": "the President",
+    "miss": "The President works for the whole country. This is a Florida problem."
+   }
+  ],
+  "ways": [
+   {
+    "id": "meet",
+    "ico": "🗣️",
+    "t": "Speak at a public meeting"
+   },
+   {
+    "id": "letter",
+    "ico": "✉️",
+    "t": "Write a letter or an email"
+   },
+   {
+    "id": "call",
+    "ico": "📞",
+    "t": "Make a phone call"
+   },
+   {
+    "id": "petition",
+    "ico": "📝",
+    "t": "Start a petition"
+   }
+  ],
+  "labels": {
+   "p": "PROBLEM",
+   "a": "TO",
+   "w": "SENT BY"
+  },
+  "stamp": "RETURN TO SENDER",
+  "seal": "SENT",
+  "planA": "Goes to",
+  "planW": "How",
+  "doneT": "Both letters are on their way. Now write your own sentences in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "a local job",
+    "rx": "local|city|cities|town|county|counties|mayor|council|commission|street|park|librar|streetlight|garbage|trash|sidewalk|sheriff|police|fire"
+   },
+   {
+    "t": "a state job",
+    "rx": "state|florida|governor|tallahassee|highway|bridge|standard|licens|legislat|lawmak|senator|representative|everglades|trooper"
+   },
+   {
+    "t": "an example problem",
+    "rx": "streetlight|light (is|was) out|pothole|playground|broken|flood|fallen|tree|closed|repair|fix|needs?|problem|damag|open later|trail|under ?water"
+   },
+   {
+    "t": "how a citizen helps",
+    "rx": "meeting|letter|email|call|phone|petition|speak|spoke|write|wrote|ask|tell|told|contact|sign|go to"
+   },
+   {
+    "t": "the difference",
+    "rx": "differen|but |while|close to home|small|bigger|big |whole state|all of florida|across|right level|level|closest|touch"
+   }
+  ],
+  "lines": [
+   "Start with local government: “Local government takes care of…”",
+   "Good. Now give one real problem a city or a county would fix.",
+   "Now the state: what does state government take care of? Give one example problem.",
+   "How could a citizen get each problem to the right place? A meeting, a letter, a call, or a petition?",
+   "Last, say how the two levels are different. Then read it over once."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the storm problems, your county map, and the two real photos."
+  },
+  {
+   "t": "Plan",
+   "w": "Address two envelopes: a local problem and a state problem, who each one goes to, and how to send it."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Historian’s Notebook entry. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Notebook Entry: Local and State Government"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "workloose",
+  "kicker": "Work it loose",
+  "h": "solv / solut = loosen",
+  "root": "solv",
+  "hl": "solut|solv",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match works the jammed lock one notch looser.",
+  "why": {
+   "icon": "🔐",
+   "q": "Why a jammed lock?",
+   "t": "<b>Solv</b> and <b>solut</b> come from the Latin word <i>solvere</i>, “to loosen” or “to untie.” To solve a problem is to work it loose, like a lock that is stuck. That’s why each word you match works this jammed lock one notch looser."
+  },
+  "boardT": "Notches loosened",
+  "words": [
+   {
+    "w": "solve",
+    "m": "to find the answer to a problem",
+    "miss": "When you find the answer to a problem, you ___ it.",
+    "say": "Solve. To find the answer to a problem."
+   },
+   {
+    "w": "solution",
+    "m": "the answer to a problem",
+    "miss": "The answer itself is called the…",
+    "say": "Solution. The answer to a problem."
+   },
+   {
+    "w": "resolve",
+    "m": "to end a problem or a disagreement for good",
+    "miss": "To end a disagreement for good is to ___ it.",
+    "say": "Resolve. To end a problem or a disagreement for good."
+   },
+   {
+    "w": "dissolve",
+    "m": "to mix into a liquid and seem to disappear",
+    "miss": "Sugar does this in water. It comes apart and seems to disappear.",
+    "say": "Dissolve. To mix into a liquid and seem to disappear."
+   }
+  ],
+  "win": "It’s loose! The lock springs open."
+ },
+ "cabinet": {
+  "n": 12
+ },
+ "notes": {
+  "learned": [
+   "Florida has one state government, 67 counties, and more than 400 cities, towns, and villages. Each one has a government of its own.",
+   "Local government is the government closest to home: your city or your county.",
+   "A city is led by a mayor and a city council. Cities take care of city streets, streetlights, city parks, police and fire departments, garbage pickup, clean water, and zoning.",
+   "A county is run by a county commission. Counties take care of county roads, libraries, county parks, the sheriff’s office, and land records. Almost half of Floridians live outside any city, so the county is their local government.",
+   "The state is led by the governor, and state senators and representatives make its laws in Tallahassee. The state takes care of state highways and bridges, standards for what students learn, state parks, and licenses.",
+   "To know who to ask, size the problem: how many people does it touch? Close to home is local. Across many counties is the state.",
+   "Citizens can speak at a meeting, write a letter, make a phone call, or sign a petition. The key is to bring the problem to the right level.",
+   "After Tropical Storm Fay in 2008, a state trooper was on flooded State Road 46, and Leon County’s own trucks repaired a county road. Each level took care of its own."
+  ],
+  "vocab": [
+   [
+    "level",
+    "one layer of government, like city, county, or state"
+   ],
+   [
+    "responsibility",
+    "a job that someone is in charge of"
+   ],
+   [
+    "Legislature",
+    "Florida’s state lawmakers: the state senators and state representatives"
+   ],
+   [
+    "statewide",
+    "the same all across the state"
+   ],
+   [
+    "participate",
+    "to take part"
+   ],
+   [
+    "local",
+    "close to home: your city or your county"
+   ],
+   [
+    "mayor",
+    "the elected leader of a city"
+   ],
+   [
+    "city council",
+    "a small group voters elect to make a city’s rules (some cities call it a city commission)"
+   ],
+   [
+    "zoning",
+    "rules about what can be built where"
+   ],
+   [
+    "county commission",
+    "a group voters elect to run a county"
+   ],
+   [
+    "standards",
+    "the list of what students should learn in each grade"
+   ],
+   [
+    "license",
+    "official permission to do a job"
+   ],
+   [
+    "petition",
+    "a letter that many people sign to ask for a change"
+   ],
+   [
+    "advocate",
+    "to speak up for something"
+   ],
+   [
+    "detour",
+    "a different way around a closed road"
+   ],
+   [
+    "crew",
+    "a team of workers"
+   ],
+   [
+    "seal",
+    "a round picture that stands for a government"
+   ],
+   [
+    "state trooper",
+    "a police officer who works for the state"
+   ],
+   [
+    "solve",
+    "to find the answer to a problem"
+   ],
+   [
+    "solution",
+    "the answer to a problem"
+   ],
+   [
+    "resolve",
+    "to end a problem or a disagreement for good"
+   ],
+   [
+    "dissolve",
+    "to mix into a liquid and seem to disappear"
+   ]
+  ],
+  "wordParts": "solv / solut = loosen (from the Latin solvere, “to loosen, to untie”): solve, solution, resolve, dissolve"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "two local jobs",
+    "groups": [
+     "sidewalk|pothole|\\broads?\\b|\\bstreets?\\b",
+     "streetlight|street light|\\blights?\\b",
+     "park|playground",
+     "police|fire",
+     "garbage|trash",
+     "water|sewer",
+     "zoning|built where|buildings?",
+     "libr?ar",
+     "sheriff",
+     "records|who owns"
+    ],
+    "n": 2
+   },
+   {
+    "t": "city or county",
+    "rx": "city|cities|town|county|counties|local|mayor|council|commission",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "two state jobs",
+    "groups": [
+     "highway|bridge|state roads?",
+     "standard|what (students|kids|we) learn|school|education|tests?\\b|grade",
+     "state parks?|everglades|wildlife|land|environment|protect",
+     "licens|doctor|teacher",
+     "money|budget|spend",
+     "\\blaws?\\b",
+     "trooper|highway patrol",
+     "emergenc|storm|hurricane"
+    ],
+    "n": 2
+   },
+   {
+    "t": "the state",
+    "rx": "state|florida|governor|tallahassee|legislat|lawmak",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a question to ask yourself",
+    "rx": "who|how (many|big|far)|size|touch|affect|reach|where|which|what kind|close to home|near|neighborhood|whole state|all of florida|across|big|small",
+    "n": 1
+   },
+   {
+    "t": "local or state",
+    "rx": "local|city|county|state|level",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the county map you built in Learn the Story on tab 2.",
+   "The city and the county each had their own parts of the map. What does a city take care of? What does a county take care of?",
+   "Try this shape: “Local government takes care of ___. It also takes care of ___.”"
+  ],
+  "journal-q2": [
+   "Look at the State government part of your county map, and at photo 1 on tab 2.",
+   "The state handles problems that touch people all across Florida. Which road was the state’s job? What else does the state do?",
+   "Try this shape: “The state takes care of ___. It also ___.”"
+  ],
+  "journal-q3": [
+   "Think about the Learn tab (tab 1), where you stretched a ring over each problem.",
+   "Before you ask for help, size the problem. How many people does it touch? Is it close to home, or all across Florida?",
+   "Try this shape: “First I would ask myself ___. If the problem is ___, I would contact ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: almost half of Floridians live outside any city. How is their local government different?",
+  "journal-q2": "Go further: what could go wrong if each county wrote its own rules for a highway that crosses four counties?",
+  "journal-q3": "Go further: after a huge storm, city, county, and state crews all go to work. How do you think they decide who does what?"
+ },
+ "quizMiss": [
+  {
+   "a": "A pothole on your own street is close to home, too small for the state. Look at the Learn tab (tab 1): who clears one neighborhood street?",
+   "b": "The federal government works for the whole country. Look at the Learn tab (tab 1): who clears one neighborhood street?"
+  },
+  {
+   "a": "A mayor leads one city. Standards are the same all across Florida. Look at the State government part of your county map on tab 2.",
+   "c": "A principal leads one school. Standards are the same all across Florida. Look at the State government part of your county map on tab 2."
+  },
+  {
+   "b": "Waiting doesn’t tell anyone about the problem. Look at How citizens take part on your county map on tab 2.",
+   "c": "Moving away doesn’t fix the problem. Look at How citizens take part on your county map on tab 2."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Size it first",
+   "at": "scene1",
+   "script": "Last spring, a huge puddle sat on my street for a week. I wanted to call the governor! Then I asked myself one question: how many people does this touch? Just my street. So I called City Hall, and a city crew came. Now you try it with a real storm. Read the problem card. Stretch the ring with the slider. Then lock it in."
+  },
+  {
+   "slot": "guide2",
+   "label": "The size told you",
+   "at": "s1done",
+   "script": "You sized all five problems. One neighborhood and one city went to the city. One county went to the county. Many counties and all of Florida went to the state. The size told you who to ask. Next, go to the Explore tab, tab 2. You’ll build a county map."
+  },
+  {
+   "slot": "guide3",
+   "label": "Build the map",
+   "at": "explore",
+   "script": "This map starts almost empty. You’ll add one piece at a time: the county line, a city, a county road, and a state highway. Each piece opens its part of the reading. Watch for the house outside the city limits. It has a question for you. Start by drawing the county line."
+  },
+  {
+   "label": "FEMA’s own words",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "who": "Narrator",
+     "script": "A photo caption from FEMA, the Federal Emergency Management Agency. Geneva, Florida, August 28, 2008. Tropical Storm Fay has closed State Road 46 by dumping 20 inches of rain upstream in the St. John’s River."
+    },
+    {
+     "slot": "guide4b",
+     "script": "That caption names the road. But the photo itself holds proof, too. Look at the left photo, and tap the thing that proves this road is the state’s job. Then do the same for the right photo. After that, the gold numbers come on, and you can send each crew to its road."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Address it right",
+   "at": "plan",
+   "script": "Once I mailed a birthday card to my grandma, and I wrote the wrong town on it. Two weeks later it came back, stamped return to sender. A problem works the same way. Send it to the wrong level, and it comes right back. Fill the first envelope with a local problem, who it goes to, and how to send it. Then fill the second one for the state. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^question$",
+    "sel": ".spk-szr-slide .q",
+    "fx": "trace",
+    "scroll": true
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-szr-card",
+    "fx": "pop",
+    "tag": "read me"
+   },
+   {
+    "at": "^ring$",
+    "sel": ".spk-szr-mapw",
+    "fx": "glow"
+   },
+   {
+    "at": "^slider$",
+    "sel": ".spk-szr-slide input",
+    "fx": "point"
+   },
+   {
+    "at": "^lock$",
+    "sel": ".spk-szr-go",
+    "fx": "pop"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^five$",
+    "sel": ".spk-szr-list",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^city$",
+    "sel": ".spk-szr-list li",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^county$",
+    "sel": ".spk-szr-list li",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^state$",
+    "sel": ".spk-szr-list li",
+    "i": 3,
+    "fx": "pop"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^map$",
+    "sel": ".spk-cmap-mapw",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^county$",
+    "sel": ".spk-cmap-map .pc[data-p=\"county\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^city$",
+    "sel": ".spk-cmap-map .pc[data-p=\"city\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^highway$",
+    "sel": ".spk-cmap-map .pc[data-p=\"hwy\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^house$",
+    "sel": ".spk-cmap-map .pc[data-p=\"house\"]",
+    "fx": "glow"
+   },
+   {
+    "at": "^Start$",
+    "sel": ".spk-cmap-ctl",
+    "fx": "point"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^caption$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Geneva$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow"
+   },
+   {
+    "at": "^46$",
+    "sel": ".spk-prf-top",
+    "fx": "pop"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^photo$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^tap$",
+    "sel": ".spk-prf-top .q",
+    "fx": "trace"
+   },
+   {
+    "at": "^right$",
+    "sel": ".spk-prf-top",
+    "fx": "pop"
+   },
+   {
+    "at": "^numbers$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow"
+   },
+   {
+    "at": "^crew$",
+    "sel": ".spk-prf-crews",
+    "fx": "pop",
+    "scroll": true
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^stamped$",
+    "sel": ".spk-rts-env",
+    "i": 0,
+    "fx": "wiggle"
+   },
+   {
+    "at": "^first$",
+    "sel": ".spk-rts-env",
+    "i": 0,
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^second$",
+    "sel": ".spk-rts-env",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^notes$",
+    "sel": ".spk-plan",
+    "fx": "glow"
+   },
+   {
+    "at": "^3$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,130 +3483,73 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Local and State Government Problem-Solving ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="After a storm in Florida, a wet road splits in two: a small neighborhood street with houses, traffic cones and a fallen palm frond, and a wide highway that runs to the horizon. Puddles shine and the sun breaks through the clouds.">
 <defs>
-  <linearGradient id="h1203sky" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#e8d8c4"/>
-    <stop offset="50%" stop-color="#d0dce8"/>
-    <stop offset="100%" stop-color="#b8c8d8"/>
-  </linearGradient>
-  <linearGradient id="h1203road" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#8a8078"/>
-    <stop offset="100%" stop-color="#7a7068"/>
-  </linearGradient>
+  <linearGradient id="b1203sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#55637A"/><stop offset=".45" stop-color="#8E98A8"/><stop offset=".75" stop-color="#F2C98C"/><stop offset="1" stop-color="#FBE3B0"/></linearGradient>
+  <radialGradient id="b1203sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6CF"/><stop offset=".4" stop-color="#FFDC8A" stop-opacity=".9"/><stop offset="1" stop-color="#FFC56B" stop-opacity="0"/></radialGradient>
+  <linearGradient id="b1203road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6C7682"/><stop offset="1" stop-color="#3D4650"/></linearGradient>
+  <linearGradient id="b1203grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FA662"/><stop offset="1" stop-color="#4E7A45"/></linearGradient>
+  <linearGradient id="b1203pud" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9D6E2"/><stop offset=".6" stop-color="#FBE3B0"/><stop offset="1" stop-color="#DDE6EE"/></linearGradient>
   <style>
-    .h1203-blink { animation: h1203-blink 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1203-blink { 0%,45% { opacity: 1; } 50%,95% { opacity: 0.2; } 100% { opacity: 1; } }
-    .h1203-float { animation: h1203-float 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1203-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-    .h1203-drift { animation: h1203-drift 9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1203-drift { 0%,100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+    .b1203cloud{animation:b1203drift 70s linear infinite}
+    .b1203cloud.c2{animation-duration:95s;animation-delay:-40s}
+    @keyframes b1203drift{from{transform:translateX(-50px)}to{transform:translateX(50px)}}
+    .b1203sun{animation:b1203glow 7s ease-in-out infinite;transform-origin:640px 78px}
+    @keyframes b1203glow{50%{transform:scale(1.07);opacity:.88}}
+    .b1203ray{animation:b1203ray 7s ease-in-out infinite}
+    @keyframes b1203ray{0%,100%{opacity:.16}50%{opacity:.34}}
+    .b1203pud{animation:b1203shim 5s ease-in-out infinite}
+    .b1203pud.p2{animation-delay:1.6s}.b1203pud.p3{animation-delay:3.1s}
+    @keyframes b1203shim{0%,100%{opacity:.78}50%{opacity:1}}
+    .b1203bird{animation:b1203fly 30s linear infinite}
+    @keyframes b1203fly{from{transform:translate(-40px,0)}to{transform:translate(960px,-18px)}}
+    .b1203frond{animation:b1203sway 5s ease-in-out infinite;transform-origin:770px 120px}
+    @keyframes b1203sway{50%{transform:rotate(2deg)}}
+    @media (prefers-reduced-motion: reduce){.b1203cloud,.b1203sun,.b1203ray,.b1203pud,.b1203bird,.b1203frond{animation:none}}
   </style>
 </defs>
-<rect width="920" height="260" fill="url(#h1203sky)"/>
-<!-- Ground -->
-<rect y="200" width="460" height="60" fill="#c4b898"/>
-<rect y="200" width="460" height="60" fill="#9ab87a" x="460"/>
-<rect y="210" width="920" height="50" fill="#8aaa6a"/>
-<!-- Clouds -->
-<g transform="translate(150,20)">
-  <g class="h1203-drift">
-    <ellipse cx="0" cy="0" rx="45" ry="14" fill="white" opacity="0.4"/>
-    <ellipse cx="28" cy="-4" rx="30" ry="10" fill="white" opacity="0.3"/>
-  </g>
+<rect width="920" height="200" fill="url(#b1203sky)"/>
+<circle class="b1203sun" cx="640" cy="78" r="92" fill="url(#b1203sun)"/>
+<circle cx="640" cy="80" r="20" fill="#FFF1BF"/>
+<g class="b1203ray" fill="#FFE9A8"><path d="M640,80 L520,200 L580,200Z"/><path d="M640,80 L690,200 L760,200Z"/><path d="M640,80 L836,200 L900,200Z"/></g>
+<!-- storm clouds moving off to the left -->
+<g class="b1203cloud"><ellipse cx="130" cy="34" rx="150" ry="24" fill="#3F4B60" opacity=".85"/><ellipse cx="250" cy="52" rx="110" ry="18" fill="#4D5A70" opacity=".8"/><ellipse cx="60" cy="60" rx="90" ry="14" fill="#56637A" opacity=".7"/></g>
+<g class="b1203cloud c2"><ellipse cx="470" cy="40" rx="100" ry="14" fill="#7A8698" opacity=".7"/><ellipse cx="560" cy="56" rx="60" ry="9" fill="#C9B79A" opacity=".6"/><ellipse cx="800" cy="38" rx="70" ry="9" fill="#F6D9A8" opacity=".6"/></g>
+<path class="b1203bird" d="M0,60 q5,-5 10,0 q5,-5 10,0" fill="none" stroke="#2A3142" stroke-width="1.6" stroke-linecap="round"/>
+<!-- far tree line -->
+<path d="M0,112 C40,100 70,104 110,108 C150,96 200,100 240,108 C300,98 360,104 420,110 C480,104 540,108 600,112 C680,106 760,108 920,110 L920,126 L0,126Z" fill="#36503F"/>
+<!-- ground -->
+<rect y="118" width="920" height="82" fill="url(#b1203grass)"/>
+<!-- the road: one stem, two branches -->
+<path d="M392,200 L470,200 L476,152 C440,128 340,118 -10,124 L-10,140 C300,134 372,142 404,168Z" fill="url(#b1203road)"/>
+<path d="M392,200 L528,200 L474,150 C500,138 560,126 648,116 L920,104 L920,128 L660,134 C590,140 540,150 520,168Z" fill="url(#b1203road)"/>
+<path d="M392,200 L528,200 L484,156 L412,160Z" fill="#414B55"/>
+<!-- highway center line, running to the horizon -->
+<path d="M470,196 C500,160 580,136 700,124 L920,114" fill="none" stroke="#F2D25A" stroke-width="2.4" stroke-dasharray="16 12"/>
+<path d="M920,105 L650,117 C566,127 508,139 478,152" fill="none" stroke="#E8ECEF" stroke-width="1.4" opacity=".7"/>
+<!-- guard rail and a blank highway shield -->
+<g stroke="#C9CED4" stroke-width="2"><line x1="690" y1="113" x2="920" y2="101"/><line x1="720" y1="112" x2="720" y2="119"/><line x1="780" y1="109" x2="780" y2="116"/><line x1="840" y1="106" x2="840" y2="113"/><line x1="900" y1="103" x2="900" y2="110"/></g>
+<line x1="546" y1="104" x2="546" y2="136" stroke="#5B6470" stroke-width="2.4"/><path d="M534,86 h24 v13 q0,9 -12,13 q-12,-4 -12,-13Z" fill="#F4F4F0" stroke="#2A3142" stroke-width="1.6"/>
+<!-- neighborhood street: houses, a streetlight, cones, a fallen frond -->
+<g>
+  <rect x="96" y="94" width="40" height="28" fill="#E9DFC8"/><path d="M90,96 L116,76 L142,96Z" fill="#A9553F"/><rect x="111" y="106" width="9" height="16" fill="#5A4024"/>
+  <rect x="166" y="90" width="44" height="30" fill="#DCE7EA"/><path d="M160,92 L188,70 L216,92Z" fill="#6B7C8C"/><rect x="173" y="98" width="9" height="9" fill="#FFE9A8"/><rect x="191" y="102" width="9" height="18" fill="#5A4024"/>
+  <rect x="240" y="92" width="38" height="26" fill="#F1E3B8"/><path d="M234,94 L259,75 L284,94Z" fill="#7A8F5A"/><rect x="254" y="102" width="8" height="16" fill="#5A4024"/>
+  <line x1="318" y1="70" x2="318" y2="120" stroke="#3A4250" stroke-width="2.6"/><path d="M318,70 q11,-5 18,2" fill="none" stroke="#3A4250" stroke-width="2.6"/><circle cx="337" cy="75" r="3.6" fill="#FFE9A8"/>
+  <path d="M52,118 q9,-24 2,-42" fill="none" stroke="#5A4A32" stroke-width="3.4"/><path d="M54,76 q-20,-5 -28,9 M54,76 q-13,-16 -30,-9 M54,76 q4,-18 22,-16 M54,76 q18,-7 27,7 M54,76 q16,2 18,18" fill="none" stroke="#3F6B3A" stroke-width="3.2" stroke-linecap="round"/>
 </g>
-<g transform="translate(700,30)">
-  <g class="h1203-drift">
-    <ellipse cx="0" cy="0" rx="40" ry="12" fill="white" opacity="0.35"/>
-  </g>
-</g>
-<!-- City Hall (left side) -->
-<g transform="translate(100,100)">
-  <g class="h1203-float">
-    <rect x="0" y="20" width="120" height="80" fill="#d8c8a8" stroke="#b0a080" stroke-width="1.5"/>
-    <polygon points="-5,20 60,-5 125,20" fill="#c4b498" stroke="#b0a080" stroke-width="1"/>
-    <!-- Door -->
-    <rect x="45" y="65" width="30" height="35" fill="#6a5040" rx="2"/>
-    <!-- Windows -->
-    <rect x="10" y="35" width="20" height="18" fill="#a0c8e0" stroke="#907858" stroke-width="0.8"/>
-    <rect x="90" y="35" width="20" height="18" fill="#a0c8e0" stroke="#907858" stroke-width="0.8"/>
-    <!-- Clock -->
-    <circle cx="60" cy="8" r="7" fill="#f0e8d0" stroke="#907858" stroke-width="1"/>
-    <line x1="60" y1="8" x2="60" y2="3" stroke="#5a4030" stroke-width="0.8"/>
-    <line x1="60" y1="8" x2="64" y2="8" stroke="#5a4030" stroke-width="0.8"/>
-    <!-- Flag -->
-    <line x1="60" y1="-5" x2="60" y2="-25" stroke="#888" stroke-width="1.5"/>
-    <rect x="60" y="-25" width="18" height="12" fill="#3a5a8c" opacity="0.8"/>
-  </g>
-</g>
-<!-- Road/bridge connecting them -->
-<g transform="translate(250,195)">
-  <g>
-    <rect x="0" y="0" width="420" height="18" rx="2" fill="url(#h1203road)"/>
-    <!-- Lane markings -->
-    <rect x="30" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="90" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="150" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="210" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="270" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="330" y="8" width="30" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-    <rect x="390" y="8" width="20" height="2" rx="1" fill="#e0d880" opacity="0.7"/>
-  </g>
-</g>
-<!-- State Capitol (right side) -->
-<g transform="translate(680,60)">
-  <g class="h1203-float">
-    <rect x="0" y="40" width="160" height="100" fill="#d0d8e0" stroke="#a0a8b0" stroke-width="1.5"/>
-    <!-- Dome -->
-    <path d="M30,40 Q80,0 130,40" fill="#d8d0c0" stroke="#a0a8b0" stroke-width="1"/>
-    <!-- Cupola -->
-    <rect x="72" y="5" width="16" height="15" fill="#d0d8e0" stroke="#a0a8b0" stroke-width="0.8"/>
-    <path d="M70,5 Q80,-8 90,5" fill="url(#h1203road)" stroke="#a0a8b0" stroke-width="0.8"/>
-    <!-- Columns -->
-    <rect x="20" y="40" width="8" height="100" fill="#e0dcd4" stroke="#b0a890" stroke-width="0.5"/>
-    <rect x="50" y="40" width="8" height="100" fill="#e0dcd4" stroke="#b0a890" stroke-width="0.5"/>
-    <rect x="100" y="40" width="8" height="100" fill="#e0dcd4" stroke="#b0a890" stroke-width="0.5"/>
-    <rect x="130" y="40" width="8" height="100" fill="#e0dcd4" stroke="#b0a890" stroke-width="0.5"/>
-    <!-- Door -->
-    <rect x="65" y="100" width="30" height="40" fill="#4a5a6a" rx="3"/>
-    <!-- Windows -->
-    <rect x="25" y="55" width="14" height="16" fill="#a0c0d8" stroke="#8090a0" stroke-width="0.5"/>
-    <rect x="105" y="55" width="14" height="16" fill="#a0c0d8" stroke="#8090a0" stroke-width="0.5"/>
-  </g>
-</g>
-<!-- Traffic light -->
-<g transform="translate(420,110)">
-  <g>
-    <rect x="-1" y="0" width="3" height="90" fill="#555"/>
-    <rect x="-8" y="0" width="16" height="40" rx="3" fill="#333"/>
-    <circle cx="0" cy="10" r="4" fill="#cc3030" opacity="0.3"/>
-    <circle cx="0" cy="22" r="4" fill="#ccaa20" opacity="0.3"/>
-    <g transform="translate(0,34)">
-      <g class="h1203-blink">
-        <circle cx="0" cy="0" r="4" fill="#30cc30"/>
-      </g>
-    </g>
-  </g>
-</g>
-<!-- Park elements - tree -->
-<g transform="translate(540,150)">
-  <g>
-    <rect x="-3" y="20" width="6" height="30" fill="#6a5040"/>
-    <circle cx="0" cy="10" r="22" fill="#5a8a40" opacity="0.8"/>
-    <circle cx="-10" cy="5" r="16" fill="#4a7a35" opacity="0.7"/>
-    <circle cx="10" cy="5" r="16" fill="#68a050" opacity="0.7"/>
-  </g>
-</g>
-<!-- School (small) -->
-<g transform="translate(350,145)">
-  <g>
-    <rect x="0" y="10" width="50" height="40" fill="#c8a878" stroke="#a08060" stroke-width="1"/>
-    <polygon points="-3,10 25,-5 53,10" fill="#b89868" stroke="#a08060" stroke-width="0.8"/>
-    <rect x="18" y="30" width="14" height="20" fill="#5a4030" rx="1"/>
-    <rect x="5" y="18" width="10" height="8" fill="#a0c8e0" stroke="#907858" stroke-width="0.5"/>
-    <rect x="35" y="18" width="10" height="8" fill="#a0c8e0" stroke="#907858" stroke-width="0.5"/>
-  </g>
-</g>
+<g transform="translate(-40,22)"><path d="M232,112 q34,-16 70,-4 q-34,3 -70,4Z" fill="#4E8A42"/><path d="M240,111 l-12,-9 M254,107 l-9,-11 M268,105 l-5,-12 M282,105 l-1,-12 M294,107 l4,-10" fill="none" stroke="#3F6B3A" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(-6,14) scale(1.25)" style="transform-origin:335px 124px"><path d="M330,124 l5,-14 l5,14Z" fill="#F07A2E"/><rect x="332.4" y="116" width="5.2" height="2.6" fill="#FFF"/><rect x="327" y="124" width="16" height="2.4" fill="#C95F1E"/></g>
+<g transform="translate(4,18) scale(1.3)" style="transform-origin:369px 134px"><path d="M364,134 l5.5,-15 l5.5,15Z" fill="#F07A2E"/><rect x="366.6" y="125" width="5.8" height="2.8" fill="#FFF"/><rect x="361" y="134" width="17" height="2.6" fill="#C95F1E"/></g>
+<!-- palms beside the highway -->
+<g class="b1203frond"><path d="M770,120 q6,-26 0,-44" fill="none" stroke="#5A4A32" stroke-width="3.4"/><path d="M770,76 q-20,-6 -30,8 M770,76 q-14,-16 -32,-10 M770,76 q4,-18 22,-16 M770,76 q18,-8 28,6 M770,76 q16,2 18,18" fill="none" stroke="#3F6B3A" stroke-width="3.2" stroke-linecap="round"/></g>
+<path d="M850,112 q4,-18 0,-30" fill="none" stroke="#5A4A32" stroke-width="2.6"/><path d="M850,82 q-14,-4 -20,6 M850,82 q-10,-12 -22,-7 M850,82 q3,-13 16,-12 M850,82 q13,-6 20,5" fill="none" stroke="#3F6B3A" stroke-width="2.6" stroke-linecap="round"/>
+<!-- puddles shining on the wet road -->
+<ellipse class="b1203pud" cx="452" cy="182" rx="40" ry="6" fill="url(#b1203pud)"/>
+<ellipse class="b1203pud p2" cx="590" cy="146" rx="46" ry="5" fill="url(#b1203pud)"/>
+<ellipse class="b1203pud p3" cx="150" cy="132" rx="36" ry="3.4" fill="url(#b1203pud)"/>
+<ellipse class="b1203pud p2" cx="790" cy="120" rx="44" ry="3.4" fill="url(#b1203pud)"/>
+<ellipse cx="80" cy="168" rx="60" ry="6" fill="#BFD6E6" opacity=".5"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3696,5 +5100,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
