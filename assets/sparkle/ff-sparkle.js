@@ -13,12 +13,12 @@
    · quiet lessons (DATA.quiet) drop the party pieces and keep the learning ones
 
    Interaction types (pick per lesson in DATA):
-     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast | tripstrip | sealguess | choir | zoomout | makecall | ageruler | whoami
-     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform | effecttree | network | gifts | shutters | journey | stormtrack | makecase
+     scene1.type   mapquest | habitcard | shiporder | packtrunks | claimcoast | stringboard | drawers | councilcard | mapdesk | buildtown | sitedig | storehouse | castlebuild | homelands | museumshelf | scatterpages | pockets | flagpole | letgo | loadwagon | starsew | cottonbelt | frontpage | amendlocks | erafolders | cersort | traincars | breakfast | predicthear | makedo | warmap | skyline | blackoutcoast | tripstrip | sealguess | choir | zoomout | makecall | ageruler | whoami | telephone
+     explore.reading.type   seasongrid | filesgrid | routemap | stepread | yearslider | ripples | layermap | duet | threewinds | calendar | plazawalk | sunpath | candle | lanterns | trench | highlighter | raisewalls | treatybook | yearwalk | trail | scroll | stormclouds | museumwalk | rebuildwall | treerings | arghouse | investormap | conveyor | album | seedgrow | ticket | priceworth | placetransform | effecttree | network | gifts | shutters | journey | stormtrack | makecase | bindbook
      explore.directive · explore.timelineLast · source.hotspots (tap-to-reveal labels on the source image)
-     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots) | estimate (tap the gold numbers, then slide a guess and see the real number; uses source.hotspots) | envelope (tap the gold numbers, read the archive caption, then open the sealed Scene 1 guesses and judge each; uses source.hotspots + DATA.scene1.cards) | readsigns (tap the gold numbers, pick what each numbered sign asks for, then one question; uses source.hotspots) | minutes (tap the gold numbers, then fill a secretary's minutes card one line at a time; uses source.hotspots) | badges (tap the gold numbers, then pin a badge on each numbered person: what were they doing for their community? then one question; uses source.hotspots) | stampproof (tap the gold numbers, then stamp each detail card with the virtue it proves, or "No proof"; then one question; uses source.hotspots)
-     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch | marker | nameplate | shopsigns | speakercard | keyring | nomination
-     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel | voices | armlink | hellowindow | chamber | raisehands | dignhall
+     explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots) | estimate (tap the gold numbers, then slide a guess and see the real number; uses source.hotspots) | envelope (tap the gold numbers, read the archive caption, then open the sealed Scene 1 guesses and judge each; uses source.hotspots + DATA.scene1.cards) | readsigns (tap the gold numbers, pick what each numbered sign asks for, then one question; uses source.hotspots) | minutes (tap the gold numbers, then fill a secretary's minutes card one line at a time; uses source.hotspots) | badges (tap the gold numbers, then pin a badge on each numbered person: what were they doing for their community? then one question; uses source.hotspots) | stampproof (tap the gold numbers, then stamp each detail card with the virtue it proves, or "No proof"; then one question; uses source.hotspots) | stillhere (tap the gold numbers, then join each old rule to the part of today’s document that still keeps it; a gold thread ties them; then one question; uses source.hotspots)
+     planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch | marker | nameplate | shopsigns | speakercard | keyring | nomination | pamphlet
+     vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel | voices | armlink | hellowindow | chamber | raisehands | dignhall | inkpage
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -135,7 +135,7 @@
       +(B.foot?'<span class="ft">'+esc(B.foot)+'</span>':'')+(B.stamp?'<span class="stp">'+esc(B.stamp)+'</span>':'')+'</div>'; }
   function board(m,sc){ push({f:'b',b:m.board,scene:sc,ts:Date.now()+Math.random()}); if(!m.quiet){ unread++; toast((m.board.from||'Canvas vote board')+': '+(m.board.h||'')); } render(); }
   /* a key card (4.11.06): {card:{from,h,sub,lines:'planner',stamp}} — prints the student's planner lines onto a card */
-  function cardHTML(m){ var K=m.c||{}; return '<div class="spk-msg spk-kc"><span class="from">'+esc(K.from||'Canvas')+'</span><div class="kc"><span class="chip" aria-hidden="true"></span><b class="h">'+esc(K.h||'')+'</b>'+(K.sub?'<span class="sub">'+esc(K.sub)+'</span>':'')+(K.lines||[]).map(function(l){ return '<span class="ln"><em>'+esc(l[0])+'</em> '+esc(l[1])+'</span>'; }).join('')+(K.stamp?'<span class="stp">'+esc(K.stamp)+'</span>':'')+'</div></div>'; }
+  function cardHTML(m){ var K=m.c||{}; return '<div class="spk-msg spk-kc'+(K.style?' kc-'+esc(K.style):'')+'"><span class="from">'+esc(K.from||'Canvas')+'</span><div class="kc"><span class="chip" aria-hidden="true"></span><b class="h">'+esc(K.h||'')+'</b>'+(K.sub?'<span class="sub">'+esc(K.sub)+'</span>':'')+(K.lines||[]).map(function(l){ return '<span class="ln"><em>'+esc(l[0])+'</em> '+esc(l[1])+'</span>'; }).join('')+(K.stamp?'<span class="stp">'+esc(K.stamp)+'</span>':'')+'</div></div>'; }
   function keycard(m,sc){ var K=Object.assign({},m.card); if(K.lines==='planner') K.lines=(typeof R!=='undefined'&&R.planner&&R.planner.lines)?R.planner.lines():[]; push({f:'k',c:K,scene:sc,ts:Date.now()+Math.random()}); if(!m.quiet){ unread++; toast((K.from||'Canvas')+': '+(K.h||'')); } render(); }
   function msgHTML(m){ if(m.f==='k') return cardHTML(m); if(m.f==='b') return boardHTML(m); if(m.f==='r') return '<div class="spk-msg r'+(m.sh?' show':'')+'"><span class="from">'+esc(m.from||'Another room')+'</span><span class="og">'+esc(m.t)+'</span>'+(m.stamp?'<span class="stp">'+esc(m.stamp)+'</span>':'')+(m.en?'<button type="button" class="spk-rtr" data-ts="'+esc(m.ts)+'">'+(m.sh?'In English:':'🔤 Tap to see it in English')+'</button><span class="en">'+esc(m.en)+'</span>':'')+'</div>';
     if(m.f!=='t') return '<div class="spk-msg '+m.f+'">'+esc(m.t)+'</div>'; var k=m.k||sayKey(m.t); probeSay(k); return '<div class="spk-msg t">'+esc(m.t)+'<button type="button" class="spk-say'+(SAY[k]?' ok':'')+(SAYNOW===k?' playing':'')+'" data-k="'+k+'" aria-label="Listen to this text">'+(SAYNOW===k?'❚❚':'▶')+'</button></div>'; }
@@ -8059,6 +8059,236 @@
     paint(); return {done:done};
   };
 
+  /* ---- Scene 1 · Telephone (4.12.01): one rule is passed by word of mouth from room to room. At each hop the rule
+     shows up a little different: tap the word that changed (the line before stays above it to compare). After the
+     last hop, the written copy arrives and is still the same. Then one question.
+     DATA: start {who, words:[…]}, hops [{who, words:[…], changed:<index>, miss}], written {who,t}, ask {q,opts:[{t,ok,miss,reply}]} ---- */
+  MOD.telephone=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var ST=cfg.start||{words:[]}, HP=cfg.hops||[], AK=cfg.ask, N=HP.length; S.tph=S.tph||{k:0,ans:null};
+    var hopsDone=function(){ return S.tph.k>=N; };
+    var askOk=function(){ if(!AK) return true; var o=AK.opts[S.tph.ans]; return !!(o&&o.ok); };
+    var done=function(){ return N>0&&hopsDone()&&askOk(); };
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var g=el('div','spk spk-game spk-tph'), was=null;
+    var rooms=[ST.who||'Me'].concat(HP.map(function(h){ return h.who; }));
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Telephone')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-tph-line" aria-hidden="true">'+rooms.map(function(r,i){ return (i?'<span class="wire"><i></i></span>':'')+'<span class="rm" data-i="'+i+'"><span class="ic">'+(i?'🚪':'🗣️')+'</span><small>'+esc(r)+'</small></span>'; }).join('')+'</div>'
+      +'<div class="spk-tph-say"></div><p class="spk-miss"></p>'
+      +'<div class="spk-tph-paper"><span class="k">'+esc((cfg.written&&cfg.written.who)||'The written copy')+'</span><p></p></div>'
+      +(AK?'<div class="spk-tph-ask"><p class="q">'+esc(AK.q)+'</p><div class="spk-opts">'+AK.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="rp"></p></div>':'')
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var say=g.querySelector('.spk-tph-say'), miss=g.querySelector('.spk-miss');
+    function words(ws,ch,tap){ return ws.map(function(w,i){ return '<span class="w'+(i===ch?' ch':'')+'"'+(tap?' role="button" tabindex="0" data-i="'+i+'"':'')+'>'+esc(w)+'</span>'; }).join(' '); }
+    function paint(anim){ var k=S.tph.k;
+      g.querySelectorAll('.spk-tph-line .rm').forEach(function(r){ var i=+r.dataset.i; r.classList.toggle('on',i<=k); r.classList.toggle('now',!hopsDone()&&i===k+1); });
+      g.querySelectorAll('.spk-tph-line .wire').forEach(function(w,i){ w.classList.toggle('on',i<k); w.classList.toggle('go',anim==='hop'&&i===k-1); });
+      var h='<div class="row said"><span class="who">'+esc(ST.who||'Me')+' '+esc(cfg.saidT||'said:')+'</span><p>'+words(ST.words,-1,false)+'</p></div>';
+      for(var i=0;i<Math.min(k,N);i++) h+='<div class="row heard"><span class="who">'+esc(HP[i].who)+' '+esc(cfg.heardT||'heard:')+'</span><p>'+words(HP[i].words,HP[i].changed,false)+'</p></div>';
+      if(!hopsDone()){ var c=HP[k]; h+='<div class="row heard cur'+(anim==='hop'?' new':'')+'"><span class="who">'+esc(c.who)+' '+esc(cfg.heardT||'heard:')+'</span><p>'+words(c.words,-1,true)+'</p><span class="tip">'+esc(cfg.tapT||'👆 Tap the word that changed.')+'</span></div>'; }
+      say.innerHTML=h;
+      var pp=g.querySelector('.spk-tph-paper'); pp.classList.toggle('on',hopsDone()); pp.querySelector('p').textContent=hopsDone()?((cfg.written&&cfg.written.t)||ST.words.join(' ')):'';
+      var ask=g.querySelector('.spk-tph-ask'); if(ask){ ask.classList.toggle('on',hopsDone()); ask.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',+o.dataset.k===S.tph.ans&&askOk()); }); ask.querySelector('.rp').textContent=askOk()&&S.tph.ans!=null?(AK.opts[S.tph.ans].reply||''):''; }
+      var d=done(); if(d&&was===false) sfx('win'); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    say.addEventListener('click',function(e){ var w=e.target.closest('.row.cur .w'); if(!w||hopsDone()) return; var c=HP[S.tph.k]; ack('open');
+      if(+w.dataset.i===c.changed){ S.tph.k++; save(); miss.textContent=''; sfx(hopsDone()?'paper':'click'); paint('hop'); refreshFile(); refreshVoice(); }
+      else { w.classList.add('shake'); setTimeout(function(){ w.classList.remove('shake'); },450); var m=c.miss||cfg.missT||'That word is the same as the line above. Read both lines slowly, word by word.'; miss.textContent=m; missBeat(m); } });
+    say.addEventListener('keydown',function(e){ var w=e.target.closest('.row.cur .w'); if(w&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); w.click(); } });
+    g.addEventListener('click',function(e){ var o=e.target.closest('.spk-tph-ask .spk-opt'); if(!o||!hopsDone()||askOk()) return; var k=+o.dataset.k, opt=AK.opts[k];
+      if(opt.ok){ S.tph.ans=k; save(); miss.textContent=''; sfx('click'); paint(); refreshFile(); refreshVoice(); }
+      else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||''; missBeat(opt.miss||''); } });
+    paint();
+    return {done:done, journal:function(e,NA){ if(!hopsDone()) return NA; return '<p class="a"><b>'+e(cfg.saidT2||'Spoken first:')+'</b> '+e(ST.words.join(' '))+'<br><b>'+e(cfg.heardT2||'After three rooms:')+'</b> '+e(HP[N-1].words.join(' '))+(askOk()&&S.tph.ans!=null?'<br>'+e(AK.opts[S.tph.ans].t):'')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · Bind the book (4.12.01): build the rulebook page by page. Each part is a page; stitch it to
+     the spine (one tap, or answer its question first) and its part of the reading opens. A "strike" option on a
+     question sends a pen at the book that bounces off ("No one person can change it alone"); the right answer can
+     drop a ballot into the box (ballot:true). At the end the cover closes. DATA: activity, paras [{id,match}],
+     parts [{id,t,ico,paras,act,col,ask:{q,opts:[{t,ok,miss,strike}]},ballot}] ---- */
+  MOD.bindbook=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var PA=(cfg.paras||[]).map(function(p){ return Object.assign({},p,{rx:new RegExp(p.match,'i')}); }), found={}, first=null;
+    [].forEach.call(body.querySelectorAll(':scope > p'),function(p){ PA.forEach(function(a){ if(!found[a.id]&&a.rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; } }); });
+    if(!first) return null;
+    var SP=cfg.parts||[], N=SP.length; if(S.bb==null) S.bb=0;
+    var done=function(){ return N>0&&S.bb>=N; };
+    var COL=['#C8553D','#E2A33B','#3E7CB1','#5B9E6F','#8B6FC0','#B5714C','#2E8C8C','#D06A8F'];
+    var pages='', sts='';
+    SP.forEach(function(s,i){ var y=26+i*(96/Math.max(1,N)); pages+='<rect class="pg" data-i="'+i+'" x="120" y="'+y.toFixed(1)+'" width="168" height="'+(96/N-1.5).toFixed(1)+'" rx="2" style="--c:'+esc(s.col||COL[i%COL.length])+'"/>';
+      sts+='<line class="st" data-i="'+i+'" x1="104" y1="'+(y+3).toFixed(1)+'" x2="128" y2="'+(y+3).toFixed(1)+'"/>'; });
+    var svg='<svg class="spk-bb-desk" viewBox="0 0 360 150" aria-hidden="true"><rect width="360" height="150" class="desk"/>'
+      +'<rect x="106" y="18" width="190" height="112" rx="6" class="back"/>'+pages+'<rect x="96" y="16" width="22" height="116" rx="5" class="spine"/>'+sts
+      +'<g class="cover"><rect x="118" y="16" width="180" height="116" rx="6"/><rect x="132" y="30" width="152" height="88" rx="3" class="frame"/><circle cx="208" cy="74" r="16" class="seal"/></g>'
+      +'<g class="needle"><line x1="0" y1="0" x2="26" y2="-8"/><circle cx="26" cy="-8" r="2"/></g>'
+      +'<g class="pen"><rect x="-4" y="-34" width="8" height="30" rx="2"/><path d="M-4,-4 L0,6 L4,-4Z"/></g>'
+      +'<g class="ballot"><rect x="306" y="96" width="44" height="32" rx="3" class="box"/><rect x="316" y="94" width="24" height="4" rx="1" class="slot"/><rect x="319" y="70" width="18" height="22" rx="1" class="paper"/><path d="M322,80 l4,4 l8,-8" class="tick"/></g></svg>';
+    var w=el('div','spk spk-bb'); w.innerHTML=whyCard(cfg.why)+'<div class="spk-bb-wrap">'+svg+'<div><p class="spk-ys-ct spk-bb-ct"></p><div class="spk-ptxctl spk-bb-ctl"></div><p class="spk-miss"></p></div></div><div class="spk-bb-parts"></div>';
+    before(first,w);
+    var desk=w.querySelector('.spk-bb-desk'), ctl=w.querySelector('.spk-bb-ctl'), miss=w.querySelector('.spk-miss'), parts=w.querySelector('.spk-bb-parts'), boxes={};
+    SP.forEach(function(s,i){ var b=el('div','spk-ptxp spk-bb-p'); b.style.setProperty('--c',s.col||COL[i%COL.length]); b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span> <span aria-hidden="true">'+esc(s.ico||'')+'</span> '+esc(s.t)+'</div><div class="txt"></div>';
+      (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.querySelector('.txt').appendChild(nd); }); }); parts.appendChild(b); boxes[i]=b; });
+    function paint(anim){ var k=S.bb, cur=SP[k];
+      SP.forEach(function(s,i){ boxes[i].classList.toggle('on',i<k); });
+      desk.querySelectorAll('.pg').forEach(function(p){ var i=+p.dataset.i; p.classList.toggle('on',i<k); p.classList.toggle('new',anim===i); });
+      desk.querySelectorAll('.st').forEach(function(p){ var i=+p.dataset.i; p.classList.toggle('on',i<k); });
+      ctl.innerHTML=cur?('<p class="pgname"><span class="n">'+(k+1)+'</span> '+esc(cfg.nextT||'Next page:')+' <b>'+esc(cur.t)+'</b></p>'
+        +(cur.ask?'<p class="q">'+esc(cur.ask.q)+'</p><div class="spk-opts">'+cur.ask.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-k="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div>'
+        :'<button type="button" class="spk-ptxgo">'+esc(cur.act||'🧵 Stitch this page in')+'</button>')):'';
+      w.querySelector('.spk-bb-ct').innerHTML=done()?'<b>'+esc(cfg.allT||'The rulebook is bound. Every page is in.')+'</b>':'<b>'+k+' of '+N+'</b> '+esc(cfg.countT||'pages stitched in. Each page opens its part of the reading.');
+      desk.classList.toggle('closed',done()); w.classList.toggle('all',done()); var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    function anim(cls,ms){ desk.classList.remove(cls); void desk.getBoundingClientRect(); desk.classList.add(cls); setTimeout(function(){ desk.classList.remove(cls); },ms||1200); }
+    function advance(){ var k=S.bb, s=SP[k]; S.bb++; save(); ack('explore'); miss.textContent=''; sfx('paper'); if(s.ballot){ anim('vote',1400); setTimeout(function(){ sfx('thud'); },500); } anim('sew',900);
+      paint(k); refreshFile(); refreshVoice();
+      if(done()) setTimeout(function(){ sfx('thud'); setTimeout(function(){ sfx('win'); },300); },700);
+      var b=boxes[k]; if(b&&!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ try{ b.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} },350); }
+    ctl.addEventListener('click',function(e){ var cur=SP[S.bb]; if(!cur) return;
+      if(e.target.closest('.spk-ptxgo')){ advance(); return; } var o=e.target.closest('.spk-opt'); if(!o||!cur.ask) return; var opt=cur.ask.opts[+o.dataset.k];
+      if(opt.ok){ advance(); return; }
+      o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||cfg.missT||'Not quite. Read the question again.'; missBeat(miss.textContent);
+      if(opt.strike){ anim('strike',1300); setTimeout(function(){ sfx('clink'); },450); } });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<SP.length;i++) if(SP[i].id===id) return boxes[i].classList.contains('on')?boxes[i]:desk; return null; },
+      journal:function(e,NA){ if(!S.bb) return NA; return '<p class="a">'+SP.slice(0,S.bb).map(function(s,i){ return (i+1)+'. '+e(s.t); }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore evidence · Still here today (4.12.01): tap every gold number on the source first. Then join each old
+     rule (left, with its label number) to the part of today's document that still keeps it (right): tap one, then the
+     other, or drag. A gold thread ties the pair and both light up. Then one question.
+     DATA: oldT, nowT, old [{id,n,t,say}], now [{id,t,src}], pairs {<old id>:<now id>}, reply {<old id>:text}, miss, ask ---- */
+  MOD.stillhere=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var OL=cfg.old||[], NW=cfg.now||[], PR=cfg.pairs||{}, AK=cfg.ask; S.sth=S.sth||{m:{},ans:null}; var sel=null, was=null;
+    var H=(DATA.source||{}).hotspots||[];
+    var hotDone=function(){ return !H.length||(S.hot||[]).length>=H.length; };
+    var matched=function(){ return OL.length>0&&OL.every(function(o){ return !!S.sth.m[o.id]; }); };
+    var askOk=function(){ if(!AK) return true; var o=AK.opts[S.sth.ans]; return !!(o&&o.ok); };
+    var done=function(){ return hotDone()&&matched()&&askOk()&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-sth');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Still here today')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<p class="spk-si-gate gate"></p><div class="spk-sth-cols"><div class="col old"><div class="ch">'+esc(cfg.oldT||'Then')+'</div>'
+      +OL.map(function(o){ return '<div class="spk-sth-c o" data-id="'+esc(o.id)+'" role="button" tabindex="0" draggable="true">'+(o.n?'<span class="n">'+esc(o.n)+'</span>':'')+'<span class="tx">'+esc(o.t)+'</span></div>'; }).join('')
+      +'</div><svg class="spk-sth-thr" aria-hidden="true"></svg><div class="col now"><div class="ch">'+esc(cfg.nowT||'Today')+'</div>'
+      +NW.map(function(o){ return '<div class="spk-sth-c t" data-id="'+esc(o.id)+'" role="button" tabindex="0"><span class="tx">'+esc(o.t)+'</span>'+(o.src?'<small>'+esc(o.src)+'</small>':'')+'</div>'; }).join('')
+      +'</div></div><p class="spk-sth-rp"></p><p class="spk-miss"></p>'
+      +(AK?'<div class="spk-sth-ask"><p class="q">'+esc(AK.q)+'</p><div class="spk-opts">'+AK.opts.map(function(o,k){ return '<button type="button" class="spk-opt" data-k="'+k+'">'+esc(o.t)+'</button>'; }).join('')+'</div><p class="rp"></p></div>':'')
+      +'<p class="spk-si-gate last"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var miss=g.querySelector('.spk-miss'), thr=g.querySelector('.spk-sth-thr'), cols=g.querySelector('.spk-sth-cols');
+    function threads(){ var r=cols.getBoundingClientRect(), tr=thr.getBoundingClientRect(); if(!r.width||getComputedStyle(thr).display==='none'){ thr.innerHTML=''; return; } var h='';
+      Object.keys(S.sth.m).forEach(function(oid){ var a=g.querySelector('.spk-sth-c.o[data-id="'+oid+'"]'), b=g.querySelector('.spk-sth-c.t[data-id="'+S.sth.m[oid]+'"]'); if(!a||!b) return; var ra=a.getBoundingClientRect(), rb=b.getBoundingClientRect();
+        var y1=ra.top+ra.height/2-tr.top, y2=rb.top+rb.height/2-tr.top, x2=tr.width; h+='<path d="M0,'+y1.toFixed(1)+' C'+(x2*.5).toFixed(1)+','+y1.toFixed(1)+' '+(x2*.5).toFixed(1)+','+y2.toFixed(1)+' '+x2.toFixed(1)+','+y2.toFixed(1)+'"/>'; });
+      thr.setAttribute('viewBox','0 0 '+Math.max(1,tr.width).toFixed(0)+' '+Math.max(1,tr.height).toFixed(0)); thr.innerHTML=h; }
+    function paint(newId){ var hot=hotDone(); g.classList.toggle('wait',!hot);
+      g.querySelector('.gate').textContent=hot?'':(cfg.hotT||'First, tap every gold number on the page above.');
+      var used={}; Object.keys(S.sth.m).forEach(function(k){ used[S.sth.m[k]]=k; });
+      g.querySelectorAll('.spk-sth-c.o').forEach(function(c){ var id=c.dataset.id; c.classList.toggle('set',!!S.sth.m[id]); c.classList.toggle('sel',sel===id); if(newId===id){ c.classList.remove('new'); void c.offsetWidth; c.classList.add('new'); } });
+      g.querySelectorAll('.spk-sth-c.t').forEach(function(c){ var id=c.dataset.id; c.classList.toggle('set',!!used[id]); c.classList.toggle('armed',hot&&!!sel&&!used[id]); if(newId&&S.sth.m[newId]===id){ c.classList.remove('new'); void c.offsetWidth; c.classList.add('new'); } });
+      var ask=g.querySelector('.spk-sth-ask'); if(ask){ ask.classList.toggle('on',hot&&matched()); ask.querySelectorAll('.spk-opt').forEach(function(o){ o.classList.toggle('on',+o.dataset.k===S.sth.ans&&askOk()); }); ask.querySelector('.rp').textContent=askOk()&&S.sth.ans!=null?(AK.opts[S.sth.ans].reply||''):''; }
+      g.querySelector('.last').textContent=hot&&matched()&&askOk()&&R.reading&&!R.reading.done()?(cfg.readT||'Last step: finish Learn the Story at the top of this tab.'):'';
+      var d=done(); if(d&&was===false) sfx('win'); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); setTimeout(threads,30); }
+    function pick(id){ if(!hotDone()){ miss.textContent=cfg.hotT||'First, tap every gold number on the page above.'; return; } if(S.sth.m[id]) return; sel=(sel===id)?null:id; miss.textContent=''; sfx('click'); paint(); }
+    function join(tid){ if(!hotDone()) return; if(!sel){ miss.textContent=cfg.firstT||'Tap an old rule on the left first. Then tap the part of today’s constitution that keeps it.'; return; }
+      var taken=Object.keys(S.sth.m).some(function(k){ return S.sth.m[k]===tid; }); if(taken) return;
+      if(PR[sel]===tid){ var o=sel; S.sth.m[o]=tid; save(); sel=null; miss.textContent=''; sfx('pluck'); ack('explore'); g.querySelector('.spk-sth-rp').textContent=(cfg.reply&&cfg.reply[o])||''; paint(o); refreshFile(); refreshVoice(); }
+      else { var c=g.querySelector('.spk-sth-c.t[data-id="'+tid+'"]'); c.classList.add('shake'); setTimeout(function(){ c.classList.remove('shake'); },450); var m=(cfg.miss&&cfg.miss[sel])||cfg.missT||'Those two are about different rights. Look for the same idea in new words.'; miss.textContent=m; missBeat(m); } }
+    g.addEventListener('click',function(e){ var c=e.target.closest('.spk-sth-c'); if(c){ if(c.classList.contains('o')) pick(c.dataset.id); else join(c.dataset.id); return; }
+      var o=e.target.closest('.spk-sth-ask .spk-opt'); if(!o||!matched()||askOk()) return; var k=+o.dataset.k, opt=AK.opts[k];
+      if(opt.ok){ S.sth.ans=k; save(); miss.textContent=''; sfx('click'); paint(); refreshFile(); refreshVoice(); }
+      else { o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); miss.textContent=opt.miss||''; missBeat(opt.miss||''); } });
+    g.addEventListener('keydown',function(e){ if(e.key!=='Enter'&&e.key!==' ') return; var c=e.target.closest('.spk-sth-c'); if(c){ e.preventDefault(); c.click(); } });
+    g.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-sth-c.o'); if(!c||!hotDone()||S.sth.m[c.dataset.id]){ e.preventDefault(); return; } sel=c.dataset.id; e.dataTransfer.setData('text/plain',sel); e.dataTransfer.effectAllowed='move'; paint(); });
+    g.addEventListener('dragover',function(e){ var c=e.target.closest('.spk-sth-c.t'); g.querySelectorAll('.spk-sth-c.t').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('set')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    g.addEventListener('drop',function(e){ var c=e.target.closest('.spk-sth-c.t'); g.querySelectorAll('.spk-sth-c.t').forEach(function(x){ x.classList.remove('over'); }); if(!c) return; e.preventDefault(); if(!sel) sel=e.dataTransfer.getData('text/plain')||null; join(c.dataset.id); });
+    window.addEventListener('resize',function(){ if(document.documentElement.classList.contains('spk-on')) threads(); });
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, journal:function(e,NA){ var ks=Object.keys(S.sth.m); if(!ks.length) return NA; return '<p class="a">'+OL.filter(function(o){ return S.sth.m[o.id]; }).map(function(o){ var t=find(NW,S.sth.m[o.id]); return e(o.t)+' → <b>'+e(t?t.t:'')+'</b>'; }).join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Planner · Fold the pamphlet (4.12.01): a three-panel citizen's pamphlet. Tap an idea card, then the panel it
+     belongs on (or drag it there). Each panel takes one card; a weak card bounces with a reason. Tap a filled panel to
+     empty it. When all three panels are filled, the pamphlet folds shut and gets a seal. Notes only.
+     DATA: head, panels [{id,lab,short}], cards [{t,p:<panel id>|null,miss}], doneT ---- */
+  MOD.pamphlet=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var PN=cfg.panels||[], CD=cfg.cards||[]; S.pam=S.pam||{}; var sel=null, was=null;
+    var done=function(){ return PN.length>0&&PN.every(function(p){ return S.pam[p.id]!=null; }); };
+    var b=el('div','spk spk-builder spk-pam');
+    b.innerHTML=voice(cfg.voice,cfg)
+      +'<div class="spk-pam-sheet"><div class="hd">'+esc(cfg.head||'A CITIZEN’S GUIDE')+'</div><div class="pnls">'+PN.map(function(p,k){ return '<div class="pnl" data-p="'+esc(p.id)+'" data-k="'+k+'" role="button" tabindex="0"><span class="lab"><span class="n">'+(k+1)+'</span> '+esc(p.lab)+'</span><p class="fill"></p></div>'; }).join('')+'</div><span class="seal" aria-hidden="true">★</span></div>'
+      +'<p class="spk-pam-tip">'+esc(cfg.tipT||'👆 Tap an idea card, then tap the panel it belongs on. Tap a filled panel to take its card back.')+'</p>'
+      +'<div class="spk-chips spk-pam-cards"></div><p class="spk-miss"></p><p class="spk-chain-done">'+esc(cfg.doneT||'Your pamphlet is ready. Now write in Step 3.')+'</p><div class="spk-plan"></div>';
+    var tray=b.querySelector('.spk-pam-cards'), miss=b.querySelector('.spk-miss'), sheet=b.querySelector('.spk-pam-sheet');
+    shuffle(CD.map(function(c,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-pamc','<span>'+esc(CD[i].t)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; tray.appendChild(t); });
+    function lines(){ return PN.filter(function(p){ return S.pam[p.id]!=null; }).map(function(p){ return [p.short||p.lab, CD[S.pam[p.id]].t]; }); }
+    function paint(newP){ var used={}; PN.forEach(function(p){ if(S.pam[p.id]!=null) used[S.pam[p.id]]=1; });
+      b.querySelectorAll('.pnl').forEach(function(x){ var v=S.pam[x.dataset.p]; x.classList.toggle('set',v!=null); x.classList.toggle('armed',sel!=null&&v==null); x.querySelector('.fill').textContent=v!=null?CD[v].t:''; if(newP===x.dataset.p){ x.classList.remove('new'); void x.offsetWidth; x.classList.add('new'); } });
+      tray.querySelectorAll('.spk-pamc').forEach(function(t){ var i=+t.dataset.i; t.classList.toggle('spk-hide',!!used[i]); t.classList.toggle('sel',sel===i); });
+      var d=done(); b.classList.toggle('done',d); sheet.classList.toggle('folded',d); if(d&&was===false){ sfx('paper'); setTimeout(function(){ sfx('thud'); setTimeout(function(){ sfx('win'); },250); },500); } was=d;
+      var ls=lines(); b.querySelector('.spk-plan').innerHTML=ls.length?ls.map(function(x){ return '<b>'+esc(x[0])+'</b> '+esc(x[1]); }).join('<br>'):esc(cfg.emptyT||'Your plan will show up here as you fill the panels.'); updateStepper(); }
+    function place(pid){ var i=sel; if(i==null){ if(S.pam[pid]!=null){ delete S.pam[pid]; save(); sfx('paper'); paint(); return; } miss.textContent=cfg.firstT||'Tap an idea card first. Then tap its panel.'; return; }
+      if(S.pam[pid]!=null){ miss.textContent=cfg.fullT||'That panel already has a card. Tap it to take the card back first.'; return; }
+      var c=CD[i], pe=b.querySelector('.pnl[data-p="'+pid+'"]');
+      if(c.p===pid){ S.pam[pid]=i; save(); sel=null; miss.textContent=''; sfx('click'); paint(pid); }
+      else { pe.classList.add('shake'); setTimeout(function(){ pe.classList.remove('shake'); },450); var m=c.p?(cfg.wrongT||'That idea belongs on a different panel. Read the panel titles again.'):(c.miss||'That one isn’t true. Look back at the reading.'); miss.textContent=m; } }
+    tray.addEventListener('click',function(e){ var t=e.target.closest('.spk-pamc'); if(!t) return; var i=+t.dataset.i; sel=(sel===i)?null:i; miss.textContent=''; sfx('click'); paint(); });
+    b.addEventListener('click',function(e){ var p=e.target.closest('.pnl'); if(p) place(p.dataset.p); });
+    b.addEventListener('keydown',function(e){ if(e.key!=='Enter'&&e.key!==' ') return; var t=e.target.closest('.spk-pamc, .pnl'); if(t){ e.preventDefault(); t.click(); } });
+    tray.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-pamc'); if(!t){ e.preventDefault(); return; } sel=+t.dataset.i; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; paint(); });
+    b.addEventListener('dragover',function(e){ var p=e.target.closest('.pnl'); b.querySelectorAll('.pnl').forEach(function(x){ x.classList.toggle('over',x===p); }); if(p&&!p.classList.contains('set')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    b.addEventListener('drop',function(e){ var p=e.target.closest('.pnl'); b.querySelectorAll('.pnl').forEach(function(x){ x.classList.remove('over'); }); if(!p) return; e.preventDefault(); if(sel==null){ var v=e.dataTransfer.getData('text/plain'); sel=v===''?null:+v; } place(p.dataset.p); });
+    before(partB,b); paint();
+    return {done:done, lines:lines};
+  };
+
+  /* ---- Vocabulary · Ink the page (4.12.01, scrib/script = write): a blank parchment and a quill. Hear each word
+     (g4ss-<lesson>-<root>-<n>.mp3); each meaning matched dips the quill and writes one more line of ink down the page,
+     until the page is full and gets a wax seal. ---- */
+  MOD.inkpage=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'scrib', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.ink=S.ink||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.ink.set.length===N; };
+    var ln=''; for(var k=0;k<N;k++){ var y=40+k*(70/Math.max(1,N-1||1)), d='M104,'+y; for(var x=104;x<=256;x+=8){ d+=' L'+x+','+(y+Math.sin(x*0.35+k)*2.2).toFixed(1); } ln+='<path class="ink" data-k="'+k+'" d="'+d+'"/>'; }
+    var g=el('div','spk spk-ink');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Ink the page')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-inksc"><svg viewBox="0 0 360 140" aria-hidden="true"><rect width="360" height="140" class="desk"/><path d="M92,14 H268 Q276,14 276,22 V124 Q276,130 268,130 H92 Q84,130 84,122 V22 Q84,14 92,14Z" class="parch"/><line x1="98" y1="26" x2="262" y2="26" class="rule"/>'+ln
+      +'<g class="pot"><path d="M300,120 h30 v-16 q0,-8 -8,-8 h-14 q-8,0 -8,8Z"/><rect x="306" y="92" width="18" height="5" rx="2" class="lid"/></g>'
+      +'<g class="quill"><path d="M0,0 C10,-26 30,-46 56,-54 C40,-36 24,-16 6,4Z" class="fe"/><line x1="0" y1="0" x2="-6" y2="8" class="nib"/></g>'
+      +'<g class="wax"><circle cx="248" cy="114" r="12"/><text x="248" y="118" text-anchor="middle">★</text></g></svg><div class="board"><span class="lb">'+esc(cfg.boardT||'Lines written')+'</span><span class="num"></span></div></div>'
+      +'<div class="wds spk-fwwds spk-inkwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-ink-ct"></p><div class="spk-chips spk-fwmeans spk-inkmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-inkmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-inkwds'), sc=g.querySelector('.spk-inksc'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-fwmean spk-inkmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.ink.heard.length===N, k=S.ink.set.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.ink.heard.indexOf(i)>=0, u=S.ink.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      sc.querySelectorAll('.ink').forEach(function(m){ m.classList.toggle('on',+m.dataset.k<k); });
+      var q=sc.querySelector('.quill'), y=40+Math.min(k,N-1)*(70/Math.max(1,N-1||1)); q.setAttribute('transform',done()?'translate(312,96) rotate(-10)':'translate('+(k?256:104)+','+(y-2)+')');
+      if(typeof anim==='number'){ sc.classList.remove('dip'); void sc.getBoundingClientRect(); sc.classList.add('dip'); }
+      sc.classList.toggle('full',done());
+      g.querySelector('.board .num').textContent=k+' / '+N; g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-inkmean').forEach(function(t){ var f=S.ink.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-ink-ct').innerHTML=!allH?'<b>'+S.ink.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Each match writes a line on the page.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.ink.set.indexOf(i)>=0||S.ink.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.ink.set.push(i); save(); sel=null; miss.textContent=''; sfx('brush'); if(done()) setTimeout(function(){ sfx('thud'); setTimeout(function(){ sfx('win'); },250); },600); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.ink.heard.length===N){ attempt(sel,c); return; }
+      if(S.ink.heard.indexOf(i)<0){ S.ink.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-inkmean'); if(!t) return; if(S.ink.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-inkmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-inkmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-inkmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-inkmean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -8151,7 +8381,7 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq, #panel-explore .spk-est, #panel-explore .spk-env, #panel-explore .spk-rs, #panel-explore .spk-mn, #panel-explore .spk-bdg, #panel-explore .spk-spf'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sth, #panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq, #panel-explore .spk-est, #panel-explore .spk-env, #panel-explore .spk-rs, #panel-explore .spk-mn, #panel-explore .spk-bdg, #panel-explore .spk-spf'); return d&&[d,'before']; },
     estdone:function(){ var r=document.querySelector('#panel-explore .spk-est .rev'); return r&&[r,'after']; },
     readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
@@ -8351,7 +8581,7 @@
     {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
     {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad-original.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
     {n:11,t:'Civil Rights & Citizens', img:'source-4-11-01-steele-harris-bus-1956.jpg', lon:-84.28,lat:30.44, where:'Tallahassee, Mims, Jacksonville and St. Augustine', blurb:'Floridians who stood up for their rights, and the citizens who keep working for a fairer Florida.'},
-    {n:12,t:'Government',          img:'source-4-12-01-florida-constitution-1838.jpg', lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
+    {n:12,t:'Government',          img:'source-4-12-01-florida-constitution-1838.jpg', lon:-84.28,lat:30.44, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
     {n:13,t:'The Exhibit',         img:'source-4-13-01-exhibit-board.png', lon:-81.38,lat:28.54, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
   ];
   if(DATA.cabinet){ var ce=find(FILES,DATA.cabinet.n||THIS,'n'); if(ce) Object.assign(ce,DATA.cabinet); }

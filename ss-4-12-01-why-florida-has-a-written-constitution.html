@@ -1784,6 +1784,1113 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.12.01",
+ "title": "Why Florida Has a Written Constitution",
+ "quiet": false,
+ "file": {
+  "n": 12,
+  "title": "Government & Money",
+  "label": "Government & Money",
+  "seals": [
+   "📜",
+   "⚖️",
+   "💰"
+  ]
+ },
+ "prevFile": "Leader Virtue Profile",
+ "connector": "Last time, we built virtue profiles of Florida leaders, with evidence for each virtue.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, your virtue profile became a key card, and a sign said: “Canvas follows rules.” Now your teacher has found a thick book on a shelf by the door with 13.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 25,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Pass it on",
+   "why": "Pass one rule from room to room and watch what happens to it. Then read the written copy."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Build the rulebook",
+   "why": "Stitch Florida’s constitution together page by page. Then find rights from a real 1838 page that are still here today."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fold a citizen’s pamphlet",
+   "why": "Answer three questions. Fold a pamphlet. Then write your notebook entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I found something on a shelf by the door with 13!",
+  "opening": [
+   {
+    "t": "We’re still taking {route}. I checked my notes.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "Everyone in here is still working on the way out, together.",
+    "ifRoute": "none"
+   },
+   "Last time, the card reader took your key card. Then a sign said: “Canvas follows rules.” So I went looking for the rules.",
+   "Today’s file is about Florida’s constitution, the written plan for Florida’s government. Start in the Learn tab (tab 1). Scroll down to the file card and pass a rule from room to room.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s pass the rule",
+      "go": true,
+      "reply": "At each room, tap the word that changed. Read slowly, word by word."
+     },
+     {
+      "t": "What’s a constitution?",
+      "reply": "A constitution is a written plan for a government. It says how the government is set up, what it may do, and what rights the people have."
+     },
+     {
+      "t": "What did you find?",
+      "reply": "A thick book on a shelf by the door with 13. The cover says RULES. I haven’t opened it yet. Let’s learn about rulebooks first."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). You’ll build Florida’s constitution page by page, then study a real page from 1838."
+     },
+     {
+      "t": "Does that really happen?",
+      "reply": "Yes. When people pass words along from memory, small changes sneak in. That’s one reason important rules get written down."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Where is that page now?",
+      "reply": "The handwritten copy is kept by the State Archives of Florida in Tallahassee. All 14 pages are online at the Library of Congress, so anyone can read them."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Three locks?",
+      "reply": "I don’t know what they are yet. Next time we open the rulebook to the part about Florida’s three branches of government. We’re still taking {route}, so stay with me."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "The spoken rule changed three times. The written copy didn’t change at all. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The rulebook is bound, and you found rights from 1838 that are still in Florida’s constitution today. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fold your pamphlet and write your entry."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file! I opened Canvas’s rulebook. Page 1 says: “A plan only counts if it is written down, so everyone follows the same rules.” I copied your pamphlet onto the first page:"
+    },
+    {
+     "card": {
+      "from": "Canvas’s rulebook",
+      "h": "RULEBOOK · FILE 12",
+      "sub": "Why we write our plan down:",
+      "lines": "planner",
+      "stamp": "WRITTEN DOWN",
+      "style": "plan"
+     }
+    },
+    {
+     "t": "Now I’m writing our real plan the same way, and sliding a copy under every door, so every room follows the same rules. But look at the door with 13: it has three locks now, one above the other. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "done"
+    }
+   ]
+  }
+ },
+ "lens": "Honesty means telling the truth and doing things in the open, where everyone can see. Today you are a civic constitution analyst, someone who studies a state’s constitution and explains what it means for citizens.",
+ "scene1": {
+  "type": "telephone",
+  "kicker": "Pass it on",
+  "h": "One rule goes from room to room by word of mouth. At each room, find the word that changed.",
+  "voice": "Read the rule I said. Then look at what each room heard. Tap the word that changed. After three rooms, the written copy arrives.",
+  "why": {
+   "icon": "📞",
+   "q": "What’s the telephone game?",
+   "t": "In the telephone game, a message is whispered from person to person. By the end, it usually sounds different, because each person remembers it a little differently. Rules can change the same way. That’s why we pass one rule from room to room and watch it change."
+  },
+  "start": {
+   "who": "Me, your teacher",
+   "words": [
+    "Everyone",
+    "waits",
+    "by",
+    "the",
+    "door",
+    "until",
+    "all",
+    "four",
+    "rooms",
+    "are",
+    "ready."
+   ]
+  },
+  "hops": [
+   {
+    "who": "Room 4",
+    "words": [
+     "Everyone",
+     "waits",
+     "by",
+     "the",
+     "door",
+     "until",
+     "all",
+     "three",
+     "rooms",
+     "are",
+     "ready."
+    ],
+    "changed": 7,
+    "miss": "That word is the same as the line above. Read both lines slowly, word by word."
+   },
+   {
+    "who": "Room 8",
+    "words": [
+     "Everyone",
+     "runs",
+     "to",
+     "the",
+     "door",
+     "until",
+     "all",
+     "three",
+     "rooms",
+     "are",
+     "ready."
+    ],
+    "changed": 1,
+    "miss": "That word is the same as the line above. Read both lines slowly, word by word."
+   },
+   {
+    "who": "Room 12",
+    "words": [
+     "Everyone",
+     "runs",
+     "to",
+     "the",
+     "back",
+     "door",
+     "until",
+     "all",
+     "three",
+     "rooms",
+     "are",
+     "ready."
+    ],
+    "changed": 4,
+    "miss": "That word is the same as the line above. Read both lines slowly, word by word."
+   }
+  ],
+  "saidT": "said:",
+  "heardT": "heard:",
+  "tapT": "👆 Tap the word that changed.",
+  "written": {
+   "who": "📜 The written copy, slid under every door",
+   "t": "Everyone waits by the door until all four rooms are ready."
+  },
+  "saidT2": "Spoken first:",
+  "heardT2": "After three rooms:",
+  "ask": {
+   "q": "The spoken rule changed in every room. Why did the written copy stay the same?",
+   "opts": [
+    {
+     "t": "Room 12 must be better at listening.",
+     "miss": "Every room tried its best. Spoken words change a little each time they’re passed on."
+    },
+    {
+     "t": "Paper doesn’t forget. Everyone reads the same words.",
+     "ok": true,
+     "reply": "Yes. Written rules stay the same for everyone, and anyone can check them. That’s why Florida writes its rules down in a constitution."
+    },
+    {
+     "t": "Written rules can never, ever be changed.",
+     "miss": "Written rules can be changed, but only in the open, where everyone can see. You’ll find out how in tab 2."
+    }
+   ]
+  },
+  "win": "<b>Same words for everyone.</b> A rule that is written down can’t drift from room to room. That is the big idea of a written constitution."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Build the rulebook in Learn the Story: stitch in each page, and its part of the reading opens.",
+    "Tap every gold number on the real 1838 page.",
+    "Join each 1838 rule to the part of today’s constitution that still keeps it. Then answer one question."
+   ]
+  },
+  "reading": {
+   "type": "bindbook",
+   "activity": "Florida's Written Constitution",
+   "why": {
+    "icon": "📕",
+    "q": "Why build a book?",
+    "t": "A <b>constitution</b> is a rulebook for a government. Florida’s first one, in 1838, was written by hand, page after page: 14 big pages. Today it is printed so anyone can read it. That’s why you build the rulebook one page at a time."
+   },
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Every state in the United States"
+    },
+    {
+     "id": "p2",
+     "match": "^Why write it down"
+    },
+    {
+     "id": "p3",
+     "match": "^How does it start"
+    },
+    {
+     "id": "p4",
+     "match": "^What rights does it protect"
+    },
+    {
+     "id": "p5",
+     "match": "^Who does the work"
+    },
+    {
+     "id": "p6",
+     "match": "^How has it changed"
+    },
+    {
+     "id": "p7",
+     "match": "^Who can change it"
+    },
+    {
+     "id": "p8",
+     "match": "^Why it matters"
+    }
+   ],
+   "parts": [
+    {
+     "id": "what",
+     "t": "What is a constitution?",
+     "ico": "📜",
+     "paras": [
+      "p1"
+     ],
+     "act": "🧵 Stitch in the first page"
+    },
+    {
+     "id": "why",
+     "t": "Why write it down?",
+     "ico": "✍️",
+     "paras": [
+      "p2"
+     ],
+     "ask": {
+      "q": "Leaders keep the rules only in their heads. What could go wrong?",
+      "opts": [
+       {
+        "t": "Nothing. People always remember rules the same way.",
+        "miss": "Remember the telephone game on tab 1? The rule changed in every room."
+       },
+       {
+        "t": "A leader could change a rule, and no one could prove it changed.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "pre",
+     "t": "The Preamble",
+     "ico": "🖋️",
+     "paras": [
+      "p3"
+     ],
+     "act": "🧵 Stitch in this page"
+    },
+    {
+     "id": "rights",
+     "t": "The Declaration of Rights",
+     "ico": "🛡️",
+     "paras": [
+      "p4"
+     ],
+     "act": "🧵 Stitch in this page"
+    },
+    {
+     "id": "branches",
+     "t": "Three branches of government",
+     "ico": "🏛️",
+     "paras": [
+      "p5"
+     ],
+     "act": "🧵 Stitch in this page"
+    },
+    {
+     "id": "changed",
+     "t": "How has it changed?",
+     "ico": "🗓️",
+     "paras": [
+      "p6"
+     ],
+     "ask": {
+      "q": "Has Florida always had the same constitution?",
+      "opts": [
+       {
+        "t": "Yes. Florida still uses the one from 1838.",
+        "miss": "1838 was the first one. Florida has written new ones since then. Stitch in the page and look at the years."
+       },
+       {
+        "t": "No. Florida has written new constitutions over time, and voters approved today’s in 1968.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "amend",
+     "t": "Who can change it?",
+     "ico": "🗳️",
+     "paras": [
+      "p7"
+     ],
+     "ballot": true,
+     "ask": {
+      "q": "The governor wants to change a rule in the constitution. What happens?",
+      "opts": [
+       {
+        "t": "The governor crosses out the old rule and writes a new one.",
+        "strike": true,
+        "miss": "The pen bounced off! No one person can change Florida’s constitution alone."
+       },
+       {
+        "t": "The change goes on the ballot, and Florida’s voters decide.",
+        "ok": true
+       }
+      ]
+     }
+    },
+    {
+     "id": "matters",
+     "t": "Why it matters",
+     "ico": "⚖️",
+     "paras": [
+      "p8"
+     ],
+     "act": "📕 Stitch in the last page and close the cover"
+    }
+   ],
+   "allT": "The rulebook is bound. Every page is in.",
+   "countT": "pages stitched in. Each page opens its part of the reading."
+  },
+  "evidence": {
+   "type": "stillhere",
+   "kicker": "Still here today",
+   "h": "Rights from the 1838 page that Florida’s constitution still protects",
+   "voice": "Tap an old rule on the left. Then tap the part of today’s constitution (1968) that keeps the same right. Or drag the rule there.",
+   "why": {
+    "icon": "🌊",
+    "q": "What’s a “secretary’s copy”?",
+    "t": "The delegates met at St. Joseph in 1838. Within about ten years, a hurricane and yellow fever had emptied the town, and the copy the delegates signed has never been found. One handwritten copy, called the <b>secretary’s copy</b>, survived. It is the page you see here. The town vanished, but the written rules lived on. That’s why you hunt for rights that are still here today."
+   },
+   "oldT": "1838 page",
+   "nowT": "Florida’s constitution today (1968, Article I)",
+   "old": [
+    {
+     "id": "eq",
+     "n": "5",
+     "t": "“All freemen … are equal” (Rule 1)"
+    },
+    {
+     "id": "wor",
+     "n": "6",
+     "t": "“A natural and inalienable right to worship Almighty God” in your own way (Rule 3)"
+    },
+    {
+     "id": "sp",
+     "n": "7",
+     "t": "“Every citizen may freely speak, write, and publish” (Rule 5)"
+    },
+    {
+     "id": "jury",
+     "n": "8",
+     "t": "“The right of trial by jury shall forever remain inviolate” (Rule 6)"
+    }
+   ],
+   "now": [
+    {
+     "id": "s4",
+     "t": "“Every person may speak, write and publish sentiments on all subjects.”",
+     "src": "Section 4 · Freedom of speech and press"
+    },
+    {
+     "id": "s22",
+     "t": "“The right of trial by jury shall be secure to all and remain inviolate.”",
+     "src": "Section 22 · Trial by jury"
+    },
+    {
+     "id": "s2",
+     "t": "“All natural persons, female and male alike, are equal before the law.”",
+     "src": "Section 2 · Basic rights"
+    },
+    {
+     "id": "s3",
+     "t": "No law may stop people from practicing their religion.",
+     "src": "Section 3 · Religious freedom"
+    }
+   ],
+   "pairs": {
+    "eq": "s2",
+    "wor": "s3",
+    "sp": "s4",
+    "jury": "s22"
+   },
+   "reply": {
+    "eq": "Look closely. In 1838, “freemen” left out enslaved people, and only white men could vote. Today’s words say all people, female and male alike. The rule was changed the right way: in writing, where everyone can see.",
+    "wor": "Both protect the freedom to practice religion in your own way.",
+    "sp": "Almost the same words, 130 years apart! “Every citizen” became “every person.”",
+    "jury": "Same idea, almost the same words: a jury trial is a right no one can take away."
+   },
+   "miss": {
+    "eq": "This old rule says who is equal. Find the part of today’s constitution about everyone being equal.",
+    "wor": "This old rule is about worship, which means practicing a religion. Find today’s rule about religion.",
+    "sp": "This old rule is about speaking and writing. Find today’s rule with almost the same words.",
+    "jury": "This old rule is about a trial by jury. Find today’s rule about juries."
+   },
+   "ask": {
+    "q": "St. Joseph disappeared long ago. Why can you still find these rights today?",
+    "opts": [
+     {
+      "t": "People in St. Joseph remembered them and told everyone.",
+      "miss": "The town was gone within about ten years. Spoken words fade. What lasted?"
+     },
+     {
+      "t": "They were written down, and each new constitution kept them in writing.",
+      "ok": true,
+      "reply": "Yes. The town vanished, but the written rules lived on, and every new constitution carried them forward."
+     },
+     {
+      "t": "Florida still uses the 1838 constitution.",
+      "miss": "Today Florida uses the constitution its voters approved in 1968. Look at the reading’s page “How has it changed?”"
+     }
+    ]
+   },
+   "win": "<b>Still here today.</b> Free speech, freedom of religion, and trial by jury were written down in 1838, and Florida still protects them. Equal rights for everyone were added later, in writing, the right way."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the page to see what it shows. You don’t have to read the old handwriting.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 33.0,
+    "y": 15.8,
+    "title": "The title.",
+    "t": "It says “A Constitution or form of government for the people of Florida.” A constitution is a written plan for a government."
+   },
+   {
+    "n": "2",
+    "x": 3.2,
+    "y": 22.9,
+    "title": "The opening, or Preamble.",
+    "t": "It begins “We the People of the Territory of Florida.” The people, through the delegates they chose, are making these rules."
+   },
+   {
+    "n": "3",
+    "x": 84.0,
+    "y": 19.9,
+    "title": "Where and when: St. Joseph, 1838.",
+    "t": "The delegates met in the city of St. Joseph on Monday, December 3, 1838. Within about ten years the town was gone, after a hurricane and yellow fever. This page survived."
+   },
+   {
+    "n": "4",
+    "x": 39.4,
+    "y": 37.3,
+    "title": "Article 1st: Declaration of Rights.",
+    "t": "The very first article lists the people’s rights, before any part about the governor, the lawmakers, or the courts."
+   },
+   {
+    "n": "5",
+    "x": 3.2,
+    "y": 42.7,
+    "title": "Rule 1: “all freemen … are equal.”",
+    "t": "In 1838, this did not include everyone. Enslaved people were left out, and only white men could vote. Today’s constitution says all people, female and male alike, are equal before the law."
+   },
+   {
+    "n": "6",
+    "x": 96.6,
+    "y": 50.8,
+    "title": "Rule 3: freedom of worship.",
+    "t": "On this line: every person has the right to worship, or practice a religion, in their own way, and the state may not favor one church."
+   },
+   {
+    "n": "7",
+    "x": 3.2,
+    "y": 58.2,
+    "title": "Rule 5: freedom of speech.",
+    "t": "“Every citizen may freely speak, write, and publish his sentiments on all subjects.” People could say and print what they think."
+   },
+   {
+    "n": "8",
+    "x": 96.6,
+    "y": 60.4,
+    "title": "Rule 6: trial by jury.",
+    "t": "In the middle of this line: “the right of trial by jury shall forever remain inviolate.” A jury is a group of citizens who decide a court case. Inviolate means no one may take it away."
+   }
+  ]
+ },
+ "planner": {
+  "type": "pamphlet",
+  "head": "A CITIZEN’S GUIDE TO FLORIDA’S CONSTITUTION",
+  "voice": "Put one idea card on each panel of the pamphlet. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🗞️",
+   "q": "Why a pamphlet?",
+   "t": "A <b>pamphlet</b> is a small folded paper that explains one idea to the public. Before Florida’s voters decide on a change to the constitution, groups that help voters often hand out short guides like this. Your notebook entry needs the same three parts, so you fold a pamphlet first."
+  },
+  "panels": [
+   {
+    "id": "what",
+    "lab": "What a constitution is",
+    "short": "What it is"
+   },
+   {
+    "id": "part",
+    "lab": "One part and what it does",
+    "short": "One part"
+   },
+   {
+    "id": "why",
+    "lab": "Why writing it down protects people",
+    "short": "Why written"
+   }
+  ],
+  "cards": [
+   {
+    "t": "A written plan for Florida’s government: how it is set up, what it may do, and our rights",
+    "p": "what"
+   },
+   {
+    "t": "The rulebook that says who runs Florida’s government and what they may and may not do",
+    "p": "what"
+   },
+   {
+    "t": "Declaration of Rights: lists freedoms like speech, religion, and a fair trial",
+    "p": "part"
+   },
+   {
+    "t": "Three branches: one makes laws, one carries them out, one decides what they mean",
+    "p": "part"
+   },
+   {
+    "t": "Everyone reads the same rules, so leaders can’t change them in secret",
+    "p": "why"
+   },
+   {
+    "t": "Citizens can point to the words and hold leaders accountable",
+    "p": "why"
+   },
+   {
+    "t": "A list of every law in Florida",
+    "p": null,
+    "miss": "Not quite. Laws are made by the legislature. The constitution is the plan the lawmakers must follow."
+   },
+   {
+    "t": "The governor can change any rule in it",
+    "p": null,
+    "miss": "No one person can change the constitution. Changes go on the ballot, and the voters decide."
+   },
+   {
+    "t": "Written rules can never be changed",
+    "p": null,
+    "miss": "They can be changed, but only in the open: the voters decide."
+   }
+  ],
+  "doneT": "Your pamphlet is folded. Now write your entry in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "what a constitution is",
+    "rx": "constitution|plan|rulebook|rules? (for|of) (the )?government"
+   },
+   {
+    "t": "one part",
+    "rx": "declaration|rights?|branch|preamble|legislat|executive|judicial|court|governor|speech|religio|worship|jury|trial"
+   },
+   {
+    "t": "why written matters",
+    "rx": "written|write|wrote|paper|read|see|same|secret|forget|chang|check|public|open|transparen"
+   },
+   {
+    "t": "protects citizens",
+    "rx": "protect|citizen|people|everyone|fair|safe|accountab|above the (rules|law)|power|leader"
+   }
+  ],
+  "lines": [
+   "Start with what a constitution is: “A constitution is…”",
+   "Good. Now name one part of Florida’s constitution.",
+   "Say what that part does.",
+   "Explain why writing the rules down protects people.",
+   "Read it over once. Did you use your own words?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the telephone game, the rulebook, and the real 1838 page."
+  },
+  {
+   "t": "Plan",
+   "w": "Fold a citizen’s pamphlet: what a constitution is, one part, and why writing it down protects people."
+  },
+  {
+   "t": "Write",
+   "w": "Write your notebook entry about Florida’s constitution. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Notebook Entry: Florida’s Written Constitution"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "inkpage",
+  "kicker": "Ink the page",
+  "h": "scrib / script = write",
+  "root": "scrib",
+  "hl": "scrib|script",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match writes a line on the page.",
+  "why": {
+   "icon": "🪶",
+   "q": "Why a pen and ink?",
+   "t": "In 1838 there were no computers or typewriters. Florida’s first constitution was written by hand, with a pen dipped in ink, page after page. <b>Scrib</b> and <b>script</b> come from the Latin word <i>scribere</i>, “to write.” That’s why each word you match inks a line onto the page."
+  },
+  "boardT": "Lines written",
+  "words": [
+   {
+    "w": "scribe",
+    "m": "a person whose job was to write things down by hand",
+    "miss": "Before printing, the person who copied letters and books by hand was a…",
+    "say": "Scribe. A person whose job was to write things down by hand."
+   },
+   {
+    "w": "describe",
+    "m": "to tell or write what something is like",
+    "miss": "When you tell what a place looks like, you…",
+    "say": "Describe. To tell or write what something is like."
+   },
+   {
+    "w": "script",
+    "m": "the written words for a play, a show, or a speech",
+    "miss": "Actors learn their lines from a…",
+    "say": "Script. The written words for a play, a show, or a speech."
+   },
+   {
+    "w": "inscription",
+    "m": "words carved or written on something, like a stone, a coin, or a monument",
+    "miss": "The words carved on a monument are an…",
+    "say": "Inscription. Words carved or written on something, like a stone, a coin, or a monument."
+   }
+  ],
+  "win": "The page is full, and it has its seal."
+ },
+ "cabinet": {
+  "n": 12
+ },
+ "notes": {
+  "learned": [
+   "A constitution is a written plan for a government: how it is set up, what it may do, and what rights the people have.",
+   "Written rules stay the same for everyone. Leaders can’t change them in secret, and citizens can hold leaders accountable.",
+   "Florida’s constitution starts with a Preamble (“We, the people of the State of Florida”), then the Declaration of Rights, then the three branches of government.",
+   "The Declaration of Rights protects freedoms like speech, religion, and a fair trial.",
+   "Florida’s first constitution was written at St. Joseph in 1838 and took effect at statehood in 1845. New ones followed in 1861, 1865, 1868, and 1885, and voters approved today’s in 1968.",
+   "A change to the constitution is an amendment. It goes on the ballot and needs at least 60 out of every 100 votes. The governor can’t change it alone.",
+   "The only known copy of the 1838 constitution is a handwritten secretary’s copy. The town of St. Joseph disappeared, but the written rules lived on.",
+   "In 1838, “all freemen … are equal” left out enslaved people. Today’s constitution says all people, female and male alike, are equal before the law."
+  ],
+  "vocab": [
+   [
+    "constitution",
+    "a written plan for how a government works"
+   ],
+   [
+    "rights",
+    "freedoms the government must protect"
+   ],
+   [
+    "tradition",
+    "something people do because they always have"
+   ],
+   [
+    "accountable",
+    "having to answer to the people for what you do"
+   ],
+   [
+    "transparency",
+    "working in the open, where everyone can see"
+   ],
+   [
+    "Preamble",
+    "the short opening of a constitution that says who is making the rules and why"
+   ],
+   [
+    "Declaration of Rights",
+    "the part of Florida’s constitution that lists the people’s freedoms"
+   ],
+   [
+    "delegate",
+    "a person chosen to speak for others"
+   ],
+   [
+    "territory",
+    "land that belongs to the United States but is not yet a state"
+   ],
+   [
+    "amendment",
+    "a change to the constitution"
+   ],
+   [
+    "ballot",
+    "the list of choices people vote on"
+   ],
+   [
+    "rule of law",
+    "the idea that everyone has to follow the same rules"
+   ],
+   [
+    "jury",
+    "a group of citizens who decide a court case"
+   ],
+   [
+    "inviolate",
+    "safe; no one may take it away"
+   ],
+   [
+    "scribe",
+    "a person whose job was to write things down by hand"
+   ],
+   [
+    "describe",
+    "to tell or write what something is like"
+   ],
+   [
+    "script",
+    "the written words for a play, a show, or a speech"
+   ],
+   [
+    "inscription",
+    "words carved or written on something, like a stone, a coin, or a monument"
+   ]
+  ],
+  "wordParts": "scrib / script = write (from the Latin scribere): scribe, describe, script, inscription"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what a constitution is",
+    "rx": "plan|rule|rulebook|set ?s? up|government|law|document|paper|book|freedom|right",
+    "n": 1
+   },
+   {
+    "t": "why writing it down matters",
+    "rx": "written|write|wrote|writing|paper|read|see|same|chang|secret|forget|remember|check|proof|prove|public|open|everyone|fair|trust|accountab|transparen",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a right",
+    "rx": "speech|speak|say|talk|religio|worship|pray|church|god|fair trial|trial|jury|court|press|publish|equal|freedom|free to",
+    "n": 1
+   },
+   {
+    "t": "what it means for people",
+    "rx": "means|can|able|allow|let|so (that )?|people|citizen|everyone|we |you|they|nobody|no one|without|protect|safe|choose|own|want",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "how a change happens",
+    "rx": "amend|chang|vote|voting|ballot|petition|sign|signature|lawmaker|legislat|propos|suggest|60|sixty|percent|election",
+    "n": 1
+   },
+   {
+    "t": "why citizens’ votes matter",
+    "rx": "citizen|people|voter|we |us |everyone|voice|decide|choose|say|power|governor|not (just )?one|alone|together|matter|important|fair|our",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the first two pages of the rulebook in Learn the Story, and the telephone game on tab 1.",
+   "Say what a constitution is in your own words. Then say what goes wrong when rules are only spoken.",
+   "Try this shape: “A constitution is ___. Writing it down matters because ___.”"
+  ],
+  "journal-q2": [
+   "Look at page 4 of the rulebook, or at the 1838 rules you joined in Still here today.",
+   "Pick one freedom: speech, religion, or a fair trial by jury. What can people do because of it?",
+   "Try this shape: “One right is ___. It means people can ___.”"
+  ],
+  "journal-q3": [
+   "Look at the page “Who can change it?” in the rulebook.",
+   "Who can suggest a change? Who decides? How many voters have to say yes?",
+   "Try this shape: “Citizens shape the constitution by ___. Their votes matter because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: what is the difference between a constitution and a law?",
+  "journal-q2": "Go further: which right from the 1838 page do you think matters most today, and why?",
+  "journal-q3": "Go further: why do you think a change needs 60 out of every 100 votes, not just more than half?"
+ },
+ "quizMiss": [
+  {
+   "a": "Secret powers are the opposite of a written constitution. Look at the page “Why write it down?” in Learn the Story.",
+   "c": "Florida wasn’t the first state. It became the 27th state in 1845. Look at the page “Why write it down?” in Learn the Story."
+  },
+  {
+   "a": "The Declaration of Rights is about the people’s freedoms, not the governor’s pay. Look at the page “The Declaration of Rights.”",
+   "c": "Prices aren’t in the Declaration of Rights. Look at the page “The Declaration of Rights.”"
+  },
+  {
+   "a": "1776 is when the Declaration of Independence was signed, long before Florida was a state. Look at the page “How has it changed?”",
+   "c": "Look at the page “How has it changed?” for the year Florida’s voters approved today’s constitution."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Pass it on",
+   "at": "scene1",
+   "script": "When I was in fourth grade, we played the telephone game, and a message about pizza turned into a message about a pizza bus! Watch my rule go from room to room. At each room, tap the word that changed. Then read the written copy."
+  },
+  {
+   "slot": "guide2",
+   "label": "Same words for everyone",
+   "at": "s1done",
+   "script": "Three rooms, three changes, and the written copy stayed exactly the same. That is the big idea today. Florida’s leaders wrote their rules down for the same reason. Next, go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Build the rulebook",
+   "at": "explore",
+   "script": "A constitution is a rulebook for a government. You will build Florida’s, one page at a time. Stitch each page onto the spine, and its part of the reading opens. Some pages ask a question first. Watch what happens if someone tries to change a rule alone."
+  },
+  {
+   "label": "The page that survived",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "script": "This page is real. It was written in 1838, in a town called St. Joseph. Within about ten years, the town was gone. A hurricane and yellow fever emptied it. But this handwritten copy survived. Tap every gold number."
+    },
+    {
+     "slot": "guide4b",
+     "script": "Now look for rights that are still here today. Tap an old rule on the left, then the part of today’s constitution that keeps it. A gold thread ties them together."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Fold the pamphlet",
+   "at": "plan",
+   "script": "A pamphlet is a small folded paper that explains one idea. Mine might say: a library card lets anyone borrow books. Yours is about Florida’s constitution. Tap an idea card, then the panel it belongs on. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^rule$",
+    "sel": ".spk-tph-say .row.said",
+    "fx": "point",
+    "scroll": true
+   },
+   {
+    "at": "^room$",
+    "sel": ".spk-tph-line",
+    "fx": "glow"
+   },
+   {
+    "at": "^changed$",
+    "sel": ".spk-tph-say .row:last-child",
+    "fx": "pop",
+    "tag": "tap here"
+   },
+   {
+    "at": "^written$",
+    "sel": ".spk-tph .spk-game-head",
+    "fx": "trace"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^changes$",
+    "sel": ".spk-tph-say .row.heard",
+    "all": true,
+    "fx": "glow"
+   },
+   {
+    "at": "^written$",
+    "sel": ".spk-tph-paper",
+    "fx": "pop"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^rulebook$",
+    "sel": ".spk-bb-desk",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Stitch$",
+    "sel": ".spk-bb-ctl",
+    "fx": "point"
+   },
+   {
+    "at": "^spine$",
+    "sel": ".spk-bb-desk .spine",
+    "fx": "glow"
+   },
+   {
+    "at": "^question$",
+    "sel": ".spk-bb-ctl",
+    "fx": "pop"
+   },
+   {
+    "at": "^alone$",
+    "sel": ".spk-bb-desk .ballot",
+    "fx": "glow"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^real$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Joseph$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^gone$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "trace"
+   },
+   {
+    "at": "^number$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "point"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^left$",
+    "sel": ".spk-sth .col.old",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^today’s$",
+    "sel": ".spk-sth .col.now",
+    "fx": "glow"
+   },
+   {
+    "at": "^thread$",
+    "sel": ".spk-sth-cols",
+    "fx": "pop"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^pamphlet$",
+    "sel": ".spk-pam-sheet",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Tap$",
+    "sel": ".spk-pam-cards",
+    "fx": "point"
+   },
+   {
+    "at": "^panel$",
+    "sel": ".spk-pam-sheet .pnl",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,125 +3129,99 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Why Florida Has a Written Constitution ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Dusk on St. Joseph Bay: an empty sandy shore where a town once stood, wind-bent trees, and a handwritten page held down by a shell, its ink lines glowing softly">
 <defs>
-  <linearGradient id="h1201sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#1a2a4a"/>
-    <stop offset="60%" stop-color="#2a3a5a"/>
-    <stop offset="100%" stop-color="#d4c8a0"/>
+  <linearGradient id="b1201sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1B2547"/><stop offset=".45" stop-color="#4A3D6B"/><stop offset=".78" stop-color="#C9765A"/><stop offset="1" stop-color="#F2B36B"/>
   </linearGradient>
-  <linearGradient id="h1201parch" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f5e6c8"/>
-    <stop offset="100%" stop-color="#e0cda5"/>
+  <linearGradient id="b1201sea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#E7A46A"/><stop offset=".25" stop-color="#7C5E7E"/><stop offset="1" stop-color="#2E3A63"/>
   </linearGradient>
-  <radialGradient id="h1201seal" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0%" stop-color="#c8a84a"/>
-    <stop offset="100%" stop-color="#8a6a20"/>
+  <linearGradient id="b1201sand" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#D9B98A"/><stop offset="1" stop-color="#A9835A"/>
+  </linearGradient>
+  <linearGradient id="b1201page" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FBF0D2"/><stop offset="1" stop-color="#E4CC97"/>
+  </linearGradient>
+  <radialGradient id="b1201glow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#FFE7A8" stop-opacity=".55"/><stop offset="1" stop-color="#FFE7A8" stop-opacity="0"/>
   </radialGradient>
-  <filter id="h1201shadow" x="-5%" y="-5%" width="115%" height="115%">
-    <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#00000040"/>
-  </filter>
+  <radialGradient id="b1201sun" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="#FFE3A0"/><stop offset=".5" stop-color="#F7B866" stop-opacity=".7"/><stop offset="1" stop-color="#F7B866" stop-opacity="0"/>
+  </radialGradient>
   <style>
-    .h1201-quill { animation: h1201-quill 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1201-quill { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-    .h1201-glow { animation: h1201-glow 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1201-glow { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
-    .h1201-drift { animation: h1201-drift 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1201-drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .b1201tw{animation:b1201tw 4s ease-in-out infinite}
+    .b1201tw.d2{animation-delay:1.3s}.b1201tw.d3{animation-delay:2.6s}
+    @keyframes b1201tw{50%{opacity:.25}}
+    .b1201wv{animation:b1201wv 7s ease-in-out infinite}
+    .b1201wv.d2{animation-duration:9s;animation-direction:reverse}
+    @keyframes b1201wv{50%{transform:translateX(-18px)}}
+    .b1201ink{animation:b1201ink 3.6s ease-in-out infinite}
+    @keyframes b1201ink{50%{opacity:.55}}
+    .b1201gl{animation:b1201gl 3.6s ease-in-out infinite}
+    @keyframes b1201gl{50%{opacity:.5}}
+    .b1201bird{animation:b1201bird 26s linear infinite}
+    @keyframes b1201bird{0%{transform:translate(-60px,0)}100%{transform:translate(980px,-14px)}}
+    @media (prefers-reduced-motion: reduce){.b1201tw,.b1201wv,.b1201ink,.b1201gl,.b1201bird{animation:none}}
   </style>
 </defs>
-<rect width="920" height="260" fill="url(#h1201sky)"/>
-<!-- Skyline silhouette -->
-<g opacity="0.15">
-  <rect x="50" y="160" width="40" height="100" fill="#fff"/>
-  <rect x="100" y="140" width="30" height="120" fill="#fff"/>
-  <rect x="140" y="170" width="50" height="90" fill="#fff"/>
-  <rect x="700" y="150" width="35" height="110" fill="#fff"/>
-  <rect x="745" y="165" width="45" height="95" fill="#fff"/>
-  <rect x="800" y="145" width="30" height="115" fill="#fff"/>
-  <rect x="840" y="170" width="40" height="90" fill="#fff"/>
+<rect width="920" height="200" fill="url(#b1201sky)"/>
+<circle class="b1201tw" cx="80" cy="24" r="1.4" fill="#FFF3D0"/>
+<circle class="b1201tw d2" cx="210" cy="14" r="1.1" fill="#FFF3D0"/>
+<circle class="b1201tw d3" cx="352" cy="30" r="1.2" fill="#FFF3D0"/>
+<circle class="b1201tw" cx="512" cy="12" r="1" fill="#FFF3D0"/>
+<circle class="b1201tw d2" cx="668" cy="26" r="1.3" fill="#FFF3D0"/>
+<circle class="b1201tw d3" cx="842" cy="16" r="1.1" fill="#FFF3D0"/>
+<circle cx="640" cy="112" r="70" fill="url(#b1201sun)"/>
+<circle cx="640" cy="112" r="17" fill="#FFE1A0" opacity=".9"/>
+<!-- far shore: a low line of pines across the bay -->
+<path d="M0,112 L0,104 C40,101 70,103 110,100 C150,98 190,103 240,101 L300,104 C340,102 380,104 420,106 L470,108 L470,112Z" fill="#3A2F4E" opacity=".75"/>
+<g fill="#3A2F4E" opacity=".75">
+  <path d="M60,103 l4,-14 l4,14z"/><path d="M118,100 l5,-17 l5,17z"/><path d="M176,101 l4,-13 l4,13z"/><path d="M252,102 l4,-12 l4,12z"/>
 </g>
-<!-- Main parchment scroll -->
-<g transform="translate(280,20)" filter="url(#h1201shadow)">
-  <g class="h1201-drift">
-    <rect x="0" y="0" width="360" height="220" rx="4" fill="url(#h1201parch)"/>
-    <!-- Scroll curl top -->
-    <ellipse cx="180" cy="0" rx="185" ry="10" fill="#e8d4b0"/>
-    <!-- Scroll curl bottom -->
-    <ellipse cx="180" cy="220" rx="185" ry="10" fill="#d4be96"/>
-    <!-- Decorative lines (text stand-in) -->
-    <rect x="40" y="30" width="280" height="3" rx="1" fill="#b8a070" opacity="0.5"/>
-    <rect x="60" y="50" width="240" height="2" rx="1" fill="#c0a878" opacity="0.4"/>
-    <rect x="50" y="65" width="260" height="2" rx="1" fill="#c0a878" opacity="0.4"/>
-    <rect x="55" y="80" width="250" height="2" rx="1" fill="#c0a878" opacity="0.4"/>
-    <rect x="60" y="95" width="240" height="2" rx="1" fill="#c0a878" opacity="0.35"/>
-    <rect x="50" y="110" width="260" height="2" rx="1" fill="#c0a878" opacity="0.35"/>
-    <rect x="65" y="125" width="230" height="2" rx="1" fill="#c0a878" opacity="0.3"/>
-    <rect x="55" y="140" width="250" height="2" rx="1" fill="#c0a878" opacity="0.3"/>
-    <rect x="60" y="155" width="240" height="2" rx="1" fill="#c0a878" opacity="0.25"/>
-    <rect x="70" y="170" width="220" height="2" rx="1" fill="#c0a878" opacity="0.25"/>
-    <rect x="80" y="185" width="200" height="2" rx="1" fill="#c0a878" opacity="0.2"/>
+<!-- bay -->
+<rect y="110" width="920" height="40" fill="url(#b1201sea)"/>
+<path d="M560,114 h160" stroke="#FFD99A" stroke-width="2" opacity=".55"/>
+<path d="M590,120 h100" stroke="#FFD99A" stroke-width="1.6" opacity=".4"/>
+<g class="b1201wv"><path d="M-20,128 q20,-4 40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#F0C995" stroke-width="1.2" opacity=".45"/></g>
+<g class="b1201wv d2"><path d="M-20,140 q24,-5 48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0 t48,0" fill="none" stroke="#C9A3B0" stroke-width="1.2" opacity=".4"/></g>
+<!-- birds -->
+<g class="b1201bird" fill="none" stroke="#2A2340" stroke-width="1.6" stroke-linecap="round">
+  <path d="M0,60 q6,-6 12,0 q6,-6 12,0"/><path d="M30,70 q5,-5 10,0 q5,-5 10,0"/>
+</g>
+<!-- empty shore -->
+<path d="M0,152 C120,142 240,146 360,148 C500,151 640,142 780,146 C850,148 890,147 920,146 L920,200 L0,200Z" fill="url(#b1201sand)"/>
+<path d="M0,152 C120,142 240,146 360,148 C500,151 640,142 780,146 C850,148 890,147 920,146" fill="none" stroke="#F4E2BE" stroke-width="2" opacity=".7"/>
+<!-- wind-bent trees on the left -->
+<g fill="#2A2340">
+  <path d="M38,152 C40,128 46,104 60,82 L64,84 C52,106 47,128 46,152Z"/>
+  <path d="M60,82 C44,78 30,82 18,92 C34,88 46,88 58,92Z"/><path d="M62,84 C70,70 86,64 104,66 C92,72 80,78 66,90Z"/><path d="M58,92 C50,98 40,104 28,106 C40,100 50,96 56,90Z"/>
+  <path d="M120,150 C122,132 127,116 138,100 L141,102 C132,118 128,134 127,150Z"/>
+  <path d="M138,100 C126,96 116,99 106,106 C118,104 128,104 136,108Z"/><path d="M140,102 C148,92 160,88 174,90 C164,94 154,100 143,108Z"/>
+</g>
+<!-- driftwood and a few shells on the sand -->
+<path d="M226,170 C250,166 280,166 300,170" stroke="#7A5A3A" stroke-width="5" stroke-linecap="round"/>
+<path d="M286,167 l12,-7" stroke="#7A5A3A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="410" cy="178" r="2.4" fill="#F4E8D2"/><circle cx="460" cy="186" r="1.8" fill="#F4E8D2"/><circle cx="820" cy="176" r="2.2" fill="#F4E8D2"/>
+<!-- the page that survived -->
+<ellipse cx="640" cy="172" rx="150" ry="34" fill="url(#b1201glow)" class="b1201gl"/>
+<g transform="translate(540,140) rotate(-6) scale(1.3)">
+  <path d="M0,4 L148,0 L152,40 L4,44Z" fill="#7A5A3A" opacity=".25" transform="translate(3,4)"/>
+  <path d="M0,4 L148,0 L152,40 L4,44Z" fill="url(#b1201page)" stroke="#B8955E" stroke-width="1"/>
+  <g class="b1201ink" fill="none" stroke="#3A2A1A" stroke-width="1.3" stroke-linecap="round">
+    <path d="M52,9 q8,-3 16,0 q8,3 16,0"/>
+    <path d="M12,16 q6,-2 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0"/>
+    <path d="M12,22 q6,-2 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0"/>
+    <path d="M12,28 q6,-2 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0"/>
+    <path d="M12,34 q6,-2 12,0 t12,0 t12,0 t12,0 t12,0 t12,0 t12,0"/>
+  </g>
+  <!-- the shell holding it down -->
+  <g transform="translate(128,30)">
+    <path d="M-16,6 C-14,-10 14,-10 16,6 Z" fill="#F2DCC2" stroke="#B88A6A" stroke-width="1"/>
+    <path d="M0,6 L0,-6 M-6,6 L-4,-5 M6,6 L4,-5 M-11,6 L-9,-2 M11,6 L9,-2" stroke="#C99C7C" stroke-width=".9"/>
+    <path d="M-5,6 h10 v3 h-10z" fill="#E6C7A8"/>
   </g>
 </g>
-<!-- State seal -->
-<g transform="translate(150,90)">
-  <g class="h1201-glow">
-    <circle cx="0" cy="0" r="45" fill="url(#h1201seal)" opacity="0.9"/>
-    <circle cx="0" cy="0" r="38" fill="none" stroke="#f0d870" stroke-width="1.5" opacity="0.7"/>
-    <circle cx="0" cy="0" r="30" fill="none" stroke="#f0d870" stroke-width="0.8" opacity="0.5"/>
-    <!-- Sun rays -->
-    <line x1="0" y1="-20" x2="0" y2="-28" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="14" y1="-14" x2="20" y2="-20" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="20" y1="0" x2="28" y2="0" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="14" y1="14" x2="20" y2="20" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="0" y1="20" x2="0" y2="28" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="-14" y1="14" x2="-20" y2="20" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="-20" y1="0" x2="-28" y2="0" stroke="#f0d870" stroke-width="1.5"/>
-    <line x1="-14" y1="-14" x2="-20" y2="-20" stroke="#f0d870" stroke-width="1.5"/>
-    <!-- Palm tree in seal -->
-    <line x1="0" y1="12" x2="0" y2="-5" stroke="#6a5020" stroke-width="2"/>
-    <path d="M0,-5 Q-12,-15 -18,-8" fill="none" stroke="#4a7030" stroke-width="1.5"/>
-    <path d="M0,-5 Q12,-15 18,-8" fill="none" stroke="#4a7030" stroke-width="1.5"/>
-    <path d="M0,-5 Q-5,-18 -10,-14" fill="none" stroke="#4a7030" stroke-width="1.5"/>
-    <path d="M0,-5 Q5,-18 10,-14" fill="none" stroke="#4a7030" stroke-width="1.5"/>
-  </g>
-</g>
-<!-- Quill pen -->
-<g transform="translate(700,50)">
-  <g class="h1201-quill">
-    <path d="M0,0 Q10,40 5,120 L8,120 Q15,40 8,-5 Z" fill="#f8f0e0" stroke="#a09070" stroke-width="0.8"/>
-    <path d="M5,120 L3,140 L8,120" fill="#2a1a0a"/>
-    <path d="M0,0 Q-5,-5 -2,5 Q5,2 8,-5 Q5,-2 0,0" fill="#e0d0c0"/>
-    <!-- Ink drops -->
-    <circle cx="2" cy="145" r="2" fill="#1a1a3a" opacity="0.6"/>
-    <circle cx="8" cy="150" r="1.5" fill="#1a1a3a" opacity="0.4"/>
-  </g>
-</g>
-<!-- Ink well -->
-<g transform="translate(710,185)">
-  <g>
-    <ellipse cx="0" cy="0" rx="22" ry="8" fill="#2a1a0a"/>
-    <rect x="-22" y="-20" width="44" height="20" rx="3" fill="#3a2a1a"/>
-    <ellipse cx="0" cy="-20" rx="22" ry="8" fill="#4a3a2a"/>
-    <ellipse cx="0" cy="-18" rx="14" ry="5" fill="#1a1a3a"/>
-  </g>
-</g>
-<!-- Small scroll left side -->
-<g transform="translate(50,180)">
-  <g class="h1201-drift">
-    <rect x="0" y="0" width="60" height="45" rx="3" fill="#e8d4b0" opacity="0.7"/>
-    <ellipse cx="30" cy="0" rx="33" ry="5" fill="#dcc89c" opacity="0.7"/>
-    <rect x="8" y="10" width="44" height="1.5" rx="1" fill="#b8a070" opacity="0.3"/>
-    <rect x="10" y="18" width="40" height="1.5" rx="1" fill="#b8a070" opacity="0.3"/>
-    <rect x="8" y="26" width="44" height="1.5" rx="1" fill="#b8a070" opacity="0.25"/>
-  </g>
-</g>
-<!-- Stars -->
-<circle cx="820" cy="30" r="1.5" fill="#f0e880" opacity="0.6"/>
-<circle cx="780" cy="50" r="1" fill="#f0e880" opacity="0.4"/>
-<circle cx="860" cy="60" r="1.2" fill="#f0e880" opacity="0.5"/>
-<circle cx="100" cy="25" r="1" fill="#f0e880" opacity="0.4"/>
-<circle cx="60" cy="45" r="1.5" fill="#f0e880" opacity="0.5"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3693,5 +4774,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
