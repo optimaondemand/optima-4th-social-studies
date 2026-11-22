@@ -8351,7 +8351,7 @@
     {n:9,t:'Checkpoint',door:true, blurb:'A checkpoint between units. It opens when the files before it are finished.'},
     {n:10,t:'Modern Florida',      img:'source-4-10-01-florida-railroad-original.jpg', lon:-82.44,lat:27.96, where:'Tampa, Ybor City and the railroads', blurb:'Cigars, oranges, railroads and the land boom.'},
     {n:11,t:'Civil Rights & Citizens', img:'source-4-11-01-steele-harris-bus-1956.jpg', lon:-84.28,lat:30.44, where:'Tallahassee, Mims, Jacksonville and St. Augustine', blurb:'Floridians who stood up for their rights, and the citizens who keep working for a fairer Florida.'},
-    {n:12,t:'Government',          img:'source-4-12-01-florida-constitution.png', lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
+    {n:12,t:'Government',          img:'source-4-12-01-florida-constitution-1838.jpg', lon:-84.10,lat:30.20, where:'The Capitol', blurb:'How Florida governs itself: the Capitol, the courts, and you.'},
     {n:13,t:'The Exhibit',         img:'source-4-13-01-exhibit-board.png', lon:-81.38,lat:28.54, where:'The whole state', blurb:'The capstone: build the Florida History Exhibit from everything in this drawer.'}
   ];
   if(DATA.cabinet){ var ce=find(FILES,DATA.cabinet.n||THIS,'n'); if(ce) Object.assign(ce,DATA.cabinet); }
