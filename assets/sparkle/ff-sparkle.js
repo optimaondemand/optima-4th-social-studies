@@ -8126,7 +8126,7 @@
     before(first,w);
     var desk=w.querySelector('.spk-bb-desk'), ctl=w.querySelector('.spk-bb-ctl'), miss=w.querySelector('.spk-miss'), parts=w.querySelector('.spk-bb-parts'), boxes={};
     SP.forEach(function(s,i){ var b=el('div','spk-ptxp spk-bb-p'); b.style.setProperty('--c',s.col||COL[i%COL.length]); b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span> <span aria-hidden="true">'+esc(s.ico||'')+'</span> '+esc(s.t)+'</div><div class="txt"></div>';
-      (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ b.querySelector('.txt').appendChild(nd); }); }); parts.appendChild(b); boxes[i]=b; });
+      (s.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ var f=nd.firstChild; if(f&&f.nodeType===1&&f.tagName==='STRONG') f.classList.add('spk-lead'); b.querySelector('.txt').appendChild(nd); }); }); parts.appendChild(b); boxes[i]=b; });
     function paint(anim){ var k=S.bb, cur=SP[k];
       SP.forEach(function(s,i){ boxes[i].classList.toggle('on',i<k); });
       desk.querySelectorAll('.pg').forEach(function(p){ var i=+p.dataset.i; p.classList.toggle('on',i<k); p.classList.toggle('new',anim===i); });

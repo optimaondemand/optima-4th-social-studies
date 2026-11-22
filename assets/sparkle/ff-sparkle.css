@@ -5349,6 +5349,7 @@ html.spk-on .oao-howto{ display:block; max-width:760px; margin:14px auto 18px; b
 .spk-bb-ctl .pgname .n { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #6B4A2B; color: #fff; font: 900 12px 'Nunito', sans-serif; }
 .spk-bb-ctl .spk-opts { display: flex; flex-direction: column; gap: 6px; } .spk-bb-ctl .spk-opt { text-align: left; } .spk-bb-ctl .spk-opt.shake { animation: spk-shake .4s; }
 .spk-bb-p { border-left-color: var(--c, #1F8C7C); }
+.spk-bb-p .txt > p > strong:first-child { display: inline; } .spk-bb-p .txt > p > strong.spk-lead { display: none; } /* hide only a heading that starts the paragraph (fix 22 Nov 2026: p1 lost the word “constitution”) */
 
 /* stillhere (Explore evidence) */
 .spk-sth.wait .spk-sth-cols { opacity: .5; }
