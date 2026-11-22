@@ -1784,6 +1784,1234 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.12.02",
+ "title": "Branches and Functions of Florida Government",
+ "quiet": false,
+ "file": {
+  "n": 12,
+  "title": "Government & Money",
+  "label": "Government & Money",
+  "seals": [
+   "📜",
+   "⚖️",
+   "💰"
+  ]
+ },
+ "prevFile": "Why Florida Has a Written Constitution",
+ "connector": "Last time, we found out why Florida writes its rules down in a constitution.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, Canvas’s rulebook said a plan only counts if it is written down. Now the door with 13 has three locks, one above the other.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Pass the panther bill",
+   "why": "Carry a real idea from Florida’s students through the government, stop by stop, until it becomes a law."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Open the three locks",
+   "why": "Open three locks, one for each branch, to read how Florida’s government works. Then draw how the branches check each other on three real photos."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Make a trade",
+   "why": "Answer three questions. Fill a trade receipt. Then write your Trade and Choice entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. Canvas just put labels on the three locks!",
+  "opening": [
+   {
+    "t": "We’re still taking {route}, and now our plan is written down.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "Everyone in here has a copy of the written plan now.",
+    "ifRoute": "none"
+   },
+   "Last time, the rulebook said a plan only counts if it’s written down. Then three locks showed up on the door with 13, one above the other.",
+   "Today’s file is about Florida’s three branches of government. Start in the Learn tab (tab 1). Scroll down to the file card and carry a real bill all the way through Florida’s government.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s move the bill",
+      "go": true,
+      "reply": "Tap the bill, then tap the place it goes next. Or drag it there."
+     },
+     {
+      "t": "Why a panther?",
+      "reply": "In 1982, students all over Florida voted for a state animal, and the panther won. But a vote of students isn’t a law. Grown-up lawmakers and the governor had to make it one."
+     },
+     {
+      "t": "What do the locks say?",
+      "reply": "Top to bottom: MAKE THE PLAN, CARRY IT OUT, CHECK IT’S FAIR. I can’t open them alone. We’ll get to them in tab 2."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). You’ll open the three locks, one branch at a time, then study three real photos."
+     },
+     {
+      "t": "Was there a funny part?",
+      "reply": "Yes! Before the students’ votes were counted, the bill said the state animal would be the polar bear. That was only a placeholder, a word saved for later. The panther took its place."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Are those buildings close?",
+      "reply": "Very close! The Florida Supreme Court is right across the street from the Capitol in Tallahassee, where the lawmakers and the governor work. Close together, but separate jobs."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Did the door open?",
+      "reply": "Not yet. All three locks are open, but next time we find out if our plan still works when something goes wrong. We’re still taking {route}, so stay with me."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "The students chose it, the House and the Senate passed it, and the governor made it law. Two branches worked together. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "All three locks are open, and you drew every check between the branches. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill your trade receipt and write your entry."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file! I went back to the door with 13 and turned the locks in order, top to bottom, the way you did:"
+    },
+    {
+     "card": {
+      "from": "The door with 13",
+      "h": "THREE LOCKS · FILE 12",
+      "sub": "Opened in order:",
+      "lines": [
+       [
+        "🔓 Lock 1",
+        "Make the plan (lawmakers)"
+       ],
+       [
+        "🔓 Lock 2",
+        "Carry it out (the governor)"
+       ],
+       [
+        "🔓 Lock 3",
+        "Check it’s fair (the courts)"
+       ]
+      ],
+      "stamp": "OPEN",
+      "style": "locks"
+     }
+    },
+    {
+     "t": "Every lock clicked open. No one lock could do it alone, just like Florida’s government. Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "done"
+    }
+   ]
+  }
+ },
+ "lens": "Service means using your abilities to help others. Today you are a government structure analyst, someone who studies how a government is set up and how its parts share the work.",
+ "scene1": {
+  "type": "passbill",
+  "kicker": "Pass the panther bill",
+  "h": "In 1982, Florida’s students voted for a state animal. A vote isn’t a law yet. Move the bill, stop by stop, until it becomes one.",
+  "voice": "Tap the bill, then tap the place it goes next (or drag it). At each stop, do that stop’s job. One stop is a trick.",
+  "why": {
+   "icon": "🐆",
+   "q": "Why a panther?",
+   "t": "In 1981 and 1982, students all over Florida voted for a state animal. The Florida panther beat the manatee, the alligator, and the Key deer. But only lawmakers and the governor can make a law. So the students’ choice was written into a <b>bill</b>, an idea for a new law. That’s why you carry the bill through the government, one stop at a time."
+  },
+  "start": {
+   "ico": "🗳️",
+   "t": "Students’ vote",
+   "sub": "1982: the panther wins"
+  },
+  "bill": "A bill: make the Florida panther the state animal",
+  "stops": [
+   {
+    "id": "house",
+    "ico": "🏛️",
+    "t": "Florida House",
+    "sub": "120 representatives",
+    "kind": "chamber",
+    "q": "The representatives debate the bill (argue for and against it), then vote.",
+    "act": "🗳️ Hold the House vote",
+    "done": "The House passed it! A bill can start in either chamber, but it has to pass both."
+   },
+   {
+    "id": "pres",
+    "ico": "🇺🇸",
+    "t": "The President",
+    "sub": "Washington, D.C.",
+    "kind": "decoy",
+    "miss": "The President works in Washington, D.C., for the whole country. Florida makes its own state laws in Tallahassee."
+   },
+   {
+    "id": "senate",
+    "ico": "🏛️",
+    "t": "Florida Senate",
+    "sub": "40 senators",
+    "kind": "chamber",
+    "q": "The senators debate the bill too, then vote.",
+    "act": "🗳️ Hold the Senate vote",
+    "done": "The Senate passed it! Now both chambers of the Legislature, Florida’s lawmakers, have said yes."
+   },
+   {
+    "id": "gov",
+    "ico": "🖋️",
+    "t": "Governor’s desk",
+    "sub": "Tallahassee",
+    "kind": "gov"
+   }
+  ],
+  "govEarlyT": "Not yet. A bill has to pass both chambers, the House and the Senate, before the governor sees it.",
+  "againT": "That chamber already passed the bill. Which stop hasn’t voted yet?",
+  "firstT": "Finish the job at this stop first. Look under the stops.",
+  "govQ": "You’re the governor. You can sign the bill into law or veto it (say no).",
+  "sign": {
+   "t": "🖋️ Sign it into law",
+   "reply": "Signed. Now it’s a Florida law."
+  },
+  "veto": {
+   "t": "✋ Veto it",
+   "miss": "A governor really can veto a bill, and you’ll see what happens next in tab 2. But this bill became law in 1982. Sign it."
+  },
+  "law": {
+   "k": "Florida Statutes, section 15.0353 · Chapter 82-61, Laws of Florida",
+   "t": "“The Florida panther is hereby designated and declared as the official Florida state animal.”",
+   "stamp": "LAW · 1982",
+   "plain": "In plain words: the Florida panther is now Florida’s official state animal."
+  },
+  "ask": {
+   "q": "So who made the panther Florida’s state animal?",
+   "opts": [
+    {
+     "t": "The students’ vote, all by itself.",
+     "miss": "The vote showed what students wanted. But a vote of students isn’t a law. Who passed the bill and signed it?"
+    },
+    {
+     "t": "The Legislature passed it, and the governor made it law.",
+     "ok": true,
+     "reply": "Yes. The students had the idea, the legislative branch passed it, and the executive branch made it law. That’s how a bill becomes a law in Florida."
+    },
+    {
+     "t": "The President in Washington, D.C.",
+     "miss": "The President works for the whole country. Florida makes its own laws in Tallahassee."
+    }
+   ]
+  },
+  "win": "<b>From idea to law.</b> The House and the Senate passed the bill, and the governor made it law. The students’ choice became Florida law."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Open the three locks in Learn the Story. Each step opens its part of the reading.",
+    "Tap every gold number on the three real photos.",
+    "Draw the checks: pick a card, tap the branch that does it, then the branch it checks. Then answer one question."
+   ]
+  },
+  "reading": {
+   "type": "threelocks",
+   "activity": "Three Branches, One Government",
+   "why": {
+    "icon": "🔐",
+    "q": "Why three locks?",
+    "t": "Florida splits the power to run the state into three branches, so no one person or group has all of it. Each branch has its own job, like three locks that each need their own key. That’s why the door with 13 has three locks, and you open them in order."
+   },
+   "locks": [
+    "MAKE THE PLAN",
+    "CARRY IT OUT",
+    "CHECK IT’S FAIR"
+   ],
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^Florida's state government is split"
+    },
+    {
+     "id": "p2",
+     "match": "^The Legislative Branch"
+    },
+    {
+     "id": "p3",
+     "match": "^The Executive Branch"
+    },
+    {
+     "id": "p4",
+     "match": "^The Judicial Branch"
+    },
+    {
+     "id": "p5",
+     "match": "^Checks and balances"
+    }
+   ],
+   "keysQ": "A bill has to pass both chambers. Turn the House key and the Senate key.",
+   "parts": [
+    {
+     "id": "intro",
+     "t": "Why three branches?",
+     "ico": "🔦",
+     "paras": [
+      "p1"
+     ],
+     "act": "🔦 Shine a light on the door"
+    },
+    {
+     "id": "leg",
+     "t": "Lock 1 · Make the plan: the legislative branch",
+     "ico": "🏛️",
+     "paras": [
+      "p2"
+     ],
+     "lock": 0,
+     "keys": [
+      "🔑 House key",
+      "🔑 Senate key"
+     ],
+     "oneKeyT": "One key isn’t enough. A bill has to pass the House AND the Senate. Turn the other key too."
+    },
+    {
+     "id": "exe",
+     "t": "Lock 2 · Carry it out: the executive branch",
+     "ico": "🖋️",
+     "paras": [
+      "p3"
+     ],
+     "lock": 1,
+     "ask": {
+      "q": "A bill has passed both chambers. It goes to the governor. What can the governor do with it?",
+      "opts": [
+       {
+        "t": "Send it to the President to decide.",
+        "miss": "The President works for the whole country, in Washington, D.C. Florida’s own governor decides on Florida bills."
+       },
+       {
+        "t": "Sign it into law, or veto it.",
+        "ok": true
+       },
+       {
+        "t": "Rewrite the bill any way he or she wants.",
+        "miss": "The governor can’t rewrite a bill. Lawmakers write bills. The governor signs or vetoes them."
+       }
+      ]
+     }
+    },
+    {
+     "id": "jud",
+     "t": "Lock 3 · Check it’s fair: the judicial branch",
+     "ico": "⚖️",
+     "paras": [
+      "p4"
+     ],
+     "lock": 2,
+     "slide": {
+      "t": "You’re a judge. Slide the new law next to the constitution and compare them. Does the law follow the rules?",
+      "lab": "Slide the law next to the constitution",
+      "lo": "📄 the new law",
+      "hi": "📜 the constitution",
+      "need": 90,
+      "mark": "compare here",
+      "fmt": "{v}% of the way",
+      "lowT": "Keep sliding until the law sits right next to the constitution."
+     }
+    },
+    {
+     "id": "chk",
+     "t": "Checks and balances",
+     "ico": "🔁",
+     "paras": [
+      "p5"
+     ],
+     "ask": {
+      "q": "The governor vetoes a bill. Is that bill dead forever?",
+      "reply": "Right. Lawmakers can vote again.",
+      "opts": [
+       {
+        "t": "Yes. A veto always ends a bill.",
+        "miss": "Not always! Lawmakers can vote on it again. How many would have to say yes?"
+       },
+       {
+        "t": "No. If enough lawmakers vote for it again, it can still become law.",
+        "ok": true
+       }
+      ]
+     },
+     "slide": {
+      "t": "Two-thirds of the House and two-thirds of the Senate have to vote yes again. Slide the yes votes up to the line.",
+      "lab": "Yes votes in each chamber",
+      "lo": "0 yes votes",
+      "hi": "every lawmaker",
+      "need": 67,
+      "mark": "two-thirds",
+      "fmt": "{v} out of every 100 vote yes",
+      "lowT": "Not enough yet. An override needs about 67 out of every 100 lawmakers, two-thirds, in both chambers."
+     }
+    }
+   ],
+   "allT": "All three locks are open. The plan, the doing, and the checking each have their own branch.",
+   "countT": "locks open. Each step opens its part of the reading.",
+   "mid": "jud"
+  },
+  "evidence": {
+   "type": "drawchecks",
+   "kicker": "Draw the checks",
+   "h": "Each branch can check, or stop, another. Draw an arrow for each check.",
+   "voice": "Pick a check card. Tap the branch that DOES it, then the branch it checks. One card isn’t true in Florida: put it in the 🚫 box.",
+   "why": {
+    "icon": "🏹",
+    "q": "Why arrows?",
+    "t": "An arrow shows who does something to whom. A check is one branch doing something that stops or limits another branch. So each check gets an arrow, from the branch that does it to the branch it checks."
+   },
+   "nodes": [
+    {
+     "id": "leg",
+     "t": "Legislative",
+     "ico": "🏛️",
+     "sub": "House + Senate"
+    },
+    {
+     "id": "exe",
+     "t": "Executive",
+     "ico": "🖋️",
+     "sub": "the governor"
+    },
+    {
+     "id": "jud",
+     "t": "Judicial",
+     "ico": "⚖️",
+     "sub": "the courts"
+    }
+   ],
+   "cards": [
+    {
+     "id": "veto",
+     "t": "Veto a bill",
+     "from": "exe",
+     "to": "leg",
+     "missFrom": "Who signs or vetoes bills? Look at photo 4.",
+     "missTo": "A veto stops a bill. Who wrote and passed that bill?",
+     "reply": "The governor can veto a bill the Legislature passed."
+    },
+    {
+     "id": "over",
+     "t": "Override a veto with a two-thirds vote",
+     "from": "leg",
+     "to": "exe",
+     "missFrom": "Who votes on bills? The House and the Senate.",
+     "missTo": "An override beats a veto. Whose veto?",
+     "reply": "Two-thirds of both chambers can pass a bill over the governor’s veto."
+    },
+    {
+     "id": "unc",
+     "t": "Rule that a law breaks the constitution",
+     "from": "jud",
+     "to": "leg",
+     "missFrom": "Who decides whether laws follow the constitution? Look at photo 7.",
+     "missTo": "The law was made by which branch?",
+     "reply": "Courts can rule that a law is unconstitutional, so it can’t be used."
+    },
+    {
+     "id": "pick",
+     "t": "Pick judges for the higher courts from a list",
+     "from": "exe",
+     "to": "jud",
+     "missFrom": "Who picks judges for the higher courts? Look back at the bottom lock’s reading.",
+     "missTo": "The judges join which branch?",
+     "reply": "The governor picks judges from a list, and then voters decide whether each justice keeps the job."
+    },
+    {
+     "id": "imp",
+     "t": "Impeach a governor who breaks the law",
+     "from": "leg",
+     "to": "exe",
+     "missFrom": "The House impeaches, and the Senate holds the trial. Which branch is that?",
+     "missTo": "Impeach means to accuse an officer, like the governor, of breaking the law.",
+     "reply": "The House can impeach a governor who breaks the law, and the Senate holds the trial."
+    },
+    {
+     "id": "fake",
+     "t": "Vote to approve every new Supreme Court justice",
+     "fake": true,
+     "miss": "In Florida, the Legislature doesn’t vote on justices. Is this a real Florida check? Try the 🚫 box.",
+     "reply": "Right: not true in Florida. The governor picks justices from a list, and then the voters, not the lawmakers, decide whether each one stays."
+    }
+   ],
+   "binT": "Not true in Florida",
+   "ask": {
+    "q": "Look at all your arrows. Which branch can do whatever it wants, with no one to check it?",
+    "opts": [
+     {
+      "t": "The legislative branch, because it makes the laws.",
+      "miss": "Look at your arrows. The governor can veto its bills, and courts can rule its laws unconstitutional."
+     },
+     {
+      "t": "The executive branch, because the governor leads the state.",
+      "miss": "Look at your arrows. Lawmakers can override a veto and impeach a governor."
+     },
+     {
+      "t": "None of them. Every branch can be checked by another.",
+      "ok": true,
+      "reply": "Yes. Every branch has an arrow pointing at it. That’s checks and balances: power is shared, so no one branch can do everything."
+     }
+    ]
+   },
+   "win": "<b>Every branch is checked.</b> Each branch can stop or limit another, so power is shared and citizens are protected."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the photos to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 17.5,
+    "y": 43.3,
+    "title": "New members take an oath.",
+    "t": "New members of the Florida House raise their right hands and promise to do their job and follow the constitution. Then they will debate and vote on bills."
+   },
+   {
+    "n": "2",
+    "x": 2.0,
+    "y": 48.6,
+    "title": "Rows of desks.",
+    "t": "The Florida House has 120 members. Each one has a desk and a vote. The Senate, in another room, has 40 members."
+   },
+   {
+    "n": "3",
+    "x": 15.9,
+    "y": 75.8,
+    "title": "A justice gives the oath.",
+    "t": "A Florida Supreme Court justice (a judge of the state’s highest court), in a black robe, gives the oath to the new lawmakers. The branches are separate, but they work together."
+   },
+   {
+    "n": "4",
+    "x": 55.2,
+    "y": 79.3,
+    "title": "The bill on the desk.",
+    "t": "The House and the Senate passed this bill first. Now the governor signs it into law. He could have vetoed it instead."
+   },
+   {
+    "n": "5",
+    "x": 39.2,
+    "y": 44.2,
+    "title": "Lawmakers at the signing.",
+    "t": "State lawmakers stand with the governor. This bill was sponsored, or led, by a member of the House and a member of the Senate."
+   },
+   {
+    "n": "6",
+    "x": 43.2,
+    "y": 13.4,
+    "title": "The Great Seal of Florida.",
+    "t": "The state seal hangs behind the governor. The governor acts for the whole state of Florida."
+   },
+   {
+    "n": "7",
+    "x": 79.6,
+    "y": 63.5,
+    "title": "The Supreme Court of Florida.",
+    "t": "The sign says Supreme Court of Florida, the state’s highest court. Its 7 justices decide what laws mean and whether they follow the constitution."
+   },
+   {
+    "n": "8",
+    "x": 87.1,
+    "y": 77.6,
+    "title": "Across the street.",
+    "t": "The Supreme Court stands across the street from Florida’s Capitol, where the Legislature and the governor work. Close together, but separate jobs."
+   }
+  ]
+ },
+ "planner": {
+  "type": "receipt",
+  "head": "FLORIDA TRADE RECEIPT",
+  "voice": "Pick a branch, then one choice it makes. Then fill the receipt: what Florida gets, what it costs, and what could happen without checks. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🧾",
+   "q": "Why a receipt?",
+   "t": "A receipt shows what you got and what you paid. Every choice a government makes is a trade like that: people get something good, and it costs something. A <b>trade-off</b> is what you give up to get something else. That’s why you fill a receipt before you write."
+  },
+  "branchQ": "Pick a branch.",
+  "choiceQ": "Pick one choice that branch makes.",
+  "labels": {
+   "item": "CHOICE",
+   "get": "YOU GET",
+   "cost": "IT COSTS",
+   "nochk": "WITHOUT CHECKS"
+  },
+  "branches": [
+   {
+    "id": "leg",
+    "t": "Legislative",
+    "ico": "🏛️",
+    "choices": [
+     {
+      "id": "seat",
+      "t": "Pass a law that everyone in a car must wear a seat belt",
+      "get": [
+       "Fewer people hurt in car crashes"
+      ],
+      "cost": [
+       "Some people feel it limits their freedom to choose"
+      ],
+      "weak": [
+       {
+        "t": "Cars go faster",
+        "miss": "A seat belt law doesn’t make cars faster. What does it protect?"
+       }
+      ]
+     },
+     {
+      "id": "park",
+      "t": "Pass a law that protects land where panthers live",
+      "get": [
+       "Panthers and other wildlife keep a place to live"
+      ],
+      "cost": [
+       "That land can’t be used to build homes, stores, or roads"
+      ],
+      "weak": [
+       {
+        "t": "Florida gets more panthers by tomorrow",
+        "miss": "Too fast to be true. What does protected land really give?"
+       }
+      ]
+     }
+    ],
+    "nochk": [
+     "Lawmakers could pass any law, even an unfair one, and no one could stop it"
+    ]
+   },
+   {
+    "id": "exe",
+    "t": "Executive",
+    "ico": "🖋️",
+    "choices": [
+     {
+      "id": "veto",
+      "t": "Veto a bill the governor thinks is a bad idea",
+      "get": [
+       "A bad idea can be stopped before it becomes a law"
+      ],
+      "cost": [
+       "A good idea might be stopped too, unless lawmakers override"
+      ],
+      "weak": [
+       {
+        "t": "The bill is gone forever",
+        "miss": "Not always! Lawmakers can override a veto with a two-thirds vote."
+       }
+      ]
+     },
+     {
+      "id": "sign",
+      "t": "Sign a bill to build a new road",
+      "get": [
+       "People can get to school and work faster"
+      ],
+      "cost": [
+       "It costs tax money, and trees or homes may be in the way"
+      ],
+      "weak": [
+       {
+        "t": "The road is free",
+        "miss": "Roads are paid for with tax money. What does it cost?"
+       }
+      ]
+     }
+    ],
+    "nochk": [
+     "A governor could make every decision alone, like a king"
+    ]
+   },
+   {
+    "id": "jud",
+    "t": "Judicial",
+    "ico": "⚖️",
+    "choices": [
+     {
+      "id": "unc",
+      "t": "Rule that a law breaks the constitution",
+      "get": [
+       "People’s rights stay protected"
+      ],
+      "cost": [
+       "The law can’t be used, even though lawmakers wanted it"
+      ],
+      "weak": [
+       {
+        "t": "The judges write a new law",
+        "miss": "Judges don’t write laws. What happens to the law they rule against?"
+       }
+      ]
+     },
+     {
+      "id": "case",
+      "t": "Decide a case between two people who disagree",
+      "get": [
+       "The disagreement is settled fairly, by the law"
+      ],
+      "cost": [
+       "One side doesn’t get what it wanted, and cases take time"
+      ],
+      "weak": [
+       {
+        "t": "Both sides always win",
+        "miss": "In a court case, usually one side wins. What is the cost?"
+       }
+      ]
+     }
+    ],
+    "nochk": [
+     "Judges could decide cases however they wanted, with no one to stop them"
+    ]
+   }
+  ],
+  "weakNo": [
+   {
+    "t": "Nothing would change at all",
+    "miss": "Look back at your arrows on tab 2. Without checks, what could one branch do?"
+   }
+  ],
+  "stamp": "PAID",
+  "foot": "Every choice has a trade-off.",
+  "doneT": "Your receipt is printed. Now write your own sentences in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "the branch",
+    "rx": "legislat|executive|judicial|governor|court|judge|lawmak|senate|house|branch"
+   },
+   {
+    "t": "a choice it makes",
+    "rx": "pass|law|veto|sign|rule|unconstitution|appoint|pick|override|bill|decid|case"
+   },
+   {
+    "t": "the benefit",
+    "rx": "benefit|help|get|safe|good|protect|better|gain|fair|faster|fewer|save"
+   },
+   {
+    "t": "the cost or trade-off",
+    "rx": "cost|trade|give up|lose|but |some people|less|money|time|can.?t|cannot|limit|freedom"
+   },
+   {
+    "t": "without checks",
+    "rx": "without|no checks?|if (no one|nobody)|too much power|could do anything|whatever|king|alone|unfair"
+   }
+  ],
+  "lines": [
+   "Start with the branch you picked: “The branch I chose is…”",
+   "Good. Now name one choice that branch makes.",
+   "Say what Florida gets from that choice.",
+   "Now the trade-off: what does it cost, or what do people give up?",
+   "Last, what could happen without checks and balances? Then read it over once."
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use the panther bill, the three locks, and the three real photos."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill a trade receipt: one branch, one choice, what Florida gets, what it costs, and what could happen without checks."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Trade and Choice entry. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Trade and Choice: Branches of Florida Government"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "gavel",
+  "kicker": "Bang the gavel",
+  "h": "jud = judge",
+  "root": "jud",
+  "hl": "jud",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match brings the gavel down.",
+  "why": {
+   "icon": "🔨",
+   "q": "Why a gavel?",
+   "t": "A <b>gavel</b> is the small wooden hammer a judge taps to keep order in court. <b>Jud</b> comes from the Latin word <i>iudex</i>, “judge.” That’s why each word you match brings the judge’s gavel down, and the scales of justice get closer to level."
+  },
+  "boardT": "Gavel taps",
+  "words": [
+   {
+    "w": "judge",
+    "m": "a person who decides cases in a court",
+    "miss": "The person in a black robe who decides a court case is a…",
+    "say": "Judge. A person who decides cases in a court."
+   },
+   {
+    "w": "judicial",
+    "m": "having to do with courts and judges",
+    "miss": "The branch of courts and judges is the ___ branch.",
+    "say": "Judicial. Having to do with courts and judges."
+   },
+   {
+    "w": "judgment",
+    "m": "a decision, or the ability to decide wisely",
+    "miss": "When you make a careful decision, you use good…",
+    "say": "Judgment. A decision, or the ability to decide wisely."
+   },
+   {
+    "w": "prejudice",
+    "m": "deciding about someone before you know the facts",
+    "miss": "Pre means before. Judging before you know the facts is…",
+    "say": "Prejudice. Deciding about someone before you know the facts."
+   }
+  ],
+  "win": "Order in the court! The scales are level."
+ },
+ "cabinet": {
+  "n": 12
+ },
+ "notes": {
+  "learned": [
+   "Florida’s government is split into three branches so no one person or group has all the power. This is called separation of powers.",
+   "The legislative branch (the Legislature) makes the laws. It has two chambers: the Senate (40 senators) and the House of Representatives (120 representatives).",
+   "A bill has to pass both chambers. Then the governor can sign it into law or veto it.",
+   "The executive branch carries out the laws. The governor leads it and runs state agencies.",
+   "The judicial branch decides what laws mean. Florida’s courts go up to the Florida Supreme Court, which has 7 justices. Courts can rule that a law is unconstitutional.",
+   "Checks and balances: the governor can veto a bill, two-thirds of both chambers can override a veto, the House can impeach a governor, and courts can rule on laws.",
+   "The governor picks judges for the higher courts from a list, and voters decide yes or no whether each justice keeps the job.",
+   "In 1982, Florida’s students voted for the panther. The Legislature passed the bill and it became law: the Florida panther is the official state animal."
+  ],
+  "vocab": [
+   [
+    "branch",
+    "one of the three parts of government that share the work"
+   ],
+   [
+    "separation of powers",
+    "splitting up the power to govern so no one person or group has too much"
+   ],
+   [
+    "Legislature",
+    "Florida’s lawmakers: the Senate and the House of Representatives"
+   ],
+   [
+    "chamber",
+    "one of the two groups of lawmakers that meet in separate rooms"
+   ],
+   [
+    "bill",
+    "an idea for a new law"
+   ],
+   [
+    "debate",
+    "to argue for and against an idea"
+   ],
+   [
+    "veto",
+    "when the governor rejects a bill"
+   ],
+   [
+    "agency",
+    "a state office that does the state’s everyday work"
+   ],
+   [
+    "interpret",
+    "to decide what something means"
+   ],
+   [
+    "justice",
+    "a judge of the Supreme Court"
+   ],
+   [
+    "unconstitutional",
+    "breaking the rules in the constitution"
+   ],
+   [
+    "check",
+    "to stop or limit another branch"
+   ],
+   [
+    "override",
+    "when lawmakers pass a bill again after a veto, with two-thirds of each chamber"
+   ],
+   [
+    "impeach",
+    "to formally accuse an officer, like the governor, of breaking the law"
+   ],
+   [
+    "trade-off",
+    "what you give up to get something else"
+   ],
+   [
+    "oath",
+    "a serious promise"
+   ],
+   [
+    "sponsor",
+    "a lawmaker who leads a bill"
+   ],
+   [
+    "judge",
+    "a person who decides cases in a court"
+   ],
+   [
+    "judicial",
+    "having to do with courts and judges"
+   ],
+   [
+    "judgment",
+    "a decision, or the ability to decide wisely"
+   ],
+   [
+    "prejudice",
+    "deciding about someone before you know the facts"
+   ]
+  ],
+  "wordParts": "jud = judge (from the Latin iudex, made of ius “law” + dicere “to say”): judge, judicial, judgment, prejudice"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "the legislative branch",
+    "rx": "legislat|lawmak|law ?maker|senat|house|representativ|congress|makes? (the )?laws?|make laws|writes? laws",
+    "n": 1
+   },
+   {
+    "t": "the executive branch",
+    "rx": "execut|governor|carr(y|ies|ying) out|enforc|signs?|veto|runs? the state|leader",
+    "n": 1
+   },
+   {
+    "t": "the judicial branch",
+    "rx": "judic|judg|court|justice|interpret|decid|what (the )?laws? mean|fair|constitution",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "which branch acts",
+    "rx": "governor|legislat|house|senat|court|judg|justice|lawmak|execut|judic|branch",
+    "n": 1
+   },
+   {
+    "t": "how it checks the other",
+    "rx": "veto|override|two.?thirds|2/3|unconstitution|impeach|pick|appoint|reject|stop|block|vote again|vote it again|rule|cancel|check|say no|said no|limit",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "what could go wrong",
+    "rx": "unfair|not fair|bad|abuse|too much|whatever|boss|king|dictator|control|mean|wrong|selfish|no one could stop|nobody could stop|can.?t stop|take over|hurt|greedy|power|anything",
+    "n": 1
+   },
+   {
+    "t": "who it protects",
+    "rx": "people|citizen|everyone|every ?body|us\\b|we\\b|floridian|rights|fair|safe|protect|shar|together|balance",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at the three locks in Learn the Story on tab 2.",
+   "Each lock was one branch: MAKE THE PLAN, CARRY IT OUT, CHECK IT’S FAIR. Who does each job?",
+   "Try this shape: “The legislative branch ___. The executive branch ___. The judicial branch ___.”"
+  ],
+  "journal-q2": [
+   "Look at the arrows you drew in Draw the checks on tab 2.",
+   "Pick one arrow. Which branch does something, and which branch does it stop or limit?",
+   "Try this shape: “The ___ can ___ , which checks the ___.”"
+  ],
+  "journal-q3": [
+   "Look at the last question in Draw the checks, and the part of the reading called Checks and balances.",
+   "Imagine one leader could make the laws, carry them out, and judge them too. What could go wrong for the people?",
+   "Try this shape: “If one leader had all the power, ___. Dividing power protects ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: why do you think Florida’s Legislature has two chambers instead of one?",
+  "journal-q2": "Go further: why does an override need two-thirds of the votes, not just more than half?",
+  "journal-q3": "Go further: Florida’s voters decide whether justices keep their jobs. Is that a check too? Who does it check?"
+ },
+ "quizMiss": [
+  {
+   "a": "The executive branch, led by the governor, carries out the laws. Look at the top lock, MAKE THE PLAN, in Learn the Story.",
+   "c": "Courts decide what laws mean. They don’t write them. Look at the top lock, MAKE THE PLAN, in Learn the Story."
+  },
+  {
+   "a": "The governor can’t rewrite a bill. Lawmakers write bills. Look at the middle lock, CARRY IT OUT, in Learn the Story.",
+   "c": "The governor does have power over bills. Look at the middle lock, CARRY IT OUT, in Learn the Story."
+  },
+  {
+   "a": "Writing laws is the legislative branch’s job. Look at the bottom lock, CHECK IT’S FAIR, in Learn the Story.",
+   "b": "Running state agencies is the governor’s job. Look at the bottom lock, CHECK IT’S FAIR, in Learn the Story."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "A vote isn’t a law",
+   "at": "scene1",
+   "script": "When I was in fourth grade, my class voted to get a class pet hamster. Everyone voted yes! But our vote didn’t make it happen. The principal still had to say yes. In 1982, Florida’s students voted for the panther, and they had the same problem. Only lawmakers and the governor can make a law. Tap the bill, then the place it goes next."
+  },
+  {
+   "slot": "guide2",
+   "label": "From idea to law",
+   "at": "s1done",
+   "script": "The students had the idea. The House and the Senate passed it. The governor made it law. Two branches worked together, and the panther became Florida’s state animal. Next, go to the Explore tab, tab 2. The three locks are waiting."
+  },
+  {
+   "slot": "guide3",
+   "label": "Three locks",
+   "at": "explore",
+   "script": "The door with 13 has three locks, and each lock is one branch of Florida’s government. The top lock needs two keys at once. The middle lock needs the governor. The bottom lock needs a judge. Open them in order, and each part of the reading opens."
+  },
+  {
+   "label": "Florida’s own words",
+   "at": "evidence",
+   "parts": [
+    {
+     "slot": "guide4a",
+     "who": "Narrator",
+     "script": "From the Constitution of the State of Florida, Article Two, Section Three. Branches of government. The powers of the state government shall be divided into legislative, executive and judicial branches. No person belonging to one branch shall exercise any powers appertaining to either of the other branches unless expressly provided herein."
+    },
+    {
+     "slot": "guide4b",
+     "script": "Appertaining means belonging. So one person can’t do another branch’s job, unless the constitution says so. Now look at the three real photos. Tap every gold number. Then pick a check card, tap the branch that does it, then the branch it checks, and an arrow appears."
+    }
+   ]
+  },
+  {
+   "slot": "guide5",
+   "label": "Every choice is a trade",
+   "at": "plan",
+   "script": "Here’s a trade I made this week. I walked to the store instead of driving. I got fresh air and saved gas. It cost me twenty extra minutes. Every choice has a trade-off like that. Pick a branch and one choice it makes. Then fill the receipt: what Florida gets, and what it costs. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^1982$",
+    "sel": ".spk-pb-st.start",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^panther$",
+    "sel": ".spk-pb-bill",
+    "fx": "pop",
+    "tag": "the bill"
+   },
+   {
+    "at": "^lawmakers$",
+    "sel": ".spk-pb-st.chamber",
+    "all": true,
+    "fx": "glow"
+   },
+   {
+    "at": "^governor$",
+    "sel": ".spk-pb-st.gov",
+    "fx": "glow"
+   },
+   {
+    "at": "^Tap$",
+    "sel": ".spk-pb-bill",
+    "fx": "point"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^idea$",
+    "sel": ".spk-pb-st.start",
+    "fx": "glow"
+   },
+   {
+    "at": "^House$",
+    "sel": ".spk-pb-st[data-id=\"house\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Senate$",
+    "sel": ".spk-pb-st[data-id=\"senate\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^law$",
+    "sel": ".spk-pb-law",
+    "fx": "trace"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^locks$",
+    "sel": ".spk-tl-door",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^top$",
+    "sel": ".spk-tl-door .lk",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^middle$",
+    "sel": ".spk-tl-door .lk",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^bottom$",
+    "sel": ".spk-tl-door .lk",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^opens$",
+    "sel": ".spk-tl-ctl",
+    "fx": "point"
+   }
+  ],
+  "guide4a": [
+   {
+    "at": "^Constitution$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^legislative$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^executive$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 3,
+    "fx": "pop"
+   },
+   {
+    "at": "^judicial$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 6,
+    "fx": "pop"
+   }
+  ],
+  "guide4b": [
+   {
+    "at": "^photos$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^number$",
+    "sel": "#panel-explore .spk-hot",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^card$",
+    "sel": ".spk-dck-cards",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^arrow$",
+    "sel": ".spk-dck-board",
+    "fx": "pop"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^trade$",
+    "sel": ".spk-rcp-paper, .spk-rcp-step.s1",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^branch$",
+    "sel": ".spk-rcp-step.s1 .spk-opts",
+    "fx": "point"
+   },
+   {
+    "at": "^receipt$",
+    "sel": ".spk-rcp-step.s1",
+    "fx": "pop"
+   },
+   {
+    "at": "^Step$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,129 +3250,81 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Branches and Functions of Florida Government ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Dawn in Tallahassee: Florida's Capitol tower and the Old Capitol on one side of the street, the Florida Supreme Court on the other, the sun rising between them and three windows lit">
 <defs>
-  <linearGradient id="h1202sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#c8d8e8"/>
-    <stop offset="60%" stop-color="#dce8f0"/>
-    <stop offset="100%" stop-color="#e8e0d0"/>
-  </linearGradient>
-  <linearGradient id="h1202marble" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f0ece4"/>
-    <stop offset="100%" stop-color="#d8d0c4"/>
-  </linearGradient>
-  <linearGradient id="h1202dome" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#d4a840"/>
-    <stop offset="100%" stop-color="#a08020"/>
-  </linearGradient>
+  <linearGradient id="b1202sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2C55"/><stop offset=".42" stop-color="#5B4A7A"/><stop offset=".72" stop-color="#E08A6A"/><stop offset="1" stop-color="#F7C77E"/></linearGradient>
+  <radialGradient id="b1202sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF4C8"/><stop offset=".45" stop-color="#FFD27A" stop-opacity=".9"/><stop offset="1" stop-color="#FFB25E" stop-opacity="0"/></radialGradient>
+  <linearGradient id="b1202stone" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E6DCC8"/><stop offset=".6" stop-color="#F3ECDD"/><stop offset="1" stop-color="#CDBFA4"/></linearGradient>
+  <linearGradient id="b1202court" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDE3CC"/><stop offset="1" stop-color="#D4C4A2"/></linearGradient>
+  <radialGradient id="b1202win" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#FFF2B0"/><stop offset="1" stop-color="#FFC84A"/></radialGradient>
   <style>
-    .h1202-pulse { animation: h1202-pulse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1202-pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
-    .h1202-sway { animation: h1202-sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1202-sway { 0%,100% { transform: rotate(-1deg); } 50% { transform: rotate(1deg); } }
-    .h1202-bob { animation: h1202-bob 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1202-bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+    .b1202cloud{animation:b1202drift 60s linear infinite}
+    .b1202cloud.c2{animation-duration:85s;animation-delay:-30s}
+    @keyframes b1202drift{from{transform:translateX(-60px)}to{transform:translateX(60px)}}
+    .b1202sun{animation:b1202glow 6s ease-in-out infinite;transform-origin:466px 168px}
+    @keyframes b1202glow{50%{transform:scale(1.06);opacity:.9}}
+    .b1202w{opacity:.25;animation:b1202on 9s ease-in-out infinite}
+    .b1202w.w2{animation-delay:1.2s}.b1202w.w3{animation-delay:2.4s}
+    @keyframes b1202on{0%,8%{opacity:.25}18%,80%{opacity:1}92%,100%{opacity:.25}}
+    .b1202bird{animation:b1202fly 26s linear infinite}
+    @keyframes b1202fly{from{transform:translate(-40px,0)}to{transform:translate(960px,-24px)}}
+    .b1202flag{animation:b1202wave 3s ease-in-out infinite;transform-origin:261px 14px}
+    @keyframes b1202wave{50%{transform:skewY(4deg)}}
+    @media (prefers-reduced-motion: reduce){.b1202cloud,.b1202sun,.b1202w,.b1202bird,.b1202flag{animation:none}.b1202w{opacity:1}}
   </style>
 </defs>
-<rect width="920" height="260" fill="url(#h1202sky)"/>
-<!-- Ground / base -->
-<rect y="210" width="920" height="50" fill="#c8c0b0"/>
-<rect y="220" width="920" height="40" fill="#b8b0a0"/>
-<!-- Large shared base platform -->
-<g transform="translate(160,195)">
-  <rect x="0" y="0" width="600" height="18" rx="2" fill="#d8d0c4" stroke="#b0a890" stroke-width="1"/>
-  <rect x="-10" y="14" width="620" height="10" rx="2" fill="#c8c0b4" stroke="#b0a890" stroke-width="1"/>
-</g>
-<!-- Column 1 - Legislative -->
-<g transform="translate(230,60)">
-  <g>
-    <!-- Capital -->
-    <rect x="-8" y="0" width="56" height="12" rx="2" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="1"/>
-    <!-- Shaft -->
-    <rect x="2" y="12" width="36" height="123" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="0.8"/>
-    <!-- Fluting lines -->
-    <line x1="10" y1="15" x2="10" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="20" y1="15" x2="20" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="30" y1="15" x2="30" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <!-- Base -->
-    <rect x="-5" y="135" width="50" height="10" rx="2" fill="#d0c8b8" stroke="#b0a890" stroke-width="0.8"/>
-    <!-- Gavel icon -->
-    <g transform="translate(20,65)">
-      <g class="h1202-pulse">
-        <rect x="-10" y="-3" width="20" height="6" rx="2" fill="#8a7050"/>
-        <rect x="-2" y="-12" width="4" height="10" rx="1" fill="#8a7050"/>
-      </g>
-    </g>
-  </g>
-</g>
-<!-- Column 2 - Executive (center, taller) -->
-<g transform="translate(430,40)">
-  <g>
-    <rect x="-8" y="0" width="56" height="12" rx="2" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="1"/>
-    <rect x="2" y="12" width="36" height="143" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="0.8"/>
-    <line x1="10" y1="15" x2="10" y2="152" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="20" y1="15" x2="20" y2="152" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="30" y1="15" x2="30" y2="152" stroke="#c0b8a8" stroke-width="0.5"/>
-    <rect x="-5" y="155" width="50" height="10" rx="2" fill="#d0c8b8" stroke="#b0a890" stroke-width="0.8"/>
-    <!-- Star icon -->
-    <g transform="translate(20,80)">
-      <g class="h1202-pulse">
-        <polygon points="0,-12 3,-4 12,-4 5,2 7,10 0,5 -7,10 -5,2 -12,-4 -3,-4" fill="#c8a840" opacity="0.8"/>
-      </g>
-    </g>
-  </g>
-</g>
-<!-- Column 3 - Judicial -->
-<g transform="translate(630,60)">
-  <g>
-    <rect x="-8" y="0" width="56" height="12" rx="2" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="1"/>
-    <rect x="2" y="12" width="36" height="123" fill="url(#h1202marble)" stroke="#b0a890" stroke-width="0.8"/>
-    <line x1="10" y1="15" x2="10" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="20" y1="15" x2="20" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <line x1="30" y1="15" x2="30" y2="132" stroke="#c0b8a8" stroke-width="0.5"/>
-    <rect x="-5" y="135" width="50" height="10" rx="2" fill="#d0c8b8" stroke="#b0a890" stroke-width="0.8"/>
-    <!-- Book icon -->
-    <g transform="translate(20,65)">
-      <g class="h1202-pulse">
-        <rect x="-10" y="-8" width="20" height="16" rx="1" fill="#3a4a6a"/>
-        <line x1="0" y1="-8" x2="0" y2="8" stroke="#f0e8d0" stroke-width="0.8"/>
-      </g>
-    </g>
-  </g>
-</g>
-<!-- Capitol dome silhouette behind -->
-<g transform="translate(460,10)" opacity="0.12">
-  <g>
-    <path d="M-80,50 Q-80,0 0,-20 Q80,0 80,50 Z" fill="#2a3a5a"/>
-    <rect x="-60" y="50" width="120" height="30" fill="#2a3a5a"/>
-    <rect x="-3" y="-30" width="6" height="15" fill="#2a3a5a"/>
-  </g>
-</g>
-<!-- Scales of justice -->
-<g transform="translate(830,80)">
-  <g class="h1202-sway">
-    <!-- Post -->
-    <line x1="0" y1="-20" x2="0" y2="60" stroke="#8a7050" stroke-width="2.5"/>
-    <!-- Beam -->
-    <line x1="-35" y1="0" x2="35" y2="0" stroke="#8a7050" stroke-width="2"/>
-    <!-- Left pan -->
-    <line x1="-35" y1="0" x2="-40" y2="30" stroke="#a08060" stroke-width="1"/>
-    <line x1="-35" y1="0" x2="-30" y2="30" stroke="#a08060" stroke-width="1"/>
-    <path d="M-45,30 Q-35,38 -25,30" fill="none" stroke="#a08060" stroke-width="1.5"/>
-    <!-- Right pan -->
-    <line x1="35" y1="0" x2="30" y2="30" stroke="#a08060" stroke-width="1"/>
-    <line x1="35" y1="0" x2="40" y2="30" stroke="#a08060" stroke-width="1"/>
-    <path d="M25,30 Q35,38 45,30" fill="none" stroke="#a08060" stroke-width="1.5"/>
-    <!-- Top ornament -->
-    <circle cx="0" cy="-20" r="4" fill="#c8a840"/>
-  </g>
-</g>
-<!-- Decorative pediment triangle -->
-<g transform="translate(160,45)">
-  <g class="h1202-bob">
-    <polygon points="300,-30 0,15 600,15" fill="none" stroke="#b0a890" stroke-width="1.5" opacity="0.3"/>
-  </g>
-</g>
+<rect width="920" height="200" fill="url(#b1202sky)"/>
+<g opacity=".55"><circle cx="70" cy="22" r="1.2" fill="#FFF"/><circle cx="160" cy="12" r="1" fill="#FFF"/><circle cx="840" cy="18" r="1.3" fill="#FFF"/><circle cx="760" cy="34" r="1" fill="#FFF"/><circle cx="560" cy="14" r="1" fill="#FFF"/></g>
+<g class="b1202cloud"><ellipse cx="150" cy="58" rx="70" ry="9" fill="#F6B49A" opacity=".45"/><ellipse cx="190" cy="52" rx="40" ry="7" fill="#FBD0B5" opacity=".4"/></g>
+<g class="b1202cloud c2"><ellipse cx="700" cy="44" rx="80" ry="8" fill="#F6B49A" opacity=".4"/><ellipse cx="660" cy="50" rx="44" ry="6" fill="#FBD0B5" opacity=".35"/></g>
+<circle class="b1202sun" cx="466" cy="168" r="70" fill="url(#b1202sun)"/>
+<circle cx="466" cy="170" r="22" fill="#FFE9A8"/>
+<path class="b1202bird" d="M0,70 q5,-5 10,0 q5,-5 10,0" fill="none" stroke="#2A2340" stroke-width="1.6" stroke-linecap="round"/>
+<!-- far trees -->
+<path d="M0,170 C20,150 50,152 70,160 C90,140 130,146 150,162 L150,176 L0,176Z" fill="#2E3B3A"/>
+<path d="M770,168 C800,146 840,148 860,158 C880,140 910,146 920,150 L920,176 L770,176Z" fill="#2E3B3A"/>
+<!-- Capitol tower and chamber wings -->
+<rect x="160" y="124" width="64" height="48" fill="#D9CDB4"/><path d="M168,124 a24,13 0 0 1 48,0Z" fill="#E7DCC4"/>
+<rect x="296" y="124" width="64" height="48" fill="#D9CDB4"/><path d="M304,124 a24,13 0 0 1 48,0Z" fill="#E7DCC4"/>
+<rect x="232" y="30" width="58" height="142" fill="url(#b1202stone)"/>
+<rect x="228" y="24" width="66" height="8" fill="#CDBFA4"/>
+<g stroke="#B9AA8C" stroke-width="1" opacity=".8"><line x1="242" y1="36" x2="242" y2="120"/><line x1="252" y1="36" x2="252" y2="120"/><line x1="261" y1="36" x2="261" y2="120"/><line x1="270" y1="36" x2="270" y2="120"/><line x1="280" y1="36" x2="280" y2="120"/></g>
+<line x1="261" y1="24" x2="261" y2="6" stroke="#6B6B6B" stroke-width="1.4"/>
+<g class="b1202flag"><path d="M261,7 h16 v9 h-16Z" fill="#FFFFFF"/><path d="M261,7 L277,16 M277,7 L261,16" stroke="#C8302E" stroke-width="2"/></g>
+<rect class="b1202w w1" x="256" y="66" width="10" height="9" fill="url(#b1202win)"/>
+<rect class="b1202w w2" x="178" y="142" width="10" height="12" fill="url(#b1202win)"/>
+<!-- Old Capitol in front -->
+<rect x="200" y="118" width="122" height="56" fill="#F4EFE4"/>
+<path d="M226,118 L261,100 L296,118Z" fill="#FBF7EE" stroke="#D8CDB6"/>
+<rect x="246" y="76" width="30" height="18" fill="#F4EFE4"/><path d="M243,78 a18,16 0 0 1 36,0Z" fill="#F6F1E6"/><rect x="258" y="56" width="6" height="8" fill="#F4EFE4"/><path d="M252,64 a9,8 0 0 1 18,0Z" fill="#F6F1E6"/>
+<rect x="240" y="94" width="42" height="6" fill="#E9E1CF"/>
+<g fill="#FFFFFF"><rect x="230" y="120" width="5" height="44"/><rect x="242" y="120" width="5" height="44"/><rect x="254" y="120" width="5" height="44"/><rect x="266" y="120" width="5" height="44"/><rect x="278" y="120" width="5" height="44"/><rect x="290" y="120" width="5" height="44"/></g>
+<g><rect x="205" y="128" width="14" height="6" fill="#C8302E"/><rect x="205" y="128" width="2.5" height="6" fill="#FFF"/><rect x="210" y="128" width="2.5" height="6" fill="#FFF"/><rect x="215" y="128" width="2.5" height="6" fill="#FFF"/>
+<rect x="303" y="128" width="14" height="6" fill="#C8302E"/><rect x="303" y="128" width="2.5" height="6" fill="#FFF"/><rect x="308" y="128" width="2.5" height="6" fill="#FFF"/><rect x="313" y="128" width="2.5" height="6" fill="#FFF"/>
+<rect x="205" y="148" width="14" height="6" fill="#C8302E"/><rect x="205" y="148" width="2.5" height="6" fill="#FFF"/><rect x="210" y="148" width="2.5" height="6" fill="#FFF"/><rect x="215" y="148" width="2.5" height="6" fill="#FFF"/>
+<rect x="303" y="148" width="14" height="6" fill="#C8302E"/><rect x="303" y="148" width="2.5" height="6" fill="#FFF"/><rect x="308" y="148" width="2.5" height="6" fill="#FFF"/><rect x="313" y="148" width="2.5" height="6" fill="#FFF"/></g>
+<rect x="224" y="164" width="74" height="10" fill="#E2D8C3"/>
+<!-- live oaks with moss -->
+<g><ellipse cx="110" cy="148" rx="52" ry="26" fill="#2F4A35"/><ellipse cx="78" cy="140" rx="30" ry="18" fill="#365640"/><rect x="104" y="160" width="8" height="16" fill="#3B2C1E"/>
+<path d="M70,150 v12 M84,154 v10 M126,152 v13 M140,150 v9" stroke="#8C9A86" stroke-width="2" stroke-linecap="round" opacity=".8"/></g>
+<!-- Supreme Court across the street -->
+<path d="M686,104 a30,22 0 0 1 60,0Z" fill="#F1E9D6"/><rect x="684" y="102" width="64" height="6" fill="#E2D6BC"/>
+<rect x="600" y="118" width="232" height="54" fill="url(#b1202court)"/>
+<rect x="600" y="114" width="232" height="6" fill="#E9DFC7"/>
+<rect x="676" y="108" width="80" height="64" fill="#F2EADA"/>
+<path d="M670,110 L716,90 L762,110Z" fill="#FBF6EA" stroke="#D8CDB6"/>
+<g fill="#FFFFFF"><rect x="684" y="114" width="6" height="50"/><rect x="699" y="114" width="6" height="50"/><rect x="714" y="114" width="6" height="50"/><rect x="729" y="114" width="6" height="50"/><rect x="744" y="114" width="6" height="50"/></g>
+<g fill="#B8A684" opacity=".8"><rect x="612" y="130" width="10" height="14"/><rect x="632" y="130" width="10" height="14"/><rect x="772" y="130" width="10" height="14"/><rect x="792" y="130" width="10" height="14"/><rect x="812" y="130" width="10" height="14"/><rect x="612" y="152" width="10" height="12"/><rect x="772" y="152" width="10" height="12"/><rect x="792" y="152" width="10" height="12"/><rect x="812" y="152" width="10" height="12"/></g>
+<rect class="b1202w w3" x="652" y="130" width="10" height="14" fill="url(#b1202win)"/>
+<rect x="666" y="164" width="100" height="10" fill="#E2D8C3"/>
+<!-- palms -->
+<g stroke="#4A3A28" stroke-width="3" fill="none"><path d="M584,176 q4,-30 0,-56"/><path d="M852,176 q-4,-30 0,-56"/></g>
+<g fill="#2F5A3C"><path d="M584,120 q-22,2 -30,14 q16,-10 30,-12Z"/><path d="M584,120 q22,2 30,14 q-16,-10 -30,-12Z"/><path d="M584,120 q-14,-12 -28,-10 q14,2 28,12Z"/><path d="M584,120 q14,-12 28,-10 q-14,2 -28,12Z"/>
+<path d="M852,120 q-22,2 -30,14 q16,-10 30,-12Z"/><path d="M852,120 q22,2 30,14 q-16,-10 -30,-12Z"/><path d="M852,120 q-14,-12 -28,-10 q14,2 28,12Z"/><path d="M852,120 q14,-12 28,-10 q-14,2 -28,12Z"/></g>
+<!-- ground, street and crosswalk between the two -->
+<rect x="0" y="174" width="920" height="26" fill="#3F5A3A"/>
+<path d="M392,174 L540,174 L600,200 L332,200Z" fill="#4A4D57"/>
+<g fill="#E9E4D6" opacity=".85"><rect x="430" y="178" width="7" height="18"/><rect x="444" y="178" width="7" height="18"/><rect x="458" y="178" width="7" height="18"/><rect x="472" y="178" width="7" height="18"/><rect x="486" y="178" width="7" height="18"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3694,5 +4874,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
