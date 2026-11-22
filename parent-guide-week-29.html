@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 29 Family Guide · 4th Grade Social Studies</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+:root{
+  --navy:#0E1C42; --ink:#3A4A6B; --muted:#5E6C8C; --line:#E2E8F4;
+  --sky:#55C8E8; --sky-bg:#EAF8FD; --gold:#C7922C; --gold-bg:#FFF3DC;
+  --green:#34B76F; --green-bg:#E3F8ED; --plum:#8B6FC0; --plum-bg:#F1ECFA;
+  --rose-bg:#FDEEEE; --teal:#1A8A7D; --teal-bg:#E2F4F1;
+  --paper:#FAFBFF; --cream:#FFF8F0;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Nunito",sans-serif;font-size:18px;line-height:1.6;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 48px;}
+h1,h2,h3{font-family:"Lora",Georgia,serif;color:var(--navy);margin:0;}
+p{margin:0 0 10px;}
+strong{color:var(--navy);}
+a{color:#1F6FA8;font-weight:700;}
+
+/* header */
+.hero{background:var(--navy);color:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;}
+.hero-text{padding:28px 28px 26px;}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-bottom:14px;}
+.brand img{width:38px;height:38px;border-radius:50%;background:#fff;}
+.hero h1{color:#fff;font-size:34px;line-height:1.2;margin-bottom:6px;}
+.hero .sub{font-size:19px;color:#DCE6F7;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 13px;font-size:16px;font-weight:700;color:#fff;}
+.hero-art{background:#F5E6C8 center/cover no-repeat;min-height:250px;}
+.print-btn{display:inline-block;margin-top:16px;background:var(--gold);color:#fff;border:none;border-radius:999px;padding:9px 18px;font-family:"Nunito",sans-serif;font-weight:800;font-size:16px;cursor:pointer;}
+
+/* cards */
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:18px;}
+.card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.card-head .ico{font-size:26px;line-height:1;}
+.card-head h2{font-size:24px;}
+.card-head .tag{margin-left:auto;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+.small{font-size:16px;color:var(--muted);}
+
+.grid2,.glance{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.box{border-radius:12px;padding:14px 16px;font-size:17px;}
+.box-label{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
+.b-sky{background:var(--sky-bg);} .b-sky .box-label{color:#1F8CB0;}
+.b-gold{background:var(--gold-bg);} .b-gold .box-label{color:#9A6C14;}
+.b-green{background:var(--green-bg);} .b-green .box-label{color:#1F8452;}
+.b-plum{background:var(--plum-bg);} .b-plum .box-label{color:#6A4FA3;}
+.b-rose{background:var(--rose-bg);} .b-rose .box-label{color:#A8434A;}
+.b-teal{background:var(--teal-bg);} .b-teal .box-label{color:#14695F;}
+.quote{font-family:"Lora",Georgia,serif;font-style:italic;font-size:20px;color:var(--navy);border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:16px 0 0;}
+.quote small{display:block;font-family:"Nunito",sans-serif;font-style:normal;font-size:15px;color:var(--muted);margin-top:4px;}
+
+/* story box */
+.story{background:var(--navy);color:#DCE6F7;border:none;}
+.story h2,.story strong{color:#fff;}
+.story .box{background:rgba(255,255,255,.08);color:#DCE6F7;}
+.story .box-label{color:#F2C46B;}
+
+/* lesson table */
+.days{width:100%;border-collapse:collapse;}
+.days th{font-size:14px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);}
+.days td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+.days tr:last-child td{border-bottom:none;}
+.day-n{font-family:"Lora",Georgia,serif;font-weight:700;font-size:20px;color:var(--navy);white-space:nowrap;}
+.day-n span{display:block;font-family:"Nunito",sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+.ch{font-weight:800;color:var(--navy);}
+.pill{display:inline-block;font-size:14px;font-weight:800;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0;}
+.p-virtue{background:var(--green-bg);color:#1F8452;}
+.p-source{background:var(--cream);color:#9A6C14;border:1px solid #F5E6C8;}
+.p-new{background:var(--plum-bg);color:#6A4FA3;}
+.extra-row td{background:var(--paper);}
+
+/* words */
+.words{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px 16px;}
+.word b{font-family:"Lora",Georgia,serif;font-size:21px;color:var(--navy);display:block;}
+.word span{font-size:17px;}
+.eg{display:block;margin-top:6px;font-weight:700;color:var(--navy);}
+
+/* ask */
+.ask{list-style:none;margin:0;padding:0;counter-reset:q;}
+.ask li{counter-increment:q;position:relative;padding:12px 0 12px 50px;border-bottom:1px dashed var(--line);}
+.ask li:last-child{border-bottom:none;}
+.ask li::before{content:counter(q);position:absolute;left:0;top:11px;width:34px;height:34px;border-radius:50%;background:var(--gold-bg);color:#9A6C14;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.ask .q{font-weight:800;color:var(--navy);display:block;}
+.ask .listen{font-size:16px;color:var(--muted);}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;}
+.check li{padding:7px 0 7px 34px;position:relative;}
+.check li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--green);font-weight:900;font-size:19px;}
+.dont li::before{content:"✗";color:#C0545C;}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+
+/* visit */
+.visit{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start;}
+.visit .pin{width:64px;height:64px;border-radius:14px;background:var(--teal-bg);display:flex;align-items:center;justify-content:center;font-size:32px;}
+
+/* unit guide */
+.rhythm{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px;}
+.rhythm div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:16px;}
+.rhythm b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.routines{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+.routines li{padding-left:30px;position:relative;font-size:17px;}
+.routines li span{position:absolute;left:0;top:0;}
+.peoples{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.people{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.people b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);display:block;}
+.people i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#14695F;margin-bottom:6px;}
+.weeks{display:grid;gap:12px;}
+.wk{display:grid;grid-template-columns:96px 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.wk-n{background:var(--navy);color:#fff;text-align:center;padding:14px 6px;display:flex;flex-direction:column;justify-content:center;}
+.wk-n b{font-family:"Lora",Georgia,serif;font-size:30px;line-height:1;}
+.wk-n span{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#BFD0EE;margin-top:4px;}
+.wk-body{padding:14px 18px;}
+.wk-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:4px;}
+.wk-ch{font-weight:900;color:var(--navy);font-size:18px;}
+.theme{font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;background:var(--green-bg);border-radius:999px;padding:2px 10px;}
+.wk-sum{margin:2px 0 8px;}
+.skills{display:flex;flex-wrap:wrap;gap:6px;}
+.sk{font-size:15px;font-weight:700;border-radius:8px;padding:3px 9px;background:var(--paper);border:1px solid var(--line);}
+.sk i{font-style:normal;color:var(--muted);font-weight:800;margin-right:4px;}
+.wk-link{display:inline-block;margin-top:8px;font-size:16px;}
+
+.next{background:var(--navy);color:#DCE6F7;border:none;}
+.next h2{color:#fff;}
+.next strong{color:#fff;}
+.foot{text-align:center;font-size:15px;color:var(--muted);margin-top:26px;}
+
+/* lesson mechanics */
+.howto{background:var(--cream);border:1px solid #F5E6C8;border-radius:16px;padding:18px 22px;margin-top:18px;}
+.howto h2{font-size:21px;margin-bottom:10px;}
+.howto ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;}
+.howto li{position:relative;padding-left:32px;font-size:17px;line-height:1.5;}
+.howto li span{position:absolute;left:0;top:0;font-size:20px;}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;}
+  .hero-art{min-height:180px;order:-1;}
+  .glance,.grid2,.grid3,.words,.two,.routines,.howto ul{grid-template-columns:1fr;}
+  .peoples,.rhythm{grid-template-columns:1fr 1fr;}
+  .wk{grid-template-columns:72px 1fr;}
+  .wk-n b{font-size:24px;}
+  .days thead{display:none;}
+  .days tr{display:block;border-bottom:1px solid var(--line);padding:8px 0;}
+  .days td{display:block;border:none;padding:4px 0;}
+}
+@media print{
+  body{background:#fff;font-size:15px;}
+  .wrap{padding:0;}
+  .print-btn{display:none;}
+  .card,.wk,.howto{break-inside:avoid;}
+  .card{margin-top:12px;padding:14px 16px;}
+  .hero,.next,.story,.wk-n{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+/* map hero + timeline */
+.hero-map{background:#D8EFF4;}
+.hero-map svg{display:block;width:100%;height:100%;}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:0 22px;}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--line);font-size:17px;}
+.tl b{font-family:"Lora",Georgia,serif;font-size:20px;color:var(--navy);}
+.tl .who{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:1px 7px;margin-right:6px;}
+.w-sp{background:#FBE3E3;color:#A8434A;} .w-fr{background:#E1EAF8;color:#2F5DA8;} .w-en{background:var(--plum-bg);color:#6A4FA3;}
+@media (max-width:760px){.tl{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row;}}
+
+.w-na{background:var(--teal-bg);color:#14695F;} .w-us{background:var(--green-bg);color:#1F8452;} .w-fb{background:var(--gold-bg);color:#9A6C14;}
+.vl{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.vl div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px;}
+.vl b{display:block;font-family:"Lora",Georgia,serif;font-size:19px;color:var(--navy);}
+.vl i{font-style:normal;display:block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:#1F8452;margin-bottom:4px;}
+@media (max-width:760px){.vl{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <div class="brand"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy Online">Family Guide · 4th Grade Social Studies</div>
+      <h1>Week 29: Florida’s Rulebook and Its Three Branches</h1>
+      <div class="sub">Unit 12: Florida Government, Economy, and Financial Literacy · Lessons 4.12.01–4.12.02</div>
+      <div class="chips">
+        <span class="chip">2 lessons</span>
+        <span class="chip">Real sources, 1838 to 2019</span>
+        <span class="chip">Florida File 12 of 13</span>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print this guide</button>
+    </div>
+    <div class="hero-art" style="background-image:url('images/source-4-12-01-florida-constitution-1838-original.jpg');background-position:50% 18%;background-color:#E9DFC7;" role="img" aria-label="Page 1 of the Florida Constitution of 1838, handwritten in ink, the only known copy"></div>
+  </header>
+
+  <!-- HOW THE LESSON PAGES WORK -->
+  <section class="howto">
+    <h2>🧭 How the Lesson Pages Work</h2>
+    <ul>
+      <li><span>🗂️</span><strong>Four numbered tabs, in order.</strong> Each lesson names its own. Tab 3 is always the Self-Check, and tab 4 is where your student writes. The teacher’s texts (the Messages button) say what to do next.</li>
+      <li><span>🧠</span><strong>Check is a 3-question self-check.</strong> It isn’t graded. It shows your student what to look at again before they write.</li>
+      <li><span>💾</span><strong>Answers save as you type</strong>, but only in that browser on that computer. Switching computers or clearing the browser loses them.</li>
+      <li><span>📋</span><strong>Everything is gathered at the end.</strong> Step 4 of the last tab, Review &amp; turn in, collects every answer from the lesson in one place.</li>
+      <li><span>📄</span><strong>Copy</strong> or <strong>Download your journal</strong> saves that work. Use it to <strong>submit in Canvas</strong>. A lesson isn’t turned in until it’s submitted there.</li>
+      <li><span>🔊</span><strong>Read aloud</strong> at the top reads the page aloud, with a speed control. Keep a paper <strong>Historian’s Notebook</strong> and a pencil nearby.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🧭</span><h2>This Week at a Glance</h2></div>
+    <p>Unit 12 begins with how Florida’s government is set up. In Lesson 1 your student learns why Florida has a written <strong>constitution</strong>, the written plan for how its government works, and why writing rules down protects everyone. In Lesson 2 they learn Florida’s three <strong>branches of government</strong>: the legislative branch makes the laws, the executive branch carries them out, and the judicial branch decides what laws mean. The big idea: <strong>Florida’s rules are written down so everyone can see them, and the power to govern is split three ways so no one person or group has too much.</strong></p>
+    <div class="glance">
+      <div class="box b-sky"><div class="box-label">History skill</div><strong>Reading real sources.</strong> Your student studies page 1 of Florida’s first constitution, handwritten in 1838, and three real photos of Florida’s government at work, using numbered labels to find what each shows.</div>
+      <div class="box b-green"><div class="box-label">Virtues this week</div><strong>Honesty and service.</strong> Honesty means doing things in the open, where everyone can see. Service means using your abilities to help others, like lawmakers, governors, and judges serving Florida.</div>
+    </div>
+    <p class="small" style="margin-top:14px;"><strong>Good to know:</strong> Lesson 1 explains, in one label on the 1838 page, that the words “all freemen ... are equal” left out enslaved people and that only white men could vote then; today’s constitution says all people are equal before the law. Lesson 2 has no hard history.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📅</span><h2>Lesson by Lesson</h2></div>
+    <table class="days">
+      <thead><tr><th>Lesson</th><th>What your student learns</th><th>What they write</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day-n">4.12.01<span>Lesson 1</span></td>
+          <td><span class="ch">Why Florida Has a Written Constitution</span><br>A <strong>constitution</strong> says how a government is set up, what it may do, and what <strong>rights</strong> the people have. Because it is written, everyone reads the same rules and leaders can’t change them in secret. Florida’s constitution opens with a <strong>Preamble</strong> (“We, the people of the State of Florida”), then the <strong>Declaration of Rights</strong> (freedoms like speech, religion, and a fair trial), then the three branches of government. Florida’s first constitution was written at St. Joseph in 1838 and took effect when Florida became a state in 1845; new ones followed in 1861, 1865, 1868, and 1885, and voters approved today’s in 1968. A change, called an <strong>amendment</strong>, goes on the ballot and needs at least 60 out of every 100 votes. The governor can’t change it alone.<br><span class="pill p-source">Source: page 1 of the Florida Constitution of 1838, the handwritten copy, the only one known (State Archives of Florida, through the Library of Congress)</span><span class="pill p-virtue">Virtue: Honesty</span><span class="pill p-new">Word root: scrib / script = write</span></td>
+          <td><strong>Historian’s Notebook entry</strong> (about 25 words or more): what a constitution is, one part of Florida’s constitution and what it does, and why writing the rules down protects citizens, plus a Historian’s Sentence.</td>
+        </tr>
+        <tr>
+          <td class="day-n">4.12.02<span>Lesson 2</span></td>
+          <td><span class="ch">Branches and Functions of Florida Government</span><br>The <strong>legislative branch</strong>, Florida’s Legislature, makes the laws. It has two chambers: the Senate (40 senators) and the House of Representatives (120 representatives). A <strong>bill</strong>, an idea for a law, has to pass both. Then the <strong>executive branch</strong>, led by the governor, can sign it into law or <strong>veto</strong> it. The <strong>judicial branch</strong>, Florida’s courts up to the Florida Supreme Court and its 7 justices, decides what laws mean and can rule that a law breaks the constitution. Each branch can <strong>check</strong> another: two-thirds of both chambers can override a veto, the House can impeach a governor who breaks the law, and the governor picks higher-court judges from a list, then voters decide whether each justice stays. Your student follows a real bill: in 1982 Florida’s students voted for the Florida panther, and the Legislature made it the official state animal.<br><span class="pill p-source">Sources: Florida House members taking their oath, 2014 (Florida House of Representatives); the governor signing a bill, 2013 (State Archives of Florida); the Florida Supreme Court building, 2019</span><span class="pill p-virtue">Virtue: Service</span><span class="pill p-new">Word root: jud = judge</span></td>
+          <td><strong>Trade and Choice</strong> (about 30 words or more): one branch, one choice it makes, the benefit, the cost or <strong>trade-off</strong> (what you give up to get something else), and what could happen without checks and balances, plus a Historian’s Sentence.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card story">
+    <div class="card-head"><span class="ico">📂</span><h2>In the Florida Files</h2></div>
+    <p>File 12 opens. Last week a sign told the teacher that Canvas follows rules, so in Lesson 4.12.01 she finds a thick book by the door with 13: Canvas’s rulebook. Your student plays a telephone game and watches one spoken rule change from room to room, while the written copy stays the same. They build the rulebook page by page and find rights from the real 1838 page that are still in Florida’s constitution today. Their citizen’s pamphlet is printed on page 1 of the rulebook, stamped WRITTEN DOWN, and three locks appear on the door. In Lesson 4.12.02 Canvas labels the locks: MAKE THE PLAN, CARRY IT OUT, CHECK IT’S FAIR. Your student carries the students’ 1982 panther bill through Florida’s government, opens the locks one branch at a time, and draws arrows showing how each branch checks the others. At the end the teacher turns all three locks in order. The door is unlocked, but it hasn’t opened yet.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">🔤</span><h2>Words to Know</h2><span class="tag">Use them at home!</span></div>
+    <div class="words">
+      <div class="word"><b>constitution</b><span>a written plan for how a government works</span></div>
+      <div class="word"><b>Declaration of Rights</b><span>the part of Florida’s constitution that lists the people’s freedoms</span></div>
+      <div class="word"><b>amendment</b><span>a change to the constitution</span></div>
+      <div class="word"><b>branch</b><span>one of the three parts of government that share the work</span></div>
+      <div class="word"><b>bill</b><span>an idea for a new law</span></div>
+      <div class="word"><b>veto</b><span>when the governor rejects a bill</span></div>
+      <div class="word"><b>override</b><span>when lawmakers pass a bill again after a veto, with two-thirds of each chamber</span></div>
+      <div class="word"><b>unconstitutional</b><span>breaking the rules in the constitution</span></div>
+      <div class="word"><b>trade-off</b><span>what you give up to get something else</span></div>
+      <div class="word"><b>scribe</b><span>a person whose job was to write things down by hand (scrib = write)</span></div>
+      <div class="word"><b>judicial</b><span>having to do with courts and judges (jud = judge)</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">💬</span><h2>Ask at Home</h2><span class="tag">Better than “How was school?”</span></div>
+    <ol class="ask">
+      <li><span class="q">Why does Florida write its rules down?</span><span class="listen">Listen for: so everyone reads the same words, and leaders can’t change the rules in secret.</span></li>
+      <li><span class="q">Can the governor change Florida’s constitution?</span><span class="listen">Listen for: no, not alone. A change goes on the ballot, and it needs at least 60 out of every 100 votes.</span></li>
+      <li><span class="q">What are the three branches, and what does each one do?</span><span class="listen">Listen for: legislative makes the laws (the Senate and the House), executive carries them out (the governor), judicial decides what laws mean (the courts).</span></li>
+      <li><span class="q">If the governor vetoes a bill, is it gone forever?</span><span class="listen">Listen for: not always. If two-thirds of the Senate and two-thirds of the House vote for it again, it becomes law anyway.</span></li>
+      <li><span class="q">How did the panther become Florida’s state animal?</span><span class="listen">Listen for: students voted for it in 1982, and then the Legislature passed a bill that made it law.</span></li>
+    </ol>
+  </section>
+
+  <div class="two">
+    <section class="card">
+      <div class="card-head"><span class="ico">📬</span><h2>What Gets Turned In</h2></div>
+      <ul class="check">
+        <li><strong>Each lesson:</strong> 3 evidence questions, a writing task, and a Historian’s Sentence, submitted in Canvas</li>
+        <li><strong>Unit 12 continues</strong> next week with two more lessons.</li>
+      </ul>
+      <p class="small" style="margin-top:10px;"><strong>Done well looks like:</strong> a real part of the constitution named and explained, and for the Trade and Choice, one branch’s real choice with both a benefit and a cost, not just the good side.</p>
+    </section>
+    <section class="card">
+      <div class="card-head"><span class="ico">🏡</span><h2>Try at Home</h2><span class="tag">5 minutes</span></div>
+      <ul class="check">
+        <li><strong>Write a house rule down.</strong> Pick one family rule. Say it out loud, then write it. Which one could everyone check later?</li>
+        <li><strong>Make a trade.</strong> Name a choice your family made this week. What did you get, and what did it cost?</li>
+        <li><strong>Find the root.</strong> Scribe and describe share a part that means “write.” What do judge and judicial share?</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <div class="card-head"><span class="ico">📍</span><h2>See It in Florida</h2><span class="tag">Optional</span></div>
+    <div class="visit">
+      <div class="pin">🏛️</div>
+      <div><p>In Tallahassee, the <strong>Florida Historic Capitol Museum</strong> sits in front of today’s Capitol tower, and the <strong>Florida Supreme Court</strong> building is across the street. In Port St. Joe, <strong>Constitution Convention Museum State Park</strong> marks where Florida’s first constitution was written in 1838. Check dates and hours before you go.</p></div>
+    </div>
+  </section>
+
+  <section class="card next">
+    <div class="card-head"><span class="ico">🔭</span><h2>Coming Up in Week 30</h2></div>
+    <p>Next week your student learns which problems local and state government each solve and how citizens can help, then makes careful choices about income, saving, spending, credit, and risk.</p>
+  </section>
+
+  <p class="foot">Optima Academy Online · 4th Grade Social Studies · Week 29 Family Guide<br>Questions? Reach out to your student’s teacher anytime.</p>
+</div>
+</body>
+</html>
