@@ -1784,6 +1784,1334 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.12.04",
+ "title": "Income, Saving, Spending, Credit, Risk, and Responsibility",
+ "quiet": false,
+ "file": {
+  "n": 12,
+  "title": "Government & Money",
+  "label": "Government & Money",
+  "seals": [
+   "📜",
+   "⚖️",
+   "💰"
+  ]
+ },
+ "prevFile": "Local and State Government Problem-Solving",
+ "connector": "Last time, we found out who should fix one jammed lock: the closest helper.",
+ "storySoFar": "Your teacher is still stuck inside Canvas. Last time, the hallway Help Desk fixed the jammed lock. All three locks are open, but the door with 13 still hasn’t opened.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 30,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Deal four $5 bills",
+   "why": "You earned $20. Decide how much to spend and how much to save. Then see if your plan is ready for a surprise."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "A family’s check register",
+   "why": "Write one family’s week into their check register to read the big ideas. Then follow real money for ten years."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Fill in the answer slip",
+   "why": "Answer three questions. Fill in an answer slip for the door. Then write your notebook entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. The door has one last question!",
+  "opening": [
+   {
+    "t": "The jammed lock is fixed, and we’re still taking {route}. But the door with 13 just lit up with words.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "The jammed lock is fixed. But the door with 13 just lit up with words.",
+    "ifRoute": "none"
+   },
+   "It says: “One last question. Can you make wise choices with money?”",
+   "I don’t want to guess. Today’s file is about exactly that: earning money, saving it, spending it, borrowing it, and taking risks. Start in the Learn tab (tab 1). Scroll down to the file card and deal out $20.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s deal the bills",
+      "go": true,
+      "reply": "Tap the wallet to spend a $5 bill. Tap the jar to save one. When all four are dealt, flip the surprise card."
+     },
+     {
+      "t": "Why does a door care about money?",
+      "reply": "I wondered that too. I think Canvas wants to know we’ll be careful with what we have once we’re out. In Florida, being careful with money is part of being a responsible citizen."
+     },
+     {
+      "t": "Whose $20 is it?",
+      "reply": "Yours, in this story. You earned it doing chores. Money you earn is called income."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). You’ll write one family’s week into their check register. Then you’ll study real papers from 1942 and from today."
+     },
+     {
+      "t": "Do tires really go flat that often?",
+      "reply": "Often enough! Accidents and surprises are a normal part of life. That’s why people keep a little money saved for emergencies."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Is that a real bill?",
+      "reply": "It’s the U.S. government’s own sample. Every credit card bill in the country has to carry a warning box like that one. The numbers are the government’s example, not a real person’s bill."
+     },
+     {
+      "t": "Did kids really buy stamps at school?",
+      "reply": "Yes. During World War II, schools all across the United States sold savings stamps for 10 cents and 25 cents. The photo was taken in New York City in December 1942."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Are you out?",
+      "reply": "Almost! The door is opening, and I can see a big, empty hall on the other side, with a glowing EXIT sign at the far end. Next time we find out how to cross it. Stay with me."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "You dealt the bills and met the surprise. Money in the jar was ready when the tire went flat. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The week is written down, and you followed the money on both papers for ten years. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the writing. In the Historian’s Notebook tab (tab 4), answer three questions. Then fill in the answer slip for the door and write your entry."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished this file, and all of Unit 12! Now for the door’s question. I slid your answer slip into the slot. Watch the door:"
+    },
+    {
+     "card": {
+      "from": "The door with 13",
+      "h": "ANSWER SLIP · FILE 12",
+      "sub": "“Can you make wise choices with money?”",
+      "lines": "planner",
+      "stamp": "WISE CHOICE",
+      "style": "door"
+     }
+    },
+    {
+     "t": "It read every line, and the EXIT sign lit up. The door with 13 is opening! Every room is lining up behind me in the Main Hall.",
+     "ifRoute": "hall"
+    },
+    {
+     "t": "It read every line, and the EXIT sign lit up. The door with 13 is opening! I’ll go down the Back Stairs first and send help back for the other rooms.",
+     "ifRoute": "stairs"
+    },
+    {
+     "t": "It read every line, and the EXIT sign lit up. The door with 13 is opening!",
+     "ifRoute": "none"
+    },
+    {
+     "t": "Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page.",
+     "choice": "done"
+    }
+   ]
+  }
+ },
+ "lens": "Service can mean being careful with money, for your family and for your community. Today you are a money-choices analyst, someone who studies how citizens earn, save, spend, borrow, and handle risk.",
+ "scene1": {
+  "type": "dealbills",
+  "kicker": "Deal four $5 bills",
+  "h": "You earned $20 doing chores. How much will you spend now, and how much will you save?",
+  "voice": "Tap the wallet to put the next $5 bill in it. Tap the jar to save the next one. (You can drag a bill, too.) When all four bills are dealt, flip the surprise card.",
+  "why": {
+   "icon": "💵",
+   "q": "Why bills, a wallet, and a jar?",
+   "t": "Money you earn is called <b>income<\/b>. Once you have it, you choose. <b>Spending<\/b> is using money now. <b>Saving<\/b> is keeping money for later. You can’t do both with the same bill. That’s why each $5 bill has to go in the wallet or in the jar."
+  },
+  "bill": 5,
+  "n": 4,
+  "pileT": "Your $20",
+  "boxes": {
+   "w": {
+    "ico": "👛",
+    "t": "Wallet",
+    "sub": "spend it now"
+   },
+   "j": {
+    "ico": "🫙",
+    "t": "Jar",
+    "sub": "save it for later"
+   }
+  },
+  "surprise": {
+   "ico": "🚲",
+   "h": "SURPRISE!",
+   "t": "Your bike tire goes flat on the way to school. A new tube costs $10.",
+   "cost": 10
+  },
+  "out": {
+   "readyH": "You were ready.",
+   "ready": "Your jar had ${j}. ${cost} comes out to fix the tire, and you ride again tomorrow.",
+   "shortH": "Not enough in the jar.",
+   "short": "Your jar has ${j}, and the tire costs ${cost}. You are ${gap} short. You can walk until you earn more, or you can borrow ${gap} and owe it back.",
+   "empty": "Your jar is empty, and the tire costs ${cost}. You are ${gap} short. You can walk until you earn more, or you can borrow ${gap} and owe it back.",
+   "iou": "I O U  ${gap}",
+   "wal": "The ${w} in your wallet bought things you wanted today.",
+   "allJar": "You saved all $20, so you bought nothing you wanted today. That is the trade-off of saving."
+  },
+  "ask": {
+   "q": "Why do people save some money, even when there is something they want to buy today?",
+   "opts": [
+    {
+     "t": "Because spending money is always wrong.",
+     "miss": "Spending isn’t wrong. People need food and clothes, and it’s fine to buy some things you want. So why keep a little back?"
+    },
+    {
+     "t": "So they are ready for a surprise, or for something bigger later.",
+     "ok": true,
+     "reply": "Yes. Saving isn’t saying no forever. It is spending later, on a surprise or on something bigger."
+    },
+    {
+     "t": "Because money in a jar turns into more money all by itself.",
+     "miss": "A jar keeps money handy, but the money doesn’t grow there. Think about the flat tire. What was the jar money for?"
+    }
+   ]
+  },
+  "journalT": "My last deal: ${w} to spend now, ${j} to save.",
+  "win": "You made a plan for $20 and tested it. Every choice had two sides: what you got, and what you gave up."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Write the Rivera family’s week into their check register in Learn the Story. Each line opens its part of the reading.",
+    "Tap every gold number on the two real papers.",
+    "Follow the money: make a guess, let ten years go by, then answer two questions."
+   ]
+  },
+  "reading": {
+   "type": "register",
+   "activity": "Making Wise Money Choices",
+   "mid": "credit",
+   "why": {
+    "icon": "📗",
+    "q": "What’s a check register?",
+    "t": "A <b>check register<\/b> is a small paper book that comes with a bank account. A family writes down every dollar that comes in and every dollar that goes out, so they always know how much is left. That’s why you’ll write this family’s week into a register, one line at a time."
+   },
+   "note": "The Rivera family is made up, and so are their numbers. The choices they face are real ones.",
+   "bookT": "CHECK REGISTER",
+   "whoT": "The Rivera family · one week",
+   "balT": "Left to plan:",
+   "endT": "Every dollar had a job.",
+   "allT": "The week is written down.",
+   "countT": "parts done. Each one opens its part of the reading.",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^Every person, and every family"
+    },
+    {
+     "id": "p1",
+     "match": "^Income is money you earn"
+    },
+    {
+     "id": "p2",
+     "match": "^Saving and spending"
+    },
+    {
+     "id": "p3",
+     "match": "^Credit\\."
+    },
+    {
+     "id": "p4",
+     "match": "^Risk\\."
+    },
+    {
+     "id": "p5",
+     "match": "^Responsibility"
+    }
+   ],
+   "boxes": [
+    {
+     "id": "bopp",
+     "match": "^Choices and Opportunity Cost"
+    },
+    {
+     "id": "bbud",
+     "match": "^Make a Budget"
+    },
+    {
+     "id": "bearn",
+     "match": "^Ways to Earn Income"
+    },
+    {
+     "id": "bfla",
+     "match": "^Florida Entrepreneurs"
+    },
+    {
+     "id": "bsave",
+     "match": "^Saving and Investing"
+    }
+   ],
+   "parts": [
+    {
+     "id": "pay",
+     "t": "Payday",
+     "ico": "💵",
+     "paras": [
+      "p0",
+      "p1"
+     ],
+     "boxes": [
+      "bearn"
+     ],
+     "act": "✍️ Write in the paycheck",
+     "rows": [
+      {
+       "d": "Fri",
+       "t": "Paycheck (income)",
+       "in": 500
+      }
+     ]
+    },
+    {
+     "id": "plan",
+     "t": "Make a plan first",
+     "ico": "📒",
+     "paras": [
+      "p5"
+     ],
+     "boxes": [
+      "bbud"
+     ],
+     "ask": {
+      "q": "It’s payday. Before anyone spends a dollar, what should the Riveras do?",
+      "opts": [
+       {
+        "t": "Buy what they want first, and save whatever is left.",
+        "miss": "Money with no plan tends to disappear. What do you call a plan for your money?"
+       },
+       {
+        "t": "Make a budget: a plan for needs, saving, and wants.",
+        "ok": true,
+        "reply": "Right. A budget gives every dollar a job before it is spent."
+       },
+       {
+        "t": "Put everything on a credit card instead.",
+        "miss": "A paycheck is income, money they earned. A credit card is borrowing. What should they do with the money they have?"
+       }
+      ]
+     },
+     "rows": [
+      {
+       "d": "Fri",
+       "t": "The budget",
+       "note": "Needs first. Then saving. Then wants."
+      }
+     ]
+    },
+    {
+     "id": "spend",
+     "t": "Needs, then one want",
+     "ico": "🛒",
+     "paras": [
+      "p2"
+     ],
+     "boxes": [
+      "bopp"
+     ],
+     "ask": {
+      "q": "After food, gas, and bills, $60 is left for fun. The kids want a day at the springs ($60) and a new video game ($60). They pick the springs. What is the opportunity cost?",
+      "opts": [
+       {
+        "t": "The video game. It is the next-best thing they gave up.",
+        "ok": true,
+        "reply": "Yes. The opportunity cost is the next-best thing you give up when you choose."
+       },
+       {
+        "t": "$500, the whole paycheck.",
+        "miss": "Opportunity cost isn’t all the money you have. It is the next-best thing you gave up. What did the kids not get?"
+       },
+       {
+        "t": "Nothing. They got what they wanted.",
+        "miss": "Every choice gives something up. They had $60 and two things they wanted. Which one did they not get?"
+       }
+      ]
+     },
+     "rows": [
+      {
+       "d": "Sat",
+       "t": "Food, gas, and bills (needs)",
+       "out": 340
+      },
+      {
+       "d": "Sat",
+       "t": "A day at the springs (a want)",
+       "out": 60
+      }
+     ]
+    },
+    {
+     "id": "save",
+     "t": "Save for later",
+     "ico": "🏦",
+     "boxes": [
+      "bsave"
+     ],
+     "ask": {
+      "q": "The Riveras save $100 this week. Where can saved money earn a little interest while it waits?",
+      "opts": [
+       {
+        "t": "In a piggy bank.",
+        "miss": "A piggy bank keeps money handy, but it pays no interest. Which place pays you a little for keeping your money there?"
+       },
+       {
+        "t": "In a bank or a credit union.",
+        "ok": true,
+        "reply": "Right. A bank or a credit union keeps money safe and pays a little interest."
+       },
+       {
+        "t": "In a wallet.",
+        "miss": "A wallet is for money you plan to spend soon. Which place pays you a little for keeping your money there?"
+       }
+      ]
+     },
+     "rows": [
+      {
+       "d": "Sun",
+       "t": "To the savings account at the credit union",
+       "out": 50
+      },
+      {
+       "d": "Sun",
+       "t": "To the emergency jar at home",
+       "out": 50
+      }
+     ]
+    },
+    {
+     "id": "credit",
+     "t": "A credit card offer",
+     "ico": "💳",
+     "paras": [
+      "p3"
+     ],
+     "ask": {
+      "q": "A store offers the Riveras a credit card. They could take home a $400 TV today and pay nothing right now. Is that free money?",
+      "opts": [
+       {
+        "t": "Yes. The card pays for it.",
+        "miss": "The card company pays the store today. Then the family owes the card company. Who pays in the end?"
+       },
+       {
+        "t": "No. It is borrowed. They must pay it all back, plus interest if they pay slowly.",
+        "ok": true,
+        "reply": "Right. Credit isn’t bad. People use it for big things like a car or a house. But it always has to be paid back."
+       },
+       {
+        "t": "Yes, as long as they never open the bill.",
+        "miss": "The bill grows whether anyone opens it or not. Interest keeps adding up. So is the TV free?"
+       }
+      ]
+     },
+     "rows": [
+      {
+       "d": "Mon",
+       "t": "Credit card offer for a $400 TV",
+       "note": "Not this week. They will save up for it instead."
+      }
+     ]
+    },
+    {
+     "id": "risk",
+     "t": "A risk to think about",
+     "ico": "🚚",
+     "boxes": [
+      "bfla"
+     ],
+     "ask": {
+      "q": "Aunt Rosa wants to open a food truck. It might earn a profit. It might lose money. Is taking a risk always a bad idea?",
+      "opts": [
+       {
+        "t": "Yes. Never take any risk.",
+        "miss": "Then nobody would ever start a business. Mr. Ybor, Mr. Lewis, and Mr. Jenkins each took one. What should a person do before taking a risk?"
+       },
+       {
+        "t": "No. A risk can pay off. Think first, and protect yourself in case it doesn’t.",
+        "ok": true,
+        "reply": "Right. A risk is a chance of loss, not a sure loss. Careful people think it through first."
+       },
+       {
+        "t": "No. Risks always pay off.",
+        "miss": "A risk is a chance of loss. Some new businesses lose money. So what should a person do first?"
+       }
+      ]
+     },
+     "rows": [
+      {
+       "d": "Tue",
+       "t": "Aunt Rosa’s food truck idea",
+       "note": "A risk. They ask to see her plan before they decide."
+      }
+     ]
+    },
+    {
+     "id": "surprise",
+     "t": "The surprise",
+     "ico": "🔧",
+     "paras": [
+      "p4"
+     ],
+     "act": "🃏 Flip this week’s surprise",
+     "rows": [
+      {
+       "d": "Thu",
+       "t": "SURPRISE: a nail in the car’s tire. The repair costs $30.",
+       "note": "Paid from the emergency jar. Nothing borrowed."
+      }
+     ]
+    }
+   ]
+  },
+  "evidence": {
+   "type": "tenyears",
+   "kicker": "Follow the money for ten years",
+   "h": "One paper is about saving. One is about borrowing. What happens to each if ten years go by?",
+   "voice": "Make a guess first. Then tap “Let 10 years go by” and watch both lines. The numbers at each end come from the papers themselves.",
+   "why": {
+    "icon": "⏳",
+    "q": "Why ten years?",
+    "t": "Both papers print the same amount of time. The stamp album says its savings bond “after 10 years, will be worth $25.” The bill’s warning says that paying only the minimum takes “10 years.” That’s why you let ten years go by on both."
+   },
+   "hotT": "First, tap every gold number on the papers above.",
+   "predict": {
+    "q": "Two people each wait 10 years. One filled a stamp album. One pays only the smallest amount on the card bill each month. What do you think happens?",
+    "opts": [
+     "The saver ends up with extra money. The borrower pays extra.",
+     "Both end up with extra money.",
+     "Both end up paying extra."
+    ],
+    "okK": 0,
+    "waitT": "Your guess is saved. Now let the years go by.",
+    "rightT": "Your guess was right.",
+    "offT": "Not quite what you guessed. Look at the two ends."
+   },
+   "tracks": [
+    {
+     "id": "save",
+     "ico": "🪙",
+     "who": "The saver, 1942",
+     "from": "$18.75",
+     "fromS": "75 stamps at 25¢ each",
+     "to": "$25",
+     "toS": "what the bond pays back",
+     "extra": "The saver gets back $6.25 MORE than they put in. That extra is interest, paid to the saver.",
+     "coin": "🪙"
+    },
+    {
+     "id": "owe",
+     "cls": "owe",
+     "ico": "💳",
+     "who": "The borrower, paying only the minimum",
+     "from": "$1,784.53",
+     "fromS": "borrowed with the card",
+     "to": "$3,284",
+     "toS": "paid back in all",
+     "extra": "The borrower pays about $1,500 MORE than they borrowed. That extra is interest, paid by the borrower.",
+     "coin": "💸"
+    }
+   ],
+   "years": 10,
+   "goT": "⏩ Let 10 years go by",
+   "yearT": "Year",
+   "yearsDoneT": "10 years later",
+   "asks": [
+    {
+     "q": "The card let this person buy $1,784.53 worth of things. Paying only the minimum, what do those things really cost?",
+     "opts": [
+      {
+       "t": "$1,784.53. The price is the price.",
+       "miss": "Look at number 7. Paying only the minimum, the bill says the total is more than that. A credit card is not free money."
+      },
+      {
+       "t": "$3,284. The extra is interest.",
+       "ok": true,
+       "reply": "Right. Borrowing slowly cost about $1,500 extra. That is what interest does."
+      },
+      {
+       "t": "$53. That is all they have to pay.",
+       "miss": "$53 is only this month’s smallest payment. Look at number 7 for the total."
+      }
+     ]
+    },
+    {
+     "q": "Look at number 8. What could the borrower do to pay less?",
+     "opts": [
+      {
+       "t": "Pay nothing and wait.",
+       "miss": "Look at number 6 and the warning above it. Not paying adds a late fee, and the debt keeps growing."
+      },
+      {
+       "t": "Buy more with the card.",
+       "miss": "More borrowing means more to pay back. Look at the bottom row of the bill’s table."
+      },
+      {
+       "t": "Pay a little more than the minimum each month: $62, not $53.",
+       "ok": true,
+       "reply": "Yes. Just $9 more a month ends it in 3 years and saves $1,052. That is the bill’s own math."
+      }
+     ]
+    }
+   ],
+   "readT": "Last step: finish Learn the Story at the top of this tab.",
+   "win": "Same ten years, two different endings. Saving paid the saver extra. Slow borrowing cost the borrower extra."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the papers to see what it shows.",
+  "allT": "You opened every label.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 11.9,
+    "y": 67.1,
+    "title": "A stamp album in his hands.",
+    "t": "December 1942, a public school in New York City. The children are in line to buy savings stamps. The boy holds the little book his stamps go in."
+   },
+   {
+    "n": "2",
+    "x": 32.6,
+    "y": 12.7,
+    "title": "The album’s cover.",
+    "t": "One corner says 25¢ STAMPS. The other says $25 BONDS. A bond is a paper that says the government will pay you back later, with extra."
+   },
+   {
+    "n": "3",
+    "x": 2.3,
+    "y": 81.3,
+    "title": "The album’s rule.",
+    "t": "The small print says: fill the album with 75 stamps and it is worth $18.75. Trade it for a savings bond “which, after 10 years, will be worth $25.”"
+   },
+   {
+    "n": "4",
+    "x": 32.6,
+    "y": 82.9,
+    "title": "A page of stamps.",
+    "t": "Each green stamp cost 25 cents. Under each square, the album counts the money saved so far. These children gave up spending their coins now to have more later."
+   },
+   {
+    "n": "5",
+    "x": 88.7,
+    "y": 18.5,
+    "title": "New Balance: $1,784.53.",
+    "t": "This is what the person has borrowed with the card and still owes. It is a sample bill made by the U.S. government, not a real person’s."
+   },
+   {
+    "n": "6",
+    "x": 66.4,
+    "y": 23.2,
+    "title": "Minimum Payment Due: $53.00.",
+    "t": "The minimum is the smallest amount the person must pay this month. The rest stays borrowed, and interest is added to it."
+   },
+   {
+    "n": "7",
+    "x": 51.3,
+    "y": 81.0,
+    "title": "Only the minimum.",
+    "t": "The bill warns: pay only the minimum each month, and it takes about 10 years and costs $3,284 in all."
+   },
+   {
+    "n": "8",
+    "x": 52.9,
+    "y": 90.1,
+    "title": "$62 a month.",
+    "t": "Pay $62 a month instead, and it takes 3 years and costs $2,232. The bill says that saves $1,052."
+   }
+  ]
+ },
+ "planner": {
+  "type": "answerslip",
+  "head": "ANSWER SLIP",
+  "sub": "for the door with 13",
+  "voice": "A family earns $500 this week. Pick one choice they could make. Then pick what they gain, what they give up, and what happens next. A card that doesn’t fit your choice bounces back. These are just notes. You’ll write your own sentences in Step 3.",
+  "why": {
+   "icon": "🧾",
+   "q": "Why an answer slip?",
+   "t": "The door with 13 asked: “Can you make wise choices with money?” A wise choice looks at both sides. So the slip has a line for what the family gains, a line for what they give up, and a line for the <b>consequence<\/b>, what happens next because of the choice. That’s why you fill in every line before you write."
+  },
+  "lines": [
+   {
+    "id": "c",
+    "lab": "The choice",
+    "plan": "Choice",
+    "q": "👆 A family earns $500 this week. Pick one choice they could make."
+   },
+   {
+    "id": "g",
+    "lab": "They gain",
+    "plan": "Benefit",
+    "q": "👆 What is the benefit? Pick what the family gains from that choice."
+   },
+   {
+    "id": "u",
+    "lab": "They give up",
+    "plan": "Cost",
+    "q": "👆 What is the cost, or trade-off? Pick what they give up."
+   },
+   {
+    "id": "n",
+    "lab": "What happens next",
+    "plan": "Consequence",
+    "q": "👆 What is the consequence? Pick what could happen next."
+   }
+  ],
+  "cards": {
+   "c": [
+    {
+     "id": "save",
+     "t": "Save part of the $500"
+    },
+    {
+     "id": "spend",
+     "t": "Spend the $500 on things they need and want"
+    },
+    {
+     "id": "credit",
+     "t": "Use credit to buy something that costs more than $500"
+    }
+   ],
+   "g": [
+    {
+     "id": "g1",
+     "t": "Money is ready for an emergency or for something bigger later",
+     "for": [
+      "save"
+     ]
+    },
+    {
+     "id": "g2",
+     "t": "They get what they need and want right now",
+     "for": [
+      "spend"
+     ]
+    },
+    {
+     "id": "g3",
+     "t": "They get the bigger thing today, before they have saved for it",
+     "for": [
+      "credit"
+     ]
+    },
+    {
+     "id": "g4",
+     "t": "They get free money",
+     "for": [],
+     "miss": "No choice gives free money. Even a credit card has to be paid back. Pick what the family really gains."
+    }
+   ],
+   "u": [
+    {
+     "id": "u1",
+     "t": "They can’t buy everything they want this week",
+     "for": [
+      "save"
+     ]
+    },
+    {
+     "id": "u2",
+     "t": "Nothing is left for a surprise or for later",
+     "for": [
+      "spend"
+     ]
+    },
+    {
+     "id": "u3",
+     "t": "They owe money and must pay it back, plus interest",
+     "for": [
+      "credit"
+     ]
+    },
+    {
+     "id": "u4",
+     "t": "Nothing. There is no trade-off.",
+     "for": [],
+     "miss": "Every money choice gives something up. Pick what this family gives up."
+    }
+   ],
+   "n": [
+    {
+     "id": "n1",
+     "t": "When a surprise comes, they can pay for it without borrowing",
+     "for": [
+      "save"
+     ]
+    },
+    {
+     "id": "n2",
+     "t": "If the car breaks down, they may have to borrow or wait",
+     "for": [
+      "spend"
+     ]
+    },
+    {
+     "id": "n3",
+     "t": "If they pay slowly, they pay more than the price",
+     "for": [
+      "credit"
+     ]
+    },
+    {
+     "id": "n4",
+     "t": "If they pay it all back fast, the extra cost stays small",
+     "for": [
+      "credit"
+     ]
+    }
+   ]
+  },
+  "stamp": "READY",
+  "otherT": "That goes with a different choice. Yours is:",
+  "doneT": "Your answer slip is ready. Now write in Step 3."
+ },
+ "coach": {
+  "chips": [
+   {
+    "t": "the choice",
+    "rx": "sav(e|ing)|spen[dt]|credit|borrow|buy|bought|put|keep|use"
+   },
+   {
+    "t": "the benefit",
+    "rx": "benefit|gain|get|got|good|ready|safe|have|enjoy|able|help|need|want"
+   },
+   {
+    "t": "the cost or trade-off",
+    "rx": "cost|trade|give up|gave up|can.?t|cannot|less|lose|owe|interest|without|not be able|no money|nothing left|miss"
+   },
+   {
+    "t": "the consequence",
+    "rx": "consequence|result|happen|then|later|so |because|if |next|when|might|could|will "
+   }
+  ],
+  "lines": [
+   "Start with the choice: “The family earns $500 this week. They decide to…”",
+   "Good. Now the benefit: what does the family gain?",
+   "Now the cost: what do they give up? That is the trade-off.",
+   "Last, the consequence: what could happen next because of this choice?",
+   "Read it over once. Does it show both sides of the choice?"
+  ]
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions. Use your $20 deal, the check register, and the two real papers."
+  },
+  {
+   "t": "Plan",
+   "w": "Fill in the answer slip: a choice, what the family gains, what they give up, and what happens next."
+  },
+  {
+   "t": "Write",
+   "w": "Write your Trade and Choice entry. Then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Notebook Entry: Trade and Choice"
+ },
+ "lockline": "The Florida Files cabinet shows up here after you write your entry and check off the whole list.",
+ "vocab": {
+  "type": "trustmeter",
+  "kicker": "Earn their trust",
+  "h": "cred = believe, trust",
+  "root": "cred",
+  "hl": "cred",
+  "voice": "Tap each word to hear it. Then put each meaning on its word: tap the meaning, then the word, or drag it. Each match brings one borrowed thing back to the shelf.",
+  "why": {
+   "icon": "🤝",
+   "q": "Why a lending shelf?",
+   "t": "<b>Cred<\/b> comes from the Latin word <i>credere<\/i>, “to believe” or “to trust.” When you borrow a book and bring it back, people learn they can trust you. <b>Credit<\/b> works the same way: someone trusts you to pay back what you borrow. That’s why each word you match brings one borrowed thing back and fills the trust meter."
+  },
+  "boardT": "Things brought back",
+  "shelfT": "LENDING SHELF",
+  "outT": "BORROWED",
+  "items": [
+   "📕",
+   "✏️",
+   "☂️",
+   "⚽"
+  ],
+  "words": [
+   {
+    "w": "credit",
+    "m": "trust that a person will pay back what they borrow",
+    "miss": "When a bank trusts you to pay back later, it gives you…",
+    "say": "Credit. Trust that a person will pay back what they borrow."
+   },
+   {
+    "w": "credible",
+    "m": "easy to believe; able to be trusted",
+    "miss": "A story you can believe is a ___ story.",
+    "say": "Credible. Easy to believe; able to be trusted."
+   },
+   {
+    "w": "incredible",
+    "m": "so amazing that it is hard to believe",
+    "miss": "In- means “not.” Something almost not believable is…",
+    "say": "Incredible. So amazing that it is hard to believe."
+   },
+   {
+    "w": "credentials",
+    "m": "papers that prove a person can be trusted to do a job",
+    "miss": "A doctor’s or a teacher’s license is one of these.",
+    "say": "Credentials. Papers that prove a person can be trusted to do a job."
+   }
+  ],
+  "win": "Everything is back, and the trust meter is full!"
+ },
+ "cabinet": {
+  "n": 12
+ },
+ "notes": {
+  "learned": [
+   "Income is money you earn: wages, a salary, a commission, rent, or a business’s profit. Kids can earn income from chores or small jobs.",
+   "Saving is keeping money for later. Spending is using it now on goods and services. The trade-off: money you spend now can’t be saved for later.",
+   "The opportunity cost is the next-best thing you give up when you choose.",
+   "A budget is a plan for your money: needs, saving, and wants. A smart budget saves a little for emergencies.",
+   "Credit is borrowing with a promise to pay back, usually with interest. A credit card is not free money.",
+   "Risk is the chance of loss or harm. Accidents and surprises are a normal part of life. People can accept a risk or protect themselves from it.",
+   "Entrepreneurs take a risk to start a business. Vicente Martinez Ybor, Abraham Lincoln Lewis, and George Jenkins all did in Florida.",
+   "A 1942 stamp album turned $18.75 into $25 in ten years. A sample credit card bill turns $1,784.53 into $3,284 in ten years if only the minimum is paid."
+  ],
+  "vocab": [
+   [
+    "income",
+    "money you earn"
+   ],
+   [
+    "salary",
+    "a set amount of pay for the whole year"
+   ],
+   [
+    "wages",
+    "pay for each hour of work"
+   ],
+   [
+    "saving",
+    "keeping money for later"
+   ],
+   [
+    "spending",
+    "using money now"
+   ],
+   [
+    "goods",
+    "things you can touch, like food or clothes"
+   ],
+   [
+    "services",
+    "things people do for you, like a haircut"
+   ],
+   [
+    "trade-off",
+    "giving up one thing to get another"
+   ],
+   [
+    "opportunity cost",
+    "the next-best thing you give up when you choose"
+   ],
+   [
+    "budget",
+    "a plan for your money"
+   ],
+   [
+    "emergency",
+    "a sudden problem you didn’t plan for"
+   ],
+   [
+    "credit",
+    "borrowing with a promise to pay back; also, trust that a person will pay back"
+   ],
+   [
+    "interest",
+    "an extra fee for borrowing; also, extra money a bank pays a saver"
+   ],
+   [
+    "lender",
+    "the bank or business that lends money"
+   ],
+   [
+    "debt",
+    "money you owe"
+   ],
+   [
+    "minimum payment",
+    "the smallest amount a borrower must pay that month"
+   ],
+   [
+    "risk",
+    "the chance of loss or harm"
+   ],
+   [
+    "profit",
+    "money left over after the costs are paid"
+   ],
+   [
+    "entrepreneur",
+    "a person who takes a risk to start a business"
+   ],
+   [
+    "economy",
+    "all the making, buying, and selling in a place"
+   ],
+   [
+    "invest",
+    "to buy something, like a stock, hoping it grows in value"
+   ],
+   [
+    "consequence",
+    "what happens because of a choice"
+   ],
+   [
+    "financial literacy",
+    "understanding how money works"
+   ],
+   [
+    "check register",
+    "a small book for writing down money in and money out"
+   ],
+   [
+    "bond",
+    "a paper that says the government will pay you back later, with extra"
+   ],
+   [
+    "credible",
+    "easy to believe; able to be trusted"
+   ],
+   [
+    "incredible",
+    "so amazing that it is hard to believe"
+   ],
+   [
+    "credentials",
+    "papers that prove a person can be trusted to do a job"
+   ]
+  ],
+  "wordParts": "cred = believe, trust (from the Latin credere, “to believe, to trust”): credit, credible, incredible, credentials"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "what income is",
+    "rx": "earn|money (you|people|a person|they|someone) (get|make)|paid|\\bpay\\b|get money|make money|money (from|for) (work|a job|doing)",
+    "n": 1
+   },
+   {
+    "t": "an example",
+    "rx": "chore|allowance|job|salary|wage|work|babysit|mow|lemonade|sell|teacher|nurse|doctor|commission|rent|profit|business|store|paycheck|dishes|dog|car wash|clean",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "saving",
+    "rx": "sav(e|ing|ed)|set aside|keep|kept|later|future|jar|bank|emergenc",
+    "n": 1
+   },
+   {
+    "t": "spending",
+    "rx": "spen[dt]|spending|buy|bought|use (it|money|your money)|now|today|goods|services",
+    "n": 1
+   },
+   {
+    "t": "the trade-off",
+    "rx": "trade|give up|gave up|can.?t|cannot|not both|less|instead|but |while|opportunity|either|gone|same (money|dollar|bill)|don.?t have|have to (pick|choose)|pick|choose|one or the other",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "borrowing",
+    "rx": "borrow|pay (it |them |the money )?back|repay|owe|debt|loan|not (your|their|free)|lend",
+    "n": 1
+   },
+   {
+    "t": "the extra cost",
+    "rx": "interest|extra|more than|grow|adds? up|fee|cost more|pay more|3,?284|10 years|ten years|late|pile",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at Payday in the check register on tab 2.",
+   "Income is money a person earns. How did you get your $20 in the Learn tab? How do adults get paid?",
+   "Try this shape: “Income is ___. One way a person earns it is ___.”"
+  ],
+  "journal-q2": [
+   "Think about the wallet and the jar in the Learn tab (tab 1).",
+   "One was for money to use now. One was for money to use later. Could the same $5 bill go in both?",
+   "Try this shape: “Saving means ___. Spending means ___. The trade-off is ___.”"
+  ],
+  "journal-q3": [
+   "Look at A credit card offer in the check register, and at numbers 7 and 8 on the bill (tab 2).",
+   "Credit is borrowed money. What gets added when a person pays it back slowly?",
+   "Try this shape: “Credit can be risky because ___. If a person borrows too much, ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: name two different ways an adult can earn income, and say how they are different.",
+  "journal-q2": "Go further: in 1942 children bought savings stamps with their coins. What did they give up, and what did they get?",
+  "journal-q3": "Go further: the sample bill says $62 a month instead of $53 saves $1,052. Why does paying a little more save so much?"
+ },
+ "quizMiss": [
+  {
+   "a": "Money you borrow is credit, and it has to be paid back. Income is different. Look at Payday in the check register on tab 2.",
+   "c": "Nobody hands out income for free. Look at Payday in the check register on tab 2: how did the family get its $500?"
+  },
+  {
+   "a": "One $5 bill can’t go in the wallet and the jar at once. Think about the Learn tab (tab 1).",
+   "c": "Saved money doesn’t shrink. In a bank it even earns a little interest. Think about the wallet and the jar in the Learn tab (tab 1)."
+  },
+  {
+   "a": "A credit card is not free money. Look at A credit card offer in the check register on tab 2.",
+   "c": "Credit isn’t found money. It is borrowed. Look at A credit card offer in the check register on tab 2."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "My $20 week",
+   "at": "scene1",
+   "script": "Last month I earned twenty dollars washing my neighbor’s car. I wanted a new book, so I spent twelve and kept eight. Two days later my phone charger broke. A new one cost eight dollars. I was so glad I had kept some back! Now you try. You have four five-dollar bills. Tap the wallet to spend one. Tap the jar to save one. When all four are dealt, flip the surprise card."
+  },
+  {
+   "slot": "guide2",
+   "label": "Would you change it?",
+   "at": "s1done",
+   "script": "Pause me for a moment. Look at your last deal. If the tire went flat again next week, would you deal the bills the same way? Whisper your answer, or tell someone near you. Okay. Here’s the big idea. Saving is not saying no forever. It is spending later. Next, go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "How a register works",
+   "at": "explore",
+   "script": "This is a check register. A family writes down every dollar that comes in, and every dollar that goes out. The Riveras are made up, but their choices are real ones. Each line you write opens a part of the reading. Watch the last column. It shows how much money is left to plan. Start with payday."
+  },
+  {
+   "slot": "guide4",
+   "label": "Two real papers",
+   "at": "evidence",
+   "script": "Two real papers, about eighty years apart. On the left, children in 1942 line up at school to buy savings stamps. On the right is the government’s sample of a credit card bill. Tap all eight gold numbers first. Then make a guess, and let ten years go by. Watch what happens to the saver, and what happens to the borrower."
+  },
+  {
+   "slot": "guide5",
+   "label": "Both sides of a choice",
+   "at": "plan",
+   "script": "Here’s how I think it through. Say my family has fifty dollars for a birthday. Our choice: spend all fifty on a party. What we gain: a great day together. What we give up: the new backpack we also wanted. What happens next: the old backpack has to last a little longer. Now you fill in the answer slip for the family with five hundred dollars. These are just notes. You’ll write your own sentences in Step 3."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^bills$",
+    "sel": ".spk-dlb-pile",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^wallet$",
+    "sel": ".spk-dlb-box[data-b=\"w\"]",
+    "fx": "pop",
+    "tag": "spend"
+   },
+   {
+    "at": "^jar$",
+    "sel": ".spk-dlb-box[data-b=\"j\"]",
+    "fx": "pop",
+    "tag": "save"
+   },
+   {
+    "at": "^flip$",
+    "sel": ".spk-dlb-step",
+    "fx": "point"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^deal$",
+    "sel": ".spk-dlb-wrap",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^tire$",
+    "sel": ".spk-dlb-sur .cd",
+    "fx": "wiggle"
+   },
+   {
+    "at": "^Saving$",
+    "sel": ".spk-dlb-box[data-b=\"j\"]",
+    "fx": "pop"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^register$",
+    "sel": ".spk-reg-book",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^in$",
+    "sel": ".spk-reg-book th",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^out$",
+    "sel": ".spk-reg-book th",
+    "i": 3,
+    "fx": "pop"
+   },
+   {
+    "at": "^last$",
+    "sel": ".spk-reg-book th",
+    "i": 4,
+    "fx": "point"
+   },
+   {
+    "at": "^payday$",
+    "sel": ".spk-reg-ctl",
+    "fx": "pop",
+    "tag": "start here"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^left$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^bill$",
+    "sel": "#panel-explore .source-label-bar",
+    "fx": "trace"
+   },
+   {
+    "at": "^numbers$",
+    "sel": "#panel-explore .spk-hotinfo",
+    "fx": "pop"
+   },
+   {
+    "at": "^guess$",
+    "sel": ".spk-tny .spk-game-head",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^ten$",
+    "sel": ".spk-tny .spk-voice",
+    "fx": "trace"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^choice$",
+    "sel": ".spk-asl-slip .ln",
+    "i": 0,
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^gain$",
+    "sel": ".spk-asl-slip .ln",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^give$",
+    "sel": ".spk-asl-slip .ln",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^next$",
+    "sel": ".spk-asl-slip .ln",
+    "i": 3,
+    "fx": "pop"
+   },
+   {
+    "at": "^notes$",
+    "sel": ".spk-plan",
+    "fx": "glow"
+   },
+   {
+    "at": "^3$",
+    "sel": "#spk-step-3",
+    "fx": "point"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2022,177 +3350,55 @@ body.tx-active .tx-toggle-label {
 </div>
 
 <!-- ═══ SVG HERO BANNER: Income, Saving, Spending, Credit, Risk, and Responsibility ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A kitchen table by a window at sunrise. On the table are a small stack of bills, a glass jar of coins catching the light, and an open notebook with a pencil. Outside, a bike leans against a palm tree.">
 <defs>
-  <linearGradient id="h1204bg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f0f4f0"/>
-    <stop offset="100%" stop-color="#e0e8e0"/>
-  </linearGradient>
-  <linearGradient id="h1204gold" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f0d860"/>
-    <stop offset="100%" stop-color="#c0a030"/>
-  </linearGradient>
-  <linearGradient id="h1204green" x1="0" y1="1" x2="0" y2="0">
-    <stop offset="0%" stop-color="#2a8a40"/>
-    <stop offset="100%" stop-color="#50b868"/>
-  </linearGradient>
-  <linearGradient id="h1204arrow" x1="0" y1="1" x2="0.3" y2="0">
-    <stop offset="0%" stop-color="#30a050"/>
-    <stop offset="100%" stop-color="#60c878"/>
-  </linearGradient>
+  <linearGradient id="b1204wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3D9A8"/><stop offset="1" stop-color="#E2B079"/></linearGradient>
+  <linearGradient id="b1204sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FC3E8"/><stop offset=".55" stop-color="#FCE2A6"/><stop offset="1" stop-color="#FFB45E"/></linearGradient>
+  <radialGradient id="b1204sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFFBE0"/><stop offset=".45" stop-color="#FFE08A" stop-opacity=".95"/><stop offset="1" stop-color="#FFC56B" stop-opacity="0"/></radialGradient>
+  <linearGradient id="b1204wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9814A"/><stop offset="1" stop-color="#7E5228"/></linearGradient>
+  <linearGradient id="b1204glass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset=".5" stop-color="#DDF1F6" stop-opacity=".25"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".45"/></linearGradient>
+  <clipPath id="b1204win"><rect x="286" y="14" width="420" height="112"/></clipPath>
   <style>
-    .h1204-bounce { animation: h1204-bounce 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1204-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-    .h1204-grow { animation: h1204-grow 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1204-grow { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(1.05); } }
-    .h1204-sway { animation: h1204-sway 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1204-sway { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-    .h1204-sparkle { animation: h1204-sparkle 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1204-sparkle { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+    .b1204beam{animation:b1204beam 7s ease-in-out infinite}.b1204tw{animation:b1204tw 3.6s ease-in-out infinite}.b1204tw2{animation:b1204tw 4.4s 1.2s ease-in-out infinite}.b1204frond{transform-box:fill-box;transform-origin:50% 100%;animation:b1204sway 6s ease-in-out infinite}
+    @keyframes b1204beam{0%,100%{opacity:.22}50%{opacity:.34}}@keyframes b1204tw{0%,100%{opacity:.25}50%{opacity:1}}@keyframes b1204sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+    @media (prefers-reduced-motion: reduce){.b1204beam,.b1204tw,.b1204tw2,.b1204frond{animation:none}}
   </style>
 </defs>
-<rect width="920" height="260" fill="url(#h1204bg)"/>
-<!-- Subtle grid pattern -->
-<g opacity="0.06">
-  <line x1="0" y1="50" x2="920" y2="50" stroke="#2a6a30" stroke-width="0.5"/>
-  <line x1="0" y1="100" x2="920" y2="100" stroke="#2a6a30" stroke-width="0.5"/>
-  <line x1="0" y1="150" x2="920" y2="150" stroke="#2a6a30" stroke-width="0.5"/>
-  <line x1="0" y1="200" x2="920" y2="200" stroke="#2a6a30" stroke-width="0.5"/>
+<rect width="920" height="200" fill="url(#b1204wall)"/>
+<!-- window -->
+<rect x="276" y="6" width="440" height="128" rx="5" fill="#FBF6EA"/>
+<g clip-path="url(#b1204win)">
+  <rect x="286" y="14" width="420" height="112" fill="url(#b1204sky)"/>
+  <circle cx="560" cy="112" r="64" fill="url(#b1204sun)"/><circle cx="560" cy="112" r="20" fill="#FFF6CF"/>
+  <path d="M286,104 Q380,92 470,102 T706,98 V126 H286 Z" fill="#7FA36A"/>
+  <path d="M286,114 Q400,104 520,114 T706,110 V126 H286 Z" fill="#5E8750"/>
+  <!-- palm -->
+  <path d="M398,116 C396,90 400,64 406,44 L411,45 C407,66 404,92 406,116 Z" fill="#6B4A2B"/>
+  <g class="b1204frond" fill="#3F7A45"><path d="M408,45 C388,30 364,32 350,44 C370,40 390,44 408,45 Z"/><path d="M408,45 C424,26 450,26 466,38 C446,36 426,40 408,45 Z"/><path d="M408,45 C396,24 376,18 360,22 C378,26 396,34 408,45 Z"/><path d="M408,45 C420,22 442,16 456,20 C440,26 422,34 408,45 Z"/><path d="M408,45 C404,58 392,68 378,70 C392,62 402,54 408,45 Z"/><path d="M408,45 C416,58 430,66 444,66 C430,60 418,54 408,45 Z"/></g>
+  <!-- bike -->
+  <g fill="none" stroke="#2F3A4A" stroke-width="2.4" stroke-linecap="round"><circle cx="426" cy="106" r="11"/><circle cx="468" cy="106" r="11"/><path d="M426,106 L440,88 L460,88 L468,106 M440,88 L450,106 L426,106 M450,106 L460,88 M437,83 h8 M460,88 l-3,-8 h7"/></g>
+  <!-- birds -->
+  <path d="M620,40 q6,-6 12,0 q6,-6 12,0 M660,54 q5,-5 10,0 q5,-5 10,0" fill="none" stroke="#4A5568" stroke-width="1.6" stroke-linecap="round"/>
 </g>
-<!-- Piggy bank -->
-<g transform="translate(120,100)">
-  <g class="h1204-bounce">
-    <!-- Body -->
-    <ellipse cx="0" cy="20" rx="55" ry="42" fill="#e8a0a8"/>
-    <ellipse cx="0" cy="20" rx="55" ry="42" fill="none" stroke="#c88090" stroke-width="1.5"/>
-    <!-- Snout -->
-    <ellipse cx="48" cy="25" rx="14" ry="10" fill="#e0909a" stroke="#c88090" stroke-width="1"/>
-    <circle cx="45" cy="23" r="2" fill="#c07080"/>
-    <circle cx="51" cy="23" r="2" fill="#c07080"/>
-    <!-- Ear -->
-    <ellipse cx="-15" cy="-18" rx="12" ry="16" fill="#d89098" stroke="#c88090" stroke-width="1"/>
-    <!-- Eye -->
-    <circle cx="20" cy="5" r="3.5" fill="white"/>
-    <circle cx="21" cy="4.5" r="2" fill="#333"/>
-    <!-- Slot -->
-    <rect x="-15" y="-24" width="30" height="4" rx="2" fill="#c07080"/>
-    <!-- Legs -->
-    <rect x="-30" y="55" width="10" height="15" rx="3" fill="#d89098"/>
-    <rect x="-10" y="55" width="10" height="15" rx="3" fill="#d89098"/>
-    <rect x="10" y="55" width="10" height="15" rx="3" fill="#d89098"/>
-    <rect x="30" y="55" width="10" height="15" rx="3" fill="#d89098"/>
-    <!-- Tail -->
-    <path d="M-55,15 Q-65,5 -60,15 Q-55,25 -65,20" fill="none" stroke="#c88090" stroke-width="2"/>
-  </g>
-</g>
-<!-- Coin stack -->
-<g transform="translate(280,120)">
-  <g class="h1204-grow">
-    <ellipse cx="0" cy="80" rx="25" ry="6" fill="#b09020"/>
-    <rect x="-25" y="20" width="50" height="60" fill="url(#h1204gold)"/>
-    <ellipse cx="0" cy="20" rx="25" ry="6" fill="#f0d860"/>
-    <!-- Coin lines -->
-    <ellipse cx="0" cy="35" rx="25" ry="5" fill="none" stroke="#c0a030" stroke-width="0.8"/>
-    <ellipse cx="0" cy="50" rx="25" ry="5" fill="none" stroke="#c0a030" stroke-width="0.8"/>
-    <ellipse cx="0" cy="65" rx="25" ry="5" fill="none" stroke="#c0a030" stroke-width="0.8"/>
-    <!-- Dollar sign on top -->
-    <path d="M0,13 L0,27" stroke="#a08020" stroke-width="2"/>
-    <path d="M-6,16 Q0,12 6,16 Q0,20 -6,20 Q0,24 6,20" fill="none" stroke="#a08020" stroke-width="1.5"/>
-  </g>
-</g>
-<!-- Floating coins -->
-<g transform="translate(240,80)">
-  <g class="h1204-sparkle">
-    <circle cx="0" cy="0" r="10" fill="#e8c840" stroke="#c0a030" stroke-width="1"/>
-  </g>
-</g>
-<g transform="translate(310,60)">
-  <g class="h1204-sparkle">
-    <circle cx="0" cy="0" r="8" fill="#e8c840" stroke="#c0a030" stroke-width="1" opacity="0.7"/>
-  </g>
-</g>
-<!-- Budget ledger -->
-<g transform="translate(420,50)">
-  <g class="h1204-sway">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="#f8f4e8" stroke="#c0b890" stroke-width="1.5"/>
-    <!-- Lines -->
-    <line x1="10" y1="25" x2="110" y2="25" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="45" x2="110" y2="45" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="65" x2="110" y2="65" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="85" x2="110" y2="85" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="105" x2="110" y2="105" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="125" x2="110" y2="125" stroke="#d0c8b0" stroke-width="0.5"/>
-    <line x1="10" y1="145" x2="110" y2="145" stroke="#d0c8b0" stroke-width="0.5"/>
-    <!-- Vertical divider -->
-    <line x1="75" y1="15" x2="75" y2="155" stroke="#c0b890" stroke-width="0.8"/>
-    <!-- Fake entries -->
-    <rect x="15" y="30" width="50" height="3" rx="1" fill="#a0a8a0" opacity="0.3"/>
-    <rect x="80" y="30" width="25" height="3" rx="1" fill="#40a050" opacity="0.4"/>
-    <rect x="15" y="50" width="45" height="3" rx="1" fill="#a0a8a0" opacity="0.3"/>
-    <rect x="80" y="50" width="20" height="3" rx="1" fill="#c04040" opacity="0.4"/>
-    <rect x="15" y="70" width="55" height="3" rx="1" fill="#a0a8a0" opacity="0.3"/>
-    <rect x="80" y="70" width="22" height="3" rx="1" fill="#40a050" opacity="0.4"/>
-    <rect x="15" y="90" width="40" height="3" rx="1" fill="#a0a8a0" opacity="0.3"/>
-    <rect x="80" y="90" width="18" height="3" rx="1" fill="#c04040" opacity="0.4"/>
-    <rect x="15" y="110" width="48" height="3" rx="1" fill="#a0a8a0" opacity="0.3"/>
-    <rect x="80" y="110" width="25" height="3" rx="1" fill="#40a050" opacity="0.4"/>
-    <!-- Header area -->
-    <rect x="15" y="8" width="50" height="4" rx="1" fill="#6a7a6a" opacity="0.4"/>
-    <rect x="80" y="8" width="25" height="4" rx="1" fill="#6a7a6a" opacity="0.4"/>
-  </g>
-</g>
-<!-- Balance scale - Save vs Spend -->
-<g transform="translate(660,70)">
-  <g class="h1204-sway">
-    <!-- Post -->
-    <line x1="0" y1="-15" x2="0" y2="80" stroke="#6a5a40" stroke-width="3"/>
-    <rect x="-12" y="75" width="24" height="6" rx="2" fill="#8a7a60"/>
-    <!-- Beam (tilted slightly toward save) -->
-    <line x1="-55" y1="3" x2="55" y2="-3" stroke="#8a7a60" stroke-width="2.5"/>
-    <!-- Pivot -->
-    <polygon points="0,-15 -6,-8 6,-8" fill="#a09070"/>
-    <!-- Left pan - Save (lower = heavier = good) -->
-    <line x1="-55" y1="3" x2="-60" y2="35" stroke="#8a7a60" stroke-width="1"/>
-    <line x1="-55" y1="3" x2="-50" y2="35" stroke="#8a7a60" stroke-width="1"/>
-    <path d="M-68,35 Q-55,44 -42,35" fill="#d0c8a0" stroke="#8a7a60" stroke-width="1.2"/>
-    <!-- Coins in save pan -->
-    <circle cx="-58" cy="30" r="4" fill="#e8c840" opacity="0.8"/>
-    <circle cx="-52" cy="31" r="4" fill="#e8c840" opacity="0.7"/>
-    <!-- Right pan - Spend (higher = lighter) -->
-    <line x1="55" y1="-3" x2="50" y2="28" stroke="#8a7a60" stroke-width="1"/>
-    <line x1="55" y1="-3" x2="60" y2="28" stroke="#8a7a60" stroke-width="1"/>
-    <path d="M42,28 Q55,37 68,28" fill="#d0c8a0" stroke="#8a7a60" stroke-width="1.2"/>
-    <!-- Small item in spend pan -->
-    <rect x="51" y="22" width="8" height="6" rx="1" fill="#c08050" opacity="0.6"/>
-  </g>
-</g>
-<!-- Growth arrow -->
-<g transform="translate(780,40)">
-  <g class="h1204-grow">
-    <path d="M0,180 Q30,150 40,120 Q50,90 60,70 Q70,50 90,20" fill="none" stroke="url(#h1204green)" stroke-width="4" stroke-linecap="round"/>
-    <polygon points="92,15 80,22 88,28" fill="#40a850"/>
-    <!-- Small dots along arrow -->
-    <circle cx="20" cy="155" r="3" fill="#50b060" opacity="0.4"/>
-    <circle cx="45" cy="110" r="3" fill="#50b060" opacity="0.5"/>
-    <circle cx="65" cy="65" r="3" fill="#50b060" opacity="0.6"/>
-    <circle cx="85" cy="30" r="3" fill="#50b060" opacity="0.7"/>
-  </g>
-</g>
-<!-- Dollar signs floating -->
-<g transform="translate(50,40)">
-  <g class="h1204-sparkle">
-    <circle cx="0" cy="0" r="12" fill="#d8e8d0" opacity="0.5"/>
-    <path d="M0,-6 L0,6" stroke="#40a050" stroke-width="1.5"/>
-    <path d="M-4,-3 Q0,-6 4,-3 Q0,0 -4,0 Q0,3 4,0" fill="none" stroke="#40a050" stroke-width="1.2"/>
-  </g>
-</g>
-<g transform="translate(890,200)">
-  <g class="h1204-sparkle">
-    <circle cx="0" cy="0" r="10" fill="#d8e8d0" opacity="0.4"/>
-    <path d="M0,-5 L0,5" stroke="#40a050" stroke-width="1.2"/>
-    <path d="M-3,-2 Q0,-5 3,-2 Q0,0 -3,0 Q0,2 3,0" fill="none" stroke="#40a050" stroke-width="1"/>
-  </g>
-</g>
+<path d="M496,14 V126 M286,70 H706" stroke="#FBF6EA" stroke-width="6"/>
+<rect x="268" y="126" width="456" height="10" rx="3" fill="#EFE6D2"/>
+<!-- sunbeam onto the table -->
+<path class="b1204beam" d="M500,126 L700,126 L820,200 L420,200 Z" fill="#FFF3B8" opacity=".28"/>
+<!-- table -->
+<rect x="0" y="146" width="920" height="54" fill="url(#b1204wood)"/><rect x="0" y="146" width="920" height="5" fill="#D9A56A"/>
+<path d="M0,168 H920 M0,186 H920" stroke="#6B4421" stroke-width="1" opacity=".35"/>
+<!-- stack of bills -->
+<g><rect x="196" y="160" width="96" height="22" rx="2" fill="#7FB36F" stroke="#4E8A45"/><rect x="200" y="155" width="96" height="22" rx="2" fill="#93C583" stroke="#4E8A45"/><rect x="194" y="150" width="96" height="22" rx="2" fill="#A9D49A" stroke="#4E8A45"/><rect x="199" y="145" width="96" height="22" rx="2" fill="#C6E5BA" stroke="#4E8A45"/><ellipse cx="247" cy="156" rx="11" ry="7" fill="none" stroke="#4E8A45" stroke-width="1.5"/><rect x="204" y="149" width="8" height="14" rx="1" fill="#8FC27F"/><rect x="282" y="149" width="8" height="14" rx="1" fill="#8FC27F"/></g>
+<!-- open notebook and pencil -->
+<g><path d="M344,156 L428,150 L432,184 L348,190 Z" fill="#FFFDF4" stroke="#C9B486"/><path d="M428,150 L512,156 L508,190 L432,184 Z" fill="#FFFBEA" stroke="#C9B486"/><path d="M356,164 L420,160 M357,171 L421,167 M358,178 L422,174 M440,160 L500,164 M440,167 L500,171 M440,174 L486,177" stroke="#9FB4D0" stroke-width="1.4"/><path d="M430,150 V184" stroke="#C9B486"/>
+<path d="M452,192 L548,172 L551,179 L455,199 Z" fill="#F2C230" stroke="#B88A14"/><path d="M452,192 L441,198 L455,199 Z" fill="#F4D9B0"/><path d="M441,198 l5,-3 l1,4 Z" fill="#333"/><path d="M548,172 l8,-2 l3,7 l-8,2 Z" fill="#E88A8A"/></g>
+<!-- glass jar of coins -->
+<g><rect x="618" y="96" width="68" height="78" rx="12" fill="#EAF6F8" opacity=".5"/><rect x="626" y="88" width="52" height="12" rx="3" fill="#B7BEC7" stroke="#8C949E"/>
+<g fill="#E8B83A" stroke="#B88A14" stroke-width="1"><ellipse cx="640" cy="166" rx="13" ry="4.5"/><ellipse cx="664" cy="166" rx="13" ry="4.5"/><ellipse cx="652" cy="159" rx="13" ry="4.5"/><ellipse cx="638" cy="152" rx="13" ry="4.5"/><ellipse cx="666" cy="151" rx="13" ry="4.5"/><ellipse cx="652" cy="144" rx="13" ry="4.5"/><ellipse cx="642" cy="136" rx="12" ry="4.2"/><ellipse cx="662" cy="130" rx="12" ry="4.2"/></g>
+<rect x="618" y="96" width="68" height="78" rx="12" fill="url(#b1204glass)" stroke="#A9C6CE" stroke-width="1.5"/><path d="M628,106 V160" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<path class="b1204tw" d="M662,126 l2,-6 l2,6 l6,2 l-6,2 l-2,6 l-2,-6 l-6,-2 Z" fill="#FFFBE0"/><path class="b1204tw2" d="M640,148 l1.4,-4 l1.4,4 l4,1.4 l-4,1.4 l-1.4,4 l-1.4,-4 l-4,-1.4 Z" fill="#FFFBE0"/></g>
+<!-- loose coins -->
+<g fill="#E8B83A" stroke="#B88A14"><ellipse cx="724" cy="178" rx="11" ry="4"/><ellipse cx="746" cy="186" rx="11" ry="4"/><ellipse cx="578" cy="182" rx="10" ry="3.6"/></g>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3773,5 +4979,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
