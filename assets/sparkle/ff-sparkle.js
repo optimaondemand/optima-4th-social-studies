@@ -19,6 +19,7 @@
      explore.evidence.type  wheelsort  | spotdetail | shipshore | doctype (uses source.hotspots) | domino (anchors under the Timeline Thread) | sayinfer (says / infer / ask trays; uses source.hotspots) | wholecheck | namehunt (magnified map names → Native / European trays) | clothesline (events in order on a line + one because string) | halfpic (guess from half a picture, lift the paper, true / not true) | shadowclock (events onto a pole's shadows by time of day + pick the real causes) | thennow (slide between an old picture and today's photo, then sort stayed / changed) | whatchanged (match each effect to the numbered part of the "before" picture it disrupted; uses source.hotspots) | spotpic (tap a clue card, then the number on the photo where you spot it; a lens settles there) | fillentry (build one Source / Detail / Explanation entry from the labeled source; uses source.hotspots) | turnmap (turn an old map until north is up, then lay its own scale bar between two places) | traceborder (tap the border's turning points in order on the source image, then two questions) | madehere (sort the photo's parts into 'grew right here' / 'brought in' baskets, then one question) | pintowns (pin town names onto rings on the source map, then one question) | readruins (tap the label number that answers each question; uses source.hotspots) | trustcheck (sort what the picture shows into trust / check, with why; uses source.hotspots) | rollcall (trustcheck with a close-up image: sort names into their states) | stringcauses (tap a source, then the later one it led to; a red string ties them) | causeweb (makes the lesson's own figure.cause-web diagram tappable: arrows ripple to later events, then pin a claim) | panpano (drag a camera viewfinder along a panorama and snap each gold number into a film strip; uses source.hotspots) | missionctl (panel lights turn green as the source's gold numbers are tapped, then GO / NO-GO reasons, then LAUNCH) | captiondet (caption strips onto the gold numbers that prove them, or into "only the caption tells us"; uses source.hotspots) | threepens (tap a gold number, ink its notes with the says / infer / question pen; uses source.hotspots) | madehere worker/community sort | manifest (fill a ship's cargo list with what the photo or the records prove; uses source.hotspots) | honestq (pick the question a careful buyer would ask about each promise; uses source.hotspots) | estimate (tap the gold numbers, then slide a guess and see the real number; uses source.hotspots) | envelope (tap the gold numbers, read the archive caption, then open the sealed Scene 1 guesses and judge each; uses source.hotspots + DATA.scene1.cards) | readsigns (tap the gold numbers, pick what each numbered sign asks for, then one question; uses source.hotspots) | minutes (tap the gold numbers, then fill a secretary's minutes card one line at a time; uses source.hotspots) | badges (tap the gold numbers, then pin a badge on each numbered person: what were they doing for their community? then one question; uses source.hotspots) | stampproof (tap the gold numbers, then stamp each detail card with the virtue it proves, or "No proof"; then one question; uses source.hotspots) | stillhere (tap the gold numbers, then join each old rule to the part of today’s document that still keeps it; a gold thread ties them; then one question; uses source.hotspots) | drawchecks (tap the gold numbers, then pick a check card, tap the branch that does it and the branch it checks: an arrow draws; bin the one that isn’t a real check; then one question; uses source.hotspots) | proofcrew (the source first shows without its gold numbers: tap the thing in each photo that proves whose job it is and a close-up opens; then the numbers come on; then send each crew to its job; then one question; uses source.hotspots) | tenyears | registrar (the registrar’s three questions; uses source.hotspots)
      planner.type  picks | fixit | choose | scale | ledger | chain | bridge | hands | coin | train | plazaplan | comicstrip | postcard | stones | magnifier | ribbons | factcard | hourglass | treatycard | saddlebags | certificate | lantern | headline | brickmortar | staircase | claimcard | couplecars | greetings | sandwich | plaques | telegram | pricechart | comebackcard | missionpatch | marker | nameplate | shopsigns | speakercard | keyring | nomination | pamphlet | receipt | twoletters | answerslip | studio (Exhibit Studio: assets/sparkle/ff-studio.js, slides fill the notebook box)
      vocab.type    rootdig | flags | bells | streams | plantfield | chord | cargo | bloom | raisefort | roofrings | windclock | wallstack | memorypath | clayhands | focusglass | opengate | ferry | keypass | signposts | standup | turnclock | telegraph | levelboard | cranes | proclaim | mottrain | countdown | lectorvoice | leadline | floatfleet | lookout | preserve | ferriswheel | voices | armlink | hellowindow | chamber | raisehands | dignhall | inkpage | gavel | workloose | trustmeter | holdup
+     4.13.02 adds scene1 doorshow · reading mirror · evidence flipcards · planner carryon · vocab sunbeam · DATA.closing.seals / .postcard / .voiceSlot
      phone texts: a ▶ shows on any teacher text whose clip g4ss-<lesson>-txt-<key>.mp3 exists (key = sayKey(text))
    Add a new type by adding one entry to the MOD table below.
 
@@ -9330,6 +9331,233 @@
     paint(); return {done:done};
   };
 
+  /* ---- Scene 1 · The doorway show (4.13.02, the reunion lesson): the teacher stands in the open door with 13.
+     Part 1, a real old postcard: questions one at a time next to the picture (when it was made, what the card's name
+     means, why the message is on the front, whether the sender was right). Part 2, the doorway show: the student's six
+     slides from 4.13.01 (oao.ff.studio, through ff-studio.js in mode 'show'): a voice per slide, Present to your teacher
+     (one doorway reaction per slide made from the student's own words), Make my video. No slides on this computer →
+     build them right here. Done = every postcard question + every slide shown once in present mode.
+     DATA: card {img, alt, k, h, qs:[{q, opts:[{t,ok,miss,reply}]}], note:{k, quote, after}}, showK, showH, showVoice,
+           showWhy, studio {…ff-studio cfg…}, react {<criterion k>: 'text with {pick}', '*': …}, win ---- */
+  MOD.doorshow=function(cfg){ var card=document.querySelector('.canvas-file-card'), body=card&&card.querySelector('.canvas-file-card-body'); if(!body) return null;
+    var PC=cfg.card||{}, QS=PC.qs||[], ST=cfg.studio||null; S.dsh=S.dsh||{a:[],shown:false}; var api=null, was=null;
+    var vis=body.querySelector('.canvas-file-card-visual'); if(vis) vis.classList.add('spk-hide');
+    var pcDone=function(){ return S.dsh.a.length>=QS.length; };
+    var done=function(){ return pcDone()&&(!ST||!!S.dsh.shown); };
+    var g=el('div','spk spk-game spk-dsh');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'The doorway show')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-dsh-pc"><span class="k">'+esc(PC.k||'A real postcard')+'</span><div class="row"><figure class="fr"><img alt="'+esc(PC.alt||'')+'" src="'+IMG+esc(PC.img||'')+'"><figcaption>'+esc(PC.cap||'')+'</figcaption></figure><div class="qa"></div></div><div class="note"></div></div>'
+      +'<p class="spk-miss"></p>'
+      +'<div class="spk-dsh-show"><div class="lock">'+esc(cfg.lockT||'🔒 Answer the postcard questions first. Then your show opens.')+'</div><div class="in"><span class="k">'+esc(cfg.showK||'The doorway show')+'</span><h4>'+esc(cfg.showH||'')+'</h4>'+whyCard(cfg.showWhy)+(cfg.showVoice?'<p class="spk-voice">'+cfg.showVoice+'</p>':'')+'<div class="ffst" id="ffst-root"><p class="ffst-load">'+esc(cfg.loadT||'Opening your exhibit…')+'</p></div></div></div>'
+      +'<div class="spk-win">'+(cfg.win||'')+'<div class="spk-s1v"></div></div>';
+    body.appendChild(g);
+    var qa=g.querySelector('.qa'), note=g.querySelector('.spk-dsh-pc .note'), miss=g.querySelector(':scope > .spk-miss'), show=g.querySelector('.spk-dsh-show');
+    function paint(){ var k=S.dsh.a.length, q=QS[k], h='';
+      h+='<ol class="dots">'+QS.map(function(x,i){ return '<li class="'+(i<k?'ok':i===k?'now':'')+'">'+(i<k?'✓':i+1)+'</li>'; }).join('')+'</ol>';
+      if(q) h+='<p class="q"><b>'+(k+1)+' of '+QS.length+'.</b> '+esc(q.q)+'</p><div class="spk-opts">'+q.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-j="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div>';
+      else h+='<p class="q done">'+esc(PC.doneT||'You read the postcard like a historian.')+'</p>';
+      var last=S.dsh.a.length?QS[S.dsh.a.length-1]:null, rj=last?last.opts[S.dsh.a[S.dsh.a.length-1]]:null;
+      if(rj&&rj.reply) h+='<p class="rp">'+esc(rj.reply)+'</p>';
+      if(qa.dataset.h!==h){ qa.innerHTML=h; qa.dataset.h=h; }
+      var N=PC.note, showNote=N&&k>=(N.after||0);
+      note.innerHTML=showNote?'<span class="nk">'+esc(N.k||'What the sender wrote')+'</span><blockquote>'+esc(N.quote||'')+'</blockquote>'+(N.t?'<p>'+esc(N.t)+'</p>':''):''; note.classList.toggle('on',!!showNote);
+      show.classList.toggle('open',pcDone());
+      if(S.dsh.shown&&!S.dsh.shownSeen){ S.dsh.shownSeen=true; save(); }
+      var d=done(); if(d&&was===false){ sfx('win'); } was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    g.addEventListener('click',function(e){ var o=e.target.closest('.qa .spk-opt'); if(!o) return; var k=S.dsh.a.length, q=QS[k]; if(!q) return; var j=+o.dataset.j, opt=q.opts[j];
+      if(opt.ok){ S.dsh.a.push(j); save(); ack('open'); miss.textContent=''; sfx(k===QS.length-1?'bell':'paper'); paint(); refreshFile(); refreshVoice(); if(pcDone()){ mountStudio(); try{ if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){ show.scrollIntoView({behavior:'smooth',block:'start'}); },700); }catch(x){} } return; }
+      o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); var m=opt.miss||cfg.missT||'Not that one. Look closely at the postcard.'; miss.textContent=m; missBeat(m); });
+    /* the teacher's line from the doorway for one slide: the template for that slide, with a phrase from the student's own words */
+    function pick(t){ t=String(t||'').trim(); if(!t) return ''; var m=t.match(/\b(1[0-9]{3}|20[0-9]{2})\b/), n=null, re=/(?:^|[a-z0-9,;:]\s+)((?:[A-Z][A-Za-z.'’\-]+)(?:\s+(?:de|del|of|the|and|[A-Z][A-Za-z.'’\-]+))*)/g, x;
+      while((x=re.exec(t))){ var w=x[1].replace(/\s+(?:of|the|and|de|del)$/,''); if(x.index===0&&!/\s/.test(w)) continue; if(/^(I|It|This|That|The|A|An|My|In|On|We|He|She|They|Because|Florida|Florida’s|Florida's|Floridians?)$/.test(w)) continue; n=w; break; }
+      if(n) return n; if(m) return m[1]; return t.split(/\s+/).slice(0,5).join(' ').replace(/[.,;:!?]+$/,'')+'…'; }
+    function react(i,slide,crit){ var R2=cfg.react||{}, tpl=R2[crit&&crit.k]||R2['*']; if(!tpl) return ''; var p=pick(slide&&slide.text); return fill(p?tpl.replace('{pick}',p):(R2.empty||'')); }
+    function mountStudio(){ if(!ST||api) return; var root=g.querySelector('#ffst-root');
+      function go(){ if(!window.FFStudio||api) return; root.innerHTML='';
+        api=window.FFStudio.mount(root,Object.assign({lesson:DATA.lesson,mode:'show',present:true},ST),{img:IMG,name:nm,sfx:sfx,react:react,
+          shown:function(){ S.dsh.shown=true; save(); ack('scene'); paint(); refreshFile(); refreshVoice(); },
+          video:function(){ S.dsh.video=true; save(); if(T.videoT&&!S.seen.video){ S.seen.video=true; save(); teacher(T.videoT,null,{scene:'scene'}); } },
+          change:function(){} });
+        if(api&&api.shown&&api.shown()&&!S.dsh.shown){ S.dsh.shown=true; save(); } paint(); refreshFile(); }
+      if(!document.querySelector('link[data-ffst]')){ var l=document.createElement('link'); l.rel='stylesheet'; l.href=ST.css||'assets/sparkle/ff-studio.css'; l.dataset.ffst=1; document.head.appendChild(l); }
+      if(window.FFStudio) go(); else { var sc=document.createElement('script'); sc.src=ST.js||'assets/sparkle/ff-studio.js'; sc.onload=go; sc.onerror=function(){ root.innerHTML='<p class="ffst-load">'+esc(ST.failT||'The slide show could not load. Refresh the page.')+'</p>'; }; document.head.appendChild(sc); } }
+    paint(); if(pcDone()) mountStudio();
+    return {done:done, journal:function(e,NA){ if(!S.dsh.a.length) return NA; var o=QS.slice(0,S.dsh.a.length).map(function(q,i){ return '<b>'+e(q.q)+'</b> '+e(q.opts[S.dsh.a[i]].t); }); if(S.dsh.shown) o.push('<b>'+e(cfg.journalShowT||'The doorway show:')+'</b> '+e(cfg.journalShownT||'I presented my six slides to my teacher.')); return '<p class="a">'+o.join('<br>')+'</p>'; }};
+  };
+
+  /* ---- Explore reading · The then-and-now mirror (4.13.02): one hand mirror per part of the reading. Each shows a
+     "then" thought from the start of the year; pick the "now I know" that fits and the mirror turns over, showing it in
+     gold, and that part of the reading opens (the lesson's own paragraphs). Wrong picks bounce with a hint.
+     DATA: activity, why, thenK, nowK, paras [{id,match}], parts [{id,t,paras,then,q,opts:[{t,ok,miss}],now}], mid ---- */
+  MOD.mirror=function(cfg){ var act=activityTitled('#panel-explore',cfg.activity||'.'); if(!act) return null; var body=act.querySelector('.activity-body'); if(!body) return null;
+    var found={}, first=null;
+    (cfg.paras||[]).forEach(function(a){ var rx=new RegExp(a.match,'i'); [].some.call(body.querySelectorAll(':scope > p'),function(p){ if(!found[a.id]&&rx.test(p.textContent.trim())){ found[a.id]=p; if(!first) first=p; return true; } return false; }); });
+    if(!first) return null;
+    var PT=cfg.parts||[], N=PT.length; S.mir=S.mir||{k:0}; var flipping=false;
+    var done=function(){ return N>0&&S.mir.k>=N; };
+    var w=el('div','spk spk-mir'); w.innerHTML=whyCard(cfg.why)
+      +'<div class="spk-mir-row" aria-hidden="true">'+PT.map(function(p,i){ return '<span class="m" data-i="'+i+'"><i></i></span>'; }).join('')+'</div>'
+      +'<div class="spk-mir-stage"></div><p class="spk-miss"></p><p class="spk-ys-ct spk-mir-ct"></p><div class="spk-mir-parts"></div>';
+    before(first,w);
+    var stage=w.querySelector('.spk-mir-stage'), miss=w.querySelector('.spk-miss'), parts=w.querySelector('.spk-mir-parts'), boxes={};
+    PT.forEach(function(c,i){ var b=el('div','spk-mir-p'); b.innerHTML='<div class="hd"><span class="n">'+(i+1)+'</span> '+esc(c.t)+'</div><div class="tn"><span class="th">'+esc(cfg.thenK||'At the start of the year')+':</span> '+esc(c.then)+'<br><span class="nw">'+esc(cfg.nowK||'Now I know')+':</span> '+esc(c.now)+'</div><div class="txt"></div>';
+      (c.paras||[]).forEach(function(pid){ var q=found[pid]; if(q) move(q,function(nd){ var f=nd.firstChild; if(f&&f.nodeType===1&&f.tagName==='STRONG') f.classList.add('spk-lead'); b.querySelector('.txt').appendChild(nd); }); }); parts.appendChild(b); boxes[i]=b; });
+    function paint(){ var k=S.mir.k, c=PT[k];
+      PT.forEach(function(x,i){ boxes[i].classList.toggle('on',i<k); });
+      w.querySelectorAll('.spk-mir-row .m').forEach(function(m){ var i=+m.dataset.i; m.classList.toggle('on',i<k); m.classList.toggle('now',i===k); });
+      var h='';
+      if(c) h='<div class="card"><div class="then"><span class="tk">'+esc(cfg.thenK||'At the start of the year')+'</span><p>“'+esc(c.then)+'”</p></div><div class="mirror"><div class="glass"><div class="face front"><span class="rev" aria-hidden="true">'+esc(c.then)+'</span><span class="ask">'+esc(c.q||cfg.askT||'What do you know now?')+'</span></div><div class="face back"><span class="nk">'+esc(cfg.nowK||'Now I know')+'</span><p>'+esc(c.now)+'</p></div></div><span class="handle" aria-hidden="true"></span></div><div class="spk-opts">'+c.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-j="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div></div>';
+      stage.innerHTML=h;
+      w.querySelector('.spk-mir-ct').innerHTML=done()?'<b>'+esc(cfg.allT||'Every mirror is turned.')+'</b>':'<b>'+k+' of '+N+'</b> '+esc(cfg.countT||'mirrors turned. Each one opens its part of the reading.');
+      w.classList.toggle('all',done()); var th=act.parentNode.querySelector('.spk-think'); if(th) th.classList.toggle('spk-hide',!done()); }
+    w.addEventListener('click',function(e){ var o=e.target.closest('.spk-mir-stage .spk-opt'); if(!o||flipping) return; var k=S.mir.k, c=PT[k]; if(!c) return; var opt=c.opts[+o.dataset.j];
+      if(opt.ok){ flipping=true; miss.textContent=''; var gl=stage.querySelector('.mirror'); if(gl) gl.classList.add('turn'); stage.querySelectorAll('.spk-opt').forEach(function(b){ b.disabled=true; }); o.classList.add('on'); sfx('bell'); ack('explore');
+        var RM=false; try{ RM=matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(x){}
+        setTimeout(function(){ S.mir.k++; save(); flipping=false; paint(); refreshFile(); refreshVoice(); if(done()) setTimeout(function(){ sfx('win'); },300); var b=boxes[k]; if(b&&!RM) setTimeout(function(){ try{ b.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(x){} },200); },RM?150:1500); return; }
+      o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); var m=opt.miss||cfg.missT||'Not quite. Think about what you learned this year.'; miss.textContent=m; missBeat(m); });
+    foldThink(act,body); paint();
+    return {act:act, done:done, mid:function(id){ for(var i=0;i<PT.length;i++) if(PT[i].id===id) return boxes[i].classList.contains('on')?boxes[i]:stage; return null; },
+      journal:function(e,NA){ if(!S.mir.k) return NA; return '<p class="a">'+PT.slice(0,S.mir.k).map(function(c){ return e(cfg.thenK||'Then')+': '+e(c.then)+'<br><b>'+e(cfg.nowK||'Now')+':</b> '+e(c.now); }).join('<br><br>')+'</p>'; }};
+  };
+
+  /* ---- Explore evidence · Flip the postcard (4.13.02): after every gold number on the postcards is tapped
+     (source.hotspots), pick a postcard and flip it over. On the back, answer one question that ties the place to a
+     Florida File; the postmark stamps the file number on and a short fact appears. A card can ask for the student's own
+     town first (input), kept on this computer only. Done = every card stamped + the reading.
+     DATA: cards [{img, alt, front, place, q, opts:[{t,ok,miss}], stamp, fact, town:{label, ph}}], flipT, win ---- */
+  MOD.flipcards=function(cfg){ var anchor=evidenceAnchor(); if(!anchor) return null;
+    var CD=cfg.cards||[], N=CD.length; S.flp=S.flp||{ok:[],sel:null,flip:{},town:''}; var was=null;
+    var H=(DATA.source||{}).hotspots||[];
+    var hotDone=function(){ return !H.length||(S.hot||[]).length>=H.length; };
+    var ok=function(i){ return S.flp.ok.indexOf(i)>=0; };
+    var cardsDone=function(){ return N>0&&S.flp.ok.length>=N; };
+    var done=function(){ return hotDone()&&cardsDone()&&(!R.reading||R.reading.done()); };
+    var g=el('div','spk spk-game spk-flp');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Flip the postcard')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<p class="spk-si-gate gate"></p><div class="spk-flp-rack">'+CD.map(function(c,i){ return '<button type="button" class="spk-flp-th" data-i="'+i+'" aria-label="'+esc((cfg.cardT||'Postcard')+' '+(i+1)+': '+(c.place||''))+'"><img alt="" src="'+IMG+esc(c.img)+'"><span class="n">'+(i+1)+'</span><span class="pm" aria-hidden="true"></span></button>'; }).join('')+'</div>'
+      +'<div class="spk-flp-desk"></div><p class="spk-miss"></p><p class="spk-ys-ct spk-flp-ct"></p><p class="spk-si-gate last"></p><div class="spk-win">'+(cfg.win||'')+'</div>';
+    after(anchor,g);
+    var desk=g.querySelector('.spk-flp-desk'), miss=g.querySelector(':scope > .spk-miss');
+    function back(c,i){ var on=ok(i), tw=c.town?'<label class="tw"><span>'+esc(c.town.label||'Your town or city')+'</span><input type="text" maxlength="40" class="spk-flp-town" placeholder="'+esc(c.town.ph||'')+'" value="'+esc(S.flp.town||'')+'"></label>':'';
+      return '<div class="bk"><div class="msg">'+tw+'<p class="q">'+esc(c.q)+'</p>'+(on?'<p class="fact">'+esc(c.fact||'')+'</p>':'<div class="spk-opts">'+c.opts.map(function(o,j){ return '<button type="button" class="spk-opt" data-j="'+j+'">'+esc(o.t)+'</button>'; }).join('')+'</div>')+'</div><div class="addr"><span class="stampbox" aria-hidden="true">'+(on?'<b>'+esc(c.stamp||'')+'</b>':'')+'</span>'+(on?'<span class="post" aria-hidden="true">'+esc(c.stamp||'')+'</span>':'')+'<i></i><i></i><i></i></div></div>'; }
+    function paint(newI){ var hd=hotDone(); g.classList.toggle('wait',!hd);
+      g.querySelector('.gate').textContent=hd?'':(cfg.hotT||'First, tap every gold number on the postcards above.');
+      g.querySelectorAll('.spk-flp-th').forEach(function(b){ var i=+b.dataset.i; b.classList.toggle('ok',ok(i)); b.classList.toggle('sel',i===S.flp.sel); b.querySelector('.pm').textContent=ok(i)?(CD[i].stamp||'✓'):''; if(newI===i){ b.classList.remove('new'); void b.offsetWidth; b.classList.add('new'); } });
+      var i=S.flp.sel, c=CD[i], h='';
+      if(hd&&c){ var fl=!!S.flp.flip[i];
+        h='<div class="pcard'+(fl?' flipped':'')+'"><div class="in"><div class="front"><img alt="'+esc(c.alt||'')+'" src="'+IMG+esc(c.img)+'"><span class="cap">'+esc(c.front||'')+'</span></div>'+back(c,i)+'</div></div><div class="ctl"><button type="button" class="spk-ptxgo spk-flp-flip">'+esc(fl?(cfg.frontT||'↻ Turn it back to the picture'):(cfg.flipT||'↻ Flip it over'))+'</button></div>'; }
+      else if(hd) h='<p class="q">'+esc(cfg.startT||'👆 Tap a postcard to pick it up.')+'</p>';
+      desk.innerHTML=h;
+      g.querySelector('.spk-flp-ct').innerHTML=!hd?'':cardsDone()?'<b>'+esc(cfg.allT||'Every postcard is stamped.')+'</b>':'<b>'+S.flp.ok.length+' of '+N+'</b> '+esc(cfg.countT||'postcards stamped.');
+      g.querySelector('.last').textContent=hd&&cardsDone()&&R.reading&&!R.reading.done()?(cfg.readT||'Last step: finish Learn the Story at the top of this tab.'):'';
+      var d=done(); if(d&&was===false) sfx('win'); was=d; g.querySelector('.spk-win').classList.toggle('show',d); g.classList.toggle('done',d); }
+    g.addEventListener('click',function(e){ if(!hotDone()) return;
+      var t=e.target.closest('.spk-flp-th'); if(t){ S.flp.sel=+t.dataset.i; save(); sfx('click'); miss.textContent=''; paint(); try{ if(!matchMedia('(prefers-reduced-motion: reduce)').matches) desk.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(x){} return; }
+      if(e.target.closest('.spk-flp-flip')){ var i=S.flp.sel; S.flp.flip[i]=!S.flp.flip[i]; save(); ack('explore'); sfx('paper'); paint(); return; }
+      var o=e.target.closest('.spk-flp-desk .spk-opt'); if(!o) return; var k=S.flp.sel, c=CD[k], opt=c&&c.opts[+o.dataset.j]; if(!opt) return;
+      if(opt.ok){ if(!ok(k)) S.flp.ok.push(k); save(); miss.textContent=''; sfx('thud'); setTimeout(function(){ sfx('bell'); },250); paint(k); refreshFile(); refreshVoice(); if(cardsDone()) beatOnce('cardsDone'); return; }
+      o.classList.add('shake'); setTimeout(function(){ o.classList.remove('shake'); },450); var m=opt.miss||cfg.missT||'Not that one. Think about which file you studied this place in.'; miss.textContent=m; missBeat(m); });
+    g.addEventListener('input',function(e){ var t=e.target.closest('.spk-flp-town'); if(!t) return; S.flp.town=t.value.replace(/[<>]/g,'').slice(0,40); save(); });
+    function beatOnce(){}
+    HOT_TAP.push(function(){ paint(); refreshFile(); });
+    paint();
+    return {done:done, town:function(){ return (S.flp.town||'').trim(); }, journal:function(e,NA){ if(!S.flp.ok.length) return NA; return '<p class="a">'+S.flp.ok.slice().sort().map(function(i){ var c=CD[i]; return '<b>'+e(c.place||'')+':</b> '+e(c.fact||''); }).join('<br>')+(S.flp.town?'<br><b>'+e(cfg.townJT||'My community:')+'</b> '+e(S.flp.town):'')+'</p>'; }};
+  };
+
+  /* ---- Planner · Pack the carry-on (4.13.02): a small suitcase with pockets (What I learned / How I grew / What I'll
+     carry). Cards go in by tap-then-pocket or drag. The student's own saved Historian's Sentences (oao.ff.course
+     .sentences) come back as cards when this computer kept them. Weak cards bounce out with a reason. When every pocket
+     has what it needs, the bag zips shut. The student still writes the reflection; the bag is the plan.
+     DATA: why, voice, pockets [{k,t,ico,need}], cards [{t,ok:[k],miss}], weak [{t,miss}], sentT, sentOk, zipT, win ---- */
+  MOD.carryon=function(cfg){ var partB=document.querySelector('#panel-assignment .activity.bl-gold'); if(!partB) return null;
+    var PK=cfg.pockets||[], base=(cfg.cards||[]).slice(), WK=cfg.weak||[];
+    var mine=Object.keys(C.sentences||{}).filter(function(n){ return +n!==THIS&&String(C.sentences[n]||'').trim().split(/\s+/).length>=4; }).sort(function(a,b){ return a-b; }).slice(0,cfg.maxSent||4)
+      .map(function(n){ return {t:(cfg.sentT||'From File {n}: “{s}”').replace('{n}',n).replace('{s}',String(C.sentences[n]).trim()),ok:cfg.sentOk||['learned','carry'],mine:true}; });
+    var CARDS=mine.concat(base).concat(WK.map(function(x){ return {t:x.t,weak:true,miss:x.miss}; }));
+    var order=S.cry&&S.cry.order&&S.cry.order.length===CARDS.length?S.cry.order:shuffle(CARDS.map(function(x,i){ return i; }));
+    S.cry=S.cry||{put:{},zip:false}; S.cry.order=order; var sel=null;
+    var need=function(k){ var p=find(PK,k,'k'); return p?(p.need||1):1; };
+    var inP=function(k){ return Object.keys(S.cry.put).filter(function(i){ return S.cry.put[i]===k; }); };
+    var ready=function(){ return PK.every(function(p){ return inP(p.k).length>=need(p.k); }); };
+    var done=function(){ return ready()&&!!S.cry.zip; };
+    var b=el('div','spk spk-builder spk-cry');
+    b.innerHTML=voice(cfg.voice,cfg)+'<div class="spk-cry-bag"><div class="hdl" aria-hidden="true"></div><div class="case"><div class="zip" aria-hidden="true"></div><div class="pk">'+PK.map(function(p){ return '<div class="pocket" data-k="'+esc(p.k)+'" role="button" tabindex="0"><b><span aria-hidden="true">'+esc(p.ico||'')+'</span> '+esc(p.t)+'</b><span class="nd"></span><div class="in"></div></div>'; }).join('')+'</div><div class="tag" aria-hidden="true">'+esc(nm()||'')+'</div></div></div>'
+      +'<p class="spk-cry-tip">'+esc(cfg.tipT||'👆 Tap a card, then tap the pocket where it fits. Or drag it.')+'</p><div class="spk-cry-tray"></div><p class="spk-miss"></p><div class="spk-cry-zipr"></div><div class="spk-win">'+(cfg.win||'')+'</div>';
+    before(partB,b);
+    var tray=b.querySelector('.spk-cry-tray'), miss=b.querySelector('.spk-miss'), zr=b.querySelector('.spk-cry-zipr'), bag=b.querySelector('.spk-cry-bag');
+    function paint(newI){ var put=S.cry.put;
+      tray.innerHTML=order.filter(function(i){ return put[i]==null; }).map(function(i){ var c=CARDS[i]; return '<span class="spk-cry-c'+(c.mine?' mine':'')+(sel===i?' sel':'')+'" role="button" tabindex="0" draggable="true" data-i="'+i+'">'+(c.mine?'<em>'+esc(cfg.mineT||'Your own words')+'</em>':'')+esc(c.t)+'</span>'; }).join('');
+      b.querySelectorAll('.pocket').forEach(function(p){ var k=p.dataset.k, ids=inP(k), nd=need(k); p.querySelector('.in').innerHTML=ids.map(function(i){ return '<span class="tg'+(String(newI)===String(i)?' new':'')+'">'+esc(CARDS[i].t)+'</span>'; }).join(''); p.querySelector('.nd').textContent=ids.length>=nd?'✓':ids.length+' of '+nd; p.classList.toggle('full',ids.length>=nd); p.classList.toggle('armed',sel!=null); });
+      var r=ready(); zr.innerHTML=S.cry.zip?'':(r?'<button type="button" class="spk-ptxgo spk-cry-zipb">'+esc(cfg.zipT||'🧳 Zip it shut')+'</button>':'<p class="spk-ys-ct">'+esc(cfg.needT||'Fill every pocket to zip the bag.')+'</p>');
+      bag.classList.toggle('zipped',!!S.cry.zip); b.classList.toggle('done',done()); b.querySelector('.spk-win').classList.toggle('show',done()); }
+    function place(i,k){ if(i==null||S.cry.zip) return; var c=CARDS[i]; if(!c||S.cry.put[i]!=null) return; var x=tray.querySelector('[data-i="'+i+'"]');
+      if(c.weak||(c.ok||[]).indexOf(k)<0){ if(x){ x.classList.add('shake'); setTimeout(function(){ x.classList.remove('shake'); },450); } var p=find(PK,k,'k'), m=c.miss&&(typeof c.miss==='string'?c.miss:(c.miss[k]||c.miss['*']))||((cfg.missT||'That card doesn’t fit in {p}.').replace('{p}',p?p.t:'')); miss.textContent=m; missBeat(m); sfx('click'); return; }
+      S.cry.put[i]=k; sel=null; save(); miss.textContent=''; sfx('thud'); paint(i); refreshFile(); updateStepper(); }
+    b.addEventListener('click',function(e){ if(e.target.closest('.spk-cry-zipb')){ S.cry.zip=true; save(); sfx('slide'); setTimeout(function(){ sfx('win'); },500); paint(); refreshFile(); updateStepper(); return; }
+      var c=e.target.closest('.spk-cry-c'); if(c){ sel=+c.dataset.i; miss.textContent=''; sfx('click'); paint(); return; }
+      var p0=e.target.closest('.pocket'); if(p0&&sel!=null){ place(sel,p0.dataset.k); return; }
+      var tg=e.target.closest('.pocket .tg'); if(tg&&!S.cry.zip){ var pk=tg.closest('.pocket').dataset.k, ids=inP(pk), t=tg.textContent; ids.some(function(i){ if(CARDS[i].t===t){ delete S.cry.put[i]; return true; } return false; }); save(); paint(); updateStepper(); return; }
+      var p=e.target.closest('.pocket'); if(p){ if(sel==null){ miss.textContent=cfg.pickFirstT||'First tap a card.'; return; } place(sel,p.dataset.k); } });
+    b.addEventListener('keydown',function(e){ if(e.key!=='Enter'&&e.key!==' ') return; var t=e.target.closest('.spk-cry-c, .pocket'); if(t){ e.preventDefault(); t.click(); } });
+    b.addEventListener('dragstart',function(e){ var c=e.target.closest('.spk-cry-c'); if(!c) return; sel=+c.dataset.i; e.dataTransfer.setData('text/plain',c.dataset.i); e.dataTransfer.effectAllowed='move'; });
+    b.addEventListener('dragover',function(e){ if(e.target.closest('.pocket')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    b.addEventListener('drop',function(e){ var p=e.target.closest('.pocket'); if(!p) return; e.preventDefault(); var j=e.dataTransfer.getData('text/plain'); place(j!==''?+j:sel,p.dataset.k); });
+    paint();
+    return {done:done, lines:function(){ return PK.map(function(p){ var t=inP(p.k).map(function(i){ return CARDS[i].t; }); return t.length?[p.t,t.join('; ')]:null; }).filter(Boolean); }};
+  };
+
+  /* ---- Vocabulary · Bend the sunbeam (4.13.02, flect / flex = bend): a beam of daylight comes in through the open door
+     and four mirrors hang crooked along the hall. Hear each word (g4ss-<lesson>-flect-<n>.mp3); each meaning matched
+     turns one mirror straight, and the beam bends around one more corner. The last one sends it back out the door with
+     13. Built on holdup. ---- */
+  MOD.sunbeam=function(cfg){ var game=document.querySelector('.root-match-game'); if(!game) return null; var body=game.closest('.activity-body'); if(!body) return null;
+    var W=cfg.words||[], ROOT=cfg.root||'flect', HL=new RegExp('('+(cfg.hl||ROOT)+')','i'), N=W.length; S.sbm=S.sbm||{heard:[],set:[]};
+    var cv=body.querySelector('.callout-vocab'); if(cv) cv.classList.add('spk-hide'); game.classList.add('spk-hide');
+    var fact=document.getElementById('rootDiscoveryFact'), factTx=fact?fact.textContent.replace(/^\s*🔎\s*Discovery Fact\s*/,'').trim():'';
+    var done=function(){ return N>0&&S.sbm.set.length===N; };
+    /* the beam: door (the light comes in) → mirror 1 → 2 → 3 → 4 → the frame of the door with 13. Mirrors are "\" or "/" so each turn really is a reflection. */
+    var P=[[40,48],[170,48],[170,172],[340,172],[340,62],[548,62]], M=[['\\',170,48],['\\',170,172],['/',340,172],['/',340,62]];
+    var svg='<svg viewBox="0 0 600 214" aria-hidden="true"><defs><linearGradient id="spkSbmG" x1="0" x2="1"><stop offset="0" stop-color="#FFF4C2"/><stop offset="1" stop-color="#FFD25E"/></linearGradient></defs><rect width="600" height="214" rx="14" class="wall"/>'
+      +'<g class="sun"><rect x="8" y="18" width="40" height="62" rx="4" class="dw"/><circle cx="28" cy="40" r="9" class="sd"/></g>'
+      +P.slice(0,-1).map(function(a,i){ var z=P[i+1]; return '<line class="beam b'+i+'" x1="'+a[0]+'" y1="'+a[1]+'" x2="'+z[0]+'" y2="'+z[1]+'"/>'; }).join('')
+      +M.map(function(m,i){ var d=m[0]==='\\'?'M-15,-15 L15,15':'M-15,15 L15,-15'; return '<g class="mr" data-i="'+i+'" transform="translate('+m[1]+','+m[2]+')"><g class="tilt"><path d="'+d+'" class="rim"/><path d="'+d+'" class="gl"/></g></g>'; }).join('')
+      +'<g class="d13"><rect x="548" y="22" width="40" height="80" rx="3" class="df"/><text x="568" y="66" text-anchor="middle">13</text></g></svg>';
+    var g=el('div','spk spk-sbm');
+    g.innerHTML='<div class="spk-game-head"><span class="spk-kicker">'+esc(cfg.kicker||'Bend the sunbeam')+'</span><span class="spk-h">'+esc(cfg.h||'')+'</span></div>'+voice(cfg.voice,cfg)
+      +'<div class="spk-sbmsc">'+svg+'</div>'
+      +'<div class="wds spk-fwwds spk-sbmwds">'+W.map(function(x,i){ return '<div class="wd" data-i="'+i+'" role="button" tabindex="0" aria-label="'+esc(x.w)+'"><span class="w">'+esc(x.w).replace(HL,'<b>$1</b>')+'</span><span class="m"></span></div>'; }).join('')+'</div>'
+      +'<p class="spk-bell-ct spk-sbm-ct"></p><div class="spk-chips spk-fwmeans spk-sbmmeans"></div><p class="spk-miss"></p>'
+      +'<div class="spk-flag-win2"><span class="stamp">'+(cfg.win||'')+'</span><p>'+esc(factTx)+'</p></div>';
+    after(game,g);
+    var means=g.querySelector('.spk-sbmmeans'), miss=g.querySelector('.spk-miss'), wds=g.querySelector('.spk-sbmwds'), sc=g.querySelector('.spk-sbmsc'), sel=null, AU={};
+    W.forEach(function(x,i){ var a=new Audio(); a.preload='none'; a.src=AUD+'g4ss-'+LESSON+'-'+ROOT+'-'+(i+1)+'.mp3'; AU[i]=a; });
+    shuffle(W.map(function(x,i){ return i; })).forEach(function(i){ var t=el('div','spk-chip noimg spk-fwmean spk-sbmmean','<span>'+esc(W[i].m)+'</span>'); t.setAttribute('role','button'); t.tabIndex=0; t.draggable=true; t.dataset.i=i; means.appendChild(t); });
+    function play(au){ try{ document.querySelectorAll('audio').forEach(function(o){ if(o!==au) o.pause(); }); au.currentTime=0; var p=au.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
+    function paint(anim){ var allH=S.sbm.heard.length===N, k=S.sbm.set.length;
+      wds.querySelectorAll('.wd').forEach(function(c){ var i=+c.dataset.i, h=S.sbm.heard.indexOf(i)>=0, u=S.sbm.set.indexOf(i)>=0; c.classList.toggle('heard',h); c.classList.toggle('up',u); c.querySelector('.m').textContent=u?W[i].m:''; if(anim===i){ c.classList.remove('tap'); void c.offsetWidth; c.classList.add('tap'); } });
+      sc.querySelectorAll('.mr').forEach(function(m){ var i=+m.dataset.i; m.classList.toggle('on',i<k); if(anim!=null&&anim!=='h'&&i===k-1){ m.classList.remove('new'); void m.getBoundingClientRect(); m.classList.add('new'); } });
+      sc.querySelectorAll('.beam').forEach(function(b,i){ b.classList.toggle('on',i<=k); });
+      sc.classList.toggle('full',done()); g.classList.toggle('done',done());
+      means.classList.toggle('wait',!allH); means.querySelectorAll('.spk-sbmmean').forEach(function(t){ var f=S.sbm.set.indexOf(+t.dataset.i)>=0; t.classList.toggle('spk-hide',f); t.draggable=allH&&!f; });
+      g.querySelector('.spk-sbm-ct').innerHTML=!allH?'<b>'+S.sbm.heard.length+' of '+N+'</b> '+esc(cfg.hearT||'words heard. Tap each word to hear it.'):(done()?'':'<b>'+k+' of '+N+'</b> '+esc(cfg.upT||'matched. Each match turns one mirror, and the light bends around one more corner.'));
+      if(done()) window._rootMatchDone=true; }
+    function arm(on){ wds.querySelectorAll('.wd').forEach(function(c){ c.classList.toggle('armed',on&&!c.classList.contains('up')); c.classList.remove('over'); }); }
+    function attempt(t,c){ if(!t||!c) return; var i=+t.dataset.i; if(S.sbm.set.indexOf(i)>=0||S.sbm.heard.length<N) return; arm(false);
+      if(+c.dataset.i===i){ S.sbm.set.push(i); save(); sel=null; miss.textContent=''; sfx('clink'); setTimeout(function(){ sfx('bell'); },300); if(done()) setTimeout(function(){ sfx('win'); },900); paint(i); }
+      else { t.classList.add('shake'); setTimeout(function(){ t.classList.remove('shake'); },450); miss.textContent=W[i].miss||''; } }
+    wds.addEventListener('click',function(e){ var c=e.target.closest('.wd'); if(!c) return; var i=+c.dataset.i;
+      if(sel&&S.sbm.heard.length===N){ attempt(sel,c); return; }
+      if(S.sbm.heard.indexOf(i)<0){ S.sbm.heard.push(i); save(); sfx('click'); } play(AU[i]); paint('h'); });
+    wds.addEventListener('keydown',function(e){ var c=e.target.closest('.wd'); if(c&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); c.click(); } });
+    means.addEventListener('click',function(e){ var t=e.target.closest('.spk-sbmmean'); if(!t) return; if(S.sbm.heard.length<N){ miss.textContent=cfg.hearFirstT||'Tap every word first, so you hear each one.'; return; } means.querySelectorAll('.spk-sbmmean').forEach(function(x){ x.classList.remove('sel'); }); t.classList.add('sel'); sel=t; miss.textContent=''; arm(true); });
+    means.addEventListener('keydown',function(e){ var t=e.target.closest('.spk-sbmmean'); if(t&&(e.key==='Enter'||e.key===' ')){ e.preventDefault(); t.click(); } });
+    means.addEventListener('dragstart',function(e){ var t=e.target.closest('.spk-sbmmean'); if(!t||!t.draggable){ e.preventDefault(); return; } sel=t; e.dataTransfer.setData('text/plain',t.dataset.i); e.dataTransfer.effectAllowed='move'; arm(true); });
+    means.addEventListener('dragend',function(){ arm(false); });
+    wds.addEventListener('dragover',function(e){ var c=e.target.closest('.wd'); wds.querySelectorAll('.wd').forEach(function(x){ x.classList.toggle('over',x===c); }); if(c&&!c.classList.contains('up')){ e.preventDefault(); e.dataTransfer.dropEffect='move'; } });
+    wds.addEventListener('drop',function(e){ e.preventDefault(); var id=e.dataTransfer.getData('text/plain'); var t=sel||(id!==''&&means.querySelector('.spk-sbmmean[data-i="'+id+'"]')); attempt(t,e.target.closest('.wd')); });
+    paint(); return {done:done};
+  };
+
   function buildModules(){
     var ex=DATA.explore||{};
     function run(cfg){ if(!cfg||!cfg.type) return null; if(!MOD[cfg.type]){ console.warn('sparkle layer: unknown type '+cfg.type); return null; } try{ return MOD[cfg.type](cfg); }catch(e){ console.warn('sparkle layer: '+cfg.type,e); return null; } }
@@ -9357,7 +9585,7 @@
     else ta.addEventListener('input',function(){ refreshFile(); tryOpen(); });
     var hs=document.getElementById('journal-chronicle'); if(hs){ var keep=function(){ C.sentences[THIS]=hs.value.trim(); save(); paintCabinet(); }; hs.addEventListener('input',keep); if(hs.value.trim()) keep(); } }
   function buildKey(){ document.querySelectorAll('.turn-in-item').forEach(function(i){ i.addEventListener('click',function(){ setTimeout(tryOpen,0); }); }); tryOpen(); }
-  function tryOpen(){ if(S.cracked) return; if(!(notebookWritten()&&checklistDone())) return; S.cracked=true; if(THIS&&C.opened.indexOf(THIS)<0) C.opened.push(THIS); save(); refreshFile(); showCabinet(); paintCabinet(true); var cab=document.querySelector('.spk-cab'); if(cab) cab.scrollIntoView({behavior:'smooth',block:'center'}); }
+  function tryOpen(){ if(S.cracked) return; if(!(notebookWritten()&&checklistDone())) return; S.cracked=true; if(THIS&&C.opened.indexOf(THIS)<0) C.opened.push(THIS); save(); refreshFile(); refreshVoice(); showCabinet(); paintCabinet(true); var cab=document.querySelector('.spk-cab'); if(cab) cab.scrollIntoView({behavior:'smooth',block:'center'}); }
 
   /* ================================================================ THE TOP — one header row */
   function buildTop(){ var hd=document.querySelector('.header'); if(!hd) return;
@@ -9422,14 +9650,16 @@
     mapdone:function(){ var k=document.querySelector('.spk-game .spk-notes > .k'); return k&&[k,'before']; },
     s1done:function(){ var k=document.querySelector('#panel-scene .spk-s1v'); return k&&[k,'before']; },
     afterread:function(){ var a=R.reading&&R.reading.act; return a&&[a,'after']; },
-    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sth, #panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq, #panel-explore .spk-est, #panel-explore .spk-env, #panel-explore .spk-rs, #panel-explore .spk-mn, #panel-explore .spk-bdg, #panel-explore .spk-spf, #panel-explore .spk-dck, #panel-explore .spk-prf-top, #panel-explore .spk-tny, #panel-explore .spk-rgs'); return d&&[d,'before']; },
+    evidence:function(){ var d=document.querySelector('#panel-explore .spk-sth, #panel-explore .spk-sayinfer, #panel-explore .spk-doctype, #panel-explore .spk-shipshore, #panel-explore .spk-game.spk-spot, #panel-explore .spk-domino, #panel-explore .spk-whole, #panel-explore .spk-namehunt, #panel-explore .spk-cline, #panel-explore .spk-halfpic, #panel-explore .spk-shadow, #panel-explore .spk-tn, #panel-explore .spk-whc, #panel-explore .spk-spy, #panel-explore .spk-fe, #panel-explore .spk-tm, #panel-explore .spk-tbd, #panel-explore .spk-mh, #panel-explore .spk-pt, #panel-explore .spk-ruin, #panel-explore .spk-trust, #panel-explore .spk-cst, #panel-explore .spk-cweb, #panel-explore .spk-pp, #panel-explore .spk-mc2, #panel-explore .spk-cdt, #panel-explore .spk-tpn, #panel-explore .spk-mnf, #panel-explore .spk-hq, #panel-explore .spk-est, #panel-explore .spk-env, #panel-explore .spk-rs, #panel-explore .spk-mn, #panel-explore .spk-bdg, #panel-explore .spk-spf, #panel-explore .spk-dck, #panel-explore .spk-prf-top, #panel-explore .spk-tny, #panel-explore .spk-rgs, #panel-explore .spk-flp'); return d&&[d,'before']; },
     estdone:function(){ var r=document.querySelector('#panel-explore .spk-est .rev'); return r&&[r,'after']; },
     readmid:function(){ var m=R.reading&&R.reading.mid&&R.reading.mid((DATA.explore&&DATA.explore.reading&&DATA.explore.reading.mid)||''); return m&&[m.querySelector('.hd')||m,'after']; },
+    doorshow:function(){ var d=document.querySelector('#panel-scene .spk-dsh-show .in .ffst'); return d&&[d,'before']; },
+    closing:function(){ var c=document.querySelector('#panel-assignment .canvas-path-chip'); return c&&[c,'before']; },
     plan:function(){ var p=document.querySelector('#panel-assignment .spk-builder'); return p&&p.firstElementChild&&[p.firstElementChild,'before']; },
     score:function(){ var q=document.getElementById('quizScore'); return q&&[q,'after']; }
   };
   function quizTotal(){ return document.querySelectorAll('#panel-check .quiz-q').length||3; }
-  var WHEN={ estimated:function(){ return !!(S.est&&S.est.lock); },
+  var WHEN={ estimated:function(){ return !!(S.est&&S.est.lock); }, cracked:function(){ return !!S.cracked; },
              perfect:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()===quizTotal(); },
              review:function(){ var n=document.getElementById('quizScoreNum'); return !!S.quizDone&&n&&+n.textContent.trim()!==quizTotal(); } };
   /* ═══ Spotlight: page parts light up, pop, point and reveal exactly when the recorded voice names them (PowerPoint-style).
@@ -9638,8 +9868,15 @@
   /* DATA.closing = {img, k, h, t:[...], credit}: a calm card under the cabinet once the file is open (4.08.03: Freedom Day) */
   function showCabinet(){ if(!cabEl) return; cabEl.classList.toggle('spk-hide',!S.cracked); lockEl.classList.toggle('spk-hide',!!S.cracked);
     var CL=DATA.closing, cl=document.querySelector('.spk-closing');
-    if(CL&&!cl){ cl=el('div','spk spk-closing',(CL.img?'<img alt="'+esc(CL.alt||'')+'" src="'+IMG+esc(CL.img)+'">':'')+'<div><div class="k">'+esc(fill(CL.k||''))+'</div><div class="h">'+esc(fill(CL.h||''))+'</div>'+(CL.t||[]).map(function(p){ return '<p>'+esc(fill(p))+'</p>'; }).join('')+(CL.credit?'<div class="cr">'+esc(CL.credit)+'</div>':'')+'</div>'); after(cabEl,cl); }
-    if(cl) cl.classList.toggle('spk-hide',!S.cracked); }
+    if(CL&&!cl){ cl=el('div','spk spk-closing'+(CL.seals?' spk-seals':''),(CL.img?'<img alt="'+esc(CL.alt||'')+'" src="'+IMG+esc(CL.img)+'">':'')+'<div><div class="k">'+esc(fill(CL.k||''))+'</div><div class="h">'+esc(fill(CL.h||''))+'</div>'+(CL.t||[]).map(function(p){ return '<p>'+esc(fill(p))+'</p>'; }).join('')+(CL.seals?sealsHTML(CL):'')+(CL.credit?'<div class="cr">'+esc(CL.credit)+'</div>':'')+'</div>'); after(cabEl,cl);
+      if(CL.seals) cl.addEventListener('click',function(e){ var b=e.target.closest('.spk-seal13'); if(!b) return; cl.querySelectorAll('.spk-seal13').forEach(function(x){ x.classList.toggle('sel',x===b); }); var o=cl.querySelector('.spk-seal-say'), f=find(FILES,+b.dataset.n,'n'), sn=String((C.sentences||{})[b.dataset.n]||'').trim(); if(o&&f) o.innerHTML='<b>'+esc((CL.fileT||'File')+' '+f.n+' · '+f.t)+'</b> '+(sn?'“'+esc(sn)+'” <span>'+esc(CL.yoursT||'(your Historian’s Sentence)')+'</span>':esc(f.blurb||'')); sfx('click'); });
+      /* 4.13.02: the teacher's postcard and the reunion voice note wait under the closing card until the file opens */
+      if(CL.postcard){ var pc=document.querySelector('#panel-assignment .canvas-postcard'); if(pc) move(pc,function(n){ after(cl,n); n.classList.add('spk-pc-end'); }); }
+      if(CL.voiceSlot){ var vn=document.querySelector('.spk-vn[data-slot="'+CL.voiceSlot+'"]'); if(vn) after(cl,vn); } }
+    if(cl) cl.classList.toggle('spk-hide',!S.cracked); var pce=document.querySelector('.spk-pc-end'); if(pce) pce.classList.toggle('spk-hide',!S.cracked); }
+  /* DATA.closing.seals (4.13.02): all 13 file seals in a row; tap one to see that file and, when this computer kept it, the
+     student's Historian's Sentence from it. Finishing the last lesson means the whole course is done, so every seal shows. */
+  function sealsHTML(CL){ return '<div class="spk-seal-row" role="list">'+FILES.map(function(f){ var sn=String((C.sentences||{})[f.n]||'').trim(); return '<button type="button" role="listitem" class="spk-seal13'+(f.door?' door':'')+(sn?' has':'')+'" data-n="'+f.n+'" aria-label="'+esc((CL.fileT||'File')+' '+f.n+': '+f.t)+'"><span class="wax"><b>'+(f.door?'🚪':f.n)+'</b></span><small>'+esc(f.door?(CL.doorT||'Checkpoint'):f.t)+'</small></button>'; }).join('')+'</div><p class="spk-seal-say">'+esc(CL.sealTipT||'👆 Tap a seal to look back at that file.')+'</p>'; }
   function paintCabinet(anim){ if(!cabEl) return;
     cabEl.querySelectorAll('.spk-f').forEach(function(f){ var n=+f.dataset.n,u=C.opened.indexOf(n)>=0; f.classList.toggle('unlocked',u); f.classList.toggle('now',n===THIS&&!S.cracked); f.classList.toggle('sel',n===cabSel); if(anim&&n===THIS) f.classList.add('justopened'); });
     cabEl.querySelectorAll('.spk-pin').forEach(function(p){ var n=+p.dataset.n; p.classList.toggle('lit',C.opened.indexOf(n)>=0); p.classList.toggle('now',n===THIS&&!S.cracked); p.classList.toggle('sel',n===cabSel); });

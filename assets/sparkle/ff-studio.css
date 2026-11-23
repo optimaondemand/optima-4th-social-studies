@@ -92,3 +92,23 @@
 }
 @media (prefers-reduced-motion: reduce){ .ffst *{transition:none!important;animation:none!important} }
 .ffst-th .oao-hand { display: none !important; } .ffst-th { padding-right: 2px !important; }
+/* ── 4.13.02 · the show view, the doorway reactions in present mode, and Make my video ── */
+.ffst-top>b small{font:italic 600 14px Lora,Georgia,serif;color:var(--ffst-gold);margin-left:6px}
+.ffst-th em{position:absolute;bottom:2px;right:4px;font-style:normal;font-size:11px}
+.ffst-navrow{margin-top:8px}
+.ffst-none{text-align:center;padding:10px 6px}.ffst-none .ic{font-size:40px;display:block}.ffst-none h4{margin:4px 0 6px;font:700 20px Lora,Georgia,serif}.ffst-none p{max-width:560px;margin:0 auto 6px;font-size:16px;line-height:1.45}
+.ffst-btn[aria-disabled="true"]{opacity:.55}
+.ffst-show .door{position:static;margin-top:10px;min-height:44px;box-sizing:border-box;max-width:min(720px,92vw);display:flex;gap:10px;align-items:flex-start;background:#FFFBEF;color:#22304A;border-radius:16px 16px 16px 4px;padding:10px 14px;font:700 16px/1.4 Nunito,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.45);opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s;pointer-events:none}
+.ffst-show .door.on{opacity:1;transform:none}
+.ffst-show .door .av{font-size:26px;line-height:1}
+.ffst-show .bar .say{background:#1E8C8C}
+.ffst-show .clock.low{background:#FF9D86}
+.ffst-making .mk{width:min(92vw,760px);text-align:center;color:#fff}
+.ffst-making .mk h4{margin:0 0 10px;font:700 22px Lora,Georgia,serif;color:#fff}
+.ffst-making canvas{width:100%;height:auto;border-radius:10px;background:#000;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.ffst-making .bar2{height:10px;border-radius:99px;background:rgba(255,255,255,.15);margin:12px 0 6px;overflow:hidden}.ffst-making .bar2 i{display:block;height:100%;width:0;background:var(--ffst-gold,#FFD25E);transition:width .1s linear}
+.ffst-making .mkt{font:800 16px Nunito,sans-serif;margin:4px 0}
+@media (max-width:760px){ .ffst-show .door{font-size:14px} }
+@media (prefers-reduced-motion: reduce){ .ffst-show .door{transition:none} }
+
+.ffst-show:has(.door) .stage{width:min(96vw,calc((100vh - 160px)*16/9))}

@@ -1784,6 +1784,1801 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.13.02",
+ "title": "Final Florida Historian-Citizen Reflection",
+ "quiet": false,
+ "file": {
+  "n": 13,
+  "title": "The Exhibit",
+  "label": "The Last Entry",
+  "seals": [
+   "🖼️",
+   "🪞",
+   "🧳"
+  ]
+ },
+ "prevFile": "Build the Florida History Exhibit",
+ "connector": "Last time, the door with 13 swung all the way open.",
+ "storySoFar": "Your teacher is still inside Canvas, but not for long. Last time, your final claim hung on the door with 13, the door swung all the way open, and daylight came in.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 40,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "The doorway show",
+   "why": "Read one real old postcard like a historian. Then present your six slides to your teacher at the open door."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Then and now",
+   "why": "Turn five mirrors to see how your thinking changed this year. Then flip five real postcards."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions about being a historian-citizen. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Your last entry",
+   "why": "Answer three questions, pack your carry-on, and write your final reflection. Then your teacher steps out."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. I’m standing in the open door!",
+  "hello": "Hi, it’s me, your teacher.",
+  "opening": [
+   {
+    "t": "The door with 13 is wide open, and I’m standing in the doorway. Everyone from the Main Hall is right behind me.",
+    "ifRoute": "hall"
+   },
+   {
+    "t": "The door with 13 is wide open, and I’m standing in the doorway. I came up the Back Stairs first, the way we planned.",
+    "ifRoute": "stairs"
+   },
+   {
+    "t": "The door with 13 is wide open, and I’m standing in the doorway.",
+    "ifRoute": "none"
+   },
+   "Daylight is right outside! But before I step out, I want to see the exhibit you built. Will you present your six slides to me?",
+   "Start in the Learn tab (tab 1). Scroll down to the file card. First, read a real old postcard of a place we know. Then your slide show opens.",
+   {
+    "t": "Ready?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "I’m ready to present",
+      "go": true,
+      "reply": "Great! Answer the postcard questions first. Then tap Present to your teacher. I’ll watch from the doorway."
+     },
+     {
+      "t": "What if I don’t have my slides?",
+      "reply": "No problem. If this computer doesn’t have them, you can build your six slides right on the page. Or open the last lesson on the computer where you made them."
+     },
+     {
+      "t": "Can I record my voice?",
+      "reply": "Yes. Under each slide, tap Record my voice. Your recording stays on this computer. Then Make my video puts your slides and your voice together in one video."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Turn five mirrors to see how your thinking changed this year. Then flip five real postcards."
+     },
+     {
+      "t": "Did you like my show?",
+      "reply": "I loved it. You picked real sources and told me why they matter. That’s what historians do."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions. They aren’t graded."
+     },
+     {
+      "t": "Was the postcard writer wrong?",
+      "reply": "A little. The writer said the stone fort was started around the 1650s, but Spain started it in 1672. Even a real source can get a fact wrong, so historians check."
+     },
+     {
+      "t": "Why is card 5 blank?",
+      "reply": "Card 5 is for your own community. Florida’s story is happening where you live, too."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Thank you!",
+      "reply": "No, thank YOU. I couldn’t have done it alone."
+     },
+     {
+      "t": "Bye!",
+      "end": true,
+      "reply": "Bye for now! Copy or download your work and turn it in on Canvas. Keep exploring Florida."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "That was a wonderful show! I saw every slide from the doorway. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "Every mirror is turned and every postcard is stamped. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Last stop: the Historian’s Notebook tab (tab 4). Answer three questions, pack your carry-on, and write your final reflection. When you finish, I step out."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}I just stepped out of the door with 13. The sun is warm, and I can hear the ocean. I’m out!"
+    },
+    {
+     "t": "Every room came down the Main Hall with me, just like the vote said. We’re all out here together.",
+     "ifRoute": "hall"
+    },
+    {
+     "t": "I went out first, the way we planned, and sent help back. Here come the other rooms now!",
+     "ifRoute": "stairs"
+    },
+    {
+     "t": "And here come the other rooms, right behind me!",
+     "ifRoute": "none"
+    },
+    {
+     "room": "Room 4",
+     "t": "¡Muchas gracias!",
+     "en": "Thank you very much!"
+    },
+    {
+     "room": "Room 8",
+     "t": "Mèsi anpil!",
+     "en": "Thank you very much!"
+    },
+    {
+     "room": "Room 12",
+     "t": "Muito obrigado!",
+     "en": "Thank you very much!"
+    },
+    {
+     "t": "{name,}thank you. You opened all 13 files, one at a time. Scroll down under the cabinet: I left you something there, and a postcard.",
+     "choice": "done"
+    }
+   ]
+  },
+  "videoT": "I watched your video. You can upload it to Canvas too, if your teacher asks for it."
+ },
+ "lens": "Service means using what you know to help others. Today you are a presenter: you show your exhibit and explain why each piece matters. A historian-citizen studies Florida’s past and takes part in Florida today.",
+ "scene1": {
+  "type": "doorshow",
+  "kicker": "The doorway show",
+  "h": "A real postcard, then your exhibit",
+  "voice": "First, read this real postcard like a historian. Answer the questions one at a time.",
+  "why": {
+   "icon": "📮",
+   "q": "Why a postcard?",
+   "t": "A <b>postcard<\/b> is a card with a picture on one side. People bought them on trips and mailed them home. Old postcards are real <b>primary sources<\/b>: they were made at the time, and they show what a place looked like and what people wrote about it. That’s why your teacher starts with one."
+  },
+  "card": {
+   "img": "ff-4-13-02-pc-1.jpg",
+   "alt": "A postcard of Fort Marion in St. Augustine: tall coquina walls, a round stone sentry tower, a tree, and a handwritten message along the bottom",
+   "k": "A real postcard, about 120 years old",
+   "cap": "“Fort Marion, St. Augustine, Fla.” Detroit Publishing Co. postcard no. 5729, about 1901. New York Public Library (public domain).",
+   "doneT": "You read the postcard like a historian. Now your show is open below.",
+   "qs": [
+    {
+     "q": "When was this postcard made?",
+     "opts": [
+      {
+       "t": "About 1901",
+       "ok": true,
+       "reply": "Yes. The publisher’s number, 5729, is from a set of postcards printed in 1901 and 1902."
+      },
+      {
+       "t": "About 1513",
+       "miss": "1513 is when Ponce de León came to Florida. Postcards came much later. Look at the printed card and the handwriting."
+      },
+      {
+       "t": "Last year",
+       "miss": "Look at the old colors and the old-fashioned handwriting. This card is more than 100 years old."
+      }
+     ]
+    },
+    {
+     "q": "The card says Fort Marion. Which fort from File 6 is it?",
+     "opts": [
+      {
+       "t": "The Castillo de San Marcos",
+       "ok": true,
+       "reply": "Right. After Florida became part of the United States, the fort was renamed Fort Marion in 1825. In 1942 it got its Spanish name back."
+      },
+      {
+       "t": "Fort Mose",
+       "miss": "Fort Mose had earth walls, and almost nothing of it stands today. Look at the tall stone walls and the round tower."
+      },
+      {
+       "t": "Fort Caroline",
+       "miss": "Fort Caroline was the French fort from 1564. Look for St. Augustine’s coquina walls and the round sentry tower."
+      }
+     ]
+    },
+    {
+     "q": "Why did the sender write the message on the picture side?",
+     "opts": [
+      {
+       "t": "Before 1907, the back of a postcard was only for the address",
+       "ok": true,
+       "reply": "Yes. In 1907, U.S. postcards got a line down the back: the message on the left, the address on the right."
+      },
+      {
+       "t": "They ran out of room on the back",
+       "miss": "There was a rule about the back of a postcard back then. What was the back only for?"
+      },
+      {
+       "t": "To hide the picture",
+       "miss": "The writing goes around the picture, not over it. Think about a rule for the back of the card."
+      }
+     ]
+    },
+    {
+     "q": "The sender says the stone fort was begun “about the middle of the 17th century,” around the 1650s. Was that exactly right?",
+     "opts": [
+      {
+       "t": "Not exactly: Spain began the stone fort in 1672 and finished the main walls in 1695",
+       "ok": true,
+       "reply": "That’s what a historian does: check a source against other evidence. Even a real source can get a fact a little wrong."
+      },
+      {
+       "t": "Yes, because an old postcard is always right",
+       "miss": "Old doesn’t always mean right. In File 6 you learned when Spain started building the stone fort. Check it."
+      },
+      {
+       "t": "No, the fort was built in 1990",
+       "miss": "The postcard is from about 1901, so the fort was already there. Think back to File 6: the 1600s."
+      }
+     ]
+    }
+   ],
+   "note": {
+    "after": 3,
+    "k": "What the sender wrote along the bottom",
+    "quote": "This structure occupies the site of a wooden fort erected by Menendez. It was begun about the middle of the 17th century, but was not completed until 1756.",
+    "t": "The 17th century means the 1600s, so “the middle” is around the 1650s. Menéndez is Pedro Menéndez, who started St. Augustine in 1565."
+   }
+  },
+  "lockT": "🔒 Answer the postcard questions first. Then your show opens here.",
+  "showK": "The doorway show",
+  "showH": "Present your exhibit to your teacher",
+  "showWhy": {
+   "icon": "🎤",
+   "q": "Why present?",
+   "t": "A <b>presentation<\/b> is a few slides you show people while you explain them. Museum guides do it every day. Your teacher asked to see your exhibit before she steps out, so you show her the six slides you made in the last lesson."
+  },
+  "showVoice": "Tap a slide to look at it. If you like, record your voice for each slide. When all six are ready, tap <b>Present to your teacher<\/b> and go through every slide. Then you can tap <b>Make my video<\/b>.",
+  "studio": {
+   "js": "assets/sparkle/ff-studio.js",
+   "css": "assets/sparkle/ff-studio.css",
+   "lib": "assets/sparkle/lib/pptxgen.bundle.js",
+   "deckT": "My Florida History Exhibit",
+   "deckKicker": "The Florida History Exhibit",
+   "fileName": "My-Florida-History-Exhibit",
+   "authorT": "Florida historian",
+   "words": 40,
+   "minWords": 8,
+   "intro": {
+    "title": "What makes a strong exhibit slide?",
+    "img": "ex1904",
+    "points": [
+     "Each slide shows one real picture from the year and a few sentences in your own words.",
+     "A strong slide names something specific (a person, a place, or a date) and says why it matters.",
+     "You make six slides: Map, Source, Timeline, Person or Event, Civic or Economic, and your Final Claim.",
+     "Your slides fill in your notebook entry. In the next lesson you will present them."
+    ],
+    "good": {
+     "kicker": "🏛️ Civic or Economic",
+     "text": "In 1904, Florida’s government sent no exhibit to the World’s Fair, so citizens built one. This matters because citizens can serve their state too.",
+     "why": "✅ Strong: a real picture, a date, and why it matters."
+    },
+    "bad": {
+     "kicker": "🏛️ Civic or Economic",
+     "text": "Florida has oranges. Florida has pineapples. Florida has a lot of fruit. Fruit is good.",
+     "why": "⚠️ Weak: no picture, and only a list of facts. Why do they matter?"
+    },
+    "noPicT": "no picture",
+    "go": "▶ Start my slides"
+   },
+   "criteria": [
+    {
+     "k": "map",
+     "name": "Map",
+     "short": "Map",
+     "icon": "🗺️",
+     "color": "#1E8C8C",
+     "ask": "Name a Florida map or region, and explain why it matters.",
+     "hint": "The ___ map shows ___. It matters because ___.",
+     "starter": "The map I picked shows ",
+     "notes": [
+      "The 1584 “La Florida” map (File 4): Europeans used maps like it to plan voyages.",
+      "Melish’s 1819 map (File 7): the treaty line that made Florida part of the U.S.",
+      "The 1846 map of the new State of Florida (File 8).",
+      "Florida’s regions: the Panhandle, the peninsula, and the Keys (File 2)."
+     ]
+    },
+    {
+     "k": "source",
+     "name": "Source",
+     "short": "Source",
+     "icon": "📜",
+     "color": "#3E7CB1",
+     "ask": "Name a source from this year and what it taught you.",
+     "hint": "This source is ___. It taught me ___.",
+     "starter": "One source that taught me something is ",
+     "notes": [
+      "The 1956 photo of Rev. Steele and Rev. Harris on a Tallahassee bus (File 11).",
+      "Lewis Hine’s 1909 photo of a reader in a Tampa cigar factory (File 10).",
+      "Page 1 of Florida’s 1838 constitution (File 12).",
+      "The 1861 New York Herald front page (File 8)."
+     ]
+    },
+    {
+     "k": "time",
+     "name": "Timeline",
+     "short": "Timeline",
+     "icon": "📅",
+     "color": "#C8922E",
+     "ask": "Name one key date or event and explain where it fits in Florida’s story.",
+     "hint": "In ___, ___. It came after ___ and led to ___.",
+     "starter": "In ",
+     "notes": [
+      "1513: Ponce de León names La Florida.",
+      "1565: St. Augustine is founded.",
+      "1738: Fort Mose, a free Black town, is built.",
+      "1821: Florida becomes part of the United States.",
+      "1845: Florida becomes the 27th state.",
+      "1969: Apollo 11 lifts off from Florida."
+     ]
+    },
+    {
+     "k": "person",
+     "name": "Person or Event",
+     "short": "Person",
+     "icon": "👤",
+     "color": "#A3312B",
+     "ask": "Name one person or event every Floridian should know about, and say why.",
+     "hint": "Every Floridian should know about ___ because ___.",
+     "starter": "Every Floridian should know about ",
+     "notes": [
+      "Mary McLeod Bethune started a school in Daytona in 1904 (File 10).",
+      "Josiah T. Walls, Florida’s first Black member of Congress (File 8).",
+      "Harry T. Moore worked for Black Floridians’ right to vote (File 11).",
+      "The Tallahassee bus boycott, 1956 (File 11)."
+     ]
+    },
+    {
+     "k": "civic",
+     "name": "Civic or Economic",
+     "short": "Civic",
+     "icon": "🏛️",
+     "color": "#2E8B57",
+     "ask": "Explain one way Florida’s government, economy, or money choices connect to Florida’s story.",
+     "hint": "Florida’s ___ connects to the story because ___.",
+     "starter": "One way government or money connects to Florida’s story is ",
+     "notes": [
+      "Florida’s government has three branches: lawmakers, the governor, and the courts (File 12).",
+      "Citizens can vote, serve, and volunteer (File 11).",
+      "Tourism, farming, and space bring jobs to Florida (File 10).",
+      "Saving and wise spending help families and communities (File 12)."
+     ]
+    },
+    {
+     "k": "claim",
+     "title": true,
+     "name": "My Final Claim",
+     "short": "Claim",
+     "icon": "⭐",
+     "color": "#14213D",
+     "ask": "Write one sentence that captures what you learned about Florida this year.",
+     "hint": "Florida’s story is ___ because ___.",
+     "starter": "Florida’s story is ",
+     "checks": [
+      "words",
+      "pic",
+      "because"
+     ],
+     "notes": [
+      "Start with “Florida’s story is…”",
+      "Then give a reason with “because…”, using something from your other slides.",
+      "Pick the picture that best shows your claim."
+     ]
+    }
+   ],
+   "rx": {
+    "spec": "\\d|[a-z,]\\s+[A-Z][a-z]|\\b(st\\.? augustine|tallahassee|tampa|miami|key west|jacksonville|pensacola|daytona|everglades|calusa|timucua|apalachee|seminole|tequesta|fort mose|castillo|nasa|apollo|bethune|walls|moore|steele|ponce|de soto|narv[aá]ez|flagler|ybor|hine|constitution|panhandle|peninsula|keys)\\b",
+    "why": "because|\\bso\\b|that’s why|that's why|\\bshows?\\b|matters?|important|helped|helps|changed|led to|caused|taught|teaches|proves?|\\bmeans?\\b|\\bwhy\\b|without|brought|gave|started|made",
+    "because": "because|since|\\bso\\b"
+   },
+   "checkT": {
+    "pic": "A real picture",
+    "spec": "A name, place, or date",
+    "why": "Says why it matters",
+    "because": "Has a “because”"
+   },
+   "nudgeT": {
+    "spec": "Add something specific: a name, a place, or a date from the lessons.",
+    "why": "Tell visitors why it matters. Try “This matters because…”",
+    "because": "Add “because…” and a reason."
+   },
+   "bank": [
+    {
+     "id": "ex1904",
+     "file": "ff-4-13-01-florida-exhibit-1904.jpg",
+     "thumbFile": "ff-4-13-01-th-ex1904.jpg",
+     "short": "1904 exhibit",
+     "cap": "Florida exhibit made by citizens, World's Fair, 1904 · Missouri Historical Society",
+     "tags": [
+      "civic",
+      "source"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "fl1584",
+     "file": "source-4-04-01-la-florida-map-1584-original.jpg",
+     "thumbFile": "ff-4-13-01-th-fl1584.jpg",
+     "short": "Map, 1584",
+     "cap": "“La Florida” map, 1584 · Library of Congress",
+     "tags": [
+      "map",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "atlas",
+     "file": "source-4-02-01-florida-physical-map.png",
+     "thumbFile": "ff-4-13-01-th-atlas.jpg",
+     "short": "Florida map",
+     "cap": "Map of Florida, National Atlas · U.S. government",
+     "tags": [
+      "map"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "lemoyne",
+     "file": "source-4-06-01-early-florida-map-original.jpg",
+     "thumbFile": "ff-4-13-01-th-lemoyne.jpg",
+     "short": "Map, 1591",
+     "cap": "Le Moyne’s map of Florida, printed 1591 · Library of Congress",
+     "tags": [
+      "map"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "boazio",
+     "file": "source-4-06-02-st-augustine-engraving-original.png",
+     "thumbFile": "ff-4-13-01-th-boazio.jpg",
+     "short": "St. Augustine, 1589",
+     "cap": "Boazio’s map of the 1586 attack on St. Augustine, printed 1589 · Library of Congress",
+     "tags": [
+      "map",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "lopez",
+     "file": "source-4-06-08-st-augustine-map-1783-original.jpg",
+     "thumbFile": "ff-4-13-01-th-lopez.jpg",
+     "short": "St. Augustine, 1783",
+     "cap": "Tomás López’s map of St. Augustine, 1783 · State Archives of Florida",
+     "tags": [
+      "map"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "mose",
+     "file": "source-4-07-01-fort-mose-plan-original.jpg",
+     "thumbFile": "ff-4-13-01-th-mose.jpg",
+     "short": "Fort Mose, 1760s",
+     "cap": "Plan of Fort Mose, drawn in the 1760s by Samuel Roworth · Library of Congress",
+     "tags": [
+      "map",
+      "person",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "gibson",
+     "file": "source-4-07-02-east-west-florida-1763-original.jpg",
+     "thumbFile": "ff-4-13-01-th-gibson.jpg",
+     "short": "Two Floridas, 1763",
+     "cap": "East and West Florida, engraved by John Gibson, 1763 · Library of Congress",
+     "tags": [
+      "map",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "melish",
+     "file": "source-4-07-03-melish-map-1819-original.jpg",
+     "thumbFile": "ff-4-13-01-th-melish.jpg",
+     "short": "Treaty map, 1819",
+     "cap": "John Melish’s map of the United States, 1819 · Library of Congress",
+     "tags": [
+      "map",
+      "time",
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "st1846",
+     "file": "source-4-08-01-state-of-florida-1846-original.jpg",
+     "thumbFile": "ff-4-13-01-th-st1846.jpg",
+     "short": "State map, 1846",
+     "cap": "Map of the new State of Florida, 1846 · Library of Congress",
+     "tags": [
+      "map",
+      "time",
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "debry",
+     "file": "source-4-03-02-timucua-village.jpg",
+     "thumbFile": "ff-4-13-01-th-debry.jpg",
+     "short": "Timucua town",
+     "cap": "A Timucua town, engraved by Theodor de Bry, 1591",
+     "tags": [
+      "person",
+      "source"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "castillo",
+     "file": "source-4-06-05-castillo-seawall-original.jpg",
+     "thumbFile": "ff-4-13-01-th-castillo.jpg",
+     "short": "Castillo walls",
+     "cap": "The Castillo de San Marcos, St. Augustine · National Park Service",
+     "tags": [
+      "source",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "council",
+     "file": "source-4-06-03-apalachee-council-house-original.jpg",
+     "thumbFile": "ff-4-13-01-th-council.jpg",
+     "short": "Council House",
+     "cap": "The Apalachee Council House, rebuilt at Mission San Luis · photo by Roy Lett, 2007",
+     "tags": [
+      "source",
+      "person"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "barker",
+     "file": "source-4-07-04-barker-pioneer-home-1891-original.jpg",
+     "thumbFile": "ff-4-13-01-th-barker.jpg",
+     "short": "Pioneer home, 1891",
+     "cap": "A pioneer home in South Florida, photo by George Barker, 1891",
+     "tags": [
+      "source",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "herald",
+     "file": "ff-4-08-03-herald-page-original.jpg",
+     "thumbFile": "ff-4-13-01-th-herald.jpg",
+     "short": "Newspaper, 1861",
+     "cap": "The New York Herald front page, January 13, 1861 · Library of Congress",
+     "tags": [
+      "source",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "olustee",
+     "file": "source-4-08-03-olustee-1894-original.jpg",
+     "thumbFile": "ff-4-13-01-th-olustee.jpg",
+     "short": "Olustee print",
+     "cap": "“Battle of Olustee, Fla.” print by Kurz & Allison, 1894 · State Archives of Florida",
+     "tags": [
+      "time",
+      "source"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "walls",
+     "file": "source-4-08-04-black-lawmakers-1872-original.jpg",
+     "thumbFile": "ff-4-13-01-th-walls.jpg",
+     "short": "Lawmakers, 1872",
+     "cap": "The first Black senator and representatives, Currier & Ives, 1872 · Library of Congress",
+     "tags": [
+      "person",
+      "civic",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "railroad",
+     "file": "source-4-10-01-florida-railroad-original.jpg",
+     "thumbFile": "ff-4-13-01-th-railroad.jpg",
+     "short": "Key West, 1912",
+     "cap": "Key West the day the first train arrived, January 22, 1912",
+     "tags": [
+      "time",
+      "civic",
+      "source"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "apollo",
+     "file": "source-4-10-02-apollo-11-launch-1969-original.jpg",
+     "thumbFile": "ff-4-13-01-th-apollo.jpg",
+     "short": "Apollo 11, 1969",
+     "cap": "Apollo 11 lifts off from Florida, July 16, 1969 · NASA",
+     "tags": [
+      "time",
+      "source",
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "hine",
+     "file": "source-4-10-03-hine-cigar-factory-reader-1909-original.jpg",
+     "thumbFile": "ff-4-13-01-th-hine.jpg",
+     "short": "Cigar factory, 1909",
+     "cap": "A reader in a Tampa cigar factory, photo by Lewis Hine, 1909 · Library of Congress",
+     "tags": [
+      "person",
+      "source",
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "bethune",
+     "file": "source-4-10-04-bethune-line-of-girls-1905-original.jpg",
+     "thumbFile": "ff-4-13-01-th-bethune.jpg",
+     "short": "Bethune, 1905",
+     "cap": "Mary McLeod Bethune and her students, Daytona, 1905 · State Archives of Florida",
+     "tags": [
+      "person",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "troops",
+     "file": "source-4-10-05-transports-tampa-bay-1898-original.jpg",
+     "thumbFile": "ff-4-13-01-th-troops.jpg",
+     "short": "Tampa Bay, 1898",
+     "cap": "Troop ships in Tampa Bay, about 1898 · U.S. National Archives",
+     "tags": [
+      "time",
+      "source"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "billboard",
+     "file": "source-4-10-06-altos-del-mar-billboard-1922-original.jpg",
+     "thumbFile": "ff-4-13-01-th-billboard.jpg",
+     "short": "Land boom, 1922",
+     "cap": "A land-sale billboard on the beach near Miami, 1922 · State Archives of Florida",
+     "tags": [
+      "civic",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "ccc",
+     "file": "source-4-10-07-oleno-mess-hall-1935-original.jpg",
+     "thumbFile": "ff-4-13-01-th-ccc.jpg",
+     "short": "CCC workers, 1935",
+     "cap": "CCC workers build a dining hall at O’Leno, 1935 · State Archives of Florida",
+     "tags": [
+      "civic",
+      "person",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "bus",
+     "file": "source-4-11-01-steele-harris-bus-1956-original.jpg",
+     "thumbFile": "ff-4-13-01-th-bus.jpg",
+     "short": "Bus, 1956",
+     "cap": "Rev. Steele and Rev. Harris on a Tallahassee bus, December 24, 1956 · State Archives of Florida",
+     "tags": [
+      "person",
+      "time",
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "voters",
+     "file": "source-4-11-05-citizens-1957-and-2005-original.jpg",
+     "thumbFile": "ff-4-13-01-th-voters.jpg",
+     "short": "Citizens",
+     "cap": "Signing up to vote in Tallahassee, 1957, and a volunteer, 2005",
+     "tags": [
+      "civic",
+      "person"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "townhall",
+     "file": "source-4-11-04-port-charlotte-town-hall-2005-original.jpg",
+     "thumbFile": "ff-4-13-01-th-townhall.jpg",
+     "short": "Town hall, 2005",
+     "cap": "A town hall meeting in Port Charlotte, 2005 · FEMA",
+     "tags": [
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "const",
+     "file": "source-4-12-01-florida-constitution-1838-original.jpg",
+     "thumbFile": "ff-4-13-01-th-const.jpg",
+     "short": "Constitution, 1838",
+     "cap": "Page 1 of Florida’s first constitution, 1838 · State Archives of Florida",
+     "tags": [
+      "civic",
+      "source",
+      "time"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "branches",
+     "file": "source-4-12-02-three-branches-original.jpg",
+     "thumbFile": "ff-4-13-01-th-branches.jpg",
+     "short": "Three branches",
+     "cap": "Florida’s three branches at work in Tallahassee · State Archives of Florida and others",
+     "tags": [
+      "civic"
+     ],
+     "lic": "free to use"
+    },
+    {
+     "id": "stamps",
+     "file": "source-4-12-04-stamps-1942-and-card-bill-original.jpg",
+     "thumbFile": "ff-4-13-01-th-stamps.jpg",
+     "short": "Savings, 1942",
+     "cap": "Children buy savings stamps, 1942, and a sample credit card bill",
+     "tags": [
+      "civic",
+      "source"
+     ],
+     "lic": "free to use"
+    }
+   ],
+   "bankT": "Pick a real picture from the year (all free to use), or upload your own.",
+   "moreT": "More from the year",
+   "upWarnT": "Your own picture stays on this computer. Make sure it is a real picture you are allowed to use.",
+   "notesLead": "📒 Ideas from the year",
+   "notesTip": "Use one of these, or your own idea from any file. Write it in your own words.",
+   "readyT": "slides ready",
+   "overT": "Too many! Cut {n} words. Visitors read fast.",
+   "underT": "Write at least {n}.",
+   "keepT": "Your words and pictures also save in this browser.",
+   "dlT": "Download my slides (.pptx)",
+   "dlToastT": "Downloaded! The file is in your Downloads folder. Keep it for the next lesson.",
+   "steps": [
+    "See an example",
+    "Build 6 slides",
+    "Back to your show"
+   ],
+   "allT": "All six slides are ready! Tap “Done: back to my show” to present them.",
+   "dlDoneT": "Downloaded. Keep the file for your records.",
+   "teacher": [],
+   "presentT": "Present to your teacher",
+   "videoT": "Make my video",
+   "editT": "Edit my slides",
+   "backT": "Done: back to my show",
+   "noneH": "Your slides aren’t on this computer.",
+   "noneT": "Your six slides from the last lesson are saved in the browser where you made them. You can build all six right here, with the same pictures and the same checks. It takes a few minutes.",
+   "buildT": "Build my six slides here",
+   "backLink": "ss-4-13-01-build-the-florida-history-exhibit.html",
+   "backLinkT": "Made them on another computer?",
+   "backLinkA": "Open the last lesson (4.13.01) there",
+   "fixT": "{n} of 6 slides are ready. Fix the others before you present: tap Edit my slides.",
+   "shownT": "You presented your exhibit to your teacher.",
+   "showFootT": "Your slides and words save in this browser. Your voice stays only until you close the page, so make your video before you leave.",
+   "recCountT": "{n} of 6 slides have your voice.",
+   "myVoiceT": "My voice",
+   "timeT": "Time! Did you show all 6 slides?",
+   "minutes": 3,
+   "recT": "Your voice for this slide (optional)",
+   "recGoT": "Record my voice for this slide",
+   "recNoteT": "Talk for up to {n} seconds about this slide. Your voice is not saved anywhere, so make your video before you close this page.",
+   "maxRecord": 45,
+   "micT": "The microphone is blocked here. You can still present your slides and talk out loud.",
+   "noVideoT": "This browser can’t make videos. Present your slides instead, or download them.",
+   "makingVidT": "Making your video…",
+   "readyingT": "Getting ready…",
+   "keepOpenT": "Keep this page open. Your video is made on this computer and isn’t uploaded anywhere.",
+   "cancelT": "Cancel",
+   "withVoiceT": "with your voice",
+   "videoDoneT": "🎬 Your video is in your Downloads. If your teacher asks for it, upload it to Canvas too.",
+   "byT": "by"
+  },
+  "react": {
+   "map": "“{pick}”: that map takes me right back. Good choice.",
+   "source": "“{pick}.” A real source! A museum registrar would accept that one.",
+   "time": "“{pick}.” Now I can see right where that goes on our timeline.",
+   "person": "“{pick}.” I’m glad you picked that. Every Floridian should know it.",
+   "civic": "“{pick}.” That’s how Florida citizens keep things working.",
+   "claim": "“{pick}.” That’s your claim, and you backed it up. I’m so proud of you.",
+   "*": "I’m watching from the doorway. Keep going!",
+   "empty": "I’m watching from the doorway. Keep going!"
+  },
+  "win": "<b>Show complete!<\/b> Your teacher saw every slide from the doorway.",
+  "journalShowT": "The doorway show:",
+  "journalShownT": "I presented my six slides to my teacher."
+ },
+ "explore": {
+  "reading": {
+   "type": "mirror",
+   "activity": "Journey Through Florida",
+   "why": {
+    "icon": "🪞",
+    "q": "Why mirrors?",
+    "t": "When you <b>reflect<\/b>, you think back carefully about what you learned, the way a mirror sends light back. Each mirror shows something many people think at the start of the year. Pick what you know now, and the mirror turns over."
+   },
+   "thenK": "At the start of the year",
+   "nowK": "Now I know",
+   "askT": "What do you know now?",
+   "countT": "mirrors turned. Each one opens its part of the reading.",
+   "allT": "Every mirror is turned. Look how far you came!",
+   "paras": [
+    {
+     "id": "p0",
+     "match": "^You started this course"
+    },
+    {
+     "id": "p1",
+     "match": "^What you.ve learned"
+    },
+    {
+     "id": "p2",
+     "match": "^What you.ve done"
+    },
+    {
+     "id": "p3",
+     "match": "^What comes next"
+    },
+    {
+     "id": "p4",
+     "match": "^One last thing"
+    }
+   ],
+   "parts": [
+    {
+     "id": "who",
+     "t": "Who you are now",
+     "paras": [
+      "p0"
+     ],
+     "then": "History is just a list of dates to memorize.",
+     "opts": [
+      {
+       "t": "History is a story I can check, using sources, maps, and good questions.",
+       "ok": true
+      },
+      {
+       "t": "History is whatever one book says.",
+       "miss": "A book is one source. A historian checks more than one source and asks questions."
+      },
+      {
+       "t": "History is only about kings and queens.",
+       "miss": "This year we met farmers, freedom-seekers, students, and voters too. Think about who you studied."
+      }
+     ],
+     "now": "History is a story I can check, using sources, maps, and good questions."
+    },
+    {
+     "id": "learned",
+     "t": "What you learned",
+     "paras": [
+      "p1"
+     ],
+     "then": "Florida’s story started when the Spanish came in 1513.",
+     "opts": [
+      {
+       "t": "People lived in Florida for thousands of years before 1513: the Apalachee, Timucua, Calusa, Tequesta, and more.",
+       "ok": true
+      },
+      {
+       "t": "Florida’s story started when it became a state in 1845.",
+       "miss": "1845 is when Florida became a state. Think back to File 3: who lived here first?"
+      },
+      {
+       "t": "Nobody lived in Florida until the 1900s.",
+       "miss": "Think back to File 3. Native peoples lived all over Florida long before Europeans came."
+      }
+     ],
+     "now": "People lived in Florida for thousands of years before 1513."
+    },
+    {
+     "id": "did",
+     "t": "What you did",
+     "paras": [
+      "p2"
+     ],
+     "then": "Any old picture can prove what happened.",
+     "opts": [
+      {
+       "t": "A picture is evidence only if we can trace it: who made it, when, and where it is kept today.",
+       "ok": true
+      },
+      {
+       "t": "If a picture looks old, it must be real.",
+       "miss": "In the last lesson, the museum registrar turned away a picture with no record. What three questions did the registrar ask?"
+      },
+      {
+       "t": "Pictures are never evidence.",
+       "miss": "Photos, maps, and drawings can be great evidence. What do we need to know about a picture first?"
+      }
+     ],
+     "now": "A picture is evidence only if we can trace who made it, when, and where it is kept."
+    },
+    {
+     "id": "next",
+     "t": "What comes next",
+     "paras": [
+      "p3"
+     ],
+     "then": "Being a citizen is a grown-up job. A kid can’t help the community yet.",
+     "opts": [
+      {
+       "t": "Kids can be good citizens now: help a neighbor, pick up litter, or vote in a school election.",
+       "ok": true
+      },
+      {
+       "t": "You have to be 18 before you can help your community.",
+       "miss": "That’s a common mix-up! Voting for leaders waits until 18, but helping your community doesn’t. What could you do this week?"
+      },
+      {
+       "t": "Only the mayor and the governor serve Florida.",
+       "miss": "Leaders serve, but so do volunteers, neighbors, and students. Think back to File 11."
+      }
+     ],
+     "now": "Kids can be good citizens right now."
+    },
+    {
+     "id": "last",
+     "t": "One last thing",
+     "paras": [
+      "p4"
+     ],
+     "then": "The door would open by itself if we just waited long enough.",
+     "opts": [
+      {
+       "t": "It opened because we did the work, one file at a time.",
+       "ok": true
+      },
+      {
+       "t": "Canvas opened it by accident.",
+       "miss": "Think about the rulebook, the three locks, and the exhibit. Who did all that work?"
+      },
+      {
+       "t": "Someone else opened it for us.",
+       "miss": "Who unlocked every file this year? Look at your cabinet."
+      }
+     ],
+     "now": "It opened because we did the work, one file at a time."
+    }
+   ]
+  },
+  "evidence": {
+   "type": "flipcards",
+   "kicker": "Flip the postcard",
+   "h": "Five real places, five Florida Files",
+   "voice": "Pick up a postcard and flip it over. On the back, answer the question, and the postmark stamps the card.",
+   "why": {
+    "icon": "📬",
+    "q": "Why flip them?",
+    "t": "The back of a postcard has room for a message, an address, and a stamp. The post office stamps a <b>postmark<\/b> on it to show where and when it was mailed. On these backs, the postmark shows which Florida File the place belongs to."
+   },
+   "hotT": "First, tap every gold number on the postcards above.",
+   "flipT": "↻ Flip it over",
+   "frontT": "↻ Turn it back to the picture",
+   "startT": "👆 Tap a postcard to pick it up.",
+   "countT": "postcards stamped.",
+   "allT": "Every postcard is stamped.",
+   "readT": "Last step: finish Learn the Story at the top of this tab.",
+   "townJT": "My community:",
+   "cards": [
+    {
+     "img": "ff-4-13-02-pc-1.jpg",
+     "alt": "Postcard of Fort Marion, St. Augustine, about 1901",
+     "place": "St. Augustine",
+     "front": "Fort Marion, St. Augustine, Fla. · about 1901",
+     "q": "Which Florida File did you study this fort in?",
+     "stamp": "FILE 6",
+     "opts": [
+      {
+       "t": "File 6 · Spanish Florida",
+       "ok": true
+      },
+      {
+       "t": "File 12 · Government",
+       "miss": "Government is about Tallahassee and the Capitol. Who built this stone fort, and in which file did we study them?"
+      },
+      {
+       "t": "File 2 · The Map Room",
+       "miss": "File 2 was about land and water. Who built this fort, and when?"
+      }
+     ],
+     "fact": "You studied the Castillo de San Marcos in File 6, Spanish Florida. Spain built it from coquina between 1672 and 1695."
+    },
+    {
+     "img": "ff-4-13-02-pc-2.jpg",
+     "alt": "Postcard of a straight drainage canal cutting through the Everglades near Miami, early 1900s",
+     "place": "The Everglades",
+     "front": "Drainage Canal and Everglades, Miami, Fla. · early 1900s",
+     "q": "This card shows a canal draining water out of the Everglades, as if that were good news. In File 10 you met someone who spent her life protecting the Everglades. Who?",
+     "stamp": "FILE 10",
+     "opts": [
+      {
+       "t": "Marjory Stoneman Douglas",
+       "ok": true
+      },
+      {
+       "t": "Mary McLeod Bethune",
+       "miss": "Bethune started a school in Daytona Beach. Who wrote The Everglades: River of Grass?"
+      },
+      {
+       "t": "Zora Neale Hurston",
+       "miss": "Hurston was a writer from Eatonville. Who fought to protect the Everglades?"
+      }
+     ],
+     "fact": "In 1947, Marjory Stoneman Douglas wrote The Everglades: River of Grass, and it helped people see the Everglades as worth saving. Everglades National Park opened that same year."
+    },
+    {
+     "img": "ff-4-13-02-pc-3.jpg",
+     "alt": "1942 large-letter postcard: Greetings from the Capital City, Tallahassee, Fla., with the domed Capitol",
+     "place": "Tallahassee",
+     "front": "Greetings from the Capital City, Tallahassee, Fla. · 1942",
+     "q": "Why does a Tallahassee postcard belong in a Florida history exhibit?",
+     "stamp": "FILE 12",
+     "opts": [
+      {
+       "t": "Tallahassee is Florida’s capital, where the state government works",
+       "ok": true
+      },
+      {
+       "t": "Tallahassee is Florida’s biggest city",
+       "miss": "Jacksonville has the most people. What does Tallahassee do for the whole state?"
+      },
+      {
+       "t": "Tallahassee is Florida’s oldest city",
+       "miss": "That’s St. Augustine, on card 1. What happens in Tallahassee’s domed building?"
+      }
+     ],
+     "fact": "Tallahassee became Florida’s capital in 1824. You studied how the state government works there in File 12. The domed building on the card is the Capitol; today it is a museum called the Old Capitol."
+    },
+    {
+     "img": "ff-4-13-02-pc-4.jpg",
+     "alt": "NASA photo of the orange and white Artemis I rocket lifting off at night from Kennedy Space Center, 2022",
+     "place": "Kennedy Space Center",
+     "front": "NASA photo · Artemis I launch · November 16, 2022",
+     "q": "This one is a NASA photo, not a postcard. Which file showed you Florida’s space program?",
+     "stamp": "FILE 10",
+     "opts": [
+      {
+       "t": "File 10 · Modern Florida",
+       "ok": true
+      },
+      {
+       "t": "File 4 · Explorers",
+       "miss": "File 4 was about ships and explorers in the 1500s. When did Florida’s rockets start flying?"
+      },
+      {
+       "t": "File 7 · Fort Mose & Pioneers",
+       "miss": "Pioneers came in wagons in the 1800s. Which file had the Apollo 11 launch?"
+      }
+     ],
+     "fact": "In File 10 you saw Apollo 11 launch from this space center in 1969. In 2022, Artemis I flew around the Moon and back, with no people on board, as a test for future trips."
+    },
+    {
+     "img": "ff-4-13-02-pc-5.jpg",
+     "alt": "A blank postcard made for this lesson, for your own community",
+     "place": "My Florida community",
+     "front": "Card 5 · yours to fill",
+     "town": {
+      "label": "Your town or city (optional, stays on this computer)",
+      "ph": "My town"
+     },
+     "q": "Which of these can a 4th grader do for their community right now?",
+     "stamp": "FILE 11",
+     "opts": [
+      {
+       "t": "Pick up litter at a park or help with a food drive",
+       "ok": true
+      },
+      {
+       "t": "Nothing, until you turn 18",
+       "miss": "That’s the mix-up! Voting for leaders waits until 18, but helping your community doesn’t."
+      },
+      {
+       "t": "Only the mayor can help a community",
+       "miss": "The mayor helps, but so do neighbors, volunteers, and kids. Think back to File 11."
+      }
+     ],
+     "fact": "Florida’s story keeps going where you live. In File 11 you met citizens who served their communities, and you can start now."
+    }
+   ],
+   "win": "<b>All five postcards are stamped.<\/b> Four real places, and one that is yours."
+  }
+ },
+ "source": {
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 2.0,
+    "y": 11.7,
+    "title": "St. Augustine",
+    "t": "A real postcard of Fort Marion, about 1901. Fort Marion was the U.S. name for the Castillo de San Marcos from 1825 to 1942. The sender wrote a message on the front."
+   },
+   {
+    "n": "2",
+    "x": 34.2,
+    "y": 11.6,
+    "title": "The Everglades",
+    "t": "A real postcard from the early 1900s: a canal dug to drain water out of the Everglades near Miami."
+   },
+   {
+    "n": "3",
+    "x": 66.4,
+    "y": 11.9,
+    "title": "Tallahassee",
+    "t": "A real postcard from 1942: “Greetings from the Capital City.” The domed building is the Capitol, today called the Old Capitol."
+   },
+   {
+    "n": "4",
+    "x": 18.1,
+    "y": 52.9,
+    "title": "Kennedy Space Center",
+    "t": "A real NASA photo, not a postcard: the Artemis I rocket launching on November 16, 2022."
+   },
+   {
+    "n": "5",
+    "x": 51.4,
+    "y": 53.6,
+    "title": "My Florida community",
+    "t": "A blank card made for this lesson. It stands for the place where you live."
+   }
+  ],
+  "prompt": "Tap each gold number to see what each card is.",
+  "allT": "Now pick up a postcard below and flip it over."
+ },
+ "planner": {
+  "type": "carryon",
+  "voice": "Pack your carry-on before you write. Put at least two cards in What I learned, and one each in How I grew and What I’ll carry.",
+  "why": {
+   "icon": "🧳",
+   "q": "Why a carry-on?",
+   "t": "A <b>carry-on<\/b> is the small bag you keep with you on a trip, so you only pack what matters most. Your final reflection is the same: you can’t write everything, so you pick what matters. That’s why you pack before you write."
+  },
+  "pockets": [
+   {
+    "k": "learned",
+    "t": "What I learned",
+    "ico": "📚",
+    "need": 2
+   },
+   {
+    "k": "grew",
+    "t": "How I grew",
+    "ico": "🌱",
+    "need": 1
+   },
+   {
+    "k": "carry",
+    "t": "What I’ll carry",
+    "ico": "🧭",
+    "need": 1
+   }
+  ],
+  "sentT": "From File {n}: “{s}”",
+  "sentOk": [
+   "learned",
+   "carry"
+  ],
+  "mineT": "Your own words",
+  "maxSent": 4,
+  "cards": [
+   {
+    "t": "Spain started St. Augustine in 1565. It is the oldest permanent European settlement in the United States.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "Fort Mose, started in 1738, was a free Black town that Spanish law allowed.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "Florida became the 27th state in 1845.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "Mary McLeod Bethune started a school in Daytona Beach in 1904 with $1.50.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "In 1956, people in Tallahassee stopped riding the city buses to protest unfair rules.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "Florida’s government has three branches: one makes laws, one carries them out, and one decides what they mean.",
+    "ok": [
+     "learned"
+    ],
+    "miss": "That’s a fact you learned. Which pocket holds facts?"
+   },
+   {
+    "t": "I can tell a primary source from a secondary source.",
+    "ok": [
+     "grew"
+    ],
+    "miss": "That’s a skill you built this year. Which pocket is about how you grew?"
+   },
+   {
+    "t": "I check a source by asking who made it, when, and where it is kept.",
+    "ok": [
+     "grew"
+    ],
+    "miss": "That’s a skill you built this year. Which pocket is about how you grew?"
+   },
+   {
+    "t": "I look at more than one point of view before I decide.",
+    "ok": [
+     "grew",
+     "carry"
+    ],
+    "miss": "That’s a skill. Which pocket is about how you grew?"
+   },
+   {
+    "t": "I can back up a claim with evidence and a “because.”",
+    "ok": [
+     "grew"
+    ],
+    "miss": "That’s a skill you built this year. Which pocket is about how you grew?"
+   },
+   {
+    "t": "I will read historical markers when I visit new places.",
+    "ok": [
+     "carry"
+    ],
+    "miss": "That’s something you will do. Which pocket is about what you’ll carry with you?"
+   },
+   {
+    "t": "I will vote in school elections now, and in real elections when I’m 18.",
+    "ok": [
+     "carry"
+    ],
+    "miss": "That’s something you will do. Which pocket is about what you’ll carry with you?"
+   },
+   {
+    "t": "I will save money for things that matter to me.",
+    "ok": [
+     "carry"
+    ],
+    "miss": "That’s something you will do. Which pocket is about what you’ll carry with you?"
+   },
+   {
+    "t": "I will help my community by volunteering.",
+    "ok": [
+     "carry"
+    ],
+    "miss": "That’s something you will do. Which pocket is about what you’ll carry with you?"
+   }
+  ],
+  "weak": [
+   {
+    "t": "I learned stuff.",
+    "miss": "Too general for a carry-on. Name a person, a place, or a date instead."
+   },
+   {
+    "t": "History is boring.",
+    "miss": "That one won’t help your reflection. What surprised you this year?"
+   },
+   {
+    "t": "Nothing changed.",
+    "miss": "Think back: could you read an old map in File 1? What can you do now that you couldn’t then?"
+   }
+  ],
+  "tipT": "👆 Tap a card, then tap the pocket where it fits. Or drag it. Tap a card in a pocket to take it back out.",
+  "needT": "Fill every pocket to zip the bag: 2 in What I learned, 1 in How I grew, 1 in What I’ll carry.",
+  "zipT": "🧳 Zip it shut",
+  "pickFirstT": "First tap a card.",
+  "win": "<b>Packed!<\/b> Now write your reflection in your own words. Use what’s in your bag."
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions about your year: what you learned, how you changed, and what you’ll carry."
+  },
+  {
+   "t": "Pack your carry-on",
+   "w": "Pick what matters most for your reflection."
+  },
+  {
+   "t": "Write",
+   "w": "Your final reflection in your own words, then your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Final Florida Historian-Citizen Reflection"
+ },
+ "lockline": "Your teacher steps out when you finish your reflection and check off the whole list. The Florida Files cabinet shows up here then.",
+ "vocab": {
+  "type": "sunbeam",
+  "root": "flect",
+  "hl": "flect|flex",
+  "kicker": "Bend the sunbeam",
+  "h": "Turn the mirrors so the daylight reaches the door",
+  "voice": "Tap each word to hear it. Then match each meaning to its word. Every match turns one mirror.",
+  "why": {
+   "icon": "🪞",
+   "q": "Why mirrors and light?",
+   "t": "<b>Flect<\/b> and <b>flex<\/b> mean “bend.” A mirror bends light back, and that’s why we say we <b>reflect<\/b> when we think back. Turn each mirror to bend the daylight down the hall."
+  },
+  "words": [
+   {
+    "w": "reflect",
+    "m": "to bend light back, like a mirror; to think back carefully",
+    "miss": "Re- means “back.” Which meaning bends something back?"
+   },
+   {
+    "w": "reflection",
+    "m": "the picture you see in a mirror; careful thinking about what you learned",
+    "miss": "-ion makes a thing. What do you see in a mirror?"
+   },
+   {
+    "w": "flexible",
+    "m": "able to bend easily; able to change when you need to",
+    "miss": "-ible means “able to.” Able to do what?"
+   },
+   {
+    "w": "deflect",
+    "m": "to bend something away so it goes another way",
+    "miss": "De- means “away.” Which meaning bends something away?"
+   }
+  ],
+  "win": "The light reached the door! ☀️"
+ },
+ "cabinet": {
+  "n": 13,
+  "where": "The whole state, from St. Augustine to Kennedy Space Center"
+ },
+ "closing": {
+  "seals": true,
+  "postcard": true,
+  "voiceSlot": "guide6",
+  "k": "Course complete · all 13 Florida Files",
+  "h": "{name,}thank you. I’m out!",
+  "t": [
+   "You opened every file, one at a time: the land and water, the first peoples, the explorers, Spanish Florida, Fort Mose, statehood, war and rebuilding, modern Florida, civil rights, citizens, and government. That’s 13 files and two checkpoints of looking back.",
+   "You are a Florida historian-citizen now. Keep reading historical markers, keep asking good questions, and keep helping your community. Florida’s story keeps going, and you are part of it."
+  ],
+  "fileT": "File",
+  "doorT": "Checkpoint",
+  "yoursT": "(your Historian’s Sentence)",
+  "sealTipT": "👆 Tap a seal to look back at that file. A gold ring means this computer kept your Historian’s Sentence from it."
+ },
+ "notes": {
+  "learned": [
+   "A Florida historian-citizen studies Florida’s past and takes part in Florida today.",
+   "An old postcard is a real primary source, and even a real source can get a fact wrong, so historians check.",
+   "Fort Marion was the U.S. name for the Castillo de San Marcos from 1825 to 1942.",
+   "Before 1907, the back of a U.S. postcard was only for the address.",
+   "A picture is evidence only if we can trace who made it, when, and where it is kept.",
+   "Kids can be good citizens right now."
+  ],
+  "vocab": [
+   [
+    "historian-citizen",
+    "someone who studies Florida’s past and takes part in Florida today"
+   ],
+   [
+    "reflection",
+    "careful thinking about what you learned; the picture you see in a mirror"
+   ],
+   [
+    "primary source",
+    "a source made at the time it tells about, like a letter or a photo from that day"
+   ],
+   [
+    "perspective",
+    "one person’s point of view"
+   ],
+   [
+    "presentation",
+    "a few slides you show people while you explain them"
+   ],
+   [
+    "postcard",
+    "a card with a picture on one side that people mail"
+   ],
+   [
+    "postmark",
+    "the post office’s stamp that shows where and when a card was mailed"
+   ],
+   [
+    "historical marker",
+    "a sign that tells what happened at a place"
+   ],
+   [
+    "reflect",
+    "to bend light back; to think back carefully"
+   ],
+   [
+    "flexible",
+    "able to bend easily; able to change when you need to"
+   ],
+   [
+    "deflect",
+    "to bend something away so it goes another way"
+   ]
+  ],
+  "wordParts": "Word parts: flect / flex = bend; re- = back; de- = away; -ible = able to."
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "two specific things (names, places, or dates)",
+    "rx": "\\b1[0-9]{3}\\b|\\b20[0-9]{2}\\b|st\\.? augustine|tallahassee|tampa|miami|key west|jacksonville|pensacola|daytona|everglades|okeechobee|keys|panhandle|calusa|timucua|apalachee|tequesta|seminole|osceola|fort mose|mose|castillo|san marcos|ponce|le[oó]n|narv[aá]ez|de soto|men[eé]ndez|bethune|douglas|hurston|moore|walls|steele|flagler|plant|ybor|nasa|apollo|kennedy|space|constitution|capitol|statehood|state|civil war|reconstruction|civil rights|boycott|bus|spain|spanish|britain|british|explorer|mission|fort|governor|branch|vote|budget|saving|credit|hurricane|orange|cigar|railroad|tourism|cuba|immigra",
+    "n": 2
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "how you think now",
+    "rx": "now|today|this year|learned|know|understand|think|see|ask|check|question|read|look|use|can|better|more|differently|changed|grew|careful|evidence|source|sources|point of view|perspective|both sides",
+    "n": 1
+   },
+   {
+    "t": "how you thought before",
+    "rx": "before|used to|at first|start|beginning|last year|didn.t|did not|never|thought|only|just|wasn.t|was not",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "one thing you’ll remember",
+    "rx": "remember|carry|keep|never forget|always|fort|bethune|douglas|moore|vote|voting|source|evidence|map|marker|history|historian|citizen|freedom|right|rights|save|saving|money|help|volunteer|community|question|both sides|point of view|florida|state|park|everglades|space",
+    "n": 1
+   },
+   {
+    "t": "how you’ll use it",
+    "rx": "will|use|going to|gonna|plan|when i|someday|future|grow up|vote|help|volunteer|teach|tell|share|visit|read|save|ask|check|serve|clean|pick up|protect|so i|so that|because",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look back at your slides on tab 1 and the postcards on tab 2.",
+   "Pick two from different files: a person, a place, or a date. The cabinet at the bottom of the page lists every file.",
+   "Try this shape: “I learned that ___. I also learned that ___.”"
+  ],
+  "journal-q2": [
+   "Look at the mirrors on tab 2: each one has a then and a now.",
+   "Think about how you read a source, a map, or a picture at the start of the year. How do you read them now?",
+   "Try this shape: “At the start of the year I thought ___. Now I ___.”"
+  ],
+  "journal-q3": [
+   "Look at the What I’ll carry pocket idea list, or card 5 on tab 2.",
+   "Pick one thing you’ll remember, then say when or how you’ll use it.",
+   "Try this shape: “I will remember ___. I will use it when ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: name a primary source from the year that shows one of your two things.",
+  "journal-q2": "Go further: name the lesson where your thinking changed the most, and why.",
+  "journal-q3": "Go further: how did someone from Florida’s past use the same thing to help others?"
+ },
+ "quizMiss": [
+  {
+   "a": "Memorizing helps, but a historian-citizen also uses evidence and serves the community. Look at the Key Concept on tab 2.",
+   "c": "Living in Florida and paying taxes isn’t the whole idea. What does a historian-citizen do with evidence, and for the community?"
+  },
+  {
+   "a": "A textbook chapter was written later, about the Seminole Wars. A primary source was made at the time.",
+   "c": "A Wikipedia article was written much later. Which choice was made by someone who was there?"
+  },
+  {
+   "a": "It isn’t about a grade. Why does looking at more than one point of view make a story more honest?",
+   "b": "History has many perspectives (points of view). Why do historians look at more than one?"
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "How I read an old postcard",
+   "at": "scene1",
+   "script": "I keep an old postcard in my desk drawer. When I pick it up, I ask two questions. When was this made? And what did the person who wrote it want me to know? Now look at this real postcard of St. Augustine. It is more than one hundred years old. Read it like a historian, and answer the questions one at a time."
+  },
+  {
+   "slot": "guide2",
+   "label": "Present to me",
+   "at": "doorshow",
+   "script": "This is the moment I have waited for all year. I am standing in the open door, and I get to see your exhibit. Look at your six slides. If you want, record your voice for each one. Then tap Present to your teacher, and show me every slide. When you finish, you can make a video of your show."
+  },
+  {
+   "slot": "guide3",
+   "label": "My then and now",
+   "at": "explore",
+   "script": "When I first started teaching, I thought history was mostly dates. Now I know every date has a person and a story behind it. That is my then and my now. Each mirror here shows a then. Pick the now that fits, and the mirror turns over. Then that part of the reading opens."
+  },
+  {
+   "slot": "guide4",
+   "label": "Flip the postcards",
+   "at": "evidence",
+   "script": "Postcards are real sources too. Someone printed them, and someone mailed them home. First, tap each gold number. Then pick up a postcard and flip it over. On the back, answer the question, and the postmark stamps the card. Card five is blank. That one is for your own community."
+  },
+  {
+   "slot": "guide5",
+   "label": "How I pack",
+   "at": "plan",
+   "script": "Before a big trip, I pack only what matters most. If I were packing this bag, I would put a fact in the first pocket, a new skill in the second, and something I will do as a citizen in the third. Now pack your own carry-on. Your own sentences from this year might be waiting as cards. Then write your reflection in your own words."
+  },
+  {
+   "slot": "guide6",
+   "label": "Thank you",
+   "at": "closing",
+   "when": "cracked",
+   "script": "I am standing outside in the sunshine, and I am out of Canvas because of you. File by file, you read real sources, asked good questions, and never gave up on me. You are a Florida historian-citizen now. Keep reading the markers, keep asking questions, and keep helping your community. Thank you, from the bottom of my heart."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^postcard$",
+    "sel": ".spk-dsh-pc .fr",
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^When$",
+    "sel": ".spk-dsh-pc .qa .q",
+    "fx": "trace"
+   },
+   {
+    "at": "^Augustine$",
+    "sel": ".spk-dsh-pc .fr",
+    "fx": "point"
+   },
+   {
+    "at": "^hundred$",
+    "sel": ".spk-dsh-pc > .k",
+    "fx": "glow"
+   },
+   {
+    "at": "^questions$",
+    "sel": ".spk-dsh-pc .dots",
+    "fx": "pop",
+    "tag": "one at a time"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^door$",
+    "sel": ".spk-dsh-show .in > h4",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^six$",
+    "sel": "#ffst-root .ffst-rail",
+    "fx": "pop"
+   },
+   {
+    "at": "^record$",
+    "sel": "#ffst-root .ffst-rec",
+    "fx": "point"
+   },
+   {
+    "at": "^Present$",
+    "sel": "#ffst-show",
+    "fx": "pop",
+    "tag": "tap me"
+   },
+   {
+    "at": "^video$",
+    "sel": "#ffst-vid",
+    "fx": "glow"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^mirror$",
+    "sel": ".spk-mir-stage .mirror",
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^then$",
+    "sel": ".spk-mir-stage .then",
+    "i": 0,
+    "fx": "trace"
+   },
+   {
+    "at": "^now$",
+    "sel": ".spk-mir-stage .spk-opts",
+    "fx": "glow"
+   },
+   {
+    "at": "^turns$",
+    "sel": ".spk-mir-row",
+    "fx": "pop"
+   },
+   {
+    "at": "^reading$",
+    "sel": ".spk-mir-ct",
+    "fx": "point"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^sources$",
+    "sel": "#panel-explore .source-image-placeholder",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^gold$",
+    "sel": "#panel-explore .spk-hotinfo",
+    "fx": "pop"
+   },
+   {
+    "at": "^flip$",
+    "sel": ".spk-flp-rack",
+    "fx": "glow"
+   },
+   {
+    "at": "^postmark$",
+    "sel": ".spk-flp .spk-why",
+    "fx": "trace"
+   },
+   {
+    "at": "^five$",
+    "sel": ".spk-flp-th[data-i=\"4\"]",
+    "fx": "point"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^pack$",
+    "sel": ".spk-cry-bag",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^first$",
+    "sel": ".spk-cry-bag .pocket",
+    "i": 0,
+    "fx": "pop"
+   },
+   {
+    "at": "^second$",
+    "sel": ".spk-cry-bag .pocket",
+    "i": 1,
+    "fx": "pop"
+   },
+   {
+    "at": "^third$",
+    "sel": ".spk-cry-bag .pocket",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^sentences$",
+    "sel": ".spk-cry-tray",
+    "fx": "trace"
+   },
+   {
+    "at": "^reflection$",
+    "sel": "#journal-assign",
+    "fx": "point"
+   }
+  ],
+  "guide6": [
+   {
+    "at": "^sunshine$",
+    "sel": ".spk-closing .h",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^File$",
+    "sel": ".spk-seal-row",
+    "fx": "pop"
+   },
+   {
+    "at": "^historian",
+    "sel": ".spk-closing p",
+    "i": 1,
+    "fx": "trace"
+   },
+   {
+    "at": "^Thank$",
+    "sel": ".spk-pc-end",
+    "fx": "glow"
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2021,272 +3816,79 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Final Florida Historian-Citizen Reflection ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-<defs>
-  <linearGradient id="h1302sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#1a3a6a"/>
-    <stop offset="40%" stop-color="#3a6a9a"/>
-    <stop offset="100%" stop-color="#ffd070"/>
-  </linearGradient>
-  <radialGradient id="h1302sun" cx="0.5" cy="0.85" r="0.7">
-    <stop offset="0%" stop-color="#fff8e0"/>
-    <stop offset="30%" stop-color="#ffe08060"/>
-    <stop offset="100%" stop-color="#ffe08000"/>
-  </radialGradient>
-  <linearGradient id="h1302door" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#8B6914"/>
-    <stop offset="100%" stop-color="#6B4F12"/>
-  </linearGradient>
-  <linearGradient id="h1302light" x1="0.5" y1="0" x2="0.5" y2="1">
-    <stop offset="0%" stop-color="#fff8e0"/>
-    <stop offset="100%" stop-color="#ffd86000"/>
-  </linearGradient>
-  <linearGradient id="h1302card" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#fff"/>
-    <stop offset="100%" stop-color="#f0e8d8"/>
-  </linearGradient>
-  <filter id="h1302glo" x="-30%" y="-30%" width="160%" height="160%">
-    <feGaussianBlur stdDeviation="8" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="h1302shd" x="-5%" y="-5%" width="115%" height="115%">
-    <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#00000030"/>
-  </filter>
+<!-- ═══ SVG HERO BANNER: Final Florida Historian-Citizen Reflection · the open door, from outside, at sunrise (Florida Files sparkle, Nov 2026) ═══ -->
+<svg class="b1302hero" viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="Sunrise on a Florida path: an open door stands in the sand with warm light pouring out of it, palms on both sides, and a mailbox full of postcards with its flag up.">
+  <defs>
+    <linearGradient id="b1302sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5E8FC4"/><stop offset=".45" stop-color="#F3B98A"/><stop offset=".8" stop-color="#FFE0A6"/><stop offset="1" stop-color="#FFF1CC"/>
+    </linearGradient>
+    <radialGradient id="b1302sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FFF8DA"/><stop offset=".35" stop-color="#FFE08A"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
+    <linearGradient id="b1302sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FB9C9"/><stop offset="1" stop-color="#4F8FA6"/></linearGradient>
+    <linearGradient id="b1302sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EBD3A0"/><stop offset="1" stop-color="#D9B77A"/></linearGradient>
+    <linearGradient id="b1302glow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFF6D0" stop-opacity=".95"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></linearGradient>
+    <linearGradient id="b1302in" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBEA"/><stop offset="1" stop-color="#FFE7A3"/></linearGradient>
+  </defs>
   <style>
-    .h1302-rays { animation: h1302-rays 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center bottom; }
-    @keyframes h1302-rays { 0%,100% { opacity: 0.4; } 50% { opacity: 0.8; } }
-    .h1302-float1 { animation: h1302-float1 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-float1 { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
-    .h1302-float2 { animation: h1302-float2 7s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-float2 { 0%,100% { transform: translateY(0) rotate(2deg); } 50% { transform: translateY(-10px) rotate(-3deg); } }
-    .h1302-float3 { animation: h1302-float3 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-float3 { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(4deg); } }
-    .h1302-float4 { animation: h1302-float4 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-float4 { 0%,100% { transform: translateY(0) rotate(3deg); } 50% { transform: translateY(-12px) rotate(-2deg); } }
-    .h1302-sparkle { animation: h1302-sparkle 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-sparkle { 0%,100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1); } }
-    .h1302-confetti1 { animation: h1302-confetti1 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-confetti1 { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(30px) rotate(180deg); opacity: 0.3; } }
-    .h1302-confetti2 { animation: h1302-confetti2 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1302-confetti2 { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(25px) rotate(-150deg); opacity: 0.3; } }
-    .h1302-door { animation: h1302-door 6s ease-in-out infinite; transform-box: fill-box; transform-origin: right center; }
-    @keyframes h1302-door { 0%,100% { transform: perspective(200px) rotateY(-15deg); } 50% { transform: perspective(200px) rotateY(-25deg); } }
+    .b1302hero .sunh{animation:b1302pulse 6s ease-in-out infinite;transform-origin:742px 118px}
+    .b1302hero .shaft{animation:b1302shim 5s ease-in-out infinite}
+    .b1302hero .gull{animation:b1302fly 22s linear infinite}
+    .b1302hero .gull.g2{animation-duration:30s;animation-delay:-11s}
+    .b1302hero .frond{animation:b1302sway 7s ease-in-out infinite;transform-box:fill-box;transform-origin:0% 100%}
+    .b1302hero .glint{animation:b1302glint 4s ease-in-out infinite}
+    @keyframes b1302pulse{50%{transform:scale(1.06);opacity:.85}}
+    @keyframes b1302shim{50%{opacity:.6}}
+    @keyframes b1302fly{from{transform:translateX(-60px)}to{transform:translateX(980px)}}
+    @keyframes b1302sway{50%{transform:rotate(2.5deg)}}
+    @keyframes b1302glint{50%{opacity:.25}}
+    @media (prefers-reduced-motion: reduce){.b1302hero *{animation:none!important}}
   </style>
-</defs>
-<!-- Sky background -->
-<rect width="920" height="260" fill="url(#h1302sky)"/>
-<!-- Grand golden light burst from center -->
-<g transform="translate(460,260)">
-  <g class="h1302-rays">
-    <polygon points="0,-260 -40,-100 0,-110 40,-100" fill="#fff8e0" opacity="0.15"/>
-    <polygon points="-80,-250 -60,-100 -30,-115 -20,-100" fill="#ffe880" opacity="0.1"/>
-    <polygon points="80,-250 60,-100 30,-115 20,-100" fill="#ffe880" opacity="0.1"/>
-    <polygon points="-160,-230 -100,-100 -70,-120 -50,-100" fill="#ffd860" opacity="0.08"/>
-    <polygon points="160,-230 100,-100 70,-120 50,-100" fill="#ffd860" opacity="0.08"/>
-    <polygon points="-240,-200 -140,-90 -110,-110 -90,-90" fill="#ffc840" opacity="0.06"/>
-    <polygon points="240,-200 140,-90 110,-110 90,-90" fill="#ffc840" opacity="0.06"/>
-  </g>
-</g>
-<!-- Radial sun glow -->
-<rect width="920" height="260" fill="url(#h1302sun)"/>
-<!-- Grand doorway frame -->
-<g transform="translate(360,15)">
+  <rect width="920" height="200" fill="url(#b1302sky)"/>
+  <circle class="sunh" cx="742" cy="118" r="70" fill="url(#b1302sun)"/>
+  <circle cx="742" cy="118" r="20" fill="#FFF6D0"/>
+  <!-- far sea -->
+  <rect y="120" width="920" height="24" fill="url(#b1302sea)"/>
+  <g class="glint" fill="#FFF6D0" opacity=".7"><rect x="700" y="124" width="84" height="2" rx="1"/><rect x="716" y="129" width="52" height="2" rx="1"/><rect x="728" y="134" width="28" height="2" rx="1"/></g>
+  <!-- dunes -->
+  <path d="M0,140 C120,128 220,136 330,132 C470,126 560,138 690,134 C780,131 860,136 920,132 L920,200 L0,200 Z" fill="url(#b1302sand)"/>
+  <path d="M0,160 C150,150 260,166 420,158 C560,151 700,166 920,156 L920,200 L0,200 Z" fill="#E2C38A" opacity=".7"/>
+  <!-- sea oats -->
+  <g stroke="#9A8A4A" stroke-width="1.6" fill="none" opacity=".8"><path d="M60,150 q4,-18 2,-30"/><path d="M66,152 q-2,-16 -8,-26"/><path d="M118,146 q3,-16 0,-26"/><path d="M842,148 q4,-18 2,-28"/><path d="M850,150 q-3,-14 -9,-22"/></g>
+  <!-- the path to the door -->
+  <path d="M300,200 C330,178 352,160 368,146 L392,146 C404,160 430,180 470,200 Z" fill="#F4E3BC" opacity=".85"/>
+  <!-- light pouring out of the open door onto the sand -->
+  <path class="shaft" d="M392,146 L520,186 L540,200 L380,200 Z" fill="url(#b1302glow)" opacity=".85"/>
+  <!-- the open door, standing in the sand -->
   <g>
-    <!-- Door frame -->
-    <rect x="0" y="0" width="200" height="240" rx="0" fill="#6B4F12" opacity="0.9"/>
-    <!-- Arch top -->
-    <path d="M0,60 Q100,-20 200,60 L200,0 L0,0 Z" fill="#8B6914"/>
-    <!-- Keystone -->
-    <polygon points="95,-5 105,-5 108,10 92,10" fill="#d4a830"/>
-    <!-- Opening with golden light -->
-    <rect x="15" y="40" width="170" height="195" fill="#fff8e0"/>
-    <rect x="15" y="40" width="170" height="195" fill="url(#h1302light)" opacity="0.5"/>
-    <!-- Left door panel (slightly open) -->
-    <g transform="translate(15,40)">
-      <g class="h1302-door">
-        <rect x="0" y="0" width="85" height="195" fill="url(#h1302door)" opacity="0.7"/>
-        <rect x="30" y="80" width="15" height="8" rx="3" fill="#d4a830"/>
-        <!-- Door panel details -->
-        <rect x="10" y="15" width="65" height="70" rx="2" fill="none" stroke="#a07a20" stroke-width="1" opacity="0.5"/>
-        <rect x="10" y="100" width="65" height="70" rx="2" fill="none" stroke="#a07a20" stroke-width="1" opacity="0.5"/>
-      </g>
-    </g>
-    <!-- Decorative columns -->
-    <rect x="-12" y="20" width="14" height="220" fill="#7a5a18"/>
-    <rect x="198" y="20" width="14" height="220" fill="#7a5a18"/>
-    <rect x="-15" y="15" width="20" height="10" rx="2" fill="#8B6914"/>
-    <rect x="195" y="15" width="20" height="10" rx="2" fill="#8B6914"/>
+    <rect x="356" y="58" width="50" height="90" fill="#6E4A24"/>
+    <rect x="362" y="64" width="38" height="84" fill="url(#b1302in)"/>
+    <path d="M400,64 L424,72 L424,152 L400,148 Z" fill="#8F5A2A"/>
+    <path d="M404,78 L420,82 L420,102 L404,99 Z" fill="#7A4C22" opacity=".7"/>
+    <circle cx="406" cy="112" r="2" fill="#E8C66A"/>
+    <rect x="352" y="146" width="58" height="4" rx="2" fill="#5E3716"/>
   </g>
-</g>
-<!-- Postcard 1: St. Augustine Fort (Castillo) -->
-<g transform="translate(120,60)" filter="url(#h1302shd)">
-  <g class="h1302-float1">
-    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
-    <rect x="3" y="3" width="94" height="44" rx="1" fill="#87CEEB"/>
-    <!-- Fort silhouette -->
-    <polygon points="15,45 15,25 25,25 25,20 35,20 35,25 65,25 65,20 75,20 75,25 85,25 85,45" fill="#8B7355"/>
-    <rect x="45" y="30" width="10" height="15" fill="#5a4a30"/>
-    <!-- Corner bastions -->
-    <polygon points="15,25 10,20 20,20" fill="#7a6345"/>
-    <polygon points="85,25 80,20 90,20" fill="#7a6345"/>
-    <!-- Stamp placeholder -->
-    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
-    <!-- Address lines -->
-    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
-    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  <!-- palms -->
+  <g>
+    <path d="M178,160 C182,120 186,92 196,66" stroke="#6E5530" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <g class="frond" fill="#3F6B3A"><path d="M196,66 C170,58 150,64 136,78 C158,70 176,70 196,68 Z"/><path d="M196,66 C214,52 238,52 254,62 C232,60 214,62 196,68 Z"/><path d="M196,66 C186,44 170,34 152,34 C170,42 182,52 194,68 Z"/><path d="M196,66 C210,44 228,40 244,44 C226,48 212,56 198,68 Z"/><path d="M196,66 C200,84 196,98 186,108 C190,92 192,80 194,68 Z"/></g>
+    <path d="M610,160 C606,124 600,100 588,78" stroke="#6E5530" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <g class="frond" fill="#4A7A40" style="animation-delay:-3s"><path d="M588,78 C566,70 548,74 534,86 C554,80 570,80 588,80 Z"/><path d="M588,78 C604,64 626,64 640,72 C620,72 604,74 588,80 Z"/><path d="M588,78 C578,58 564,50 548,50 C564,58 576,66 586,80 Z"/><path d="M588,78 C600,58 616,54 632,58 C614,62 602,70 590,80 Z"/></g>
   </g>
-</g>
-<!-- Postcard 2: Everglades Sawgrass -->
-<g transform="translate(680,40)" filter="url(#h1302shd)">
-  <g class="h1302-float2">
-    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
-    <rect x="3" y="3" width="94" height="44" rx="1" fill="#87CEEB"/>
-    <!-- Everglades scene -->
-    <rect x="3" y="30" width="94" height="17" fill="#5a8a3a"/>
-    <!-- Sawgrass blades -->
-    <line x1="15" y1="30" x2="12" y2="18" stroke="#4a7a2a" stroke-width="1.5"/>
-    <line x1="20" y1="30" x2="22" y2="15" stroke="#5a8a3a" stroke-width="1.5"/>
-    <line x1="30" y1="30" x2="28" y2="17" stroke="#4a7a2a" stroke-width="1.5"/>
-    <line x1="50" y1="30" x2="48" y2="16" stroke="#5a8a3a" stroke-width="1.5"/>
-    <line x1="55" y1="30" x2="57" y2="18" stroke="#4a7a2a" stroke-width="1.5"/>
-    <line x1="70" y1="30" x2="68" y2="15" stroke="#5a8a3a" stroke-width="1.5"/>
-    <line x1="80" y1="30" x2="82" y2="17" stroke="#4a7a2a" stroke-width="1.5"/>
-    <line x1="90" y1="30" x2="88" y2="19" stroke="#5a8a3a" stroke-width="1.5"/>
-    <!-- Water -->
-    <rect x="3" y="37" width="94" height="10" fill="#3a7aaa" opacity="0.4"/>
-    <!-- Stamp -->
-    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
-    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
-    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  <!-- the mailbox, flag up, postcards inside -->
+  <g>
+    <rect x="806" y="128" width="6" height="52" fill="#6E5530"/>
+    <path d="M780,104 L838,104 L838,130 L780,130 Z" fill="#E9E4D6"/>
+    <path d="M780,104 Q809,86 838,104 Z" fill="#F4F0E4"/>
+    <rect x="776" y="104" width="6" height="26" fill="#CFC8B4"/>
+    <g transform="rotate(-8 790 108)"><rect x="780" y="96" width="22" height="15" fill="#FFFDF5" stroke="#C9A24A" stroke-width="1"/><rect x="796" y="98" width="4" height="5" fill="#A3312B"/></g>
+    <g transform="rotate(6 790 110)"><rect x="782" y="100" width="22" height="15" fill="#BFE3EE" stroke="#4F8FA6" stroke-width="1"/></g>
+    <rect x="838" y="94" width="4" height="22" fill="#A3312B"/>
+    <rect x="838" y="94" width="14" height="8" fill="#C8463E"/>
   </g>
-</g>
-<!-- Postcard 3: Capitol Dome -->
-<g transform="translate(160,160)" filter="url(#h1302shd)">
-  <g class="h1302-float3">
-    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
-    <rect x="3" y="3" width="94" height="44" rx="1" fill="#6aaad4"/>
-    <!-- Capitol dome -->
-    <rect x="25" y="30" width="50" height="17" fill="#ddd"/>
-    <rect x="20" y="27" width="60" height="5" rx="1" fill="#ccc"/>
-    <path d="M30,27 Q50,5 70,27" fill="#ddd"/>
-    <line x1="50" y1="12" x2="50" y2="5" stroke="#d4a830" stroke-width="1.5"/>
-    <circle cx="50" cy="4" r="2" fill="#d4a830"/>
-    <!-- Columns -->
-    <rect x="30" y="32" width="4" height="13" fill="#ccc"/>
-    <rect x="40" y="32" width="4" height="13" fill="#ccc"/>
-    <rect x="50" y="32" width="4" height="13" fill="#ccc"/>
-    <rect x="60" y="32" width="4" height="13" fill="#ccc"/>
-    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
-    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
-    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
+  <!-- gulls -->
+  <g fill="none" stroke="#3A3A4A" stroke-width="2" stroke-linecap="round">
+    <path class="gull" d="M80,40 q8,-8 16,0 q8,-8 16,0"/>
+    <path class="gull g2" d="M40,62 q6,-6 12,0 q6,-6 12,0"/>
   </g>
-</g>
-<!-- Postcard 4: Rocket -->
-<g transform="translate(650,150)" filter="url(#h1302shd)">
-  <g class="h1302-float4">
-    <rect x="0" y="0" width="100" height="70" rx="3" fill="url(#h1302card)"/>
-    <rect x="3" y="3" width="94" height="44" rx="1" fill="#1a2a4a"/>
-    <!-- Stars in sky -->
-    <circle cx="15" cy="12" r="1" fill="#fff" opacity="0.7"/>
-    <circle cx="80" cy="10" r="1.2" fill="#fff" opacity="0.6"/>
-    <circle cx="35" cy="8" r="0.8" fill="#fff" opacity="0.5"/>
-    <circle cx="70" cy="20" r="1" fill="#fff" opacity="0.7"/>
-    <!-- Rocket -->
-    <polygon points="50,8 45,25 55,25" fill="#e8e8e8"/>
-    <rect x="45" y="25" width="10" height="15" fill="#e0e0e0"/>
-    <polygon points="43,25 40,30 45,25" fill="#bbb"/>
-    <polygon points="57,25 60,30 55,25" fill="#bbb"/>
-    <!-- Flame -->
-    <polygon points="47,40 50,48 53,40" fill="#ff6830"/>
-    <polygon points="48,40 50,45 52,40" fill="#ffd830"/>
-    <!-- Smoke trail -->
-    <circle cx="50" cy="44" r="3" fill="#fff" opacity="0.2"/>
-    <circle cx="49" cy="47" r="4" fill="#fff" opacity="0.15"/>
-    <rect x="70" y="50" width="22" height="16" rx="1" fill="#e8d8c0" stroke="#c0a878" stroke-width="0.5"/>
-    <rect x="8" y="52" width="40" height="1.5" rx="0.5" fill="#c0a878" opacity="0.4"/>
-    <rect x="8" y="58" width="35" height="1.5" rx="0.5" fill="#c0a878" opacity="0.3"/>
-  </g>
-</g>
-<!-- Confetti pieces -->
-<g transform="translate(100,30)">
-  <g class="h1302-confetti1">
-    <rect x="0" y="0" width="6" height="4" rx="1" fill="#e74c3c" opacity="0.8"/>
-  </g>
-</g>
-<g transform="translate(280,20)">
-  <g class="h1302-confetti2" style="animation-delay: -1s;">
-    <rect x="0" y="0" width="5" height="5" rx="1" fill="#3498db" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(620,25)">
-  <g class="h1302-confetti1" style="animation-delay: -2s;">
-    <rect x="0" y="0" width="6" height="3" rx="1" fill="#2ecc71" opacity="0.8"/>
-  </g>
-</g>
-<g transform="translate(800,35)">
-  <g class="h1302-confetti2" style="animation-delay: -0.5s;">
-    <rect x="0" y="0" width="4" height="6" rx="1" fill="#f39c12" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(50,80)">
-  <g class="h1302-confetti2" style="animation-delay: -3s;">
-    <rect x="0" y="0" width="5" height="4" rx="1" fill="#9b59b6" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(860,90)">
-  <g class="h1302-confetti1" style="animation-delay: -1.5s;">
-    <rect x="0" y="0" width="6" height="4" rx="1" fill="#e74c3c" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(320,180)">
-  <g class="h1302-confetti1" style="animation-delay: -2.5s;">
-    <rect x="0" y="0" width="5" height="5" rx="1" fill="#1abc9c" opacity="0.6"/>
-  </g>
-</g>
-<g transform="translate(590,190)">
-  <g class="h1302-confetti2" style="animation-delay: -3.5s;">
-    <rect x="0" y="0" width="6" height="3" rx="1" fill="#e67e22" opacity="0.6"/>
-  </g>
-</g>
-<!-- Sparkle stars -->
-<g transform="translate(200,25)">
-  <g class="h1302-sparkle">
-    <polygon points="0,-6 1.5,-1.5 6,0 1.5,1.5 0,6 -1.5,1.5 -6,0 -1.5,-1.5" fill="#fff8e0"/>
-  </g>
-</g>
-<g transform="translate(720,20)">
-  <g class="h1302-sparkle" style="animation-delay: -0.7s;">
-    <polygon points="0,-5 1.2,-1.2 5,0 1.2,1.2 0,5 -1.2,1.2 -5,0 -1.2,-1.2" fill="#ffd860"/>
-  </g>
-</g>
-<g transform="translate(460,8)">
-  <g class="h1302-sparkle" style="animation-delay: -1.3s;">
-    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#fff"/>
-  </g>
-</g>
-<g transform="translate(80,180)">
-  <g class="h1302-sparkle" style="animation-delay: -1.8s;">
-    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#ffd860" opacity="0.8"/>
-  </g>
-</g>
-<g transform="translate(840,170)">
-  <g class="h1302-sparkle" style="animation-delay: -0.3s;">
-    <polygon points="0,-5 1.5,-1.5 5,0 1.5,1.5 0,5 -1.5,1.5 -5,0 -1.5,-1.5" fill="#fff8e0" opacity="0.9"/>
-  </g>
-</g>
-<g transform="translate(350,100)">
-  <g class="h1302-sparkle" style="animation-delay: -2.2s;">
-    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#fff" opacity="0.7"/>
-  </g>
-</g>
-<g transform="translate(570,80)">
-  <g class="h1302-sparkle" style="animation-delay: -1.6s;">
-    <polygon points="0,-5 1.5,-1.5 5,0 1.5,1.5 0,5 -1.5,1.5 -5,0 -1.5,-1.5" fill="#ffd860" opacity="0.8"/>
-  </g>
-</g>
-<!-- Ground glow line -->
-<rect x="0" y="252" width="920" height="8" fill="#ffd860" opacity="0.15"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3853,5 +5455,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
