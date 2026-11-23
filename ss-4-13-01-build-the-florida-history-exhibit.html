@@ -1784,6 +1784,1817 @@ body.tx-active .tx-toggle-label {
    When the manifest loader embeds a video it clears the placeholder, and the card shows again. */
 .video-wrap:has(.video-placeholder-id) { display: none !important; }
 </style>
+<script type="application/json" id="ff-data">{
+ "lesson": "4.13.01",
+ "title": "Build the Florida History Exhibit",
+ "quiet": false,
+ "file": {
+  "n": 13,
+  "title": "The Exhibit",
+  "label": "The Exhibit",
+  "seals": [
+   "🖼️",
+   "🗂️",
+   "🚪"
+  ]
+ },
+ "prevFile": "Income, Saving, Spending, Credit, Risk, and Responsibility",
+ "connector": "Last time, the door with 13 read your answer slip and started to open.",
+ "storySoFar": "Your teacher is still inside Canvas. Last time, the door with 13 read your answer slip, the EXIT sign lit up, and the door began to open onto a big, empty hall.",
+ "routeFallback": "the route the rooms chose",
+ "minWords": 60,
+ "stages": [
+  {
+   "tab": "scene",
+   "r": "Learn",
+   "t": "Light the hall",
+   "why": "The door with 13 opened onto an empty hall. Light a frame for every file you opened this year."
+  },
+  {
+   "tab": "explore",
+   "r": "Explore",
+   "t": "Unpack the crates",
+   "why": "Unpack four crates onto the exhibit board to read the year in review. Then help the museum registrar check some pictures."
+  },
+  {
+   "tab": "check",
+   "r": "Self-Check",
+   "t": "Check yourself",
+   "why": "Three quick questions from across the year. They are not graded."
+  },
+  {
+   "tab": "assignment",
+   "r": "Historian’s Notebook",
+   "t": "Build the exhibit",
+   "why": "Answer three questions. Build six slides in the Exhibit Studio. Your slides are your notebook entry."
+  }
+ ],
+ "texts": {
+  "toast": "Hi, it’s me, your teacher. The door is open!",
+  "opening": [
+   {
+    "t": "The door with 13 is open, and we’re still taking {route}. I’m standing in a big, empty hall.",
+    "ifRoute": [
+     "hall",
+     "stairs"
+    ]
+   },
+   {
+    "t": "The door with 13 is open. I’m standing in a big, empty hall.",
+    "ifRoute": "none"
+   },
+   "The EXIT sign glows at the far end. The walls are lined with empty frames, one for every file we opened this year.",
+   "A sign on the wall says: “Fill the hall. The last piece opens the way out.” So today you build our Florida History Exhibit. Start in the Learn tab (tab 1). Scroll down to the file card and light up the frames.",
+   {
+    "t": "Where do you want to start?",
+    "choice": "start"
+   }
+  ],
+  "choices": {
+   "start": {
+    "scene": "open",
+    "list": [
+     {
+      "t": "Let’s light the frames",
+      "go": true,
+      "reply": "Tap a dark frame. Pick the caption that matches its real source, and its lamp comes on."
+     },
+     {
+      "t": "What’s an exhibit?",
+      "reply": "An exhibit is a display that shows people real things and explains why they matter, like in a museum. Ours will show Florida’s story."
+     },
+     {
+      "t": "Why is the hall empty?",
+      "reply": "I think it’s waiting for us. Everything we learned this year goes on these walls."
+     }
+    ]
+   },
+   "s1": {
+    "scene": "scene",
+    "list": [
+     {
+      "t": "What’s next?",
+      "go": true,
+      "reply": "Go to the Explore tab (tab 2). Four crates just came in. Unpack them onto the exhibit board. Then help the museum registrar check some pictures."
+     },
+     {
+      "t": "Why are two frames doors?",
+      "reply": "Files 5 and 9 were checkpoints. We didn’t open new topics there. We looked back at the files before them."
+     }
+    ]
+   },
+   "s2": {
+    "scene": "explore",
+    "list": [
+     {
+      "t": "On to the check",
+      "go": true,
+      "reply": "Go to the Self-Check tab (tab 3). Three quick questions from across the year. They aren’t graded."
+     },
+     {
+      "t": "Was that poster really made up?",
+      "reply": "Nobody has a record of who made it or when, so a museum can’t show it as evidence. Real sources can be traced back."
+     },
+     {
+      "t": "What’s a registrar?",
+      "reply": "A registrar is the museum worker who keeps the records: what each object is, who made it, when, and where it came from."
+     }
+    ]
+   },
+   "done": {
+    "scene": "assignment",
+    "list": [
+     {
+      "t": "Are you out?",
+      "reply": "Almost! The door is open and I can see daylight. Next time is our very last file. I’ll see you on the other side."
+     },
+     {
+      "t": "Bye for now",
+      "end": true,
+      "reply": "Bye! Don’t forget to download your slides, then copy or download your work and turn it in on Canvas."
+     }
+    ]
+   }
+  },
+  "beats": {
+   "s1Done": [
+    {
+     "t": "Every frame is lit! At the far end, the EXIT door is glowing. Next is the Explore tab (tab 2).",
+     "choice": "s1"
+    }
+   ],
+   "s2Done": [
+    {
+     "t": "The board is full, and the registrar checked every picture. Next is the Self-Check tab (tab 3).",
+     "choice": "s2"
+    }
+   ],
+   "quizDone": [
+    {
+     "t": "Now for the big build. In the Historian’s Notebook tab (tab 4), answer three questions. Then make your six slides in the Exhibit Studio."
+    }
+   ],
+   "cracked": [
+    {
+     "t": "{name,}you finished the last file! Every frame in the hall is full. I hung your final claim on the door with 13. It’s the very last piece of our exhibit. Watch:"
+    },
+    {
+     "card": {
+      "from": "The door with 13",
+      "h": "THE FLORIDA HISTORY EXHIBIT · FILE 13",
+      "sub": "The last piece: your final claim",
+      "lines": "planner",
+      "stamp": "OPEN",
+      "style": "exhibit"
+     }
+    },
+    {
+     "t": "The door swung all the way open, and there’s daylight outside! Every room is coming down the Main Hall with me.",
+     "ifRoute": "hall"
+    },
+    {
+     "t": "The door swung all the way open, and there’s daylight outside! I’ll go out first, the way we planned, and send help back for the other rooms.",
+     "ifRoute": "stairs"
+    },
+    {
+     "t": "The door swung all the way open, and there’s daylight outside!",
+     "ifRoute": "none"
+    },
+    {
+     "t": "Your Historian’s Sentence is saved in the Florida Files cabinet at the bottom of the page. Keep your slides: next time, you present them.",
+     "choice": "done"
+    }
+   ]
+  }
+ },
+ "lens": "Service means using what you know to help others. Today you are an exhibit builder, someone who gathers the year’s real evidence and shows it so others understand Florida’s story. A historian-citizen studies Florida’s past and takes part in Florida today.",
+ "scene1": {
+  "type": "lighthall",
+  "kicker": "Light the hall",
+  "h": "Light up the empty hall",
+  "voice": "Tap a dark frame. Pick the caption that matches that file’s real source, and its lamp comes on.",
+  "why": {
+   "icon": "🏛️",
+   "q": "Why frames?",
+   "t": "Museums hang their most important pieces in frames on the wall, with a lamp over each one. This hall has one frame for every Florida File you opened this year. That’s why you light a frame for each file."
+  },
+  "frames": [
+   {
+    "n": 1,
+    "img": "ff-4-08-03-herald-page-original.jpg",
+    "t": "Being a Historian",
+    "opts": [
+     {
+      "t": "A newspaper front page from January 13, 1861",
+      "ok": true
+     },
+     {
+      "t": "A map printed in 1584",
+      "miss": "A map shows land and water. Look closely: this frame is full of tiny printed words in columns."
+     },
+     {
+      "t": "A photo of a rocket launch, 1969",
+      "miss": "No rocket here. Look for columns of printed words."
+     }
+    ],
+    "fact": "A newspaper is a print source. This is the front page of the New York Herald from January 13, 1861. It carried news from Tallahassee about Florida leaving the United States. You read it in File 8. Library of Congress."
+   },
+   {
+    "n": 2,
+    "img": "source-4-02-01-florida-physical-map.png",
+    "t": "The Map Room",
+    "opts": [
+     {
+      "t": "A map of Florida made by the U.S. government",
+      "ok": true
+     },
+     {
+      "t": "A drawing of a town inside a wall of tall posts",
+      "miss": "Look again: this one has roads, cities, and blue water around Florida."
+     },
+     {
+      "t": "Page 1 of Florida’s first constitution",
+      "miss": "A constitution is handwritten words. This frame shows Florida’s shape."
+     }
+    ],
+    "fact": "A map shows land, water, cities, and roads. This map of Florida comes from the National Atlas, made by the U.S. government. In File 2 you learned to read maps like it."
+   },
+   {
+    "n": 3,
+    "img": "source-4-03-02-timucua-village.jpg",
+    "t": "First Peoples",
+    "opts": [
+     {
+      "t": "A Timucua town inside a wall of tall posts, engraved in 1591",
+      "ok": true
+     },
+     {
+      "t": "A plan of Fort Mose from the 1760s",
+      "miss": "Fort Mose was built by Spain in 1738. Look for round houses inside a tall wall of posts."
+     },
+     {
+      "t": "Troop ships in Tampa Bay, 1898",
+      "miss": "No ships here. Look for houses inside a round wall."
+     }
+    ],
+    "fact": "Theodor de Bry made this engraving in 1591 from drawings by Jacques Le Moyne, a French artist who was in Florida in 1564. De Bry never came to Florida himself, so historians ask how much he changed."
+   },
+   {
+    "n": 4,
+    "img": "source-4-04-01-la-florida-map-1584-original.jpg",
+    "t": "Explorers",
+    "opts": [
+     {
+      "t": "“La Florida,” a map printed in 1584",
+      "ok": true
+     },
+     {
+      "t": "A photo of a bus in Tallahassee, 1956",
+      "miss": "This frame is a map, not a photo. Look for the words LA FLORIDA."
+     },
+     {
+      "t": "A map of an attack on St. Augustine, 1586",
+      "miss": "That one is in File 6. Look for the words LA FLORIDA on this old map."
+     }
+    ],
+    "fact": "A Spanish mapmaker drew it, and it was printed in Abraham Ortelius’s atlas (a book of maps) in 1584. Europeans used maps like this to plan their voyages. Library of Congress."
+   },
+   {
+    "n": 5,
+    "t": "Checkpoint",
+    "door": true,
+    "fact": "File 5 was a checkpoint. You looked back at Files 2 to 4 (Florida’s land, its First Peoples, and the explorers) and checked your evidence."
+   },
+   {
+    "n": 6,
+    "img": "source-4-06-02-st-augustine-engraving-original.png",
+    "t": "Spanish Florida",
+    "opts": [
+     {
+      "t": "A map of the English attack on St. Augustine in 1586",
+      "ok": true
+     },
+     {
+      "t": "“La Florida,” a map printed in 1584",
+      "miss": "That one is in File 4. Look for ships in a harbor next to a small town."
+     },
+     {
+      "t": "Florida’s first constitution, 1838",
+      "miss": "This frame shows ships and a town, not handwriting."
+     }
+    ],
+    "fact": "Baptista Boazio drew Sir Francis Drake’s attack on St. Augustine, the oldest European town in what is now the U.S. It was printed in London in 1589. Library of Congress."
+   },
+   {
+    "n": 7,
+    "img": "source-4-07-01-fort-mose-plan-original.jpg",
+    "t": "Fort Mose & Pioneers",
+    "opts": [
+     {
+      "t": "A plan of the land around Fort Mose, drawn in the 1760s",
+      "ok": true
+     },
+     {
+      "t": "A map of the English attack on St. Augustine, 1586",
+      "miss": "No ships in this one. It is a plan of the land north of St. Augustine."
+     },
+     {
+      "t": "A map of Florida made by the U.S. government",
+      "miss": "This plan is old and hand-drawn, from the 1760s."
+     }
+    ],
+    "fact": "Samuel Roworth, a British mapmaker, drew it after the people of Fort Mose left for Cuba. Fort Mose, two miles north of St. Augustine, was the first free Black town in what is now the U.S. that the law allowed. Library of Congress."
+   },
+   {
+    "n": 8,
+    "img": "source-4-08-04-black-lawmakers-1872-original.jpg",
+    "t": "Statehood & War",
+    "opts": [
+     {
+      "t": "A print of the first Black senator and representatives in Congress, 1872",
+      "ok": true
+     },
+     {
+      "t": "Two ministers on a Tallahassee bus, 1956",
+      "miss": "That one is in File 11. Look for seven men sitting together in a printed picture."
+     },
+     {
+      "t": "A newspaper front page from 1861",
+      "miss": "That one is in File 1. This frame shows seven men."
+     }
+    ],
+    "fact": "Currier & Ives made this print in New York in 1872. One of the seven men is Josiah T. Walls, Florida’s first Black member of Congress, elected during Reconstruction. Library of Congress."
+   },
+   {
+    "n": 9,
+    "t": "Checkpoint",
+    "door": true,
+    "fact": "File 9 was a checkpoint. You put Files 7 and 8 on a timeline and made a claim about which event most changed Florida."
+   },
+   {
+    "n": 10,
+    "img": "source-4-10-02-apollo-11-launch-1969-original.jpg",
+    "t": "Modern Florida",
+    "opts": [
+     {
+      "t": "The Apollo 11 rocket lifting off from Florida, July 16, 1969",
+      "ok": true
+     },
+     {
+      "t": "Troop ships in Tampa Bay, 1898",
+      "miss": "No ships here. Look for a tall rocket and a cloud of smoke."
+     },
+     {
+      "t": "A print of lawmakers from 1872",
+      "miss": "That one is in File 8. This frame shows a rocket."
+     }
+    ],
+    "fact": "A NASA photo taken at Kennedy Space Center. Apollo 11 carried the first astronauts who walked on the Moon. The space program brought jobs and visitors to Florida."
+   },
+   {
+    "n": 11,
+    "img": "source-4-11-01-steele-harris-bus-1956-original.jpg",
+    "t": "Civil Rights & Citizens",
+    "opts": [
+     {
+      "t": "Two ministers sitting in the middle of a Tallahassee bus, December 24, 1956",
+      "ok": true
+     },
+     {
+      "t": "News reporters watching a rocket launch, 1969",
+      "miss": "Look again: two men in hats are looking out the windows of a city bus."
+     },
+     {
+      "t": "Children buying savings stamps, 1942",
+      "miss": "That photo is in File 12. This one shows a city bus."
+     }
+    ],
+    "fact": "Rev. C. K. Steele and Rev. H. McNeal Harris sat in the middle of the bus, not the back, on the day the Tallahassee bus boycott ended. State Archives of Florida."
+   },
+   {
+    "n": 12,
+    "img": "source-4-12-01-florida-constitution-1838-original.jpg",
+    "t": "Government & Money",
+    "opts": [
+     {
+      "t": "Page 1 of Florida’s first constitution, written by hand in 1838",
+      "ok": true
+     },
+     {
+      "t": "A newspaper front page from 1861",
+      "miss": "A newspaper is printed in columns. This page is handwritten."
+     },
+     {
+      "t": "A plan of Fort Mose from the 1760s",
+      "miss": "That one is in File 7. This page is all handwriting, with no drawing."
+     }
+    ],
+    "fact": "It was written at St. Joseph in 1838, while Florida was still a territory. This handwritten copy is the only one known today. State Archives of Florida, through the Library of Congress."
+   }
+  ],
+  "pickT": "Which caption belongs to this file’s real source?",
+  "sentT": "Your Historian’s Sentence from this file:",
+  "startT": "👆 Tap a dark frame to light it.",
+  "countT": "frames lit.",
+  "allT": "Every frame is lit.",
+  "win": "💡 Every frame is lit! At the far end of the hall, the EXIT door is glowing."
+ },
+ "explore": {
+  "directive": {
+   "k": "What to do here",
+   "steps": [
+    "Unpack the four crates in Learn the Story. Each crate opens its part of the reading.",
+    "Tap every gold number on the wall to see each file’s real source.",
+    "Help the registrar: ask the three questions about each picture, then decide if it can be evidence."
+   ]
+  },
+  "reading": {
+   "type": "crates",
+   "activity": "Year in Review",
+   "mid": "key",
+   "why": {
+    "icon": "📦",
+    "q": "Why crates?",
+    "t": "New pieces arrive at a museum in wooden crates. Before anything goes on the wall, someone unpacks it and decides where it belongs. That’s why you unpack crates onto your exhibit board."
+   },
+   "boardT": "MY EXHIBIT BOARD",
+   "sections": [
+    {
+     "k": "map",
+     "ico": "🗺️",
+     "t": "Map"
+    },
+    {
+     "k": "source",
+     "ico": "📜",
+     "t": "Source"
+    },
+    {
+     "k": "time",
+     "ico": "📅",
+     "t": "Timeline"
+    },
+    {
+     "k": "person",
+     "ico": "👤",
+     "t": "Person or Event"
+    },
+    {
+     "k": "civic",
+     "ico": "🏛️",
+     "t": "Civic or Economic"
+    }
+   ],
+   "paras": [
+    {
+     "id": "p1",
+     "match": "^This year you became"
+    },
+    {
+     "id": "p2",
+     "match": "^You unlocked files"
+    },
+    {
+     "id": "p3",
+     "match": "^You studied the civil rights"
+    },
+    {
+     "id": "p4",
+     "match": "^Now it"
+    },
+    {
+     "id": "p5",
+     "match": "^The exhibit is your key"
+    }
+   ],
+   "crates": [
+    {
+     "id": "land",
+     "t": "Land, First Peoples, and explorers",
+     "ico": "🌴",
+     "paras": [
+      "p1"
+     ],
+     "items": [
+      {
+       "t": "A map of Florida’s rivers, coasts, and regions",
+       "ok": [
+        "map"
+       ]
+      },
+      {
+       "t": "The Calusa, skilled fishers of southwest Florida",
+       "ok": [
+        "person"
+       ],
+       "miss": {
+        "*": "The Calusa are people. Which part of the board is for a person or a group of people?"
+       }
+      },
+      {
+       "t": "1513: Ponce de León lands and names La Florida",
+       "ok": [
+        "time",
+        "person"
+       ],
+       "miss": {
+        "*": "It has a date and a famous explorer. Try Timeline, or Person or Event."
+       }
+      }
+     ]
+    },
+    {
+     "id": "colony",
+     "t": "Spanish Florida to Reconstruction",
+     "ico": "🏰",
+     "paras": [
+      "p2"
+     ],
+     "items": [
+      {
+       "t": "Boazio’s 1589 map of St. Augustine",
+       "ok": [
+        "map",
+        "source"
+       ],
+       "miss": {
+        "*": "It is a real map from 1589. Try Map or Source."
+       }
+      },
+      {
+       "t": "1738: Fort Mose, a free Black town",
+       "ok": [
+        "time",
+        "person"
+       ],
+       "miss": {
+        "*": "It has a date and is an important event. Try Timeline, or Person or Event."
+       }
+      },
+      {
+       "t": "A Civil War soldier’s letter home",
+       "ok": [
+        "source"
+       ],
+       "miss": {
+        "*": "A letter written at the time is evidence from the past. Which part of the board is for that?"
+       }
+      }
+     ]
+    },
+    {
+     "id": "growth",
+     "t": "Growth, civil rights, government, and money",
+     "ico": "🚀",
+     "paras": [
+      "p3"
+     ],
+     "items": [
+      {
+       "t": "Mary McLeod Bethune starts a school in Daytona, 1904",
+       "ok": [
+        "person",
+        "time"
+       ],
+       "miss": {
+        "*": "Bethune is a person, and 1904 is a date. Try Person or Event, or Timeline."
+       }
+      },
+      {
+       "t": "NASA’s photo of the Apollo 11 launch, 1969",
+       "ok": [
+        "source",
+        "time"
+       ],
+       "miss": {
+        "*": "A real photo from the past is a source. It also has a date."
+       }
+      },
+      {
+       "t": "Citizens voting and serving on a city council",
+       "ok": [
+        "civic"
+       ],
+       "miss": {
+        "*": "Voting and serving are about citizens and government. Which part of the board is that?"
+       }
+      }
+     ]
+    },
+    {
+     "id": "key",
+     "t": "What goes on the board, and the key",
+     "ico": "🔑",
+     "paras": [
+      "p4",
+      "p5"
+     ],
+     "items": [
+      {
+       "t": "Florida’s constitution, written down in 1838",
+       "ok": [
+        "civic",
+        "source",
+        "time"
+       ],
+       "miss": {
+        "*": "A constitution is about government, and this one is a real document with a date."
+       }
+      },
+      {
+       "t": "A family budget: saving, spending, and credit",
+       "ok": [
+        "civic"
+       ],
+       "miss": {
+        "*": "A budget is about money. Which part of the board is for government and money?"
+       }
+      },
+      {
+       "t": "1964: the Civil Rights Act becomes law",
+       "ok": [
+        "time",
+        "civic"
+       ],
+       "miss": {
+        "*": "It has a date, and it is a law. Try Timeline, or Civic or Economic."
+       }
+      }
+     ],
+     "ask": {
+      "q": "A visitor walks up to an exhibit board covered with 20 facts and no claim. What is missing?",
+      "opts": [
+       {
+        "t": "A claim that tells visitors what the facts show, and why they matter",
+        "ok": true,
+        "reply": "Right. The facts are the evidence. The claim tells visitors what the evidence proves."
+       },
+       {
+        "t": "More facts",
+        "miss": "More facts just makes the list longer. Visitors still won’t know why the facts matter. What would tell them?"
+       },
+       {
+        "t": "Bigger pictures",
+        "miss": "Pictures help people look, but they don’t tell visitors what the evidence proves."
+       }
+      ]
+     }
+    }
+   ],
+   "allT": "Every crate is unpacked. Your board has all five kinds of evidence."
+  },
+  "evidence": {
+   "type": "registrar",
+   "kicker": "The registrar’s check",
+   "h": "Can it go in the exhibit?",
+   "voice": "Ask the three questions about each picture. Then decide: does it go in the exhibit, or is it not a source?",
+   "why": {
+    "icon": "🗂️",
+    "q": "What’s a registrar?",
+    "t": "A <b>registrar<\/b> is the museum worker who keeps the records for every object: what it is, who made it, when, and where it came from. If no one can answer those questions, the museum can’t show it as evidence. That’s why you check each picture like a registrar."
+   },
+   "qs": [
+    {
+     "k": "who",
+     "t": "Who made it?"
+    },
+    {
+     "k": "when",
+     "t": "When?"
+    },
+    {
+     "k": "where",
+     "t": "Where is it kept today?"
+    }
+   ],
+   "items": [
+    {
+     "id": "hine",
+     "img": "source-4-10-03-hine-cigar-factory-reader-1909-original.jpg",
+     "alt": "A man reads aloud from a high chair in a cigar factory",
+     "cap": "A reader in a Tampa cigar factory",
+     "real": true,
+     "tag": "TAG 13-1",
+     "a": {
+      "who": "Lewis Hine, a photographer",
+      "when": "January 1909",
+      "where": "The Library of Congress"
+     },
+     "okT": "Accepted. All three questions have answers, so this photo can be evidence. It gets a museum tag.",
+     "missT": "Look at the answers again. We know who made it, when, and where it is kept. That is what evidence needs."
+    },
+    {
+     "id": "poster",
+     "img": "source-4-13-01-exhibit-board.png",
+     "alt": "A bright poster with five empty boxes labeled Map, Source, Timeline, Person/Event, and Civic/Economic Connection",
+     "cap": "A poster that says “Florida: Our Story, Our Community”",
+     "real": false,
+     "a": {
+      "who": null,
+      "when": null,
+      "where": null
+     },
+     "okT": "Right. Nobody can say who made it, when, or where it is kept. It looks nice, but it is a made-up picture, not something from Florida’s past. A museum can’t use it as evidence.",
+     "missT": "Look at the answers. Who made it? When? Where is it kept? If nobody knows, can a visitor trust it?"
+    },
+    {
+     "id": "const",
+     "img": "source-4-12-01-florida-constitution-1838-original.jpg",
+     "alt": "An old handwritten page",
+     "cap": "Page 1 of Florida’s first constitution",
+     "real": true,
+     "tag": "TAG 13-2",
+     "a": {
+      "who": "The secretary of the meeting that wrote it, copying it by hand",
+      "when": "1838",
+      "where": "The State Archives of Florida"
+     },
+     "okT": "Accepted. It can be traced back to who wrote it, when, and where it is kept today.",
+     "missT": "Look at the answers again. We know who wrote it, when, and where it is kept."
+    },
+    {
+     "id": "ex1904",
+     "img": "ff-4-13-01-florida-exhibit-1904.jpg",
+     "alt": "Long tables piled with oranges, pineapples and other fruit under a banner that says Florida",
+     "cap": "Florida fruit on display at a World’s Fair",
+     "real": true,
+     "tag": "TAG 13-3",
+     "a": {
+      "who": "Citizens of Florida built the exhibit. The fair’s photographer took the picture.",
+      "when": "1904, at the World’s Fair in St. Louis",
+      "where": "The Missouri Historical Society, in St. Louis"
+     },
+     "okT": "Accepted. Its typed label says: “An exhibit made by citizens of Florida, there being no State exhibit.” Florida’s government sent no exhibit, so citizens made one. This photo now goes in File 13.",
+     "missT": "Look at the answers again. We know who, when, and where it is kept."
+    }
+   ],
+   "asks": [
+    {
+     "q": "Why does a registrar ask who made a picture, when, and where it is kept?",
+     "opts": [
+      {
+       "t": "So visitors can trust that it is real evidence",
+       "ok": true,
+       "reply": "Yes. If a source can be traced back, people can check it for themselves."
+      },
+      {
+       "t": "To make the exhibit look nicer",
+       "miss": "A nice look doesn’t make something true. What do the three questions help people check?"
+      },
+      {
+       "t": "Because old pictures are always true",
+       "miss": "Old pictures can still be wrong or one-sided. The questions help historians check them."
+      }
+     ]
+    },
+    {
+     "q": "The poster had the words “Map,” “Source,” and “Timeline” on it. Is it a source about Florida’s history?",
+     "opts": [
+      {
+       "t": "No. Nobody knows who made it or when, so it isn’t evidence.",
+       "ok": true,
+       "reply": "Right. Words on a picture don’t make it a source. A source can be traced back."
+      },
+      {
+       "t": "Yes, because it has Florida words on it",
+       "miss": "Anyone can put words on a picture. What did the registrar find out about it?"
+      }
+     ]
+    }
+   ],
+   "win": "✅ Checked like a registrar. Real sources can be traced back. A made-up picture can’t be evidence, even if it looks nice."
+  }
+ },
+ "source": {
+  "prompt": "Tap each gold number on the wall to see the file and its real source.",
+  "allT": "Now help the registrar below.",
+  "hotspots": [
+   {
+    "n": "1",
+    "x": 3.2,
+    "y": 11.8,
+    "title": "File 1 · Being a Historian.",
+    "t": "A newspaper is a print source. The New York Herald, January 13, 1861. Library of Congress (Chronicling America). Free to use."
+   },
+   {
+    "n": "2",
+    "x": 27.8,
+    "y": 11.8,
+    "title": "File 2 · The Map Room.",
+    "t": "A map of Florida from the National Atlas of the United States, made by the U.S. government. Free to use."
+   },
+   {
+    "n": "3",
+    "x": 52.3,
+    "y": 11.8,
+    "title": "File 3 · First Peoples.",
+    "t": "A Timucua town inside a wall of tall posts. Engraved in 1591 by Theodor de Bry from drawings by Jacques Le Moyne, who was in Florida in 1564. Free to use."
+   },
+   {
+    "n": "4",
+    "x": 76.9,
+    "y": 11.8,
+    "title": "File 4 · Explorers.",
+    "t": "“La Florida,” drawn by a Spanish mapmaker and printed in Abraham Ortelius’s atlas in 1584. Library of Congress. Free to use."
+   },
+   {
+    "n": "5",
+    "x": 3.2,
+    "y": 42.3,
+    "title": "File 5 · Checkpoint.",
+    "t": "A checkpoint door. In File 5 you looked back at Files 2 to 4. There is no new source here."
+   },
+   {
+    "n": "6",
+    "x": 27.8,
+    "y": 42.3,
+    "title": "File 6 · Spanish Florida.",
+    "t": "Baptista Boazio’s map of Sir Francis Drake’s 1586 attack on St. Augustine, printed in London in 1589. Library of Congress. Free to use."
+   },
+   {
+    "n": "7",
+    "x": 52.3,
+    "y": 42.3,
+    "title": "File 7 · Fort Mose & Pioneers.",
+    "t": "A plan of the land around Fort Mose, drawn in the 1760s by Samuel Roworth, a British mapmaker. Library of Congress. No known copyright restrictions."
+   },
+   {
+    "n": "8",
+    "x": 76.9,
+    "y": 42.3,
+    "title": "File 8 · Statehood & War.",
+    "t": "“The first colored senator and representatives,” a print by Currier & Ives, New York, 1872. Josiah T. Walls of Florida is one of the seven men. Library of Congress. Free to use."
+   },
+   {
+    "n": "9",
+    "x": 3.2,
+    "y": 72.7,
+    "title": "File 9 · Checkpoint.",
+    "t": "A checkpoint door. In File 9 you put Files 7 and 8 on a timeline. There is no new source here."
+   },
+   {
+    "n": "10",
+    "x": 27.8,
+    "y": 72.7,
+    "title": "File 10 · Modern Florida.",
+    "t": "Apollo 11 lifts off from Kennedy Space Center, Florida, July 16, 1969. NASA. Free to use."
+   },
+   {
+    "n": "11",
+    "x": 52.3,
+    "y": 72.7,
+    "title": "File 11 · Civil Rights & Citizens.",
+    "t": "Rev. C. K. Steele and Rev. H. McNeal Harris in the middle of a Tallahassee city bus, December 24, 1956. State Archives of Florida. Free to use."
+   },
+   {
+    "n": "12",
+    "x": 76.9,
+    "y": 72.7,
+    "title": "File 12 · Government & Money.",
+    "t": "Page 1 of Florida’s first constitution, written by hand at St. Joseph in 1838. State Archives of Florida, through the Library of Congress. Free to use."
+   }
+  ]
+ },
+ "planner": {
+  "type": "studio",
+  "js": "assets/sparkle/ff-studio.js",
+  "css": "assets/sparkle/ff-studio.css",
+  "lib": "assets/sparkle/lib/pptxgen.bundle.js",
+  "voice": "Build one slide for each piece. Pick a real picture, then write your own words. Each slide checks itself.",
+  "why": {
+   "icon": "🖼️",
+   "q": "Why slides?",
+   "t": "A <b>presentation<\/b> is a few slides you show people while you explain them, like a museum guide. Your six slides are your exhibit, and next lesson you will present them. That’s why you build them here."
+  },
+  "claimName": "My Final Claim",
+  "cardClaimT": "On the door",
+  "cardCountT": "In the hall",
+  "cardOfT": "of",
+  "cardSlidesT": "slides ready",
+  "boxNoteT": "Your slides fill in this box. To change it, edit your slides in Step 2.",
+  "deckT": "My Florida History Exhibit",
+  "deckKicker": "The Florida History Exhibit",
+  "fileName": "My-Florida-History-Exhibit",
+  "authorT": "Florida historian",
+  "words": 40,
+  "minWords": 8,
+  "steps": [
+   "See an example",
+   "Build 6 slides",
+   "Download them",
+   "Present them in 4.13.02"
+  ],
+  "intro": {
+   "title": "What makes a strong exhibit slide?",
+   "img": "ex1904",
+   "points": [
+    "Each slide shows one real picture from the year and a few sentences in your own words.",
+    "A strong slide names something specific (a person, a place, or a date) and says why it matters.",
+    "You make six slides: Map, Source, Timeline, Person or Event, Civic or Economic, and your Final Claim.",
+    "Your slides fill in your notebook entry. In the next lesson you will present them."
+   ],
+   "good": {
+    "kicker": "🏛️ Civic or Economic",
+    "text": "In 1904, Florida’s government sent no exhibit to the World’s Fair, so citizens built one. This matters because citizens can serve their state too.",
+    "why": "✅ Strong: a real picture, a date, and why it matters."
+   },
+   "bad": {
+    "kicker": "🏛️ Civic or Economic",
+    "text": "Florida has oranges. Florida has pineapples. Florida has a lot of fruit. Fruit is good.",
+    "why": "⚠️ Weak: no picture, and only a list of facts. Why do they matter?"
+   },
+   "noPicT": "no picture",
+   "go": "▶ Start my slides"
+  },
+  "criteria": [
+   {
+    "k": "map",
+    "name": "Map",
+    "short": "Map",
+    "icon": "🗺️",
+    "color": "#1E8C8C",
+    "ask": "Name a Florida map or region, and explain why it matters.",
+    "hint": "The ___ map shows ___. It matters because ___.",
+    "starter": "The map I picked shows ",
+    "notes": [
+     "The 1584 “La Florida” map (File 4): Europeans used maps like it to plan voyages.",
+     "Melish’s 1819 map (File 7): the treaty line that made Florida part of the U.S.",
+     "The 1846 map of the new State of Florida (File 8).",
+     "Florida’s regions: the Panhandle, the peninsula, and the Keys (File 2)."
+    ]
+   },
+   {
+    "k": "source",
+    "name": "Source",
+    "short": "Source",
+    "icon": "📜",
+    "color": "#3E7CB1",
+    "ask": "Name a source from this year and what it taught you.",
+    "hint": "This source is ___. It taught me ___.",
+    "starter": "One source that taught me something is ",
+    "notes": [
+     "The 1956 photo of Rev. Steele and Rev. Harris on a Tallahassee bus (File 11).",
+     "Lewis Hine’s 1909 photo of a reader in a Tampa cigar factory (File 10).",
+     "Page 1 of Florida’s 1838 constitution (File 12).",
+     "The 1861 New York Herald front page (File 8)."
+    ]
+   },
+   {
+    "k": "time",
+    "name": "Timeline",
+    "short": "Timeline",
+    "icon": "📅",
+    "color": "#C8922E",
+    "ask": "Name one key date or event and explain where it fits in Florida’s story.",
+    "hint": "In ___, ___. It came after ___ and led to ___.",
+    "starter": "In ",
+    "notes": [
+     "1513: Ponce de León names La Florida.",
+     "1565: St. Augustine is founded.",
+     "1738: Fort Mose, a free Black town, is built.",
+     "1821: Florida becomes part of the United States.",
+     "1845: Florida becomes the 27th state.",
+     "1969: Apollo 11 lifts off from Florida."
+    ]
+   },
+   {
+    "k": "person",
+    "name": "Person or Event",
+    "short": "Person",
+    "icon": "👤",
+    "color": "#A3312B",
+    "ask": "Name one person or event every Floridian should know about, and say why.",
+    "hint": "Every Floridian should know about ___ because ___.",
+    "starter": "Every Floridian should know about ",
+    "notes": [
+     "Mary McLeod Bethune started a school in Daytona in 1904 (File 10).",
+     "Josiah T. Walls, Florida’s first Black member of Congress (File 8).",
+     "Harry T. Moore worked for Black Floridians’ right to vote (File 11).",
+     "The Tallahassee bus boycott, 1956 (File 11)."
+    ]
+   },
+   {
+    "k": "civic",
+    "name": "Civic or Economic",
+    "short": "Civic",
+    "icon": "🏛️",
+    "color": "#2E8B57",
+    "ask": "Explain one way Florida’s government, economy, or money choices connect to Florida’s story.",
+    "hint": "Florida’s ___ connects to the story because ___.",
+    "starter": "One way government or money connects to Florida’s story is ",
+    "notes": [
+     "Florida’s government has three branches: lawmakers, the governor, and the courts (File 12).",
+     "Citizens can vote, serve, and volunteer (File 11).",
+     "Tourism, farming, and space bring jobs to Florida (File 10).",
+     "Saving and wise spending help families and communities (File 12)."
+    ]
+   },
+   {
+    "k": "claim",
+    "title": true,
+    "name": "My Final Claim",
+    "short": "Claim",
+    "icon": "⭐",
+    "color": "#14213D",
+    "ask": "Write one sentence that captures what you learned about Florida this year.",
+    "hint": "Florida’s story is ___ because ___.",
+    "starter": "Florida’s story is ",
+    "checks": [
+     "words",
+     "pic",
+     "because"
+    ],
+    "notes": [
+     "Start with “Florida’s story is…”",
+     "Then give a reason with “because…”, using something from your other slides.",
+     "Pick the picture that best shows your claim."
+    ]
+   }
+  ],
+  "rx": {
+   "spec": "\\d|[a-z,]\\s+[A-Z][a-z]|\\b(st\\.? augustine|tallahassee|tampa|miami|key west|jacksonville|pensacola|daytona|everglades|calusa|timucua|apalachee|seminole|tequesta|fort mose|castillo|nasa|apollo|bethune|walls|moore|steele|ponce|de soto|narv[aá]ez|flagler|ybor|hine|constitution|panhandle|peninsula|keys)\\b",
+   "why": "because|\\bso\\b|that’s why|that's why|\\bshows?\\b|matters?|important|helped|helps|changed|led to|caused|taught|teaches|proves?|\\bmeans?\\b|\\bwhy\\b|without|brought|gave|started|made",
+   "because": "because|since|\\bso\\b"
+  },
+  "checkT": {
+   "pic": "A real picture",
+   "spec": "A name, place, or date",
+   "why": "Says why it matters",
+   "because": "Has a “because”"
+  },
+  "nudgeT": {
+   "spec": "Add something specific: a name, a place, or a date from the lessons.",
+   "why": "Tell visitors why it matters. Try “This matters because…”",
+   "because": "Add “because…” and a reason."
+  },
+  "bank": [
+   {
+    "id": "ex1904",
+    "file": "ff-4-13-01-florida-exhibit-1904.jpg",
+    "thumbFile": "ff-4-13-01-th-ex1904.jpg",
+    "short": "1904 exhibit",
+    "cap": "Florida exhibit made by citizens, World's Fair, 1904 · Missouri Historical Society",
+    "tags": [
+     "civic",
+     "source"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "fl1584",
+    "file": "source-4-04-01-la-florida-map-1584-original.jpg",
+    "thumbFile": "ff-4-13-01-th-fl1584.jpg",
+    "short": "Map, 1584",
+    "cap": "“La Florida” map, 1584 · Library of Congress",
+    "tags": [
+     "map",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "atlas",
+    "file": "source-4-02-01-florida-physical-map.png",
+    "thumbFile": "ff-4-13-01-th-atlas.jpg",
+    "short": "Florida map",
+    "cap": "Map of Florida, National Atlas · U.S. government",
+    "tags": [
+     "map"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "lemoyne",
+    "file": "source-4-06-01-early-florida-map-original.jpg",
+    "thumbFile": "ff-4-13-01-th-lemoyne.jpg",
+    "short": "Map, 1591",
+    "cap": "Le Moyne’s map of Florida, printed 1591 · Library of Congress",
+    "tags": [
+     "map"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "boazio",
+    "file": "source-4-06-02-st-augustine-engraving-original.png",
+    "thumbFile": "ff-4-13-01-th-boazio.jpg",
+    "short": "St. Augustine, 1589",
+    "cap": "Boazio’s map of the 1586 attack on St. Augustine, printed 1589 · Library of Congress",
+    "tags": [
+     "map",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "lopez",
+    "file": "source-4-06-08-st-augustine-map-1783-original.jpg",
+    "thumbFile": "ff-4-13-01-th-lopez.jpg",
+    "short": "St. Augustine, 1783",
+    "cap": "Tomás López’s map of St. Augustine, 1783 · State Archives of Florida",
+    "tags": [
+     "map"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "mose",
+    "file": "source-4-07-01-fort-mose-plan-original.jpg",
+    "thumbFile": "ff-4-13-01-th-mose.jpg",
+    "short": "Fort Mose, 1760s",
+    "cap": "Plan of Fort Mose, drawn in the 1760s by Samuel Roworth · Library of Congress",
+    "tags": [
+     "map",
+     "person",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "gibson",
+    "file": "source-4-07-02-east-west-florida-1763-original.jpg",
+    "thumbFile": "ff-4-13-01-th-gibson.jpg",
+    "short": "Two Floridas, 1763",
+    "cap": "East and West Florida, engraved by John Gibson, 1763 · Library of Congress",
+    "tags": [
+     "map",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "melish",
+    "file": "source-4-07-03-melish-map-1819-original.jpg",
+    "thumbFile": "ff-4-13-01-th-melish.jpg",
+    "short": "Treaty map, 1819",
+    "cap": "John Melish’s map of the United States, 1819 · Library of Congress",
+    "tags": [
+     "map",
+     "time",
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "st1846",
+    "file": "source-4-08-01-state-of-florida-1846-original.jpg",
+    "thumbFile": "ff-4-13-01-th-st1846.jpg",
+    "short": "State map, 1846",
+    "cap": "Map of the new State of Florida, 1846 · Library of Congress",
+    "tags": [
+     "map",
+     "time",
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "debry",
+    "file": "source-4-03-02-timucua-village.jpg",
+    "thumbFile": "ff-4-13-01-th-debry.jpg",
+    "short": "Timucua town",
+    "cap": "A Timucua town, engraved by Theodor de Bry, 1591",
+    "tags": [
+     "person",
+     "source"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "castillo",
+    "file": "source-4-06-05-castillo-seawall-original.jpg",
+    "thumbFile": "ff-4-13-01-th-castillo.jpg",
+    "short": "Castillo walls",
+    "cap": "The Castillo de San Marcos, St. Augustine · National Park Service",
+    "tags": [
+     "source",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "council",
+    "file": "source-4-06-03-apalachee-council-house-original.jpg",
+    "thumbFile": "ff-4-13-01-th-council.jpg",
+    "short": "Council House",
+    "cap": "The Apalachee Council House, rebuilt at Mission San Luis · photo by Roy Lett, 2007",
+    "tags": [
+     "source",
+     "person"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "barker",
+    "file": "source-4-07-04-barker-pioneer-home-1891-original.jpg",
+    "thumbFile": "ff-4-13-01-th-barker.jpg",
+    "short": "Pioneer home, 1891",
+    "cap": "A pioneer home in South Florida, photo by George Barker, 1891",
+    "tags": [
+     "source",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "herald",
+    "file": "ff-4-08-03-herald-page-original.jpg",
+    "thumbFile": "ff-4-13-01-th-herald.jpg",
+    "short": "Newspaper, 1861",
+    "cap": "The New York Herald front page, January 13, 1861 · Library of Congress",
+    "tags": [
+     "source",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "olustee",
+    "file": "source-4-08-03-olustee-1894-original.jpg",
+    "thumbFile": "ff-4-13-01-th-olustee.jpg",
+    "short": "Olustee print",
+    "cap": "“Battle of Olustee, Fla.” print by Kurz & Allison, 1894 · State Archives of Florida",
+    "tags": [
+     "time",
+     "source"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "walls",
+    "file": "source-4-08-04-black-lawmakers-1872-original.jpg",
+    "thumbFile": "ff-4-13-01-th-walls.jpg",
+    "short": "Lawmakers, 1872",
+    "cap": "The first Black senator and representatives, Currier & Ives, 1872 · Library of Congress",
+    "tags": [
+     "person",
+     "civic",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "railroad",
+    "file": "source-4-10-01-florida-railroad-original.jpg",
+    "thumbFile": "ff-4-13-01-th-railroad.jpg",
+    "short": "Key West, 1912",
+    "cap": "Key West the day the first train arrived, January 22, 1912",
+    "tags": [
+     "time",
+     "civic",
+     "source"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "apollo",
+    "file": "source-4-10-02-apollo-11-launch-1969-original.jpg",
+    "thumbFile": "ff-4-13-01-th-apollo.jpg",
+    "short": "Apollo 11, 1969",
+    "cap": "Apollo 11 lifts off from Florida, July 16, 1969 · NASA",
+    "tags": [
+     "time",
+     "source",
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "hine",
+    "file": "source-4-10-03-hine-cigar-factory-reader-1909-original.jpg",
+    "thumbFile": "ff-4-13-01-th-hine.jpg",
+    "short": "Cigar factory, 1909",
+    "cap": "A reader in a Tampa cigar factory, photo by Lewis Hine, 1909 · Library of Congress",
+    "tags": [
+     "person",
+     "source",
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "bethune",
+    "file": "source-4-10-04-bethune-line-of-girls-1905-original.jpg",
+    "thumbFile": "ff-4-13-01-th-bethune.jpg",
+    "short": "Bethune, 1905",
+    "cap": "Mary McLeod Bethune and her students, Daytona, 1905 · State Archives of Florida",
+    "tags": [
+     "person",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "troops",
+    "file": "source-4-10-05-transports-tampa-bay-1898-original.jpg",
+    "thumbFile": "ff-4-13-01-th-troops.jpg",
+    "short": "Tampa Bay, 1898",
+    "cap": "Troop ships in Tampa Bay, about 1898 · U.S. National Archives",
+    "tags": [
+     "time",
+     "source"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "billboard",
+    "file": "source-4-10-06-altos-del-mar-billboard-1922-original.jpg",
+    "thumbFile": "ff-4-13-01-th-billboard.jpg",
+    "short": "Land boom, 1922",
+    "cap": "A land-sale billboard on the beach near Miami, 1922 · State Archives of Florida",
+    "tags": [
+     "civic",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "ccc",
+    "file": "source-4-10-07-oleno-mess-hall-1935-original.jpg",
+    "thumbFile": "ff-4-13-01-th-ccc.jpg",
+    "short": "CCC workers, 1935",
+    "cap": "CCC workers build a dining hall at O’Leno, 1935 · State Archives of Florida",
+    "tags": [
+     "civic",
+     "person",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "bus",
+    "file": "source-4-11-01-steele-harris-bus-1956-original.jpg",
+    "thumbFile": "ff-4-13-01-th-bus.jpg",
+    "short": "Bus, 1956",
+    "cap": "Rev. Steele and Rev. Harris on a Tallahassee bus, December 24, 1956 · State Archives of Florida",
+    "tags": [
+     "person",
+     "time",
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "voters",
+    "file": "source-4-11-05-citizens-1957-and-2005-original.jpg",
+    "thumbFile": "ff-4-13-01-th-voters.jpg",
+    "short": "Citizens",
+    "cap": "Signing up to vote in Tallahassee, 1957, and a volunteer, 2005",
+    "tags": [
+     "civic",
+     "person"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "townhall",
+    "file": "source-4-11-04-port-charlotte-town-hall-2005-original.jpg",
+    "thumbFile": "ff-4-13-01-th-townhall.jpg",
+    "short": "Town hall, 2005",
+    "cap": "A town hall meeting in Port Charlotte, 2005 · FEMA",
+    "tags": [
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "const",
+    "file": "source-4-12-01-florida-constitution-1838-original.jpg",
+    "thumbFile": "ff-4-13-01-th-const.jpg",
+    "short": "Constitution, 1838",
+    "cap": "Page 1 of Florida’s first constitution, 1838 · State Archives of Florida",
+    "tags": [
+     "civic",
+     "source",
+     "time"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "branches",
+    "file": "source-4-12-02-three-branches-original.jpg",
+    "thumbFile": "ff-4-13-01-th-branches.jpg",
+    "short": "Three branches",
+    "cap": "Florida’s three branches at work in Tallahassee · State Archives of Florida and others",
+    "tags": [
+     "civic"
+    ],
+    "lic": "free to use"
+   },
+   {
+    "id": "stamps",
+    "file": "source-4-12-04-stamps-1942-and-card-bill-original.jpg",
+    "thumbFile": "ff-4-13-01-th-stamps.jpg",
+    "short": "Savings, 1942",
+    "cap": "Children buy savings stamps, 1942, and a sample credit card bill",
+    "tags": [
+     "civic",
+     "source"
+    ],
+    "lic": "free to use"
+   }
+  ],
+  "bankT": "Pick a real picture from the year (all free to use), or upload your own.",
+  "moreT": "More from the year",
+  "upWarnT": "Your own picture stays on this computer. Make sure it is a real picture you are allowed to use.",
+  "notesLead": "📒 Ideas from the year",
+  "notesTip": "Use one of these, or your own idea from any file. Write it in your own words.",
+  "readyT": "slides ready",
+  "allT": "All six slides are ready! Download them so you can present them next lesson.",
+  "dlT": "Download my slides (.pptx)",
+  "dlDoneT": "Downloaded. Keep the file: you will present it next lesson.",
+  "dlToastT": "Downloaded! The file is in your Downloads folder. Keep it for the next lesson.",
+  "keepT": "Your words and pictures also save in this browser.",
+  "overT": "Too many! Cut {n} words. Visitors read fast.",
+  "underT": "Write at least {n}.",
+  "teacher": [
+   {
+    "id": "journal-q1",
+    "label": "1. Florida geography that shaped its history"
+   },
+   {
+    "id": "journal-q2",
+    "label": "2. A person who matters"
+   },
+   {
+    "id": "journal-q3",
+    "label": "3. A citizen responsibility today"
+   }
+  ],
+  "teacherT": "For my teacher · my three answers",
+  "present": false
+ },
+ "steps": [
+  {
+   "t": "Gather evidence",
+   "w": "Three questions from across the year. Use the hall, the crates, and the wall."
+  },
+  {
+   "t": "Build your slides",
+   "w": "Six slides in the Exhibit Studio: a real picture and your own words on each."
+  },
+  {
+   "t": "Your entry",
+   "w": "Your slides fill in your notebook entry. Then write your Historian’s Sentence."
+  },
+  {
+   "t": "Review & turn in",
+   "w": "Look over your work, copy or download it, then check the list."
+  }
+ ],
+ "write": {
+  "label": "My Notebook Entry: My Florida History Exhibit"
+ },
+ "lockline": "The Florida Files cabinet shows up here after your six slides fill your entry and you check off the whole list.",
+ "vocab": {
+  "type": "holdup",
+  "kicker": "Hold it up",
+  "h": "Hang four words on the wall",
+  "root": "hab",
+  "hl": "hab|hib",
+  "voice": "Tap each word to hear it. Then tap a meaning and the word it matches. Each match holds one frame up on its hook.",
+  "why": {
+   "icon": "🖼️",
+   "q": "Why hang frames?",
+   "t": "<b>Hab<\/b> and <b>hib<\/b> come from the Latin word <i>habere<\/i>, “to have” or “to hold.” To <b>exhibit<\/b> something is to hold it out so people can see it. Museums hold up their pictures on hooks. That’s why each word you match gets held up on the wall."
+  },
+  "words": [
+   {
+    "w": "exhibit",
+    "m": "to hold something out for people to see",
+    "miss": "Think about ex- (“out”). Which meaning holds something out?"
+   },
+   {
+    "w": "habitat",
+    "m": "the place where a plant or animal lives",
+    "miss": "Which meaning is about where a plant or animal lives?"
+   },
+   {
+    "w": "inhabit",
+    "m": "to live in a place",
+    "miss": "In- means “in.” Which meaning is about living in a place?"
+   },
+   {
+    "w": "prohibit",
+    "m": "to hold someone back from doing something; to forbid it",
+    "miss": "Pro- means “before” or “forward.” Which meaning holds someone back?"
+   }
+  ],
+  "win": "🖼️ The wall is hung!"
+ },
+ "cabinet": {
+  "n": 13,
+  "where": "The whole state, and the 1904 World’s Fair in St. Louis"
+ },
+ "notes": {
+  "learned": [
+   "A Florida historian-citizen studies Florida’s past and takes part in Florida today.",
+   "An exhibit shows people real things and explains why they matter.",
+   "A strong exhibit piece is real evidence, names something specific, and says why it matters.",
+   "A claim is one sentence that says what you think is true, and why.",
+   "A museum registrar asks: Who made it? When? Where is it kept today? A picture nobody can trace can’t be evidence.",
+   "In 1904, citizens of Florida built their own exhibit at the World’s Fair in St. Louis."
+  ],
+  "vocab": [
+   [
+    "exhibit",
+    "a display that shows people real things and explains why they matter; to hold something out for people to see"
+   ],
+   [
+    "historian-citizen",
+    "someone who studies Florida’s past and takes part in Florida today"
+   ],
+   [
+    "civic",
+    "about citizens and government"
+   ],
+   [
+    "economic",
+    "about money, jobs, and trade"
+   ],
+   [
+    "claim",
+    "one sentence that says what you think is true, and why"
+   ],
+   [
+    "evidence",
+    "facts and sources that show something is true"
+   ],
+   [
+    "source",
+    "something from the past, like a letter, map, or photo, that tells us about it"
+   ],
+   [
+    "registrar",
+    "the museum worker who keeps the records for every object"
+   ],
+   [
+    "presentation",
+    "a few slides you show people while you explain them"
+   ],
+   [
+    "ecosystem",
+    "a place where plants and animals live together"
+   ],
+   [
+    "financial literacy",
+    "knowing how money works"
+   ],
+   [
+    "habitat",
+    "the place where a plant or animal lives"
+   ],
+   [
+    "inhabit",
+    "to live in a place"
+   ],
+   [
+    "prohibit",
+    "to hold someone back from doing something; to forbid it"
+   ]
+  ],
+  "wordParts": "hab / hib = have, hold (from the Latin habere): exhibit, habitat, inhabit, prohibit"
+ },
+ "flags": {
+  "journal-q1": [
+   {
+    "t": "a land or water feature",
+    "rx": "river|coast|ocean|gulf|bay|beach|swamp|everglades|wetland|marsh|lake|okeechobee|spring|land|soil|climate|weather|hurricane|storm|warm|hot|sun|keys|island|peninsula|panhandle|harbor|port|water|sea|forest|pine|flat|region|location|close to|near|cuba|shore|sand",
+    "n": 1
+   },
+   {
+    "t": "how it shaped history",
+    "rx": "because|\\bso\\b|shaped|helped|made|led|caused|brought|let|allowed|settle|lived|live|built|farm|grow|grew|trade|ship|sail|fort|town|city|cities|people|visitors|tourist|fish|easy|hard|attack|protect|came|move|travel",
+    "n": 1
+   }
+  ],
+  "journal-q2": [
+   {
+    "t": "a person",
+    "rx": "ponce|le[oó]n|narv|soto|men[eé]ndez|bethune|moore|walls|steele|harris|hurston|flagler|plant|ybor|osceola|jackson|randolph|johnson|lewis|jenkins|king|calusa|timucua|seminole|apalachee|explorer|leader|teacher|minister|reverend|governor|senator|congress|person|man|woman|\\bshe\\b|\\bhe\\b|\\bher\\b|\\bhis\\b|they",
+    "n": 1
+   },
+   {
+    "t": "why they matter",
+    "rx": "because|\\bso\\b|matter|important|helped|changed|fought|started|led|built|gave|showed|made|first|brave|courage|freedom|free|rights|school|vote|equal|fair|discover",
+    "n": 1
+   }
+  ],
+  "journal-q3": [
+   {
+    "t": "a responsibility",
+    "rx": "vote|voting|jury|law|laws|rule|tax|pay|serve|service|volunteer|help|clean|recycle|save|saving|budget|money|spend|respect|honest|community|neighbor|informed|news|learn|school|census|protect|obey|follow|care",
+    "n": 1
+   },
+   {
+    "t": "why it matters",
+    "rx": "because|\\bso\\b|helps?|keeps?|makes?|important|matter|better|safe|fair|good|need|should|must|every|everyone|people|community|future|together",
+    "n": 1
+   }
+  ]
+ },
+ "hints": {
+  "journal-q1": [
+   "Look at the map frame in the hall (frame 2) and crate 1 on tab 2.",
+   "Think about Florida’s water: rivers, coasts, harbors, the Keys. Who came, settled, or built because of it?",
+   "Try this shape: “Florida’s ___ shaped its history because ___.”"
+  ],
+  "journal-q2": [
+   "Look at the frames in the hall and the Person or Event part of your board.",
+   "Pick anyone from the year: an explorer, a leader, a freedom-seeker, a citizen. What did they do?",
+   "Try this shape: “___ matters because ___.”"
+  ],
+  "journal-q3": [
+   "Look at the Civic or Economic part of your board on tab 2.",
+   "Think about voting, serving, volunteering, following laws, or using money wisely.",
+   "Try this shape: “One responsibility Florida citizens have is ___. It matters because ___.”"
+  ]
+ },
+ "scholar": {
+  "journal-q1": "Go further: name a second land or water feature and compare how each one shaped Florida.",
+  "journal-q2": "Go further: name a primary source from the year that tells us about this person or event.",
+  "journal-q3": "Go further: how did someone from Florida’s past carry out this same responsibility?"
+ },
+ "quizMiss": [
+  {
+   "a": "The Apalachee farmed in the Panhandle, near today’s Tallahassee. Which people lived by the water in southwest Florida? Look at crate 1 on tab 2.",
+   "c": "The Timucua lived in northeast and north-central Florida. Which people lived by the Gulf in southwest Florida and fished?"
+  },
+  {
+   "a": "Fort Mose was built by Spain, not Britain, in 1738 near St. Augustine. Look at frame 7 in the hall on tab 1.",
+   "c": "Fort Mose was near St. Augustine, not Lake Okeechobee. It was a free Black town. Look at crate 2 on tab 2."
+  },
+  {
+   "b": "Federal, state, and local are levels of government, not branches. Look at frame 12 in the hall (Government & Money).",
+   "c": "Those aren’t branches of government. One branch makes laws, one carries them out, and one decides what laws mean."
+  }
+ ],
+ "voice": [
+  {
+   "slot": "guide1",
+   "label": "Welcome to the hall",
+   "at": "scene1",
+   "script": "Look where we are! The door with 13 opened onto a big, empty hall. See the dark frames along the wall? There is one for every file we opened this year. Tap a frame. Pick the caption that matches that file’s real source, and its lamp comes on. Let’s light up the whole hall."
+  },
+  {
+   "slot": "guide2",
+   "label": "The one I’d keep",
+   "at": "s1done",
+   "script": "If this hall could hold only one picture, I think I’d keep the bus in Tallahassee. Two men sat in the middle of that bus in 1956, and that took courage. That’s my pick, and my reason. Pause me, and pick yours. Which frame would you keep, and why? Then go to the Explore tab, tab 2."
+  },
+  {
+   "slot": "guide3",
+   "label": "Unpack the crates",
+   "at": "explore",
+   "script": "Four crates just came in, full of things from our year. Lift the lid on the first one. Then put each thing on the part of the exhibit board where it fits: a map, a source, a timeline date, a person or event, or a way government and money connect. Each crate you unpack opens part of the reading."
+  },
+  {
+   "slot": "guide4",
+   "label": "The registrar’s three questions",
+   "at": "evidence",
+   "script": "In a real museum, a worker called a registrar checks every object before it goes on display. The registrar asks three questions. Who made it? When? And where is it kept today? First, tap every gold number on the wall. Then help the registrar check four pictures. If nobody can answer the questions, the picture can’t be evidence."
+  },
+  {
+   "slot": "guide5",
+   "label": "How I build one slide",
+   "at": "plan",
+   "script": "Here’s how I build one slide. Say I’m making a slide about the library in my own town. First I pick a photo of it. Then I write: Our library opened in 1950. It matters because anyone can borrow books for free. A real picture, a date, and why it matters. Now you build your six slides. Your words fill in your notebook for you."
+  }
+ ],
+ "cues": {
+  "guide1": [
+   {
+    "at": "^frames$",
+    "sel": ".spk-lh-hall .row",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Tap$",
+    "sel": ".spk-lh-fr",
+    "i": 0,
+    "fx": "point"
+   },
+   {
+    "at": "^caption$",
+    "sel": ".spk-lh-q",
+    "fx": "pop",
+    "tag": "pick one"
+   },
+   {
+    "at": "^lamp$",
+    "sel": ".spk-lh-fr .lamp",
+    "all": true,
+    "fx": "glow"
+   },
+   {
+    "at": "^hall$",
+    "sel": ".spk-lh-hall .far",
+    "fx": "pop"
+   }
+  ],
+  "guide2": [
+   {
+    "at": "^bus$",
+    "sel": ".spk-lh-fr[data-i=\"10\"]",
+    "fx": "pop",
+    "scroll": true
+   },
+   {
+    "at": "^courage$",
+    "sel": ".spk-lh-q",
+    "fx": "glow"
+   },
+   {
+    "at": "^Pause$",
+    "sel": ".spk-lh-hall .row",
+    "fx": "glow"
+   },
+   {
+    "at": "^Explore$",
+    "sel": ".spk-file .spk-tab",
+    "i": 1,
+    "fx": "point"
+   }
+  ],
+  "guide3": [
+   {
+    "at": "^crates$",
+    "sel": ".spk-crt-dock",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^lid$",
+    "sel": ".spk-crt-dock .crate",
+    "fx": "pop"
+   },
+   {
+    "at": "^board$",
+    "sel": ".spk-crt-board",
+    "fx": "glow"
+   },
+   {
+    "at": "^timeline$",
+    "sel": ".spk-crt-board .sec",
+    "i": 2,
+    "fx": "pop"
+   },
+   {
+    "at": "^reading$",
+    "sel": ".spk-crt-ct",
+    "fx": "point"
+   }
+  ],
+  "guide4": [
+   {
+    "at": "^registrar$",
+    "sel": ".spk-rgs .spk-game-head",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^Who$",
+    "sel": ".spk-rgs .spk-voice",
+    "fx": "trace"
+   },
+   {
+    "at": "^gold$",
+    "sel": "#panel-explore .spk-hotinfo",
+    "fx": "pop"
+   },
+   {
+    "at": "^four$",
+    "sel": ".spk-rgs-shelf",
+    "fx": "glow"
+   },
+   {
+    "at": "^evidence$",
+    "sel": ".spk-rgs-shelf .no",
+    "fx": "point"
+   }
+  ],
+  "guide5": [
+   {
+    "at": "^slide$",
+    "sel": "#ffst-root",
+    "fx": "glow",
+    "scroll": true
+   },
+   {
+    "at": "^six$",
+    "sel": "#ffst-root .ffst-path",
+    "fx": "pop"
+   },
+   {
+    "at": "^notebook$",
+    "sel": "#journal-assign",
+    "fx": "point",
+    "scroll": true
+   }
+  ]
+ }
+}</script>
 </head>
 <body>
 <div id="pageTop"></div>
@@ -2021,197 +3832,110 @@ body.tx-active .tx-toggle-label {
   </div>
 </div>
 
-<!-- ═══ SVG HERO BANNER: Build the Florida History Exhibit ═══ -->
-<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+<!-- ═══ SVG HERO BANNER: Build the Florida History Exhibit · the hall at first light ═══ -->
+<svg viewBox="0 0 920 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;" role="img" aria-label="A long museum hall at first light. Lit picture frames line both walls. At the far end a wooden door stands open, and morning sunlight pours through it across the floor.">
 <defs>
-  <linearGradient id="h1301sky" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#0c1a33"/>
-    <stop offset="50%" stop-color="#1a2a4a"/>
-    <stop offset="100%" stop-color="#2a3a5a"/>
-  </linearGradient>
-  <linearGradient id="h1301gold" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#d4a830"/>
-    <stop offset="100%" stop-color="#b8901a"/>
-  </linearGradient>
-  <linearGradient id="h1301panel" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f8f6f0"/>
-    <stop offset="100%" stop-color="#eae6da"/>
-  </linearGradient>
-  <radialGradient id="h1301spot" cx="0.5" cy="0" r="0.8">
-    <stop offset="0%" stop-color="#ffe88840"/>
-    <stop offset="100%" stop-color="#ffe88800"/>
-  </radialGradient>
-  <filter id="h1301shd" x="-5%" y="-5%" width="115%" height="115%">
-    <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#00000050"/>
-  </filter>
-  <filter id="h1301glo" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur stdDeviation="4" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
+  <linearGradient id="b1301wl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1B2340"/><stop offset="1" stop-color="#39406A"/></linearGradient>
+  <linearGradient id="b1301wr" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#1B2340"/><stop offset="1" stop-color="#39406A"/></linearGradient>
+  <linearGradient id="b1301cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121830"/><stop offset="1" stop-color="#2B3254"/></linearGradient>
+  <linearGradient id="b1301fl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#6E5A3A"/><stop offset="1" stop-color="#4A3E2C"/></linearGradient>
+  <linearGradient id="b1301sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFBE6"/><stop offset="1" stop-color="#FFD98A"/></linearGradient>
+  <linearGradient id="b1301beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".85"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></linearGradient>
+  <radialGradient id="b1301glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF3C4" stop-opacity=".95"/><stop offset="1" stop-color="#FFE08A" stop-opacity="0"/></radialGradient>
   <style>
-    .h1301-float { animation: h1301-float 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1301-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-    .h1301-pulse { animation: h1301-pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1301-pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-    .h1301-glow { animation: h1301-glow 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    @keyframes h1301-glow { 0%,100% { opacity: 0.3; } 50% { opacity: 0.7; } }
+    .b1301beam{animation:b1301beam 6s ease-in-out infinite}.b1301lamp{animation:b1301lamp 4s ease-in-out infinite}.b1301lamp2{animation:b1301lamp 4s 1.3s ease-in-out infinite}.b1301mote{animation:b1301mote 9s linear infinite}.b1301mote2{animation:b1301mote 11s 3s linear infinite}
+    @keyframes b1301beam{0%,100%{opacity:.75}50%{opacity:.95}}@keyframes b1301lamp{0%,100%{opacity:.55}50%{opacity:.9}}@keyframes b1301mote{0%{transform:translate(0,0);opacity:0}15%{opacity:.8}100%{transform:translate(-30px,-40px);opacity:0}}
+    @media (prefers-reduced-motion: reduce){.b1301beam,.b1301lamp,.b1301lamp2,.b1301mote,.b1301mote2{animation:none}}
   </style>
 </defs>
-<!-- Background -->
-<rect width="920" height="260" fill="url(#h1301sky)"/>
-<!-- Gallery wall texture -->
-<rect width="920" height="260" fill="url(#h1301sky)" opacity="0.9"/>
-<rect x="0" y="250" width="920" height="10" fill="#0a1225"/>
-<!-- Gallery spotlights from above -->
-<g transform="translate(160,0)">
-  <g class="h1301-glow">
-    <ellipse cx="0" cy="130" rx="80" ry="130" fill="url(#h1301spot)"/>
-  </g>
+<polygon points="0,0 920,0 514,56 406,56" fill="url(#b1301cl)"/>
+<polygon points="0,0 406,56 406,132 0,200" fill="url(#b1301wl)"/>
+<polygon points="920,0 514,56 514,132 920,200" fill="url(#b1301wr)"/>
+<polygon points="0,200 406,132 514,132 920,200" fill="url(#b1301fl)"/>
+<clipPath id="b1301flc"><polygon points="0,200 406,132 514,132 920,200"/></clipPath><g clip-path="url(#b1301flc)">
+<line x1="-400" y1="200" x2="406.0" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="-310" y1="200" x2="411.4" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="-220" y1="200" x2="416.8" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="-130" y1="200" x2="422.2" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="-40" y1="200" x2="427.6" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="50" y1="200" x2="433.0" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="140" y1="200" x2="438.4" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="230" y1="200" x2="443.8" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="320" y1="200" x2="449.2" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="410" y1="200" x2="454.6" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="500" y1="200" x2="460.0" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="590" y1="200" x2="465.4" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="680" y1="200" x2="470.8" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="770" y1="200" x2="476.2" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="860" y1="200" x2="481.6" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="950" y1="200" x2="487.0" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="1040" y1="200" x2="492.4" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="1130" y1="200" x2="497.8" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="1220" y1="200" x2="503.2" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
+<line x1="1310" y1="200" x2="508.6" y2="132" stroke="#3E3424" stroke-width="1.2" opacity=".55"/>
 </g>
-<g transform="translate(360,0)">
-  <g class="h1301-glow">
-    <ellipse cx="0" cy="130" rx="80" ry="130" fill="url(#h1301spot)"/>
-  </g>
-</g>
-<g transform="translate(560,0)">
-  <g class="h1301-glow">
-    <ellipse cx="0" cy="130" rx="80" ry="130" fill="url(#h1301spot)"/>
-  </g>
-</g>
-<g transform="translate(760,0)">
-  <g class="h1301-glow">
-    <ellipse cx="0" cy="130" rx="80" ry="130" fill="url(#h1301spot)"/>
-  </g>
-</g>
-<!-- Exhibit rail / bar at top -->
-<rect x="60" y="30" width="800" height="4" rx="2" fill="url(#h1301gold)" opacity="0.7"/>
-<!-- Panel 1: Florida Map -->
-<g transform="translate(90,50)" filter="url(#h1301shd)">
-  <g class="h1301-float">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="url(#h1301panel)"/>
-    <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#h1301gold)"/>
-    <!-- Florida peninsula shape -->
-    <path d="M50,25 L70,25 L75,50 L80,80 L78,100 L70,120 L60,135 L50,130 L45,110 L42,80 L44,50 Z" fill="#1a5276" opacity="0.7"/>
-    <path d="M42,80 L30,85 L25,90 L30,95 L42,90" fill="#1a5276" opacity="0.5"/>
-    <!-- Pin dots -->
-    <circle cx="60" cy="45" r="3" fill="#c0392b"/>
-    <circle cx="55" cy="95" r="3" fill="#c0392b"/>
-    <circle cx="65" cy="70" r="3" fill="#c0392b"/>
-  </g>
-</g>
-<!-- Connecting line 1-2 -->
-<g transform="translate(210,130)">
-  <g class="h1301-pulse">
-    <line x1="0" y1="0" x2="50" y2="0" stroke="#d4a830" stroke-width="2" stroke-dasharray="4,3"/>
-    <circle cx="25" cy="0" r="4" fill="#d4a830"/>
-  </g>
-</g>
-<!-- Panel 2: Document/Source -->
-<g transform="translate(260,50)" filter="url(#h1301shd)">
-  <g class="h1301-float" style="animation-delay: -1s;">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="url(#h1301panel)"/>
-    <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#h1301gold)"/>
-    <!-- Document icon -->
-    <rect x="25" y="25" width="70" height="90" rx="2" fill="#f0e8d0" stroke="#c0a878" stroke-width="1"/>
-    <path d="M75,25 L95,45" stroke="#c0a878" stroke-width="1" fill="none"/>
-    <rect x="75" y="25" width="20" height="20" fill="#e0d4b8"/>
-    <!-- Text lines -->
-    <rect x="35" y="50" width="50" height="2" rx="1" fill="#a09070" opacity="0.5"/>
-    <rect x="35" y="58" width="45" height="2" rx="1" fill="#a09070" opacity="0.4"/>
-    <rect x="35" y="66" width="50" height="2" rx="1" fill="#a09070" opacity="0.4"/>
-    <rect x="35" y="74" width="40" height="2" rx="1" fill="#a09070" opacity="0.35"/>
-    <rect x="35" y="82" width="48" height="2" rx="1" fill="#a09070" opacity="0.3"/>
-    <rect x="35" y="90" width="42" height="2" rx="1" fill="#a09070" opacity="0.25"/>
-    <!-- Magnifying glass -->
-    <circle cx="80" cy="120" r="12" fill="none" stroke="#1a5276" stroke-width="2" opacity="0.6"/>
-    <line x1="88" y1="128" x2="98" y2="138" stroke="#1a5276" stroke-width="2.5" opacity="0.6"/>
-  </g>
-</g>
-<!-- Connecting line 2-3 -->
-<g transform="translate(380,130)">
-  <g class="h1301-pulse" style="animation-delay: -0.5s;">
-    <line x1="0" y1="0" x2="50" y2="0" stroke="#d4a830" stroke-width="2" stroke-dasharray="4,3"/>
-    <circle cx="25" cy="0" r="4" fill="#d4a830"/>
-  </g>
-</g>
-<!-- Panel 3: Timeline -->
-<g transform="translate(430,50)" filter="url(#h1301shd)">
-  <g class="h1301-float" style="animation-delay: -2s;">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="url(#h1301panel)"/>
-    <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#h1301gold)"/>
-    <!-- Timeline line -->
-    <line x1="60" y1="25" x2="60" y2="145" stroke="#1a5276" stroke-width="2"/>
-    <!-- Timeline nodes -->
-    <circle cx="60" cy="40" r="5" fill="#d4a830"/>
-    <rect x="70" y="36" width="30" height="3" rx="1" fill="#a09070" opacity="0.5"/>
-    <circle cx="60" cy="65" r="5" fill="#d4a830"/>
-    <rect x="20" y="61" width="30" height="3" rx="1" fill="#a09070" opacity="0.5"/>
-    <circle cx="60" cy="90" r="5" fill="#d4a830"/>
-    <rect x="70" y="86" width="30" height="3" rx="1" fill="#a09070" opacity="0.5"/>
-    <circle cx="60" cy="115" r="5" fill="#d4a830"/>
-    <rect x="20" y="111" width="30" height="3" rx="1" fill="#a09070" opacity="0.5"/>
-    <circle cx="60" cy="140" r="5" fill="#c0392b"/>
-    <rect x="70" y="136" width="30" height="3" rx="1" fill="#a09070" opacity="0.5"/>
-  </g>
-</g>
-<!-- Connecting line 3-4 -->
-<g transform="translate(550,130)">
-  <g class="h1301-pulse" style="animation-delay: -1.5s;">
-    <line x1="0" y1="0" x2="50" y2="0" stroke="#d4a830" stroke-width="2" stroke-dasharray="4,3"/>
-    <circle cx="25" cy="0" r="4" fill="#d4a830"/>
-  </g>
-</g>
-<!-- Panel 4: Person Silhouette Outline -->
-<g transform="translate(600,50)" filter="url(#h1301shd)">
-  <g class="h1301-float" style="animation-delay: -3s;">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="url(#h1301panel)"/>
-    <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#h1301gold)"/>
-    <!-- Person silhouette outline (no face details) -->
-    <circle cx="60" cy="45" r="16" fill="none" stroke="#1a5276" stroke-width="2.5" opacity="0.6"/>
-    <path d="M35,140 L35,100 Q35,75 60,70 Q85,75 85,100 L85,140" fill="none" stroke="#1a5276" stroke-width="2.5" opacity="0.6"/>
-    <!-- Question mark inside -->
-    <path d="M55,40 Q55,32 60,32 Q67,32 67,38 Q67,42 60,44 L60,48" fill="none" stroke="#d4a830" stroke-width="2"/>
-    <circle cx="60" cy="53" r="1.5" fill="#d4a830"/>
-  </g>
-</g>
-<!-- Connecting line 4-5 -->
-<g transform="translate(720,130)">
-  <g class="h1301-pulse" style="animation-delay: -2.5s;">
-    <line x1="0" y1="0" x2="50" y2="0" stroke="#d4a830" stroke-width="2" stroke-dasharray="4,3"/>
-    <circle cx="25" cy="0" r="4" fill="#d4a830"/>
-  </g>
-</g>
-<!-- Panel 5: Civic/Economic Symbol -->
-<g transform="translate(770,50)" filter="url(#h1301shd)">
-  <g class="h1301-float" style="animation-delay: -4s;">
-    <rect x="0" y="0" width="120" height="160" rx="3" fill="url(#h1301panel)"/>
-    <rect x="0" y="0" width="120" height="4" rx="2" fill="url(#h1301gold)"/>
-    <!-- Capitol dome shape -->
-    <rect x="35" y="100" width="50" height="40" fill="#1a5276" opacity="0.5"/>
-    <rect x="30" y="95" width="60" height="8" rx="2" fill="#1a5276" opacity="0.6"/>
-    <path d="M40,95 Q60,40 80,95" fill="#1a5276" opacity="0.5"/>
-    <line x1="60" y1="55" x2="60" y2="40" stroke="#d4a830" stroke-width="2"/>
-    <circle cx="60" cy="37" r="4" fill="#d4a830" opacity="0.8"/>
-    <!-- Columns -->
-    <rect x="40" y="100" width="5" height="35" fill="#2a4a6a" opacity="0.5"/>
-    <rect x="52" y="100" width="5" height="35" fill="#2a4a6a" opacity="0.5"/>
-    <rect x="64" y="100" width="5" height="35" fill="#2a4a6a" opacity="0.5"/>
-    <rect x="76" y="100" width="5" height="35" fill="#2a4a6a" opacity="0.5"/>
-  </g>
-</g>
-<!-- Exhibit rail bottom -->
-<rect x="60" y="225" width="800" height="3" rx="1" fill="url(#h1301gold)" opacity="0.4"/>
-<!-- Small decorative stars -->
-<g transform="translate(30,20)">
-  <g class="h1301-pulse">
-    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#d4a830" opacity="0.5"/>
-  </g>
-</g>
-<g transform="translate(900,25)">
-  <g class="h1301-pulse" style="animation-delay: -2s;">
-    <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#d4a830" opacity="0.5"/>
-  </g>
-</g>
+<rect x="406" y="56" width="108" height="76" fill="#2F3658"/>
+<rect x="436" y="62" width="48" height="64" fill="url(#b1301sun)"/>
+<circle cx="460.0" cy="92" r="44" fill="url(#b1301glow)"/>
+<polygon points="436,62 418,56 418,131 436,126" fill="#6B4A2B" stroke="#3B2A16" stroke-width="1.5"/>
+<rect x="421" y="70" width="10" height="20" fill="#7E5A35" transform="skewY(14)" opacity=".0"/>
+<polygon class="b1301beam" points="436,126 484,126 640,200 300,200" fill="url(#b1301beam)"/>
+<polygon points="20.3,53.2 65.0,55.8 65.0,109.8 20.3,111.3" fill="#FFE9A8" stroke="#C9A257" stroke-width="3.9"/>
+<polygon points="27.0,63.9 58.3,65.2 58.3,100.2 27.0,100.8" fill="#7A9BB8" opacity=".75"/>
+<ellipse class="b1301lamp" cx="42.6" cy="52.9" rx="24.9" ry="15.4" fill="url(#b1301glow)"/>
+<rect x="34.9" y="43.4" width="15.4" height="3.1" rx="1" fill="#E2C277"/>
+<polygon points="121.8,59.1 166.5,61.7 166.5,106.5 121.8,108.0" fill="#F6D58A" stroke="#B98F45" stroke-width="3.1"/>
+<polygon points="128.5,68.2 159.8,69.5 159.8,98.5 128.5,99.1" fill="#8C7A5A" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="144.1" cy="60.8" rx="19.4" ry="12.4" fill="url(#b1301glow)"/>
+<rect x="137.9" y="51.3" width="12.4" height="2.6" rx="1" fill="#E2C277"/>
+<polygon points="203.0,63.9 247.7,66.5 247.7,103.8 203.0,105.3" fill="#FBE3B0" stroke="#C9A257" stroke-width="2.5"/>
+<polygon points="209.7,71.6 241.0,72.9 241.0,97.2 209.7,97.7" fill="#6E8F6A" opacity=".75"/>
+<ellipse class="b1301lamp" cx="225.3" cy="67.2" rx="15.0" ry="10.0" fill="url(#b1301glow)"/>
+<rect x="220.3" y="57.7" width="10.0" height="2.2" rx="1" fill="#E2C277"/>
+<polygon points="268.0,67.7 312.6,70.3 312.6,101.7 268.0,103.1" fill="#FFE9A8" stroke="#B98F45" stroke-width="2.0"/>
+<polygon points="274.7,74.3 305.9,75.7 305.9,96.1 274.7,96.6" fill="#9C6B4E" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="290.3" cy="72.3" rx="11.5" ry="8.1" fill="url(#b1301glow)"/>
+<rect x="286.2" y="62.8" width="8.1" height="1.9" rx="1" fill="#E2C277"/>
+<polygon points="316.7,70.5 361.3,73.1 361.3,100.0 316.7,101.5" fill="#F6D58A" stroke="#C9A257" stroke-width="1.7"/>
+<polygon points="323.4,76.4 354.6,77.7 354.6,95.3 323.4,95.8" fill="#5E7896" opacity=".75"/>
+<ellipse class="b1301lamp" cx="339.0" cy="75.8" rx="8.8" ry="6.6" fill="url(#b1301glow)"/>
+<rect x="335.7" y="66.3" width="6.6" height="1.6" rx="1" fill="#E2C277"/>
+<polygon points="353.2,72.7 381.6,74.3 381.6,99.4 353.2,100.3" fill="#FBE3B0" stroke="#B98F45" stroke-width="1.4"/>
+<polygon points="357.5,77.8 377.4,78.7 377.4,94.9 357.5,95.3" fill="#8E8466" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="367.4" cy="77.5" rx="6.9" ry="5.6" fill="url(#b1301glow)"/>
+<rect x="364.6" y="68.0" width="5.6" height="1.5" rx="1" fill="#E2C277"/>
+<polygon points="899.7,53.2 855.0,55.8 855.0,109.8 899.7,111.3" fill="#FFE9A8" stroke="#C9A257" stroke-width="3.9"/>
+<polygon points="893.0,63.9 861.7,65.2 861.7,100.2 893.0,100.8" fill="#7A9BB8" opacity=".75"/>
+<ellipse class="b1301lamp" cx="877.4" cy="52.9" rx="24.9" ry="15.4" fill="url(#b1301glow)"/>
+<rect x="869.7" y="43.4" width="15.4" height="3.1" rx="1" fill="#E2C277"/>
+<polygon points="798.2,59.1 753.5,61.7 753.5,106.5 798.2,108.0" fill="#F6D58A" stroke="#B98F45" stroke-width="3.1"/>
+<polygon points="791.5,68.2 760.2,69.5 760.2,98.5 791.5,99.1" fill="#8C7A5A" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="775.9" cy="60.8" rx="19.4" ry="12.4" fill="url(#b1301glow)"/>
+<rect x="769.7" y="51.3" width="12.4" height="2.6" rx="1" fill="#E2C277"/>
+<polygon points="717.0,63.9 672.3,66.5 672.3,103.8 717.0,105.3" fill="#FBE3B0" stroke="#C9A257" stroke-width="2.5"/>
+<polygon points="710.3,71.6 679.0,72.9 679.0,97.2 710.3,97.7" fill="#6E8F6A" opacity=".75"/>
+<ellipse class="b1301lamp" cx="694.7" cy="67.2" rx="15.0" ry="10.0" fill="url(#b1301glow)"/>
+<rect x="689.7" y="57.7" width="10.0" height="2.2" rx="1" fill="#E2C277"/>
+<polygon points="652.0,67.7 607.4,70.3 607.4,101.7 652.0,103.1" fill="#FFE9A8" stroke="#B98F45" stroke-width="2.0"/>
+<polygon points="645.3,74.3 614.1,75.7 614.1,96.1 645.3,96.6" fill="#9C6B4E" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="629.7" cy="72.3" rx="11.5" ry="8.1" fill="url(#b1301glow)"/>
+<rect x="625.7" y="62.8" width="8.1" height="1.9" rx="1" fill="#E2C277"/>
+<polygon points="603.3,70.5 558.7,73.1 558.7,100.0 603.3,101.5" fill="#F6D58A" stroke="#C9A257" stroke-width="1.7"/>
+<polygon points="596.6,76.4 565.4,77.7 565.4,95.3 596.6,95.8" fill="#5E7896" opacity=".75"/>
+<ellipse class="b1301lamp" cx="581.0" cy="75.8" rx="8.8" ry="6.6" fill="url(#b1301glow)"/>
+<rect x="577.7" y="66.3" width="6.6" height="1.6" rx="1" fill="#E2C277"/>
+<polygon points="566.8,72.7 538.4,74.3 538.4,99.4 566.8,100.3" fill="#FBE3B0" stroke="#B98F45" stroke-width="1.4"/>
+<polygon points="562.5,77.8 542.6,78.7 542.6,94.9 562.5,95.3" fill="#8E8466" opacity=".75"/>
+<ellipse class="b1301lamp2" cx="552.6" cy="77.5" rx="6.9" ry="5.6" fill="url(#b1301glow)"/>
+<rect x="549.8" y="68.0" width="5.6" height="1.5" rx="1" fill="#E2C277"/>
+<rect x="147" y="150" width="6" height="40" fill="#C9A257"/><circle cx="150" cy="148" r="5" fill="#E2C277"/>
+<rect x="767" y="150" width="6" height="40" fill="#C9A257"/><circle cx="770" cy="148" r="5" fill="#E2C277"/>
+<path d="M150,154 Q200,170 250,160" fill="none" stroke="#8E2B2B" stroke-width="4"/><path d="M770,154 Q720,170 670,160" fill="none" stroke="#8E2B2B" stroke-width="4"/>
+<rect x="247" y="156" width="6" height="34" fill="#C9A257"/><circle cx="250" cy="154" r="4.5" fill="#E2C277"/><rect x="667" y="156" width="6" height="34" fill="#C9A257"/><circle cx="670" cy="154" r="4.5" fill="#E2C277"/>
+<circle class="b1301mote" cx="470" cy="150" r="1.6" fill="#FFF6D0"/>
+<circle class="b1301mote2" cx="500" cy="170" r="1.6" fill="#FFF6D0"/>
+<circle class="b1301mote2" cx="440" cy="135" r="1.6" fill="#FFF6D0"/>
+<circle class="b1301mote" cx="520" cy="145" r="1.6" fill="#FFF6D0"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -3767,5 +5491,8 @@ window.addEventListener('load',function(){run();setTimeout(run,800);setTimeout(r
 })();
 </script>
 <!-- /OAO-STD-TIPS -->
+<!-- ═══ FLORIDA FILES · SPARKLE LAYER — shared files in assets/sparkle; this lesson's content is the ff-data block in <head>. Delete these two lines and the ff-data block to restore the plain lesson. ═══ -->
+<link rel="stylesheet" href="assets/sparkle/ff-sparkle.css">
+<script src="assets/sparkle/ff-sparkle.js"></script>
 </body>
 </html>
