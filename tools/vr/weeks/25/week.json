@@ -1,0 +1,222 @@
+{
+ "id": "g4ss-vr-25",
+ "week": 25,
+ "lesson": "4.10.08",
+ "lessonA": "4.10.07",
+ "lessonTitle": "Tourism, the Space Program, and Florida’s Economy",
+ "title": "The Space Coast",
+ "emoji": "🚀",
+ "pattern": "B",
+ "canvasName": "4.10.08 VR · The Space Coast",
+ "details": [
+  "📅 Q4 · Unit 10 · Modern Florida Takes Shape",
+  "📖 Week 25 · goes with Lesson 4.10.08",
+  "📋 SS.4.A.6.1 · SS.4.A.6.2 · SS.4.A.6.3 · SS.4.A.6.4 · SS.4.A.7.1 · SS.4.A.7.2 · SS.4.A.7.3 · SS.4.A.8.3 · SS.4.A.8.4 · SS.4.E.1.1 · SS.4.E.1.2",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Saturn V Launchpad",
+ "mapWord": "Saturn",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 25",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 25 · The Space Coast",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A launch pad, like the ones at Kennedy Space Center"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "press",
+  "alt": "A crowd with cameras on a shore watching a rocket rise far away",
+  "cap": "Reporters watch Apollo 11 lift off at Kennedy Space Center, July 16, 1969. NASA.",
+  "note": "Apollo 11 left for the moon from Florida. I've only seen the launch pad in pictures. Can you visit one?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you go. Scout a rocket launch pad in VR and send her one short video.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Scout the Launch Pad",
+  "look": "A <b>launch pad</b> is the spot a rocket blasts off from. A Saturn V rocket carried Apollo 11 to the moon in 1969. It launched from Kennedy Space Center, on Florida's east coast.",
+  "groups": [],
+  "place": [
+   {
+    "img": "campers",
+    "alt": "Tents and cars crowded on a sandy field",
+    "html": "<b>Visitors came too:</b> about one million people came to watch Apollo 11 launch.",
+    "cap": "Families camp near Kennedy Space Center to watch Apollo 11, 1969. NASA."
+   }
+  ],
+  "say": [
+   "This launch pad has ___.",
+   "Rockets launch from Florida because ___."
+  ],
+  "seconds": 30,
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "@PLACE@<p>In your video, you say these 2 sentences:</p>@SAY@<p>Practice now. Say both before the timer ends.</p>@TIMER@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Saturn</b> in <b>Filter environments</b>. Click <b>Saturn V Launchpad</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Scout the launch pad",
+    "html": "<p>Move with the <b>thumbstick</b>. Look up at the rocket and the tower. Stop where you can see the whole rocket.</p>"
+   },
+   {
+    "title": "Record your video and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit the rocket in the tablet. Click <b>Record video</b>, say your 2 sentences, and click it again to stop.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your video, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new video.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your video is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Start recording far away, then walk closer, so your teacher sees how tall the rocket is."
+  },
+  "full": "One video, 30 seconds or less, showing the place while you say both sentences."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Space and Tourism Calendar",
+  "look": "Five real dates from our lesson. Some are about <b>tourism</b>, people visiting Florida. Some are about space.",
+  "do": "Tap the month for each card. Then pick tourism or space.",
+  "game": {
+   "type": "calendar",
+   "cols": [
+    "Event",
+    "Month and kind"
+   ],
+   "labels": {
+    "round": "Event",
+    "step1": "Tap its month.",
+    "step2": "Is it tourism or space?"
+   },
+   "miss": "Not that one. Read the card again.",
+   "done": "The calendar is full! Tourism and space both brought jobs to Florida.",
+   "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+   ],
+   "kinds": [
+    {
+     "key": "tour",
+     "name": "Tourism: visitors",
+     "icon": "🏖️"
+    },
+    {
+     "key": "space",
+     "name": "Space: rockets",
+     "icon": "🚀"
+    }
+   ],
+   "cards": [
+    {
+     "name": "First rocket launch from Cape Canaveral",
+     "when": "July 24, 1950",
+     "icon": "🚀",
+     "month": 7,
+     "kind": "space",
+     "honors": "A rocket flies east over the ocean.",
+     "okMonth": "Yes! July.",
+     "ok": "Yes! That was the start of the Space Coast."
+    },
+    {
+     "name": "Walt Disney announces his Florida plan",
+     "when": "November 15, 1965",
+     "icon": "🎤",
+     "month": 11,
+     "kind": "tour",
+     "honors": "He sat beside Florida's governor in Orlando.",
+     "okMonth": "Yes! November.",
+     "ok": "Yes! A theme park means visitors."
+    },
+    {
+     "name": "Apollo 11 launches",
+     "when": "July 16, 1969",
+     "icon": "🌕",
+     "month": 7,
+     "kind": "space",
+     "honors": "It launched from Kennedy Space Center.",
+     "okMonth": "Yes! July.",
+     "ok": "Yes! Apollo 11 was a space mission."
+    },
+    {
+     "name": "Astronauts walk on the moon",
+     "when": "July 20, 1969",
+     "icon": "👣",
+     "month": 7,
+     "kind": "space",
+     "honors": "Two Apollo 11 astronauts stepped out.",
+     "okMonth": "Yes! July, four days after launch.",
+     "ok": "Yes! Space."
+    },
+    {
+     "name": "Walt Disney World opens",
+     "when": "October 1, 1971",
+     "icon": "🏰",
+     "month": 10,
+     "kind": "tour",
+     "honors": "It made thousands of jobs near Orlando.",
+     "okMonth": "Yes! October.",
+     "ok": "Yes! Tourism is Florida's biggest industry."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "Tourism",
+     "starter": "Visitors come to Florida because ..."
+    },
+    {
+     "lead": "Space",
+     "starter": "Rockets launch from Florida because ..."
+    }
+   ],
+   "chips": [
+    "Walt Disney World",
+    "Orlando",
+    "Kennedy Space Center",
+    "Apollo 11",
+    "Space Coast",
+    "jobs",
+    "warm weather",
+    "east over the ocean"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
