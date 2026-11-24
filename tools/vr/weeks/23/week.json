@@ -1,0 +1,224 @@
+{
+ "id": "g4ss-vr-23",
+ "week": 23,
+ "lesson": "4.10.04",
+ "lessonA": "4.10.03",
+ "lessonTitle": "Significant Individuals in Florida's Development",
+ "title": "Along the Railroad",
+ "emoji": "🚂",
+ "pattern": "B",
+ "canvasName": "4.10.04 VR · Along the Railroad",
+ "details": [
+  "📅 Q3 · Unit 10 · Modern Florida Takes Shape",
+  "📖 Week 23 · goes with Lesson 4.10.04",
+  "📋 SS.4.A.6.1 · SS.4.A.6.2 · SS.4.A.6.3 · SS.4.A.6.4 · SS.4.A.7.1 · SS.4.A.7.2 · SS.4.A.7.3 · SS.4.A.8.3 · SS.4.A.8.4",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Western Town",
+ "mapWord": "Western",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 23",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 23 · Along the Railroad",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "An old town from the days when railroads were new"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "bethune1905",
+  "alt": "An old photo of a woman at the front of a long line of girls in white dresses",
+  "cap": "Mary McLeod Bethune and her students, Daytona, 1905. State Archives of Florida.",
+  "note": "One person's choices can change a whole state. Visit an old railroad town for me, then tell me about one person who changed Florida."
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you go. Scout an old town in VR and send her one short video.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Scout an Old Railroad Town",
+  "look": "This map is an old town in the American West, from the time when railroads were new. Florida towns grew the same way when Henry Flagler's and Henry Plant's railroads reached them.",
+  "groups": [],
+  "place": [
+   {
+    "img": "train",
+    "alt": "A crowd of people beside a train",
+    "html": "<b>Railroads made towns grow:</b> Flagler's railroad reached Miami in 1896 and Key West in 1912.",
+    "cap": "The first train reaches Key West, January 22, 1912. Library of Congress."
+   }
+  ],
+  "say": [
+   "This old town has ___.",
+   "One person who changed Florida is ___, because ___."
+  ],
+  "seconds": 30,
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "@PLACE@<p>In your video, you say these 2 sentences:</p>@SAY@<p>Practice now. Say both before the timer ends.</p>@TIMER@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Western</b> in <b>Filter environments</b>. Click <b>Western Town</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Scout the town",
+    "html": "<p>Move with the <b>thumbstick</b>. Walk along the main street. Stop where you can see the buildings up close.</p>"
+   },
+   {
+    "title": "Record your video and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit the street in the tablet. Click <b>Record video</b>, say your 2 sentences, and click it again to stop.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your video, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new video.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your video is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "If you see train tracks, stand near them while you record."
+  },
+  "full": "One video, 30 seconds or less, showing the place while you say both sentences."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Who Am I?",
+  "look": "Six people who shaped Florida. Each round gives clues about one of them.",
+  "do": "Read the clues. Tap the person they describe.",
+  "game": {
+   "type": "clue",
+   "cols": [
+    "Person",
+    "What they did"
+   ],
+   "labels": {
+    "round": "Who am I?"
+   },
+   "miss": "Not this person. Read all the clues again.",
+   "done": "You named all six! Each one made a choice that changed Florida.",
+   "people": [
+    {
+     "name": "Henry Flagler",
+     "icon": "🚂"
+    },
+    {
+     "name": "Henry Plant",
+     "icon": "🏨"
+    },
+    {
+     "name": "Julia Tuttle",
+     "icon": "🌸"
+    },
+    {
+     "name": "Mary McLeod Bethune",
+     "icon": "🏫"
+    },
+    {
+     "name": "Marjory Stoneman Douglas",
+     "icon": "🐊"
+    },
+    {
+     "name": "Vicente Martinez Ybor",
+     "icon": "🏭"
+    }
+   ],
+   "rounds": [
+    {
+     "answer": 0,
+     "gave": "A railroad all the way to Key West",
+     "ok": "Yes! Henry Flagler's train reached Key West in 1912.",
+     "clues": [
+      "I was a business partner of John D. Rockefeller.",
+      "My railroad reached Key West in 1912, when I was 82."
+     ]
+    },
+    {
+     "answer": 3,
+     "gave": "A school that became Bethune-Cookman University",
+     "ok": "Yes! Mary McLeod Bethune started her school in 1904.",
+     "clues": [
+      "My parents had been enslaved.",
+      "In 1904 I started a school with $1.50 and five girls."
+     ]
+    },
+    {
+     "answer": 2,
+     "gave": "Brought the railroad to Miami",
+     "ok": "Yes! Julia Tuttle is called the Mother of Miami.",
+     "clues": [
+      "I owned land along the Miami River.",
+      "After the freezes of 1894 and 1895, I offered Flagler free land."
+     ]
+    },
+    {
+     "answer": 5,
+     "gave": "Ybor City, the cigar capital of the world",
+     "ok": "Yes! Vicente Martinez Ybor built Ybor City in Tampa.",
+     "clues": [
+      "In 1885 I moved my cigar business to Tampa.",
+      "I built a company town for my workers."
+     ]
+    },
+    {
+     "answer": 1,
+     "gave": "A railroad to Tampa and the Tampa Bay Hotel",
+     "ok": "Yes! Henry Plant built up Florida's west coast.",
+     "clues": [
+      "My railroad linked Tampa to markets up north.",
+      "I built the grand Tampa Bay Hotel."
+     ]
+    },
+    {
+     "answer": 4,
+     "gave": "Helped save the Everglades",
+     "ok": "Yes! Marjory Stoneman Douglas called it a River of Grass.",
+     "clues": [
+      "My 1947 book called the Everglades a River of Grass.",
+      "I lived to be 108 and never stopped speaking up."
+     ]
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "Who changed Florida?",
+     "starter": "One person who changed Florida is ..."
+    },
+    {
+     "lead": "What did they do?",
+     "starter": "They changed Florida when they ..."
+    }
+   ],
+   "chips": [
+    "Henry Flagler",
+    "Julia Tuttle",
+    "Mary McLeod Bethune",
+    "Marjory Stoneman Douglas",
+    "railroad",
+    "school",
+    "Miami",
+    "the Everglades"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
