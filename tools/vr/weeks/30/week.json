@@ -1,0 +1,252 @@
+{
+ "id": "g4ss-vr-30",
+ "week": 30,
+ "lesson": "4.12.04",
+ "lessonA": "4.12.03",
+ "lessonTitle": "Income, Saving, Spending, Credit, Risk, and Responsibility",
+ "title": "Build a Budget",
+ "emoji": "💰",
+ "pattern": "A",
+ "canvasName": "4.12.04 VR · Build a Budget",
+ "details": [
+  "📅 Q4 · Unit 12 · Florida Government, Economy, and Financial Literacy",
+  "📖 Week 30 · goes with Lesson 4.12.04",
+  "📋 SS.4.CG.1.1 · SS.4.CG.2.1 · SS.4.CG.2.2 · SS.4.CG.2.3 · SS.4.CG.3.1 · SS.4.CG.3.2 · SS.4.E.1.1 · SS.4.E.1.2 · SS.4.FL.1.1–6.4",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Central Bank",
+ "mapWord": "Central",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 30",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 30 · Build a Budget",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A bank, the right place for a money plan"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "stamps",
+  "alt": "Children lining up at a school table, a stamp album, and a sample bill",
+  "cap": "Children buy savings stamps, 1942, and a sample credit card bill. Library of Congress and U.S. government.",
+  "note": "The EXIT sign lights up for one answer: how to be smart with money. Can you build a budget I can see?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you build it. Make a budget out of models in a bank. Then send her one photo.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Build a Budget",
+  "look": "A <b>budget</b> is a plan for your money. It splits your <b>income</b>, the money you earn, into saving, spending and giving. A smart budget also saves for an <b>emergency</b>, a surprise you didn't plan for.",
+  "groups": [
+   {
+    "title": "Your income and four piles",
+    "models": [
+     {
+      "name": "Dollar Sign",
+      "word": "Dollar",
+      "icon": "💲",
+      "alt": "A dollar symbol",
+      "why": "Income"
+     },
+     {
+      "name": "Gold Coin",
+      "word": "Coin",
+      "icon": "🪙",
+      "alt": "A coin",
+      "count": 3,
+      "why": "Save"
+     },
+     {
+      "name": "School Supplies: Soccer Ball",
+      "word": "Soccer",
+      "icon": "⚽",
+      "alt": "A soccer ball",
+      "why": "Spend"
+     },
+     {
+      "name": "Fruit Basket",
+      "word": "Fruit",
+      "icon": "🧺",
+      "alt": "A fruit basket",
+      "why": "Give: food for a food pantry"
+     },
+     {
+      "name": "Wheel (OptimaED)",
+      "word": "Wheel",
+      "icon": "🛞",
+      "alt": "A wheel",
+      "why": "Emergency: a spare"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "<p>These are the models you will use. In VR, type the <b>gray word</b> in the <b>Models</b> search box to find each one.</p>@MODELS@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Central</b> in <b>Filter environments</b>. Click <b>Central Bank</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Build the budget",
+    "html": "<p>Put the <b>dollar</b> model at the top. Below it, make four piles: 3 <b>coins</b> to save, the <b>ball</b> to spend, the <b>basket</b> to give, and the <b>wheel</b> for emergencies.</p>"
+   },
+   {
+    "title": "Take your photo and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit your whole build in the tablet. Click <b>Take photo</b>.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new photo.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your photo is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Make the saving pile the biggest. Leave space between piles so each part is easy to see."
+  },
+  "full": "One photo that shows the income at the top and all four piles."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Who Fixes It?",
+  "look": "Six problems start on your street. Some go to the <b>city</b>, some to the <b>county</b>, and some to the <b>state</b> in Tallahassee.",
+  "do": "Read the problem. Tap the government that handles it.",
+  "game": {
+   "type": "route",
+   "cols": [
+    "Problem",
+    "Who fixes it"
+   ],
+   "labels": {
+    "round": "Problem",
+    "from": "starts here"
+   },
+   "miss": "Not that one. How many people does this problem touch?",
+   "done": "Six problems sent to the right place! Ask the right level, and problems get fixed faster.",
+   "places": [
+    {
+     "key": "home",
+     "name": "Your street",
+     "icon": "🏠",
+     "x": 14,
+     "y": 36
+    },
+    {
+     "key": "city",
+     "name": "City hall: mayor and city council",
+     "icon": "🏙️",
+     "x": 48,
+     "y": 12
+    },
+    {
+     "key": "county",
+     "name": "County commission",
+     "icon": "🏛️",
+     "x": 50,
+     "y": 58
+    },
+    {
+     "key": "state",
+     "name": "The state, in Tallahassee",
+     "icon": "⭐",
+     "x": 86,
+     "y": 34
+    }
+   ],
+   "cargo": [
+    {
+     "name": "A broken streetlight",
+     "what": "On your city street.",
+     "icon": "💡",
+     "from": "home",
+     "to": "city",
+     "ok": "Yes! Call city hall."
+    },
+    {
+     "name": "Library hours",
+     "what": "Public libraries belong to the county.",
+     "icon": "📚",
+     "from": "home",
+     "to": "county",
+     "ok": "Yes! Counties run public libraries."
+    },
+    {
+     "name": "What every 4th grader learns",
+     "what": "The same for all of Florida.",
+     "icon": "📝",
+     "from": "home",
+     "to": "state",
+     "ok": "Yes! The state sets the standards."
+    },
+    {
+     "name": "A flooded state road",
+     "what": "Like State Road 46 after Tropical Storm Fay.",
+     "icon": "🌊",
+     "from": "home",
+     "to": "state",
+     "ok": "Yes! The state fixes state highways."
+    },
+    {
+     "name": "New playground equipment",
+     "what": "At your neighborhood city park.",
+     "icon": "🛝",
+     "from": "home",
+     "to": "city",
+     "ok": "Yes! City parks belong to the city."
+    },
+    {
+     "name": "A washed-out ditch on a county road",
+     "what": "Like the Leon County road after Fay.",
+     "icon": "🚧",
+     "from": "home",
+     "to": "county",
+     "ok": "Yes! Counties fix county roads."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "A money plan",
+     "starter": "A smart budget saves money for ..."
+    },
+    {
+     "lead": "A good choice",
+     "starter": "Before I buy something big, I will ..."
+    }
+   ],
+   "chips": [
+    "income",
+    "save",
+    "spend",
+    "give",
+    "emergency",
+    "budget",
+    "credit",
+    "interest"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
