@@ -1,0 +1,260 @@
+{
+ "id": "g4ss-vr-28",
+ "week": 28,
+ "lesson": "4.11.06",
+ "lessonA": "4.11.05",
+ "lessonTitle": "Leader Virtue Profile",
+ "title": "Virtue Profile Display",
+ "emoji": "⭐",
+ "pattern": "A",
+ "canvasName": "4.11.06 VR · Virtue Profile Display",
+ "details": [
+  "📅 Q4 · Unit 11 · Civil Rights, Community Leaders, and Contemporary Florida",
+  "📖 Week 28 · goes with Lesson 4.11.06",
+  "📋 SS.4.A.8.1 · SS.4.A.8.2 · SS.4.AA.1.1 · SS.4.CG.2.1 · SS.4.CG.2.2",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Classical Outdoor Classroom",
+ "mapWord": "Classical",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 28",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 28 · Virtue Profile Display",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "An outdoor classroom, for a virtue profile"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "bethune1943",
+  "alt": "Two old photos: two women talking at a table, and a woman saying goodbye to students",
+  "cap": "Mary McLeod Bethune in Daytona Beach, 1943. Photos by Gordon Parks. Library of Congress.",
+  "note": "A card reader by the door with 13 only reads cards with proof on them. Can you build a virtue profile with real evidence?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you build it. Show Mary McLeod Bethune's virtues and the evidence. Then send her one photo.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Build a Virtue Profile",
+  "look": "A <b>virtue</b> is a strong, good character trait, like courage. <b>Evidence</b> is a real fact that proves it. Put the virtue books in the middle and the evidence around them.",
+  "groups": [
+   {
+    "title": "Two virtues and three pieces of evidence",
+    "models": [
+     {
+      "name": "Book - Courage",
+      "word": "Courage",
+      "icon": "📕",
+      "alt": "A book",
+      "why": "Virtue: courage"
+     },
+     {
+      "name": "Book - Community",
+      "word": "Community",
+      "icon": "📗",
+      "alt": "A book",
+      "why": "Virtue: service to her community"
+     },
+     {
+      "name": "Potato Bunch",
+      "word": "Potato",
+      "icon": "🍠",
+      "alt": "Potatoes",
+      "why": "She sold sweet potato pies"
+     },
+     {
+      "name": "Gold Coin",
+      "word": "Coin",
+      "icon": "🪙",
+      "alt": "A coin",
+      "why": "She started with $1.50"
+     },
+     {
+      "name": "School Supplies: Textbook",
+      "word": "Textbook",
+      "icon": "📘",
+      "alt": "A book",
+      "why": "Her school is still open"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "<p>These are the models you will use. In VR, type the <b>gray word</b> in the <b>Models</b> search box to find each one.</p>@MODELS@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Classical</b> in <b>Filter environments</b>. Click <b>Classical Outdoor Classroom</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Build the profile",
+    "html": "<p>Put the <b>Courage</b> book and the <b>Community</b> book in the middle. Around them, put the <b>potatoes</b>, the <b>coin</b> and the <b>textbook</b>. Each one is a piece of evidence.</p>"
+   },
+   {
+    "title": "Take your photo and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit your whole build in the tablet. Click <b>Take photo</b>.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new photo.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your photo is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Put each piece of evidence closest to the virtue it proves best."
+  },
+  "full": "One photo that shows both books with the three pieces of evidence around them."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "A Profile of Harry T. Moore",
+  "look": "A <b>virtue profile</b> has four parts: the leader, the virtue, the evidence, and an honest sentence. Each part has three choices.",
+  "do": "Tap a part. Pick the best choice for it.",
+  "game": {
+   "type": "panel",
+   "cols": [
+    "Profile part",
+    "My choice"
+   ],
+   "labels": {
+    "round": "Part",
+    "empty": "empty"
+   },
+   "done": "Your profile is complete! A real leader, one virtue, and proof you can check.",
+   "parts": [
+    {
+     "name": "Leader",
+     "icon": "👤",
+     "q": "Who is this profile about?",
+     "choices": [
+      {
+       "text": "Harry T. Moore, a teacher in Brevard County",
+       "good": true,
+       "why": "Yes! A real person with a real record."
+      },
+      {
+       "text": "A made-up hero",
+       "good": false,
+       "why": "A profile is about a real person."
+      },
+      {
+       "text": "Everyone in Florida",
+       "good": false,
+       "why": "Too big. Pick one person."
+      }
+     ]
+    },
+    {
+     "name": "Virtue",
+     "icon": "⭐",
+     "q": "Which virtue did his actions show?",
+     "choices": [
+      {
+       "text": "Wealth",
+       "good": false,
+       "why": "Wealth is not a virtue."
+      },
+      {
+       "text": "Courage",
+       "good": true,
+       "why": "Yes! He kept working for voting rights even after he lost his job."
+      },
+      {
+       "text": "Being popular",
+       "good": false,
+       "why": "Being liked is not a virtue."
+      }
+     ]
+    },
+    {
+     "name": "Evidence",
+     "icon": "🔎",
+     "q": "Which one is real evidence?",
+     "choices": [
+      {
+       "text": "He was the nicest man ever.",
+       "good": false,
+       "why": "That's an opinion, not a fact you can check."
+      },
+      {
+       "text": "He probably liked dogs.",
+       "good": false,
+       "why": "That's a guess. It's not in the record."
+      },
+      {
+       "text": "He helped thousands of Black Floridians sign up to vote.",
+       "good": true,
+       "why": "Yes! That's a fact you can check."
+      }
+     ]
+    },
+    {
+     "name": "Honest",
+     "icon": "🪞",
+     "q": "Which sentence is honest about leaders?",
+     "choices": [
+      {
+       "text": "Leaders were not perfect, but the evidence shows one strong trait.",
+       "good": true,
+       "why": "Yes! That's what a virtue profile says."
+      },
+      {
+       "text": "He never made a mistake.",
+       "good": false,
+       "why": "Nobody is perfect. Don't claim it."
+      },
+      {
+       "text": "Only famous people have virtues.",
+       "good": false,
+       "why": "Anyone can show a virtue."
+      }
+     ]
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "The virtue",
+     "starter": "The virtue this leader showed was ..."
+    },
+    {
+     "lead": "The evidence",
+     "starter": "I know because ..."
+    }
+   ],
+   "chips": [
+    "courage",
+    "service",
+    "perseverance",
+    "honesty",
+    "evidence",
+    "Harry T. Moore",
+    "Mary McLeod Bethune",
+    "vote"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
