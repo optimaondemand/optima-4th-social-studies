@@ -1,0 +1,186 @@
+{
+ "id": "g4ss-vr-31",
+ "week": 31,
+ "lesson": "4.13.02",
+ "lessonA": "4.13.01",
+ "lessonTitle": "Final Florida Historian-Citizen Reflection",
+ "title": "A Wall for Your Exhibit",
+ "emoji": "🖼️",
+ "pattern": "B",
+ "canvasName": "4.13.02 VR · A Wall for Your Exhibit",
+ "details": [
+  "📅 Q4 · Unit 13 · Finale: The Florida Historian-Citizen Exhibition",
+  "📖 Week 31 · goes with Lesson 4.13.02",
+  "📋 SS.4.A · SS.4.G · SS.4.CG · SS.4.E · SS.4.FL · SS.4.AA",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Optima Centum Gallery",
+ "mapWord": "Centum",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 31",
+  "line": "The last seal of the year. You went out for your teacher one more time."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 31 · A Wall for Your Exhibit",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A gallery where your exhibit could hang"
+   ],
+   [
+    "For",
+    "Your teacher, at the open door"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "pc1",
+  "alt": "An old postcard of a stone fort with a round tower and a handwritten message",
+  "cap": "Fort Marion, St. Augustine, a real postcard from about 1901. New York Public Library.",
+  "noteFrom": "Message from the open doorway",
+  "note": "The door with 13 is open! Before I step out, show me a gallery where your exhibit could hang."
+ },
+ "opti": {
+  "brief": "One last field file. Scout a gallery in VR and send your teacher one short video.",
+  "desk": "No headset? Use my desk. Name each postcard, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Scout a Gallery",
+  "look": "A <b>gallery</b> is a room for showing art and history. Picture the exhibit you built in Lesson 4.13.01 hanging here.",
+  "groups": [],
+  "place": [],
+  "say": [
+   "If my exhibit hung here, the first thing on the wall would be ___.",
+   "One thing I will keep doing as a historian-citizen is ___."
+  ],
+  "seconds": 30,
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "@PLACE@<p>In your video, you say these 2 sentences:</p>@SAY@<p>Practice now. Say both before the timer ends.</p>@TIMER@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Centum</b> in <b>Filter environments</b>. Click <b>Optima Centum Gallery</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Scout the gallery",
+    "html": "<p>Move with the <b>thumbstick</b>. Walk the room. Stop at one empty wall.</p>"
+   },
+   {
+    "title": "Record your video and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit the wall in the tablet. Click <b>Record video</b>, say your 2 sentences, and click it again to stop.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your video, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new video.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your video is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "full": "One video, 30 seconds or less, showing the place while you say both sentences."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Postcards from Florida",
+  "look": "Four real cards are hidden under tiles. Each one shows a Florida place from our files.",
+  "do": "Tap tiles to peek. When you know the place, pick it.",
+  "game": {
+   "type": "reveal",
+   "cols": [
+    "Postcard",
+    "Florida place"
+   ],
+   "labels": {
+    "round": "Postcard"
+   },
+   "miss": "Not that one. Peek at another tile.",
+   "done": "All four named! Florida's story is in its places, and yours is part of it now.",
+   "rounds": [
+    {
+     "img": "pc1",
+     "alt": "A postcard of a stone fort with a round tower",
+     "q": "What place is this?",
+     "options": [
+      "Kennedy Space Center",
+      "Fort Marion, the Castillo, in St. Augustine",
+      "The Everglades"
+     ],
+     "right": 1,
+     "kind": "St. Augustine",
+     "ok": "Yes! The U.S. called the Castillo Fort Marion from 1825 to 1942."
+    },
+    {
+     "img": "pc2",
+     "alt": "A postcard of a canal through flat grassy land",
+     "q": "What place is this?",
+     "options": [
+      "The Everglades, near Miami",
+      "Tallahassee",
+      "St. Augustine"
+     ],
+     "right": 0,
+     "kind": "The Everglades",
+     "ok": "Yes! Marjory Stoneman Douglas fought to protect it."
+    },
+    {
+     "img": "pc3",
+     "alt": "A colorful postcard that says Greetings from the Capital City",
+     "q": "What place is this?",
+     "options": [
+      "Miami",
+      "Kennedy Space Center",
+      "Tallahassee, the capital"
+     ],
+     "right": 2,
+     "kind": "Tallahassee",
+     "ok": "Yes! The state government works in Tallahassee."
+    },
+    {
+     "img": "pc4",
+     "alt": "A rocket lifting off at night in a bright cloud of fire",
+     "q": "What place is this?",
+     "options": [
+      "Kennedy Space Center",
+      "The Everglades",
+      "St. Augustine"
+     ],
+     "right": 0,
+     "kind": "Kennedy Space Center",
+     "ok": "Yes! Artemis I launched there in 2022."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "My postcard",
+     "starter": "The postcard I would send is ... because ..."
+    },
+    {
+     "lead": "As a citizen",
+     "starter": "One thing I will do as a citizen is ..."
+    }
+   ],
+   "chips": [
+    "St. Augustine",
+    "the Everglades",
+    "Tallahassee",
+    "Kennedy Space Center",
+    "my community",
+    "vote",
+    "volunteer",
+    "historical marker"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
