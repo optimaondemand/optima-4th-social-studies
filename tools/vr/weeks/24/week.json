@@ -1,0 +1,219 @@
+{
+ "id": "g4ss-vr-24",
+ "week": 24,
+ "lesson": "4.10.06",
+ "lessonA": "4.10.05",
+ "lessonTitle": "Land Boom and Bust in the 1920s",
+ "title": "Boom and Bust Beach",
+ "emoji": "🏖️",
+ "pattern": "A",
+ "canvasName": "4.10.06 VR · Boom and Bust Beach",
+ "details": [
+  "📅 Q3 · Unit 10 · Modern Florida Takes Shape",
+  "📖 Week 24 · goes with Lesson 4.10.06",
+  "📋 SS.4.A.6.1 · SS.4.A.6.2 · SS.4.A.6.3 · SS.4.A.6.4 · SS.4.A.7.1 · SS.4.A.7.2 · SS.4.A.7.3 · SS.4.A.8.3 · SS.4.A.8.4",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Deserted Isles",
+ "mapWord": "Deserted",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 24",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 24 · Boom and Bust Beach",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A Florida beach in the 1920s"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "billboard",
+  "alt": "A huge billboard standing on an empty beach",
+  "cap": "A billboard selling building lots on the beach near Miami, 1922. State Archives of Florida.",
+  "note": "In the 1920s people bought Florida land just to sell it again. Then it all crashed. Can you build that story on a beach?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you build it. Show the boom and the bust on one beach. Then send her one photo.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Build the Boom and the Bust",
+  "look": "A <b>boom</b> is when prices go up fast. A <b>bust</b> is when they crash. Build each one on its own side of the beach.",
+  "groups": [
+   {
+    "title": "Boom side and bust side",
+    "models": [
+     {
+      "name": "Modern House",
+      "word": "Modern House",
+      "icon": "🏠",
+      "alt": "A house",
+      "count": 2,
+      "why": "Boom: new houses"
+     },
+     {
+      "name": "Pick-up Truck",
+      "word": "Truck",
+      "icon": "🛻",
+      "alt": "A truck",
+      "why": "Boom: families drive down"
+     },
+     {
+      "name": "Gold Coin",
+      "word": "Coin",
+      "icon": "🪙",
+      "alt": "A gold coin",
+      "count": 2,
+      "why": "Boom: fast money"
+     },
+     {
+      "name": "Lumber 1",
+      "word": "Lumber",
+      "icon": "🪵",
+      "alt": "A pile of boards",
+      "count": 2,
+      "why": "Bust: half-built buildings"
+     },
+     {
+      "name": "Crate",
+      "word": "Crate",
+      "icon": "📦",
+      "alt": "A crate",
+      "why": "Bust: supplies stuck, 1925"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "<p>These are the models you will use. In VR, type the <b>gray word</b> in the <b>Models</b> search box to find each one.</p>@MODELS@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Deserted</b> in <b>Filter environments</b>. Click <b>Deserted Isles</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Build the boom and the bust",
+    "html": "<p>Boom side: the 2 <b>houses</b>, the <b>truck</b> and the 2 <b>coins</b>. Bust side: the 2 piles of <b>lumber</b> and the <b>crate</b>.</p>"
+   },
+   {
+    "title": "Take your photo and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit your whole build in the tablet. Click <b>Take photo</b>.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new photo.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your photo is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Leave empty sand in the middle. After 1926, many lots sat empty for years."
+  },
+  "full": "One photo that shows the boom side and the bust side."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Boom to Bust, in Order",
+  "look": "Six things that happened in Florida in the 1920s. They are mixed up.",
+  "do": "Tap the step that happened first, then the next one.",
+  "game": {
+   "type": "order",
+   "cols": [
+    "Step",
+    "What happened"
+   ],
+   "show": [
+    3,
+    5,
+    0,
+    4,
+    2,
+    1
+   ],
+   "labels": {
+    "step": "Tap the step that comes next."
+   },
+   "miss": "Not yet. What had to happen first?",
+   "done": "In order! Prices were based on hype, so the boom could not last.",
+   "steps": [
+    {
+     "name": "Cars and new roads bring families south",
+     "icon": "🚗",
+     "ok": "Yes! The Dixie Highway led to Miami.",
+     "hint": "First, people had to get to Florida."
+    },
+    {
+     "name": "Developers cut land into lots and sell them with ads",
+     "icon": "📣",
+     "ok": "Yes! Billboards promised sunshine and easy money.",
+     "hint": "Families are coming. What did land companies do?"
+    },
+    {
+     "name": "Buyers sell their binders again for more money",
+     "icon": "💵",
+     "ok": "Yes! That is speculation.",
+     "hint": "Lots are for sale. What did many buyers do next?"
+    },
+    {
+     "name": "A magazine warns that prices are too high (1925)",
+     "icon": "📰",
+     "ok": "Yes! Forbes warned in January 1925.",
+     "hint": "Prices kept going up. Who noticed?"
+    },
+    {
+     "name": "Prices stop going up and start to fall (1926)",
+     "icon": "📉",
+     "ok": "Yes! New buyers stopped coming.",
+     "hint": "The warning came true. What happened to prices?"
+    },
+    {
+     "name": "A hurricane hits Miami (September 1926)",
+     "icon": "🌀",
+     "ok": "Yes. The storm ended the boom.",
+     "hint": "The last thing was a storm."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "Why did it boom?",
+     "starter": "Prices went up because people ..."
+    },
+    {
+     "lead": "Why did it bust?",
+     "starter": "The boom ended when ..."
+    }
+   ],
+   "chips": [
+    "speculation",
+    "binder",
+    "lots",
+    "hurricane",
+    "1926",
+    "Dixie Highway",
+    "Miami",
+    "prices"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
