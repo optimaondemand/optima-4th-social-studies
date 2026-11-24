@@ -1,0 +1,248 @@
+{
+ "id": "g4ss-vr-18",
+ "week": 18,
+ "lesson": "4.07.04",
+ "lessonA": "4.07.03",
+ "lessonTitle": "Pioneer Life in Florida",
+ "title": "Pioneer Homestead",
+ "emoji": "🪓",
+ "pattern": "A",
+ "canvasName": "4.07.04 VR · Pioneer Homestead",
+ "details": [
+  "📅 Q3 · Unit 7 · Territorial Florida and the Seminole Story",
+  "📖 Week 18 · goes with Lesson 4.07.04",
+  "📋 SS.4.A.3.5 · SS.4.A.3.7 · SS.4.A.3.8 · SS.4.A.3.9 · SS.4.A.3.10 · SS.4.A.4.2",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Tranquil Forest",
+ "mapWord": "Tranquil",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 18",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 18 · Pioneer Homestead",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A pioneer homestead in territorial Florida"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "barker",
+  "alt": "A small hut with a roof and walls made of palm leaves, with palm trees around it",
+  "cap": "A pioneer home in South Florida, 1891. Photo by George Barker. Library of Congress.",
+  "note": "There are no photos of Florida's first pioneers. Cameras came later. Can you build a pioneer homestead so I can see one?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you build it. Make a pioneer homestead in a forest. Then send her one photo.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Build a Pioneer Homestead",
+  "look": "A <b>pioneer</b> was one of the first settlers in a new place. A <b>homestead</b> is a family's home and farm.",
+  "groups": [
+   {
+    "title": "What a pioneer family needed",
+    "models": [
+     {
+      "name": "Log Cabin - Wall",
+      "word": "Log Cabin",
+      "icon": "🪵",
+      "alt": "A log wall",
+      "count": 4,
+      "why": "Walls from cut trees"
+     },
+     {
+      "name": "Log Cabin - Door",
+      "word": "Log Cabin",
+      "icon": "🚪",
+      "alt": "A wooden door",
+      "why": "One door"
+     },
+     {
+      "name": "Corn Stage 4",
+      "word": "Corn",
+      "icon": "🌽",
+      "alt": "A corn plant",
+      "why": "The main crop"
+     },
+     {
+      "name": "Potato Stage 4",
+      "word": "Potato",
+      "icon": "🍠",
+      "alt": "A potato plant",
+      "why": "Stands for sweet potatoes"
+     },
+     {
+      "name": "OptimaEd Pig",
+      "word": "Pig",
+      "icon": "🐖",
+      "alt": "A pig",
+      "why": "Families raised hogs"
+     },
+     {
+      "name": "Water Barrel",
+      "word": "Barrel",
+      "icon": "🛢️",
+      "alt": "A wooden barrel",
+      "why": "Kids hauled water"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "<p>These are the models you will use. In VR, type the <b>gray word</b> in the <b>Models</b> search box to find each one.</p>@MODELS@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Tranquil</b> in <b>Filter environments</b>. Click <b>Tranquil Forest</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Build the homestead",
+    "html": "<p>Put the 4 <b>log walls</b> in a square, with the <b>door</b> in one wall. Plant the <b>corn</b> and the <b>potatoes</b> on one side of the cabin. Put the <b>pig</b> and the <b>barrel</b> on the other side.</p>"
+   },
+   {
+    "title": "Take your photo and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit your whole build in the tablet. Click <b>Take photo</b>.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new photo.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your photo is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Build at the edge of the trees. Pioneers cleared their land by hand, one tree at a time."
+  },
+  "full": "One photo that shows the cabin, the crops, the pig and the barrel."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Work or Hardship?",
+  "look": "Each card is one part of pioneer life from our lesson. Some cards are daily work. Some are <b>hardships</b>, things that made life hard.",
+  "do": "Tap a card, then tap its box.",
+  "game": {
+   "type": "sort",
+   "cols": [
+    "Box",
+    "Pioneer life"
+   ],
+   "labels": {
+    "step": "Tap a card, then tap its box."
+   },
+   "miss": "Not that box. Is this a job someone did, or something that made life hard?",
+   "done": "The tray is empty! Pioneer life was hard work, every single day.",
+   "bins": [
+    {
+     "key": "work",
+     "name": "Daily work",
+     "icon": "🧺"
+    },
+    {
+     "key": "hard",
+     "name": "Hardship",
+     "icon": "⚠️"
+    }
+   ],
+   "cards": [
+    {
+     "name": "Hauling water",
+     "what": "A child's chore",
+     "icon": "🪣",
+     "bin": "work",
+     "ok": "Yes! Children hauled water every day."
+    },
+    {
+     "name": "Mosquitoes",
+     "what": "They carried malaria and yellow fever",
+     "icon": "🦟",
+     "bin": "hard",
+     "ok": "Yes. Mosquitoes made people very sick."
+    },
+    {
+     "name": "Growing corn and sweet potatoes",
+     "what": "The main crops",
+     "icon": "🌽",
+     "bin": "work",
+     "ok": "Yes! Families grew their own food."
+    },
+    {
+     "name": "No doctor nearby",
+     "what": "The nearest one could be a day's ride away",
+     "icon": "🩺",
+     "bin": "hard",
+     "ok": "Yes. Help was hard to find."
+    },
+    {
+     "name": "Gathering firewood",
+     "what": "For cooking and warmth",
+     "icon": "🪵",
+     "bin": "work",
+     "ok": "Yes! Everyone in the family worked."
+    },
+    {
+     "name": "Hurricanes and floods",
+     "what": "Florida's weather",
+     "icon": "🌀",
+     "bin": "hard",
+     "ok": "Yes. Storms could wreck a farm."
+    },
+    {
+     "name": "Feeding the animals",
+     "what": "Cattle and hogs",
+     "icon": "🐖",
+     "bin": "work",
+     "ok": "Yes! Kids fed the animals."
+    },
+    {
+     "name": "Neighbors miles away",
+     "what": "Families were isolated",
+     "icon": "🏚️",
+     "bin": "hard",
+     "ok": "Yes. Being cut off from people was hard."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "What was hard?",
+     "starter": "One hard thing about pioneer life was ..."
+    },
+    {
+     "lead": "Whose land was it?",
+     "starter": "The land pioneers settled was already home to ..."
+    }
+   ],
+   "chips": [
+    "the Seminole",
+    "log cabin",
+    "mosquitoes",
+    "corn",
+    "sweet potatoes",
+    "chores",
+    "doctor",
+    "isolated"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
