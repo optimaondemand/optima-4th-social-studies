@@ -1,0 +1,219 @@
+{
+ "id": "g4ss-vr-20",
+ "week": 20,
+ "lesson": "4.08.04",
+ "lessonA": "4.08.03",
+ "lessonTitle": "Challenges During Reconstruction",
+ "title": "A Schoolhouse for All",
+ "emoji": "🏫",
+ "pattern": "A",
+ "canvasName": "4.08.04 VR · A Schoolhouse for All",
+ "details": [
+  "📅 Q3 · Unit 8 · Statehood, Civil War, and Reconstruction",
+  "📖 Week 20 · goes with Lesson 4.08.04",
+  "📋 SS.4.A.5.1 · SS.4.A.5.2 · SS.4.A.9.1",
+  "⏱ About 15 minutes"
+ ],
+ "map": "Farm Town (Micro)",
+ "mapWord": "Farm Town",
+ "badge": {
+  "emoji": "🔏",
+  "name": "Field Seal 20",
+  "line": "Only field historians earn this one. You went where your teacher can't go, and you brought back proof."
+ },
+ "stamp": "Desk Day · FILED",
+ "hook": {
+  "look": "A <b>field file</b> is a job card. It tells a historian where to go and what to bring back.",
+  "head": "Field File 20 · A Schoolhouse for All",
+  "sub": "Florida History Team",
+  "rows": [
+   [
+    "Place",
+    "A schoolhouse in Florida, after 1868"
+   ],
+   [
+    "For",
+    "Your teacher, still stuck inside Canvas"
+   ],
+   [
+    "Field historian",
+    "You"
+   ]
+  ],
+  "img": "lawmakers",
+  "alt": "An old print of seven men in suits, three standing and four sitting",
+  "cap": "The first Black members of Congress, 1872. Josiah T. Walls of Florida is in the middle. Library of Congress.",
+  "note": "After the war, Florida's 1868 constitution started public schools open to all children. Can you build one of those first schoolhouses for me?"
+ },
+ "opti": {
+  "brief": "She can't leave Canvas, so you build it. Make a Reconstruction schoolhouse. Then send her one photo.",
+  "desk": "No headset? Use my desk. Play the game, then write 2 sentences for your teacher."
+ },
+ "vr": {
+  "h3": "Build a Schoolhouse for All",
+  "look": "<b>Reconstruction</b> (1865 to 1877) means building again after the Civil War. Florida opened public schools to all children, and many freed people went to school for the first time.",
+  "groups": [
+   {
+    "title": "What the schoolhouse needs",
+    "models": [
+     {
+      "name": "Log Cabin - Wall",
+      "word": "Log Cabin",
+      "icon": "🪵",
+      "alt": "A log wall",
+      "count": 3,
+      "why": "Walls"
+     },
+     {
+      "name": "Log Cabin - Door",
+      "word": "Log Cabin",
+      "icon": "🚪",
+      "alt": "A wooden door",
+      "why": "The way in"
+     },
+     {
+      "name": "Bench",
+      "word": "Bench",
+      "icon": "🪑",
+      "alt": "A wooden bench",
+      "count": 2,
+      "why": "Seats for students"
+     },
+     {
+      "name": "School Supplies: Textbook",
+      "word": "Textbook",
+      "icon": "📘",
+      "alt": "A book",
+      "why": "A book to learn from"
+     },
+     {
+      "name": "Lantern On",
+      "word": "Lantern",
+      "icon": "🏮",
+      "alt": "A lantern",
+      "why": "Light to read by"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "where": "🖥️ Before your headset",
+    "title": "Get ready",
+    "html": "<p>These are the models you will use. In VR, type the <b>gray word</b> in the <b>Models</b> search box to find each one.</p>@MODELS@<p>In VR, this page is on the <b>Canvas</b> tab.</p>"
+   },
+   {
+    "where": "🥽 In VR",
+    "title": "Go in",
+    "html": "<div class=\"vr-how\">🔗 <b>First time only:</b> connect Canvas at <a href=\"https://xr.optimaed.com\" target=\"_blank\" rel=\"noopener\">xr.optimaed.com</a>. See <b>Having trouble in VR?</b> below.</div><p>Open the <b>On-Demand</b> app. Click <b>Explore</b>. Type <b>Farm Town</b> in <b>Filter environments</b>. Click <b>Farm Town (Micro)</b>, then <b>Begin Solo</b>.</p>"
+   },
+   {
+    "title": "Build the schoolhouse",
+    "html": "<p>Put the 3 <b>log walls</b> and the <b>door</b> together. Put the 2 <b>benches</b> inside, in rows. Put the <b>book</b> on a bench and the <b>lantern</b> by the door.</p>"
+   },
+   {
+    "title": "Take your photo and send it",
+    "html": "<p>Open your menu, click <b>Library</b>, then <b>Camera</b>. Fit your whole build in the tablet. Click <b>Take photo</b>.</p><p>On the <b>Canvas</b> tab, pick <b>@CANVAS@</b>. Click <b>Choose from My Files</b>, pick your photo, click <b>Use this file</b>, then <b>Submit to Canvas</b>. Look for the green <b>Submitted</b> tag.</p><div class=\"vr-how\">🔁 To fix it, send a new photo.</div>"
+   },
+   {
+    "where": "✅ After",
+    "title": "Check and leave",
+    "html": "<p>Press the <b>Meta button</b>, then click <b>Quit</b>. Check that your photo is in the Canvas assignment. Not there? See <b>Having trouble in VR?</b></p>"
+   }
+  ],
+  "extra": {
+   "after": 3,
+   "html": "Make the room big enough for a whole class. These schools were open to all children."
+  },
+  "full": "One photo that shows the walls, the door, both benches, the book and the lantern."
+ },
+ "studio": {
+  "kicker": "Desk Day · no headset",
+  "title": "Finish the Reconstruction Story",
+  "look": "Six sentences about Reconstruction. Each one is missing one word.",
+  "do": "Read the sentence. Tap the word that fits the blank.",
+  "game": {
+   "type": "fill",
+   "cols": [
+    "Sentence",
+    "Missing word"
+   ],
+   "labels": {
+    "round": "Sentence",
+    "blank": "tap a word"
+   },
+   "doc": {
+    "img": "lawmakers",
+    "alt": "The first Black members of Congress, 1872"
+   },
+   "miss": "That word does not fit. Read the sentence again.",
+   "done": "The story is complete! New rights came on paper, and keeping them took courage.",
+   "words": [
+    "13th",
+    "citizen",
+    "voting",
+    "Walls",
+    "Gibbs",
+    "Codes",
+    "king",
+    "19th"
+   ],
+   "sentences": [
+    {
+     "text": "The ___ Amendment ended slavery in 1865.",
+     "answer": "13th",
+     "ok": "Yes! The 13th Amendment ended slavery."
+    },
+    {
+     "text": "The 14th Amendment made everyone born in the United States a ___.",
+     "answer": "citizen",
+     "ok": "Yes! Born here means a citizen."
+    },
+    {
+     "text": "The 15th Amendment said no one could be kept from ___ because of race.",
+     "answer": "voting",
+     "ok": "Yes! It gave Black men the right to vote."
+    },
+    {
+     "text": "In 1871, Josiah T. ___ became Florida's first Black member of Congress.",
+     "answer": "Walls",
+     "ok": "Yes! He had been born enslaved."
+    },
+    {
+     "text": "Jonathan ___ led Florida's schools and worked to open them to all children.",
+     "answer": "Gibbs",
+     "ok": "Yes! Jonathan Gibbs led the state's schools."
+    },
+    {
+     "text": "Laws called Black ___ limited what freed people could do.",
+     "answer": "Codes",
+     "ok": "Yes. Black Codes took freedoms away."
+    }
+   ]
+  },
+  "write": {
+   "min": 20,
+   "frames": [
+    {
+     "lead": "What changed?",
+     "starter": "During Reconstruction, freed people could ..."
+    },
+    {
+     "lead": "What was taken back?",
+     "starter": "After 1877, many rights were taken back when ..."
+    }
+   ],
+   "chips": [
+    "13th Amendment",
+    "vote",
+    "school",
+    "Josiah T. Walls",
+    "Jonathan Gibbs",
+    "Black Codes",
+    "Jim Crow",
+    "1868"
+   ]
+  },
+  "full": "Your game is done, and your 2 sentences have 20 words or more."
+ }
+}
